@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nagai-cpu.github.io/ai-tools-jp/sitemap.xml
