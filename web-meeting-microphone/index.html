@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web会議マイクのおすすめは？聞き取りやすさは値段より距離で決まる｜AIツール実用ガイド</title>
+<meta name="description" content="Web会議で声が聞き取りにくい人向けに、マイクの方式別の使い分けと、Zoom・Teams・Google Meetのノイズ抑制設定の公式仕様を確認して整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/web-meeting-microphone/">
+<meta property="og:title" content="Web会議マイクのおすすめは？聞き取りやすさは値段より距離で決まる｜AIツール実用ガイド">
+<meta property="og:description" content="Web会議で声が聞き取りにくい人向けに、マイクの方式別の使い分けと、Zoom・Teams・Google Meetのノイズ抑制設定の公式仕様を確認して整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Web会議マイクのおすすめは？聞き取りやすさは値段より距離で決まる", "description": "Web会議で声が聞き取りにくい人向けに、マイクの方式別の使い分けと、Zoom・Teams・Google Meetのノイズ抑制設定の公式仕様を確認して整理しました。", "datePublished": "2026-08-18", "dateModified": "2026-08-18", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/web-meeting-microphone/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "マイクを買い替えれば、AI文字起こしの精度は上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "入り口の音がきれいになるぶん条件は良くなりますが、機材だけで決まるわけではありません。話者の重なりや固有名詞の表記はサービス側の性能に依存します。無料の範囲でどこまでできるかは[Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる](../notta-free-limits/)で上限を整理しています。"}}, {"@type": "Question", "name": "Google Meet の設定にノイズキャンセルの項目が見当たりません。", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプの対応エディション一覧を確認してください。Business Standard や Workspace Individual などが挙がっており、無料の個人向けアカウントは一覧に入っていません。Education 系と Teaching and Learning Upgrade は対応エディションですが既定でオフと書かれているので、その場合は自分でオンにします。"}}, {"@type": "Question", "name": "スピーカーフォンとヘッドセット、どちらを先に買うべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "参加の形で決まります。自席から1人で参加する時間が長いならヘッドセット、会議室に集まって1台のPCで参加する機会が多いならスピーカーフォンで、頻度の高いほうから揃えると無駄が出ません。なお会議の記録そのものを別サービスに任せる手もあり、無料で使える文字起こしの現状は[CLOVA Note終了の代わりは？無料で使える乗り換え先を比較](../clova-note-alternative/)にまとめています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Web会議マイクのおすすめは？聞き取りやすさは値段より距離で決まる</h1><p class="meta">2026-08-18 公開</p><article><p>結論から言うと、「声が聞き取りにくい」を直す最短の手は、高いマイクを買うことではなく<strong>マイクを口元に近づけること</strong>です。1人で話すならヘッドセットかピンマイク、同じ部屋に複数人いるならスピーカーフォン。そのうえで会議アプリのノイズ抑制設定を見直すと、機材を買い替えずに改善する場合があります。買うのはその後で遅くありません。</p>
+<h2 id="なぜ-距離-がいちばん効くのか">なぜ「距離」がいちばん効くのか</h2>
+<p>マイクは、あなたの声も空調音も反響も区別せずに拾います。口元から離れるほど声は小さくなりますが、部屋の空調音やファンの音は同じ大きさで入り続けます。つまり距離を取るほど、声と雑音の比率だけが一方的に悪くなります。</p>
+<p>音響の基本として、遮るものが無い環境では距離が2倍になると音圧はおよそ半分（−6dB）になります。室内は壁や机の反射があるためこの通りにはなりませんが、「近づけたぶんだけ声が有利になる」方向は変わりません。ノートPCの内蔵マイクが不利なのも性能より場所の問題で、口元から数十センチ離れたうえ、打鍵の振動とファン音が出る位置に固定されています。</p>
+<h2 id="マイクの方式別に-向き不向きを並べる">マイクの方式別に、向き不向きを並べる</h2>
+<div class="tw"><table><thead><tr><th>方式</th><th>口元との距離（目安）</th><th>同じ部屋の人数</th><th>接続</th><th>向いている人</th><th>弱点</th></tr></thead><tbody><tr><td>ノートPC内蔵</td><td>40〜60cm</td><td>1人</td><td>不要</td><td>まず現状を把握したい人</td><td>打鍵音・ファン音を拾いやすい</td></tr><tr><td>有線・USBヘッドセット</td><td>2〜5cm</td><td>1人</td><td>USB / 3.5mm</td><td>毎日長時間話す人</td><td>長時間の装着感、見た目</td></tr><tr><td>ワイヤレスイヤホン</td><td>10〜20cm</td><td>1人</td><td>Bluetooth</td><td>移動しながら参加する人</td><td>通話中は音の扱いが機種依存</td></tr><tr><td>USB接続の単一指向性マイク</td><td>15〜30cm</td><td>1人</td><td>USB</td><td>収録・配信も兼ねる人</td><td>置き場所と向きで結果が変わる</td></tr><tr><td>スピーカーフォン</td><td>卓上中央（全員から等距離）</td><td>2〜6人</td><td>USB / Bluetooth</td><td>会議室に複数人で入る人</td><td>1人用途には距離が遠い</td></tr></tbody></table></div>
+<p>距離の欄は製品仕様ではなく、その方式を使うときの一般的な位置関係です。方式の差はほぼ「口元との距離」と「何人ぶん拾うか」の2軸で説明がつきます。</p>
+<h2 id="会議アプリ側の設定が-マイクの良さを打ち消すことがある">会議アプリ側の設定が、マイクの良さを打ち消すことがある</h2>
+<p>Zoom・Teams・Google Meet はいずれも標準で雑音を削る処理を持ち、強さを設定で変えられます。強くかけるほど雑音は減りますが、削る対象は「人の声以外」だけとは限りません。</p>
+<p><strong>Zoom</strong> の背景雑音の抑制は4段階です。公式サポートでは、自動は「検出した背景音に応じて自動調整する」、低は「持続的な低レベルの背景雑音をブロックする」、中は「ファンやペンを叩く音など標準的な環境の雑音を減らす」とされ、最も強い「高」は原文で *"Noise reduction will be at its most aggressive, and will eliminate noise such as background speech from others."*（最も強力な抑制になり、他人の話し声のような音も除去する）と書かれています。<strong>同席者の声まで消す前提の設定</strong>だと公式が明記しているわけです。1台のPCに2人で入って「もう1人の声が届かない」と言われたら、まずここを疑う価値があります。</p>
+<p>同じくZoomの「オリジナルサウンド」は、公式の説明で「エコーキャンセルと後処理を無効化する」設定とされ、同じ文に *"Professional audio interface, microphone, and headphones required."* という条件が付いています。素の音をそのまま送るので、環境が整っていない場所では雑音もそのまま届きます。</p>
+<p><strong>Teams</strong> のノイズ抑制は「自動（既定値）」「低」「高」「オフ」です。公式ヘルプでは低が「コンピュータファンやエアコンなどの永続的なバックグラウンドノイズの低レベルを抑制します」、高が「音声ではないすべてのバックグラウンド サウンドを抑制します」と説明され、同じページに「静音スタジオなどの低ノイズ環境で、忠実度の高いマイクのノイズ抑制をオフにします」という記述もあります。<strong>良いマイクを静かな部屋で使うなら抑制はむしろ切る</strong>、というのが公式の案内です。</p>
+<p><strong>Google Meet</strong> のクラウドベースのノイズキャンセルは、対応エディションが公式ヘルプに一覧で示されています。挙がっているのは Business Standard、Business Plus、Enterprise Essentials／Standard／Plus、Education Standard／Plus、Teaching and Learning Upgrade、Frontline、Workspace Individual、Google One（保存容量2TB以上）です。無料の個人向けGoogleアカウントはこの一覧に含まれていません。設定に見当たらない場合、不具合ではなく契約しているエディションの問題である可能性があります。</p>
+<p>除去対象として挙がっているのは「タイピング音、ドアを閉める音、会議室の反響音、建設現場の音などの背景雑音」で、一方で「テレビの音声や話している人の声は除去されません」とも明記されています。既定でオンかオフかもエディションで異なります。</p>
+<h2 id="選び方の判断軸は3つ">選び方の判断軸は3つ</h2>
+<h3 id="1-話すのは1人か-同じ部屋に複数人か">1. 話すのは1人か、同じ部屋に複数人か</h3>
+<p>1人ならマイクを口元に近づけられるので、ヘッドセットや襟元のピンマイクが費用対効果の高い選択です。2人以上が同席するなら、全員から等距離に置ける全指向性のスピーカーフォンに切り替えます。1人用のマイクを部屋の中央に置いて複数人で使うのが、いちばん条件の悪い使い方です。</p>
+<h3 id="2-買う前に-設定と置き場所を試したか">2. 買う前に、設定と置き場所を試したか</h3>
+<p>アプリ側の抑制設定は結果を大きく動かします。加えて、PCを手前に寄せる、キーボードを本体から離す、机に布を敷いて反射を減らすといった無料の対策が先にあります。<strong>これらを試したうえで残った問題に買い替えを当てるほうが、何が効いたのか分かります。</strong></p>
+<h3 id="3-その音声を文字起こしに回すか">3. その音声を文字起こしに回すか</h3>
+<p>議事録をAIに任せるなら、入り口の音質はそのまま結果に効きます。抑制を強くかけた音声は雑音と一緒に声の細部も加工されている可能性があるため、素の収音条件を上げるほうが素直です。文字起こし側の選択肢は<a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜定番が終了した今、無料で残っているのは4つ</a>に無料枠ごとまとめてあります。</p>
+<h2 id="公式ページで仕様を確認できた例">公式ページで仕様を確認できた例</h2>
+<p>製品名がないと選びにくいので、公式サイトで仕様の文言を確認できたものだけ2つ挙げます。ここに無い製品が劣るという意味ではありません。</p>
+<p><strong>複数人向け：Anker PowerConf S3</strong> 公式製品ページに「6つの全指向性マイクを360°に配置」「エコーキャンセリングや残響抑制、ノイズリダクション機能を採用しており、クリアな通話を実現します」と記載があります。接続は Bluetooth と USB Type-C、連続通話時間は最大24時間、公式ストアの表示価格は2026年8月18日時点で¥9,990（税込）。集音範囲の距離や想定人数は公式ページに記載が無かったため書きません。</p>
+<p><strong>1人向け：オーディオテクニカ AT2020USB-X</strong> 公式の仕様表では指向特性が「単一指向性」、型式が「バックエレクトレット・コンデンサー型」、出力コネクターが USB Type-C で、ミュートタッチセンサーとヘッドホン出力を備えます。単一指向性は正面を拾って側面・背面を拾いにくい特性なので、正面に口が来るよう置くのが前提です。価格は公式製品ページに表示が無かったため記載しません。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>ヘッドセットは装着感を毎日負担する</strong>。会議時間が長い人ほど効果は大きい一方、髪型が崩れる・耳が痛くなるという理由で使われなくなりやすい機材でもあります</li><li><strong>スピーカーフォンは1人用途では不利</strong>。卓上中央に置く前提なので、1人で使うと口元から遠くなり、内蔵マイクと同じ問題に戻ります</li><li><strong>USBマイクは机の場所を占有する</strong>。単一指向性は向きが結果を左右するため、スタンドやアームを置く余地がないと向きの調整がしづらくなります</li><li><strong>アプリ側の抑制は万能ではない</strong>。Google Meet の公式ヘルプにあるとおり、話している人の声やテレビの音声は除去対象ではありません。隣の会話が入り込む環境は、設定ではなく場所の側で解決する必要があります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. マイクを買い替えれば、AI文字起こしの精度は上がりますか？</strong> 入り口の音がきれいになるぶん条件は良くなりますが、機材だけで決まるわけではありません。話者の重なりや固有名詞の表記はサービス側の性能に依存します。無料の範囲でどこまでできるかは<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>で上限を整理しています。</p>
+<p><strong>Q. Google Meet の設定にノイズキャンセルの項目が見当たりません。</strong> 公式ヘルプの対応エディション一覧を確認してください。Business Standard や Workspace Individual などが挙がっており、無料の個人向けアカウントは一覧に入っていません。Education 系と Teaching and Learning Upgrade は対応エディションですが既定でオフと書かれているので、その場合は自分でオンにします。</p>
+<p><strong>Q. スピーカーフォンとヘッドセット、どちらを先に買うべきですか？</strong> 参加の形で決まります。自席から1人で参加する時間が長いならヘッドセット、会議室に集まって1台のPCで参加する機会が多いならスピーカーフォンで、頻度の高いほうから揃えると無駄が出ません。なお会議の記録そのものを別サービスに任せる手もあり、無料で使える文字起こしの現状は<a href="../clova-note-alternative/">CLOVA Note終了の代わりは？無料で使える乗り換え先を比較</a>にまとめています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>聞き取りやすさは価格ではなく<strong>口元との距離</strong>で決まる。1人ならヘッドセット、複数人ならスピーカーフォンが基本の分け方</li><li><strong>買う前にアプリ側の設定を見る</strong>。Zoomの「高」は公式に「他人の話し声のような音も除去する」と書かれ、Teams公式は良いマイクと静かな環境では抑制を切るよう案内している</li><li><strong>Meet のノイズキャンセルは対応エディションが公式に一覧化されている</strong>。設定に無いときは不具合ではなく契約の問題である可能性がある</li></ul>
+<p>価格と仕様は変更されることがあります。購入前に公式サイトの最新情報を確認してください。この記事の数値は2026年8月18日に各社の公式ページで確認したものです。</p></article>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
