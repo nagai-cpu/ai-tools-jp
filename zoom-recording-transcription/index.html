@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件｜AIツール実用ガイド</title>
+<meta name="description" content="Zoomの録画を無料で文字起こししたい人向けに、Zoom公式の前提条件で有料が必要な機能と、無料のままできるローカル録画からの手順を2026年8月時点で整理します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/zoom-recording-transcription/">
+<meta property="og:title" content="Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件｜AIツール実用ガイド">
+<meta property="og:description" content="Zoomの録画を無料で文字起こししたい人向けに、Zoom公式の前提条件で有料が必要な機能と、無料のままできるローカル録画からの手順を2026年8月時点で整理します。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件", "description": "Zoomの録画を無料で文字起こししたい人向けに、Zoom公式の前提条件で有料が必要な機能と、無料のままできるローカル録画からの手順を2026年8月時点で整理します。", "datePublished": "2026-08-19", "dateModified": "2026-08-19", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/zoom-recording-transcription/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Zoomの無料プランでも録画自体はできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。公式には、コンピュータへのレコーディングは「すべてのZoomアカウント」で利用できると書かれています。保存先が自分のPCになるだけで、録画そのものは無料プランでも可能です。"}}, {"@type": "Question", "name": "Zoomの文字起こしは日本語に対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "クラウド録画のオーディオ文字起こしの対応言語一覧に日本語が挙がっています。ただしこの機能を使うには、前述のとおり Pro・Business・Education・Enterprise のいずれかのアカウントが必要と前提条件に書かれています。"}}, {"@type": "Question", "name": "40分を超える会議を無料で文字起こしするには？", "acceptedAnswer": {"@type": "Answer", "text": "Zoomの無料プランは1回40分で切れるため、40分を超える会議はそもそも無料プランでは続けられません。会議を分割して録るか、Zoom側かツール側のどちらかを有料にするかの選択になります。「全部無料で長時間」を成立させる組み合わせは、2026年8月時点では見つけられませんでした。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件</h1><p class="meta">2026-08-19 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Zoomの録画を無料で文字起こしする道は「<strong>ローカル（コンピュータ）に録画して、その音声ファイルを外部の文字起こしツールに渡す</strong>」の一本だけです。Zoom自身のオーディオ文字起こしとAI要約は、公式ヘルプの前提条件に有料アカウントが条件として書かれているためです。無料でやるなら、Zoomは「録るだけの機械」として使うことになります。</p>
+<h2 id="Zoomの機能でどこまで無料か">Zoomの機能でどこまで無料か</h2>
+<p>2026年8月19日に Zoom 公式のサポート記事で確認した、録画と文字起こしまわりの条件です。</p>
+<div class="tw"><table><thead><tr><th>Zoomの機能</th><th>無料（ベーシック）での可否</th><th>公式が挙げている条件</th><th>できあがるもの</th></tr></thead><tbody><tr><td>コンピュータ（ローカル）録画</td><td>○</td><td>「すべてのZoomアカウント」で利用できると記載</td><td>MP4（動画）・M4A（音声）・チャットのテキスト</td></tr><tr><td>クラウド録画</td><td>×</td><td>「有料アカウント」で利用できると記載</td><td>クラウド上に保存され、閲覧・共有・ダウンロードができる</td></tr><tr><td>クラウド録画のオーディオ文字起こし</td><td>×</td><td>Pro・Business・Education・Enterprise のいずれかのアカウント＋クラウド録画とオーディオ文字起こしの有効化</td><td>文字起こし（対応言語に日本語が挙がっている）</td></tr><tr><td>AI Companion のミーティング要約</td><td>×</td><td>Zoom Workplace Pro / Pro Plus / Business / Business Plus / Enterprise などのライセンスユーザー</td><td>会議の要約</td></tr></tbody></table></div>
+<p>表の下2行が重要です。<strong>Zoomのオーディオ文字起こしは「クラウド録画に付随する機能」</strong>として設計されていて、公式の前提条件はクラウド録画が有効になっていることを求めています。そしてクラウド録画そのものが有料アカウント向けと明記されています。無料プランはこの入り口で止まります。</p>
+<p>AI Companion のミーティング要約も同じで、前提条件に並んでいるのは Pro 以上のプラン名だけです。ベーシック（無料）の記載はありません。</p>
+<p>一方で、<strong>ローカル録画は「すべてのZoomアカウント」と書かれていて、無料プランでも使えます</strong>。しかも出力は MP4 の動画だけでなく <strong>M4A の音声ファイル</strong>も作られます。この M4A が、外部ツールに渡すときの素材になります。</p>
+<h2 id="無料でやる手順は2ステップしかない">無料でやる手順は2ステップしかない</h2>
+<ol><li>Zoomの会議中に「レコーディング」→「このコンピューターに記録」を選ぶ。会議終了後に自動で変換され、MP4 と M4A が保存される</li><li>その <strong>M4A（音声）</strong> を文字起こしツールにアップロードする</li></ol>
+<p>動画（MP4）ではなく音声（M4A）を上げるのがコツです。ファイルが軽く、アップロードで待たされにくくなります。</p>
+<p>なお、参加者としてローカル録画したい場合はホストの許可が必要です。自分がホストでない会議を勝手に録るための手順ではない点は押さえておいてください。</p>
+<h2 id="実際に詰まるのは-月-分-ではなく-1回-分">実際に詰まるのは「月◯分」ではなく「1回◯分」</h2>
+<p>ここからが、無料で済ませたい人が一番つまずくところです。無料の文字起こしツールを比べるとき、多くの人は「月に何分まで無料か」を見ます。しかし<strong>先に効いてくるのは「1回のアップロードで何分まで通るか」</strong>のほうです。</p>
+<p>Zoomの無料プランは1回のミーティングが最大40分と公式の料金ページに書かれています。裏を返すと、無料プランで録れる録画は<strong>1本あたり最大40分の塊</strong>になります。この40分の塊を、そのまま受け取れるツールかどうかで結果が変わります。</p>
+<p>代表的な無料枠を、公式の記載で確認した範囲だけ並べるとこうなります。</p>
+<ul><li><strong>Notta フリープラン</strong>：文字起こし120分/月、<strong>1回につき3分まで</strong>、ファイルインポート50個/月、AI要約10回/月、クレジットカードの登録不要</li><li><strong>LINE WORKS AiNote フリープラン</strong>：0円、文字起こし300分/月。ただし公式の料金解説ページには、AI要約とWeb会議録音が<strong>利用不可</strong>と文言で書かれています</li></ul>
+<p>Notta の「1回3分」は、40分の録画を1本まるごと通す用途とは噛み合いません。月120分の枠が残っていても、1ファイルが3分で切られます。この制限の詳しい内訳は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>にまとめました。</p>
+<p>AiNote のフリーは月300分と枠が大きい代わりに、AI要約が使えません。文字が起きればよく、要約は自分で書くという人向けです。1回あたりの上限時間については、今回確認した公式の料金解説ページに文言が見当たらなかったため、40分の録画を1本で通せるかは申し込み前に公式でご確認ください。</p>
+<p>無料枠を横並びで見たい場合は<a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜定番が終了した今、無料で残っているのは4つ</a>、旧CLOVA Noteからの乗り換えなら<a href="../clova-note-alternative/">CLOVA Note終了の代わりは？無料で使える乗り換え先を比較</a>が対応します。</p>
+<h2 id="選び方の判断軸は3つ">選び方の判断軸は3つ</h2>
+<h3 id="1-40分の録画を-1本のまま-通したいか">1. 40分の録画を「1本のまま」通したいか</h3>
+<p>1本まるごと通したいなら、1回あたりの上限が長いツールを選ぶしかありません。逆に、要点だけ拾えればいいなら、必要な場面を3分ずつ切り出して上げる運用でも成立します。音声を分割する手間を許容できるかどうかが分かれ目です。</p>
+<h3 id="2-文字が起きればいいのか-要約まで欲しいのか">2. 文字が起きればいいのか、要約まで欲しいのか</h3>
+<p>議事録として配るなら、文字起こしの生テキストは長すぎて読まれません。要約まで無料でやりたいなら、AI要約が無料枠に含まれているかを先に見るべきです。この点では <a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a> のフリープランに <strong>AI要約10回/月</strong>が明記されており、無料のまま要約まで試せます。</p>
+<h3 id="3-毎回アップロードするのか-会議に同席させるのか">3. 毎回アップロードするのか、会議に同席させるのか</h3>
+<p>Notta の料金ページのフリー欄には、ミーティングの文字起こし（Zoom・Google Meet・Microsoft Teams・Webex・Slack対応）と話者識別が項目として載っています。つまり<strong>録画してからアップロードする以外に、会議へ同席させる使い方も無料枠の中にあります</strong>。同席させれば、そもそもローカル録画とアップロードの往復が要らなくなります。</p>
+<p>ただし前述の「1回3分」の制限は残るため、無料のままで長時間の会議を丸ごと自動議事録にする使い方にはなりません。短い定例を回しながら日本語の精度を見て、合いそうなら有料に上げるという順番が現実的です。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<p><strong>Zoomを有料にする場合</strong>：オーディオ文字起こしは有料アカウント＋クラウド録画が前提です。文字起こしだけが目的なら、外部ツールを1つ契約したほうが安く済む可能性があります。Zoomの各プランの金額は改定されるため、公式の料金ページで最新の金額を確認してから比べてください。</p>
+<p><strong>Notta フリープラン</strong>：1回3分の制限が想像以上に強く効きます。長い音源を通す前提では組み立てられません。</p>
+<p><strong>AiNote フリープラン</strong>：AI要約とWeb会議録音が利用不可と公式に書かれています。要約や会議への自動同席が目的なら、無料の範囲では目的を満たせません。</p>
+<p><strong>ローカル録画そのもの</strong>：PCのストレージを消費し、会議終了後の変換にも時間がかかります。また音が悪いと、どのツールを使っても文字起こしの精度は上がりません。入力側の対策は<a href="../web-meeting-microphone/">Web会議のマイクおすすめ｜聞き取りやすさで選ぶ</a>にまとめています。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. Zoomの無料プランでも録画自体はできますか？</strong></p>
+<p>できます。公式には、コンピュータへのレコーディングは「すべてのZoomアカウント」で利用できると書かれています。保存先が自分のPCになるだけで、録画そのものは無料プランでも可能です。</p>
+<p><strong>Q. Zoomの文字起こしは日本語に対応していますか？</strong></p>
+<p>クラウド録画のオーディオ文字起こしの対応言語一覧に日本語が挙がっています。ただしこの機能を使うには、前述のとおり Pro・Business・Education・Enterprise のいずれかのアカウントが必要と前提条件に書かれています。</p>
+<p><strong>Q. 40分を超える会議を無料で文字起こしするには？</strong></p>
+<p>Zoomの無料プランは1回40分で切れるため、40分を超える会議はそもそも無料プランでは続けられません。会議を分割して録るか、Zoom側かツール側のどちらかを有料にするかの選択になります。「全部無料で長時間」を成立させる組み合わせは、2026年8月時点では見つけられませんでした。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Zoomのオーディオ文字起こしとAI Companionのミーティング要約は、公式の前提条件に有料アカウント（Pro以上）が挙げられている。無料プランはこの条件を満たさない</li><li>一方でローカル録画は「すべてのZoomアカウント」で利用でき、MP4に加えて <strong>M4Aの音声ファイル</strong>が残る。これを外部ツールに渡すのが無料で完結させる唯一の道</li><li>ツール選びで先に効くのは月間の合計時間ではなく <strong>1回あたりの上限</strong>。要約まで無料で試すなら Notta のフリープラン（120分/月・1回3分・AI要約10回/月）、文字起こしの量を優先するなら AiNote のフリープラン（0円・300分/月・AI要約は利用不可）</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a></li><li><a href="../clova-note-alternative/">CLOVA Note終了の代わりは？無料で使える乗り換え先を比較</a></li><li><a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜定番が終了した今、無料で残っているのは4つ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
