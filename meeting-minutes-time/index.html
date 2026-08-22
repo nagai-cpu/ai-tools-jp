@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか｜AIツール実用ガイド</title>
+<meta name="description" content="会議のあと議事録に時間がかかる人向けに、時間を食っている工程を分解し、2026年8月時点の公式ページで確認できた無料枠だけでどこまで肩代わりできるかを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/meeting-minutes-time/">
+<meta property="og:title" content="議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか｜AIツール実用ガイド">
+<meta property="og:description" content="会議のあと議事録に時間がかかる人向けに、時間を食っている工程を分解し、2026年8月時点の公式ページで確認できた無料枠だけでどこまで肩代わりできるかを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか", "description": "会議のあと議事録に時間がかかる人向けに、時間を食っている工程を分解し、2026年8月時点の公式ページで確認できた無料枠だけでどこまで肩代わりできるかを整理しました。", "datePublished": "2026-08-23", "dateModified": "2026-08-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/meeting-minutes-time/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料のまま議事録の作成時間を減らせますか。", "acceptedAnswer": {"@type": "Answer", "text": "A. 減らせますが、条件付きです。1回40分以内・月3本までのZoom会議か、1回3分以内の短い打ち合わせなら公式の無料枠に収まります。60分の会議が毎週あるなら、無料枠を組み合わせても足りません。"}}, {"@type": "Question", "name": "文字起こしができれば、そのまま議事録になりますか。", "acceptedAnswer": {"@type": "Answer", "text": "A. なりません。全文はそのままだと読めないので、決定事項と担当・期限を抜き出す工程が残ります。ここを短くしたいなら、文字起こしだけでなく要約の回数制限も見て選ぶ必要があります。"}}, {"@type": "Question", "name": "会議中にメモを取るのはやめてよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "A. 録音と文字起こしが確実に走っているなら、メモは論点だけで足ります。会議中にメモが追いつかない場合の対処は[会議でメモが取れない・聞き逃すのを止めるには](../cant-take-meeting-notes/)に整理しました。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか</h1><p class="meta">2026-08-23 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、議事録に時間がかかっているのは文章を書く工程ではなく、<strong>録音を聞き直す工程</strong>です。ここは自分の腕が上がっても短くなりません。60分の会議は1.5倍速で聞いても40分かかります。月に数本・1本が短い会議なら、公式に確認できる無料枠だけで聞き直しをほぼ0にできます。それを超えるなら有料に切り替えるほうが早く終わります。</p>
+<h2 id="議事録の作業は5工程に分かれる">議事録の作業は5工程に分かれる</h2>
+<p>「議事録に2時間かかった」と言うとき、その2時間の中身はだいたいこう分かれています。</p>
+<ol><li>会議中にメモを取る</li><li>録音を<strong>聞き直す</strong></li><li>発言を文章にする</li><li>要点と決定事項を抜き出す</li><li>体裁を整えて共有する</li></ol>
+<p>このうち3〜5は慣れれば速くなります。速くならないのが2です。再生時間は録音時間そのもので、1.5倍速にしても60分が40分になるだけ。しかも聞き逃した箇所を戻すので、実際は録音時間を超えることも珍しくありません。<strong>議事録の時間短縮とは、事実上「工程2をどう消すか」の話です。</strong></p>
+<p>裏を返すと、工程2さえ消えれば、手元には最初から文字が並んでいます。あとは削る作業になるので、書く速度の問題ではなくなります。</p>
+<h2 id="工程2を肩代わりする受け皿を-公式の記載だけで並べる">工程2を肩代わりする受け皿を、公式の記載だけで並べる</h2>
+<p>無料の範囲は各社で条件がまったく違います。2026年8月時点で公式ページに書かれている文言だけを表にしました。</p>
+<div class="tw"><table><thead><tr><th>受け皿</th><th>文字起こし</th><th>要点のまとめ</th><th>無料で使える範囲（公式の文言）</th><th>前提条件</th></tr></thead><tbody><tr><td>自分で聞き直す</td><td>—</td><td>—</td><td>0円</td><td>録音アプリだけ</td></tr><tr><td>Word のトランスクリプト</td><td>あり</td><td>本ページに記載なし</td><td>「Microsoft 365 サブスクリプションを持つユーザーは、アップロードされた音声を 1 か月あたり最大 300 分までトランスクリプトを作成できます」</td><td>「商用テナントの Windows 上の Word for Microsoft 365 でのみ使用できます」</td></tr><tr><td>Google ドキュメントの音声入力</td><td>その場で話す分</td><td>—</td><td>費用の記載なし</td><td>「Chrome、Edge、Safari」の最新版</td></tr><tr><td>ZoomMate（Zoom）</td><td>AIノート作成</td><td>あり</td><td>「ミーティング要約（1か月あたり3回の主催ミーティングで）」</td><td>ベーシックは「1回のミーティング当たり40分」</td></tr><tr><td>Notta フリープラン</td><td>「120分/月」</td><td>「10回/月」</td><td>「￥0 円」</td><td>「1回につき3分まで文字起こし可能」</td></tr></tbody></table></div>
+<p>表の読み方で1つ注意があります。Wordの300分は<strong>Microsoft 365 のサブスクリプション込みの枠</strong>で、単体で無料という意味ではありません。Googleドキュメントの音声入力は費用の記載自体がありませんが、録音済みファイルの文字起こしについてはヘルプに記載が見つかりませんでした。使えるのは「その場でしゃべる」用途と読むのが安全です。</p>
+<p>Zoomは2026年8月時点の公式ページでは<strong>ZoomMate</strong>という名前で載っていて、無料のベーシックにも要約が月3回分含まれています。同じ無料の欄には「Zoomおよびサードパーティミーティングプラットフォーム向けのAIノート作成（My Notes）（1か月あたり3回利用可能）」とも書かれているので、他社の会議ツールを使う月でも枠は月3回のまま共通です。会議がZoomに寄っているなら、まずここを開いて試すのが一番早いです。Zoom側の録画と文字起こしの範囲は<a href="../zoom-recording-transcription/">Zoom録画の文字起こしを無料でやる方法</a>にまとめてあります。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-1回の会議が何分か">1. 1回の会議が何分か</h3>
+<p>ここで大半の人がふるいにかけられます。Nottaのフリープランは月120分の枠より先に「1回につき3分」で止まります。60分の会議を丸ごと投げる用途には届きません。この上限の実際の効き方は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？</a>で詳しく書きました。Zoomのベーシックも1回40分なので、1時間の定例には足りない計算になります。</p>
+<h3 id="2-月に何本あるか">2. 月に何本あるか</h3>
+<p>月3本までならZoomの無料要約で足ります。週1の定例（月4〜5本）になった時点で無料枠は超えます。Wordの300分も、60分会議なら月5本で使い切ります。<strong>「何分か」と「何本か」を掛け算してから道具を選ぶ</strong>と、途中で乗り換える無駄がありません。</p>
+<h3 id="3-欲しいのは全文か要点か">3. 欲しいのは全文か要点か</h3>
+<p>議事録の目的が「言った言わないの確認」なら全文が要ります。「決定事項と担当の共有」なら要点だけで済み、要約の回数制限のほうが効いてきます。自分の職場がどちらを求めているかで、見るべき数字が変わります。</p>
+<h2 id="60分会議が毎週あるなら-無料枠では終わらない">60分会議が毎週あるなら、無料枠では終わらない</h2>
+<p>ここまでの数字を素直に当てはめると、週1の60分定例がある時点で、無料の受け皿はどれも枠を超えます。月4本で240分。Nottaのフリープラン（120分/月・1回3分）でもZoomのベーシック（要約3回/月・1回40分）でも足りません。</p>
+<p>その前提で見ると、Nottaのプレミアムは公式料金ページで「￥1,185 円/月」（年間プラン）、枠は「1800分/月」「1回につき5時間まで文字起こし可能」と書かれています。月30時間ぶんなので、週1の定例どころか日々の打ち合わせを全部通しても余ります。聞き直しに毎週40分使っているなら、月160分＝2時間半以上をこの金額で買い戻す計算になります。まず無料の120分で日本語の精度を確かめてから決めるのが順当です。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>は無料のまま試せるので、判断は使ってからで間に合います。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta</strong>：フリープランは1回3分で切れるため、無料のままでは長い会議の全文には使えません。プレミアムの安い側の金額は「年間プラン」の表示なので、月ごとの契約とは条件が違います。申し込み前に契約期間を確認してください。</li><li><strong>ZoomMate</strong>：無料の枠は要約もAIノートも月3回で、ベーシックは「1回のミーティング当たり40分」で会議自体が切れます。月4本以上の定例には枠が足りません。</li><li><strong>Word のトランスクリプト</strong>：公式に「商用テナントの Windows 上の Word for Microsoft 365 でのみ」と条件が明記されています。自分の環境が該当するかを先に確認しないと、300分の枠は使えません。</li><li><strong>Googleドキュメントの音声入力</strong>：無料ですが、話している最中しか拾えません。会議のあとに録音を渡す使い方は想定されていないと読めます。</li><li><strong>共通</strong>：どの手段も、音が悪ければ結局聞き直すことになります。入り口の音を整えるほうが先です（<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ</a>）。</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料のまま議事録の作成時間を減らせますか。</strong> A. 減らせますが、条件付きです。1回40分以内・月3本までのZoom会議か、1回3分以内の短い打ち合わせなら公式の無料枠に収まります。60分の会議が毎週あるなら、無料枠を組み合わせても足りません。</p>
+<p><strong>Q. 文字起こしができれば、そのまま議事録になりますか。</strong> A. なりません。全文はそのままだと読めないので、決定事項と担当・期限を抜き出す工程が残ります。ここを短くしたいなら、文字起こしだけでなく要約の回数制限も見て選ぶ必要があります。</p>
+<p><strong>Q. 会議中にメモを取るのはやめてよいですか。</strong> A. 録音と文字起こしが確実に走っているなら、メモは論点だけで足ります。会議中にメモが追いつかない場合の対処は<a href="../cant-take-meeting-notes/">会議でメモが取れない・聞き逃すのを止めるには</a>に整理しました。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>議事録の時間を食っているのは書く工程ではなく、録音を聞き直す工程。倍速でも録音時間の半分は必ず残る</li><li>無料で肩代わりできるのは「1回40分・月3本まで（ZoomMate）」か「1回3分・月120分（Nottaフリー）」の範囲。60分の定例が毎週あるなら超える</li><li>選ぶ前に「1回何分 × 月何本」を出す。数字が出れば、無料で足りるか有料に行くかは自動的に決まる</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ</a></li><li><a href="../cant-take-meeting-notes/">会議でメモが取れない・聞き逃すのを止めるには｜無料でどこまで残せるか</a></li><li><a href="../zoom-recording-transcription/">Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件</a></li><li><a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a></li><li><a href="../clova-note-alternative/">CLOVA Note終了の代わりは？無料で使える乗り換え先を比較</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
