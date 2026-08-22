@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ｜AIツール実用ガイド</title>
+<meta name="description" content="会議やインタビューの文字起こしが崩れる人向けに、Nottaと各社の音声認識ドキュメントに書かれている録音条件だけを集め、機材を買う前にできることを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/recording-tips-for-accuracy/">
+<meta property="og:title" content="文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ｜AIツール実用ガイド">
+<meta property="og:description" content="会議やインタビューの文字起こしが崩れる人向けに、Nottaと各社の音声認識ドキュメントに書かれている録音条件だけを集め、機材を買う前にできることを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ", "description": "会議やインタビューの文字起こしが崩れる人向けに、Nottaと各社の音声認識ドキュメントに書かれている録音条件だけを集め、機材を買う前にできることを整理しました。", "datePublished": "2026-08-22", "dateModified": "2026-08-22", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/recording-tips-for-accuracy/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料プランと有料プランで、文字起こしの精度は変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Nottaの料金ページのプラン比較表で差として書かれているのは、文字起こし時間（120分/月・1,800分/月・無制限）、連続録音時間（3分・5時間）、ファイルインポート回数、AI要約回数といった枠の部分です。プランによって認識精度が変わるという記載は、料金ページからは確認できませんでした。"}}, {"@type": "Question", "name": "Bluetoothイヤホンを使うと精度が落ちますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式に書かれているのは「一部のBluetoothイヤホンは、8kHzの低いサンプリングレートしか対応していない」という条件付きの記述で、全機種がそうだとは書かれていません。16kHzのWide Band Speech対応が推奨として挙がっているので、手持ちの仕様を確認するか、確認できないなら録音の日だけ有線にするのが手堅い対応です。"}}, {"@type": "Question", "name": "すでに録ってしまった音声を、後から加工すれば精度は上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "Google Cloud のドキュメントには「avoid re-sampling」（再サンプリングは避ける）とあり、低いレートで録れたものを変換して送ることは推奨されていません。録り直せない音源は、音そのものより固有名詞の単語登録など、テキスト側で拾いにいくほうが現実的です。無料で試せる選択肢は[AI文字起こし無料比較｜定番が終了した今、無料で残っているのは4つ](../ai-transcription-free-comparison/)に整理してあります。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ</h1><p class="meta">2026-08-22 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、文字起こしの精度は良いマイクを買う前に、<strong>口とマイクの距離を詰める・Bluetooth接続をやめる・ノイズ除去とAGCを切る</strong>の3点で動きます。どれも各社の公式ドキュメントに条件として書かれていて、費用は0円です。買い替えを考えるのはこの3つを試したあとで間に合います。</p>
+<h2 id="認識率98-86-は-条件が付いた数字として書かれている">「認識率98.86%」は、条件が付いた数字として書かれている</h2>
+<p>Nottaの料金ページのFAQには、精度についてこう書かれています。</p>
+<blockquote>フォーマルな会議など、整然とした発言が行われる場合には、認識率は98.86%以上となります。※収音が困難な場合は、認識精度に影響を与える可能性があります。</blockquote>
+<p>読み飛ばしやすいのは後半です。この数字の前提は「整然とした発言」であり、さらに<strong>収音が困難なら精度に影響すると公式が自分で但し書きを付けています</strong>。裏を返すと、利用者側で動かせる余地は認識エンジンではなく収音のほうにある、ということになります。</p>
+<p>同じ順序は他社の開発者向けドキュメントにも出てきます。Microsoft Learn のカスタム音声のページは「音声サンプルを集める前に、マイクと信号処理のハードウェアの見直しを常に検討する」と書いています。認識側より先に入り口を見よ、という順番で揃っています。</p>
+<h2 id="公式に書かれている録音条件を-出典ごとに並べる">公式に書かれている録音条件を、出典ごとに並べる</h2>
+<p>数字と文言が確認できたものだけを表にしました。</p>
+<div class="tw"><table><thead><tr><th>見る項目</th><th>公式に書かれている条件</th><th>書いてある場所</th><th>かかる費用</th></tr></thead><tbody><tr><td>口とマイクの距離</td><td>「話者とマイクの距離を20cm〜60cm程度にするのが理想的」</td><td>Notta 公式</td><td>0円</td></tr><tr><td>Bluetooth接続</td><td>「一部のBluetoothイヤホンは、8kHzの低いサンプリングレートしか対応していない」</td><td>Notta 公式</td><td>0円（有線に替える）</td></tr><tr><td>サンプリングレート</td><td>「Capture audio with a sampling rate of 16,000 Hz or higher.」「However, avoid re-sampling.」</td><td>Google Cloud Speech-to-Text</td><td>0円（録音設定）</td></tr><tr><td>保存する形式</td><td>「Use a lossless codec to record and transmit audio. FLAC or LINEAR16 is recommended.」</td><td>Google Cloud Speech-to-Text</td><td>0円（録音設定）</td></tr><tr><td>自動調整の処理</td><td>「Do not use automatic gain control (AGC).」「All noise reduction processing should be disabled.」</td><td>Google Cloud Speech-to-Text</td><td>0円（設定）</td></tr><tr><td>同時に話すこと</td><td>「2人以上で同時に発言を控えるようにしましょう」</td><td>Notta 公式</td><td>0円</td></tr><tr><td>前後の無音</td><td>「include at least a half-second of silence before and after speech in each sample file」</td><td>Microsoft Learn</td><td>0円</td></tr></tbody></table></div>
+<p>注意点をひとつ。GoogleとMicrosoftの文言は<strong>それぞれ自社のサービスに向けた指針</strong>で、Nottaの内部エンジンにそのまま当てはまると公式に書かれているわけではありません。ただし「距離」「16kHz」「加工しすぎない」という方向は各社で食い違っていないので、共通する部分だけを採りました。</p>
+<h2 id="見るべきは3つ">見るべきは3つ</h2>
+<h3 id="1-口とマイクの距離を詰められる経路か">1. 口とマイクの距離を詰められる経路か</h3>
+<p>いちばん効くのに、いちばん軽視されるのがここです。Nottaの精度向上ページは、内蔵マイクについて「口元から離れている場合、音量が十分ではなく、クリアな音声を収集できない」、外部マイクについても「離れた場所からボソボソとした声で話すと上手く収音できない可能性」と書いています。距離の目安として挙がっているのが先の20cm〜60cmです。</p>
+<p>複数人が同じ部屋にいるなら、内蔵マイクで録る場合は「マイクをできるだけ中央に配置」、スピーカーフォンは「遠くに座る人の声まで明瞭に収集」できる点が挙げられています。インタビューの項では「出来るだけマイクに近づけて話しましょう」としつつ、近づけすぎには「ポップノイズを防ぐために適切な距離を保ちます」とも書かれています。<strong>近いほど良いのではなく、20〜60cmの帯に入れる</strong>という話です。</p>
+<p>マイクの方式ごとの向き不向きは<a href="../web-meeting-microphone/">Web会議マイクのおすすめは？聞き取りやすさは値段より距離で決まる</a>にまとめてあるので、機材から入りたい場合はそちらが早いです。</p>
+<h3 id="2-経路のどこかで音を細くしていないか">2. 経路のどこかで音を細くしていないか</h3>
+<p>ここが「録音した瞬間にしか直せない」層です。Google Cloud のドキュメントは16,000Hz以上での収録を求めたうえで、「However, avoid re-sampling.」（ただし再サンプリングは避ける）と続けます。電話音声のように元が8,000Hzなら「that is the rate that should be sent to the service」（その値のまま送るべき）とも書かれています。つまり<strong>細い音を後から太く変換して戻るとは書かれていない</strong>わけです。</p>
+<p>そこに効いてくるのがBluetoothです。Nottaの精度向上ページには「一部のBluetoothイヤホンは、8kHzの低いサンプリングレートしか対応していない」という記述があり、16kHzのWide Band Speech対応が推奨として挙がっています。手元のイヤホンがどちらかは機種によりますが、<strong>判断が付かないなら会議の日だけ有線に替える</strong>のが確実で、費用もかかりません。</p>
+<p>形式も同じ層の話です。Googleは可逆コーデック（FLAC / LINEAR16）を推奨し、mp3などの非可逆の形式は精度を下げうるとしています。一方でNottaの精度向上ページに挙がっているのは「WAV、MP３ファイル」で、「はっきりとした声で音質がクリアな場合は、ほぼ正しく認識」と書かれています。<strong>mp3が使えないという意味ではありません。</strong>録り直しがきかない音源なら、形式より先に距離と静かさを優先するほうが現実的です。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h3 id="3-精度のために加工を足していないか">3. 精度のために加工を足していないか</h3>
+<p>直感に反する部分です。Google Cloud のベストプラクティスには「Avoid audio clipping. Do not use automatic gain control (AGC).」（音の割れを避ける。自動ゲイン調整は使わない）「All noise reduction processing should be disabled.」（ノイズ低減処理はすべて無効にする）と書かれています。認識器の側は「designed to ignore background voices and noise without additional noise-canceling」（追加のノイズキャンセルなしで背景の声や雑音を無視するよう設計されている）とされているため、手前で削る処理はむしろ邪魔になりうる、という立て付けです。</p>
+<p>同時発話についても「複数人が同時に、あるいは異なる音量で話すと、背景雑音とみなされて無視されることがある」とあります。Notta側の「2人以上で同時に発言を控えるようにしましょう」と同じ指摘です。</p>
+<p>ただし会議アプリのノイズ抑制を切ると<strong>相手側には雑音がそのまま届きます</strong>。Zoom・Teams・Google Meet それぞれの設定が公式にどう説明されているかは先の<a href="../web-meeting-microphone/">Web会議マイクの記事</a>に引用してあるので、切る前に読むほうが安全です。</p>
+<h2 id="会議が始まる前の-2分の手順">会議が始まる前の、2分の手順</h2>
+<ol><li><strong>イヤホンを有線に替える</strong>（機種が16kHz対応と分かっているならそのままで構いません）</li><li><strong>マイクを20〜60cmの帯に置く</strong>。内蔵マイクなら本体を手前に、複数人なら卓上の中央に</li><li><strong>自分の側が静かな部屋なら、ノイズ抑制とAGCを切る</strong>。騒がしい場所なら切らない</li><li><strong>録音を始めて0.5秒ほど置いてから話し出す</strong>。終わりも、話し終えてから止める</li><li><strong>社名・製品名・人名は事前に単語登録しておく</strong>。Nottaの単語登録機能は日本語のみと公式に書かれています</li></ol>
+<p>録るところから議事録までの流れは<a href="../cant-take-meeting-notes/">会議のメモが取れない・聞き逃す人へ｜記録を任せる3つの受け皿</a>に、Zoomの録画を文字にする手順は<a href="../zoom-recording-transcription/">Zoom録画の文字起こしを無料でやる方法｜公式機能と外部ツールの境目</a>に書いています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Nottaの無料プランは枠が小さい。</strong> 公式の料金ページによると、フリーは文字起こし時間が120分/月、1回につき3分まで、ファイルインポートが50個/月、AI要約が10回/月です。長い会議をその場で録るなら「1回3分」のほうが先に当たります。内訳は<a href="../notta-free-limits/">Nottaの無料プランはどこまで使える？月120分と1回3分の内訳</a>にまとめました</li><li><strong>公式自身が精度を保証していない。</strong> 98.86%には「収音が困難な場合は、認識精度に影響を与える可能性があります」という但し書きが付いています。条件を整えても、話し方や専門用語の量で結果は変わります</li><li><strong>可逆形式は容量が増える。</strong> WAVで長時間の会議を録るとファイルが大きくなり、回線の細い環境ではアップロードが壁になります</li><li><strong>ノイズ抑制を切ると相手が困ることがある。</strong> 精度のための設定と、会議の聞きやすさのための設定は一致しません</li><li><strong>GoogleとMicrosoftの指針は自社エンジン向けです。</strong> 他社に同じ数字が当てはまると公式に書かれているわけではないため、そこは断定できません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料プランと有料プランで、文字起こしの精度は変わりますか？</strong></p>
+<p>Nottaの料金ページのプラン比較表で差として書かれているのは、文字起こし時間（120分/月・1,800分/月・無制限）、連続録音時間（3分・5時間）、ファイルインポート回数、AI要約回数といった枠の部分です。プランによって認識精度が変わるという記載は、料金ページからは確認できませんでした。</p>
+<p><strong>Q. Bluetoothイヤホンを使うと精度が落ちますか？</strong></p>
+<p>公式に書かれているのは「一部のBluetoothイヤホンは、8kHzの低いサンプリングレートしか対応していない」という条件付きの記述で、全機種がそうだとは書かれていません。16kHzのWide Band Speech対応が推奨として挙がっているので、手持ちの仕様を確認するか、確認できないなら録音の日だけ有線にするのが手堅い対応です。</p>
+<p><strong>Q. すでに録ってしまった音声を、後から加工すれば精度は上がりますか？</strong></p>
+<p>Google Cloud のドキュメントには「avoid re-sampling」（再サンプリングは避ける）とあり、低いレートで録れたものを変換して送ることは推奨されていません。録り直せない音源は、音そのものより固有名詞の単語登録など、テキスト側で拾いにいくほうが現実的です。無料で試せる選択肢は<a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜定番が終了した今、無料で残っているのは4つ</a>に整理してあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>精度を動かす余地は認識エンジンより収音側にあり、公式が挙げている条件は<strong>距離・経路・加工</strong>の3つに整理できます</li><li>費用のかかる対策より先に、20〜60cmに寄せる／有線に替える／ノイズ抑制とAGCを切るを試すと、何が効いたのか分かります</li><li>ただし公式自身が「収音が困難な場合は精度に影響する可能性」と書いており、条件を整えても結果が一定になるとは書かれていません</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../cant-take-meeting-notes/">会議でメモが取れない・聞き逃すのを止めるには｜無料でどこまで残せるか</a></li><li><a href="../zoom-recording-transcription/">Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件</a></li><li><a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a></li><li><a href="../clova-note-alternative/">CLOVA Note終了の代わりは？無料で使える乗り換え先を比較</a></li><li><a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜定番が終了した今、無料で残っているのは4つ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
