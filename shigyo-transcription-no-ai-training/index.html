@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」｜AIツール実用ガイド</title>
+<meta name="description" content="士業が扱う相談記録を音声認識の学習に使われないようにする方法を、Nottaの利用規約と料金ページ、端末内で完結する代替手段から整理しました。2026年8月に公式で確認できた記載だけを載せています。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/shigyo-transcription-no-ai-training/">
+<meta property="og:title" content="士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」｜AIツール実用ガイド">
+<meta property="og:description" content="士業が扱う相談記録を音声認識の学習に使われないようにする方法を、Nottaの利用規約と料金ページ、端末内で完結する代替手段から整理しました。2026年8月に公式で確認できた記載だけを載せています。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」", "description": "士業が扱う相談記録を音声認識の学習に使われないようにする方法を、Nottaの利用規約と料金ページ、端末内で完結する代替手段から整理しました。2026年8月に公式で確認できた記載だけを載せています。", "datePublished": "2026-08-25", "dateModified": "2026-08-25", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/shigyo-transcription-no-ai-training/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料プランのままAI学習をオフにできますか。", "acceptedAnswer": {"@type": "Answer", "text": "料金ページ・利用規約・プライバシーポリシー・セキュリティページを通して見た範囲では、利用者が学習利用を個別にオフにする設定の説明は見つけられませんでした。規約は「プランに応じて」と書いているので、プランを変える以外の方法は公式の記載からは確認できていません。"}}, {"@type": "Question", "name": "預けた音声はどこに保管されますか。", "acceptedAnswer": {"@type": "Answer", "text": "公式セキュリティページには「バックアップデータを国内のデータセンターで保存しています」とあります。ただしこれはバックアップについての記述で、通常のデータの保管国を明記した文は見つけられませんでした。同ページには「データセンターに保存された音声、画像、テキストなどのデータはデフォルトで暗号化されています」の記載と、ISO 27001・SOC 2 Type2（2023年2月12日受領）・GDPR・APPIなどへの対応が並びます。"}}, {"@type": "Question", "name": "依頼者への説明は必要ですか。", "acceptedAnswer": {"@type": "Answer", "text": "士業は法令上の守秘義務を負う立場なので、録音と外部サービスの利用は事前に説明しておくのが無難です。運用の是非は各士業会の指針や顧問先の規程に沿う話なのでここでは踏み込みません。ツール側の事実として押さえるのは「学習の可否はプランで変わる」「端末内で完結させる選択肢もある」の2点です。会議記録そのものの効率化は[議事録作成に時間がかかる原因と短縮方法](../meeting-minutes-time/)も参考にしてください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」</h1><p class="meta">2026-08-25 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、AI文字起こしの「学習させない」は設定画面のスイッチではなく、<strong>契約しているプランの条項</strong>です。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>は利用規約に「お客様がご利用のプランに応じて」音声データが音声認識トレーニングに使われる場合があると書いています。そして料金ページで「AI学習なし」と文言で書かれているのは、士業向け特別プランとエンタープライズの2つだけです。相談記録を扱うなら、この2つを問い合わせるか、そもそも音声を外に出さない方式にするかの二択になります。</p>
+<h2 id="最初に読むべきは料金表ではなく利用規約">最初に読むべきは料金表ではなく利用規約</h2>
+<p>Nottaの利用規約とプライバシーポリシーには、同じ一文が置かれています（2026年8月25日に確認）。</p>
+<blockquote>本サービスは、音声認識エンジンを提供する第三者のパートナー企業のAPIを用いて音声認識等を行います。当該パートナー企業は、お客様がご利用のプランに応じて、お客様の音声データを音声認識トレーニングに利用する場合があります。本音声データの使用は同社のプライバシーポリシーによって管理されます。</blockquote>
+<p>読み取れることは3つです。音声認識は<strong>第三者パートナーのAPI</strong>を経由すること。学習に使われるかどうかは<strong>プランによって変わる</strong>こと（規約本文では「お客様がご利用のプランに応じて」が強調されています）。そしてその音声データの扱いは、Nottaではなく<strong>パートナー企業側のプライバシーポリシー</strong>で管理されること。</p>
+<p>依頼者の相談内容を音声で預けるなら、料金表の分数より先に見るべきはこの一文です。逆に言えば、この一文があるからこそ「AI学習なし」がプランの売り文句として成立しています。</p>
+<h2 id="AI学習なし-と書かれているプランはどれか">「AI学習なし」と書かれているプランはどれか</h2>
+<p>2026年8月25日時点の公式料金ページで、プランの説明文に「AI学習なし」という<strong>文言がある</strong>のは次の2つでした。</p>
+<ul><li><strong>エンタープライズ</strong>（要相談）: 「すべてのビジネス機能＋」として、SAMLシングルサインオン（SSO）、<strong>AI学習なし</strong>、操作ログ、専用サポートデスクなどが並ぶ</li><li><strong>士業向け特別プラン</strong>（お問い合わせ）: 「ビジネスプラン機能＋」として、AI要約・ファイルインポートの回数無制限、<strong>AI学習なし</strong>、専門辞書登録可能</li></ul>
+<p>フリー、プレミアム（年間払いで月¥1,185・税込）、ビジネス（同じく月¥2,508・税込）のカードには、この文言はありません。ページ下部の「プラン比較」表にはセキュリティ項目として「AI学習なし」の行がありますが、各プランの欄はアイコン表示で文言がないため、どのプランに含まれるかは<strong>この表からは読み取れませんでした</strong>。</p>
+<p>なお士業向け特別プランは医療関係者向けと並んだ「業種別特別プラン」の枠にあり、ボタンは購入ではなく問い合わせフォームに繋がります。金額はページ上に出ていません。</p>
+<div class="tw"><table><thead><tr><th>選択肢</th><th>「学習に使わない」の公式記載</th><th>音声の置き場所</th><th>料金（税込）</th><th>使い始めるまで</th></tr></thead><tbody><tr><td>Notta フリー／プレミアム／ビジネス</td><td>プラン説明に記載なし（規約は「プランに応じて」学習利用の可能性を残す）</td><td>Nottaのサーバー</td><td>0円／月¥1,185／月¥2,508（いずれも年間払い）</td><td>Webで即日</td></tr><tr><td>Notta 士業向け特別プラン</td><td>「AI学習なし」と明記</td><td>Nottaのサーバー</td><td>非公開</td><td>問い合わせフォーム</td></tr><tr><td>Notta エンタープライズ</td><td>「AI学習なし」と明記</td><td>Nottaのサーバー</td><td>要相談</td><td>営業へ問い合わせ</td></tr><tr><td>Microsoft 365 Copilot Business</td><td>「基礎 LLM のトレーニングには使用されません」と明記</td><td>自社のMicrosoft 365テナント</td><td>月¥2,698／人（年間契約・既存の365に追加）</td><td>Webで契約</td></tr><tr><td>ScribeAssist（AmiVoice）</td><td>「クラウドにデータを保存・送信しない」と明記</td><td>インストールしたPCの中</td><td>オープン価格（非公開）</td><td>問い合わせ</td></tr><tr><td>Whisper をPCで動かす</td><td>送信そのものが発生しない構成</td><td>自分のPCの中</td><td>0円（PCの性能は必要）</td><td>自分で環境構築</td></tr></tbody></table></div>
+<p>Microsoftの記載は公式ドキュメントの「Microsoft Graph 経由でアクセスされるプロンプト、応答、データは、Microsoft Copilot で使用されているものを含め、基礎 LLM のトレーニングには使用されません。」という一文です。ScribeAssistは「機密情報を扱う会議でもクラウドにデータを保存・送信しないので安心してお使いいただけます」と書かれた、PC内で動くスタンドアローン型です。</p>
+<h2 id="判断軸1-スイッチではなく契約書で決まる">判断軸1｜スイッチではなく契約書で決まる</h2>
+<p>料金ページ・規約・セキュリティページを通して読んでも、利用者側で学習利用を個別にオフにする設定の説明は見つかりませんでした。プランの条項として付いてくるものなので、<strong>見積書や申込書の面で確認する</strong>のが筋です。問い合わせで聞くことは3点に絞れます。</p>
+<ul><li>学習に使われないのは音声データだけか、文字起こし結果や要約のテキストも含むか</li><li>第三者パートナーのAPIを経由する部分にも同じ条件がかかるか</li><li>契約書のどの条項に書かれるか（口頭の説明ではなく書面のどこか）</li></ul>
+<h2 id="判断軸2-そもそも外に出すかどうか">判断軸2｜そもそも外に出すかどうか</h2>
+<p>守秘性の高い相談記録は、「学習されない約束を取る」より「送らない構成にする」ほうが説明が簡単な場合があります。ScribeAssistのようなインストール型や、Whisperを自分のPCで動かす方法なら、依頼者への説明も「そもそも外部に送っていません」の一行で済みます。</p>
+<p>代わりにWeb会議への自動同席やスマホからの即時共有は落ちます。<strong>依頼者が特定される相談は端末内完結、一般的な社内ミーティングはクラウド</strong>と分ける形が現実的です。録音側の工夫でどこまで精度が伸びるかは<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜公式が挙げる距離とマイクの条件</a>にまとめてあります。</p>
+<h2 id="判断軸3-いつ使い始められるか">判断軸3｜いつ使い始められるか</h2>
+<p>士業向け特別プランもエンタープライズもScribeAssistも入り口は問い合わせフォームで、見積もりと稟議の時間がかかります。今日から手を動かすなら、<strong>依頼者情報を含まない音声で先に精度を確かめておく</strong>と問い合わせのときに話が早くなります。</p>
+<p>Nottaの無料枠は月120分・1回3分までで、クレジットカードの登録も要りません。自分の話し方や事務所の録音環境で日本語がどこまで拾えるかを見るには足ります。無料枠の細かい上限は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>に整理しています。試すのは一般的な打ち合わせの音声に留め、相談記録を無料枠に流さないようにしてください。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<p><strong>Notta（フリー〜ビジネス）</strong>: 日本語の精度やWeb会議への同席は便利ですが、この3プランの説明文に「AI学習なし」の記載はなく、規約上は学習利用の可能性が残ります。</p>
+<p><strong>Notta 士業向け特別プラン／エンタープライズ</strong>: 価格が公開されておらず、単月で試す形にはなっていません。ビジネスプラン（年間払いで月¥2,508・税込）以上の水準と読むのが自然ですが、金額の記載は公式ページにありませんでした。</p>
+<p><strong>Microsoft 365 Copilot Business</strong>: 既存のMicrosoft 365への追加が前提で、月¥2,698／人の年間契約。事務所全体で365を使っていることが実質の条件です。</p>
+<p><strong>ScribeAssist</strong>: 「オープン価格」のため規模を伝えないと総額が見えず、端末の性能とライセンス管理も事務所側の負担です。学習利用について明記した文言は製品ページ上に見つけられませんでした（送信しないという記述が実質的な担保です）。</p>
+<p><strong>Whisper をPCで動かす</strong>: 環境構築が自力で、話者の振り分けや要約は別の手当てが要ります。導入コストが金額ではなく手間として乗ります。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料プランのままAI学習をオフにできますか。</strong> 料金ページ・利用規約・プライバシーポリシー・セキュリティページを通して見た範囲では、利用者が学習利用を個別にオフにする設定の説明は見つけられませんでした。規約は「プランに応じて」と書いているので、プランを変える以外の方法は公式の記載からは確認できていません。</p>
+<p><strong>Q. 預けた音声はどこに保管されますか。</strong> 公式セキュリティページには「バックアップデータを国内のデータセンターで保存しています」とあります。ただしこれはバックアップについての記述で、通常のデータの保管国を明記した文は見つけられませんでした。同ページには「データセンターに保存された音声、画像、テキストなどのデータはデフォルトで暗号化されています」の記載と、ISO 27001・SOC 2 Type2（2023年2月12日受領）・GDPR・APPIなどへの対応が並びます。</p>
+<p><strong>Q. 依頼者への説明は必要ですか。</strong> 士業は法令上の守秘義務を負う立場なので、録音と外部サービスの利用は事前に説明しておくのが無難です。運用の是非は各士業会の指針や顧問先の規程に沿う話なのでここでは踏み込みません。ツール側の事実として押さえるのは「学習の可否はプランで変わる」「端末内で完結させる選択肢もある」の2点です。会議記録そのものの効率化は<a href="../meeting-minutes-time/">議事録作成に時間がかかる原因と短縮方法</a>も参考にしてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Nottaの利用規約とプライバシーポリシーは、パートナー企業が「ご利用のプランに応じて」音声データを音声認識トレーニングに使う場合があると明記している</li><li>料金ページで「AI学習なし」と文言で書かれているのは、士業向け特別プランとエンタープライズの2つ。フリー・プレミアム・ビジネスの説明文には記載がなく、比較表はアイコンのみで読み取れない</li><li>送信自体を避けるならScribeAssistやローカルのWhisper、365を使っているならCopilotという逃げ道がある。まず無料枠で精度だけ確かめ、実案件に載せる前にプランの条項を書面で確認するのが安全</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../meeting-minutes-time/">議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか</a></li><li><a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ</a></li><li><a href="../cant-take-meeting-notes/">会議でメモが取れない・聞き逃すのを止めるには｜無料でどこまで残せるか</a></li><li><a href="../zoom-recording-transcription/">Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件</a></li><li><a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
