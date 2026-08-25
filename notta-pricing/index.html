@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月｜AIツール実用ガイド</title>
+<meta name="description" content="Nottaの年間プランと月払いを公式料金ページの実数で比較。8ヶ月目に逆転する損益分岐点と、月払い→年払いは即日でき逆はできないという非対称なルールを整理します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notta-pricing/">
+<meta property="og:title" content="Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月｜AIツール実用ガイド">
+<meta property="og:description" content="Nottaの年間プランと月払いを公式料金ページの実数で比較。8ヶ月目に逆転する損益分岐点と、月払い→年払いは即日でき逆はできないという非対称なルールを整理します。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月", "description": "Nottaの年間プランと月払いを公式料金ページの実数で比較。8ヶ月目に逆転する損益分岐点と、月払い→年払いは即日でき逆はできないという非対称なルールを整理します。", "datePublished": "2026-08-26", "dateModified": "2026-08-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-pricing/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "年間プランの途中で月払いに変更できますか？", "acceptedAnswer": {"@type": "Answer", "text": "即時の変更はできないと公式ヘルプに書かれています。年額プランを解約したうえで、改めて月額プランを契約する手順になります。解約してもデータが失われることはない旨も同じページに書かれています。"}}, {"@type": "Question", "name": "年払いにすると、文字起こし時間を1年ぶんまとめて使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "使えません。公式ヘルプに「当月余った文字起こし時間は、翌月に繰り越せません」とあり、有効期限は更新日の翌月同日までです。年払いは支払い方法が変わるだけで、枠のリセットは月ごとのままです。"}}, {"@type": "Question", "name": "解約はいつまでにすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプは「ご解約手続きは、更新日の 24時間前までに行う必要があります。解約手続きを行わない限り自動的に更新されます」としたうえで、「ストアでの処理に時間がかかる可能性もあるため、時間に余裕を持って、期日の2日前までにお済ませください」と案内しています。アプリを削除しても解約にはなりません。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月</h1><p class="meta">2026-08-26 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言います。<strong>Nottaを7.2ヶ月より長く使うなら年間プラン、それより短いか、続けるか決めきれていないなら月払い</strong>です。理由は金額差だけではありません。月払いから年払いへはいつでも切り替えられて未経過分も充当されますが、<strong>年払いから月払いへの即時変更は公式に「できません」と書かれています</strong>。片道だけが滑らかな道なので、迷っている段階で年払いを選ぶ理由はほとんどありません。</p>
+<h2 id="年間プランと月払いの実額-2026年8月26日時点">年間プランと月払いの実額（2026年8月26日時点）</h2>
+<p>公式の料金ページで、月間プラン／年間プランのタブを両方切り替えて確認した数字です。表示価格はすべて税込です。</p>
+<div class="tw"><table><thead><tr><th>プラン・アドオン</th><th>月払い</th><th>年間プラン（単月）</th><th>年間プラン総額</th><th>12ヶ月払った場合の差額</th></tr></thead><tbody><tr><td>プレミアム</td><td>￥1,980/月</td><td>￥1,185/月</td><td>￥14,220</td><td>￥9,540</td></tr><tr><td>ビジネス</td><td>￥4,180/月</td><td>￥2,508/月</td><td>￥30,096</td><td>￥20,064</td></tr><tr><td>1か国語リアルタイム翻訳（アドオン）</td><td>￥1,430/月</td><td>￥858/月</td><td>￥10,296</td><td>￥6,864</td></tr><tr><td>2か国語文字起こし・翻訳（アドオン）</td><td>￥2,200/月</td><td>￥1,320/月</td><td>￥15,840</td><td>￥10,560</td></tr><tr><td>Notta Brain プレミアム</td><td>￥1,980/月</td><td>―</td><td>￥14,300</td><td>￥9,460</td></tr></tbody></table></div>
+<p>年間プランのカードには「40% OFF」「総額 ￥14,220（税込）· 12ヶ月分一括払い」と書かれています。アドオン欄には「上記は年間プランの単月費用となります。月間プラン原価：￥1,430円/月」という注記があり、月払いの原価がそのまま併記されています。フリープランは￥0で「クレジットカードの登録不要」、エンタープライズは「要相談」です。</p>
+<h3 id="逆転するのは8ヶ月目">逆転するのは8ヶ月目</h3>
+<p>年間プランの総額を月払いの単価で割ると、何ヶ月ぶんに当たるかが出ます。</p>
+<ul><li>プレミアム：14,220 ÷ 1,980 = <strong>約7.2ヶ月</strong></li><li>ビジネス：30,096 ÷ 4,180 = <strong>7.2ヶ月</strong></li><li>アドオン2種：10,296 ÷ 1,430 = <strong>7.2ヶ月</strong>、15,840 ÷ 2,200 = <strong>7.2ヶ月</strong></li></ul>
+<p>40%引きという割引率が同じなので、どのプランでもほぼ同じ位置に分岐点が来ます。つまり<strong>7ヶ月ぶん払った時点ではまだ月払いのほうが安く、8回目の支払いをした瞬間に年間プランの総額を追い抜く</strong>という形です。半年で終わるプロジェクトの文字起こしなら月払いのままのほうが安く済み、来年も使っている見込みが立つなら年払いが効いてきます。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-使う期間が8ヶ月を超えるか">1. 使う期間が8ヶ月を超えるか</h3>
+<p>期限のある案件のために契約するのか、日々の打ち合わせに常用するのかで答えが変わります。「週1の定例を録る」といった継続的な用途なら8ヶ月はすぐ超えるので年払い側です。逆に、決算期の面談記録だけ、調査期間中のインタビューだけ、といった区切りのある使い方なら月払いで十分です。自分の用途が常用に当たるかどうかは、<a href="../meeting-minutes-time/">議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか</a>で挙げた「毎週どれだけ聞き直しているか」を数えてみると判断しやすくなります。</p>
+<h3 id="2-月払い-年払いは片道だけ滑らか">2. 月払い→年払いは片道だけ滑らか</h3>
+<p>公式ヘルプの「請求サイクルを変更する」には、月払いから年払いについて「お持ちのサブスクリプションが有効な状態であれば（解約されていない状態）、いつでも月払いから年払いに変更できます。月額プランの未経過期間分の料金は、年額プランの料金の一部に充当されますので、差額をお支払いいただくだけでアップグレードが完了します」と書かれています。</p>
+<p>反対方向はこうです。「現在、年払いから月払いへの即時変更はできません。年払いから月払いへの変更をご希望の場合は、年額プランを解約後、改めて月額プランをご契約いただく必要があります」。同じページには、新規契約のベストタイミングは「元の年額プランの有効期限が切れ、フリープランに移行した後」だとも書かれています。</p>
+<p>この非対称さが効きます。月払いで始めて「これは続くな」と分かった時点で年払いに上げれば、払いすぎた分は充当されます。先に年払いを選んで合わなかった場合は、有効期限まで待つのが基本になります。<strong>迷いがあるうちは月払いが安全側</strong>という結論はここから出ています。</p>
+<h3 id="3-使う量が月ごとに偏らないか">3. 使う量が月ごとに偏らないか</h3>
+<p>年払いにしても、文字起こし時間は月単位です。公式ヘルプは「当月余った文字起こし時間は、翌月に繰り越せません」「有効期限は購入もしくは自動更新日の翌月同日までです」と明記しています。プレミアムの1,800分/月は年払いでも1,800分/月のままで、21,600分の年間プールになるわけではありません。</p>
+<p>繁忙期に集中して使い、閑散期はほとんど触らないという使い方だと、使わない月の分も先払いしていることになります。逆に毎月そこそこ均等に使うなら年払いの効率が素直に出ます。無料枠のうちにどれくらい使うかを測っておきたい場合は、<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>に上限の内訳をまとめてあります。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>は無料のまま月120分まで試せるので、精度と使用量の見当をつけてから月払いに進む順番が組めます。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<p><strong>年間プランの弱点は、途中でやめても戻ってこないこと。</strong> 利用規約には「当社は、法律で定めがある場合を除き、本サービスの料金等の払い戻しおよび本サービスの利用期間の延長には一切応じないものとします」とあります。解約方法のヘルプにも「決済が完了した利用料金について、途中で解約した場合の日割り計算による返金はいたしかねます」と書かれています。返金についてのFAQでは、ウェブ版のクレジットカード決済は「原則として対応していません。個別にご相談させていただきますので、御希望を『support@notta.ai』にご連絡ください」という案内です。</p>
+<p><strong>もうひとつの落とし穴が3日間無料トライアルです。</strong> 公式ヘルプの比較表には、Notta Web版の3日間無料トライアルについて「トライアルが終了する前に解約しない限り年額料金が発生します」、アプリ版については「トライアル中の48時間前までに解約しない限り年額料金が発生します」と書かれています。月額ではなく年額です。試すだけのつもりで入ると、そのまま1年分の請求に乗ります。</p>
+<p><strong>月払いの弱点は単純に割高なこと。</strong> プレミアムなら1年使って￥9,540、ビジネスなら￥20,064の差が出ます。1年以上使うと分かっているのに月払いを続ける理由は、金額面ではありません。</p>
+<p><strong>両方に共通する注意点として、解約して有効期限が切れた後のデータの見え方があります。</strong> 公式ヘルプは「プレミアム会員だった頃に変換したテキストが、冒頭の3分部分しか見られなくなります」と書いています。過去の議事録を資産として残したいなら、解約前に書き出しておく作業が必要です。なお、どのプランでどこまでデータの扱いが変わるかは業種によっても条件が違うので、機密性の高い記録を扱う場合は<a href="../shigyo-transcription-no-ai-training/">士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」</a>も合わせて確認してください。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 年間プランの途中で月払いに変更できますか？</strong></p>
+<p>即時の変更はできないと公式ヘルプに書かれています。年額プランを解約したうえで、改めて月額プランを契約する手順になります。解約してもデータが失われることはない旨も同じページに書かれています。</p>
+<p><strong>Q. 年払いにすると、文字起こし時間を1年ぶんまとめて使えますか？</strong></p>
+<p>使えません。公式ヘルプに「当月余った文字起こし時間は、翌月に繰り越せません」とあり、有効期限は更新日の翌月同日までです。年払いは支払い方法が変わるだけで、枠のリセットは月ごとのままです。</p>
+<p><strong>Q. 解約はいつまでにすればいいですか？</strong></p>
+<p>公式ヘルプは「ご解約手続きは、更新日の 24時間前までに行う必要があります。解約手続きを行わない限り自動的に更新されます」としたうえで、「ストアでの処理に時間がかかる可能性もあるため、時間に余裕を持って、期日の2日前までにお済ませください」と案内しています。アプリを削除しても解約にはなりません。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>分岐点は約7.2ヶ月。8回目の支払いで月払いが年間プランの総額を追い抜く（プレミアムで年￥9,540差）</li><li>月払い→年払いはいつでも可能で未経過分は充当される。年払い→月払いは即時変更できず、解約して契約し直しになる</li><li>返金は原則なし、日割り返金もなし。3日間無料トライアルは解約しないと年額料金が発生すると公式に明記されている</li></ul>
+<p>料金は改定されることがあります。契約前に公式の料金ページで最新の金額を確認してください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../shigyo-transcription-no-ai-training/">士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」</a></li><li><a href="../meeting-minutes-time/">議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか</a></li><li><a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ</a></li><li><a href="../cant-take-meeting-notes/">会議でメモが取れない・聞き逃すのを止めるには｜無料でどこまで残せるか</a></li><li><a href="../zoom-recording-transcription/">Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
