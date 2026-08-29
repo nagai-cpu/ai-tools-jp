@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>提案資料を作るのが遅い原因を6工程で切り分ける｜改善は生成の前後にある｜AIツール実用ガイド</title>
+<meta name="description" content="提案資料の作成が遅い人向けに、時間がどの工程で消えているのかを公式ページの文言だけで切り分けました。AIで短くできる工程と、人の手がどうしても残る工程を2026年8月時点の情報で整理します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/slow-proposal-docs/">
+<meta property="og:title" content="提案資料を作るのが遅い原因を6工程で切り分ける｜改善は生成の前後にある｜AIツール実用ガイド">
+<meta property="og:description" content="提案資料の作成が遅い人向けに、時間がどの工程で消えているのかを公式ページの文言だけで切り分けました。AIで短くできる工程と、人の手がどうしても残る工程を2026年8月時点の情報で整理します。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "提案資料を作るのが遅い原因を6工程で切り分ける｜改善は生成の前後にある", "description": "提案資料の作成が遅い人向けに、時間がどの工程で消えているのかを公式ページの文言だけで切り分けました。AIで短くできる工程と、人の手がどうしても残る工程を2026年8月時点の情報で整理します。", "datePublished": "2026-08-30", "dateModified": "2026-08-30", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/slow-proposal-docs/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "提案資料1本にどれくらいの時間がかかるのが普通ですか？", "acceptedAnswer": {"@type": "Answer", "text": "標準時間を示した公式の記載は見つけられませんでした。他人の平均より自分の内訳のほうが役に立ちます。次の1本で ①材料集め ②初稿 ③修正 ⑤体裁合わせ の4つだけ時間を記録すると、削るべき場所が数字で出ます。"}}, {"@type": "Question", "name": "AIツールを入れれば提案資料の作成は速くなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "白紙から初稿までは短くなります。一方でイルシルの公式コラムは「最も工数がかかるのは『生成後の微調整』」と書き、マイクロソフトの公式サポートは「人間によるレビューと適切な編集が必要です」と書いています。短くなるのは工程の一部と考えるのが実態に近いです。"}}, {"@type": "Question", "name": "無料のまま業務の提案資料に使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式コラムには「商用利用：全プランで可能（※イラスト・テンプレートをそのまま配布・販売することはできません）」とあります。ただし出力はパーソナルプラン以上なので、画面で見せるか自分で作り直す前提です。なお公式トップには「入力した内容は学習に使われないため、全てのプランで安心してお試しいただけます」と書かれています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">提案資料を作るのが遅い原因を6工程で切り分ける｜改善は生成の前後にある</h1><p class="meta">2026-08-30 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、提案資料が遅い原因の多くは「デザインが苦手だから」ではなく、<strong>生成より前（誰に何を伝えるかが決まっていない）と、生成より後（体裁合わせと微調整）</strong>にあります。AIツールで短くなるのは真ん中の工程だけです。だからツールを入れても劇的に速くならない人がいます。まず自分の時間がどの工程で消えているかを切り分けてください。</p>
+<h2 id="ツールを売っている側が-最も工数がかかるのは生成後-と書いている">ツールを売っている側が「最も工数がかかるのは生成後」と書いている</h2>
+<p>意外なのは、これをAIスライド生成サービス自身が書いていることです。イルシルの公式コラム（2026年8月26日公開）の、無料枠の試し方を説明した箇所にこうあります。</p>
+<blockquote>資料作成の実務で最も工数がかかるのは「生成後の微調整」です。</blockquote>
+<p>マイクロソフトも同じで、PowerPointのCopilotでプレゼンテーションを作成する公式サポートページには「プレゼンテーション作成機能の出力は AI によって生成されたコンテンツであり、人間によるレビューと適切な編集が必要です」と明記されています。<strong>どのサービスも「生成した瞬間に完成する」とは言っていません。</strong>速くなるのは白紙から初稿までの区間だけです。</p>
+<h2 id="資料作成を6つの工程に分けて-遅い場所を1つ特定する">資料作成を6つの工程に分けて、遅い場所を1つ特定する</h2>
+<p>工程の分け方は自分で考えなくて構いません。イルシルの公式コラム（2026年8月28日公開）が、比較表の行を立てる枠組みとして次の6工程を示しています。</p>
+<blockquote>① 入力：どんなデータを渡せるか／② 生成：構成・本文・デザインのどこまで自動生成されるか／③ 修正：スライド単位の部分修正や、全体の構成組み換えが直感的にできるか／④ 統一：誰が作っても社内規定のトンマナになるか／⑤ 出力：PPTXやPDF形式での書き出しができるか／⑥ 共有・管理：チーム招待、フォルダ管理、アクセス権限の設定ができるか</blockquote>
+<p>直近の提案資料1本ぶんの時間をこの6つに割り振ると、遅い場所はたいてい1つか2つに寄ります。以下は各工程で時間が消える典型と、AIで短くなるかどうかを、2026年8月30日時点の公式ページの文言だけで整理したものです。</p>
+<div class="tw"><table><thead><tr><th>工程</th><th>時間が消える理由</th><th>AIで短くなるか</th><th>公式ページに書かれていること（2026年8月30日確認）</th></tr></thead><tbody><tr><td>① 入力</td><td>誰に何を伝えるかが決まらないまま材料を集める</td><td>ほぼ短くならない（人が決める）</td><td>イルシルの入力は「キーワード、メモ、長文テキストに対応」「画像・PDF・CSVファイルの添付も可能」</td></tr><tr><td>② 生成</td><td>白紙から構成と本文を書き起こす</td><td>ここが一番短くなる</td><td>フリーは「AIデザイン生成 3枚/月」、パーソナルは「40枚/月」（公式プラン表）</td></tr><tr><td>③ 修正</td><td>1枚だけ直したいのに全体を作り直す</td><td>部分修正ができれば短くなる</td><td>「スライド編集画面から、特定の1枚のみを再生成・手動修正可能」</td></tr><tr><td>④ 統一</td><td>社内フォーマットへ手で移植する</td><td>プラン次第</td><td>「法人プランにて自社オリジナルテンプレートの登録に対応（個別オプション）」</td></tr><tr><td>⑤ 出力</td><td>PPTXに移して体裁を直す</td><td>無料では止まる</td><td>「出力：PDF・PPTX形式に対応（パーソナルプラン以上）」</td></tr><tr><td>⑥ 共有・管理</td><td>版が増えてどれが最新か分からなくなる</td><td>プラン次第</td><td>「メンバー招待、チームライブラリ、フォルダ単位の権限管理に対応（パーソナルプラス以上）」</td></tr></tbody></table></div>
+<p>表の②と⑤を見比べると、無料で速くできる範囲がはっきりします。<strong>生成は無料でも試せますが、ファイルとして持ち出す工程は有料プランの側にあります。</strong>無料プランでどこまで進めるかは<a href="../irusiru-free-plan/">イルシル無料プランでできること</a>に細かく書きました。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-入力が遅いなら-ツールを変えても直らない">1. ①入力が遅いなら、ツールを変えても直らない</h3>
+<p>材料は揃っているのに手が止まる、初稿を見ても何も刺さらない。この状態でサービスを乗り換えても結果は変わりません。イルシルの公式コラムは、渡す最初の一文に入れる要素として「相手がすでに知っていること」「相手が気にしていること」「読んだあとに何をしてほしいか」の3つを挙げ、社外向けの例文として「取引先の情報システム担当向けに、勤怠システムの乗り換え提案を10枚で。（中略）いちばん伝えたいのは移行を2週間で終えられること。読んだあとに社内で比較検討してほしい」を置いています。</p>
+<p>この一文に新しい調査は要りません。資料を頼まれた時点で分かっていることばかりです。<strong>5分で書けて初稿の順番が変わる</strong>ので、ここが遅い人はまずこれだけ試す価値があります。効いたかどうかは、同じ材料を「材料だけ」と「一文を足して」の2回渡し、1枚目に来るものが入れ替わったかで分かります。</p>
+<h3 id="2-修正が遅いなら-部分再生成があるかを見る">2. ③修正が遅いなら、部分再生成があるかを見る</h3>
+<p>全体は合っているのに1枚だけ納得できない、という詰まり方をよくします。ここで全体を作り直すと生成枠も時間も消えるので、無料で試す段階では生成の質より<strong>気に入らない1枚だけを直せるか</strong>を見ます。イルシルは公式コラムで「特定の1枚のみを再生成・手動修正可能」と説明しています。</p>
+<h3 id="3-出力が遅いなら-PPTXの中身を先に確かめる">3. ⑤出力が遅いなら、PPTXの中身を先に確かめる</h3>
+<p>最後にPowerPointで整える運用の人は、ここが落とし穴です。イルシルの公式コラム（2026年8月27日公開）は、PPTX出力の確認点として「テキストが図（画像）として貼り付けられていないか（誤字修正が1文字単位でできるか）」「グラフや表の数値がそのまま編集できるか」の2点などを挙げています。<strong>出力できるかどうかと、出力後に直せるかどうかは別の話です。</strong>トップページには「作成したスライドはPDF、PPTX、PNG形式で出力できます」とありますが、プラン表の「外部データ出力」欄はフリーだけ「−」です。</p>
+<h2 id="正直な短所も書いておく">正直な短所も書いておく</h2>
+<ul><li><strong>無料のままでは⑤出力まで到達できない。</strong> 公式コラムは「ファイル出力（PDF/PowerPoint）：パーソナルプラン以上で対応」と書き、無料プランの類型として挙げた「機能限定体験版（出力・保存制限タイプ）」について「いざ業務で使おうとダウンロードする段階でブロックされるケースがあります」とも書いています。社外に出す提案資料なら、無料で終わる話ではありません。</li><li><strong>同じ公式でも数字が2通りある。</strong> トップのプラン表ではパーソナルのAIデザイン生成が「40枚/月」ですが、パーソナルプラスの紹介ページ（irusiruslide.com）には「通常（パーソナルプラン利用時）の生成枚数は20枚」とあり、2026年8月30日時点で両方が公開されています。枚数を根拠に契約するなら、申し込み前に問い合わせで確認してください。</li><li><strong>入力できる文字数がプラン表から読み取れない。</strong> 同日時点のトップのプラン表には入力文字数の行がありません。紹介ページ側には「通常（パーソナルプラン利用時）の入力可能文字数は〜3,000文字」「パーソナルプラスプランでは、入力可能な文字数が〜10,000文字」とありますが、<strong>フリーの上限は今回確認できませんでした</strong>。長い議事録をそのまま貼りたい人は先に確認してください。</li><li><strong>環境の縛りがある。</strong> 公式のよくある質問は「Google Chrome、Microsoft Edgeに対応しています。Safariは現在対応していません」、各ページの注記は「現在はPC版のみのご提供です」。移動中にスマホで直す使い方には向きません。</li><li><strong>PowerPoint側のCopilotにも制約がある。</strong> マイクロソフトの公式サポートページには「一度にサポートされる出力言語は 1 つだけです」とあり、Copilotが表示されない場合はMicrosoft 365サブスクリプションに含まれていない可能性があるとも説明されています。既存環境で完結させたい人も、契約の確認から始まります。</li></ul>
+<h2 id="ツールを比べる時間も-遅さ-に入る">ツールを比べる時間も「遅さ」に入る</h2>
+<p>同じ6工程のコラムは、テンプレート数や機能数での比較について「選択肢が多すぎると、かえって『選ぶ時間』が増えてしまうこともあります」「社内スライドのフォーマットが決まっているなら、数千種類のテンプレートよりも『自社の型を再現できるか』のほうが遥かに重要です」と書いています。比べるときに一番速いのは、<strong>候補を3つに絞って自分の遅い工程1つだけを試すこと</strong>です。他社との違いは<a href="../ai-slide-generator/">AIスライドを自動作成する4つを比較</a>にまとめてあります。</p>
+<h2 id="材料が会議の中にあるなら-先に文字にしておく">材料が会議の中にあるなら、先に文字にしておく</h2>
+<p>①が遅い理由が「そもそも材料が手元にない」場合、スライド側をどう変えても解決しません。打ち合わせの内容を提案に落とす仕事では、聞き直して要点を打ち直す時間がそのまま遅さになります。ここは<a href="../meeting-minutes-time/">議事録作成に時間がかかる本当の原因</a>と同じ構図で、ヒアリングをそのまま提案に使うなら<a href="../interview-transcription-workflow/">インタビューの書き起こしを効率化する手順</a>が近道です。文字にした材料に判断軸1の一文を足して渡すと、①と②がまとめて片づきます。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>のフリープランは利用期間の制限がなく、資料3個まで・AIデザイン生成が月3枚までです。公式コラムによれば「プロモード（1回あたり10枚前後作成）」を使った場合、フリープランで月1本ぶんの作成が試せます。提案資料1本を実際の材料で通すには足ります。</p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 提案資料1本にどれくらいの時間がかかるのが普通ですか？</strong> 標準時間を示した公式の記載は見つけられませんでした。他人の平均より自分の内訳のほうが役に立ちます。次の1本で ①材料集め ②初稿 ③修正 ⑤体裁合わせ の4つだけ時間を記録すると、削るべき場所が数字で出ます。</p>
+<p><strong>Q. AIツールを入れれば提案資料の作成は速くなりますか？</strong> 白紙から初稿までは短くなります。一方でイルシルの公式コラムは「最も工数がかかるのは『生成後の微調整』」と書き、マイクロソフトの公式サポートは「人間によるレビューと適切な編集が必要です」と書いています。<strong>短くなるのは工程の一部</strong>と考えるのが実態に近いです。</p>
+<p><strong>Q. 無料のまま業務の提案資料に使えますか？</strong> 公式コラムには「商用利用：全プランで可能（※イラスト・テンプレートをそのまま配布・販売することはできません）」とあります。ただし出力はパーソナルプラン以上なので、画面で見せるか自分で作り直す前提です。なお公式トップには「入力した内容は学習に使われないため、全てのプランで安心してお試しいただけます」と書かれています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>提案資料の遅さは6工程のどこかに寄っている。まず1本ぶんの時間を①入力／②生成／③修正／⑤出力に割り振って、遅い工程を1つ特定する</li><li>①入力が遅いなら、渡す一文に「相手が知っていること・気にしていること・読後にしてほしいこと」を書き足すだけで初稿の順番が変わる。ツールの乗り換えでは直らない</li><li>無料で試せるのは②生成と③修正まで。⑤出力はパーソナルプラン以上なので、ファイルで渡す仕事かどうかを先に決めてからプランを見る</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-free-plan/">イルシル無料プランでできること｜月3枚・資料3本の中身と出力の壁</a></li><li><a href="../ai-slide-generator/">AIスライドを自動作成する4つを比較｜日本語のまま出せるのはどれか</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
