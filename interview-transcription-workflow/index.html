@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>インタビュー書き起こしの効率化｜時間を食うのは変換ではなく整文｜AIツール実用ガイド</title>
+<meta name="description" content="インタビューの書き起こしが遅い原因を、Notta公式ヘルプの4工程に沿って分解しました。話者識別の上限、無料でも使える編集機能、アップグレードで整文が消える条件まで公式の記載で確認しています。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/interview-transcription-workflow/">
+<meta property="og:title" content="インタビュー書き起こしの効率化｜時間を食うのは変換ではなく整文｜AIツール実用ガイド">
+<meta property="og:description" content="インタビューの書き起こしが遅い原因を、Notta公式ヘルプの4工程に沿って分解しました。話者識別の上限、無料でも使える編集機能、アップグレードで整文が消える条件まで公式の記載で確認しています。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "インタビュー書き起こしの効率化｜時間を食うのは変換ではなく整文", "description": "インタビューの書き起こしが遅い原因を、Notta公式ヘルプの4工程に沿って分解しました。話者識別の上限、無料でも使える編集機能、アップグレードで整文が消える条件まで公式の記載で確認しています。", "datePublished": "2026-08-29", "dateModified": "2026-08-29", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/interview-transcription-workflow/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料でインタビュー1本を丸ごと書き起こせますか。", "acceptedAnswer": {"@type": "Answer", "text": "Nottaのフリープランは「1回につき3分まで文字起こし可能」と公式の料金ページに書かれているため、30分や60分の音源を1回で通すことは想定されていません。月の合計も120分です。無料の範囲で試すなら、判断材料として数分ぶんを変換し、精度と編集画面を確かめる使い方になります。"}}, {"@type": "Question", "name": "書き起こしの精度を上げるには何をすればいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプは録音の段階を重視していて、「できるだけ静かな環境で、高品質の録音機器を使用して録音してください」「オンラインの取材・インタビューの場合、ヘッドセットのマイクを使うことができるのであれば使ってください」と書いています。マイクとの距離や機材の条件は[文字起こしの精度を上げる録音のコツ](../recording-tips-for-accuracy/)にまとめました。変換後に直す時間を減らしたいなら、ここが一番効きます。"}}, {"@type": "Question", "name": "誰がどれだけ話したかを確認できますか。", "acceptedAnswer": {"@type": "Answer", "text": "Nottaには「会話分析」があり、公式ヘルプによると各話者の発言時間の割合のほか、「話速、発話割合、発話回数、最長発話時間」を確認できます。Web版のみの機能と書かれています。インタビュアーが話しすぎていないかを後から見るには使えます。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">インタビュー書き起こしの効率化｜時間を食うのは変換ではなく整文</h1><p class="meta">2026-08-29 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、インタビューの書き起こしで時間が消えているのは「音声を文字に変換する工程」ではなく、その後の「読める文章に直す工程」です。ここを速くしたいなら、音声と文字が同期した画面で直せるツールを選ぶこと。逆に、変換だけ速いツールを選ぶと、出てきたテキストをエディタに貼り直して聞き直すぶん、かえって遅くなります。</p>
+<h2 id="公式が示す工程は4つ-時間が消えるのは3つ目">公式が示す工程は4つ、時間が消えるのは3つ目</h2>
+<p>Nottaの公式ヘルプに「取材やインタビューの文字起こし」という記事があり、作業をこう分けています。</p>
+<ol><li>録音</li><li>文字起こし</li><li>文字起こしデータの確認・修正</li><li>原稿作成</li></ol>
+<p>2番の変換は待つだけの工程です。実際に手が動くのは3番で、公式もここに一番多くの手順を割いています。具体的には「話者ごとに発言を区別するために、話者の名前を設定します」「『倍速再生』や『3秒戻る/3秒進む』機能を使って録音を再生しながら文字起こしテキストの内容を確認します」「空白音をスキップしたい場合は『無音スキップ』をオンにしてください」といった操作です。</p>
+<p>つまり<strong>書き起こしの効率化とは、再生と修正を同じ画面で往復する回数を減らすこと</strong>であって、変換速度の勝負ではありません。ツールを比べるときも、変換の速さより「聞きながら直せるか」を先に見たほうが実態に合います。</p>
+<h2 id="手段ごとの比較">手段ごとの比較</h2>
+<p>インタビュー音源を記事にするまでを、公式ページに文言として書かれている条件だけで並べました（2026年8月時点・表示価格は税込）。</p>
+<div class="tw"><table><thead><tr><th>手段</th><th>無料で試せる範囲</th><th>話者の区別</th><th>聞きながらの修正</th><th>書き出し</th><th>有料の価格</th></tr></thead><tbody><tr><td>Notta</td><td>120分/月・1回3分まで</td><td>ファイル取込時にオンで最大10名</td><td>倍速再生・3秒送り戻し・無音スキップ</td><td>プレミアム以上（txt/docx/srt/pdf/xlsx）</td><td>プレミアム年間 ¥1,185/月</td></tr><tr><td>Rimo Voice</td><td>クレジットカード登録なしで各プランを試用</td><td>文字起こしプランに「話者分離」の記載</td><td>公式プラン表に文言の記載なし</td><td>「URL共有・ダウンロード」の記載（形式の明記なし）</td><td>文字起こしプラン ¥1,650/月</td></tr><tr><td>Word のトランスクリプト</td><td>Microsoft 365 の契約が前提</td><td>「各話者を個別に区切って」変換</td><td>タイムスタンプを選ぶと該当部分を再生</td><td>Word文書として保存</td><td>Microsoft 365 の料金に含む</td></tr></tbody></table></div>
+<p>Nottaの「1回3分」はインタビュー用途にはまず足りない数字です。この制限の意味は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>にまとめてあります。Wordの300分はMicrosoft 365の契約に含まれる枠なので、単体で無料になるわけではありません。無料枠だけを横並びで見たい場合は<a href="../ai-transcription-free-comparison/">AI文字起こし無料比較</a>のほうに条件を整理しています。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-何人ぶんの声を分ける必要があるか">1. 何人ぶんの声を分ける必要があるか</h3>
+<p>Nottaの公式ヘルプは、話者識別の上限を機能ごとに分けて書いています。録音ファイルをアップロードする場合は「すべての発話言語で利用でき、最大10名までの話者を識別できます」。マイク録音でのリアルタイム文字起こしは「発話言語が日本語の場合のみ話者識別が可能で、最大10名までの話者を識別できます」。オンライン取材でNotta Botを会議に入れる場合だけは「識別人数の上限はありません」と書かれていますが、これは参加者アカウントに基づく識別なので、<strong>1つのアカウントから複数人が発言すると、その発言はまとめて扱われます</strong>。</p>
+<p>1対1の取材なら10名の枠は余ります。座談会や、同じ回線から複数人が話す形の取材なら、この行を先に読んでおくべきです。</p>
+<h3 id="2-整えた結果をファイルで出す必要があるか">2. 整えた結果をファイルで出す必要があるか</h3>
+<p>ここが料金の分かれ目です。Nottaのヘルプを機能ごとに見ると、前提条件の書かれ方が違います。</p>
+<ul><li>「文字起こしデータを編集する」→ <strong>プラン：すべてのプランで利用できます</strong></li><li>「話者を管理する」→ <strong>プラン：すべてのプランで利用できます</strong></li><li>「文字起こしデータをダウンロードする」→ <strong>プラン：プレミアムプラン及び以上のプランで利用できます</strong></li></ul>
+<p>料金ページ側でも、プレミアムの欄に「すべてのフリー機能＋ 文字起こしデータのダウンロード」と書かれています。<strong>無料のままでも話者名を付けて本文を整えるところまでは進められて、最後にファイルとして出すところで止まる</strong>という構造です。画面からコピーして使うのか、docxで納品するのかで、必要なプランが変わります。</p>
+<p>ダウンロード時のオプションには「話者を含める」「経過時間を含める」「すべての改行を削除」があり、形式は txt・docx・srt・pdf・xlsx から選べます。原稿の下地として使うなら話者ありのdocx、タイムコードを引用したいなら経過時間ありが向いています。一括ダウンロードは最大10件までで、同じヘルプに「※フォルダをダウンロードすることはできません。」と注記されています。</p>
+<p>日本語のインタビュー音源を、聞き直しながら整えて原稿の下地にするところまでを1つの画面で済ませたいなら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a> のこの作りは目的に合っています。無料プランはカード登録不要と公式に明記されているので、精度と編集画面の相性だけ先に見ることもできます。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h3 id="3-固有名詞が何語あるか">3. 固有名詞が何語あるか</h3>
+<p>取材では社名・製品名・人名が繰り返し出てきます。公式ヘルプも「取材・インタビューに使われる専門用語を事前に『単語登録』しておくと、専門用語がより正確に文字起こしされます」と、録音より前の準備として挙げています。ただし登録できる語数はプランで変わり、フリーは3単語です。詳しい語数の内訳は<a href="../notta-accuracy/">Nottaの精度は専門用語で落ちる？単語登録は無料3個・日本語のみ</a>に書いています。</p>
+<p>登録が3語で足りない取材なら、変換後に検索・置換で直す前提を組んでおくほうが現実的です。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>アップグレードの順番を間違えると、整えた内容が消える場合があります。</strong> これはNottaの公式ヘルプに「プランのアップグレード後、話者情報が消えるのはなぜですか？」という項目として書かれています。原文はこうです。</p>
+<blockquote>アップグレード後に全文をアンロックすると、その録音データに対して再度の文字起こし処理が実行されます。このため、話者情報を含む元の文字起こしテキストは、新しい処理結果によって上書きされ、消えてしまうことがあります。</blockquote>
+<p>無料のまま3分だけ変換されたテキストに話者名を付けて直し、あとからプランを上げて全文を出す、という順番は避けたほうが安全です。<strong>先にプランを決めてから取り込む</strong>のが公式の説明に沿った順序になります。</p>
+<p><strong>編集してもタイムスタンプは追従しません。</strong> 同じく公式ヘルプに「編集モードで行われたテキスト内容の修正は、元の音声のタイムスタンプデータを自動的に更新または変更することはありません」とあり、続けて「一度に大量のテキストを削除したり、置き換えたりすることは避けることをお勧めします」と書かれています。言い淀みをまとめて消すと音声と文字のずれが広がるので、整文は原稿側でやり、Nottaの画面では誤変換の修正に留めるほうが噛み合います。</p>
+<p><strong>録音中は話者を編集できません。</strong> 「録音中・文字起こし中のデータでは、話者の変更・編集・削除ができません」と明記されているため、話者名を付ける作業は変換が終わってからになります。</p>
+<p><strong>Rimo Voiceは公式のプラン表から読み取れる情報が少なめです。</strong> 話者分離は文字起こしプランの機能として載っていますが、編集画面での再生機能やダウンロード形式は、プラン表に文言としての記載を見つけられませんでした。比較の材料にするなら試用して確かめる前提になります。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料でインタビュー1本を丸ごと書き起こせますか。</strong></p>
+<p>Nottaのフリープランは「1回につき3分まで文字起こし可能」と公式の料金ページに書かれているため、30分や60分の音源を1回で通すことは想定されていません。月の合計も120分です。無料の範囲で試すなら、判断材料として数分ぶんを変換し、精度と編集画面を確かめる使い方になります。</p>
+<p><strong>Q. 書き起こしの精度を上げるには何をすればいいですか。</strong></p>
+<p>公式ヘルプは録音の段階を重視していて、「できるだけ静かな環境で、高品質の録音機器を使用して録音してください」「オンラインの取材・インタビューの場合、ヘッドセットのマイクを使うことができるのであれば使ってください」と書いています。マイクとの距離や機材の条件は<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ</a>にまとめました。変換後に直す時間を減らしたいなら、ここが一番効きます。</p>
+<p><strong>Q. 誰がどれだけ話したかを確認できますか。</strong></p>
+<p>Nottaには「会話分析」があり、公式ヘルプによると各話者の発言時間の割合のほか、「話速、発話割合、発話回数、最長発話時間」を確認できます。Web版のみの機能と書かれています。インタビュアーが話しすぎていないかを後から見るには使えます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>インタビューの書き起こしで手が動くのは変換ではなく確認・修正の工程で、公式ヘルプもここに手順を集中させている</li><li>Nottaは編集と話者管理が全プラン、ダウンロードがプレミアム以上という線引きなので、ファイルで出す必要があるかで必要なプランが決まる</li><li>無料で途中まで整えてからアップグレードすると再変換で上書きされる場合があるため、プランは取り込む前に決めておく</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-accuracy/">Nottaの精度は専門用語で落ちる？単語登録は無料3個・日本語のみ</a></li><li><a href="../notta-pricing/">Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月</a></li><li><a href="../shigyo-transcription-no-ai-training/">士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」</a></li><li><a href="../meeting-minutes-time/">議事録作成に時間がかかる本当の原因｜聞き直しを無料でどこまで削れるか</a></li><li><a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
