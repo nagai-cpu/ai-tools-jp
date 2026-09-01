@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teams会議の文字起こし精度は言語設定で決まる｜4通り比較｜AIツール実用ガイド</title>
+<meta name="description" content="Teamsの文字起こしが崩れる人向けに、精度を左右する「会議の話し言葉」の仕様と、標準・Teams Premium・外部ツールの4通りを公式の文言で比較しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/teams-transcription/">
+<meta property="og:title" content="Teams会議の文字起こし精度は言語設定で決まる｜4通り比較｜AIツール実用ガイド">
+<meta property="og:description" content="Teamsの文字起こしが崩れる人向けに、精度を左右する「会議の話し言葉」の仕様と、標準・Teams Premium・外部ツールの4通りを公式の文言で比較しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Teams会議の文字起こし精度は言語設定で決まる｜4通り比較", "description": "Teamsの文字起こしが崩れる人向けに、精度を左右する「会議の話し言葉」の仕様と、標準・Teams Premium・外部ツールの4通りを公式の文言で比較しました。", "datePublished": "2026-09-02", "dateModified": "2026-09-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/teams-transcription/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Teams会議の文字起こし精度は言語設定で決まる｜4通り比較</h1><p class="meta">2026-09-02 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>日本語だけの会議ならTeams標準のライブ文字起こしで足り、日本語と英語が混ざる会議は追加ライセンスか外部ツールのどちらかが要ります</strong>。Teamsの文字起こしは「会議に1つだけ設定された話し言葉」で動く仕組みで、精度が崩れるいちばん多い原因はエンジンの性能ではなく、この設定と実際の発話がずれていることだからです。</p>
+<h2 id="Teamsの文字起こしは-会議に1つの言語-で動いている">Teamsの文字起こしは「会議に1つの言語」で動いている</h2>
+<p>Microsoft公式の手順ページには、精度についてこう書かれています（2026年9月2日確認）。</p>
+<blockquote>文字起こしの精度を確保するには、会議の話し言葉が全員が話している言語を反映していることを確認します。</blockquote>
+<p>つまりTeamsが持っているのは「この会議は何語か」という<strong>1つの設定</strong>で、精度の話はまずそこから始まります。設定と実際の発話がずれると「Teams は言語の不一致を検出します」と書かれていて、開催者などに更新を促す動きになります。ただし切り替えは会議単位です。</p>
+<blockquote>話し言葉の設定を変更すると、すべてのユーザーのトランスクリプトとキャプションの言語が変更されます。</blockquote>
+<p>ここが実務で効きます。日本語の会議に英語の説明が5分だけ挟まる形は、<strong>どちらに合わせても片方が崩れる</strong>構造です。サポートされている言語の一覧には「日本語 (日本)」が入っているので、日本語だけの会議で崩れているなら、まず設定を疑うのが早いです。設定を直しても直らないときは、音を拾う段階の問題かもしれません（<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ</a>）。</p>
+<h2 id="混在会議をTeams側で解くと-多言語音声認識-になる">混在会議をTeams側で解くと「多言語音声認識」になる</h2>
+<p>Teamsには、参加者ごとに話す言語を選べる仕組みがあります。公式の説明はこうです。</p>
+<blockquote>多言語音声認識を有効にして会議を整理または出席する場合、各参加者は自分の好みの話し言葉を選択し、その言語の正確なライブ キャプションとトランスクリプトを表示できます。</blockquote>
+<p>ただし、同じページに前提が明記されています。</p>
+<blockquote>多言語音声認識は、Microsoft Copilot ライセンスの一部として利用できます。 多言語音声認識は、Teams Premium の一部としても利用できます。</blockquote>
+<p>対応言語は「英語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、中国語、日本語、韓国語」の9つで、日本語は入っています。Teams Premiumの価格は公式ページに「¥1,499 ユーザー/月相当、年払い」とあり、「価格には消費税は含まれていません。」という注記が付いています。</p>
+<p>もう1つ、見落としやすい仕様があります。</p>
+<blockquote>翻訳されたキャプションと文字起こしは会議中にのみ使用でき、会議終了後はアクセスできなくなります。</blockquote>
+<p>同じ趣旨は「過去の翻訳されたトランスクリプトは保存されません。元のトランスクリプトのみが保存されます。」とも書かれています。<strong>翻訳は会議中に読むためのもので、議事録として残るのは元の言語のトランスクリプトだけ</strong>です。</p>
+<h2 id="4通りを並べて比べる">4通りを並べて比べる</h2>
+<p>2026年9月2日時点で、各社の公式ページに文言として書かれている内容だけを並べます。</p>
+<div class="tw"><table><thead><tr><th></th><th>費用</th><th>話す言語の扱い</th><th>固有名詞の登録</th><th>会議後に残るもの</th></tr></thead><tbody><tr><td>Teams 標準のライブ文字起こし</td><td>Teamsの契約に含まれる（可否はIT管理者のポリシー次第）</td><td>会議に1言語。変更すると全員に反映</td><td>公式ページに記載を見つけられなかった</td><td>開催者のOneDriveに保存。.docx / .vtt でダウンロード可</td></tr><tr><td>Teams Premium / Microsoft Copilot（多言語音声認識）</td><td>Teams Premium は ¥1,499 ユーザー/月相当・年払い（税別）</td><td>参加者ごとに話す言語を選べる（対応9言語）</td><td>同上</td><td>元の言語のトランスクリプトのみ。翻訳版は会議後に残らない</td></tr><tr><td>Notta フリー</td><td>¥0</td><td>発話言語を指定。2か国語への切り替えあり</td><td>3単語</td><td>120分/月・1回につき3分まで</td></tr><tr><td>Notta プレミアム</td><td>¥1,185/月（年間総額 ¥14,220・税込）</td><td>同上</td><td>200単語</td><td>1,800分/月・1回につき5時間まで</td></tr></tbody></table></div>
+<p>Nottaの料金表にある「Zoom・Teams・Google Meet・Webexミーティングの文字起こし」の行はアイコンだけで文言がないため、プランごとの可否はこの表からは判断していません。代わりに公式ヘルプ「Web会議の文字起こし」の前提条件にある<strong>「プラン：すべてのプランで利用できます」</strong>を根拠にしています。単語登録の個数は<a href="../notta-accuracy/">Nottaの精度は専門用語で落ちる？単語登録は無料3個・日本語のみ</a>で詳しく確認しています。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-会議に外部の人が入るか">1. 会議に外部の人が入るか</h3>
+<p>Teamsの標準機能は、社外の参加者に対してかなりはっきりした線を引いています。公式のトラブルシューティングページには、文字起こしボタンが押せない理由として「ゲストが文字起こしを開始できない」「開催者とは異なる組織のユーザーは利用できません」「この組織内のユーザーのみが文字起こしを開始できます。続行するには、Teams にサインインしてください。」（匿名ユーザーの場合）が並んでいます。</p>
+<p><strong>自分がゲスト側として呼ばれる会議が多い人は、Teams標準では自分の手元に記録を残せません</strong>。</p>
+<h3 id="2-混在言語が-毎回-か-たまに-か">2. 混在言語が「毎回」か「たまに」か</h3>
+<p>毎回混ざるなら、Teams Premium か Microsoft Copilot ライセンスを人数分持つのが素直です。年に数回なら、その会議だけ外部ツールを併用したほうが安く済みます。</p>
+<h3 id="3-記録を誰の手元に置きたいか">3. 記録を誰の手元に置きたいか</h3>
+<p>Teamsのトランスクリプトは会議開催者のOneDrive for Businessに保存され、既定でダウンロードできるのは開催者と共同開催者です。<strong>自分が開催者でない会議の記録は、原則として自分のものになりません</strong>。手元に議事録を貯めたいなら外部ツールの領域です。</p>
+<h2 id="外部ツールを使うときの現実的な条件">外部ツールを使うときの現実的な条件</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a> のようなツールは、Botを会議に参加させて録音と文字起こしをします。Teamsとの組み合わせで先に知っておきたいのは、公式ヘルプにあるこの一文です。</p>
+<blockquote>Notta BotはゲストとしてTeamsミーティングに参加するため、ログインに使用できるアカウントが存在しません。そのため、ログインが必須となるTeamsミーティングには参加することができません。</blockquote>
+<p>同じヘルプの注意書きにも「Teams：ユーザー認証（ログイン）が必要な会議には現在対応していません。」とあります。対処法として匿名参加やゲストアクセスの許可が案内されていますが、これは<strong>IT管理者がTeams管理センターで行う設定</strong>で、利用者が自分で変えられるものではありません。</p>
+<p>言語は設定画面で指定します。公式ヘルプには「2か国語が混在するWeb会議を文字起こしするには、発話言語設定の上にあるオプションを『1か国語』から『2か国語』に切り替えてから、2つの発話言語を指定してください。」とあり、Teams標準の「会議に1言語」との違いはここです。ただし料金表には「2か国語文字起こし・翻訳 / 月」という行に「無料4回」とだけあり、プランごとに月何回使えるのかは表の記載からは読み取れませんでした。混在会議を主目的に契約するなら、申し込み前に自分のアカウントで確認してください。</p>
+<p>無料のまま常用できるかは、はっきり分かれます。フリープランは「1回につき3分まで文字起こし可能」と料金ページに明記されていて、会議の頭3分で止まります。<strong>フリーは動作確認用、実際の会議に使うならプレミアム以上</strong>という線引きです。無料枠と1時間の会議の関係は<a href="../ai-minutes-one-hour/">議事録AIを無料で使うなら1時間の会議が分かれ目になる理由</a>で他社も含めて比較しました。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Teamsの文字起こしはスマホでも使えますか">Teamsの文字起こしはスマホでも使えますか</h3>
+<p>公式ページには「Teams モバイル アプリでは現在、会議終了後のトランスクリプトの表示がサポートされています。ライブ文字起こしは、デスクトップ用 Teams でのみ使用できます」と書かれています。移動中にスマホから参加して、その場で文字起こしを始めたい場合はこの制限に当たります。</p>
+<h3 id="録画すれば文字起こしも一緒に残りますか">録画すれば文字起こしも一緒に残りますか</h3>
+<p>公式の手順には「会議を記録すると、文字起こしが自動的に開始されます。」とあり、文字起こしだけを単独で開始することもできます。なお、タウンホールやウェビナーのテンプレートで作成した会議は「自動記録と文字起こしが既定でオンになります」と書かれているので、意図しない録画を避けたい場合は会議オプションを確認してください。Zoom側の事情は<a href="../zoom-recording-transcription/">Zoom録画の文字起こしを無料でやる方法｜Zoom側は有料プランが条件</a>にまとめています。</p>
+<h3 id="文字起こしボタンが灰色で押せません">文字起こしボタンが灰色で押せません</h3>
+<p>公式のトラブルシューティングページは、ボタンの鍵アイコンにカーソルを合わせると理由が表示される、と案内しています。挙げられている原因は、ゲスト・別組織・匿名ユーザーであること、IT管理者のポリシーで許可されていないこと、会議オプションの「レコーディングおよび文字起こしできるユーザー」が「開催者と共同開催者」または「誰もいない」に設定されていること、などです。<strong>多くは自分の側では直せない設定</strong>なので、開催者かIT管理者に依頼する流れになります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Teamsの文字起こしは会議に1つの話し言葉で動き、変更すると全員のトランスクリプトに反映される。日本語だけの会議で崩れているなら、まず言語設定を確認する</li><li>参加者ごとに言語を分ける多言語音声認識は Teams Premium または Microsoft Copilot ライセンスの一部で、Teams Premium は ¥1,499 ユーザー/月相当・年払い（税別）。翻訳版のトランスクリプトは会議後に残らない</li><li>ゲストとして呼ばれる会議が多い、自分の手元に記録を貯めたい、言語が混ざる、のいずれかに当てはまるなら外部ツールが向く。ただしログイン必須のTeams会議にはBotが入れない点は先に確認しておく</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-minutes-one-hour/">議事録AIを無料で使うなら1時間の会議が分かれ目になる理由</a></li><li><a href="../interview-transcription-workflow/">インタビュー書き起こしの効率化｜時間を食うのは変換ではなく整文</a></li><li><a href="../notta-accuracy/">Nottaの精度は専門用語で落ちる？単語登録は無料3個・日本語のみ</a></li><li><a href="../notta-pricing/">Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月</a></li><li><a href="../shigyo-transcription-no-ai-training/">士業の文字起こしでAI学習させない方法｜Nottaは規約上「プラン次第」</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
