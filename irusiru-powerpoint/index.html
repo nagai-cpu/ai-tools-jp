@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>イルシルをパワーポイントに変換できる？出力の条件と崩れる箇所｜AIツール実用ガイド</title>
+<meta name="description" content="イルシルのスライドをPowerPoint（PPTX）に変換できるのかを、2026年9月時点の公式ヘルプの文言で確認しました。対応プラン、出力前のフォント設定、崩れる箇所まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/irusiru-powerpoint/">
+<meta property="og:title" content="イルシルをパワーポイントに変換できる？出力の条件と崩れる箇所｜AIツール実用ガイド">
+<meta property="og:description" content="イルシルのスライドをPowerPoint（PPTX）に変換できるのかを、2026年9月時点の公式ヘルプの文言で確認しました。対応プラン、出力前のフォント設定、崩れる箇所まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "イルシルをパワーポイントに変換できる？出力の条件と崩れる箇所", "description": "イルシルのスライドをPowerPoint（PPTX）に変換できるのかを、2026年9月時点の公式ヘルプの文言で確認しました。対応プラン、出力前のフォント設定、崩れる箇所まで。", "datePublished": "2026-09-03", "dateModified": "2026-09-03", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/irusiru-powerpoint/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">イルシルをパワーポイントに変換できる？出力の条件と崩れる箇所</h1><p class="meta">2026-09-03 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、イルシルのスライドはPowerPoint（PPTX）に変換できます。ただし条件が2つあります。<strong>書き出せるのはパーソナルプラン以上（月1,848円・税込）で、フリープランでは出力まで進めません。</strong>そしてもう1つ、変換する前に専用フォントを自分のPCに入れておかないと、開いたときの見た目が画面と変わります。無料のまま書き出しを試したいなら、別のツールを見たほうが早いです。</p>
+<h2 id="変換はできる-ただし出力の検証はお金を払ってからになる">変換はできる。ただし出力の検証はお金を払ってからになる</h2>
+<p>イルシルの公式ヘルプ「PPTX形式で出力したファイルでイルシル上のフォントを利用する方法」には、注意点の1行目にこう書かれています。</p>
+<blockquote>PPTX形式での出力は、パーソナルプラン以上でご利用可能です。</blockquote>
+<p>2026年9月2日公開の公式コラムにも「なお、PDFとPPTXの書き出しは有料プランの機能です。フリープランでは書き出しまで進めません」とあります。<strong>変換できるかどうかで迷う必要はなく、迷うのは「どのプランで契約するか」のほうです。</strong><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>の登録自体は無料なので、下地の出来はフリーのまま確かめられます。</p>
+<p>ここに1つ、ねじれがあります。同じ公式のコラム（2026年8月27日）は、ツール選びのチェックポイントとしてこう書いています。</p>
+<blockquote>お試し利用の段階で実際に1本PPTXファイルを出力し、PowerPointで文字や数値を直接打ち直してみることをおすすめします。</blockquote>
+<p>正しい助言ですが、イルシルのフリープランではこれができません。<strong>出力したPPTXが自分の環境で使えるかは、課金した後にしか確かめられない</strong>順番になります。だからこそ、契約したら真っ先に、本番に近い資料を1本書き出してPowerPointで開いてください。</p>
+<h2 id="プランごとの条件を-出力の観点で並べる">プランごとの条件を、出力の観点で並べる</h2>
+<p>2026年9月3日時点の公式ヘルプ「プランごとの料金・機能」の記載です。金額はすべて税込・1人あたりで、公式の表記のまま載せています。</p>
+<div class="tw"><table><thead><tr><th>プラン</th><th>料金（税込）</th><th>PPTX/PDF出力</th><th>おまかせ生成の入力文字数</th><th>作成できる資料数</th><th>向いている人</th></tr></thead><tbody><tr><td>フリー</td><td>0円</td><td>×（表の記載）</td><td>10,000文字</td><td>3個まで</td><td>生成の質だけ確かめたい人</td></tr><tr><td>パーソナル</td><td>月1,848円／半年9,900円（10%OFF）／年間17,160円（20%OFF）</td><td>PDF,PowerPoint</td><td>10,000文字</td><td>無制限</td><td>PowerPointで仕上げる人</td></tr><tr><td>パーソナルPlus</td><td>66,000円（年間契約のみ）</td><td>PDF,PowerPoint</td><td>50,000文字</td><td>無制限</td><td>長い原稿をそのまま渡す人</td></tr><tr><td>法人</td><td>お問い合わせ</td><td>PDF,PowerPoint</td><td>50,000文字</td><td>無制限</td><td>自社テンプレートを使いたい人</td></tr></tbody></table></div>
+<p>表で2つ補足します。1つ目、半年契約と年間契約の割引はヘルプサイトの料金表にだけ載っていて、同日の公式トップのプラン表には月額1,848円しか出ていません。<strong>年払いにする気があるなら、ヘルプサイトの料金表を見てから申し込むほうが安く済みます。</strong></p>
+<p>2つ目、入力文字数です。以前この欄は「構成生成時の入力可能文字数 1,600文字」でしたが、現在のヘルプでは「おまかせ生成で入力可能な文字数」がフリーでも10,000文字になっています（→<a href="../irusiru-free-plan/">イルシル無料プランでできること</a>に経緯を追記しました）。<strong>長い原稿を投げられるかは、もう無料と有料の分かれ目ではありません。分かれ目は出力だけです。</strong></p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="変換の前に-フォントを入れておく">変換の前に、フォントを入れておく</h2>
+<p>ここを飛ばすと、書き出したPPTXを開いた瞬間に「思っていたのと違う」となります。書き出しメニューには「フォントのインストールはお済みですか？」という確認が出ますが、公式ヘルプの注意書きはもっと直接的です。</p>
+<blockquote>本設定がお済みでない場合、フォントが適用されない場合や一部表示が文字化けする場合があります。</blockquote>
+<p>配布されているのは <code>irusiru_font_package.zip</code> という1つのzipで、Windowsは<code>fonts</code>フォルダ内を全選択して右クリックからインストール、MacはFont Bookの「フォントを現在のユーザに追加…」から追加します。<strong>「1度設定いただいた場合、2回目以降の設定は不要です」</strong>とあるので、作業は最初の1回だけです。</p>
+<p>困るのは見た目だけではありません。公式コラムには「イルシルは、画面で見えている折り返しの位置をそのまま保って書き出します」とあります。<strong>フォントの幅が変われば行の折り返しも変わる</strong>ので、文字数の多いスライドほど影響が出ます。</p>
+<p>イルシルの画面で「OSフォント」を選んでいる場合はもう1つ注意が要ります。ヘルプによれば、端末にインストールされていないOSフォントを選ぶと、スライド反映時にデフォルトのフォントへ置き換わります。フォントパッケージにOSフォントは含まれていません。</p>
+<h2 id="公式が-出力されないことがある-と挙げているもの">公式が「出力されないことがある」と挙げているもの</h2>
+<p>イルシルのヘルプには、PPTX出力で問題が起きうるアイテムが名指しで列挙されています。原文の見出しごとに引用します。</p>
+<p><strong>【出力・反映されない可能性があるもの】</strong></p>
+<ul><li>表アイテム</li><li>一部グラフアイテム（pptxに存在しない等の特殊なもの）</li><li>イルシル上、「矢印」機能で作成した矢印</li><li>シャドウ設定（アイテムに付与されたもの）</li><li>pptxに存在しないスタイル（フォントファミリー等）</li></ul>
+<p><strong>【出力時にスタイルが大きく崩れる可能性があるもの】</strong></p>
+<ul><li>回転したアイテム</li></ul>
+<p><strong>【16:9ではない場合、枠内に収まるよう変形されるもの】</strong></p>
+<ul><li>背景として設定した図形や画像</li></ul>
+<p>さらに「上記以外にも、pptxの仕様変更などによって、適切に出力されないアイテムが存在する可能性があります」と続きます。</p>
+<p>一方で、2026年9月2日の公式コラムには「本文のテキストや表、グラフは、それぞれPowerPointのテキスト・表・グラフとして入っています」と書かれています。<strong>表とグラフについて、ヘルプとコラムで説明が一致していません。</strong>どちらが現在の挙動かは外から判断できないため、この記事では断定しません。<strong>表やグラフを含む資料をPPTXにするなら、契約したその日に1本出力して自分の目で確かめてください。</strong></p>
+<p>矢印も同じです。コラムは「背景や、図と図をつないでいる矢印は画像として書き出されます」と書き、ヘルプは矢印機能で作った矢印を「出力・反映されない可能性があるもの」に入れています。画像になるのか消えるのかで対応は変わりますが、いずれにせよ<strong>PowerPoint側で細かく動かす前提の図解には向きません</strong>。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-最後にどのアプリで仕上げるか">1. 最後にどのアプリで仕上げるか</h3>
+<p>公式コラムは、最終調整をPowerPointで行う運用（パターンA）と、ツール内で作って共有まで完結させる運用（パターンB）に分けています。<strong>Aなら「出力したPPTXが崩れず編集できるか」が最重要</strong>で、上の列挙がそのまま確認項目になります。Bなら書き出しが要らないので、フリープランのままでも成立します。</p>
+<h3 id="2-作る資料に-表・グラフ・矢印がどれだけあるか">2. 作る資料に、表・グラフ・矢印がどれだけあるか</h3>
+<p>文章と見出しが中心の資料なら、コラムの言うとおり「テキストやオブジェクトが独立している」状態で出てきます。逆に、数表と図解が主役の資料は、ヘルプが名指ししている項目に真正面からぶつかります。<a href="../slow-proposal-docs/">提案資料を作るのが遅い原因を6工程で切り分ける</a>で書いた「出力」の工程そのもので、<strong>生成力ではなく受け渡しの形式で詰まる</strong>典型です。</p>
+<h3 id="3-無料のまま書き出しまで試したいか">3. 無料のまま書き出しまで試したいか</h3>
+<p>課金前にPPTXの出来を見たいなら、別のツールで確かめる手もあります。Gammaの料金ページには、2026年9月3日時点で無料のFreeプランの内容として「PDF、PPTX、PNG、Googleスライドにエクスポート」と書かれています。<strong>無料の範囲でPPTXを1本出して感触をつかむなら、こちらのほうが手順は短いです。</strong>日本語のデザインまで含めた比較は<a href="../ai-slide-generator/">AIスライドを自動作成する4つを比較</a>にまとめてあります。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>出力の検証だけは無料でできない。</strong> 公式コラム自身が「お試し利用の段階で実際に1本PPTXファイルを出力し」と勧めているのに、フリープランでは書き出しに進めません。試せるのは生成の質までです。</li><li><strong>フォントの導入がひと手間ある。</strong> フォントパッケージはGoogle Drive上のzipファイルとして配布されています。自分のPCに自由にフォントを入れられない環境なら、申し込む前に確認しておくほうが安全です。</li><li><strong>他ソフトでの表示は保証されていない。</strong> ヘルプには「OpenOfficeやKeyNoteなど他ソフトウェアでも利用可能ですが、一部正しく表示されない場合がございます」とあります。PowerPoint以外で開く前提なら、ここは織り込んでおく必要があります。</li><li><strong>PDF出力はブラウザの印刷画面を経由する。</strong> 「背景のグラフィック」にチェックを入れないとテキストが灰色になると公式が注意しています。同じヘルプ内で余白の指定が「デフォルト」と「なし」の2通りに書かれているので、1回目は見比べるほうが確実です。</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="フリープランのままPowerPointに変換できますか">フリープランのままPowerPointに変換できますか</h3>
+<p>できません。公式ヘルプに「PPTX形式での出力は、パーソナルプラン以上でご利用可能です」と明記されており、コラムにも「フリープランでは書き出しまで進めません」とあります。ヘルプのプラン比較表でも、フリーの「外部データ出力」欄は「×」です。無料で確かめられるのは、生成されたスライドの中身とデザインまでです。</p>
+<h3 id="出力したPPTXは-PowerPointで文字を直せますか">出力したPPTXは、PowerPointで文字を直せますか</h3>
+<p>公式コラムには「出力されたPPTXファイルはテキストやオブジェクトが独立しているため、PowerPoint上で普段通りに文字修正やスライドの差し替えが可能です」と書かれています。ただし折り返しの位置は画面の状態を保って書き出されるため、文章を足しても自動では折り返らないことがあります。文言を大きく変えるなら、テキストボックスの幅か改行を自分で調整することになります。</p>
+<h3 id="PPTXを開くと1枚目が白紙になります">PPTXを開くと1枚目が白紙になります</h3>
+<p>公式ヘルプに同じ質問があり、「背景設定に事象の発生要因がある可能性がございます」として、1枚目で編集エリアを右クリックし「背景を修正する」＞「もとに戻す」で背景化を解除、画像のサイズを整えてから出力し直す手順が案内されています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li><strong>変換はできる。ただしパーソナルプラン以上（月1,848円・税込）から。</strong>フリープランでは書き出しまで進めないと公式コラムに明記されている</li><li><strong>書き出す前に専用フォントを入れる。</strong>入れていないと文字化けやレイアウトのずれが起きうると公式ヘルプが注意している。設定は最初の1回だけ</li><li><strong>表・グラフ・矢印は自分の資料で1本試してから使う。</strong>公式ヘルプは「出力・反映されない可能性があるもの」に表アイテムを挙げ、公式コラムは表もそのまま入ると書いていて、説明が一致していない</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../slow-proposal-docs/">提案資料を作るのが遅い原因を6工程で切り分ける｜改善は生成の前後にある</a></li><li><a href="../irusiru-free-plan/">イルシル無料プランでできること｜月3枚・資料3本の中身と出力の壁</a></li><li><a href="../ai-slide-generator/">AIスライドを自動作成する4つを比較｜日本語のまま出せるのはどれか</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
