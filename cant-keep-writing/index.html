@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ブログ記事が書けない・続かない｜無料枠で何回やり直せるか数えた｜AIツール実用ガイド</title>
+<meta name="description" content="記事が書けない・更新が止まる人向けに、AIツールの無料枠を「何本書けるか」ではなく「何回やり直せるか」で数え直しました。詰まる場所ごとに使える回数が違います。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/cant-keep-writing/">
+<meta property="og:title" content="ブログ記事が書けない・続かない｜無料枠で何回やり直せるか数えた｜AIツール実用ガイド">
+<meta property="og:description" content="記事が書けない・更新が止まる人向けに、AIツールの無料枠を「何本書けるか」ではなく「何回やり直せるか」で数え直しました。詰まる場所ごとに使える回数が違います。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ブログ記事が書けない・続かない｜無料枠で何回やり直せるか数えた", "description": "記事が書けない・更新が止まる人向けに、AIツールの無料枠を「何本書けるか」ではなく「何回やり直せるか」で数え直しました。詰まる場所ごとに使える回数が違います。", "datePublished": "2026-09-05", "dateModified": "2026-09-05", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/cant-keep-writing/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料枠だけでブログを続けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "本数を出す用途では厳しいですが、止まっている工程を1つ動かす用途なら回ります。ラッコキーワードのフリーは週50クレジット、Catchy Freeは毎月10クレジット、Value AI Writerのフリーは月間1記事（公式表記では初回増量で3記事）。合計すると「週に1回、上位の構成を調べて、月に1本たたき台を出す」程度の運用にはなります。"}}, {"@type": "Question", "name": "AIが書いた記事はそのまま公開していいですか？", "acceptedAnswer": {"@type": "Answer", "text": "Value AI Writerの公式FAQは「ベースとなるAIのコンテンツポリシーと利用規約に従っていれば商用利用可能です」としつつ、「生成された文章を公開前にご自身でチェックいただくことを前提に」と条件を付けています。「※投稿するコンテンツの責任は投稿者に帰属します」とも書かれています。読まずに公開する運用は想定されていません。文章そのものを整える段階の道具の比べ方は[キャッチコピーをAIで無料作成｜商品名から出せる4つを実際に試した](../ai-copywriting-free/)にまとめています。"}}, {"@type": "Question", "name": "手が止まるのはツールを増やせば解決しますか？", "acceptedAnswer": {"@type": "Answer", "text": "工程を切り分けないまま道具だけ増やすと、無料枠を分散して使い切って終わります。どこで遅くなっているかを先に測る考え方は[提案資料を作るのが遅い原因を6工程で切り分ける｜改善は生成の前後にある](../slow-proposal-docs/)でも同じです。書けない原因が「調べていない」なのか「決めていない」なのかで、必要な道具は変わります。 言い回しの引き出しを増やしたい段階なら  のように用途別テンプレを持つ側が向きます。 "}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">ブログ記事が書けない・続かない｜無料枠で何回やり直せるか数えた</h1><p class="meta">2026-09-05 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>構成でいつも手が止まる人は「やり直しに枠を使わない道具」を、書き出しで止まる人は「文章を何度でも出せる道具」を選ぶ</strong>のが先です。無料枠を「月に何本書けるか」で比べても外れます。実際に減っていくのは書いた本数ではなく、<strong>やり直した回数</strong>だからです。ここを取り違えると、無料のうちに手が止まります。</p>
+<h2 id="書けない-は3か所のどこかで起きている">「書けない」は3か所のどこかで起きている</h2>
+<p>自分がどこで止まっているかを先に決めます。ざっくり3つです。</p>
+<ol><li><strong>ネタが決まらない</strong>（何について書けばいいか分からない）</li><li><strong>構成が決まらない</strong>（テーマはあるが、見出しの並びが決まらない）</li><li><strong>文章が出てこない</strong>（構成はあるが、書き出しと言い回しで止まる）</li></ol>
+<p>厄介なのは、この3つで消費される無料枠の単位が、ツールごとにまったく違うことです。2026年9月5日時点で各社の公式ページに書かれている内容を並べます。</p>
+<div class="tw"><table><thead><tr><th>ツール</th><th>無料で使える枠</th><th>枠のリセット</th><th>1回で減るもの</th><th>向いている詰まり方</th></tr></thead><tbody><tr><td>Value AI Writer フリー</td><td>0円・月間1記事（初回増量で3記事）</td><td>毎月</td><td>タイトル・見出しの生成1回で「1記事」</td><td>構成より本文で止まる人</td></tr><tr><td>ラッコキーワード フリー</td><td>無料・50クレジット/週</td><td>毎週（月曜0時）</td><td>サジェスト1／見出し抽出2／共起語2</td><td>ネタ・構成が決まらない人</td></tr><tr><td>Catchy Free</td><td>¥0・毎月10クレジット付与</td><td>毎月</td><td>生成1回につき1クレジット（長文ツールは2〜4）</td><td>書き出しや言い回しで止まる人</td></tr></tbody></table></div>
+<h3 id="見落としやすいのは-1記事-の数え方">見落としやすいのは「1記事」の数え方</h3>
+<p>一番意外だったのはここでした。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+87B0TU+1JUK+1HL85U" target="_blank" rel="sponsored nofollow noopener">Value AI Writer</a> の公式FAQには、月間の作成可能記事数についてこう書かれています。</p>
+<blockquote>タイトル、見出しの生成までを1記事とみなします。つまり、本文生成をおこなわなくてもタイトル、見出しの生成をした時点で1記事とカウントされますのでご注意ください。なお、本文生成文字数制限の範囲内であれば何度でも何文字でも生成ができます。</blockquote>
+<p>つまり<strong>カウントされるのは構成をつくった回数で、本文は制限内なら何度でも生成し直せます</strong>。書けない人の多くは「この見出しの並びで合っているのか」で止まるのに、その試行こそが枠を消費する設計です。フリープラン（月間1記事）だと、構成を1回つくった時点でその月は打ち止めになります。</p>
+<p>裏を返すと、<strong>構成は自分で決められるが本文を書くのが苦痛</strong>という人には、この数え方はかなり有利です。1本の記事の中で本文を何度も作り直しても追加の記事数は減りません。生成される本文は公式FAQによると「1記事あたりの目安で15,000文字～20,000文字になる傾向が多いです」とのことなので、削って使う前提になります。</p>
+<div class="cta"><div class="cta-h">Value AI Writer<span class="pr">PR</span></div><p class="cta-b">キーワードから見出し構成つきのSEO記事を生成する</p><p class="cta-f">無料トライアルあり</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+87B0TU+1JUK+1HL85U" target="_blank" rel="sponsored nofollow noopener">Value AI Writer の公式サイトを見る</a></div>
+<h2 id="選び方の判断軸は3つ">選び方の判断軸は3つ</h2>
+<h3 id="1-自分が使うのは-調べる回数-か-生成する回数-か">1. 自分が使うのは「調べる回数」か「生成する回数」か</h3>
+<p>ラッコキーワードのフリープランは公式の料金表で「50 / 週」、有効期限は1週間（月曜0時リセット）と書かれています。消費は機能ごとに決まっていて、サジェストキーワードが1、検索上位20位の見出しをまとめて見る「見出し抽出」と「共起語」がそれぞれ2です。単純計算で、<strong>週に25回まで上位記事の構成を覗ける</strong>ことになります。構成が決まらないタイプなら、ここが一番効きます。</p>
+<p>一方Catchyは生成の回数で減ります。公式ヘルプ（2026年9月1日に確認）では「基本的に、1度文章を生成するごとに1クレジット消費する仕組み」で、長い文章が出るツールは2〜4クレジット。Free は毎月10クレジットなので、記事1本を通しで生成するとほぼ使い切ります（内訳は<a href="../catchy-free-credits/">Catchy無料クレジット10で何ができる？記事1本でほぼ使い切る</a>に書きました）。</p>
+<h3 id="2-リセットの周期が-自分の更新の周期に合っているか">2. リセットの周期が、自分の更新の周期に合っているか</h3>
+<p>「続かない」への効き方が地味に違うところです。ラッコキーワードのフリーは<strong>週次リセットで持ち越せません</strong>（有料プランは有効期限2ヶ月と記載）。使わなければ毎週消えるかわりに、毎週50は必ず戻ってきます。対してValue AI Writerのフリーは月1記事、Catchy Freeは月10クレジット。月次だと「今月まだ手をつけていない」が月末まで見えないまま進みます。</p>
+<p>週1回ペースで手を動かしたいなら週次リセット、月に1本を丁寧に仕上げたいなら月次と、<strong>自分が守れそうな周期に合わせて無料枠を選ぶ</strong>やり方があります。</p>
+<h3 id="3-やり直しに枠が要る道具かどうか">3. やり直しに枠が要る道具かどうか</h3>
+<p>書けない状態というのは、たいてい<strong>1回で決まらない状態</strong>のことです。ここで枠を消費する道具を選ぶと、迷っている時間そのものが課金対象になります。前述のとおりValue AI Writerは構成のやり直しがカウント対象、本文のやり直しは対象外。Catchyは生成のたびに減ります。ラッコキーワードは調べ直すたびに減ります。<strong>自分が一番何度もやり直す工程を、無料枠が減らない側に置く</strong>のが実用的な組み方です。</p>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<ul><li><strong>Value AI Writer</strong>：公式FAQは、生成される文章が正確な内容とは限らない旨と、「記事公開前に確認していただくのをおすすめします」と明記しています。上位表示についても、SEOは相対評価であり検索エンジンでの順位を約束できない旨がFAQに書かれています。事実確認の手間は残ります。また利用手順のSTEP.03には「生成されるのは文章のみのため、投稿前に必要に応じて文字装飾と画像挿入を行ってください」とある一方、支援機能の一覧には「画像生成（アイキャッチ等）」も並んでおり、どこまで画像が付くかは公式ページの記述だけでは読み取れませんでした。見出し構成の3方式のうち「検索結果から選択してAIで構築」はプロプラン以上と書かれています。</li><li><strong>Catchy</strong>：Freeは「プロジェクト 1つまで」で、生成のたびにクレジットが減ります。テーマを複数並行で回す使い方には向きません。</li><li><strong>ラッコキーワード</strong>：フリーは週50クレジット・有効期限1週間なので、まとめて使う運用ができません。「一括キーワード調査」はフリー欄に「機能ご利用不可（有料プラン向け機能）」と明記されています。AI連携（MCP）についても告知に「Claudeにかんたん接続できるようになりました（ライトプラン以上）」とあり、フリーでは対象外です。なお料金表の「利用可能オプション」欄はフリーだけ「-」で内容の記載がなく、月間検索数やSEO難易度の取得が無料で使えるかは公式の料金表からは確認できませんでした。</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料枠だけでブログを続けられますか？</strong> 本数を出す用途では厳しいですが、<strong>止まっている工程を1つ動かす</strong>用途なら回ります。ラッコキーワードのフリーは週50クレジット、Catchy Freeは毎月10クレジット、Value AI Writerのフリーは月間1記事（公式表記では初回増量で3記事）。合計すると「週に1回、上位の構成を調べて、月に1本たたき台を出す」程度の運用にはなります。</p>
+<p><strong>Q. AIが書いた記事はそのまま公開していいですか？</strong> Value AI Writerの公式FAQは「ベースとなるAIのコンテンツポリシーと利用規約に従っていれば商用利用可能です」としつつ、「生成された文章を公開前にご自身でチェックいただくことを前提に」と条件を付けています。「※投稿するコンテンツの責任は投稿者に帰属します」とも書かれています。読まずに公開する運用は想定されていません。文章そのものを整える段階の道具の比べ方は<a href="../ai-copywriting-free/">キャッチコピーをAIで無料作成｜商品名から出せる4つを実際に試した</a>にまとめています。</p>
+<p><strong>Q. 手が止まるのはツールを増やせば解決しますか？</strong> 工程を切り分けないまま道具だけ増やすと、無料枠を分散して使い切って終わります。どこで遅くなっているかを先に測る考え方は<a href="../slow-proposal-docs/">提案資料を作るのが遅い原因を6工程で切り分ける｜改善は生成の前後にある</a>でも同じです。書けない原因が「調べていない」なのか「決めていない」なのかで、必要な道具は変わります。</p>
+<p>言い回しの引き出しを増やしたい段階なら <a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+84XAEQ+52IU+5YJRM" target="_blank" rel="sponsored nofollow noopener">Catchy</a> のように用途別テンプレを持つ側が向きます。</p>
+<div class="cta"><div class="cta-h">Catchy<span class="pr">PR</span></div><p class="cta-b">広告文・キャッチコピー・LP文面を用途別テンプレから生成する</p><p class="cta-f">無料プランあり（毎月クレジット付与）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+84XAEQ+52IU+5YJRM" target="_blank" rel="sponsored nofollow noopener">Catchy の公式サイトを見る</a></div>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>無料枠は「月に何本書けるか」ではなく、<strong>自分が何度やり直すか</strong>で足りるかどうかが決まる</li><li>Value AI Writerはタイトル・見出しの生成時点で1記事とカウントされ、本文は制限内なら何度でも生成し直せる（公式FAQの記載）</li><li>週次リセットのラッコキーワード、月次のCatchy・Value AI Writer。<strong>続けられる周期に合わせて選ぶ</strong>と、無料のまま手が止まりにくい</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-copywriting-free/">キャッチコピーをAIで無料作成｜商品名から出せる4つを実際に試した</a></li><li><a href="../catchy-free-credits/">Catchy無料クレジット10で何ができる？記事1本でほぼ使い切る</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
