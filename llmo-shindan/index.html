@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI検索（LLMO）自社診断のご相談｜ChatGPTとGeminiが自社をどう説明しているか実測します｜AIツール実用ガイド</title>
+<meta name="description" content="ChatGPTやGeminiが自社をどう説明しているかを実測し、ズレの原因と直す順番を出す診断のご案内。保証はうたいません。費用は応相談です。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/llmo-shindan/">
+<meta property="og:title" content="AI検索（LLMO）自社診断のご相談｜ChatGPTとGeminiが自社をどう説明しているか実測します｜AIツール実用ガイド">
+<meta property="og:description" content="ChatGPTやGeminiが自社をどう説明しているかを実測し、ズレの原因と直す順番を出す診断のご案内。保証はうたいません。費用は応相談です。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI検索（LLMO）自社診断のご相談｜ChatGPTとGeminiが自社をどう説明しているか実測します", "description": "ChatGPTやGeminiが自社をどう説明しているかを実測し、ズレの原因と直す順番を出す診断のご案内。保証はうたいません。費用は応相談です。", "datePublished": "2026-09-07", "dateModified": "2026-09-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/llmo-shindan/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI検索（LLMO）自社診断のご相談｜ChatGPTとGeminiが自社をどう説明しているか実測します</h1><article><p>「ChatGPTに自社名を入れたら、事業内容が違っていた」 「競合ばかり挙がって、うちが候補に入っていない」 「AI検索対策と言われても、何から手をつければいいのか分からない」</p>
+<p>このページは、そういう状態の小さな会社・個人事業主・マーケ担当の方に向けた、<strong>AI検索（LLMO／GEO）まわりの実査と改善方針づくり</strong>のご案内です。</p>
+<p>このサイトでいつもやっているのと同じで、<strong>想像では書きません。実際に聞いて、返ってきた文章を記録するところから始めます。</strong></p>
+<h2 id="なぜ今これが問題になるのか">なぜ今これが問題になるのか</h2>
+<p>検索の入口が、検索エンジンから生成AIへ移りつつあります。ここで起きているのは順位争いではなく、<strong>AIが生成する回答文の中で自社がどう説明されるか</strong>の問題です。</p>
+<p>ナレッジホールディングスが2026年8月14日に公表した調査（2026年7月実施・回答308名）では、AI検索の回答で出典を「毎回クリックして確認する」人は<strong>15.2%</strong>にとどまりました。ほぼ確認しない層は32.5%です。</p>
+<p>つまり、<strong>引用されてもクリックはされない</strong>。回答文そのものが事実上の会社説明として一人歩きします。ここが間違っていたり、そもそも候補に入っていなかったりすると、比較検討の土俵に上がる前に落ちます。</p>
+<h2 id="やること">やること</h2>
+<p><strong>1. 現状の実測</strong> ChatGPT・Gemini・Copilot などで、御社名・主力商品・「業種＋地域」「業種＋課題」といった購買前に使われる聞き方を複数パターン試し、返ってくる回答をそのまま記録します。</p>
+<p><strong>2. ズレの特定</strong> 記録した回答を、①事実として誤っている ②古い ③抜けている ④競合が優位に説明されている、の4つに仕分けします。どの質問の型で落ちているのかを可視化します。</p>
+<p><strong>3. 原因の切り分け</strong> AIが何を根拠にそう答えているかを追います。自社サイトの書き方の問題か、一次情報が存在しないのか、第三者の情報が古いままなのか。打ち手がまったく変わるので、ここを混ぜません。</p>
+<p><strong>4. 直す順番の提示</strong> 「サイト全体をLLMO対応に」といった話にはしません。<strong>費用対効果の高い順に並べた具体的な修正指示</strong>をお渡しします。どのページのどの記述を、どう書き換えるか、というレベルまで落とします。</p>
+<h3 id="お渡しするもの">お渡しするもの</h3>
+<ul><li>実測ログ（どの質問に、どのAIが、どう答えたか）</li><li>ズレの一覧と分類</li><li>優先順位つきの改善リスト（担当者がそのまま着手できる粒度）</li><li>一通りの説明（オンライン）</li></ul>
+<h2 id="正直にお伝えしておくこと">正直にお伝えしておくこと</h2>
+<ul><li><strong>AIの回答を直接書き換えることはできません。</strong> 事業者側にできるのは、AIが参照する材料を整えることだけです。この診断もその範囲の仕事です。</li><li><strong>順位や掲載を保証するものではありません。</strong> 保証をうたう業者がいれば、そこは疑ってください。</li><li><strong>改善後、反映までに時間がかかります。</strong> モデルやインデックスの更新周期に依存し、即日変わるものではありません。</li><li><strong>効果が出やすいのは、すでに一定の情報がWeb上にある事業者です。</strong> 情報がほぼ無い場合は、診断より先に一次情報を作るところからになります。その場合は正直にそう申し上げます。</li></ul>
+<h2 id="対象と進め方">対象と進め方</h2>
+<p><strong>向いている方</strong></p>
+<ul><li>自社サイトや商品ページが既にあり、更新できる体制がある</li><li>BtoBまたは検討期間のある商材で、比較検討時に候補から漏れると困る</li><li>「AI検索対策」の名目で提案を受けているが、内容の妥当性を判断できない</li></ul>
+<p><strong>向いていない方</strong></p>
+<ul><li>今日明日で結果が要る</li><li>一切手を動かさずに済ませたい（改善はご自身か制作会社の実施が前提です）</li></ul>
+<p><strong>進め方</strong>：ご相談 → 現状のヒアリング（無料・オンライン30分程度）→ 範囲と費用のご提示 → 着手。ヒアリングの段階で「診断は不要」と判断した場合は、そう申し上げます。</p>
+<p><strong>費用</strong>：<strong>応相談</strong>です。対象URLの数、商品数、調べる質問パターンの数で作業量が変わるため、ヒアリング後にお見積りします。</p>
+<h2 id="誰がやるのか">誰がやるのか</h2>
+<p>このサイト「AIツール実用ガイド」の運営者です。AIツールの料金や制限を、公式サイトの記載だけを根拠に確認して書き続けています。同じ運営者で、AI×マーケティングの実務ニュースを毎朝解説する<a href="https://www.youtube.com/@aimarke_daily" target="_blank" rel="noopener">AIマーケNews毎日便</a>も出しています。</p>
+<p>特定のツールを売るためではなく、<strong>事業者が翌日そのまま動かせる形</strong>に翻訳することを続けてきました。この診断も同じ方針です。</p>
+<h2 id="ご相談">ご相談</h2>
+<p>メールでご連絡ください。「診断希望」とだけ送っていただければ、こちらから確認事項をお送りします。</p>
+<p><strong>majima.satosato@gmail.com</strong></p>
+<p>より詳しい背景と、自分でやる場合の手順は note にも書いています。</p>
+<ul><li><a href="https://note.com/life_lab_jp/n/nae93146fdfb6" target="_blank" rel="noopener">AI検索（LLMO）自社診断のご相談</a></li><li><a href="https://note.com/life_lab_jp/n/n8edffd004f5a" target="_blank" rel="noopener">【診断キット】ChatGPTとGeminiに自社がどう説明されているか、自分で調べて直す手順一式</a></li></ul>
+<p>※AI検索の状況は短期間で変わります。本ページの調査手順や前提は、実務にあわせて随時更新します。</p></article>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
