@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>提案書作成をAIで時間短縮｜上限は月の生成枚数とやり直しの回数で決まる｜AIツール実用ガイド</title>
+<meta name="description" content="提案書の作成をAIで時短したい人向けに、月に何本ぶん短くできるのかを公式の料金表とヘルプから計算しました。破棄しても生成回数が減る仕様と、プランの分岐点を2026年9月時点で整理します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/ai-proposal-docs/">
+<meta property="og:title" content="提案書作成をAIで時間短縮｜上限は月の生成枚数とやり直しの回数で決まる｜AIツール実用ガイド">
+<meta property="og:description" content="提案書の作成をAIで時短したい人向けに、月に何本ぶん短くできるのかを公式の料金表とヘルプから計算しました。破棄しても生成回数が減る仕様と、プランの分岐点を2026年9月時点で整理します。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "提案書作成をAIで時間短縮｜上限は月の生成枚数とやり直しの回数で決まる", "description": "提案書の作成をAIで時短したい人向けに、月に何本ぶん短くできるのかを公式の料金表とヘルプから計算しました。破棄しても生成回数が減る仕様と、プランの分岐点を2026年9月時点で整理します。", "datePublished": "2026-09-07", "dateModified": "2026-09-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/ai-proposal-docs/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料のままで提案書を1本仕上げられますか。", "acceptedAnswer": {"@type": "Answer", "text": "A. 公式ヘルプの表では、フリープランのAIデザイン生成は3枚/月、外部データ出力の欄は「×」です。構成や見せ方を試す用途には使えますが、10枚の資料をファイルとして持ち出す使い方は無料の範囲から外れています。"}}, {"@type": "Question", "name": "月払いと年払いはどちらが得ですか。", "acceptedAnswer": {"@type": "Answer", "text": "A. パーソナルは月1,848円、半年9,900円（10%OFF）、年17,160円（20%OFF）です。月払いを12ヶ月続けると22,176円なので、1年使う前提なら年契約が5,016円安くなります。数ヶ月で見極めたいなら月契約から始める判断もあります。"}}, {"@type": "Question", "name": "生成した資料をそのまま客先に出せますか。", "acceptedAnswer": {"@type": "Answer", "text": "A. 商用利用については公式のよくある質問に「商用利用できます。ただし、イルシルのイラストやテンプレート等をそのまま配布・販売することは禁止しています」とあります。中身の正確さは別の問題なので、数字と固有名詞は自分で確認してから出してください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">提案書作成をAIで時間短縮｜上限は月の生成枚数とやり直しの回数で決まる</h1><p class="meta">2026-09-07 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、提案書のAI化で効いてくるのは「1本あたり何分速くなるか」ではなく、<strong>月に何本ぶん任せられるか</strong>です。AIスライド生成は月の生成枚数で上限が決まっていて、しかも生成結果を捨てても枚数は戻りません。月1〜2本なら無料枠の試用で足り、月2〜4本なら年契約、月10本を超えるなら上位プラン、という分かれ方をします。</p>
+<h2 id="気に入らなくて捨てても-枚数は減る">気に入らなくて捨てても、枚数は減る</h2>
+<p>意外なのはここです。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>の公式ヘルプは、AIデザイン生成の操作説明のなかで、生成結果を採用しなかった場合の扱いをこう書いています。</p>
+<blockquote>※「破棄」を選択してもAIデザイン生成の使用回数は消費されます。</blockquote>
+<p>同じ注記は「上書きして生成」と「現状から修正」の両方に書かれています。つまり<strong>月40枚のプランは「40枚の完成品」ではなく「40回の試行」</strong>です。提案書は1回で決まらないので、10枚の資料を作るのに実際は15回、20回と生成が走ります。時短の上限を見積もるときは、完成枚数ではなく、やり直しを含めた試行回数で数えてください。</p>
+<p>無料で試す段階でも同じことが起きます。フリープランのAIデザイン生成は3枚/月なので、3回試して気に入らなければその月は終わりです。無料枠の中身は<a href="../irusiru-free-plan/">イルシル無料プランでできること</a>に細かく書きました。</p>
+<h2 id="プラン別に-月に何本ぶん-を並べる">プラン別に「月に何本ぶん」を並べる</h2>
+<p>イルシルの公式ヘルプ（プランごとの料金・機能）と、パーソナルPlusの案内ページ（irusiruslide.com）に載っている数字を、2026年9月7日時点でそのまま並べます。資料本数の換算は私の推計ではなく、<strong>公式ページに書かれている換算</strong>です。</p>
+<div class="tw"><table><thead><tr><th>プラン</th><th>料金（税込）</th><th>AIデザイン生成</th><th>公式の資料本数換算</th><th>PDF・PowerPoint出力</th></tr></thead><tbody><tr><td>フリー</td><td>0円</td><td>3枚/月</td><td>記載なし（作成可能ドキュメント3個まで）</td><td>「×」と記載</td></tr><tr><td>パーソナル（月契約）</td><td>1,848円/人・月</td><td>40枚/月</td><td>「10〜20枚なら、月2〜4資料分」</td><td>PDF・PowerPoint</td></tr><tr><td>パーソナル（年間契約）</td><td>17,160円/人・年（20%OFF）</td><td>40枚/月</td><td>同上</td><td>PDF・PowerPoint</td></tr><tr><td>パーソナルPlus（年間のみ）</td><td>66,000円/人・年</td><td>200枚/月</td><td>「10〜20枚なら、月10〜20資料分」</td><td>PDF・PowerPoint</td></tr></tbody></table></div>
+<p>半年契約は9,900円（10%OFF）で、月・半年・年の3種類から選ぶ形です。年間契約の17,160円を12で割ると月あたり1,430円になり、公式の換算どおり月2〜4本作れるなら、<strong>提案書1本あたりの費用はおよそ360〜720円</strong>という計算になります。1本に半日かけている人にとって、この金額が高いか安いかは自分の時間単価で判断がつきます。</p>
+<p>なお、月契約を12ヶ月続けると22,176円で、年間契約より5,016円高くなります。1年使うと決めているなら年契約のほうが安く、途中でやめる可能性があるなら月契約、という素直な分かれ方です。</p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-やり直しを1-5倍で見積もる">1. やり直しを1.5倍で見積もる</h3>
+<p>10枚の提案書を月2本作るなら完成枚数は20枚ですが、直しを含めれば30枚前後は動きます。40枚/月のパーソナルはここでちょうど収まる設計です。逆に、社内の差し戻しが多くて1本に何度も手を入れる人は、完成本数が少なくても枠を使い切ります。<strong>数えるのは提案書の本数ではなく、生成ボタンを押す回数です。</strong></p>
+<h3 id="2-無料のまま丸ごと1本は試しにくい">2. 無料のまま丸ごと1本は試しにくい</h3>
+<p>「まず無料で1本作って、どれだけ速くなるか測ってから買う」を考える人は多いはずですが、この順番は取りにくくなっています。理由は3つあります。</p>
+<ul><li>フリーのAIデザイン生成は3枚/月。10枚の提案書1本には届きません</li><li>一番手数が少ない「おまかせ生成」のプロモードについて、公式ヘルプは「フリープランでは、おまかせ生成の『プロモード』は 原則 利用できません。AIデザイン生成の月間使用回数が残っている場合、月に1回だけ 使用可能です」と書いています</li><li>公式ヘルプの機能比較表で、フリープランの「外部データ出力」欄には「×」と書かれています</li></ul>
+<p>3日間の無料トライアルもありますが、公式トップのよくある質問には「パーソナル／パーソナルプラスの年間プラン（1年）を新規でお申し込みいただく場合に限り」「1ヶ月・6ヶ月のプランには付きません」「トライアル期間の終了後は自動的に有料プランへ移行します」とあります。<strong>試用ではなく、年契約の申し込みが先に立つ形式</strong>です。続ける気がないなら期間内の解約手続きが要ります。出力まで含めた無料の範囲は<a href="../irusiru-powerpoint/">イルシルをパワーポイントに変換できる？</a>も参考になります。</p>
+<h3 id="3-詰まっているのが文章側ならスライドツールは効かない">3. 詰まっているのが文章側ならスライドツールは効かない</h3>
+<p>構成は頭にあるのにスライドが作れないのか、そもそも何をどう言うかが決まらないのか。後者なら生成枚数を増やしても解決しません。提案の切り口や表紙の一文、送付メールの文面で止まる人は、文章側のツールのほうが近道です。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+84XAEQ+52IU+5YJRM" target="_blank" rel="sponsored nofollow noopener">Catchy</a>は無料プランで「毎月10クレジット付与」「プロジェクト 1つまで」「全生成ツール利用可能」と公式LPに書かれていて、言い回しの案出しだけなら課金せずに試せます。工程のどこで時間が消えているかは<a href="../slow-proposal-docs/">提案資料を作るのが遅い原因を6工程で切り分ける</a>で切り分けてください。</p>
+<div class="cta"><div class="cta-h">Catchy<span class="pr">PR</span></div><p class="cta-b">広告文・キャッチコピー・LP文面を用途別テンプレから生成する</p><p class="cta-f">無料プランあり（毎月クレジット付与）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+84XAEQ+52IU+5YJRM" target="_blank" rel="sponsored nofollow noopener">Catchy の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>捨てた生成も課金枠を食う。</strong> 前述のとおり公式ヘルプに明記があります。試行錯誤が多い月は、完成した資料の数と請求の感覚が合いません。</li><li><strong>公式のなかで入力文字数が2通りある。</strong> プラン比較表では「おまかせ生成で入力可能な文字数」がフリー・パーソナルとも10,000文字ですが、おまかせ生成の説明ページの表では同じ2プランが5,000文字になっています（いずれも2026年9月7日時点）。長い議事録をそのまま貼る使い方を前提にするなら、申し込み前に問い合わせで確認してください。</li><li><strong>パーソナルPlusは年一括のみ。</strong> 案内ページに「年間プランのみ・クレジットカードで一括前払い」「月払いはお受けしておりません」「ご購入後、お客様のご都合による解約・返金はできません」とあります。月200枚が必要かどうかを月契約のパーソナルで見てから上げるのが安全です。</li><li><strong>ブラウザの制約がある。</strong> 公式のよくある質問は「Google Chrome、Microsoft Edgeに対応しています。Safariは現在対応していません」と書いています。</li><li><strong>Catchyの出力はそのままでは出せない。</strong> 公式LPのサンプルには、入力に含まれていない「90%の確率で」といった数字が混ざった例が実際に載っています。提案書に載せる文言は数字の裏取りが前提です。無料枠の減り方は<a href="../catchy-free-credits/">Catchy無料クレジット10で何ができる？</a>にまとめました。</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料のままで提案書を1本仕上げられますか。</strong> A. 公式ヘルプの表では、フリープランのAIデザイン生成は3枚/月、外部データ出力の欄は「×」です。構成や見せ方を試す用途には使えますが、10枚の資料をファイルとして持ち出す使い方は無料の範囲から外れています。</p>
+<p><strong>Q. 月払いと年払いはどちらが得ですか。</strong> A. パーソナルは月1,848円、半年9,900円（10%OFF）、年17,160円（20%OFF）です。月払いを12ヶ月続けると22,176円なので、1年使う前提なら年契約が5,016円安くなります。数ヶ月で見極めたいなら月契約から始める判断もあります。</p>
+<p><strong>Q. 生成した資料をそのまま客先に出せますか。</strong> A. 商用利用については公式のよくある質問に「商用利用できます。ただし、イルシルのイラストやテンプレート等をそのまま配布・販売することは禁止しています」とあります。中身の正確さは別の問題なので、数字と固有名詞は自分で確認してから出してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>時短の上限は「1本あたりの分」ではなく<strong>月の生成枚数</strong>で決まる。破棄した生成も枚数を消費する</li><li>月2〜4本なら年間17,160円のパーソナル（月あたり1,430円）、月10本超ならパーソナルPlus。1年使うか分からないうちは月1,848円から</li><li>無料で丸ごと1本を試すのは難しい設計なので、<strong>買う前に測るのではなく、1ヶ月ぶんを買って測る</strong>のが現実的</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../no-ad-copy-ideas/">広告コピーが思いつかないのは1本しか考えていないから｜15枠を埋める順番</a></li><li><a href="../cant-keep-writing/">ブログ記事が書けない・続かない｜無料枠で何回やり直せるか数えた</a></li><li><a href="../ai-copywriting-free/">キャッチコピーをAIで無料作成｜商品名から出せる4つを実際に試した</a></li><li><a href="../irusiru-powerpoint/">イルシルをパワーポイントに変換できる？出力の条件と崩れる箇所</a></li><li><a href="../catchy-free-credits/">Catchy無料クレジット10で何ができる？記事1本でほぼ使い切る</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
