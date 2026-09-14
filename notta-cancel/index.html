@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notta解約は日割りなし｜失うのはお金より過去の文字起こし｜AIツール実用ガイド</title>
+<meta name="description" content="Nottaを途中で解約しても日割り精算はされないと規約・特商法表示・ヘルプの3か所に書かれています。それより痛い「有効期限後は冒頭3分しか読めない」仕様と、解約前にやることを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notta-cancel/">
+<meta property="og:title" content="Notta解約は日割りなし｜失うのはお金より過去の文字起こし｜AIツール実用ガイド">
+<meta property="og:description" content="Nottaを途中で解約しても日割り精算はされないと規約・特商法表示・ヘルプの3か所に書かれています。それより痛い「有効期限後は冒頭3分しか読めない」仕様と、解約前にやることを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Notta解約は日割りなし｜失うのはお金より過去の文字起こし", "description": "Nottaを途中で解約しても日割り精算はされないと規約・特商法表示・ヘルプの3か所に書かれています。それより痛い「有効期限後は冒頭3分しか読めない」仕様と、解約前にやることを整理しました。", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-cancel/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "解約したら、料金は日割りで返ってきますか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。利用規約・特定商取引法に基づく表示・ヘルプの3か所で日割り精算を行わないことが明記されています。返金も規約は「法律で定めがある場合を除き…一切応じない」としており、ヘルプはWeb版クレカ決済について「原則として対応していません。個別にご相談させていただきます」と窓口（support@notta.ai）だけ案内しています。"}}, {"@type": "Question", "name": "解約したら、文字起こしのデータは消えますか？", "acceptedAnswer": {"@type": "Answer", "text": "解約しただけでは消えません。公式は「フリープランに戻られた場合もそれまでの文字起こしデータが変更されたり、削除されることはありません」としています。ただし有効期限が切れると、過去のテキストは冒頭の3分部分しか表示されなくなります（再契約すれば元どおり閲覧できるとも書かれています）。完全に消えるのは手動削除・ワークスペース削除・退会の3つです。"}}, {"@type": "Question", "name": "3日間の無料トライアルだけ試して、課金されずに終われますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式は、トライアルが終了する前に解約すれば請求は発生しないとしています。Web版は解約しても終了日までプレミアムの機能を使え、アプリ版は解約と同時に即時無効化されフリー会員に戻ります。解約しなかった場合に請求されるのは月額ではなく年額プラン（プレミアムで税込14,220円）なので、試すだけのつもりなら締切の管理が要ります。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Notta解約は日割りなし｜失うのはお金より過去の文字起こし</h1><p class="meta">2026-09-14 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>Nottaは月の途中で解約しても日割り精算はありません</strong>。だから早く解約しても1円も戻らず、急ぐ理由がありません。むしろ注意すべきは料金ではなくデータのほうで、有効期限が切れると<strong>過去に作った文字起こしが「冒頭の3分」しか表示されなくなります</strong>。正しい順番は「解約予約 → 期限まで使い切る → その間に書き出す」です。</p>
+<h2 id="日割り精算が無いことは-3か所に同じ内容で書かれている">日割り精算が無いことは、3か所に同じ内容で書かれている</h2>
+<p>まず料金の話を片付けます。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a> のサービス利用規約 第9条にはこうあります。</p>
+<blockquote>解約した場合、基本料金等について日割り計算による精算は行わず、解約後においても支払済みの利用期間中は本サービスを利用できるものとし、当該利用期間の経過による自動更新が停止するものとします。</blockquote>
+<p>特定商取引法に基づく表示にも「解約した場合、利用料金の日割り計算による精算は行いません」と同じ文が置かれ、ヘルプの解約手順ページにも「決済が完了した利用料金について、途中で解約した場合の日割り計算による返金はいたしかねます」と注意書きが入っています。3か所で表現が揃っているので読み違えようがありません。返金についても第9条は「法律で定めがある場合を除き、本サービスの料金等の払い戻し…には一切応じない」としています。</p>
+<p>ヘルプ側の返金ページはもう少しやわらかく、Web版のクレジットカード決済について「ウェブ版で購入した有料プランの払い戻しには原則として対応していません。個別にご相談させていただきます」とあり、窓口として support@notta.ai が案内されています（請求書払いも同じ扱い、App Store・Google Play 経由は Apple・Google の手続き）。</p>
+<p>実務上の結論は単純で、<strong>払った月ぶんは戻らない。だから期限まで使い切るのが唯一の得</strong>です。</p>
+<h2 id="本当に痛いのは-解約後に過去のテキストが読めなくなること">本当に痛いのは、解約後に過去のテキストが読めなくなること</h2>
+<p>ここからが、解約前に知っておきたい本題です。</p>
+<p>公式ヘルプは「解約されてもそれまでの文字起こしデータが変更されたり、削除されることはありません」と明言しており、別の記事でも手動削除・ワークスペース削除・退会のいずれかをしない限り「永続的に保存され」るとあります。ところが、有効期限が切れた後の扱いは別です。</p>
+<div class="tw"><table><thead><tr><th>状態</th><th>データの保持</th><th>過去テキストの閲覧</th><th>料金</th><th>元に戻せるか</th></tr></thead><tbody><tr><td>解約直後（有効期限内）</td><td>保持される</td><td>全文を閲覧できる</td><td>返金なし・日割りなし</td><td>自動更新に戻せる</td></tr><tr><td>有効期限が切れた後</td><td>「永久保存」と明記</td><td><strong>冒頭の3分部分しか見られない</strong></td><td>以後の請求は発生しない</td><td>再契約すれば再び閲覧できる</td></tr><tr><td>退会（アカウント削除）</td><td>すべて削除</td><td>閲覧不可</td><td>―</td><td>復旧・再登録ともに不可</td></tr></tbody></table></div>
+<p>公式の原文は「プレミアム会員だった頃に変換したテキストが、冒頭の3分部分しか見られなくなります」。ビジネスプランも同じ記述で、加えて「オーナー以外のメンバーはワークスペースにアクセスできなくなります」とあります。</p>
+<p>「消される」のではなく「見えなくなる」仕様で、公式も「有効期限が切れる前に、別の場所に文字起こしデータを保存しておくことがおすすめです」「再度サブスクリプションを購入すると、正常に利用できるようになります」と書いています。とはいえ1時間の会議の議事録が3分ぶんの断片になるのは、実質的に使えないのと同じです。</p>
+<p>しかも料金ページのプラン説明では、文字起こしデータのダウンロードはプレミアム以上に付く機能として書かれています（プレミアムの欄が「すべてのフリー機能＋文字起こしデータのダウンロード」）。<strong>書き出せるのは有料のうちだけ</strong>と考えて動くのが安全です。無料でどこまでできるかは<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>に整理しています。</p>
+<p>順番はこうなります。①解約（自動更新停止）を先に入れて次の請求を止める → ②有効期限までは今までどおり使えるので、その間に必要なノートを書き出す → ③期限が来たら自動でフリープランに切り替わる。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="締切は-更新日の24時間前-しかも月末締めではない">締切は「更新日の24時間前」。しかも月末締めではない</h2>
+<p>ヘルプには「ご解約手続きは、更新日の 24時間前までに行う必要があります。解約手続きを行わない限り自動的に更新されます」とあり、同じページに「ストアでの処理に時間がかかる可能性もあるため、時間に余裕を持って、期日の2日前までにお済ませください」とも添えられています。公式自身が前倒しを勧めている形なので、<strong>2日前を自分の締切</strong>にしておくと事故りません。</p>
+<p>間違えやすいのが「更新日がいつか」です。利用規約 第9条に月数の数え方があります。</p>
+<blockquote>月数の算定は、利用開始日また会員登録日から翌月同日までを1ヶ月として計算します。</blockquote>
+<p>月末締めではなく<strong>契約した日が基準</strong>です。17日に契約したなら毎月17日が更新日で、締切は15日。カレンダーに入れるなら月末ではなく契約日の2日前です。</p>
+<p>解約する場所も買った場所で決まります。クレジットカード（Web版）は Notta Web版の「契約管理」から、Apple ID 決済は iPhone の設定アプリのサブスクリプションから、Google Play 決済は Play ストアから、請求書払い（法人契約）は担当営業に依頼、と手順が分かれています。そして念押しのようにこうあります。</p>
+<blockquote>有料プランはアプリを削除または退会した場合でも解約にはなりません。</blockquote>
+<p>アプリを消しても課金は止まりません。Web版で解約できたかは、「支払い方法」の表示が「自動更新あり」から「自動更新なし」に変わったかで確認できるとヘルプに書かれています。</p>
+<h2 id="未経過分が戻る唯一のルートは-解約-ではなく-アップグレード">未経過分が戻る唯一のルートは「解約」ではなく「アップグレード」</h2>
+<p>日割りが一切無いのかというと、例外が1つあります。プランのアップグレードです。公式の「契約プランを変更する」にはこうあります。</p>
+<blockquote>通常、現在ご利用のプランの未経過期間の料金が、新しいプランの料金の一部に充当されるため、差額（充当してもなお不足する金額）をお支払いいただくだけでアップグレードが完了いたします。</blockquote>
+<p>請求金額＝新プラン料金－旧プラン未経過分、という式まで載っています。<strong>辞めるときは未経過分が消えるのに、上のプランに移るときは値引きに使われる</strong>わけです。ただし先に解約していると「プレミアムプランの未経過期間の料金は、ビジネスプランの利用料と相殺できません」とあり、全額を払って後からサポートに返金手続きを案内してもらう流れになります。<strong>解約ボタンを押す前にアップグレードする</strong>ほうが有利です。</p>
+<p>逆方向は通りません。プレミアム→フリー、ビジネス→プレミアムはいずれも「即時変更不可」と明記され、解約して有効期限が切れてから契約し直す必要があります。年払い→月払いも同じです（月払い→年払いは差額を払えばいつでも可）。この非対称さは<a href="../notta-pricing/">Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月</a>でも触れました。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-今すぐ止める-か-更新日で止める-か">1. 「今すぐ止める」か「更新日で止める」か</h3>
+<p>日割りが無いので、<strong>今日解約しても更新日に解約しても、返ってくる金額は同じゼロ</strong>です。違うのは操作を忘れるリスクだけ。先に解約を入れて有効期限まで使い切るのが合理的です。</p>
+<h3 id="2-過去の文字起こしを後で読み返す可能性があるか">2. 過去の文字起こしを後で読み返す可能性があるか</h3>
+<p>読み返す可能性が少しでもあるなら、解約より先にエクスポートです。録音そのものを手元に残す運用にしておけば、この手の縛りからは自由になります。</p>
+<h3 id="3-使う場所を変えるだけではないか">3. 使う場所を変えるだけではないか</h3>
+<p>「高いから解約」ではなく「今月だけ使わない」なら、フリープランに落ちるのを待つだけでも成立します。フリープランは公式に「期間制限はなくずっと無料」と書かれ、自動で有料に戻ることはありません。月120分・1回3分の範囲なら、解約後もそのまま使い続けられます。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>辞めるときの条件が、続けるときより厳しい</strong>。未経過分が充当されるのはアップグレードのときだけで、解約では消えます。</li><li><strong>無料トライアルの締切の記載が、公式ページ間で揃っていません</strong>。アプリ版の3日間無料トライアルについて、専用ページは「終了日時の24時間前までに解約すれば料金は一切かからない」とする一方、無料プランの比較ページの表では「トライアル中の48時間前までに解約しない限り年額料金が発生します」となっています。どちらが正かは公式の記載だけでは確定できないので、<strong>48時間前を締切</strong>とみなすのが安全です。</li><li><strong>退会と解約は別物で、退会には順序がある</strong>。アカウント削除の条件に「購入済みの有料プランの有効期限が完全に切れている」ことが挙げられており、解約→期限切れ→退会の順を踏まないと消せません。退会すると全データが削除され、「一度削除されたアカウントは、再登録および復活はできません」とあります。</li><li><strong>契約の管理は、買った場所でしかできない</strong>。公式FAQは「Notta Web経由で購入されたプランは、Notta Web上でのみ管理可能です。App StoreまたはGoogle Play経由で購入されたプランは、Nottaモバイルアプリ上でのみ管理可能です」としています（プラン自体のアップグレードは、旧プランをストア側で解約したうえでWebから契約する手順が案内されています）。</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 解約したら、料金は日割りで返ってきますか？</strong></p>
+<p>いいえ。利用規約・特定商取引法に基づく表示・ヘルプの3か所で日割り精算を行わないことが明記されています。返金も規約は「法律で定めがある場合を除き…一切応じない」としており、ヘルプはWeb版クレカ決済について「原則として対応していません。個別にご相談させていただきます」と窓口（support@notta.ai）だけ案内しています。</p>
+<p><strong>Q. 解約したら、文字起こしのデータは消えますか？</strong></p>
+<p>解約しただけでは消えません。公式は「フリープランに戻られた場合もそれまでの文字起こしデータが変更されたり、削除されることはありません」としています。ただし有効期限が切れると、過去のテキストは冒頭の3分部分しか表示されなくなります（再契約すれば元どおり閲覧できるとも書かれています）。完全に消えるのは手動削除・ワークスペース削除・退会の3つです。</p>
+<p><strong>Q. 3日間の無料トライアルだけ試して、課金されずに終われますか？</strong></p>
+<p>公式は、トライアルが終了する前に解約すれば請求は発生しないとしています。Web版は解約しても終了日までプレミアムの機能を使え、アプリ版は解約と同時に即時無効化されフリー会員に戻ります。解約しなかった場合に請求されるのは月額ではなく<strong>年額プラン（プレミアムで税込14,220円）</strong>なので、試すだけのつもりなら締切の管理が要ります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>日割り精算も返金も無い。急いで解約する金銭的な得はゼロなので、<strong>解約を入れて有効期限まで使い切る</strong>のが正解</li><li>失うのはお金ではなくデータの閲覧権。有効期限が切れると過去のテキストは<strong>冒頭3分だけ</strong>になるので、期限内に書き出しておく</li><li>締切は更新日の24時間前（公式の推奨は2日前）。更新日は月末ではなく<strong>契約した日</strong>。上のプランに移るなら、解約する前にアップグレードしたほうが未経過分が充当される</li></ul>
+<p>解約の条件はツールごとに違います。同じ観点で調べた<a href="../value-ai-writer-cancel/">Value AI Writerの解約は日割りなし｜締切は有効期限の5日前</a>と<a href="../catchy-cancel/">Catchy解約後もクレジットは残る｜期限は購入日から半年</a>も置いてあります。</p>
+<p>※本記事の料金・仕様は2026年9月14日時点で公式サイト（料金ページ・利用規約・特定商取引法に基づく表示・ヘルプセンター）を確認したものです。変更される場合があるため、契約前に公式の最新情報をご確認ください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../teams-transcription/">Teams会議の文字起こし精度は言語設定で決まる｜4通り比較</a></li><li><a href="../ai-minutes-one-hour/">議事録AIを無料で使うなら1時間の会議が分かれ目になる理由</a></li><li><a href="../interview-transcription-workflow/">インタビュー書き起こしの効率化｜時間を食うのは変換ではなく整文</a></li><li><a href="../notta-accuracy/">Nottaの精度は専門用語で落ちる？単語登録は無料3個・日本語のみ</a></li><li><a href="../notta-pricing/">Notta料金は年間プランと月払いどっち？分岐点は7.2ヶ月</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
