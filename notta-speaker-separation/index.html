@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順｜AIツール実用ガイド</title>
+<meta name="description" content="Nottaの話者識別が働かないのは精度の問題とは限りません。公式ヘルプに書かれた入力経路ごとの条件、日本語限定になる経路、やり直しに何が消費されるかを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notta-speaker-separation/">
+<meta property="og:title" content="Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順｜AIツール実用ガイド">
+<meta property="og:description" content="Nottaの話者識別が働かないのは精度の問題とは限りません。公式ヘルプに書かれた入力経路ごとの条件、日本語限定になる経路、やり直しに何が消費されるかを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順", "description": "Nottaの話者識別が働かないのは精度の問題とは限りません。公式ヘルプに書かれた入力経路ごとの条件、日本語限定になる経路、やり直しに何が消費されるかを整理しました。", "datePublished": "2026-09-16", "dateModified": "2026-09-16", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-speaker-separation/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順</h1><p class="meta">2026-09-16 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Nottaで話者が分かれないときは<strong>まず「未指定話者」と表示されていないかを見てください</strong>。そう出ていれば話者識別はオフで、精度ではなく設定の問題です。オンなのに人数が合わない場合だけが精度の話で、その対策は録音経路を変えることになります。</p>
+<h2 id="最初に見るのは精度ではなく-話者名の表記">最初に見るのは精度ではなく、話者名の表記</h2>
+<p>公式ヘルプ「話者識別機能はついていますか？」には、切り分けの方法がそのまま書かれています。</p>
+<blockquote>話者識別を<strong>オフにしている場合</strong>、すべて話者は<strong>「未指定話者」</strong>と表示されます。話者識別を<strong>オンにしている場合</strong>、話者は「話者1」「話者2」のような<strong>「話者＋番号」</strong>の形式で表示されます。</blockquote>
+<p>文字起こし結果を開いた時点で、どちらの問題かが判別できます。</p>
+<ul><li><strong>「未指定話者」しかない</strong> → 機能がオフのまま変換された。設定の問題</li><li><strong>「話者1」「話者2」と出ているが人数が合わない</strong> → 機能は働いている。収音と経路の問題</li></ul>
+<p>前者は録り直しではなく「再文字起こし」で直せます。後者は同じ音源をかけ直しても結果はあまり変わらないので、次の録音の条件を変えるほうが早い。公式も、識別精度が気になる場合はフィードバックを送るよう案内しています。</p>
+<h2 id="話者識別の条件は-入力経路ごとに違う">話者識別の条件は、入力経路ごとに違う</h2>
+<p>Nottaの話者識別は「プランに付いているかどうか」ではなく、<strong>どの経路で音を入れたか</strong>で条件が変わります。公式ヘルプの表を経路別に整理すると次のようになります。</p>
+<div class="tw"><table><thead><tr><th>入力経路</th><th>オンにする操作</th><th>話者識別できる発話言語</th><th>識別できる人数</th><th>つまずきやすい点</th></tr></thead><tbody><tr><td>画面収録</td><td>収録を始める前にオンにする</td><td>すべての発話言語</td><td>最大10名</td><td>オンにし忘れたまま収録が終わりやすい</td></tr><tr><td>Chrome拡張機能によるタブ録音</td><td>不要（デフォルトで識別）</td><td><strong>日本語の場合のみ</strong></td><td>公式に人数の記載なし</td><td>英語の会議では条件から外れる</td></tr><tr><td>マイク録音のリアルタイム文字起こし</td><td>不要（デフォルトで識別）</td><td><strong>日本語の場合のみ</strong></td><td>最大10名</td><td>同上</td></tr><tr><td>ファイルアップロード</td><td>アップロード時にオンにする</td><td>すべての発話言語</td><td>最大10名</td><td>話者識別ありは最大3時間の制限がかかる</td></tr><tr><td>Notta BotによるWeb会議</td><td>―</td><td>すべての発話言語</td><td>上限なし</td><td>参加アカウント単位での識別になる</td></tr></tbody></table></div>
+<p>Nottaの音声認識そのものは公式ヘルプに「日本語・英語など58言語に対応」とありますが、<strong>話者識別まで含めて全言語で通るのはファイルアップロード・画面収録・Notta Botの3経路</strong>です。残る2経路は原文で「発話言語が日本語の場合のみ話者識別が可能です」と限定されています。英語の商談を拡張機能で録って話者が分かれないのは、不具合ではなく仕様の範囲です。</p>
+<p>逆に、この2経路は<strong>手動でオンにしなくてもデフォルトで識別される</strong>とも書かれています。設定を探す必要があるのは画面収録とファイルアップロードのほうで、オンにし忘れが起きるのもこの2つです。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a> のファイルアップロードには、もうひとつ見落としやすい上限があります。ヘルプ「ローカルファイルのインポート」は音声1GBまたは5時間、動画10GBまたは5時間と書いたうえで、続けて「話者を識別する場合の最大サイズは3時間のいずれか小さい方」としています（原文の文はやや崩れていますが、話者識別を使う場合の上限として3時間が示されています）。5時間録れるつもりで4時間のセミナー音源を上げると、ここで条件から外れます。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-その会議の言語は日本語か">1. その会議の言語は日本語か</h3>
+<p>日本語なら上の5経路すべてが候補です。英語や中国語が混じるなら、ファイルアップロード・画面収録・Notta Botの3つに絞られます。ICレコーダーやZoomのローカル録画をあとから上げる流れが確実で、機材から見直すなら<a href="../ic-recorder-for-transcription/">会議録音のICレコーダーおすすめ｜文字起こし前提なら見る仕様は3つ</a>に選定の基準をまとめています。</p>
+<h3 id="2-参加者が何台のマイクから話すか">2. 参加者が何台のマイクから話すか</h3>
+<p>Notta Botだけは識別人数に上限がありませんが、代わりに条件が付きます。原文はこうです。</p>
+<blockquote>会議の参加者アカウントに基づいて識別が行われるため、各発言者が独立したアカウントから参加していることをご確認ください。複数の参加者が共有アカウントから発言した場合、それらの発言はすべて共有アカウントにまとめられます。</blockquote>
+<p>会議室に集まった3人が1台のPCから参加していると、<strong>3人ぶんの発言が1つのアカウントにまとまります</strong>。人数無制限という表記に期待して会議室から参加すると、ここで外れます。この形なら、その場をマイク録音するか録音ファイルを上げる経路のほうが話者は分かれます。</p>
+<p>音が重なる場合の扱いも公式に書かれていて、「複数の人が同時に発言した場合は、音同士が被って収録されてしまい、誤認識となります」とあります。認識率の目安も、フォーマルな会議で90%以上、軽い打合せで50〜80%程度と幅のある書き方です。録音側の条件は<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜公式の根拠がある3つだけ</a>に出典ごとに整理してあります。</p>
+<p>なお、デスクトップ版の「ボットなし録音」はこの問題への公式の答えのひとつです。マイク入力とシステムオーディオを2つの独立したチャンネルとしてキャプチャし、「これら2つのチャンネルは個別に処理されるため、最終的な文字起こし結果における話者識別（誰が話しているか）の精度が向上します」と説明されています。自分の声と相手の声を機械的に分けられるので、オンライン会議で自分と相手さえ分かれればよいならこれが最短です。前提条件は「すべてのプランで利用可能」です。</p>
+<h3 id="3-やり直しの消費量を払えるか">3. やり直しの消費量を払えるか</h3>
+<p>オンにし忘れた場合の救済が「再文字起こし」です。ヘルプの冒頭に「文字起こし言語の選択誤りや、話者識別の選択忘れ等の場合は」とあり、まさにこの用途で案内されています。ただし消費が伴います。</p>
+<blockquote>再文字起こしを行うたびに、音声の長さと同じ分数の文字起こし時間が消費されます。また、あわせてファイルアップロード枠も1回分消費されます。</blockquote>
+<p>60分の会議を1回やり直せば合計120分を使う計算です。フリープランの月間文字起こし時間は120分なので、<strong>1回のやり直しで月の枠を使い切ります</strong>。枠の全体像は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>にまとめています。</p>
+<p>再文字起こしには対象外もあります。「Notta BotによるWeb会議の文字起こしおよびYouTube動画の文字起こしの再文字起こしは対応しておりません」と明記されているため、<strong>Bot経由の会議は後追いのやり直しができません</strong>。Botで録るなら一発勝負です。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>オンにし忘れを防ぐ設定は、上位プランの機能です。</strong> ワークスペース単位でファイル文字起こしの話者識別をデフォルト有効にする設定は、前提条件に「プラン：ビジネスプランとエンタープライズプランで利用可能」「ロール：オーナーとアドミンのみ設定可能」と書かれています。個人プランでは毎回自分でチェックを入れる運用が続きます。</p>
+<p><strong>録音中は話者名を編集できません。</strong> 「録音中・文字起こし中のデータでは、話者の変更・編集・削除ができません」と明記されています。名前付けは変換が終わってからの作業になります。</p>
+<p><strong>プランを上げる順番を間違えると、付けた話者情報が消えることがあります。</strong> 上限を超えた音声をアップグレード後にアンロックすると「再度の文字起こし処理が実行され」、「話者情報を含む元の文字起こしテキストは、新しい処理結果によって上書きされ、消えてしまうことがあります」と公式ヘルプにあります。先にプランを決めてから取り込む順序が安全です。</p>
+<p><strong>話者識別はプランで差が付く機能ではありません。</strong> 料金ページのフリープラン欄には「フリー機能：ミーティングの文字起こし／話者識別」と文言で書かれ、ヘルプのプラン別機能一覧でもフリープランの機能として挙がっています。有料にしても識別の条件そのものは変わりません。変わるのは時間とファイル数の枠のほうです。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>無料プランでも話者識別は使えますか？</strong> 公式料金ページのフリープラン欄に「話者識別」が文言として記載され、ヘルプのプラン別機能一覧でもフリープランの機能として挙がっています。ただし文字起こし時間が月120分、1回につき3分までという上限は別にかかります。</p>
+<p><strong>話者の名前は後から変えられますか？</strong> ヘルプ「話者を管理する」の前提条件は「プラン：すべてのプランで利用できます」で、権限は「編集可能」以上とされています。Web版では「会話分析」から各話者の発言時間の割合や発話回数も確認できます。</p>
+<p><strong>専門用語の誤変換も話者識別の設定で直りますか？</strong> 別の問題です。用語の精度は単語登録の側で、登録できる数はプランごとに上限があります。詳しくは<a href="../notta-accuracy/">Nottaの精度は専門用語で落ちる？単語登録は無料3個・日本語のみ</a>にまとめています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>「未指定話者」と出ていれば設定の問題、「話者1」「話者2」と出ていれば収音と経路の問題。まず表記を見る</li><li>Chrome拡張のタブ録音とマイク録音のリアルタイム文字起こしは、公式に「発話言語が日本語の場合のみ」と限定されている。英語の会議はファイルアップロードか画面収録かNotta Botへ</li><li>やり直しは音声の長さぶんの文字起こし時間とファイル枠を消費し、Bot経由の会議は再文字起こしの対象外。録る前にオンにしておくのが唯一のコスト削減</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-cancel/">Notta解約は日割りなし｜失うのはお金より過去の文字起こし</a></li><li><a href="../teams-transcription/">Teams会議の文字起こし精度は言語設定で決まる｜4通り比較</a></li><li><a href="../ai-minutes-one-hour/">議事録AIを無料で使うなら1時間の会議が分かれ目になる理由</a></li><li><a href="../interview-transcription-workflow/">インタビュー書き起こしの効率化｜時間を食うのは変換ではなく整文</a></li><li><a href="../notta-accuracy/">Nottaの精度は専門用語で落ちる？単語登録は無料3個・日本語のみ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
