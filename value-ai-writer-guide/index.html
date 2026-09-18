@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Value AI Writerの使い方｜1記事は押した瞬間に減る｜AIツール実用ガイド</title>
+<meta name="description" content="Value AI WriterでSEO記事を作る手順を、公式マニュアルの記載どおりに整理しました。どの操作で記事数が減り、どの操作で文字数だけが減るのかを先に押さえると無駄がありません。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/value-ai-writer-guide/">
+<meta property="og:title" content="Value AI Writerの使い方｜1記事は押した瞬間に減る｜AIツール実用ガイド">
+<meta property="og:description" content="Value AI WriterでSEO記事を作る手順を、公式マニュアルの記載どおりに整理しました。どの操作で記事数が減り、どの操作で文字数だけが減るのかを先に押さえると無駄がありません。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Value AI Writerの使い方｜1記事は押した瞬間に減る", "description": "Value AI WriterでSEO記事を作る手順を、公式マニュアルの記載どおりに整理しました。どの操作で記事数が減り、どの操作で文字数だけが減るのかを先に押さえると無駄がありません。", "datePublished": "2026-09-19", "dateModified": "2026-09-19", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/value-ai-writer-guide/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Value AI Writerは無料で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "フリープランが0円／月で用意されていて、公式料金表では月間1記事（初回増量で3記事）です。文字数制限はモデル別に、GPT-4o・GPT-4.1・Claude4.0が1万文字、Gemini2.5-Proが2万文字と記載されています。"}}, {"@type": "Question", "name": "途中でブラウザを閉じたら、消費した記事数は戻りますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式マニュアルには「記事が作成されず構成数のみ消費されますのでご注意ください」とだけあり、戻るという記載は見つけられませんでした。構成を作るところまでは一気に終わらせるのが確実です。"}}, {"@type": "Question", "name": "生成した本文が気に入らないときは作り直せますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式のよくある質問に「本文生成文字数制限の範囲内であれば何度でも何文字でも生成ができます」とあります。記事数は追加で減らず、文字数の枠だけを使う形です。解約時の扱いは[Value AI Writerの解約は日割りなし｜締切は有効期限の5日前](../value-ai-writer-cancel/)に分けて書いています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Value AI Writerの使い方｜1記事は押した瞬間に減る</h1><p class="meta">2026-09-19 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Value AI Writerで最初に覚えるべきは記事の書き方ではなく<strong>「どの操作で何が減るか」</strong>です。キーワードを入れて「記事タイトル候補を出す」をクリックした時点で、その月の1記事が確定します。本文を1文字も書かないうちにです。フリープランは月1記事なので、<strong>キーワードの試し打ちを1回もしない前提で操作の順番を組む</strong>のが正解になります。</p>
+<h2 id="記事タイトル候補を出す-を押した時点で1記事が消える">「記事タイトル候補を出す」を押した時点で1記事が消える</h2>
+<p>公式ユーザーガイドの「Value AI Writerの記事作成方法」には、キーワードを入力する手順3のところに、こう注意書きが入っています。</p>
+<blockquote>タイトル候補を作成したタイミングで記事構成数が1消費します。手順5を完了しないまま、ブラウザを閉じるなどした場合、記事が作成されず構成数のみ消費されますのでご注意ください。</blockquote>
+<p>公式のよくある質問にも同じ趣旨が書かれています。</p>
+<blockquote>タイトル、見出しの生成までを1記事とみなします。つまり、本文生成をおこなわなくてもタイトル、見出しの生成をした時点で1記事とカウントされますのでご注意ください。 なお、本文生成文字数制限の範囲内であれば何度でも何文字でも生成ができます。</blockquote>
+<p>前半は短所ですが、後半は長所です。<strong>いったんカウントされた記事の本文は、文字数の枠が残るかぎり何度でも作り直せます。</strong> このツールは「キーワードを何本も試す」使い方ではなく「決めた1本をとことん仕上げる」使い方に向いている、ということです。</p>
+<h2 id="操作と-そのとき減るものの対応表">操作と、そのとき減るものの対応表</h2>
+<p>減る枠が「記事数」と「文字数」の2本立てなのが、このツールのいちばん分かりにくいところです。公式マニュアルとよくある質問の記載を、操作ごとに並べ直しました。</p>
+<div class="tw"><table><thead><tr><th>操作</th><th>減るもの</th><th>公式の記載</th></tr></thead><tbody><tr><td>キーワードを入れて「記事タイトル候補を出す」</td><td>記事数 1</td><td>「タイトル候補を作成したタイミングで記事構成数が1消費します」</td></tr><tr><td>見出しの生成・本文の一括作成</td><td>文字数のみ（記事数は増えない）</td><td>「本文生成文字数制限の範囲内であれば何度でも何文字でも生成ができます」</td></tr><tr><td>本文の「再取得」「要約」「長文化」「リライト」</td><td>文字数のみ</td><td>同上</td></tr><tr><td>キーワード発掘（範囲を広げる／狭める の4種）</td><td>文字数 1,000文字</td><td>「1回の使用につき1,000文字が消費されます」</td></tr><tr><td>キーワード発掘（記事URLからSEOキーワードを発掘）</td><td>文字数 4,000文字</td><td>「1回の使用につき4回分の回数消費（4,000文字）が発生します」</td></tr><tr><td>アイキャッチ画像の生成</td><td>画像生成可能数</td><td>「各プランによって画像生成可能数が異なりますので、残数をご確認ください」</td></tr></tbody></table></div>
+<p>効いてくるのは4行目と5行目です。<strong>キーワード発掘は記事数を消費しない代わりに、本文用の文字数枠を食います。</strong> フリープランの文字数制限は公式料金表で1万文字なので、「記事URLからSEOキーワードを発掘」を2回、拡張を2回まわすと4,000×2＋1,000×2＝1万文字に届き、本文にまわす枠が残りません。無料で試す段階では1〜2回に絞るのが現実的です。</p>
+<div class="cta"><div class="cta-h">Value AI Writer<span class="pr">PR</span></div><p class="cta-b">キーワードから見出し構成つきのSEO記事を生成する</p><p class="cta-f">無料トライアルあり</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+87B0TU+1JUK+1HL85U" target="_blank" rel="sponsored nofollow noopener">Value AI Writer の公式サイトを見る</a></div>
+<h2 id="判断軸1-キーワードを決め切ってから-記事を作成-に入る">判断軸1：キーワードを決め切ってから「記事を作成」に入る</h2>
+<p>キーワード発掘はメニュー上の別機能で、記事作成画面とは分かれています。<strong>こちらは記事数を減らさない</strong>ので、テーマを迷っている段階の作業はすべてここで終わらせます。公式マニュアルによると5種類あり、参考記事のURLからメインキーワードを提案するものが1つ、キーワードを拡張するものが4つです。商品紹介の記事を書くなら、公式が「ネガティブな購買キーワードが出現しやすくなっています」と説明している「範囲を狭めてキーワードを拡張Ver.1」が使いどころになります。解約・デメリット・不安の側の言葉が出てくるので、そこを記事内で解消する設計にできます。</p>
+<p>キーワードが1本に決まったら、そこで初めて「記事を作成」に進みます。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+87B0TU+1JUK+1HL85U" target="_blank" rel="sponsored nofollow noopener">Value AI Writer</a> の記事作成はコントロールパネル →「記事を作成」→ キーワード入力 →「記事タイトル候補を出す」という流れで、この4番目のクリックが月の残り記事数を1つ確定させます。</p>
+<h2 id="判断軸2-本文のモデル選択で-使える文字数が2倍変わる">判断軸2：本文のモデル選択で、使える文字数が2倍変わる</h2>
+<p>公式料金表の「文字数制限」欄は、1つの数字ではなくモデル別に4段で書かれています。フリープランなら、GPT-4o・GPT-4.1・Claude4.0がそれぞれ1万文字なのに対し、<strong>Gemini2.5-Proだけ2万文字</strong>です。初回増量後も前の3つが2万文字に対してGemini2.5-Proは4万文字、ベーシック（2,800円／月・税込）でも6万文字に対して12万文字と、同じ比率が上のプランまで続きます。</p>
+<p>つまり<strong>プランを上げなくても、本文生成に選ぶモデルを変えるだけで書ける量が倍になる</strong>ということです。見出しとタイトルの生成は全プランGPT-4o固定で、選べるのは本文のモデルだけ、という構造も公式料金表に明記されています。枠が足りない感覚があるときは、まずモデルを見直すほうが安く済みます。プラン自体の選び方は<a href="../value-ai-writer-vs-rakurin/">Value AI Writerとラクリン比較｜枠の数え方が逆で損得が変わる</a>で、月間本数を起点に整理しています。</p>
+<h2 id="判断軸3-見出しの作り方は3つあり-1つはエキスパート限定">判断軸3：見出しの作り方は3つあり、1つはエキスパート限定</h2>
+<p>記事作成の手順6で「見出し構築方法」を選びます。公式マニュアルの表記は「キーワードからAIで構築」「検索エンジンの結果を参考にAIで構築」、そして「［エキスパートプラン］検索エンジンの結果から選択してAIで構築」の3つ。3つ目は公式料金表でもエキスパートプラン（43,780円／月・税込）の欄にだけ記載があり、参考にする検索結果を自分で選べるのはこのプランだけ、という切り分けです。</p>
+<p>同じ画面の手前、手順5には「プロンプト追加」と「事前学習」があります。前者は「この記事のペルソナは40代主婦です」のような追加指示を書く欄（例は公式の記載）、後者は参考にさせたい文章を「テキスト」または「URL」で先に読み込ませる機能です。<strong>自社サービスの説明を事前学習に入れてから書かせると、一般論だけの記事になりにくくなります。</strong></p>
+<h2 id="生成後の調整と-投稿までの手順">生成後の調整と、投稿までの手順</h2>
+<p>「見出しと記事を一括作成」を選んだ場合、公式マニュアルの案内は「通常、5~10分程度でAIが記事を作成します」で、ステータスが「記事取得中…」から「完了」に変われば出来上がりです。そのあとの調整は、見出しの追加（最大H4まで）と削除、上下ボタンでの並べ替え、共起語の設定、本文ごとの「再取得」「要約」「長文化」「リライト」と並んでいます。ただし一番事故が起きるのはここで、公式マニュアルは同じ注意を2か所で繰り返しています。</p>
+<blockquote>見出しや文章の追加・修正・削除を行った場合は必ず「保存」をクリックしてください。保存を行わず、画面を離れた場合は編集内容が失われてしまいます。</blockquote>
+<p>自動保存ではありません。長文を手直ししたあとほど、先に保存してください。</p>
+<p>投稿は「HTML変換」でHTMLをコピーして自分のサイトに貼るか、WordPress連携をしたうえで「wordpress投稿」から直接送るかの2通りです。後者では投稿先・カテゴリ・「下書き/公開」を選べます。そのまま公開設定で送るのは避け、下書きで受けてから直すのが無難です。公開してよいかの線引きは<a href="../ai-writing-commercial-use/">AI記事作成の商用利用と著作権｜公開前に確認する点</a>にまとめています。</p>
+<h2 id="正直なところ-ここは弱い">正直なところ、ここは弱い</h2>
+<p><strong>1. キーワードの試し打ちができません。</strong> 記事数が「タイトル候補を出した時点」で減る以上、複数のキーワードで構成を見比べる使い方はプランの本数をそのまま消費します。月1記事のフリープランでは1回勝負です。</p>
+<p><strong>2. 公式サイト内で記述が一致していない箇所があります。</strong> 料金表は全プランの本文生成を「GPT-4o,4.1 / Claude4.0 / Gemini2.5-Pro」としていますが、記事作成マニュアルの画面説明は「見出しと記事を一括作成(GPT3.5)」「見出しと記事を一括作成(GPT4)※エントリープランでは使用できません」という旧表記のままです。エントリープラン（840円／月・税込）で一括作成に何が使えるかは記載が食い違っていて確定できませんでした。一括作成目的でエントリーを契約するなら、申し込み前に問い合わせたほうが安全です。</p>
+<p><strong>3. 残りの文字数が直感的につかめません。</strong> 料金表の「文字数制限」と、よくある質問の「1記事あたりの目安で15,000文字～20,000文字になる傾向が多いです」は単位が対応していません（フリープランの1万文字枠で1記事作れると公式は案内しているためです）。どちらが生成文字数でどちらが消費文字数かは公式の記載だけでは確認できなかったので、<strong>残数は管理画面の表示で見るしかありません。</strong></p>
+<p><strong>4. 待ち時間があります。</strong> 一括作成は5〜10分、混み合うともっとかかると公式が明記しています。思いついてすぐ1本、という道具ではありません。そもそも書く習慣が続かない段階なら、ツールを増やす前に<a href="../cant-keep-writing/">ブログ記事が書けない・続かない｜無料枠で何回やり直せるか数えた</a>を先に読んだほうが早いはずです。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. Value AI Writerは無料で使えますか？</strong> フリープランが0円／月で用意されていて、公式料金表では月間1記事（初回増量で3記事）です。文字数制限はモデル別に、GPT-4o・GPT-4.1・Claude4.0が1万文字、Gemini2.5-Proが2万文字と記載されています。</p>
+<p><strong>Q. 途中でブラウザを閉じたら、消費した記事数は戻りますか？</strong> 公式マニュアルには「記事が作成されず構成数のみ消費されますのでご注意ください」とだけあり、戻るという記載は見つけられませんでした。構成を作るところまでは一気に終わらせるのが確実です。</p>
+<p><strong>Q. 生成した本文が気に入らないときは作り直せますか？</strong> 公式のよくある質問に「本文生成文字数制限の範囲内であれば何度でも何文字でも生成ができます」とあります。記事数は追加で減らず、文字数の枠だけを使う形です。解約時の扱いは<a href="../value-ai-writer-cancel/">Value AI Writerの解約は日割りなし｜締切は有効期限の5日前</a>に分けて書いています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>記事数が減るのは「記事タイトル候補を出す」を押した瞬間。キーワードはその前に1本へ決め切る</li><li>キーワード発掘は記事数ではなく文字数を消費する。無料枠では1〜2回までに絞る</li><li>本文のモデルをGemini2.5-Proにすると、同じプランのまま文字数枠が2倍になる</li></ul>
+<p>料金と仕様は変わります。契約前に公式サイトで最新の記載を確認してください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../value-ai-writer-vs-rakurin/">Value AI Writerとラクリン比較｜枠の数え方が逆で損得が変わる</a></li><li><a href="../value-ai-writer-cancel/">Value AI Writerの解約は日割りなし｜締切は有効期限の5日前</a></li><li><a href="../ai-writing-commercial-use/">AI記事作成の商用利用と著作権｜公式規約に書いてある注意点を読み比べた</a></li><li><a href="../ai-writing-tools-comparison/">AI記事作成ツール比較｜日本語6つの料金と無料枠を公式表記のまま並べた</a></li><li><a href="../cant-keep-writing/">ブログ記事が書けない・続かない｜無料枠で何回やり直せるか数えた</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
