@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Meetの文字起こしを無料でやる方法｜字幕なら全ユーザー対象｜AIツール実用ガイド</title>
+<meta name="description" content="Google Meetの文字起こしは対応Workspaceエディションが公式に決まっています。0円で使える自動字幕起こしとの違い、会議後に文章を残す方法を公式ヘルプの記載だけで整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/google-meet-transcription/">
+<meta property="og:title" content="Google Meetの文字起こしを無料でやる方法｜字幕なら全ユーザー対象｜AIツール実用ガイド">
+<meta property="og:description" content="Google Meetの文字起こしは対応Workspaceエディションが公式に決まっています。0円で使える自動字幕起こしとの違い、会議後に文章を残す方法を公式ヘルプの記載だけで整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Google Meetの文字起こしを無料でやる方法｜字幕なら全ユーザー対象", "description": "Google Meetの文字起こしは対応Workspaceエディションが公式に決まっています。0円で使える自動字幕起こしとの違い、会議後に文章を残す方法を公式ヘルプの記載だけで整理しました。", "datePublished": "2026-09-20", "dateModified": "2026-09-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/google-meet-transcription/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料のGoogleアカウントでMeetの文字起こしは使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプが挙げている「文字起こしが利用可能な Google Workspace のエディション」の一覧に、無料のGoogleアカウントは入っていません。ただし同ページに「無料アカウントでは使えない」と書かれた文言があるわけではないので、断定はしないでおきます。確実に0円で文字を出したいなら、別ページで「すべてのユーザー」向けと明記されている自動字幕起こしを使うほうが話が早いです。"}}, {"@type": "Question", "name": "字幕をそのままテキストファイルにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "自動字幕起こしのヘルプページには、字幕を保存・書き出す手順の記載が見当たりませんでした。会議後に文章として残したいなら、文字起こし（対応エディションが必要）を使うか、外部ツールを同席させるか、録音して後から変換する形になります。録音品質が結果を大きく左右するので、[文字起こしの精度を上げる録音のコツ｜機材より先に直す5つ](../recording-tips-for-accuracy/)の順番で環境を整えてから試すほうが無駄がありません。"}}, {"@type": "Question", "name": "TeamsやZoomでも同じことができますか？", "acceptedAnswer": {"@type": "Answer", "text": "それぞれ条件が違います。Teams側の標準機能と必要なライセンスは[Teams会議の文字起こしはどこまで無料？標準機能とライセンスの線引き](../teams-transcription/)に、Zoomの録画からの変換手順は[Zoom録画から文字起こしする手順｜クラウド録画とローカル録画で変わる](../zoom-recording-transcription/)にまとめてあります。なお、出てきた文字起こしはそのままでは議事録になりません。話し言葉を配布用の文章に整える段階の道具については[Catchyの言い換えの使い方｜公式が説明しているのは「文章の雰囲気」](../catchy-iikae/)で、公式が案内している方法を確認しています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Google Meetの文字起こしを無料でやる方法｜字幕なら全ユーザー対象</h1><p class="meta">2026-09-20 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>Google Meetには名前の似た機能が2つあり、0円で使えるのは「自動字幕起こし」のほう</strong>です。公式ヘルプは自動字幕起こしについて「すべてのユーザーが以下の言語の字幕を使用できます」と書いていて、その一覧に日本語も入っています。一方、Googleドライブにファイルとして残る「文字起こし」は、公式が挙げる8つのWorkspaceエディションの機能です。会議の記録を後から読み返したいのか、その場で読めればいいのかで、選ぶものが変わります。</p>
+<h2 id="名前が似ている2つの機能を分ける">名前が似ている2つの機能を分ける</h2>
+<p>公式ヘルプは別々のページで説明していて、条件も違います。2026年9月20日にGoogleのヘルプセンターで確認した記載です。</p>
+<div class="tw"><table><thead><tr><th></th><th>自動字幕起こし（字幕）</th><th>文字起こし（transcripts）</th><th>外部ツールで同席</th></tr></thead><tbody><tr><td>使える条件</td><td>「すべてのユーザー」と明記</td><td>対応する8つのWorkspaceエディション</td><td>ツール側のアカウント</td></tr><tr><td>日本語</td><td>対応（ベータ版の注記なし）</td><td>対応（全8言語のうちの1つ）</td><td>ツール次第</td></tr><tr><td>会議後に残るか</td><td>保存する手順はヘルプに記載なし</td><td>主催者のドライブに保存</td><td>ツール側に保存</td></tr><tr><td>費用</td><td>0円</td><td>Workspaceの契約に含まれる</td><td>無料枠あり／有料</td></tr><tr><td>誰に見えるか</td><td>オンにした本人のみ</td><td>主催者のドライブ経由で共有</td><td>自分のアカウント</td></tr></tbody></table></div>
+<p><strong>ここは間違えやすいところです。</strong> Googleの「文字起こしを使用する」ページには、利用可能なエディションとして Business Standard、Business Plus、Enterprise Starter、Enterprise Standard、Enterprise Plus、Teaching and Learning Upgrade、Education Plus、Workspace Individual の8つが挙がっています。この一覧に無料のGoogleアカウントは含まれていません。ただし<strong>「無料アカウントでは使えない」という文言そのものは、このページには書かれていません</strong>。書かれているのは「文字起こしが利用可能な Google Workspace のエディション」という見出しの下の一覧だけです。</p>
+<p>そして、そのページだけを見て「Meetでは無料で文字が出せない」と結論すると間違えます。別ページの「自動字幕起こしを使用する」には、冒頭にこうあります。</p>
+<blockquote>会議で自動字幕起こしをオンにすると、参加者全員の発言が字幕として表示されます。字幕は、自動字幕起こしをオンにしたユーザーのみに表示されます。</blockquote>
+<p>そして言語一覧の見出しが「すべてのユーザーが以下の言語の字幕を使用できます」です。<strong>エディションの限定は、字幕の「翻訳」機能のほうにかかっています。</strong> 翻訳のページには「現在のところ、字幕の翻訳機能は以下の Workspace エディションでのみご利用いただけます」と明記され、Business Standard 以下の一覧が続きます。日本語の会議を日本語の字幕で見るだけなら、この制限とは別の話です。</p>
+<h2 id="無料でやるなら自動字幕起こし">無料でやるなら自動字幕起こし</h2>
+<p>手順は公式ヘルプのとおり3ステップです。</p>
+<ol><li>パソコンで Google Meet を開く</li><li>会議に参加する</li><li>画面下部で字幕をオンにするをクリックする</li></ol>
+<p>字幕のフォント、フォントサイズ、文字色、背景色は「その他アイコン → 設定 → 字幕」から変えられます。ヒントとして「設定は自動的に保存されます」とも書かれています。</p>
+<p>言語一覧を見ると、多くの言語に「（ベータ版）」が付いている中で、<strong>日本語には付いていません</strong>。英語、イタリア語、オランダ語、中国語（簡体）などと同じ扱いです。日本語の会議で使うぶんには、この点は有利に働きます。</p>
+<p>会議中に前の発言を読み返すこともできます。</p>
+<blockquote>字幕が有効になっている場合は、会話の前の部分の字幕を確認できます。字幕を確認するには、上または下にスクロールします。字幕が表示されるのは、会議に参加し、字幕がオンになっている会話の部分のみです。</blockquote>
+<p>逆に言えば、<strong>遡れるのは自分が参加していて字幕をオンにしていた区間だけ</strong>です。途中からオンにしても、それ以前は出てきません。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-その場で読めればいいのか-あとで残したいのか">1. その場で読めればいいのか、あとで残したいのか</h3>
+<p>これが一番大きな分かれ目です。</p>
+<p>自動字幕起こしのヘルプページには、字幕をテキストファイルとして書き出す手順は載っていません。載っているのはオン・オフ、見た目のカスタマイズ、スクロールでの遡りだけです。<strong>会議が終わったあとに読み返したいなら、字幕とは別の仕組みが要ります。</strong></p>
+<p>対して文字起こし（transcripts）は保存場所がはっきり書かれています。</p>
+<blockquote>会議の文字起こしは、会議の主催者の Google ドライブの「Google Meet」フォルダに保存されます。このフォルダ内には、会議ごとにサブフォルダが作成され、会議の文字起こしが保存されます。</blockquote>
+<p>なお2026年7月以降、既存の「Meet Recordings」フォルダは「Legacy Meet Recordings」に自動で改名され、新しい「Google Meet」フォルダの中に移動する、という案内も同じページに出ています。過去の文字起こしを探して見つからない人は、まずこのフォルダ構成の変更を疑ったほうが早いです。</p>
+<h3 id="2-自分が主催者かどうか">2. 自分が主催者かどうか</h3>
+<p>文字起こしは誰でも始められるわけではありません。公式の記載はこうです。</p>
+<blockquote>「主催者向けの管理機能」がオフになっている場合、主催者のドメイン内のユーザーは誰でも文字起こしをオンにすることができます。主催者向けの管理機能がオンになっている場合は、主催者と共同主催者のみが文字起こしを有効にできます。</blockquote>
+<p>保存先も主催者のドライブです。<strong>参加者として呼ばれた側は、相手の設定次第で自分では記録を残せない</strong>ということになります。自分の手元に記録を持ちたいなら、主催者の設定に依存しない方法を用意しておくほうが確実です。</p>
+<h3 id="3-会議の長さと-必要な精度">3. 会議の長さと、必要な精度</h3>
+<p>外部ツールを会議に同席させる方法もあります。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a> の公式料金ページには、フリープランの欄に「ミーティングの文字起こし」があり、対応先として Zoom・Teams・Google Meet・Webex が挙がっています。</p>
+<p>ただし無料で回せる範囲は狭いです。公式表記で「120分/月」、そして「1回につき3分まで文字起こし可能」。この2つ目が効きます。60分の打ち合わせを通しで記録する用途は、無料の範囲では組み立てられません。詳しい内訳は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a>に書きました。有料にするなら年間プランでプレミアムが月あたり￥1,185（12ヶ月分一括￥14,220・税込）です。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<p>無料のまま何とかしたい場合に何が残っているかは<a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜定番が終了した今、無料で残っているのは4つ</a>に並べてあります。</p>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<p><strong>字幕は自分にしか見えない。</strong> 公式に「字幕は、自動字幕起こしをオンにしたユーザーのみに表示されます」とあります。「全員に字幕を出しておいたから議事録は誰かが取ってくれるだろう」という運用は成立しません。各自がオンにする必要があります。</p>
+<p><strong>文字起こしはドライブの空き容量に依存する。</strong> これは見落としやすい条件です。「会議の文字起こしは、次の両方のドライブに十分な容量がある場合にのみ記録できます」として、Workspace組織のGoogleドライブと会議の主催者のドライブの両方が挙げられています。片方が満杯だと記録されません。</p>
+<p><strong>チャットの発言は含まれない。</strong> 「文字起こしには、会議で話された言葉のみが含まれます。チャット メッセージの文字起こしを記録するには、ビデオ会議を録画します」とあります。チャットに貼られた決定事項は文字起こしには残りません。</p>
+<p><strong>文字起こしは一時停止できない。</strong> 「文字起こしを一時停止することはできませんが、会議中に文字起こしを停止して、別の新しい文字起こしを開始することは可能です」「文字起こしを開始するたびに、別の文字起こしファイルが作成されます」。雑談の間だけ止める、という使い方をするとファイルが分かれます。</p>
+<p><strong>文字起こしの対応言語は8つだけ。</strong> 英語、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語、スペイン語。字幕（自動字幕起こし）の言語一覧が100近くあるのと比べると、かなり絞られています。</p>
+<p><strong>モバイルでは制限がある。</strong> 「文字起こし機能は、パソコン、ノートパソコン、Android デバイスでのみご利用いただけます」と冒頭に書かれています。</p>
+<p><strong>教育機関の生徒ライセンスは既定でオフ。</strong> 「会議の文字起こしは、Google Workspace for Education の生徒用ライセンスではデフォルトでオフになっていますが、それ以外のすべての Workspace エディションではデフォルトでオンになっています」。学校で使えない場合は、まず管理者設定を確認する話になります。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料のGoogleアカウントでMeetの文字起こしは使えますか？</strong> 公式ヘルプが挙げている「文字起こしが利用可能な Google Workspace のエディション」の一覧に、無料のGoogleアカウントは入っていません。ただし同ページに「無料アカウントでは使えない」と書かれた文言があるわけではないので、断定はしないでおきます。確実に0円で文字を出したいなら、別ページで「すべてのユーザー」向けと明記されている自動字幕起こしを使うほうが話が早いです。</p>
+<p><strong>Q. 字幕をそのままテキストファイルにできますか？</strong> 自動字幕起こしのヘルプページには、字幕を保存・書き出す手順の記載が見当たりませんでした。会議後に文章として残したいなら、文字起こし（対応エディションが必要）を使うか、外部ツールを同席させるか、録音して後から変換する形になります。録音品質が結果を大きく左右するので、<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ｜機材より先に直す5つ</a>の順番で環境を整えてから試すほうが無駄がありません。</p>
+<p><strong>Q. TeamsやZoomでも同じことができますか？</strong> それぞれ条件が違います。Teams側の標準機能と必要なライセンスは<a href="../teams-transcription/">Teams会議の文字起こしはどこまで無料？標準機能とライセンスの線引き</a>に、Zoomの録画からの変換手順は<a href="../zoom-recording-transcription/">Zoom録画から文字起こしする手順｜クラウド録画とローカル録画で変わる</a>にまとめてあります。なお、出てきた文字起こしはそのままでは議事録になりません。話し言葉を配布用の文章に整える段階の道具については<a href="../catchy-iikae/">Catchyの言い換えの使い方｜公式が説明しているのは「文章の雰囲気」</a>で、公式が案内している方法を確認しています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Meetには「自動字幕起こし」と「文字起こし」の2つがあり、公式が「すべてのユーザー」向けと書いているのは前者。日本語はベータ版の注記なしで対応している</li><li>ドライブにファイルとして残る文字起こしは、公式が挙げる8つのWorkspaceエディションの機能。保存先は主催者のドライブで、対応言語は8つ</li><li>字幕を保存する手順は公式ヘルプに見当たらない。会議後に読み返したいなら、対応エディションを使うか外部ツールを同席させるかを最初に決めておく</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-speaker-separation/">Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順</a></li><li><a href="../notta-cancel/">Notta解約は日割りなし｜失うのはお金より過去の文字起こし</a></li><li><a href="../teams-transcription/">Teams会議の文字起こし精度は言語設定で決まる｜4通り比較</a></li><li><a href="../ai-minutes-one-hour/">議事録AIを無料で使うなら1時間の会議が分かれ目になる理由</a></li><li><a href="../interview-transcription-workflow/">インタビューの文字起こしを効率化する｜時間を食うのは変換ではなく整文</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
