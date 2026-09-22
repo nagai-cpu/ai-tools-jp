@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NottaとZoomの連携で自動文字起こし｜自動参加2種と手動招待の違い｜AIツール実用ガイド</title>
+<meta name="description" content="Zoom会議をNottaで自動的に文字起こししたい人向けに、Zoom連携・カレンダー連携・手動招待の違い、対象プラン、Botが入れない条件を2026年9月時点の公式ヘルプの文言で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notta-zoom-integration/">
+<meta property="og:title" content="NottaとZoomの連携で自動文字起こし｜自動参加2種と手動招待の違い｜AIツール実用ガイド">
+<meta property="og:description" content="Zoom会議をNottaで自動的に文字起こししたい人向けに、Zoom連携・カレンダー連携・手動招待の違い、対象プラン、Botが入れない条件を2026年9月時点の公式ヘルプの文言で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "NottaとZoomの連携で自動文字起こし｜自動参加2種と手動招待の違い", "description": "Zoom会議をNottaで自動的に文字起こししたい人向けに、Zoom連携・カレンダー連携・手動招待の違い、対象プラン、Botが入れない条件を2026年9月時点の公式ヘルプの文言で整理しました。", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-zoom-integration/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "NottaのZoom連携は無料プランでも使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "Zoom連携による自動参加は、公式ヘルプでプレミアム・ビジネス・エンタープライズが対象です。無料プランで自動参加させたい場合は、すべてのプランが対象のカレンダー連携を使います。"}}, {"@type": "Question", "name": "Notta Botが会議に入ってこないのはなぜですか。", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプでは、会議が始まっていない、Zoomで外部参加者のローカルレコーディングが無効、ウェビナーである、ホストが5分以内に承認しなかった、といった条件でBotは参加・録音できません。Zoom連携の自動参加は自分がホストの会議だけが対象です。"}}, {"@type": "Question", "name": "他の人が主催するZoom会議も自動で文字起こしできますか。", "acceptedAnswer": {"@type": "Answer", "text": "カレンダー連携の自動参加なら、予定に登録された会議はホスト・ゲストを問わず対象です。ただし参加と録画にはホスト側の承認が必要です。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">NottaとZoomの連携で自動文字起こし｜自動参加2種と手動招待の違い</h1><p class="meta">2026-09-23 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>Zoom会議にNotta Botを入れる方法は3つあり、自動で入れたい場合も「Zoomと連携」を選ぶ必要がない人のほうが多い</strong>です。公式ヘルプでは、Zoom連携による自動参加は<strong>プレミアム以上・自分が主催する会議だけ</strong>が対象です。一方、Googleカレンダーなどとつなぐ<strong>カレンダー連携の自動参加はすべてのプランで使え、ゲストとして出る会議も対象</strong>になります。他社が主催する会議が多いなら、カレンダー連携から設定してください。</p>
+<h2 id="Notta-BotをZoomに入れる3つの方法-2026年9月23日時点">Notta BotをZoomに入れる3つの方法（2026年9月23日時点）</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプセンター「自分が主催するZoomミーティングにNotta Botを自動追加する」には、3つの方法の比較表が載っています。そこに各記事の前提条件を足して並べました。</p>
+<div class="tw"><table><thead><tr><th>方法</th><th>対象プラン</th><th>自分が主催の会議</th><th>ゲストで出る会議</th><th>事前にやること</th><th>対応する会議サービス</th></tr></thead><tbody><tr><td>Zoom連携による自動参加</td><td>プレミアム・ビジネス・エンタープライズ</td><td>対象</td><td>対象外</td><td>Zoomと連携し、設定で自動参加をオン</td><td>Zoomのみ</td></tr><tr><td>カレンダー連携による自動参加</td><td>すべてのプラン</td><td>対象</td><td>対象</td><td>Google／Outlookカレンダーに予定を登録</td><td>Zoom・Google Meet・Teams・Webex</td></tr><tr><td>会議リンクで手動招待</td><td>すべてのプラン</td><td>対象</td><td>対象</td><td>不要（会議のたびにURLを貼る）</td><td>Zoom・Google Meet・Teams・Webex</td></tr><tr><td>デスクトップ版のBotなし録音</td><td>すべてのプラン</td><td>対象</td><td>対象</td><td>デスクトップ版を入れて録音開始</td><td>公式記事はZoomでの手順</td></tr></tbody></table></div>
+<p>Zoom連携の注意事項には「他者が主催する会議にゲストとして参加する場合は、この設定による自動参加は行われません」とはっきり書かれています。取引先から届くZoomのURLに自動で入ってほしい、という用途には合いません。</p>
+<h2 id="設定手順">設定手順</h2>
+<h3 id="カレンダー連携で自動参加させる-すべてのプラン">カレンダー連携で自動参加させる（すべてのプラン）</h3>
+<ol><li>Notta Web版でGoogleカレンダーかOutlookカレンダーを連携する</li><li>「Web会議の予定」を開き、右上の歯車アイコンから設定画面へ進む</li><li>「カレンダー予定への自動参加」をオンにし、対象の会議サービス（Zoomなど）と会議の種類を選ぶ</li></ol>
+<p>会議の種類は「すべての予定」「社内会議」「外部会議」から1つ選べます。社内か外部かは、招待された人のメールアドレスのドメインが自分と同じかどうかで判定されます。会議タイトルのキーワードで対象を絞る「自動参加許可リスト」「自動参加除外リスト」もあります。</p>
+<h3 id="Zoom連携で自動参加させる-プレミアム以上">Zoom連携で自動参加させる（プレミアム以上）</h3>
+<ol><li>Notta Web版の左下「連携とアプリ」から、Zoomの「連携する」を押して連携を完了する</li><li>右上のプロフィール画像→「設定」→「Notta Bot」を開く</li><li>「Zoomミーティングへの自動参加」をオンにする</li></ol>
+<p>連携したZoomアカウントでホストとして会議を始めると、Notta Botが参加を試みます。カレンダーに登録していない、急に立てた会議でも入ってくれるのがこの方法の利点です。</p>
+<h2 id="Botが入れない・自動参加しない条件">Botが入れない・自動参加しない条件</h2>
+<p>設定したのに入ってこない、という場合は、ほとんどが公式に書かれた条件に当たっています。</p>
+<ul><li><strong>Zoom側の設定</strong>：「外部参加者によるローカルレコーディング」が有効になっている必要があります。Zoomウェビナーには対応していません</li><li><strong>会議が始まっていない</strong>：進行中（主催者がミーティングを開始した状態）の会議のみ文字起こしできます</li><li><strong>承認が5分以内にされない</strong>：待機室が有効な会議では、ホストが5分以内に参加を承認しないとBotは自動的に退出します。Zoomは参加の承認に加えて録画の承認も求められます</li><li><strong>カレンダーに同期されない予定</strong>：終日の予定、終了時刻が夜中の0時の予定、日をまたぐ予定は同期されません。同期されるのは2週間先までです</li><li><strong>直前に立てた会議</strong>：会議が10分以内に始まる場合、自動参加を有効にできない可能性がある、と注記されています</li></ul>
+<p>Zoomの録画承認については、カレンダー連携の設定画面に「ホスト承認の必須化」という項目があり、これをオフにするとZoom会議に限りホストの承認を経ずに録画できる、とも書かれています。自分が主催する定例なら、ここを見直すと手間が1つ減ります。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-自分が主催する会議か-呼ばれる会議か">1. 自分が主催する会議か、呼ばれる会議か</h3>
+<p>主催する会議が中心で、カレンダーに入れずに会議を立てることが多いならZoom連携です。呼ばれる会議が多いなら、プランに関係なくカレンダー連携一択です。両方ある人は、カレンダー連携を基本にしておけば取りこぼしが少なくなります。</p>
+<h3 id="2-無料のままで足りるか">2. 無料のままで足りるか</h3>
+<p>カレンダー連携の自動参加は無料でも使えますが、フリープランの文字起こしは料金ページで「1回につき3分まで」です。Botが自動で入っても、会議の冒頭3分しか起きません。無料枠の詰まり方は<a href="../notta-free-limits/">Notta無料プランの制限</a>に書きました。また、フリープランではBotの表示名を変えられず、録音通知バナーを非表示にする機能も使えません。</p>
+<h3 id="3-相手にBotを見せたくないか">3. 相手にBotを見せたくないか</h3>
+<p>取引先の会議に「Notta Bot」という参加者が入ることに抵抗があるなら、デスクトップ版のBotなし録音があります。PCのマイク音声とシステム音声を直接録るため、Botの入室承認が要りません。ただし公式記事は、録音前に必要な同意を得ることはユーザー自身の責任だと明記しています。</p>
+<p>会議が日本語と英語の混在なら、手動招待の画面で「2か国語」に切り替えられます。ただし回数に上限があるので、<a href="../notta-english-accuracy/">Nottaの英語文字起こし精度と2か国語の回数制限</a>を先に確認してください。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>Zoom連携の自動参加</strong>：プレミアム以上が必要なうえ、ゲスト参加の会議には効きません。Google MeetやTeamsにも使えないので、会議サービスが混ざる職場では結局カレンダー連携も設定することになります。</p>
+<p><strong>カレンダー連携の自動参加</strong>：予定に会議URLが入っていないと対象になりません。終日予定や日をまたぐ予定も拾われず、直前に立てた会議では間に合わないことがあります。</p>
+<p><strong>Botを使う方法全般</strong>：ホストの承認が要り、待機室で5分放置されると退出します。自分がホストでない会議では、相手の操作に左右されます。Zoom自体の文字起こし機能で足りるかどうかは<a href="../zoom-recording-transcription/">Zoomの文字起こしを無料でやる方法</a>と比べてみてください。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. NottaのZoom連携は無料プランでも使えますか。</strong> Zoom連携による自動参加は、公式ヘルプでプレミアム・ビジネス・エンタープライズが対象です。無料プランで自動参加させたい場合は、すべてのプランが対象のカレンダー連携を使います。</p>
+<p><strong>Q. Notta Botが会議に入ってこないのはなぜですか。</strong> 公式ヘルプでは、会議が始まっていない、Zoomで外部参加者のローカルレコーディングが無効、ウェビナーである、ホストが5分以内に承認しなかった、といった条件でBotは参加・録音できません。Zoom連携の自動参加は自分がホストの会議だけが対象です。</p>
+<p><strong>Q. 他の人が主催するZoom会議も自動で文字起こしできますか。</strong> カレンダー連携の自動参加なら、予定に登録された会議はホスト・ゲストを問わず対象です。ただし参加と録画にはホスト側の承認が必要です。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>自動参加は「Zoom連携（プレミアム以上・自分が主催の会議だけ）」と「カレンダー連携（全プラン・ゲスト参加も対象）」の2種類</li><li>入らない原因の多くは、Zoomのローカルレコーディング設定、会議が未開始、5分以内の未承認、同期されない予定</li><li>無料のままBotを入れても1回3分まで。相手にBotを見せたくないならデスクトップ版のBotなし録音</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-english-accuracy/">Nottaの英語文字起こし精度は？日英混在の会議は無料で月4回まで</a></li><li><a href="../audio-file-transcription-free/">音声ファイル文字起こし無料｜詰まるのは月の合計時間ではない</a></li><li><a href="../minutes-template-free/">議事録テンプレートの無料フォーマット｜コピペで使う型とAI要約の境界</a></li><li><a href="../google-meet-transcription/">Google Meetの文字起こしを無料でやる方法｜字幕なら全ユーザー対象</a></li><li><a href="../notta-speaker-separation/">Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
