@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPTを業務で使いこなせない原因は3つ｜学習にお金を払う前の切り分け｜AIツール実用ガイド</title>
+<meta name="description" content="ChatGPTを仕事で使いこなせない人向け。原因を「指示の書き方」「使う業務が決まっていない」「社内ルール」の3つに分け、有料の学習で解決できるもの・できないものを公式情報をもとに整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/chatgpt-not-using-well/">
+<meta property="og:title" content="ChatGPTを業務で使いこなせない原因は3つ｜学習にお金を払う前の切り分け｜AIツール実用ガイド">
+<meta property="og:description" content="ChatGPTを仕事で使いこなせない人向け。原因を「指示の書き方」「使う業務が決まっていない」「社内ルール」の3つに分け、有料の学習で解決できるもの・できないものを公式情報をもとに整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPTを業務で使いこなせない原因は3つ｜学習にお金を払う前の切り分け", "description": "ChatGPTを仕事で使いこなせない人向け。原因を「指示の書き方」「使う業務が決まっていない」「社内ルール」の3つに分け、有料の学習で解決できるもの・できないものを公式情報をもとに整理しました。", "datePublished": "2026-09-26", "dateModified": "2026-09-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/chatgpt-not-using-well/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPTの使い方を無料で学ぶ方法はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "あります。独学で公式ヘルプや書籍、無料の記事を使う方法のほか、DMM 生成AI CAMPのようにスクール側が無料セミナーを開いている場合もあります。独学とスクールの比べ方は[生成AIの学び方は独学とスクールどっち｜返金の線引きはアカウント作成前](../ai-learning-self-vs-school/)にまとめました。"}}, {"@type": "Question", "name": "職種に合わせた使い方を学べますか？", "acceptedAnswer": {"@type": "Answer", "text": "DMM 生成AI CAMPでは、プロンプトエンジニアリングの分野にマーケティング・営業・人事のコースがあります。それ以外の職種は基礎マスターコースが対象で、対象者は「生成AIを仕事で活用したい全職種のビジネスパーソン」とされています。"}}, {"@type": "Question", "name": "基礎マスターコースではどのツールを扱いますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式のコースページでは、ChatGPT、Claude、Microsoft 365 Copilot、Google Apps Script（GAS）が挙げられています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">ChatGPTを業務で使いこなせない原因は3つ｜学習にお金を払う前の切り分け</h1><p class="meta">2026-09-26 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>ChatGPTを業務で使いこなせない原因は「指示の書き方が分からない」「どの業務に使うか決まっていない」「社内ルールで仕事の情報を入れられない」の3つにほぼ分かれ、お金を払って学ぶ意味があるのは前の2つだけ</strong>です。3つ目はスクールに入っても解決しません。まず自分がどれに当たるかを切り分けてから、学習の方法を選ぶほうが無駄が出ません。</p>
+<h2 id="原因ごとの解決手段を1枚にまとめる">原因ごとの解決手段を1枚にまとめる</h2>
+<p>2026年9月26日に、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+8BH2U2+5VEK+5YRHE" target="_blank" rel="sponsored nofollow noopener">DMM 生成AI CAMP</a> とCatchyの公式サイト・公式ヘルプで確認した内容をもとにまとめました。金額はいずれも税込です。</p>
+<div class="tw"><table><thead><tr><th>解決手段</th><th>費用</th><th>効く原因</th><th>向いている人</th><th>注意点</th></tr></thead><tbody><tr><td>独学（公式ヘルプ・書籍・無料記事）</td><td>0円〜</td><td>指示の書き方</td><td>自分で試行錯誤を続けられる人</td><td>業務への当てはめは自分で考える</td></tr><tr><td>DMM 生成AI CAMPの無料セミナー</td><td>0円（60分）</td><td>使う業務が決まっていない</td><td>スクールの中身を先に見たい人</td><td>入会前の説明と体験の場</td></tr><tr><td>DMM 生成AI CAMP 月額プラン</td><td>月16,280円</td><td>指示の書き方＋使う業務</td><td>職種に合うコースがある人</td><td>返金の条件が厳しい</td></tr><tr><td>用途を絞ったツール（例：Catchy）</td><td>無料枠あり・有料は月3,300円〜</td><td>指示の書き方（テンプレートで代替）</td><td>作りたい文章の種類が決まっている人</td><td>対象はコピーや記事などの文章作成</td></tr><tr><td>社内の利用ルールの確認</td><td>0円</td><td>社内ルール</td><td>会社の情報を入れてよいか分からない人</td><td>学習では解決しない</td></tr></tbody></table></div>
+<p>DMM 生成AI CAMPには6ヶ月プラン（一括90,530円）と12ヶ月プラン（一括162,800円）もあります。プランごとの差は<a href="../ai-learning-self-vs-school/">生成AIの学び方は独学とスクールどっち｜返金の線引きはアカウント作成前</a>で計算しました。</p>
+<h2 id="3つの原因を切り分ける">3つの原因を切り分ける</h2>
+<h3 id="1-指示の書き方が分からない">1. 指示の書き方が分からない</h3>
+<p>「聞いてみたけれど、ありきたりな答えしか返ってこない」という状態です。DMM 生成AI CAMPの基礎マスターコースは、対象者として「生成AIを使ってみたが、期待した結果が出力できない方」を挙げていて、まさにこの層に向けたコースです。</p>
+<p>ただ、この原因は独学でもある程度は埋まります。とくに作りたいものが「広告文」「記事」のように決まっているなら、指示文を自分で組み立てる代わりに、入力欄が用意されたテンプレート型のツールを使う手もあります。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+84XAEQ+52IU+5YJRM" target="_blank" rel="sponsored nofollow noopener">Catchy</a> はその一例で、用途別の生成ツールが並んでいて、入力欄を埋めれば文章が出てきます。料金は<a href="../catchy-pricing/">Catchy料金の無料と有料の違い｜月300クレジットならPro年額が安い</a>にまとめました。</p>
+<h3 id="2-どの業務に使えばいいか決まっていない">2. どの業務に使えばいいか決まっていない</h3>
+<p>ChatGPTの使い方そのものは分かっていても、「自分の仕事のどこに入れればいいか」が見えない状態です。基礎マスターコースの対象者には「日々の業務での活用方法がわからない方」も並んでいます。</p>
+<p>この原因に対して、DMM 生成AI CAMPは職種別のコースを用意しています。プロンプトエンジニアリングの分野に、基礎マスターコースのほか<strong>マーケティングコース・営業コース・人事コース</strong>があります。たとえば営業コースのカリキュラムは「リード顧客を獲得する」「商談を獲得する」「受注を獲得する」「継続利用を促す」「営業行動を改善する」「社内で報告する」と、<strong>営業の仕事の流れに沿って章が並んでいます</strong>。使う場面を自分で探すのではなく、業務の順番どおりに当てはめていく作りです。</p>
+<h3 id="3-社内ルールで仕事の情報を入れられない">3. 社内ルールで仕事の情報を入れられない</h3>
+<p>顧客名や社内資料を入れてよいか分からず、結局当たり障りのない使い方しかできない、という状態です。これはスキルの問題ではなく<strong>会社の決まりの問題</strong>なので、学習にお金を払っても解決しません。先に情報システム部門や上司に、どのサービスにどこまで入れてよいかを確認するのが順番です。</p>
+<p>入力した内容がAIの学習に使われるかどうかは、サービスとプランによって扱いが違います。文字起こしツールの例ですが、規約のどこを読めば分かるかは<a href="../shigyo-transcription-no-ai-training/">Nottaで文字起こしをAI学習させない方法｜規約で確認できたプラン条件</a>で書きました。</p>
+<h2 id="学習を選ぶなら見ておきたい判断軸">学習を選ぶなら見ておきたい判断軸</h2>
+<h3 id="学習時間は-課題-の比重を見る">学習時間は「課題」の比重を見る</h3>
+<p>基礎マスターコースの学習時間の目安は約31.75時間で、内訳は自習約14.25時間、課題約17.5時間です。<strong>半分以上が手を動かす時間</strong>になっています。営業コースも自習約21.5時間・課題約11.5時間の合計約33時間です。</p>
+<p>「動画を見れば使えるようになる」と考えて入ると、課題の時間を確保できずに止まりやすい構成です。逆に言えば、使いこなせない原因が「読んだけれど手を動かしていない」ことなら、ここが効きます。</p>
+<h3 id="1コースだけなら月額プランで足りるか計算する">1コースだけなら月額プランで足りるか計算する</h3>
+<p>基礎マスターコースの約31.75時間を週5時間で進めると、約6.4週。2ヶ月以内に収まる計算です。月額プランを2ヶ月使うと16,280円×2で32,560円で、6ヶ月プランの一括90,530円よりかなり小さく済みます。<strong>1つのコースを終えることが目的なら、長いプランを先に買う理由は薄い</strong>ということです。</p>
+<p>複数のコースを続けて受けたい、ゼミに何度も出たい、という場合は話が変わります。公式の料金表では、月額プランはゼミへの同時参加が1つのみ、6ヶ月・12ヶ月プランは参加無制限です。</p>
+<div class="cta"><div class="cta-h">DMM 生成AI CAMP<span class="pr">PR</span></div><p class="cta-b">生成AIの使い方を体系的に学ぶオンライン講座。ChatGPT等の業務活用が対象</p><p class="cta-f">無料セミナーあり</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+8BH2U2+5VEK+5YRHE" target="_blank" rel="sponsored nofollow noopener">DMM 生成AI CAMP の公式サイトを見る</a></div>
+<h3 id="入会前に中身を確認する">入会前に中身を確認する</h3>
+<p>公式サイトでは60分の無料セミナーが案内されていて、職種別カリキュラムの体験やAIチューター機能の紹介があると書かれています。返金の条件が厳しいので（次の短所で書きます）、<strong>中身の確認はこのセミナーで済ませてから申し込む</strong>のが安全です。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>DMM 生成AI CAMPは、アカウントを作った後は返金されない。</strong> 利用規約 第7条に「契約開始日から８日以内かつ、初回のアカウント作成手続きの完了前」に退会を申請した場合だけ返金するとあり、「初回のアカウント作成完了後の退会は一切入会金、利用料金の返金は致しません」と続きます。第5条にも「当社は、いかなる場合にも受領した利用料金の返金には応じません」とあります。</p>
+<p><strong>月額でも安くはない。</strong> 月額プランは月16,280円です。原因が「指示の書き方」だけなら、独学やテンプレート型ツールで足りる可能性があります。</p>
+<p><strong>社内ルールの問題は解決しない。</strong> 上で書いたとおり、会社の情報を入れられない状態は学習では変わりません。</p>
+<p><strong>テンプレート型ツールは、用途が合う文章にしか向かない。</strong> Catchyは広告文・キャッチコピー・記事などの文章作成が中心です。議事録や表の集計のような業務を任せたい場合は、別の手段を考える必要があります。会議の記録なら<a href="../minutes-template-free/">議事録テンプレートの無料フォーマット｜コピペで使う型とAI要約の境界</a>が参考になります。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. ChatGPTの使い方を無料で学ぶ方法はありますか？</strong> あります。独学で公式ヘルプや書籍、無料の記事を使う方法のほか、DMM 生成AI CAMPのようにスクール側が無料セミナーを開いている場合もあります。独学とスクールの比べ方は<a href="../ai-learning-self-vs-school/">生成AIの学び方は独学とスクールどっち｜返金の線引きはアカウント作成前</a>にまとめました。</p>
+<p><strong>Q. 職種に合わせた使い方を学べますか？</strong> DMM 生成AI CAMPでは、プロンプトエンジニアリングの分野にマーケティング・営業・人事のコースがあります。それ以外の職種は基礎マスターコースが対象で、対象者は「生成AIを仕事で活用したい全職種のビジネスパーソン」とされています。</p>
+<p><strong>Q. 基礎マスターコースではどのツールを扱いますか？</strong> 公式のコースページでは、ChatGPT、Claude、Microsoft 365 Copilot、Google Apps Script（GAS）が挙げられています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>ChatGPTを業務で使いこなせない原因は「指示の書き方」「使う業務が決まっていない」「社内ルール」の3つ。学習で解決できるのは前の2つ</li><li>業務への当てはめで詰まっているなら、職種別コースのあるスクールが効く。DMM 生成AI CAMPの基礎マスターコースは約31.75時間で、半分以上が課題</li><li>1コースを終えるのが目的なら月額プランで足りる計算。返金はアカウント作成前までなので、無料セミナーで中身を見てから決める</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../catchy-pricing/">Catchy料金の無料と有料の違い｜月300クレジットならPro年額が安い</a></li><li><a href="../ai-writing-char-limit/">AI記事作成の文字数が無料プランで足りない｜選ぶAIで枠が倍になる</a></li><li><a href="../catchy-credit-saving/">Catchyのクレジットが足りない時の節約術｜公式の長文手順は割高</a></li><li><a href="../ai-learning-self-vs-school/">生成AIの学び方は独学とスクールどっち｜返金の線引きはアカウント作成前</a></li><li><a href="../catchy-iikae/">Catchyの言い換えの使い方｜公式が説明しているのは「文章の雰囲気」</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
