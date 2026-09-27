@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Value AI Writerの事前学習の使い方｜貼った文字数×10が消費の目安｜AIツール実用ガイド</title>
+<meta name="description" content="Value AI Writerの事前学習とプロンプト追加の使い方を公式マニュアルで確認。入力文字数×10の文字数消費を前提に、何を貼り何を指示に回すかを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/value-ai-writer-pretraining/">
+<meta property="og:title" content="Value AI Writerの事前学習の使い方｜貼った文字数×10が消費の目安｜AIツール実用ガイド">
+<meta property="og:description" content="Value AI Writerの事前学習とプロンプト追加の使い方を公式マニュアルで確認。入力文字数×10の文字数消費を前提に、何を貼り何を指示に回すかを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Value AI Writerの事前学習の使い方｜貼った文字数×10が消費の目安", "description": "Value AI Writerの事前学習とプロンプト追加の使い方を公式マニュアルで確認。入力文字数×10の文字数消費を前提に、何を貼り何を指示に回すかを整理しました。", "datePublished": "2026-09-27", "dateModified": "2026-09-27", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/value-ai-writer-pretraining/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "事前学習とプロンプト追加は無料プランでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "今回確認した公式の料金表と機能説明には、プランによって事前学習・プロンプト追加の可否を分ける文言が見つからず、無料プランで使えるかを明記した文言も確認できませんでした。フリープランの文字数制限は1万文字（GPT-4o）なので、使えても貼れる量は小さくなります。"}}, {"@type": "Question", "name": "事前学習にどれくらいの文字数を入れればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "公式に推奨の文字数は書かれていません。消費の目安が入力文字数の10倍なので、記事に必ず反映させたい事実だけに絞り、数百字程度から試すのが無難です。"}}, {"@type": "Question", "name": "公開済みの記事を読み込ませて書き直すこともできますか？", "acceptedAnswer": {"@type": "Answer", "text": "それは事前学習ではなく、記事インポート機能とリライト機能の役割です。公式サイトでは、記事のURLを入力して取り込み、編集画面で「記事の再構築・リライト・追記」ができると説明されています。リライトも「入力した文字数×10が目安」とされているので、枠の考え方は事前学習と同じです。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Value AI Writerの事前学習の使い方｜貼った文字数×10が消費の目安</h1><p class="meta">2026-09-27 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>Value AI Writerの事前学習には、参考にしたいページを丸ごと貼るのではなく、記事に反映させたい事実だけを抜き出して貼るのが正解です。</strong> 公式ユーザーガイドの「文字数消費量」のページでは、事前学習も追加プロンプトも消費の目安が「入力文字数 × 10文字」とされています。3,000字のLPを貼れば3万文字分です。口調や読者像の指定は、短く済むプロンプト追加に回します。</p>
+<h2 id="プロンプト追加と事前学習の違い">プロンプト追加と事前学習の違い</h2>
+<p>2026年9月27日に、Value AI Writer byGMO の公式サイトと公式ユーザーガイド（記事作成の手順、文字数消費量、リライト）で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>機能</th><th>何を入れるか</th><th>公式の例</th><th>文字数消費の目安（公式）</th><th>向いている使い方</th></tr></thead><tbody><tr><td>プロンプト追加</td><td>追加の指示文</td><td>「もっとフランクな文章にしてください」「この記事のペルソナは40代主婦です」「小学生でも理解できるように書いてください」</td><td>入力文字数 × 10文字</td><td>口調・読者像・立場の指定</td></tr><tr><td>事前学習</td><td>参考にしたい文章を「テキスト」か記事の「URL」で</td><td>特定のサイト、論文、LPの情報</td><td>入力文字数 × 10文字</td><td>自社商品の仕様、一次情報、独自の数字</td></tr><tr><td>リライト（参考）</td><td>リライトする文章と参考文章</td><td>―</td><td>「リライトする文章」「参考文章」に入力した文字数×10が目安</td><td>公開済み記事の手直し</td></tr></tbody></table></div>
+<p>表の「文字数消費の目安」は、ユーザーガイドの消費量ページにある表記です。<strong>このページはGPT3.5・GPT4という古いモデル名で書かれていて、現在の料金表（GPT-4o、GPT-4.1、Claude4.0、Gemini2.5-Pro）とはモデル名がそろっていません。</strong> 現行プランでも同じ倍率なのかは公式の表記からは確認できなかったので、上の数字は「公式が出している目安」として読んでください。</p>
+<h2 id="使い方の手順と-入れる場所">使い方の手順と、入れる場所</h2>
+<p>公式マニュアルの記事作成手順では、プロンプト追加と事前学習は<strong>手順5</strong>で入力します。</p>
+<ol><li>キーワードを入れて「記事タイトル候補を出す」（ここで記事数が1つ減る）</li><li>H2・H3の個数、見出し単位の文字数、文章のトーンを選ぶ（手順4）</li><li>タグ・メモに続けて「追加するプロンプト」と「事前学習」を入力する（手順5）</li><li>見出し構築方法を選んで「構成を作成」（手順6）</li></ol>
+<p>注意したいのは順番です。公式マニュアルには「タイトル候補を作成したタイミングで記事構成数が1消費します。手順5を完了しないまま、ブラウザを閉じるなどした場合、記事が作成されず構成数のみ消費されます」と書かれています。<strong>指示文や貼る文章を画面の上で考え始めると、記事数だけ減って何も残らない事故が起きます。</strong> 入力する内容は、記事作成を始める前にメモ帳で用意しておくのが安全です。画面全体の流れは<a href="../value-ai-writer-guide/">Value AI Writerの使い方｜1記事は押した瞬間に減る</a>で説明しています。</p>
+<h2 id="判断軸1-貼る文章は-AIが知らないこと-だけにする">判断軸1：貼る文章は「AIが知らないこと」だけにする</h2>
+<p>事前学習は公式の説明で「その文章をもとに新しい内容の文章を生成する機能」です。AIが一般知識で書ける内容を貼っても、記事の中身はあまり変わらず、枠だけが減ります。</p>
+<p>貼る価値があるのは、たとえば次のような情報です。</p>
+<ul><li>自社商品の仕様・価格・対応範囲</li><li>自分で取ったアンケートや実測の数字</li><li>業界の一次資料のうち、記事で触れたい段落</li></ul>
+<p>目安の「×10」で計算すると、500字に絞れば5,000文字分、3,000字をそのまま貼れば3万文字分です。ベーシック（2,800円／月・税込）の文字数制限は料金表で6万文字（GPT-4o）なので、<strong>長いLPを1回貼るだけで月の枠の半分に届く計算</strong>になります。</p>
+<div class="cta"><div class="cta-h">Value AI Writer<span class="pr">PR</span></div><p class="cta-b">キーワードから見出し構成つきのSEO記事を生成する</p><p class="cta-f">無料トライアルあり</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+87B0TU+1JUK+1HL85U" target="_blank" rel="sponsored nofollow noopener">Value AI Writer の公式サイトを見る</a></div>
+<h2 id="判断軸2-指示は短く-1つの軸だけ書く">判断軸2：指示は短く、1つの軸だけ書く</h2>
+<p>プロンプト追加も同じく「入力文字数 × 10文字」の目安です。ただ、指示文は長くても100〜200字程度なので、消費は1,000〜2,000文字分に収まります。<strong>枠を気にするべきなのは事前学習のほうで、プロンプト追加は遠慮せず使ってよい</strong>、というのが公式の目安から読み取れる使い分けです。</p>
+<p>書き方は、公式の例のように1文で1つの条件を指定する形が扱いやすいです。たとえば次のように書けます（この例文は公式の記載ではなく、この記事での書き方の提案です）。</p>
+<ul><li>読者：「読者は、初めてAIツールを契約する個人事業主です」</li><li>立場：「あなたは中小企業のWeb担当者の立場で書いてください」</li><li>禁止：「料金の数字は書かず、公式サイトで確認するよう案内してください」</li></ul>
+<p>3つ目のような「書かないこと」の指定は特に効かせたいところです。Value AI Writerの公式FAQは、生成された文章に虚偽の内容が含まれるケースがあるとして、公開前に自分で確認することを前提にしています。<strong>数字をAIに書かせない指示を先に入れておけば、確認の手間が減ります。</strong> 確認を人に頼むといくらかかるかは、<a href="../seo-writing-outsourcing-cost/">SEO記事の外注費用をAIに置き換える｜安くなる境目は3,300字前後</a>で計算しています。</p>
+<h2 id="判断軸3-URL指定とテキスト貼り付けのどちらにするか">判断軸3：URL指定とテキスト貼り付けのどちらにするか</h2>
+<p>事前学習は「テキスト」か記事の「URL」で入力できると公式マニュアルに書かれています。<strong>URLで指定した場合に、そのページのどの範囲が読み込まれ、何文字として数えられるのかは、公式の表記では確認できませんでした。</strong> メニューや広告の文字まで数えられるのかも分かりません。</p>
+<p>枠の減り方を自分で管理したいなら、テキストで貼るほうが確実です。自分で抜き出した文字数に10を掛ければ、目安が出せます。URL指定を使う場合は、1回試したあとに管理画面の残り文字数がいくつ減ったかを見ておくと、次からの見積もりに使えます。文字数枠の考え方は<a href="../ai-writing-char-limit/">AI記事作成の文字数が無料プランで足りない｜選ぶAIで枠が倍になる</a>で扱っています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p>一番の短所は、<strong>事前学習がどれだけ効いたかを確かめにくいこと</strong>です。公式サイトの説明は「記事のクオリティ向上が期待できます」という表現で、何がどう変わるかの具体例は示されていません。同じキーワードで事前学習あり・なしを比べれば確かめられますが、Value AI Writerは公式FAQで「タイトル、見出しの生成までを1記事とみなします」としているので、比較するだけで記事数を2つ使います。</p>
+<p>次に、<strong>消費量の説明ページが現行の料金表と対応していないこと</strong>です。消費量ページはエントリー12.5万文字・ベーシック27万文字という表で書かれていますが、現在の料金表はエントリー2万文字（GPT-4o）・ベーシック6万文字（GPT-4o）で、数字の単位も含めてそろっていません。フリープランで試す場合も、月1記事・1万文字（GPT-4o）の枠の中で事前学習を使うことになるので、長い文章は貼れないと考えたほうがいいです。</p>
+<p>最後に、事前学習で読み込ませた文章の扱い（学習データとして保存されるのか、など）は、今回確認したページには書かれていませんでした。社外秘の資料を貼る前に、利用規約と自社のルールを確認してください。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 事前学習とプロンプト追加は無料プランでも使えますか？</strong> 今回確認した公式の料金表と機能説明には、プランによって事前学習・プロンプト追加の可否を分ける文言が見つからず、無料プランで使えるかを明記した文言も確認できませんでした。フリープランの文字数制限は1万文字（GPT-4o）なので、使えても貼れる量は小さくなります。</p>
+<p><strong>Q. 事前学習にどれくらいの文字数を入れればいいですか？</strong> 公式に推奨の文字数は書かれていません。消費の目安が入力文字数の10倍なので、記事に必ず反映させたい事実だけに絞り、数百字程度から試すのが無難です。</p>
+<p><strong>Q. 公開済みの記事を読み込ませて書き直すこともできますか？</strong> それは事前学習ではなく、記事インポート機能とリライト機能の役割です。公式サイトでは、記事のURLを入力して取り込み、編集画面で「記事の再構築・リライト・追記」ができると説明されています。リライトも「入力した文字数×10が目安」とされているので、枠の考え方は事前学習と同じです。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li><strong>事前学習は「入力文字数×10」の目安で枠が減る</strong>。ページを丸ごとではなく、AIが知らない事実だけを抜き出して貼る</li><li><strong>口調や読者像はプロンプト追加で指定する</strong>。短い指示なら消費は小さく、「数字を書かせない」指示で確認の手間も減らせる</li><li><strong>入力内容は記事作成を始める前に用意する</strong>。タイトル候補を出した時点で記事数が減り、途中で閉じると構成数だけ消える</li></ul>
+<p>※本記事の仕様は2026年9月27日にValue AI Writer byGMO公式サイトと公式ユーザーガイド（記事作成手順・文字数消費量・リライト）で確認した表記に基づきます。最新の内容は公式サイトでご確認ください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../seo-writing-outsourcing-cost/">SEO記事の外注費用をAIに置き換える｜安くなる境目は3,300字前後</a></li><li><a href="../ai-writing-char-limit/">AI記事作成の文字数が無料プランで足りない｜選ぶAIで枠が倍になる</a></li><li><a href="../ai-blog-outline/">AIでブログ記事の見出し構成を作る｜3つの作り方の使い分け</a></li><li><a href="../value-ai-writer-guide/">Value AI Writerの使い方｜1記事は押した瞬間に減る</a></li><li><a href="../value-ai-writer-vs-rakurin/">Value AI Writerとラクリン比較｜枠の数え方が逆で損得が変わる</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
