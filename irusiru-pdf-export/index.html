@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>イルシルでPDF出力はできる？印刷画面の3設定で文字が灰色になる｜AIツール実用ガイド</title>
+<meta name="description" content="イルシルのスライドをPDFで出力できるかを公式ヘルプで確認。対応プラン、「共有」からの手順、文字が灰色になる設定ミス、ページ指定やPNG化の方法までまとめました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/irusiru-pdf-export/">
+<meta property="og:title" content="イルシルでPDF出力はできる？印刷画面の3設定で文字が灰色になる｜AIツール実用ガイド">
+<meta property="og:description" content="イルシルのスライドをPDFで出力できるかを公式ヘルプで確認。対応プラン、「共有」からの手順、文字が灰色になる設定ミス、ページ指定やPNG化の方法までまとめました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "イルシルでPDF出力はできる？印刷画面の3設定で文字が灰色になる", "description": "イルシルのスライドをPDFで出力できるかを公式ヘルプで確認。対応プラン、「共有」からの手順、文字が灰色になる設定ミス、ページ指定やPNG化の方法までまとめました。", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/irusiru-pdf-export/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "フリープランでもPDFをダウンロードできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できません。公式ヘルプのプラン表で、フリープランの「外部データ出力」は「×」、パーソナル以上が「PDF,PowerPoint」です。"}}, {"@type": "Question", "name": "PDFの文字が灰色になってしまいます。", "acceptedAnswer": {"@type": "Answer", "text": "印刷画面で「背景のグラフィック」にチェックが入っていない可能性があります。公式ヘルプは、ここにチェックを入れないとテキストが灰色になると注意しています。"}}, {"@type": "Question", "name": "出力されるPDFのサイズ（比率）は変えられますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプによると、スライドの生成サイズは16:9で固定されていて、PDF・PPTX・PNGのどの形式でも同じ16:9で出力されます。4:3やA4縦の資料が必要な場合は、出力後に別のソフトで調整することになります。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">イルシルでPDF出力はできる？印刷画面の3設定で文字が灰色になる</h1><p class="meta">2026-09-28 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>イルシルのスライドはPDFで出力できます。ただしパーソナルプラン以上（月1,848円〜）が必要で、フリープランでは出力できません。</strong> もう1つ知っておきたいのは、PDFはボタン1つでダウンロードされるのではなく、<strong>ブラウザの印刷画面を通して保存する方式</strong>だという点です。ここで「背景のグラフィック」にチェックを入れ忘れると、テキストが灰色になると公式ヘルプが注意しています。</p>
+<h2 id="イルシルの出力形式の比較">イルシルの出力形式の比較</h2>
+<p>2026年9月28日に、イルシル公式ヘルプの「スライド作成（編集）画面について」「プランごとの料金・機能」で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>出力形式</th><th>出力のしかた（公式ヘルプ）</th><th>対応プラン</th><th>注意点</th><th>向いている用途</th></tr></thead><tbody><tr><td>PDF</td><td>画面右上の「共有」から。印刷画面で「PDFに保存」を選ぶ</td><td>パーソナル・パーソナルPlus・法人</td><td>印刷設定を間違えると文字が灰色になる・表現がズレる</td><td>提出・配布・印刷</td></tr><tr><td>PPTX</td><td>画面右上の「共有」から</td><td>パーソナル・パーソナルPlus・法人</td><td>表・一部グラフ・矢印・シャドウなどが反映されない可能性</td><td>PowerPointで最後に手直しする</td></tr><tr><td>PNG</td><td>出力したPDFを外部ツールで画像に変換（ヘルプはAdobe Acrobatのページを案内）</td><td>PDF出力ができるプラン</td><td>イルシル単体では画像として書き出す手順が案内されていない</td><td>SNS・チャットに1枚だけ貼る</td></tr></tbody></table></div>
+<p>プラン表の「外部データ出力」の欄は、フリープランが「×」、パーソナル・パーソナルPlus・法人が「PDF,PowerPoint」です。解約についての公式ヘルプにも「プラン解約後も既存のスライドは削除されず、編集も可能となっておりますが、新規作成やPDFの出力等は出来かねております」とあり、<strong>PDF出力は契約中の有料プランだけの機能</strong>と読むのが確実です。</p>
+<h2 id="PDFを出力する手順">PDFを出力する手順</h2>
+<p>公式ヘルプの手順は次のとおりです。</p>
+<ol><li>スライド編集画面の右上にある「共有」を押す</li><li>PDFを選ぶと、ブラウザの印刷画面が開く</li><li>「送信先」を「PDFに保存」にする</li><li>「背景のグラフィック」のチェックボックスをONにする</li><li>「余白」を設定して保存する</li></ol>
+<p>ヘルプの本文では余白を「デフォルト」としている一方、同じページのよくある質問では、表現がズレるときの必要な設定として「余白」を「なし」にすると書かれています。<strong>1回目は両方で出力して見比べ、ズレが出ないほうを使う</strong>のが安全です。</p>
+<p>Windowsの場合は、送信先が「Microsoft PDF」になっていることがあり、「PDFに保存」に変えるとズレが解消する場合がある、とも書かれています。</p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="判断軸1-何のためにファイルにするのか">判断軸1：何のためにファイルにするのか</h2>
+<p>PDFにするかPPTXにするかは、<strong>出力したあとに誰が触るか</strong>で決まります。</p>
+<ul><li>相手に見せるだけ・印刷するだけ → PDF。見た目がそのまま残る</li><li>自分や同僚がPowerPointで数字や文言を直す → PPTX。ただし反映されない要素がある</li><li>1枚だけ画像で貼りたい → PDFを出してから画像に変換</li></ul>
+<p>PPTXで出力したときに崩れやすい要素は、公式ヘルプに名前入りで並んでいます。表アイテム、一部のグラフ、「矢印」機能で作った矢印、シャドウ、回転したアイテムなどです。どこがどう崩れるかは<a href="../irusiru-powerpoint/">イルシルをパワーポイントに変換できる？出力の条件と崩れる箇所</a>で詳しく扱っています。<strong>見た目を崩したくない提出物はPDF</strong>、と覚えておくと迷いません。</p>
+<h2 id="判断軸2-ページを絞って出すか">判断軸2：ページを絞って出すか</h2>
+<p>「特定のページだけ出力できますか？」という質問に対し、公式ヘルプは、PDF出力なら<strong>印刷画面で出力するページを選べる</strong>と答えています。</p>
+<p>これは印刷画面を通す方式の利点です。30枚の資料から、先方に渡す5枚だけをPDFにする、といった使い方がイルシルの中の操作だけでできます。PPTXのほうは、ページを選んで出力する方法がこの回答には書かれていませんでした。</p>
+<h2 id="判断軸3-出力のためだけに有料にするか">判断軸3：出力のためだけに有料にするか</h2>
+<p>フリープランでもスライドの作成まではできますが、ファイルとして手元に残すには有料プランが要ります。料金は公式ヘルプの表で、パーソナルが月契約1,848円、半年契約9,900円（10%OFF）、年間契約17,160円（20%OFF）です。1ヶ月あたりにすると、半年契約で1,650円、年間契約で1,430円になります。</p>
+<p>フリープランで作れる資料は3個までで、AIデザイン生成も月3枚です。無料の範囲で何ができるかは<a href="../irusiru-free-plan/">イルシル無料プランでできること</a>にまとめています。</p>
+<p><strong>毎月何本も資料を出すなら月額は十分回収できますが、年に数回しかPDFが要らないなら、必要な月だけ月契約する</strong>という選び方もあります。月額を使う回数で割って決める考え方は、別のツールですが<a href="../value-ai-writer-pricing/">Value AI Writer料金プラン比較｜月20本までは1記事280円前後で横ばい</a>でも同じ結論になりました。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p>一番の短所は、<strong>PDFを出すたびに印刷画面の設定が要ること</strong>です。「背景のグラフィック」を忘れると文字が灰色になり、送信先がWindowsの「Microsoft PDF」のままだとズレることがあります。ワンクリックで決まった形のPDFが落ちてくるツールに慣れていると、手間に感じます。</p>
+<p>次に、<strong>公式ヘルプの中で書き方がそろっていない箇所があること</strong>です。余白の「デフォルト」と「なし」のほか、ヘルプは「出力形式はPDF、PPTX、PNGの3種類に対応」と書く一方で、PNGにする方法としては「PDF出力後に」外部のツールで変換する手順を案内しています。<strong>イルシルの画面から直接PNGを書き出せるのかは、このヘルプからは確認できませんでした。</strong></p>
+<p>最後に、<strong>解約するとPDFを出せなくなること</strong>です。スライド自体は残りますが、出力は止まります。解約前に必要なファイルを書き出しておく手順は<a href="../irusiru-cancel/">イルシル解約後もスライドは消えない｜消えるのは退会したとき</a>で説明しています。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. フリープランでもPDFをダウンロードできますか？</strong> できません。公式ヘルプのプラン表で、フリープランの「外部データ出力」は「×」、パーソナル以上が「PDF,PowerPoint」です。</p>
+<p><strong>Q. PDFの文字が灰色になってしまいます。</strong> 印刷画面で「背景のグラフィック」にチェックが入っていない可能性があります。公式ヘルプは、ここにチェックを入れないとテキストが灰色になると注意しています。</p>
+<p><strong>Q. 出力されるPDFのサイズ（比率）は変えられますか？</strong> 公式ヘルプによると、スライドの生成サイズは16:9で固定されていて、PDF・PPTX・PNGのどの形式でも同じ16:9で出力されます。4:3やA4縦の資料が必要な場合は、出力後に別のソフトで調整することになります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li><strong>PDF出力はパーソナルプラン以上（月1,848円〜）で対応</strong>。フリープランと解約後は出力できない</li><li><strong>PDFは「共有」→印刷画面で保存</strong>。「PDFに保存」「背景のグラフィックON」「余白」の3つを確認し、1回目は余白を見比べる</li><li><strong>見た目を崩したくない提出物はPDF、PowerPointで直すならPPTX</strong>。ページを絞って出せるのはPDFの利点</li></ul>
+<p>※本記事の仕様は2026年9月28日にイルシル公式ヘルプ（スライド作成（編集）画面について・プランごとの料金・機能・有料プランを解約する）で確認した表記に基づきます。最新の内容は公式サイトでご確認ください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-cancel/">イルシル解約後もスライドは消えない｜消えるのは退会したとき</a></li><li><a href="../ai-proposal-docs/">提案書作成をAIで時間短縮｜上限は月の生成枚数とやり直しの回数で決まる</a></li><li><a href="../irusiru-powerpoint/">イルシルをパワーポイントに変換できる？出力の条件と崩れる箇所</a></li><li><a href="../slow-proposal-docs/">資料作成に時間がかかる原因を6工程で切り分ける｜改善は生成の前後にある</a></li><li><a href="../irusiru-free-plan/">イルシル無料プランでできること｜月3枚・資料3本の中身と出力の壁</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
