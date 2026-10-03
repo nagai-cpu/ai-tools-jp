@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIで既存記事をリライトする使い方｜記事を丸ごと入れると枠が10倍で減る｜AIツール実用ガイド</title>
+<meta name="description" content="Value AI Writerで公開済みの記事をリライトする3つの方法を公式マニュアルで確認。入力文字数×10の消費を前提に、見出し単位で直す手順と向き不向きを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/ai-article-rewrite/">
+<meta property="og:title" content="AIで既存記事をリライトする使い方｜記事を丸ごと入れると枠が10倍で減る｜AIツール実用ガイド">
+<meta property="og:description" content="Value AI Writerで公開済みの記事をリライトする3つの方法を公式マニュアルで確認。入力文字数×10の消費を前提に、見出し単位で直す手順と向き不向きを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIで既存記事をリライトする使い方｜記事を丸ごと入れると枠が10倍で減る", "description": "Value AI Writerで公開済みの記事をリライトする3つの方法を公式マニュアルで確認。入力文字数×10の消費を前提に、見出し単位で直す手順と向き不向きを整理しました。", "datePublished": "2026-10-04", "dateModified": "2026-10-04", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/ai-article-rewrite/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "リライト機能は無料プランでも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "今回確認した料金表には、プランごとにリライト機能の可否を分ける文言がなく、フリープランで使えるかを明記した文言も確認できませんでした。使える場合でも、フリープランの文字数制限は1万文字（GPT-4o）なので、×10の目安だと入力できるのは月1,000字程度です。"}}, {"@type": "Question", "name": "リライトすると作成可能記事数は減りますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式FAQで記事数として数えると書かれているのは「タイトル、見出しの生成」です。単体リライトや本文の「リライト」ボタンで記事数が減るかどうかは、明記された文言を確認できませんでした。文字数は消費の目安が示されているので、文字数のほうは減ると考えてください。"}}, {"@type": "Question", "name": "ChatGPTに貼ってリライトするのと何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "Value AI Writerのリライトは、見出し・追加共起語・参考文章を入力欄で分けて指定できる点が特徴です。公式サイトは「SEO特化のリライト」と説明していますが、どの程度順位に効くかを示す具体的なデータは確認できませんでした。言い回しを整えるだけなら汎用のAIでも足ります。SEO用に共起語を指定して直したい場合に向いています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AIで既存記事をリライトする使い方｜記事を丸ごと入れると枠が10倍で減る</h1><p class="meta">2026-10-04 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>AIで既存記事をリライトするなら、記事を丸ごと入れずに「順位が伸びない見出し1つ分」だけを入れるのが正解です。</strong> Value AI Writerの公式ユーザーガイドでは、リライトの消費の目安は「リライトする文章」「参考文章」に入れた文字数の10倍とされています。3,000字の記事を丸ごと入れれば3万文字分で、フリープランの月の枠（1万文字・GPT-4o）を1回で超えます。</p>
+<h2 id="既存記事をリライトする3つの方法">既存記事をリライトする3つの方法</h2>
+<p>2026年10月4日に、Value AI Writer byGMO の公式サイトと公式ユーザーガイド（リライト方法、記事インポート方法、記事作成手順、文字数消費量）で確認した内容です。既存記事を直す入口は3つあります。</p>
+<div class="tw"><table><thead><tr><th>方法</th><th>入口</th><th>入力するもの</th><th>結果の受け取り方</th><th>文字数消費の目安（公式）</th><th>向いている場面</th></tr></thead><tbody><tr><td>単体リライト</td><td>コントロールパネルのメニュー「リライト」</td><td>見出し、リライトする文章、追加共起語、参考文章</td><td>表示された文章を「コピー」して自分の記事に貼る</td><td>「リライトする文章」「参考文章」の文字数×10</td><td>1つの見出しの本文だけ直したい</td></tr><tr><td>記事インポート＋編集画面</td><td>メニュー「記事インポート」で記事のURLを入力</td><td>URLと「HTMLで取得」「テキストで取得」の選択</td><td>編集画面で再構築・リライト・追記ができる</td><td>インポート自体の消費は表記が見当たらず確認できず</td><td>見出しの追加や並べ替えまでやり直したい</td></tr><tr><td>生成した記事の本文ボタン</td><td>編集画面の本文下「リライト」ボタン</td><td>共起語と、参考にさせたい文章</td><td>編集画面の本文が書き換わり「保存」で確定</td><td>リライト機能として入力文字数×10</td><td>Value AI Writerで作った記事の手直し</td></tr></tbody></table></div>
+<p>単体リライトのマニュアルには「GPT4換算(GPT3.5の10倍)で文字数を消費します」と書かれています。<strong>この消費量の説明はGPT3.5・GPT4という古いモデル名のまま</strong>で、現在の料金表（GPT-4o、GPT-4.1、Claude4.0、Gemini2.5-Pro）とは表記がそろっていません。現行プランでも同じ倍率なのかは公式の表記からは確認できなかったので、「公式が出している目安」として読んでください。</p>
+<h2 id="使い方の手順-単体リライト">使い方の手順（単体リライト）</h2>
+<p>公式マニュアルの手順は次の4つです。</p>
+<ol><li>契約一覧画面で「コントロールパネル」をクリックする</li><li>メニューの「リライト」をクリックする</li><li>見出し、リライトする文章、追加共起語、参考文章を入れて「リライト」をクリックする</li><li>表示された文章を「コピー」して、リライトする記事に使う</li></ol>
+<p>ここで分かるのは、<strong>単体リライトはWordPressなどの公開記事を直接書き換える機能ではない</strong>ということです。出てきた文章を自分で貼り替える作業が最後に残ります。見出し単位で入れる設計なので、記事全体を1回で直す道具というより、弱い段落を差し替える道具と考えたほうが使いやすいです。</p>
+<p>編集画面で直す場合は、公式マニュアルが「保存を行わず、画面を離れた場合は編集内容が失われてしまいます」と繰り返し注意しています。画面全体の流れと記事数の減り方は<a href="../value-ai-writer-guide/">Value AI Writerの使い方｜1記事は押した瞬間に減る</a>で説明しています。</p>
+<h2 id="判断軸1-入れるのは-直したい見出し1つ分-だけ">判断軸1：入れるのは「直したい見出し1つ分」だけ</h2>
+<p>消費の目安を料金表の文字数制限に当てはめると、1か月に入れられる量の目安は次のとおりです（GPT-4oの枠で計算。×10の倍率が現行プランにも当てはまる前提の試算です）。</p>
+<ul><li>フリー（0円）：1万文字 → 入力1,000字ぶん</li><li>エントリー（840円／月・税込）：2万文字 → 入力2,000字ぶん</li><li>ベーシック（2,800円／月・税込）：6万文字 → 入力6,000字ぶん</li></ul>
+<p>参考文章も同じく10倍で数えられるので、<strong>500字の本文に500字の参考文章を添えると1万文字分</strong>です。フリープランならこれで1か月の枠が埋まります。最初に直すのは、検索順位が伸びていない記事の中でも、内容が古くなった見出しや、検索する人の疑問に答えていない見出し1つに絞るのが現実的です。プランごとの枠と1記事あたりの単価は<a href="../value-ai-writer-pricing/">Value AI Writer料金プラン比較｜月20本までは1記事280円前後で横ばい</a>にまとめています。</p>
+<div class="cta"><div class="cta-h">Value AI Writer<span class="pr">PR</span></div><p class="cta-b">キーワードから見出し構成つきのSEO記事を生成する</p><p class="cta-f">無料トライアルあり</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+87B0TU+1JUK+1HL85U" target="_blank" rel="sponsored nofollow noopener">Value AI Writer の公式サイトを見る</a></div>
+<h2 id="判断軸2-参考文章は-新しい事実-だけを入れる">判断軸2：参考文章は「新しい事実」だけを入れる</h2>
+<p>リライトで記事の中身が良くなるかどうかは、参考文章に何を入れるかで決まります。AIが一般知識で書き直せる言い回しの調整なら、参考文章は空でもかまいません。参考文章に入れる価値があるのは、たとえば次のような情報です。</p>
+<ul><li>料金改定や仕様変更など、公開後に変わった事実</li><li>自分で取った数字や、問い合わせで分かったこと</li><li>公式資料のうち、その見出しで触れたい段落</li></ul>
+<p>参考文章は「その文章をもとに書き直させる材料」なので、長いページを丸ごと貼ると枠だけが減ります。考え方は事前学習と同じで、<a href="../value-ai-writer-pretraining/">Value AI Writerの事前学習の使い方｜貼った文字数×10が消費の目安</a>で詳しく扱っています。</p>
+<h2 id="判断軸3-構成から直したいならインポートを使う">判断軸3：構成から直したいならインポートを使う</h2>
+<p>順位が伸びない原因が文章ではなく<strong>見出しの構成</strong>にある場合、段落を書き直しても効果は限られます。その場合は記事インポートで取り込み、編集画面で見出しを追加・削除・並べ替えてから本文を作り直すほうが筋が通ります。公式サイトでは、インポートした記事を編集画面で「記事の再構築・リライト・追記」ができると説明しています。また、公式サイトの機能比較表（2025年6月の自社調べ）では、記事インポートについて「見出し、本文をすべてインポート可能」と書かれています。</p>
+<p>ただし、<strong>インポートが作成可能記事数を1つ使うのか、文字数を消費するのかは、今回確認したマニュアルと料金表のどこにも書かれていませんでした。</strong> 公式FAQでは「タイトル、見出しの生成までを1記事とみなします」とされているので、取り込んだ記事の見出しを「再生成」した時点で記事数や文字数が動く可能性はあります。最初の1回は、取り込む前後で管理画面の残り記事数と残り文字数をメモしておくと確実です。見出し構成の作り直し方そのものは<a href="../ai-blog-outline/">AIでブログ記事の見出し構成を作る｜3つの作り方の使い分け</a>で整理しています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p>一番の短所は、<strong>記事全体のリライトには向かないこと</strong>です。消費が入力の10倍という目安のため、3,000〜4,000字の記事を通しで直すと、ベーシックでも月の枠の半分以上を1本で使います。公開済み記事が数十本あるサイトで全記事を順番に直す、という使い方は枠の面で合いません。</p>
+<p>次に、<strong>単体リライトの結果は自分で貼り替える必要がある</strong>ことです。マニュアルの手順は「コピー」して使う流れで、公開中の記事へ自動で反映する説明はありません。WordPress連携は、Value AI Writerで作成した記事を投稿する手順として説明されています。</p>
+<p>最後に、AIが書き直した文章には誤りが混ざる可能性があります。公式FAQは、生成された文章に虚偽の内容が含まれるケースがあるとして、公開前に自分で確認することを前提にしています。リライトで新しく入った数字や固有名詞は、元の資料と突き合わせてから公開してください。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. リライト機能は無料プランでも使えますか？</strong> 今回確認した料金表には、プランごとにリライト機能の可否を分ける文言がなく、フリープランで使えるかを明記した文言も確認できませんでした。使える場合でも、フリープランの文字数制限は1万文字（GPT-4o）なので、×10の目安だと入力できるのは月1,000字程度です。</p>
+<p><strong>Q. リライトすると作成可能記事数は減りますか？</strong> 公式FAQで記事数として数えると書かれているのは「タイトル、見出しの生成」です。単体リライトや本文の「リライト」ボタンで記事数が減るかどうかは、明記された文言を確認できませんでした。文字数は消費の目安が示されているので、文字数のほうは減ると考えてください。</p>
+<p><strong>Q. ChatGPTに貼ってリライトするのと何が違いますか？</strong> Value AI Writerのリライトは、見出し・追加共起語・参考文章を入力欄で分けて指定できる点が特徴です。公式サイトは「SEO特化のリライト」と説明していますが、どの程度順位に効くかを示す具体的なデータは確認できませんでした。言い回しを整えるだけなら汎用のAIでも足ります。SEO用に共起語を指定して直したい場合に向いています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>既存記事のリライトは、記事を丸ごと入れずに伸びない見出し1つ分だけを入れる（消費の目安は入力文字数×10）</li><li>参考文章には公開後に変わった事実や自分の数字だけを入れ、構成から直すなら記事インポートを使う</li><li>インポートやリライトで記事数が減るかは公式に明記がないため、初回は残り記事数と残り文字数をメモして確かめる</li></ul>
+<p>※本記事の仕様は2026年10月4日にValue AI Writer byGMO公式サイトと公式ユーザーガイド（リライト方法・記事インポート方法・記事作成手順・文字数消費量）で確認した表記に基づきます。最新の内容は公式サイトでご確認ください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-tools-for-small-business/">中小企業向けAIツール無料比較｜4つの無料枠は止まる場所が全部違う</a></li><li><a href="../value-ai-writer-pricing/">Value AI Writer料金プラン比較｜月20本までは1記事280円前後で横ばい</a></li><li><a href="../seo-writing-outsourcing-cost/">SEO記事の外注費用をAIに置き換える｜安くなる境目は3,300字前後</a></li><li><a href="../value-ai-writer-pretraining/">Value AI Writerの事前学習の使い方｜貼った文字数×10が消費の目安</a></li><li><a href="../ai-writing-char-limit/">AI記事作成の文字数が無料プランで足りない｜選ぶAIで枠が倍になる</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+</body>
+</html>
