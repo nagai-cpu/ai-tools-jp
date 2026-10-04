@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字起こしコスト計算機｜AIツール実用ガイド</title>
+<meta name="description" content="月の会議時間を入れるだけで、文字起こしを外注した場合の費用と、AIツールの無料枠で足りるかどうかを判定します。料金は公式サイトで確認した実数です。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/tools/transcription-cost.html">
+<meta property="og:title" content="文字起こしコスト計算機">
+<meta property="og:description" content="月の会議時間から、外注費用とAIツールの必要プランを判定します。">
+<meta property="og:type" content="website">
+<style>
+:root{
+--bg:#ffffff;--panel:#ffffff;--soft:#f6f8fa;--fg:#1a1d21;--muted:#5c6570;
+--line:#e4e7eb;--accent:#0f6fd6;--accent-fg:#ffffff;
+--ok:#2f6b4f;--ok-soft:#e8f2ec;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);line-height:1.8;font-size:16.5px;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-variant-numeric:tabular-nums;overflow-x:hidden}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
+.lead{color:var(--muted);font-size:.95rem;margin-bottom:1.6rem}
+h2{font-size:1.2rem;margin:2.4rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+p{margin:0 0 1.05rem}
+a{color:var(--accent)}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+form{background:var(--soft);border:1px solid var(--line);border-radius:11px;
+padding:1.2rem 1.15rem;display:flex;flex-direction:column;gap:1.1rem}
+.field{display:flex;flex-direction:column;gap:.35rem}
+label{font-weight:700;font-size:.92rem}
+.hint{font-size:.78rem;color:var(--muted);line-height:1.6}
+.row{display:flex;align-items:center;gap:.6rem}
+input[type=number]{flex:1;min-width:0;font:inherit;font-size:1.05rem;padding:.55rem .7rem;
+border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--fg)}
+input[type=number]:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.unit{color:var(--muted);font-size:.9rem;white-space:nowrap}
+#out{margin-top:1.9rem}
+.verdict{border:1px solid var(--line);border-left:4px solid var(--accent);
+background:var(--panel);border-radius:0 9px 9px 0;padding:1.05rem 1.15rem;margin-bottom:1.2rem}
+.verdict h3{font-size:1.05rem;margin-bottom:.4rem}
+.verdict .sub{font-size:.88rem;color:var(--muted)}
+.verdict.free{border-left-color:var(--ok)}
+.verdict.free h3{color:var(--ok)}
+.tw{overflow-x:auto;margin:0 0 1.3rem}
+table{border-collapse:collapse;width:100%;min-width:30rem;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+td.n{white-space:nowrap}
+tr.pick td{background:var(--ok-soft);font-weight:600}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.93rem;padding:.6rem 1.15rem;border-radius:7px;margin-top:.3rem}
+.note{font-size:.82rem;color:var(--muted);line-height:1.75}
+footer.site{margin-top:3.5rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+@media(max-width:600px){body{font-size:16px}h1{font-size:1.42rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+
+<div class="wrap">
+<h1>文字起こしコスト計算機</h1>
+<p class="lead">月にどれだけ録音するかを入れると、外注した場合の費用と、AIツールのどのプランで足りるかが出ます。</p>
+
+<div class="pr-note">このページにはアフィリエイト広告（PR）を含みます。料金は各サービスの公式ページで確認した実数で、報酬額で順位を変えることはしていません。</div>
+
+<form id="f" autocomplete="off">
+  <div class="field">
+    <label for="total">月に文字起こししたい時間の合計</label>
+    <div class="row">
+      <input id="total" type="number" min="0" max="10000" step="10" value="240" inputmode="numeric">
+      <span class="unit">分 / 月</span>
+    </div>
+    <span class="hint">例：週1回の1時間会議なら月240分。60分の打ち合わせが月4回なら240分です。</span>
+  </div>
+  <div class="field">
+    <label for="each">1回あたりの長さ</label>
+    <div class="row">
+      <input id="each" type="number" min="1" max="600" step="5" value="60" inputmode="numeric">
+      <span class="unit">分 / 回</span>
+    </div>
+    <span class="hint">いちばん長い回で入れてください。無料プランは「1回あたりの上限」で先に引っかかります。</span>
+  </div>
+</form>
+
+<div id="out" aria-live="polite"></div>
+
+<h2>この計算に使っている数字</h2>
+<p class="note">
+すべて各サービスの公式ページで確認した実数です（2026年10月時点）。料金は変更されることがあるので、申し込み前に公式サイトでご確認ください。<br><br>
+<strong>Notta</strong>：フリーは月120分・1回3分。プレミアムは月1,800分・1回5時間で年額14,220円（月あたり1,185円）、月払いなら1,980円。ビジネスは文字起こし時間が無制限で年額30,096円（月あたり2,508円）。<br>
+<strong>LINE WORKS AiNote</strong>：フリーは月300分・1回60分・データ保管1年。ソロは月600分で年額契約1,440円/月、月額契約1,600円/月。<br>
+<strong>外注</strong>：クラウドワークスの発注相場ページに掲載されている「インタビュー60分 5,000円〜」を基準にしています。
+</p>
+
+<h2>もっと詳しく</h2>
+<p class="note">
+判断の根拠や、それぞれの正直な短所は記事にまとめています。<br>
+・<a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜無料で残っているのは4つ</a><br>
+・<a href="../transcription-outsourcing-cost/">文字起こしの外注費用の相場と、自分でやる場合の分岐点</a><br>
+・<a href="../notta-free-limits/">Nottaの無料プランはどこまで使えるか</a>
+</p>
+</div>
+
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、一部リンクから登録があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。</p>
+<p><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+</div></footer>
+
+<script>
+(function(){
+  var AFF = "https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ";
+  var OUTSOURCE_PER_60MIN = 5000;
+
+  // 公式ページで確認した実数のみ。perMonth は年額契約の月あたり。
+  var PLANS = [
+    {n:"Notta フリー",        mo:120,  each:3,   perMonth:0,    year:0,      aff:true},
+    {n:"AiNote フリー",       mo:300,  each:60,  perMonth:0,    year:0,      aff:false},
+    {n:"AiNote ソロ",         mo:600,  each:60,  perMonth:1440, year:17280,  aff:false},
+    {n:"Notta プレミアム",    mo:1800, each:300, perMonth:1185, year:14220,  aff:true},
+    {n:"Notta ビジネス",      mo:Infinity, each:300, perMonth:2508, year:30096, aff:true}
+  ];
+
+  var yen = function(n){ return "¥" + n.toLocaleString("ja-JP"); };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); };
+
+  function render(){
+    var total = Math.max(0, Number(document.getElementById("total").value) || 0);
+    var each  = Math.max(1, Number(document.getElementById("each").value) || 1);
+    var out = document.getElementById("out");
+
+    if (total === 0) { out.innerHTML = ""; return; }
+
+    var fits = PLANS.filter(function(p){ return total <= p.mo && each <= p.each; });
+    var pick = fits.length ? fits[0] : null;
+
+    // 外注費：60分あたりの相場で按分
+    var outsourceYear = Math.round(total / 60 * OUTSOURCE_PER_60MIN) * 12;
+
+    var html = "";
+
+    if (!pick) {
+      html += '<div class="verdict"><h3>この条件に収まる定額プランがありません</h3>'
+            + '<p class="sub">月' + total + '分・1回' + each + '分は、ここで比べている範囲を超えています。'
+            + '上位プランの追加オプションを公式で確認してください。</p></div>';
+    } else if (pick.perMonth === 0) {
+      html += '<div class="verdict free"><h3>' + esc(pick.n) + ' で足ります。費用は0円です</h3>'
+            + '<p class="sub">月' + total + '分・1回' + each + '分なら、無料プランの範囲内です。'
+            + '同じ内容を外注すると年' + yen(outsourceYear) + 'かかる計算になります。</p>'
+            + '<p class="sub" style="margin-top:.5rem">ただし枠の大きさだけでは決まりません。'
+            + 'ZoomやTeamsの会議に同席させて自動で議事録にしたい場合、AiNoteフリーは公式の料金表に可否の明記がなく、'
+            + '明記があるのはNottaの無料プランのほうです（月120分・1回3分）。'
+            + '<a href="../ai-transcription-free-comparison/">4つの無料プランの違い</a>で確認してください。</p></div>';
+    } else {
+      var diff = outsourceYear - pick.year;
+      html += '<div class="verdict"><h3>' + esc(pick.n) + 'が必要です（年' + yen(pick.year) + '）</h3>'
+            + '<p class="sub">月' + total + '分・1回' + each + '分だと無料枠では足りません。'
+            + (diff > 0
+                ? '同じ量を外注すると年' + yen(outsourceYear) + 'なので、<strong>年' + yen(diff) + '安くなります</strong>。'
+                : '外注だと年' + yen(outsourceYear) + 'で、こちらのほうが安く済みます。')
+            + '</p></div>';
+    }
+
+    html += '<div class="tw"><table><thead><tr>'
+          + '<th>プラン</th><th>月の上限</th><th>1回の上限</th><th>年額</th><th>判定</th>'
+          + '</tr></thead><tbody>';
+    PLANS.forEach(function(p){
+      var ok = total <= p.mo && each <= p.each;
+      var why = ok ? "足りる"
+              : (each > p.each ? "1回" + p.each + "分を超過" : "月の上限を超過");
+      html += '<tr' + (pick && p.n === pick.n ? ' class="pick"' : '') + '>'
+            + '<td>' + esc(p.n) + '</td>'
+            + '<td class="n">' + (p.mo === Infinity ? "無制限" : p.mo + "分") + '</td>'
+            + '<td class="n">' + p.each + '分</td>'
+            + '<td class="n">' + (p.year ? yen(p.year) : "0円") + '</td>'
+            + '<td class="n">' + why + '</td></tr>';
+    });
+    html += '<tr><td>外注する</td><td class="n">—</td><td class="n">—</td><td class="n">'
+          + yen(outsourceYear) + '</td><td class="n">60分5,000円で換算</td></tr>';
+    html += '</tbody></table></div>';
+
+    if (pick && pick.aff) {
+      html += '<a class="btn" href="' + AFF + '" target="_blank" rel="sponsored nofollow noopener">'
+            + 'Notta の公式サイトで料金を確認する</a>';
+    }
+    out.innerHTML = html;
+  }
+
+  document.getElementById("f").addEventListener("input", render);
+  render();
+})();
+</script>
+</body>
+</html>
