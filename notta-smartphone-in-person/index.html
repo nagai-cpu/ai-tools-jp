@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nottaをスマホで対面会議に使う方法｜圏外では録音開始が使えない｜AIツール実用ガイド</title>
+<meta name="description" content="Nottaのスマホアプリで対面会議を文字起こしする2つの方法を解説。圏外・着信・無料プランの1回3分で止まる条件を公式ヘルプで確認しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notta-smartphone-in-person/">
+<meta property="og:title" content="Nottaをスマホで対面会議に使う方法｜圏外では録音開始が使えない｜AIツール実用ガイド">
+<meta property="og:description" content="Nottaのスマホアプリで対面会議を文字起こしする2つの方法を解説。圏外・着信・無料プランの1回3分で止まる条件を公式ヘルプで確認しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Nottaをスマホで対面会議に使う方法｜圏外では録音開始が使えない", "description": "Nottaのスマホアプリで対面会議を文字起こしする2つの方法を解説。圏外・着信・無料プランの1回3分で止まる条件を公式ヘルプで確認しました。", "datePublished": "2026-10-07", "dateModified": "2026-10-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-smartphone-in-person/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "電波のない場所でもNottaのアプリで文字起こしできますか。", "acceptedAnswer": {"@type": "Answer", "text": "アプリの「録音開始」はできません。公式ヘルプに、完全にネットワークがない場合は文字起こしを行うことができないとあります。スマホ標準の録音アプリで録り、通信できる場所に戻ってからNottaに取り込む方法が案内されています。"}}, {"@type": "Question", "name": "録音中に電話がかかってきたらどうなりますか。", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプでは、音声通話やビデオ通話の間は通話アプリにマイクが優先して割り当てられ、Nottaは録音できない場合があるとされています。録音が途中で止まる最も一般的な原因として挙げられているので、大事な会議では通話の予定がない端末を使うのが安全です。"}}, {"@type": "Question", "name": "無料プランで30分の対面会議を文字起こしできますか。", "acceptedAnswer": {"@type": "Answer", "text": "通しではできません。無料プランは1回3分までで、アプリで録っても、録音ファイルを取り込んでも同じです。30分の会議を1本の記録にするにはプレミアム以上が必要です。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Nottaをスマホで対面会議に使う方法｜圏外では録音開始が使えない</h1><p class="meta">2026-10-07 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Nottaをスマホで対面会議に使う方法は2つあり、<strong>電波が安定している会議室ならアプリの「録音開始」、電波が弱い場所ならスマホ標準の録音アプリで録ってあとから取り込む</strong>のが安全です。公式ヘルプによると、アプリの「録音開始」はインターネット接続が必要で、圏外では文字起こしができません。また、どちらの方法でも無料プランは1回3分までです。</p>
+<h2 id="スマホで対面会議を録る2つの方法">スマホで対面会議を録る2つの方法</h2>
+<div class="tw"><table><thead><tr><th>項目</th><th>アプリで「録音開始」</th><th>標準の録音アプリ→Nottaに取り込み</th></tr></thead><tbody><tr><td>ネット接続</td><td>録音中ずっと必要</td><td>録音中は不要。取り込むときに必要</td></tr><tr><td>その場で文字を見られるか</td><td>見られる（リアルタイム文字起こし）</td><td>見られない。取り込み後に文字になる</td></tr><tr><td>止まりやすい原因</td><td>電波の弱さ、通話などによるマイクの取り合い</td><td>公式ヘルプに記載なし</td></tr><tr><td>消費する枠</td><td>文字起こし時間</td><td>文字起こし時間＋ファイルインポート1回</td></tr><tr><td>無料プランで通せる長さ</td><td>1回3分まで</td><td>1回3分まで</td></tr><tr><td>向いている場所</td><td>Wi-Fiのある社内会議室</td><td>地下・客先・移動の多い現場</td></tr></tbody></table></div>
+<p>どちらの方法も<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のアプリ（iOS・Android）から使えます。公式ヘルプ「録音・リアルタイム文字起こし」の対象プランは「すべてのプランで利用可能」です。</p>
+<h2 id="方法1-アプリの-録音開始-で録る">方法1：アプリの「録音開始」で録る</h2>
+<p>公式ヘルプの手順です。</p>
+<ol><li>録音の前に、会議で話される言語を「発話言語」として設定する</li><li>アプリの「＋」ボタンをタップし、出てきた「インポート」「録音開始」「Web会議の文字起こし」から「録音開始」を選ぶ</li><li>話した内容がその場で文字になり、語気や間（ま）に合わせて自動で改行される</li><li>大事な発言のところで「重要」アイコンを押すとブックマークが付く</li><li>「⏸」で一時停止・再開、「⏹」で終了して保存</li></ol>
+<p>録音中の画面には、文字起こしを別の人にリアルタイムで見せる「ライブ配信」のリンクや、ほかのアプリを使いながら小さな窓で文字を表示する「キャプション」もあります。対面の会議で、離れた席の人や途中参加の人に画面を共有したいときに使えます。</p>
+<h3 id="圏外では使えず-電波が弱いと途中で止まることがある">圏外では使えず、電波が弱いと途中で止まることがある</h3>
+<p>ここが対面会議でいちばん困るところです。公式ヘルプ「オフライン時にNottaモバイルアプリで録音・文字起こしはできますか？」には、「録音開始」機能は録音をサーバーにアップロードして処理する仕組みのため、インターネット接続が必要だと書かれています。</p>
+<ul><li>完全にネットワークがない場合：文字起こしを行うことができない</li><li>電波が弱い・不安定な場合：結果の遅れ、文字起こしの中断、結果がまったく得られないことがある</li></ul>
+<p>地下の会議室、ビルの奥まった応接室、移動中の車内などは、この条件に当たる可能性があります。ヘルプ自身が、ネットワーク環境が悪い場所では<strong>スマホ標準の録音アプリで録り、あとでNottaにアップロードする</strong>方法を勧めています。それが次の方法2です。</p>
+<h3 id="着信や通話でマイクが取られる">着信や通話でマイクが取られる</h3>
+<p>もうひとつの止まる原因が、マイクの取り合いです。公式ヘルプ「Nottaモバイルアプリでの録音が途中で停止してしまうのはなぜですか？」は、最も一般的な原因を「マイクが他のアプリによって使用されているため」としています。挙がっている例は次のとおりです。</p>
+<ul><li>音声通話やビデオ通話（システムが通話アプリにマイクを優先して割り当てる）</li><li>SiriやGoogleアシスタントなどの音声アシスタント</li><li>SNSアプリのボイスメッセージなど、バックグラウンドでマイクを使うアプリ</li><li>ボイスメモやカメラなど、ほかの録音・撮影アプリ</li></ul>
+<p>会議中に電話を取ると、そこで録音が止まる可能性があるということです。着信を避けようとして機内モードにすると、今度は通信が切れてしまい、方法1とは両立しません。機内モードのままWi-Fiだけをオンにできる機種もありますが、会議室のWi-Fiが安定していることが前提です。会議の前に、通話の予定がない端末を録音用に使うか、方法2に切り替えるほうが確実です。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="方法2-標準の録音アプリで録って取り込む">方法2：標準の録音アプリで録って取り込む</h2>
+<p>電波を気にしなくてよいのがこの方法です。iPhoneの場合、公式ヘルプ「iPhoneのボイスメモから音声データを取り込む」の流れは次のとおりです。</p>
+<ol><li>「ボイスメモ」で会議を録音する</li><li>録音データの横の「⋯」をタップし、「共有」を選ぶ</li><li>共有先に「Notta」を選ぶと、Nottaにアップロードされて文字起こしが始まる</li></ol>
+<p>この方法ではファイルを1つ取り込むたびにファイルインポートの回数も1回減ります（無料は月50個、プレミアムは月100個）。iPhone標準の文字起こし機能との使い分けは<a href="../transcription-app-iphone/">iPhoneの文字起こしアプリは無料で足りる？</a>で比べています。</p>
+<p>短所は、会議中に文字を見られないことです。その場で発言を確かめながら進めたい会議なら方法1、記録が残ることを優先するなら方法2、と考えると選びやすくなります。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-会議室の電波が安定しているか">1. 会議室の電波が安定しているか</h3>
+<p>方法1は録音中ずっと通信します。社内のWi-Fiが安定した会議室なら方法1、客先や地下なら方法2です。初めての場所で判断がつかないなら、方法2で録っておけば録音そのものを失うことはありません。</p>
+<h3 id="2-会議が3分を超えるか">2. 会議が3分を超えるか</h3>
+<p>無料プランは、どちらの方法でも1回3分までしか文字起こしできません。公式の料金ページのフリー欄に「1回につき3分まで文字起こし可能」とあります。30分の対面会議を通しで文字にするならプレミアム以上（1回5時間まで）です。どのくらいの使い方から有料に払う価値があるかは<a href="../notta-paid-worth-it/">Notta有料は月何時間から価値がある？</a>で計算しています。</p>
+<h3 id="3-スマホを話す人の近くに置けるか">3. スマホを話す人の近くに置けるか</h3>
+<p>公式ヘルプ「文字起こし（音声認識）の精度を上げるためには？」は、周りの雑音を減らす、マイクの正面で話す、2人以上で同時に発言しない、なるべく指向性のあるマイクを使って発言者との距離を近くする、といった点を挙げています。長机の端にスマホを1台置くだけでは、遠い席の声が拾いにくくなります。置き場所と外付けマイクの考え方は<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ</a>にまとめました。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>自由な議論ほど誤認識が増える</strong>：公式ヘルプ「同時に発言した場合は認識できますか？」は、複数の人が同時に話すと音が重なって誤認識になり、自由で活発な会議では、はっきり話しても誤認識が増える傾向があるとしています。対面の会議は相づちや割り込みが多いので、Web会議より崩れやすいと考えておくのが現実的です。</p>
+<p><strong>音声だけ残さない使い方はできない</strong>：同じ「録音・リアルタイム文字起こし」のヘルプに、音声を録音せずに文字起こしだけを行うことはできず、テキストと音声はすべてアカウントに保存されると書かれています。対面の会議を録るときは、録音することを参加者に伝えて了承を得ておきましょう。</p>
+<p><strong>話者の分かれ方は録り方で変わる</strong>：アプリの録音と、ファイルの取り込みでは、話者識別の条件が違います。人数が合わないときの切り分けは<a href="../notta-speaker-separation/">Nottaで話者分離ができない原因</a>で経路別に整理しています。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 電波のない場所でもNottaのアプリで文字起こしできますか。</strong> アプリの「録音開始」はできません。公式ヘルプに、完全にネットワークがない場合は文字起こしを行うことができないとあります。スマホ標準の録音アプリで録り、通信できる場所に戻ってからNottaに取り込む方法が案内されています。</p>
+<p><strong>Q. 録音中に電話がかかってきたらどうなりますか。</strong> 公式ヘルプでは、音声通話やビデオ通話の間は通話アプリにマイクが優先して割り当てられ、Nottaは録音できない場合があるとされています。録音が途中で止まる最も一般的な原因として挙げられているので、大事な会議では通話の予定がない端末を使うのが安全です。</p>
+<p><strong>Q. 無料プランで30分の対面会議を文字起こしできますか。</strong> 通しではできません。無料プランは1回3分までで、アプリで録っても、録音ファイルを取り込んでも同じです。30分の会議を1本の記録にするにはプレミアム以上が必要です。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>電波が安定した会議室ならアプリの「録音開始」、圏外や電波の弱い場所なら標準の録音アプリで録って取り込む</li><li>「録音開始」は通話や音声アシスタントにマイクを取られると止まる可能性がある。機内モードにすると通信も切れる</li><li>無料プランはどちらの方法でも1回3分まで。対面会議を通しで残すならプレミアム以上</li></ul>
+<p>料金と機能は変更されることがあります。契約前に公式サイトの最新情報を確認してください。この記事の内容は2026年10月7日に公式の料金ページとヘルプセンターで確認したものです。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-paid-worth-it/">Notta有料は月何時間から価値がある？時間より「1回3分」で決まる</a></li><li><a href="../notta-minutes-template/">Nottaの議事録テンプレートの使い方｜自作の型は無料0個・有料5個まで</a></li><li><a href="../ai-tools-for-small-business/">中小企業向けAIツール無料比較｜4つの無料枠は止まる場所が全部違う</a></li><li><a href="../transcription-outsourcing-cost/">文字起こし外注の費用相場と自分でやる場合｜60分の音声が年3本で逆転</a></li><li><a href="../transcription-app-iphone/">iPhoneの文字起こしアプリは無料で足りる？会議なら標準のメモが先</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+</body>
+</html>
