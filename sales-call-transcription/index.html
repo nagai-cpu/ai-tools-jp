@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>営業の商談を録音して文字起こし・議事録を自動化する方法｜CRM連携はビジネスから｜AIツール実用ガイド</title>
+<meta name="description" content="商談の録音から議事録までを自動にしたい営業向けに、Nottaのプラン別にできることを公式料金ページで整理。CRMへ自動転送できるプランと録り方3通りも解説。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/sales-call-transcription/">
+<meta property="og:title" content="営業の商談を録音して文字起こし・議事録を自動化する方法｜CRM連携はビジネスから｜AIツール実用ガイド">
+<meta property="og:description" content="商談の録音から議事録までを自動にしたい営業向けに、Nottaのプラン別にできることを公式料金ページで整理。CRMへ自動転送できるプランと録り方3通りも解説。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "営業の商談を録音して文字起こし・議事録を自動化する方法｜CRM連携はビジネスから", "description": "商談の録音から議事録までを自動にしたい営業向けに、Nottaのプラン別にできることを公式料金ページで整理。CRMへ自動転送できるプランと録り方3通りも解説。", "datePublished": "2026-10-08", "dateModified": "2026-10-08", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/sales-call-transcription/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "営業の商談を無料で文字起こしできますか。", "acceptedAnswer": {"@type": "Answer", "text": "Nottaのフリープランは月120分まで使えますが、1回3分までです。数分の聞き取りメモなら無料で足りますが、30分以上の商談を通しで文字にするにはプレミアム以上が必要です。無料で何ができるかは[Notta無料プランの制限](../notta-free-limits/)にまとめています。"}}, {"@type": "Question", "name": "NottaとSalesforceを連携するにはどのプランが必要ですか。", "acceptedAnswer": {"@type": "Answer", "text": "料金ページでは、CRM連携はビジネスプランに追加される機能として「CRM、Zapier等の連携」と記載されています。プレミアムとフリーの欄には記載がありません。"}}, {"@type": "Question", "name": "商談相手に録音していることは伝えるべきですか。", "acceptedAnswer": {"@type": "Answer", "text": "Notta公式の記事も、参加者に事前に伝えるよう案内しています。Botを使うかBotなし録音にするかにかかわらず、商談の冒頭で録音の目的を伝えて了承を得ておくのが無難です。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">営業の商談を録音して文字起こし・議事録を自動化する方法｜CRM連携はビジネスから</h1><p class="meta">2026-10-08 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、商談の録音から議事録までを自動にするだけならNottaのプレミアムで足ります。<strong>議事録をSalesforceやHubSpotに自動で残したいなら、CRM連携が入っているビジネス以上</strong>が必要です。無料プランは1回3分までなので、30分の商談はそのままでは文字にできません。まず「議事録を作る」のか「CRMに入れる」のかを分けて考えてください。</p>
+<h2 id="プラン別に商談でできること-2026年10月8日時点">プラン別に商談でできること（2026年10月8日時点）</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式料金ページで確認した内容です。料金は税込です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>フリー</th><th>プレミアム</th><th>ビジネス</th></tr></thead><tbody><tr><td>料金（月払い／年払いの月額）</td><td>￥0</td><td>￥1,980／￥1,185</td><td>￥4,180／￥2,508</td></tr><tr><td>1回の文字起こし</td><td>3分まで</td><td>5時間まで</td><td>5時間まで</td></tr><tr><td>文字起こし時間</td><td>120分/月</td><td>1,800分/月</td><td>無制限</td></tr><tr><td>AI要約</td><td>10回/月</td><td>100回/月</td><td>200回/月（1アカウントあたり）</td></tr><tr><td>CRM連携</td><td>―</td><td>―</td><td>料金ページのプラン説明に「CRM、Zapier等の連携」と記載</td></tr><tr><td>向いている人</td><td>数分の聞き取りメモ</td><td>商談の議事録を自分で作る個人の営業</td><td>議事録をCRMに残すチーム</td></tr></tbody></table></div>
+<p>料金ページのビジネス欄は「すべてのプレミアム機能＋」として「Web会議の録画」「セキュリティ管理」「利用状況レポート」「CRM、Zapier等の連携」を挙げています。プレミアムとフリーの欄にはCRMの記載がありません。連携先の一覧には、Salesforce、HubSpot、Pipedrive、Zoho CRM、Zendesk Sell、Salesflare、Freshsalesが並んでいます。</p>
+<h2 id="商談の録り方は3通り">商談の録り方は3通り</h2>
+<h3 id="オンライン商談はBotかBotなし録音">オンライン商談はBotかBotなし録音</h3>
+<p>Zoom・Teams・Google Meetの商談は、Notta Botを会議に参加させるのが基本です。Googleカレンダーなどとつなぐと、予定に入っている会議へBotが自動で参加します。Zoomでの入れ方と、Botが入れない条件は<a href="../notta-zoom-integration/">NottaでZoom会議を自動で文字起こしする方法</a>にまとめました。</p>
+<p>商談で気になるのは、<strong>Botが会議の参加者の1人として入る</strong>ことです。Notta公式のブログ記事には「Zoom会議の参加者には事前にNotta Botを使うことを伝えておきましょう」とあります。相手にBotを見せたくない場合は、デスクトップ版のBotなし録音でPCの音声を直接録る方法があります。ただし、どちらの方法でも録音することは相手に伝えておくのが前提です。</p>
+<h3 id="対面の商談はスマホで録る">対面の商談はスマホで録る</h3>
+<p>訪問先での商談は、スマホのNottaアプリで録音します。録音開始にはネット接続が必要なので、電波の弱い会議室では標準の録音アプリで録っておき、あとでファイルとして取り込むほうが確実です。机の上のどこに置くと聞き取りやすいかは<a href="../notta-smartphone-in-person/">Nottaをスマホで使って対面の会議を文字起こしする</a>で書いています。</p>
+<h3 id="電話の商談">電話の商談</h3>
+<p>今回確認した公式の料金ページと連携ページには、電話の通話をそのまま録る機能の説明がありませんでした。電話商談は、通話を別の手段で録音してから音声ファイルを取り込む流れになります。録音の方法は端末によって異なるので、ここでは扱いません。</p>
+<h2 id="議事録を-商談の型-で出す">議事録を「商談の型」で出す</h2>
+<p>文字起こしができたら、AI要約で議事録にします。Nottaには既定の要約テンプレートがあり、営業向けに「商談」のほか「BANT」「MEDDIC」などの型が用意されています。同じ文字起こしからテンプレートを変えて要約を作り直すと、前の要約は消えずに上へ追加されます。ただし、そのたびにAI要約の回数を1回使います。</p>
+<p>社内で決まった報告項目（顧客の課題・予算・次回アクションなど）があるなら、自分で見出しを決めるカスタムテンプレートを使います。作れる数はプランで違うので、詳しくは<a href="../notta-minutes-template/">Nottaの議事録テンプレートの使い方</a>を見てください。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="CRMに自動で残す-ビジネス以上">CRMに自動で残す（ビジネス以上）</h2>
+<p>Nottaの連携ページでは、Salesforce・HubSpotともに「文字起こしとAI要約を転送します」と説明されています。Salesforceについては、2026年3月31日付の公式の更新情報で次のように強化されました。</p>
+<ul><li>文字起こしをSalesforceの「活動の記録」に同期できる</li><li>Salesforceの「取引先」への関連付けに対応</li><li>操作は「ノート詳細」→「外部サービスに同期」→「CRMに同期」→「Salesforce」</li></ul>
+<p>商談後にCRMを開いて議事録を貼り付ける作業が、Nottaの画面から送る操作に置き換わります。営業が5人いて毎日2件ずつ商談するなら、貼り付けは1日10回です。この手間をなくすかどうかが、プレミアムとビジネスの差額を払うかどうかの判断になります。</p>
+<p>公式には「Sales Agent」という営業向けのページもあります。会話をリアルタイムで分析して回答候補を出す「ライブナビ」、CRMへの反映、商談の分析レポートが紹介されています。ただし、<strong>どのプランで使えるかはこのページにも料金ページにも書かれていませんでした</strong>。使いたい場合は、契約前に営業窓口で確認してください。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-商談の議事録を誰が使うか">1. 商談の議事録を誰が使うか</h3>
+<p>自分の振り返りと上司への報告だけなら、プレミアムで足ります。要約をコピーして日報やCRMに貼れば済むからです。チームで顧客ごとに議事録を積み上げたいなら、CRMへ転送できるビジネスを検討します。</p>
+<h3 id="2-月の商談時間が30時間を超えるか">2. 月の商談時間が30時間を超えるか</h3>
+<p>プレミアムの1,800分は30時間です。1時間の商談を週に8本こなすと、月30時間をすぐ超えます。プレミアムは単月で時間だけを追加購入できないので、超えそうならビジネスです。何時間使うと有料の元が取れるかは<a href="../notta-paid-worth-it/">Notta有料は月何時間から価値がある？</a>で計算しています。</p>
+<h3 id="3-相手に録音をどう伝えるか">3. 相手に録音をどう伝えるか</h3>
+<p>取引先によっては、Botが会議に入ることを嫌がる場合があります。商談の冒頭で「議事録のために録音してよいか」を聞く運用を先に決めてください。断られたときに手書きのメモに戻せるかどうかも、ツール選びと同じくらい大事です。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>CRM連携はビジネス以上</strong>。料金ページのプレミアム欄にCRM連携の記載はなく、個人契約では要約を手で貼ることになる</li><li><strong>無料プランは1回3分まで</strong>。30分の商談を通しで文字にして試すには足りない</li><li><strong>Botは会議の参加者として入る</strong>。相手に見せずに録るBotなし録音は、デスクトップ版で使う機能</li><li><strong>AI要約は商談の言葉をそのまま信じる</strong>。金額・日付・固有名詞の聞き違いは要約にも残るので、見積金額や納期は録音で確認し直す必要がある</li><li><strong>Sales Agentの対象プランは公開されていない</strong>。導入前に問い合わせが必要</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 営業の商談を無料で文字起こしできますか。</strong> Nottaのフリープランは月120分まで使えますが、1回3分までです。数分の聞き取りメモなら無料で足りますが、30分以上の商談を通しで文字にするにはプレミアム以上が必要です。無料で何ができるかは<a href="../notta-free-limits/">Notta無料プランの制限</a>にまとめています。</p>
+<p><strong>Q. NottaとSalesforceを連携するにはどのプランが必要ですか。</strong> 料金ページでは、CRM連携はビジネスプランに追加される機能として「CRM、Zapier等の連携」と記載されています。プレミアムとフリーの欄には記載がありません。</p>
+<p><strong>Q. 商談相手に録音していることは伝えるべきですか。</strong> Notta公式の記事も、参加者に事前に伝えるよう案内しています。Botを使うかBotなし録音にするかにかかわらず、商談の冒頭で録音の目的を伝えて了承を得ておくのが無難です。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>商談の議事録を自分で作るだけならプレミアム、CRMに自動で残すならビジネス以上</li><li>無料プランは1回3分までなので、商談1本の試用にはならない</li><li>相手にBotを見せたくないならデスクトップ版のBotなし録音。どちらの方法でも録音することは相手に伝える</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-paid-worth-it/">Notta有料は月何時間から価値がある？時間より「1回3分」で決まる</a></li><li><a href="../notta-smartphone-in-person/">Nottaをスマホで対面会議に使う方法｜圏外では録音開始が使えない</a></li><li><a href="../notta-minutes-template/">Nottaの議事録テンプレートの使い方｜自作の型は無料0個・有料5個まで</a></li><li><a href="../ai-tools-for-small-business/">中小企業向けAIツール無料比較｜4つの無料枠は止まる場所が全部違う</a></li><li><a href="../transcription-outsourcing-cost/">文字起こし外注の費用相場と自分でやる場合｜60分の音声が年3本で逆転</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+</body>
+</html>
