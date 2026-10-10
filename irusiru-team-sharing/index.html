@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ｜AIツール実用ガイド</title>
+<meta name="description" content="イルシルのスライドをチームで共有・編集したい人向けに、メンバー招待ができるプラン、チームフォルダの4つの権限、招待の期限と注意点を公式ヘルプの記載で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/irusiru-team-sharing/">
+<meta property="og:title" content="イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ｜AIツール実用ガイド">
+<meta property="og:description" content="イルシルのスライドをチームで共有・編集したい人向けに、メンバー招待ができるプラン、チームフォルダの4つの権限、招待の期限と注意点を公式ヘルプの記載で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ", "description": "イルシルのスライドをチームで共有・編集したい人向けに、メンバー招待ができるプラン、チームフォルダの4つの権限、招待の期限と注意点を公式ヘルプの記載で整理しました。", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/irusiru-team-sharing/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "イルシルの無料プランでスライドを共有できますか。", "acceptedAnswer": {"@type": "Answer", "text": "メンバー招待はできず、PDF・PowerPointの出力もできません。公式の比較表で確認できる範囲では、無料のままだと自分の画面で見せる以外の共有手段は見当たりませんでした。無料で何ができるかは[イルシルの無料プラン](../irusiru-free-plan/)で整理しています。"}}, {"@type": "Question", "name": "招待されたメンバーは何ができますか。", "acceptedAnswer": {"@type": "Answer", "text": "ワークスペース権限（オーナー・管理者・通常メンバー）と、フォルダ権限（作成者・管理・編集・閲覧のみ）の組み合わせで決まります。たとえば「閲覧のみ」のフォルダでは、管理者でも資料の編集はできません。"}}, {"@type": "Question", "name": "パーソナルPlusに無料トライアルはありますか。", "acceptedAnswer": {"@type": "Answer", "text": "公式サイトのよくある質問では、パーソナル／パーソナルプラスの年間プランを新規で申し込む場合に限り、3日間の無料トライアルがあるとされています。終了後は自動で有料プランに移るので、続けない場合は期間内に解約が必要です。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</h1><p class="meta">2026-10-10 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>イルシルでメンバーを招待してスライドを共有・編集できるのは、パーソナルPlus（年66,000円）と法人プランだけです。</strong> フリーとパーソナルにはメンバー招待がなく、人に渡す方法はPDFかPowerPointでの書き出しになります（書き出しはパーソナル以上）。招待すると「チームフォルダ」で資料を共有でき、フォルダごとに「作成者・管理・編集・閲覧のみ」の4段階で権限を分けられます。ただし、同じスライドを複数人が同時に編集できるかは、公式ヘルプでは確認できませんでした。</p>
+<h2 id="プラン別-チームで使うときの違い">プラン別：チームで使うときの違い</h2>
+<p>2026年10月10日に、イルシル公式ヘルプの「プランごとの料金・機能」と公式サイトの料金表で確認した内容です。料金は税込です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>フリー</th><th>パーソナル</th><th>パーソナルPlus</th><th>法人</th></tr></thead><tbody><tr><td>料金</td><td>0円</td><td>月1,848円／年17,160円</td><td>年66,000円（年間契約のみ）</td><td>お問い合わせ</td></tr><tr><td>メンバー招待</td><td>×</td><td>×</td><td>○</td><td>○</td></tr><tr><td>フォルダごとの権限設定</td><td>×</td><td>×</td><td>○</td><td>○</td></tr><tr><td>ライブラリ機能</td><td>×</td><td>×</td><td>○</td><td>○</td></tr><tr><td>PDF・PowerPoint出力</td><td>×</td><td>○</td><td>○</td><td>○</td></tr><tr><td>支払い方法</td><td>―</td><td>クレジットカード</td><td>クレジットカード</td><td>請求書払い・クレジットカード</td></tr></tbody></table></div>
+<p>○×は、ヘルプの比較表に文字で書かれている記号です。あわせて、ヘルプの「ホーム画面の使い方」には、メンバー一覧は「共有ワークスペースの利用が可能なご契約の場合にのみ、表示されます」とあります。フリーやパーソナルの画面に招待のメニューが見当たらないのは、このためです。</p>
+<p>料金とプランごとの損得は<a href="../irusiru-pricing/">イルシルの料金プラン比較</a>で詳しく計算しています。</p>
+<h2 id="共有の仕組みは-マイフォルダ-と-チームフォルダ">共有の仕組みは「マイフォルダ」と「チームフォルダ」</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>のホーム画面のフォルダは、2種類に分かれています。ヘルプの説明は次のとおりです。</p>
+<ul><li><strong>マイフォルダ</strong>：自分だけが管理・閲覧できる</li><li><strong>チームフォルダ</strong>：ワークスペース内のユーザーと共有できる（権限の設定が必要な場合がある）</li></ul>
+<p>招待されたメンバーは、同じワークスペースに入ってチームフォルダの資料を開きます。メールアドレスで招待し、届いたメールから承認すると参加が成立します。<strong>招待メールは送信後1週間で期限切れ</strong>になり、過ぎたら再招待が必要です。</p>
+<h2 id="判断軸1-権限を分けたいならフォルダ単位で考える">判断軸1：権限を分けたいならフォルダ単位で考える</h2>
+<p>チームフォルダ内のフォルダは、最初は「すべてのユーザー」（制限なし）で作られます。「制限付き」に変えると、アカウントごとに4つの権限を付けられます。</p>
+<ul><li><strong>作成者</strong>：閲覧・編集に加え、フォルダの権限を変えられる（自動で付き、変更不可）</li><li><strong>管理</strong>：閲覧・編集に加え、フォルダの権限を変えられる</li><li><strong>編集</strong>：フォルダ内のドキュメントの閲覧と編集（編集・複製・削除）</li><li><strong>閲覧のみ</strong>：ドキュメントの閲覧だけ</li></ul>
+<p>「制限付き」にしたフォルダは、権限を持たない人には<strong>フォルダごと見えなくなります</strong>。役員向けの資料だけ分けたい、外部の協力者には閲覧だけにしたい、という使い方はこの設定で作れます。</p>
+<p>注意したいのは、<strong>最初に「制限付き」へ変えられるのはオーナーと管理者だけ</strong>という点です。通常メンバーはチームフォルダの中に新しいフォルダを作ることもできません。フォルダの構成は、管理する人が先に用意しておく運用になります。</p>
+<h2 id="判断軸2-誰をオーナーにするかを先に決める">判断軸2：誰をオーナーにするかを先に決める</h2>
+<p>ワークスペースの権限は「オーナー」「管理者」「通常メンバー」の3つです。ヘルプによると、オーナーは契約者で<strong>ワークスペースに1名だけ</strong>、変更するには<strong>サポート窓口での手続きが必要</strong>です。管理者は複数人に付けられ、ワークスペース設定から変えられます。</p>
+<p>メンバーを削除すると、その人がチームフォルダで持っていたフォルダやドキュメントの権限はオーナーに移ります。担当者が異動・退職しても資料は残るので、会社で使うなら<strong>個人ではなく、部署の代表アカウントのような長く残る人をオーナーにする</strong>ほうが後で困りません。</p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="判断軸3-招待が要るか-書き出しで足りるか">判断軸3：招待が要るか、書き出しで足りるか</h2>
+<p>チームで「共有」したい中身が、完成した資料を配ることなら、招待は要りません。パーソナルで作り、画面右上の「共有」からPDFかPPTXで書き出して渡せば済みます。手順と崩れやすい点は<a href="../irusiru-pdf-export/">イルシルでPDF出力する方法</a>と<a href="../irusiru-powerpoint/">イルシルをパワーポイントに変換できる？</a>にまとめました。</p>
+<p>招待が必要になるのは、次のような場合です。</p>
+<ul><li>複数人が同じ資料を直接直したい（書き出したPPTXを回すと、元の資料と分かれてしまう）</li><li>部署の資料をひとつの場所にまとめ、権限で見せる範囲を分けたい</li><li>テーマ（色・ロゴ・フッター）をそろえたい。ヘルプでは、オーナーと管理者がワークスペースのデフォルトテーマを設定できる</li></ul>
+<p>デザインのそろえ方は<a href="../irusiru-template-choice/">イルシルのテンプレートの選び方</a>で扱っています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>同時編集ができるかは確認できなかった</strong>：今回読んだヘルプの権限・ホーム画面・編集画面のページには、同じスライドを複数人が同時に開いて編集したときの動きは書かれていませんでした。Googleスライドのような同時編集を前提にするなら、申し込み前にチャットで確認してください。</p>
+<p><strong>「1人あたり」の料金が、招待する人数にどう掛かるか分からない</strong>：パーソナルPlusの料金は、ヘルプで「66,000円/人」、公式サイトでもAIデザイン生成の枚数に「1人あたり」と書かれています。一方で、招待したメンバー1人ずつに契約が要るのかを説明した文言は見つかりませんでした。3人で使うと198,000円になるのかどうかは、契約前に問い合わせるのが確実です。</p>
+<p><strong>パーソナルPlusは「個人利用」のプラン</strong>：ヘルプの比較表には「法人プラン以外のプランは個人利用プランです」と注記があります。会社のチームで使う場合にパーソナルPlusで足りるのか、法人プランが前提なのかは、公式の記載からは判断できませんでした。請求書払いや見積書が必要なら、ヘルプのとおり法人プランの扱いになります。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. イルシルの無料プランでスライドを共有できますか。</strong> メンバー招待はできず、PDF・PowerPointの出力もできません。公式の比較表で確認できる範囲では、無料のままだと自分の画面で見せる以外の共有手段は見当たりませんでした。無料で何ができるかは<a href="../irusiru-free-plan/">イルシルの無料プラン</a>で整理しています。</p>
+<p><strong>Q. 招待されたメンバーは何ができますか。</strong> ワークスペース権限（オーナー・管理者・通常メンバー）と、フォルダ権限（作成者・管理・編集・閲覧のみ）の組み合わせで決まります。たとえば「閲覧のみ」のフォルダでは、管理者でも資料の編集はできません。</p>
+<p><strong>Q. パーソナルPlusに無料トライアルはありますか。</strong> 公式サイトのよくある質問では、パーソナル／パーソナルプラスの年間プランを新規で申し込む場合に限り、3日間の無料トライアルがあるとされています。終了後は自動で有料プランに移るので、続けない場合は期間内に解約が必要です。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>メンバー招待とフォルダごとの権限設定は、パーソナルPlus（年66,000円）と法人だけ。配るだけならパーソナルの書き出しで足りる</li><li>共有はチームフォルダで行い、「制限付き」にすると4段階の権限で見せる範囲を分けられる。最初の設定はオーナーか管理者が行う</li><li>同時編集の可否と、「1人あたり」の料金が招待人数にどう掛かるかは公式で確認できなかった。契約前にチャットで聞く</li></ul>
+<p>※本記事の料金・仕様は2026年10月10日にイルシル公式サイトと公式ヘルプ（「プランごとの料金・機能」「チームフォルダの権限について」「ワークスペースのメンバー権限と操作可否」「ホーム画面の使い方」）で確認した表記に基づきます。最新の内容は公式サイトでご確認ください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-template-choice/">イルシルのテンプレートの選び方｜業種ではなく用途と文章量で選ぶ</a></li><li><a href="../ai-tools-for-small-business/">中小企業向けAIツール無料比較｜4つの無料枠は止まる場所が全部違う</a></li><li><a href="../irusiru-pricing/">イルシル料金、無料と有料の違い｜月額・半年・年間とPlusの分かれ目</a></li><li><a href="../irusiru-pdf-export/">イルシルでPDF出力はできる？印刷画面の3設定で文字が灰色になる</a></li><li><a href="../irusiru-cancel/">イルシル解約後もスライドは消えない｜消えるのは退会したとき</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+</body>
+</html>
