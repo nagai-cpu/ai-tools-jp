@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない｜AIツール実用ガイド</title>
+<meta name="description" content="社内研修のスライドをAIで作りたい担当者向けに、イルシルで既存マニュアルを添付するときの限界、受講者像を登録するカスタム指示、プラン別の枚数上限を公式ヘルプの記載で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/training-material-ai/">
+<meta property="og:title" content="社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない｜AIツール実用ガイド">
+<meta property="og:description" content="社内研修のスライドをAIで作りたい担当者向けに、イルシルで既存マニュアルを添付するときの限界、受講者像を登録するカスタム指示、プラン別の枚数上限を公式ヘルプの記載で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない", "description": "社内研修のスライドをAIで作りたい担当者向けに、イルシルで既存マニュアルを添付するときの限界、受講者像を登録するカスタム指示、プラン別の枚数上限を公式ヘルプの記載で整理しました。", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/training-material-ai/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料プランで研修資料を作れますか。", "acceptedAnswer": {"@type": "Answer", "text": "作ることはできますが、作成できる資料は3個まで、AIデザイン生成は月3枚で、PDF・PowerPointへの出力もできません。受講者に配る資料には向きません。詳しくは[イルシル無料プランでできること](../irusiru-free-plan/)をご覧ください。"}}, {"@type": "Question", "name": "社内の研修資料を入力しても、AIの学習に使われませんか。", "acceptedAnswer": {"@type": "Answer", "text": "公式サイトには「入力した内容は学習に使われません」とあり、無料プランを含むすべてのプランが対象と書かれています。ISO/IEC 27001の認証も取得しているとのことです。社内規程上の可否は、自社の情報管理ルールで判断してください。"}}, {"@type": "Question", "name": "研修資料を他の講師と一緒に編集できますか。", "acceptedAnswer": {"@type": "Answer", "text": "メンバー招待ができるのはパーソナルPlusと法人プランです。共有の仕組みと権限は[イルシルでチーム共有・共同編集はできる？](../irusiru-team-sharing/)で整理しています。研修そのものを外部に頼む場合の費用感は[中小企業のAI研修費用の相場](../ai-training-cost/)が参考になります。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない</h1><p class="meta">2026-10-12 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>社内研修の資料をAIで作るなら、既存のマニュアルを「文章として」渡せる人ほど楽になります。</strong> イルシルのおまかせ生成は添付したPDFの文字は参照しますが、ヘルプには「グラフ、表、画像などの視覚情報は解釈されません」とあります。図表の多い手順書をそのまま渡すより、要点をテキストで貼るほうが確実です。受講者に配布するならPDF・PowerPoint出力が要るので、無料プランでは足りません。</p>
+<h2 id="研修資料づくりで効くプラン別の違い">研修資料づくりで効くプラン別の違い</h2>
+<p>2026年10月12日に、イルシル公式サイトの料金表と公式ヘルプ（「プランごとの料金・機能」「おまかせ生成」「添付ファイル機能」「カスタム指示」）で確認した内容です。料金は税込です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>フリー</th><th>パーソナル</th><th>パーソナルPlus</th><th>法人</th></tr></thead><tbody><tr><td>料金</td><td>0円</td><td>月1,848円／年17,160円</td><td>年66,000円</td><td>お問い合わせ</td></tr><tr><td>PDF・PowerPoint出力</td><td>×</td><td>○</td><td>○</td><td>○</td></tr><tr><td>AIデザイン生成</td><td>3枚/月</td><td>40枚/月</td><td>200枚/月（1人あたり）</td><td>500枚/月（1人あたり）</td></tr><tr><td>おまかせ生成の入力文字数</td><td>5,000〜10,000文字（ページで記載が違う）</td><td>5,000〜10,000文字（同）</td><td>50,000文字</td><td>50,000文字</td></tr><tr><td>カスタム指示の登録</td><td>利用不可</td><td>1件</td><td>無制限</td><td>無制限</td></tr><tr><td>メンバー招待</td><td>×</td><td>×</td><td>○</td><td>○</td></tr></tbody></table></div>
+<p>入力文字数は、「おまかせ生成」のページではフリーとパーソナルが5,000文字、「プランごとの料金・機能」の比較表では10,000文字と書かれていて、ヘルプ内で数字がそろっていません。長い研修マニュアルを一度に貼るつもりなら、少ないほうの5,000文字で見積もっておくのが安全です。</p>
+<p>料金そのものの損得は<a href="../irusiru-pricing/">イルシルの料金プラン比較</a>で計算しています。</p>
+<h2 id="判断軸1-手元のマニュアルが-文字中心-か-図表中心-か">判断軸1：手元のマニュアルが「文字中心」か「図表中心」か</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>のおまかせ生成では、テーマやメモを入力し、参考資料を添付してスライドを作れます。対応形式はjpg・png・pdf・csvで、1回10件まで、1ファイル15MBまでです。</p>
+<p>研修担当者が気をつけたいのは、<strong>添付ファイルはあくまで補助</strong>という点です。ヘルプには次のように書かれています。</p>
+<ul><li>「ファイルの内容が完全にスライドに反映されるわけではありません」</li><li>おまかせ生成では「ファイル内のテキスト情報」が参照され、グラフ・表・画像は解釈されない</li><li>添付ファイルだけでの生成はできず、入力欄に何かを入力する必要がある</li><li>PowerPointをPDFに変換して添付する場合は、変換後のPDFの品質に注意</li></ul>
+<p>つまり、<strong>画面キャプチャに矢印を引いた操作手順書や、表で整理した就業ルールは、中身が読まれない前提で考える</strong>必要があります。こうした資料は、手順を箇条書きに書き起こしてから入力欄に貼るほうが、意図に近いスライドになります。</p>
+<p>一方、編集画面で1ページずつ作り直す「AIデザイン生成（1ページ）」では、ヘルプに「画像の内容もAIが参照できます」とあります。全体はテキストで作り、図表が必要なページだけ1ページずつ画像を添付して直す、という分担が現実的です。</p>
+<p>なお、添付機能を無料プランで使えるかは、ヘルプの中でも書き方が分かれています。「添付ファイル機能」のページの表にはフリーも載っていますが、同じページのよくある質問には「ファイル添付は有料プランをご契約の方のみ利用可能です」とあります。おまかせ生成のページの表でも、フリーの欄は「-」です。添付を使う前提なら、有料プランで考えておくほうが無難です。</p>
+<h2 id="判断軸2-毎回同じ-受講者像-を書いているか">判断軸2：毎回同じ「受講者像」を書いているか</h2>
+<p>研修資料は、対象が新入社員か管理職かで、言葉の選び方も分量も変わります。毎回プロンプトの冒頭に「新入社員向け、専門用語は避ける」と書いているなら、<strong>カスタム指示</strong>が効きます。</p>
+<p>カスタム指示は、資料づくりの前提情報やルールを登録しておき、ホーム画面のおまかせ生成で呼び出す機能です。ヘルプで確認できた仕様は次のとおりです。</p>
+<ul><li>パーソナル以上で利用できる（フリーは不可）。登録件数はパーソナルが1件、パーソナルPlus以上は無制限</li><li>内容は50,000文字以内。会社案内や既存資料のPDF・画像も添付して登録できる</li><li>登録内容はワークスペースで共有され、メンバー全員が使える。登録・編集・削除はオーナーと管理者だけ</li><li>分量は「1枚あたり150文字以内」のように数値で書くと反映されやすい</li></ul>
+<p>研修で使うなら、「誰に向けた資料か」「社内で使う用語の表記」「使ってほしくない表現」を登録しておくと、担当者が替わっても資料の書きぶりがそろいます。新入社員研修と管理職研修のように対象を分けたい場合、パーソナルの1件では足りないので、パーソナルPlus以上が候補になります。</p>
+<p>ただし、カスタム指示が反映されるのはホーム画面のおまかせ生成だけです。編集画面のAIデザイン生成では使えず、ヘルプはその場合「プロンプトライブラリ機能」を案内しています。</p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="判断軸3-月に何ページ作るか">判断軸3：月に何ページ作るか</h2>
+<p>研修資料は枚数が多くなりがちです。ここで効いてくるのが、AIデザイン生成の月間上限です。</p>
+<p>ヘルプのよくある質問には、生成したデザインを「適用」しても「破棄」してもカウントされること、おまかせ生成の「プロモード」もカウントの対象になることが書かれています。さらに「10ページ程度のドキュメントを全てAIデザイン生成で生成することで、想定より多くのカウントとなっている場合があります」とあります。</p>
+<p>仮に1ページを1回と数えると、パーソナルの40枚/月は、20ページの研修資料を2本作れば使い切る計算です。作り直しを含めると、1本で終わることもあります。</p>
+<p>上限に達しても、プロモードをオフにすれば、イルシルの既存テンプレートを当てはめた生成はできるとヘルプにあります。全ページをAIデザインにこだわらず、表紙や章扉はテンプレートで済ませ、図解が欲しいページだけAIデザイン生成を使うと、枠が長持ちします。上限の考え方は<a href="../ai-proposal-docs/">提案書作成をAIで時間短縮</a>でも扱っています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>WordやGoogleドキュメントは直接読み込めない</strong>：ヘルプのよくある質問に、そのままインポートはできないとあります。既存の研修マニュアルがWord形式なら、本文をコピーして入力欄に貼る作業が発生します。その際は「変更をしない」と指示を添えるよう案内されています。</p>
+<p><strong>図表の多いマニュアルは手直しが前提</strong>：上で書いたとおり、おまかせ生成は添付ファイルの図表を解釈しません。操作手順を画面キャプチャで見せる研修では、AIが作るのは骨組みまでで、キャプチャの貼り込みは自分で行うことになります。</p>
+<p><strong>PC版のみ・Safari非対応</strong>：公式サイトによると、対応ブラウザはChromeとEdgeで、Safariは対応していません。お知らせページには「現在はPC版のみのご提供」とあります。社用Macで標準ブラウザしか使えない環境では、事前に確認が必要です。</p>
+<p><strong>作った資料の内容確認は自分の仕事</strong>：AIが書いた研修資料の就業規則や手順が、社内の最新ルールと合っているかはAIには分かりません。生成AIを業務で使う際の基本的な考え方は<a href="../chatgpt-not-using-well/">ChatGPTを業務で使いこなせない原因</a>にまとめました。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料プランで研修資料を作れますか。</strong> 作ることはできますが、作成できる資料は3個まで、AIデザイン生成は月3枚で、PDF・PowerPointへの出力もできません。受講者に配る資料には向きません。詳しくは<a href="../irusiru-free-plan/">イルシル無料プランでできること</a>をご覧ください。</p>
+<p><strong>Q. 社内の研修資料を入力しても、AIの学習に使われませんか。</strong> 公式サイトには「入力した内容は学習に使われません」とあり、無料プランを含むすべてのプランが対象と書かれています。ISO/IEC 27001の認証も取得しているとのことです。社内規程上の可否は、自社の情報管理ルールで判断してください。</p>
+<p><strong>Q. 研修資料を他の講師と一緒に編集できますか。</strong> メンバー招待ができるのはパーソナルPlusと法人プランです。共有の仕組みと権限は<a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？</a>で整理しています。研修そのものを外部に頼む場合の費用感は<a href="../ai-training-cost/">中小企業のAI研修費用の相場</a>が参考になります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>おまかせ生成は添付PDFの文字だけを読み、図表は解釈しない。マニュアルは要点を文章で貼るのが確実</li><li>受講者像や表記ルールはカスタム指示に登録できる（パーソナルは1件、Plus以上は無制限）</li><li>配布用の出力はパーソナル以上。AIデザイン生成の枠は作り直しでも減るので、図解が要るページに絞って使う</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</a></li><li><a href="../irusiru-template-choice/">イルシルのテンプレートの選び方｜業種ではなく用途と文章量で選ぶ</a></li><li><a href="../ai-tools-for-small-business/">中小企業向けAIツール無料比較｜4つの無料枠は止まる場所が全部違う</a></li><li><a href="../irusiru-pricing/">イルシル料金、無料と有料の違い｜月額・半年・年間とPlusの分かれ目</a></li><li><a href="../irusiru-pdf-export/">イルシルでPDF出力はできる？印刷画面の3設定で文字が灰色になる</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+</body>
+</html>
