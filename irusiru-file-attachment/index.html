@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない｜AIツール実用ガイド</title>
+<meta name="description" content="イルシルに添付したPDFの内容がスライドに反映されない人向けに、機能ごとの添付上限、おまかせ生成が読むのは文字だけという仕様、1ページ生成への切り替え方を公式ヘルプの記載で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/irusiru-file-attachment/">
+<meta property="og:title" content="イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない｜AIツール実用ガイド">
+<meta property="og:description" content="イルシルに添付したPDFの内容がスライドに反映されない人向けに、機能ごとの添付上限、おまかせ生成が読むのは文字だけという仕様、1ページ生成への切り替え方を公式ヘルプの記載で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない", "description": "イルシルに添付したPDFの内容がスライドに反映されない人向けに、機能ごとの添付上限、おまかせ生成が読むのは文字だけという仕様、1ページ生成への切り替え方を公式ヘルプの記載で整理しました。", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/irusiru-file-attachment/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "PowerPointのファイルをそのまま添付できますか。", "acceptedAnswer": {"@type": "Answer", "text": "添付できる形式はjpg・png・pdf・csvで、PowerPoint形式は含まれていません。ヘルプはPDFに変換して添付する方法を案内していますが、変換後の品質に注意するよう書かれています。逆にイルシルで作った資料をPowerPointへ出す方法は[イルシルをパワーポイントに変換できる？](../irusiru-powerpoint/)をご覧ください。"}}, {"@type": "Question", "name": "容量オーバーのとき、画面に上限は表示されますか。", "acceptedAnswer": {"@type": "Answer", "text": "AIデザイン生成のヘルプには「サイズ上限は画面上に表示されません。上限を超えた場合はエラーメッセージが表示されます」とあります。大きなPDFは、必要なページだけに分けてから添付すると安全です。"}}, {"@type": "Question", "name": "添付したPDFは学習に使われますか。", "acceptedAnswer": {"@type": "Answer", "text": "公式サイトには、入力した内容は学習に使われないと記載されています。社内規程上の可否は、自社の情報管理ルールで判断してください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない</h1><p class="meta">2026-10-13 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>イルシルで添付したPDFが反映されないときは、まず「どの機能で添付したか」を確認してください。</strong> ホーム画面の「おまかせ生成」では、ヘルプに「ファイル内のテキスト情報が参照されます」とあり、グラフ・表・画像は解釈されません。図表の中身を使いたいなら、編集画面で1ページずつ作る「AIデザイン生成」に添付し直すのが近道です。こちらは「画像の内容もAIが参照できます」と書かれています。</p>
+<h2 id="機能ごとの添付ファイルの違い">機能ごとの添付ファイルの違い</h2>
+<p>2026年10月13日に、イルシル公式ヘルプの「添付ファイル機能」「おまかせ生成」「AIデザイン生成（1ページ）」「かんたんレポート生成」で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>おまかせ生成</th><th>AIデザイン生成（1ページ）</th><th>かんたんレポート生成</th></tr></thead><tbody><tr><td>使う場所</td><td>ホーム画面</td><td>スライド編集画面</td><td>ホーム画面の左メニュー</td></tr><tr><td>形式</td><td>jpg・png・pdf・csv</td><td>jpg・png・pdf・csv</td><td>jpg・png・pdf</td></tr><tr><td>件数</td><td>10件まで</td><td>5件まで</td><td>10件まで</td></tr><tr><td>容量</td><td>1件15MBまで</td><td>1件20MBまで（合計20MBまで）</td><td>15MBまで</td></tr><tr><td>図表・画像の扱い</td><td>テキスト情報が参照される（視覚情報は解釈されない）</td><td>画像の内容も参照できる</td><td>ヘルプに記載なし</td></tr></tbody></table></div>
+<p>AIデザイン生成のヘルプには「ファイルだけでスライドを作ることはできないため、入力欄にもテキストを入力してください」とあります。添付ファイルだけを渡して待つ使い方は想定されていません。</p>
+<h2 id="原因1-おまかせ生成は-文字-しか読まない">原因1：おまかせ生成は「文字」しか読まない</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>のおまかせ生成は、テーマやメモを入力し、参考資料を添付して資料全体をまとめて作る機能です。ここでの添付ファイルについて、ヘルプには次のように書かれています。</p>
+<ul><li>「添付ファイル機能は、あくまでもスライド作成の補助としてご利用ください」</li><li>「ファイルの内容が完全にスライドに反映されるわけではありません」</li><li>「ファイル内のテキスト情報は参照されますが、グラフ、表、画像などの視覚情報は解釈されません」</li></ul>
+<p>つまり、<strong>売上推移のグラフや、表でまとめた料金一覧が載ったPDFを添付しても、その数字はおまかせ生成では拾われない前提</strong>で考える必要があります。グラフの数字を使いたいなら、要点を入力欄に文章で書くか、元データをCSVで添付します（おまかせ生成はCSVに対応しています）。</p>
+<p>スキャンした紙の資料のように、文字が画像として入っているPDFも注意が必要です。ヘルプに直接の記載はありませんが、「テキスト情報が参照される」という説明から考えると、おまかせ生成では読み取られにくいと考えられます。</p>
+<h2 id="原因2-PDFの文字が読み取りにくい">原因2：PDFの文字が読み取りにくい</h2>
+<p>文字ベースのPDFでも、反映されないことがあります。ヘルプが挙げている条件は次のとおりです。</p>
+<ul><li>添付ファイル内の<strong>文字が小さすぎる、解読が困難</strong></li><li>PowerPointなどを<strong>PDFに変換したときの品質</strong>が低く、テキスト情報が正しく認識できない</li></ul>
+<p>PowerPointの資料をPDFにして渡す人は多いと思いますが、細かい注釈や図の中の文字は読まれにくくなります。ヘルプは「メモ欄に具体的な指示を追加してください」と案内しています。</p>
+<p>WordやGoogleドキュメントの文章を使いたい場合は、PDFに変換するより、<strong>本文をコピーして入力欄に貼る</strong>ほうが確実です。ヘルプの「入力方法ガイド」でも、Wordやドキュメントの文章をコピー＆ペーストする方法が紹介されています。</p>
+<h2 id="原因3-入力欄の指示が足りない">原因3：入力欄の指示が足りない</h2>
+<p>添付ファイルは「参考情報」の扱いなので、入力欄に何を書くかで結果が変わります。ヘルプが勧めているのは次の2点です。</p>
+<ul><li>ファイルの内容を簡潔にまとめた<strong>キーワード（タイトル）</strong>を入力する</li><li>メモ欄に、<strong>スライドに含めたい具体的な情報</strong>を入力する</li></ul>
+<p>AIデザイン生成のヘルプには、入力例として「この資料の内容をスライドにまとめて」「添付CSVのデータをグラフにして」「このレイアウトを参考にして」が載っています。<strong>ファイルをどう使ってほしいかを一文で書く</strong>だけでも、意図に近づきます。</p>
+<p>なお、入力の情報量が多いとAIが内容を要約する可能性がある、とも書かれています。PDFの全文を反映させたい用途には向きません。</p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="図表の中身を使いたいときの手順">図表の中身を使いたいときの手順</h2>
+<p>ヘルプの記載を組み合わせると、図表の多いPDFは次の分担が現実的です。</p>
+<ol><li><strong>おまかせ生成</strong>で、PDFの要点を入力欄に箇条書きで貼り、資料全体の骨組みを作る</li><li>図表が必要なページだけ、スライド編集画面の<strong>AIデザイン生成</strong>で該当ページの画像やPDFを添付し、「この表の内容をスライドにまとめて」と指示する</li><li>プレビューを確認して「反映」を押す。気に入らなければ「破棄」する</li></ol>
+<p>ただし、AIデザイン生成は「反映」でも「破棄」でも使用回数が消費されます。月間上限はフリー3枚・パーソナル40枚・パーソナルPlus200枚（1人あたり）です。研修資料のように枚数が多い場合の配分は<a href="../training-material-ai/">社内研修資料をAIで作成する手順</a>で計算しています。</p>
+<p>毎回同じ会社案内PDFを添付しているなら、<a href="../irusiru-custom-instructions/">カスタム指示</a>に登録しておく方法もあります。カスタム指示にはPDFと画像を10件まで添付でき、ワークスペースで共有されます（パーソナル以上）。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>無料プランで添付できるかはヘルプ内で記載が分かれている</strong>：「添付ファイル機能」のページではおまかせ生成の表に「全プラン共通」とフリーも載っていますが、「おまかせ生成」のページの表ではフリーの「ファイル添付機能」は「-」です。無料で試す前提の人は、実際の画面で確認してください。無料プランの範囲は<a href="../irusiru-free-plan/">イルシル無料プランでできること</a>にまとめています。</p>
+<p><strong>全文をそのまま反映させる機能ではない</strong>：ヘルプが繰り返し「補助」と書いているとおり、添付したPDFの文章をそのままスライドに起こす用途には向きません。原稿の文章を使いたい場合は、PDFを添付するより入力欄に貼るほうが確実です。</p>
+<p><strong>1ページ生成は回数を使う</strong>：図表を読ませたいページほどAIデザイン生成に頼ることになり、パーソナルの40枚/月は早めに減ります。</p>
+<p><strong>作った後の確認は自分の仕事</strong>：AIが図表を読み取れても、数字が正しく転記されているかは確認が必要です。生成AIを業務で使うときの考え方は<a href="../chatgpt-not-using-well/">ChatGPTを業務で使いこなせない原因</a>にまとめました。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. PowerPointのファイルをそのまま添付できますか。</strong> 添付できる形式はjpg・png・pdf・csvで、PowerPoint形式は含まれていません。ヘルプはPDFに変換して添付する方法を案内していますが、変換後の品質に注意するよう書かれています。逆にイルシルで作った資料をPowerPointへ出す方法は<a href="../irusiru-powerpoint/">イルシルをパワーポイントに変換できる？</a>をご覧ください。</p>
+<p><strong>Q. 容量オーバーのとき、画面に上限は表示されますか。</strong> AIデザイン生成のヘルプには「サイズ上限は画面上に表示されません。上限を超えた場合はエラーメッセージが表示されます」とあります。大きなPDFは、必要なページだけに分けてから添付すると安全です。</p>
+<p><strong>Q. 添付したPDFは学習に使われますか。</strong> 公式サイトには、入力した内容は学習に使われないと記載されています。社内規程上の可否は、自社の情報管理ルールで判断してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>おまかせ生成で読まれるのはPDFの文字だけ。グラフ・表・画像は解釈されない</li><li>図表の中身を使いたいページは、編集画面のAIデザイン生成（5件・合計20MBまで）に添付し直す</li><li>入力欄に「ファイルをどう使うか」を一文で書く。Wordの文章はPDFにせず貼り付ける</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-custom-instructions/">イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認</a></li><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../training-material-ai/">社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない</a></li><li><a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</a></li><li><a href="../irusiru-template-choice/">イルシルのテンプレートの選び方｜業種ではなく用途と文章量で選ぶ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+</body>
+</html>
