@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認｜AIツール実用ガイド</title>
+<meta name="description" content="イルシルのカスタム指示が登録できない・反映されない人向けに、使えるプランと件数、メンバー権限の制限、保存できない条件、プロンプトライブラリとの違いを公式ヘルプの記載で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/irusiru-custom-instructions/">
+<meta property="og:title" content="イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認｜AIツール実用ガイド">
+<meta property="og:description" content="イルシルのカスタム指示が登録できない・反映されない人向けに、使えるプランと件数、メンバー権限の制限、保存できない条件、プロンプトライブラリとの違いを公式ヘルプの記載で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認", "description": "イルシルのカスタム指示が登録できない・反映されない人向けに、使えるプランと件数、メンバー権限の制限、保存できない条件、プロンプトライブラリとの違いを公式ヘルプの記載で整理しました。", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/irusiru-custom-instructions/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "無料プランでカスタム指示は使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "使えません。ヘルプの件数表でフリーは「ご利用いただけません」です。プロンプトライブラリのほうは、ヘルプに「フリープランを含む全プランで利用できます」とあります。無料で何ができるかは[イルシル無料プランでできること](../irusiru-free-plan/)をご覧ください。"}}, {"@type": "Question", "name": "登録したカスタム指示は他のメンバーにも見えますか。", "acceptedAnswer": {"@type": "Answer", "text": "見えます。登録内容はワークスペースで共有され、メンバー全員が閲覧し、生成時に利用できます。個人だけのメモにしたい場合は、プロンプトライブラリの「マイライブラリ」が向いています。"}}, {"@type": "Question", "name": "生成中に他のメンバーがカスタム指示を削除したらどうなりますか。", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプによると「このカスタム指示は削除されました。この生成では引き続き使えます。」と表示され、その生成にはそのまま使えます。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認</h1><p class="meta">2026-10-13 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>イルシルのカスタム指示が「できない」ときは、①使う場所、②アカウントの権限、③プランの件数の3つを確認すれば、たいてい原因が分かります。</strong> カスタム指示を呼び出せるのはホーム画面の入力欄だけで、スライド編集画面の「AIデザイン生成」で使うのは別機能の「プロンプトライブラリ」です。登録・編集・削除ができるのはオーナーと管理者だけで、フリープランでは利用できません。</p>
+<h2 id="カスタム指示とプロンプトライブラリの違い">カスタム指示とプロンプトライブラリの違い</h2>
+<p>2026年10月13日に、イルシル公式ヘルプの「カスタム指示」「プロンプトライブラリ機能」「プランごとの料金・機能」で確認した内容です。料金は税込です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>カスタム指示</th><th>プロンプトライブラリ</th></tr></thead><tbody><tr><td>使う場所</td><td>ホーム画面の入力欄</td><td>スライド編集画面の「AIデザイン生成」</td></tr><tr><td>反映のされ方</td><td>資料全体の前提・ルールとして参照される</td><td>挿入した文章が、そのときの指示文になる</td></tr><tr><td>登録できるもの</td><td>文章（50,000文字以内）＋添付ファイル</td><td>文章のみ（分類により500〜10,000文字）</td></tr><tr><td>登録できる件数</td><td>フリー不可／パーソナル1件／パーソナルPlus以上は無制限</td><td>全プラン無制限</td></tr><tr><td>登録できる人</td><td>オーナーと管理者</td><td>マイライブラリは全員、チームライブラリは管理者以上</td></tr></tbody></table></div>
+<p>料金は、パーソナルが月1,848円・半年9,900円・年17,160円、パーソナルPlusが年66,000円です。プランごとの損得は<a href="../irusiru-pricing/">イルシルの料金プラン比較</a>で計算しています。</p>
+<p>ヘルプの言い方を借りると、「毎回おなじことを書いている」ならカスタム指示、「その時々で使い分けたい文章がある」ならプロンプトライブラリです。</p>
+<h2 id="原因1-使う場所が違う-編集画面では呼び出せない">原因1：使う場所が違う（編集画面では呼び出せない）</h2>
+<p>いちばん多そうなのが、場所の取り違えです。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>のカスタム指示は、<strong>ホーム画面の入力欄の下にある「カスタム指示」</strong>をクリックして選びます。そのあと作りたい資料の内容を入力して生成すると、登録した内容が前提として参照されます。</p>
+<p>一方、生成後のスライド編集画面で1ページずつ作り直す「AIデザイン生成」については、ヘルプの比較表で使う機能がプロンプトライブラリと分けて書かれています。編集画面でカスタム指示を選べるという記載は、ヘルプでは確認できませんでした。プロンプトライブラリは入力欄の「ライブラリから挿入」から呼び出し、1回に挿入できるのは1件です。</p>
+<p>つまり、<strong>資料全体の書きぶりをそろえたいならホームで生成する前に選ぶ。1ページだけ直したいならプロンプトライブラリに同じルールを入れておく</strong>、という二段構えになります。</p>
+<h2 id="原因2-メンバー権限なので登録できない">原因2：メンバー権限なので登録できない</h2>
+<p>ワークスペースに招待されたメンバーの場合、カスタム指示の作成・編集・削除はできません。ヘルプの表では、オーナーと管理者が「○」、メンバーは「-」です。メンバーの画面には「カスタム指示の作成・編集・削除はオーナーと管理者のみが行えます。内容の閲覧と、おまかせ生成での利用はできます。」と表示されると書かれています。</p>
+<p>メンバーでも、<strong>登録済みのカスタム指示を選んで生成に使うことはできます</strong>。ルールを足したいときは、管理者に依頼するのが正しい手順です。招待と権限の仕組みは<a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？</a>で整理しています。</p>
+<h2 id="原因3-プランの件数を超えている">原因3：プランの件数を超えている</h2>
+<p>登録できる件数は、フリーが利用不可、パーソナルが1件、パーソナルPlus以上（法人プランを含む）が無制限です。パーソナルで「新規作成」が進まないなら、すでに1件登録している可能性があります。</p>
+<p>1件しか持てないパーソナルでは、「自社の説明」と「表記ルール」を1件にまとめて書くのが現実的です。対象者ごとに分けたい（例：顧客向けと社内向け）場合は、Plus以上が候補になります。</p>
+<p>なお、プランを下げて件数を超えた状態になっても、ヘルプには登録済みのものは「閲覧・編集・削除・利用ができます」とあります。できなくなるのは新しく作ることだけです。</p>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<h2 id="保存できないときのチェック項目">保存できないときのチェック項目</h2>
+<p>登録画面で「保存する」を押しても保存されない場合、ヘルプに書かれている条件は次の3つです。</p>
+<ul><li>「内容」と「添付ファイル」の<strong>両方が空</strong>になっている（どちらか一方は必須）</li><li><strong>絵文字や一部の特殊な文字</strong>が入っている</li><li>保存時にAIが内容を読み取り、<strong>資料づくりに使える情報を読み取れなかった</strong></li></ul>
+<p>3つ目は見落としやすい点です。「よろしくお願いします」のような中身の薄い文章だけでは、保存されない可能性があります。作成画面に出ている4つの観点（誰に向けた資料か／自社・サービスの説明／守ってほしい書き方／使ってほしくない表現）を埋めると、具体的な内容になります。</p>
+<p>添付できるのはPDFと画像（JPG・PNG・WEBP）で、1回の登録につき10件まで、1件15MBまでです。おまかせ生成の添付はjpg・png・pdf・csvなので、<strong>CSVはカスタム指示には添付できません</strong>。表のデータを前提にしたい場合は、要点を「内容」に文章で書くことになります。</p>
+<h2 id="反映されないときのチェック項目">反映されないときのチェック項目</h2>
+<p>保存できたのに、生成されたスライドに反映されていないように見える場合は、次を確認します。</p>
+<p><strong>その回の入力のほうが優先される</strong>：ヘルプには「生成時に入力した内容が優先されます」とあります。カスタム指示で「です・ます調」と決めていても、その回に「体言止めで」と書けば、入力した指示で生成されます。</p>
+<p><strong>分量の指示があいまい</strong>：「短く」「少なめに」では意図どおりにならないことがあり、「1枚あたり150文字以内」「箇条書きは3項目まで」のように数値で書くと反映されやすい、と案内されています。</p>
+<p><strong>登録した文章がそのまま本文に載るわけではない</strong>：カスタム指示は、AIが資料を作るときの前提・ルールとして参照されるものです。会社紹介文を登録しても、その文章がスライドに貼られるとは限りません。載せたい文章は、その回の入力欄に書きます。</p>
+<p><strong>「使わない」が選ばれている</strong>：一度使うと次回以降は前回選んだものが最初から選ばれた状態になり、初回は「カスタム指示なし」です。前回「使わない」を選んでいれば、その状態が続いている可能性があります。選択中のカスタム指示をクリックすると、登録内容を確認できます。</p>
+<p>使い方の具体例は<a href="../training-material-ai/">社内研修資料をAIで作成する手順</a>で、受講者像を登録する形で紹介しています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<p><strong>パーソナルは1件だけ</strong>：用途ごとに分けられないため、1件の中に複数の前提を詰め込むことになります。その回の入力が優先される仕様なので、矛盾する指示を書くと、どちらが効くかを毎回意識する必要があります。</p>
+<p><strong>編集画面の作り直しは別機能</strong>：ホームでの生成後、1ページずつAIデザイン生成で直すときは、ヘルプの整理ではプロンプトライブラリを使います。同じルールを2か所に登録して管理する手間がかかります。</p>
+<p><strong>削除は元に戻せない</strong>：ヘルプには「一度削除したカスタム指示は復元ができません」とあります。複数人の管理者がいるワークスペースでは、誰が消すかを決めておくと安全です。</p>
+<p><strong>AIの出力を確認するのは自分</strong>：表記ルールを登録しても、生成された文章が社内の最新情報と合っているかは別の問題です。AIを業務で使うときの基本的な考え方は<a href="../chatgpt-not-using-well/">ChatGPTを業務で使いこなせない原因</a>にまとめました。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 無料プランでカスタム指示は使えますか。</strong> 使えません。ヘルプの件数表でフリーは「ご利用いただけません」です。プロンプトライブラリのほうは、ヘルプに「フリープランを含む全プランで利用できます」とあります。無料で何ができるかは<a href="../irusiru-free-plan/">イルシル無料プランでできること</a>をご覧ください。</p>
+<p><strong>Q. 登録したカスタム指示は他のメンバーにも見えますか。</strong> 見えます。登録内容はワークスペースで共有され、メンバー全員が閲覧し、生成時に利用できます。個人だけのメモにしたい場合は、プロンプトライブラリの「マイライブラリ」が向いています。</p>
+<p><strong>Q. 生成中に他のメンバーがカスタム指示を削除したらどうなりますか。</strong> ヘルプによると「このカスタム指示は削除されました。この生成では引き続き使えます。」と表示され、その生成にはそのまま使えます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>カスタム指示はホーム画面の入力欄で選ぶ機能。編集画面のAIデザイン生成ではプロンプトライブラリを使う</li><li>登録・編集・削除はオーナーと管理者だけ。件数はパーソナル1件、Plus以上は無制限、フリーは不可</li><li>ヘルプにある保存できない条件は「空・絵文字・中身が読み取れない」の3つ。分量は数値で書くと反映されやすい</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../training-material-ai/">社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない</a></li><li><a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</a></li><li><a href="../irusiru-template-choice/">イルシルのテンプレートの選び方｜業種ではなく用途と文章量で選ぶ</a></li><li><a href="../ai-tools-for-small-business/">中小企業向けAIツール無料比較｜4つの無料枠は止まる場所が全部違う</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+</body>
+</html>
