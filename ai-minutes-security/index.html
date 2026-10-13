@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI議事録に社外秘を入れていいか｜学習より先に見る共有と社内ルール｜AIツール実用ガイド</title>
+<meta name="description" content="社外秘の会議をAI議事録に録ってよいかの確認項目を、Nottaの規約とヘルプで整理。AI学習の範囲、保存場所、共有リンクの扱い、プラン別の管理機能をまとめました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/ai-minutes-security/">
+<meta property="og:title" content="AI議事録に社外秘を入れていいか｜学習より先に見る共有と社内ルール｜AIツール実用ガイド">
+<meta property="og:description" content="社外秘の会議をAI議事録に録ってよいかの確認項目を、Nottaの規約とヘルプで整理。AI学習の範囲、保存場所、共有リンクの扱い、プラン別の管理機能をまとめました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI議事録に社外秘を入れていいか｜学習より先に見る共有と社内ルール", "description": "社外秘の会議をAI議事録に録ってよいかの確認項目を、Nottaの規約とヘルプで整理。AI学習の範囲、保存場所、共有リンクの扱い、プラン別の管理機能をまとめました。", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/ai-minutes-security/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Nottaで要約した内容が、他社のAIの回答に出てくることはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式ヘルプは、音声認識以外のAI機能ではいずれのプランでも学習にデータを提供していないため、録音時に機密情報の発言があっても「貴社内外での生成AIの出力結果に含まれることはございません」としています。"}}, {"@type": "Question", "name": "無料プランで社外秘の会議を試してもいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "ツールの仕様より、会社のルールが先です。許可が出ていない段階なら、社外秘でない会議で精度や使い勝手を確かめるのが安全です。無料プランの範囲は[Notta無料プランの制限はどこまで？](../notta-free-limits/)にまとめています。"}}, {"@type": "Question", "name": "あとから「AI学習なし」のプランに変えたら、過去の録音も対象外になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプでは、逆向きの切り替え（学習なし→学習あり）について、過去のデータが学習に使われることはないと書かれています。学習ありの期間に文字起こしした録音が、プラン変更でさかのぼって対象外になるかは、公式の記載では確認できませんでした。社外秘を扱う予定があるなら、最初から学習なしのプランで始めてください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI議事録に社外秘を入れていいか｜学習より先に見る共有と社内ルール</h1><p class="meta">2026-10-14 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、社外秘の会議をAI議事録に入れてよいかは、<strong>ツールの性能より先に「会社のルールで許可されているか」で決まります</strong>。許可されている前提なら、次に見るのはAI学習ではなく<strong>共有リンクの扱い</strong>です。Nottaの場合、要約などの生成AI機能はどのプランでも学習に使われないと公式ヘルプに書かれていますが、共有リンクは「リンクを知っている全員がアクセスでき、ログインは不要」です。漏れる経路として現実的なのは、学習より共有のほうです。</p>
+<h2 id="Nottaのプラン別に使えるセキュリティ機能-2026年10月14日時点">Nottaのプラン別に使えるセキュリティ機能（2026年10月14日時点）</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の料金ページ・法人向けページ・ヘルプの文言で確認できたものだけを並べました。公式の表にアイコンしか無い欄は、文言で裏が取れたものを除いて「確認できず」、対象プランの説明に名前が出てこないものは「記載なし」としています。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>フリー・プレミアム</th><th>ビジネス</th><th>ビジネス Plus</th><th>エンタープライズ</th></tr></thead><tbody><tr><td>音声認識での「AI学習なし」</td><td>記載なし</td><td>記載なし</td><td>あり</td><td>あり</td></tr><tr><td>外部共有を無効にする設定</td><td>対象外</td><td>あり</td><td>確認できず</td><td>確認できず</td></tr><tr><td>IPアドレス制限</td><td>記載なし</td><td>20個まで</td><td>確認できず</td><td>1,000個まで</td></tr><tr><td>SSO・操作ログ</td><td>確認できず</td><td>確認できず</td><td>確認できず</td><td>あり</td></tr><tr><td>料金</td><td>年払いの単月 税込￥0／￥1,185</td><td>年払いの単月 税込￥2,508</td><td>年￥64,800（税抜）</td><td>要相談</td></tr></tbody></table></div>
+<p>ビジネス Plusは料金ページではなく法人向けページに載っているプランで、カードには「すべてのビジネス機能＋」「AI学習なし」とあります。料金は「月額 5,400円（税抜）· 12ヶ月分一括払い」です。「AI学習なし」の対象は、ヘルプ「AI学習について」で「エンタープライズプラン」および「ビジネス Plus」と書かれています。料金ページでは、士業向け特別プランのカードにも「AI学習なし」があります。</p>
+<p>外部共有の無効化は、ヘルプ「外部ユーザーとの共有を制限する」に「ビジネス以上のプランを契約されている方のみ利用可能」とあります。上位2プランは「ビジネス以上」に含まれると読めますが、プランの欄として明記されたものは見つけられませんでした。</p>
+<h2 id="判断する順番は3つ">判断する順番は3つ</h2>
+<h3 id="1-会社のルールで-外部のクラウドに録音を置いてよいか">1. 会社のルールで、外部のクラウドに録音を置いてよいか</h3>
+<p>最初の確認先はツールではなく社内です。情報システム部門や上長が「外部のクラウドサービスに会議の録音を置いてよいか」を決めていれば、それに従うだけです。決まっていなければ、勝手に始めずに確認を取ってください。後から問題になるのは、ツールの安全性より「無断で使っていたこと」のほうです。</p>
+<p>確認を取るときに相手が見たがるのが、セキュリティの資料です。Nottaは、経済産業省の様式に準拠した自社のセキュリティチェックシートを、フォーム入力後にダウンロードできるようにしています。会社独自の書式に記入してもらう個別対応は、ヘルプによれば<strong>ビジネス・エンタープライズを利用中か検討中の場合のみ</strong>で、返却までおおよそ2〜3週間かかります。</p>
+<p>保存場所については、ヘルプに「東京のデータセンターに保管されます」（Amazon Web Services）とあり、リージョンの指定は「現在のところできません」です。</p>
+<h3 id="2-AI学習に使われるのはどこまでか">2. AI学習に使われるのはどこまでか</h3>
+<p>ここは誤解が多いところです。Nottaのヘルプ「AI学習について」の説明を分けると、次のようになります。</p>
+<ul><li><strong>要約などの生成AI機能</strong>：「いずれのプランでも音声認識以外のAI機能にAI学習にはデータを提供しておりません」</li><li><strong>音声認識（文字起こし）</strong>：エンジンを提供する国内の第三者パートナー企業が、ランダムに選んだ音声と認識結果を、音声認識エンジンの学習に使う場合がある。対象外にできるのはビジネス Plusとエンタープライズ</li></ul>
+<p>ヘルプには、学習に使うのは精度向上のためで「単語が組み合わされて生じる有意な情報」は学習されない、とも書かれています。「AI学習なし」の場合は、音声がメモリ上で処理され、パートナー側のサーバーにもストレージにも保存されないという説明です。</p>
+<p>利用規約でも、運営会社は音声・テキスト・翻訳などのデータについて「データの内容自体を閲覧又は使用することはありません」としています。ただし翻訳機能は「翻訳エンジンを提供する第三者のAPI」を使うと規約にあり、その第三者がデータをどう扱うかまでは、公式の記載で確認できませんでした。社外秘の会議では、翻訳を使わないのが無難です。</p>
+<p>学習させないことを最優先にする場合の考え方は、<a href="../shigyo-transcription-no-ai-training/">Nottaで文字起こしをAI学習させない方法</a>でも整理しています。</p>
+<h3 id="3-録った議事録を-誰が開けるか">3. 録った議事録を、誰が開けるか</h3>
+<p>実際の事故は、学習よりもこちらで起きやすいはずです。ヘルプ「共有リンクを使った外部へのノート共有」の説明では、共有リンクはすべてのプランで作れて、<strong>リンクを知っている全員がアクセスでき、ログインは不要</strong>です。リンクを作った後に本文を直すと、その変更も相手にそのまま反映されます。</p>
+<p>対策として使えるのは次の3つです。</p>
+<ul><li>共有リンクに<strong>有効期間</strong>と<strong>パスワード</strong>を付ける（パスワードは自動生成で変更不可）</li><li>全文ではなく、必要なテキストブロックだけを共有する</li><li>ビジネス以上なら、オーナーが外部共有そのものを無効にする</li></ul>
+<p>チャットに貼ったリンクが転送されると、誰が開いたか分からなくなります。社外秘の会議は「リンクで共有しない」を社内の決まりにしてしまうのが一番確実です。商談の記録をチームで扱う場合の権限の考え方は<a href="../sales-call-transcription/">営業の商談を録音して議事録を自動化する方法</a>にもまとめました。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>個人向けプランでは学習を止められない</strong>。フリー・プレミアム・ビジネスでは、音声認識の学習を対象外にする選択肢は公式の記載に見当たりません。ビジネス Plusは税抜で年64,800円です。</li><li><strong>リージョンは選べない</strong>。保存先は東京ですが、海外拠点の規程で保存場所の指定がある会社は合わないことがあります。</li><li><strong>チェックシートの個別回答は有料プラン向け</strong>。フリーやプレミアムで試している段階では、公開資料を見て自分で埋めることになります。</li><li><strong>共有リンクが手軽すぎる</strong>。どのプランでも、ログイン不要のリンクが数クリックで作れます。便利さの裏返しです。</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. Nottaで要約した内容が、他社のAIの回答に出てくることはありますか？</strong></p>
+<p>公式ヘルプは、音声認識以外のAI機能ではいずれのプランでも学習にデータを提供していないため、録音時に機密情報の発言があっても「貴社内外での生成AIの出力結果に含まれることはございません」としています。</p>
+<p><strong>Q. 無料プランで社外秘の会議を試してもいいですか？</strong></p>
+<p>ツールの仕様より、会社のルールが先です。許可が出ていない段階なら、社外秘でない会議で精度や使い勝手を確かめるのが安全です。無料プランの範囲は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？</a>にまとめています。</p>
+<p><strong>Q. あとから「AI学習なし」のプランに変えたら、過去の録音も対象外になりますか？</strong></p>
+<p>ヘルプでは、逆向きの切り替え（学習なし→学習あり）について、過去のデータが学習に使われることはないと書かれています。学習ありの期間に文字起こしした録音が、プラン変更でさかのぼって対象外になるかは、公式の記載では確認できませんでした。社外秘を扱う予定があるなら、最初から学習なしのプランで始めてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>最初に確認するのは社内ルール。セキュリティシートは公式からダウンロードでき、個別回答はビジネス以上向けで2〜3週間かかる</li><li>要約などの生成AI機能は全プランで学習に使われない。音声認識の学習を止められるのはビジネス Plusとエンタープライズ</li><li>漏れる経路として現実的なのは共有リンク。期限・パスワードを付けるか、ビジネス以上なら外部共有ごと止める</li></ul>
+<p>※本記事の仕様・料金は2026年10月14日時点で公式サイト（料金ページ・法人向けページ・利用規約・プライバシーポリシー・ヘルプセンター）を確認したものです。変更される場合があるため、導入前に公式の最新情報をご確認ください。本記事は社内規程や法令の判断を代わりに行うものではありません。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-translation-addon/">Notta翻訳アドオンは必要か｜月4回で足りる人と単体で外せない注意点</a></li><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../sales-call-transcription/">営業の商談を録音して文字起こし・議事録を自動化する方法｜CRM連携はビジネスから</a></li><li><a href="../notta-paid-worth-it/">Notta有料は月何時間から価値がある？時間より「1回3分」で決まる</a></li><li><a href="../notta-smartphone-in-person/">Nottaをスマホで対面会議に使う方法｜圏外では録音開始が使えない</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../llmo-shindan/">AI検索の相談</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+</body>
+</html>
