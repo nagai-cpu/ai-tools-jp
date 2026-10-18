@@ -66,6 +66,9 @@ border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)
 .btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
 font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
 a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
 .related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
 .related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
 .related ul{list-style:none;margin:0}
@@ -109,6 +112,7 @@ footer.site a{color:var(--muted)}
 <p>ただし、割引率だけで年間を選ぶのは早いです。<strong>月契約の何ヶ月分で元が取れるか</strong>で見るほうが判断しやすくなります。</p>
 <ul><li>年間17,160円 ÷ 月1,848円 ≒ 9.3。<strong>10ヶ月以上続けるなら年間が得</strong>、9ヶ月以下で止めるなら月契約のほうが安い</li><li>半年9,900円 ÷ 月1,848円 ≒ 5.4。<strong>6ヶ月続けるなら半年が得</strong>、5ヶ月以下なら月契約のほうが安い</li></ul>
 <p>公式の特定商取引法に基づく表記には、期間の途中で解約しても支払い済みの料金は返金されない旨が書かれています。「試しに年間で入って合わなければやめる」は割高になりやすいので、使い続けるか分からない最初の数ヶ月は月契約で様子を見るほうが安全です。</p>
+<p>作る本数・枚数と使う月数から、足りるプランと一番安い払い方の組み合わせを出すなら<a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a>が使えます。</p>
 <h2 id="パーソナルPlusに上げる条件">パーソナルPlusに上げる条件</h2>
 <p>パーソナルPlusは年間66,000円、公式トップでは「年払い（月あたり5,500円）」と表記されています。AIデザイン生成が月200枚なので、<strong>使い切った場合の1枚あたりは5,500円 ÷ 200枚 = 27.5円</strong>です。パーソナルの年間契約は1,430円 ÷ 40枚 ≒ 35.8円なので、単価だけ見るとPlusのほうが安くなります。</p>
 <p>ただしこれは200枚を毎月使い切ったときの話です。月40枚で足りている人がPlusにすると、年間の支払いは17,160円から66,000円へ48,840円増えます。<strong>Plusに上げる理由になるのは、次のどれかに当てはまるときだけ</strong>です。</p>
@@ -127,12 +131,12 @@ footer.site a{color:var(--muted)}
 <h3 id="パーソナルPlusは月額で契約できますか">パーソナルPlusは月額で契約できますか</h3>
 <p>できません。公式ヘルプに「パーソナルPlusプランは年間契約のみのご提供となります」と書かれています。料金は年間66,000円（税込）で、公式トップでは月あたり5,500円と表記されています。</p>
 <h2 id="まとめ">まとめ</h2>
-<ul><li>無料と有料の違いは<strong>ファイル出力と資料の本数（フリーは3個まで）</strong>。生成枚数はフリー月3枚・パーソナル月40枚</li><li>パーソナルは<strong>10ヶ月以上なら年間（月あたり1,430円）、6ヶ月なら半年、それより短いなら月契約</strong>が安い</li><li>パーソナルPlusは<strong>月40枚で足りない人・メンバー招待が要る人向け</strong>。1枚27.5円は200枚を使い切ったときの単価で、年間契約のみ</li></ul><h2 id="doga">この記事を38秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-custom-instructions/">イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認</a></li><li><a href="../irusiru-file-attachment/">イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない</a></li><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../training-material-ai/">社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない</a></li><li><a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</a></li></ul></div>
+<ul><li>無料と有料の違いは<strong>ファイル出力と資料の本数（フリーは3個まで）</strong>。生成枚数はフリー月3枚・パーソナル月40枚</li><li>パーソナルは<strong>10ヶ月以上なら年間（月あたり1,430円）、6ヶ月なら半年、それより短いなら月契約</strong>が安い</li><li>パーソナルPlusは<strong>月40枚で足りない人・メンバー招待が要る人向け</strong>。1枚27.5円は200枚を使い切ったときの単価で、年間契約のみ</li></ul><h2 id="doga">この記事を38秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-custom-instructions/">イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認</a></li><li><a href="../irusiru-file-attachment/">イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない</a></li><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../training-material-ai/">社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない</a></li><li><a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</a></li></ul></div>
 </div>
 <footer class="site"><div class="wrap">
 <p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
 <p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
-<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
 </div></footer>
 </body>
 </html>

@@ -66,6 +66,9 @@ border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)
 .btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
 font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
 a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
 .related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
 .related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
 .related ul{list-style:none;margin:0}
@@ -98,6 +101,7 @@ footer.site a{color:var(--muted)}
 <p>ここが一番誤解されるところです。月3枚と聞くと3ページぶんの資料しか作れないように読めますが、同じ公式コラムにはこう書かれています。</p>
 <blockquote>AIがスライド全体を一括生成する「プロモード（1回あたり10枚前後作成）」を利用した場合、フリープランでは月1本分の作成がお試しいただけます。</blockquote>
 <p>つまり「AIデザイン生成の枚数」はスライド1ページと1対1で対応していません。10枚前後のスライドが並んだ資料を、無料のまま月に1本は作れる、というのが公式の説明です。<strong>試すのに足りないのは枚数ではなく、後述する出力のほうです。</strong></p>
+<p>自分の作る量でフリーに収まるか、有料ならどのプランかは<a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a>で確かめられます。</p>
 <h2 id="プラン表をフリーの列から読む">プラン表をフリーの列から読む</h2>
 <p>公式サイトのプラン一覧から、無料で試す判断に効く行だけを抜き出しました。表記は公式の文言のままです。アイコンだけで文言が無い欄は、その旨を書いています。</p>
 <div class="tw"><table><thead><tr><th>項目</th><th>フリー</th><th>パーソナル</th><th>パーソナルプラス</th><th>法人</th></tr></thead><tbody><tr><td>料金</td><td>無料</td><td>1,848円/人（税込）</td><td>5,500円/人（税込）年間契約</td><td>応相談</td></tr><tr><td>AIデザイン生成の利用可能枚数</td><td>3枚/月</td><td>40枚/月</td><td>200枚/月 1人あたり</td><td>500枚/月</td></tr><tr><td>作成可能な資料数</td><td>3個まで</td><td>無制限</td><td>無制限</td><td>無制限</td></tr><tr><td>構成生成時の入力可能文字数</td><td>1,600文字</td><td>3,000文字</td><td>10,000文字</td><td>10,000文字</td></tr><tr><td>外部データ出力</td><td>×マークのみ（文言なし）</td><td>PDF・PowerPoint</td><td>PDF・PowerPoint</td><td>PDF・PowerPoint</td></tr><tr><td>メンバー招待</td><td>×マークのみ（文言なし）</td><td>×マークのみ（文言なし）</td><td>○マークのみ（文言なし）</td><td>○マークのみ（文言なし）</td></tr></tbody></table></div>
@@ -127,12 +131,12 @@ footer.site a{color:var(--muted)}
 <h3 id="無料プランのまま仕事の資料に使っていいですか">無料プランのまま仕事の資料に使っていいですか</h3>
 <p>公式コラムには「商用利用：全プランで可能」と書かれており、プランによる区別は示されていません。ただし同じ箇所と公式のよくある質問の両方に、イラストやテンプレートをそのまま配布・販売することは対象外だと明記されています。自社の営業や社内共有に使うことと、素材そのものを配ることは別だと理解しておけば問題ありません。</p>
 <h2 id="まとめ">まとめ</h2>
-<ul><li>無料でできるのは<strong>AIデザイン生成が月3枚・資料は3本まで</strong>。プロモードなら10枚前後の資料を月1本作れると公式が説明している（入力文字数は2026年9月3日時点の公式ヘルプではフリーも10,000文字。上記の1,600文字は8月28日時点の表記）</li><li>分かれ目は枚数ではなく<strong>ファイル出力</strong>。PDF・PowerPointへの書き出しはパーソナルプラン以上で対応と公式コラムに明記されている</li><li>商用利用は全プランで可能。無料のまま使い続けるなら、<strong>資料3本の上限とPCのみ・Chrome/Edgeという環境条件</strong>を先に確認しておく</li></ul></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-custom-instructions/">イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認</a></li><li><a href="../irusiru-file-attachment/">イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない</a></li><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../training-material-ai/">社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない</a></li><li><a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</a></li></ul></div>
+<ul><li>無料でできるのは<strong>AIデザイン生成が月3枚・資料は3本まで</strong>。プロモードなら10枚前後の資料を月1本作れると公式が説明している（入力文字数は2026年9月3日時点の公式ヘルプではフリーも10,000文字。上記の1,600文字は8月28日時点の表記）</li><li>分かれ目は枚数ではなく<strong>ファイル出力</strong>。PDF・PowerPointへの書き出しはパーソナルプラン以上で対応と公式コラムに明記されている</li><li>商用利用は全プランで可能。無料のまま使い続けるなら、<strong>資料3本の上限とPCのみ・Chrome/Edgeという環境条件</strong>を先に確認しておく</li></ul></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../irusiru-custom-instructions/">イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認</a></li><li><a href="../irusiru-file-attachment/">イルシルで添付したPDFが反映されない原因｜おまかせ生成は図表を読まない</a></li><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../training-material-ai/">社内研修資料をAIで作成する手順｜既存マニュアルの図表は読まれない</a></li><li><a href="../irusiru-team-sharing/">イルシルでチーム共有・共同編集はできる？招待はPlusと法人だけ</a></li></ul></div>
 </div>
 <footer class="site"><div class="wrap">
 <p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
 <p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
-<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
 </div></footer>
 </body>
 </html>

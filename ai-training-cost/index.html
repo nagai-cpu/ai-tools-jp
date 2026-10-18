@@ -66,6 +66,9 @@ border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)
 .btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
 font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
 a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
 .related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
 .related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
 .related ul{list-style:none;margin:0}
@@ -115,6 +118,7 @@ footer.site a{color:var(--muted)}
 <p><strong>例B：個人向け学び放題を会社負担で6ヶ月（社員3人）</strong></p>
 <p>DMM 生成AI CAMPの6ヶ月プランは一括90,530円（税込）です。3人分で271,590円。仮に定額制サービスとして扱われた場合、75％は1人あたり67,897.5円で、定額制の限度額（2万円×6ヶ月＝12万円）の内側に収まります。ただし賃金助成は付きません。<strong>個人向けプランがどの区分（eラーニングか定額制サービスか）で審査されるかは、公式には確認できませんでした</strong>。申請前に提供元と管轄の労働局に確認してください。</p>
 <p>例AとBを比べると、受講料の安さより<strong>賃金助成が付くかどうか</strong>のほうが手残りに効くことが分かります。</p>
+<p>自社の人数・時間・形式で助成を差し引いた実質負担を出すなら、<a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a>が使えます。</p>
 <h2 id="判断軸は3つ">判断軸は3つ</h2>
 <h3 id="1-誰の-どの業務の研修かを1文で書けるか">1. 誰の、どの業務の研修かを1文で書けるか</h3>
 <p>改正後の判断基準は「特定の職業、または職務に必要となる知識・技能を習得するためのものか」です。「営業が提案書の初稿をAIで作る」のように1文で書けないなら、助成の前に研修の設計を見直す段階です。社内でAIが定着しない原因の切り分けは<a href="../chatgpt-not-using-well/">ChatGPTを業務で使いこなせない原因は3つ｜学習にお金を払う前の切り分け</a>にまとめています。</p>
@@ -131,12 +135,12 @@ footer.site a{color:var(--muted)}
 <p><strong>Q. 助成金はいつまで使えますか？</strong> このコースはパンフレットに「令和４年～８年度の期間限定」「令和８年度末までの時限措置」と書かれています。計画届は訓練開始の1か月前までに出す必要があるため、年度末ぎりぎりの開始は間に合わない可能性があります。最新の受付状況は管轄の労働局で確認してください。</p>
 <h2 id="まとめ">まとめ</h2>
 <ul><li>中小企業のAI研修費用は、受講料より<strong>助成金の形式（経費75％・賃金1時間1,000円・限度額）</strong>で手残りが変わる</li><li>令和8年8月3日から、<strong>汎用的なプロンプト研修は助成対象外</strong>、eラーニングは1人1年度1回までに変わった</li><li>研修は「誰の、どの業務か」を決めてから選び、<strong>計画届は開始の1か月前まで</strong>に出す</li></ul>
-<p>助成金の要件と各サービスの料金は変更されることがあります。この記事の数字は、2026年10月1日に厚生労働省の公式パンフレット（令和8年8月3日版）と各社の公式サイトで確認したものです。申請前に最新の支給要領と管轄の労働局で確認してください。</p><h2 id="doga">この記事を35秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../dmm-aicamp-courses/">DMM 生成AI CAMPのコースの違いと選び方｜料金は同じ、差は学習時間</a></li><li><a href="../chatgpt-not-using-well/">ChatGPTを業務で使いこなせない原因は3つ｜学習にお金を払う前の切り分け</a></li><li><a href="../ai-learning-self-vs-school/">生成AIの学び方は独学とスクールどっち｜返金の線引きはアカウント作成前</a></li></ul></div>
+<p>助成金の要件と各サービスの料金は変更されることがあります。この記事の数字は、2026年10月1日に厚生労働省の公式パンフレット（令和8年8月3日版）と各社の公式サイトで確認したものです。申請前に最新の支給要領と管轄の労働局で確認してください。</p><h2 id="doga">この記事を35秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../dmm-aicamp-courses/">DMM 生成AI CAMPのコースの違いと選び方｜料金は同じ、差は学習時間</a></li><li><a href="../chatgpt-not-using-well/">ChatGPTを業務で使いこなせない原因は3つ｜学習にお金を払う前の切り分け</a></li><li><a href="../ai-learning-self-vs-school/">生成AIの学び方は独学とスクールどっち｜返金の線引きはアカウント作成前</a></li></ul></div>
 </div>
 <footer class="site"><div class="wrap">
 <p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
 <p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
-<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
 </div></footer>
 </body>
 </html>

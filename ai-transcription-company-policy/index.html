@@ -66,6 +66,9 @@ border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)
 .btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
 font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
 a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
 .related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
 .related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
 .related ul{list-style:none;margin:0}
@@ -125,6 +128,7 @@ footer.site a{color:var(--muted)}
 <h2 id="正直なデメリット">正直なデメリット</h2>
 <ul><li><strong>Zoom</strong>：文字起こしが条文で名指しされていません。厳密な説明を求められる場面では、この一点で止まる可能性があります</li><li><strong>Microsoft Copilot</strong>：文言は最も明確ですが、Copilotのライセンスが別途必要で、Microsoft 365の契約があれば自動で使えるわけではありません</li><li><strong>Google Workspace</strong>：人間のレビューまで明記している一方、Meetの文字起こしを個別に扱った記述が見つかりませんでした</li><li><strong>Notta</strong>：規約上は学習利用の可能性が明記されており、「AI学習なし」が機能として挙がっているのは上位2プランのみ。しかも<strong>その2プランは料金が公開されておらず、問い合わせが必要</strong>です。すぐに始めたい場合の障害になります</li></ul>
 <p>4社とも「このツールなら無条件に安全」とは言えません。<strong>規程が何を問題にしているかによって、通せるツールが変わります。</strong></p>
+<p>規程の条文そのものを書く必要がある場合は、細則12条の文例と入力可否の早見表をnoteにまとめています。筆者が自作した有料の文例集（¥1,480）です：<a href="https://note.com/life_lab_jp/n/n36ce4be7c812" target="_blank" rel="noopener">AI議事録を社内で通すための文書一式</a></p>
 <h2 id="よくある質問">よくある質問</h2>
 <h3 id="社内規程に-AIの学習に使わせないこと-と書いてある場合-無料プランでも通りますか">社内規程に「AIの学習に使わせないこと」と書いてある場合、無料プランでも通りますか</h3>
 <p>Nottaについては、利用規約が「ご利用のプランに応じて」と書いているため、<strong>プランを確認せずに通すことはできません</strong>。ZoomとMicrosoftとGoogleは、確認した文書の範囲ではプランによる条件分岐の記載が見当たりませんでしたが、エディションごとの差については各社の最新の契約条件をご確認ください。</p>
@@ -135,12 +139,12 @@ footer.site a{color:var(--muted)}
 <h2 id="まとめ">まとめ</h2>
 <ul><li>説明に使えるのは「安全です」ではなく、<strong>公式が明言している範囲と、書かれていない範囲を分けた表</strong></li><li>Microsoftは文字起こしまで射程が届く書き方、ZoomとGoogleは文字起こしを名指ししていない。Nottaは<strong>プランで変わると明記</strong>している</li><li>Nottaで「AI学習なし」が機能として挙がっているのは<strong>エンタープライズと士業向け特別プランの2つ</strong>（2026年10月18日の公式料金ページで確認）。下位プランの扱いは確認できなかったため、必要なら書面で問い合わせる</li></ul>
 <p>相談記録のように機微な録音を扱う場合の考え方は、<a href="../shigyo-transcription-no-ai-training/">士業向けのAI文字起こしで「学習させない」を確認した記事</a>で、規約の原文からたどっています。プランごとの機能差は<a href="../notta-business-plus/">Nottaのビジネスプラスと他プランの違い</a>に、法人契約の手続きは<a href="../notta-invoice-payment/">Nottaの請求書払いの申し込み手順</a>にまとめました。</p>
-<p>※本記事は各社の公開文書を引用して整理したものであり、法的な助言ではありません。規程の解釈と導入可否の判断は、所属組織の法務・情報システム部門にご確認ください。記載の内容は2026年10月18日時点のもので、各社の規約・料金は変更されることがあります。</p><h2 id="doga">この記事を37秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた</a></li><li><a href="../amivoice-training-policy/">AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較</a></li><li><a href="../chatgpt-voice-training/">ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲</a></li><li><a href="../claude-voice-training/">Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い</a></li><li><a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？規約で変わる4点を確認した</a></li></ul></div>
+<p>※本記事は各社の公開文書を引用して整理したものであり、法的な助言ではありません。規程の解釈と導入可否の判断は、所属組織の法務・情報システム部門にご確認ください。記載の内容は2026年10月18日時点のもので、各社の規約・料金は変更されることがあります。</p><h2 id="doga">この記事を37秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた</a></li><li><a href="../amivoice-training-policy/">AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較</a></li><li><a href="../chatgpt-voice-training/">ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲</a></li><li><a href="../claude-voice-training/">Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い</a></li><li><a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？規約で変わる4点を確認した</a></li></ul></div>
 </div>
 <footer class="site"><div class="wrap">
 <p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
 <p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
-<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
 </div></footer>
 </body>
 </html>
