@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>録音・AI文字起こしの同意文ジェネレータ｜AIツール実用ガイド</title>
+<meta name="description" content="会議や面談をAIで文字起こしする前に、参加者へどう伝えるか。場面と目的を選ぶと、冒頭で読む文・招待メールに入れる文・議事録の注記の3つをその場で作ります。入力はブラウザ内で処理し外部に送りません。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/tools/recording-consent.html">
+<meta property="og:title" content="録音・AI文字起こしの同意文ジェネレータ">
+<meta property="og:description" content="場面と目的を選ぶと、冒頭で読む文・招待メールの文・議事録の注記を作ります。">
+<meta property="og:type" content="website">
+<style>
+:root{
+--bg:#ffffff;--panel:#ffffff;--soft:#f6f8fa;--fg:#1a1d21;--muted:#5c6570;
+--line:#e4e7eb;--accent:#0f6fd6;--accent-fg:#ffffff;
+--ok:#2f6b4f;--ok-soft:#e8f2ec;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);line-height:1.8;font-size:16.5px;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+overflow-x:hidden}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
+.lead{color:var(--muted);font-size:.95rem;margin-bottom:1.6rem}
+h2{font-size:1.2rem;margin:2.3rem 0 .8rem;padding-top:.9rem;border-top:1px solid var(--line)}
+h3{font-size:1rem;margin:1.4rem 0 .45rem}
+label{display:block;font-weight:600;font-size:.93rem;margin:1.05rem 0 .35rem}
+select,input[type=text],textarea{width:100%;padding:.65rem .8rem;font-size:1rem;color:var(--fg);
+background:var(--panel);border:1px solid var(--line);border-radius:.5rem;
+font-family:inherit;line-height:1.7}
+textarea{min-height:7.5rem;resize:vertical}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+@media(max-width:36rem){.grid{grid-template-columns:1fr}}
+.card{background:var(--soft);border:1px solid var(--line);border-radius:.7rem;padding:1rem 1.1rem;margin:1rem 0}
+.note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+border-radius:.6rem;padding:.8rem .95rem;font-size:.9rem;margin:1.1rem 0}
+.ok{background:var(--ok-soft);border:1px solid var(--line);color:var(--ok);
+border-radius:.6rem;padding:.8rem .95rem;font-size:.9rem;margin:1.1rem 0}
+button{font:inherit;font-weight:600;padding:.5rem .95rem;border-radius:.5rem;cursor:pointer;
+background:var(--accent);color:var(--accent-fg);border:0;font-size:.92rem}
+a{color:var(--accent)}
+small,.src{font-size:.84rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:3rem;padding:1.6rem 0 3rem;font-size:.87rem;color:var(--muted)}
+ul{margin:.5rem 0 .5rem 1.3rem}li{margin:.28rem 0}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">入力はブラウザ内だけで処理します</span>
+</div></header>
+
+<main class="wrap">
+<h1>録音・AI文字起こしの同意文ジェネレータ</h1>
+<p class="lead">会議や面談をAIで文字起こしするとき、<strong>参加者に何をどう伝えるか</strong>で詰まることがあります。場面と目的を選ぶと、<strong>冒頭で読む文・招待メールに入れる文・議事録の注記</strong>の3つを作ります。そのまま使わず、自社の規程に合わせて直してください。</p>
+
+<div class="grid">
+<div>
+<label for="scene">場面</label>
+<select id="scene">
+  <option value="meeting">社内会議</option>
+  <option value="client">顧客・取引先との打ち合わせ</option>
+  <option value="interview">採用面接</option>
+  <option value="hr">人事面談・ヒアリング</option>
+  <option value="counsel">相談・カウンセリング</option>
+  <option value="press">取材・インタビュー</option>
+</select>
+</div>
+<div>
+<label for="purpose">使い方</label>
+<select id="purpose">
+  <option value="ai">AIツールで文字起こしする</option>
+  <option value="manual">録音するが、文字起こしは人がやる</option>
+</select>
+</div>
+<div>
+<label for="keep">録音・文字起こしの保存期間</label>
+<select id="keep">
+  <option value="決まり次第削除します">決めていない（決まり次第削除）</option>
+  <option value="作成後30日以内に削除します">議事録の作成後30日以内に削除</option>
+  <option value="作成後3か月で削除します">3か月で削除</option>
+  <option value="社内規程の保存期間に従います">社内規程の保存期間に従う</option>
+</select>
+</div>
+<div>
+<label for="org">組織名（任意）</label>
+<input type="text" id="org" placeholder="例：株式会社◯◯" autocomplete="off">
+</div>
+</div>
+
+<div id="alert"></div>
+
+<h2>作成された文面</h2>
+
+<h3>① 開始時に読み上げる</h3>
+<textarea id="t1" readonly></textarea>
+<button class="copy" data-t="t1">この文をコピー</button>
+
+<h3>② 招待メール・案内に入れる</h3>
+<textarea id="t2" readonly></textarea>
+<button class="copy" data-t="t2">この文をコピー</button>
+
+<h3>③ 議事録・記録の冒頭に入れる注記</h3>
+<textarea id="t3" readonly></textarea>
+<button class="copy" data-t="t3">この文をコピー</button>
+
+<h2>先に確認しておくこと</h2>
+<ul id="checks"></ul>
+
+<footer><div>
+<p>⚠ <strong>本ページが作る文面はテンプレートであり、法的な助言ではありません。</strong> 同意の取り方や保存期間の要件は、業種・取り扱う情報・適用される法令や職務上の守秘義務によって変わります。<strong>実際に使う前に、自社の規程と、必要なら専門家の確認を受けてください。</strong></p>
+<p style="margin-top:.7rem">入力した内容はブラウザの中だけで処理され、どこにも送信していません。</p>
+<p style="margin-top:.7rem"><a href="../">記事一覧</a> ・ <a href="../ai-transcription-company-policy/">社内規程で止まったときの考え方</a> ・ <a href="../about/">運営者</a> ・ <a href="../privacy/">プライバシー</a></p>
+</div></footer>
+</main>
+
+<script>
+var SCENE = {
+ meeting:{who:"参加者の皆さま", what:"本日の会議", rec:"議事録を作成するため", third:false},
+ client:{who:"ご出席の皆さま", what:"本日のお打ち合わせ", rec:"議事録を作成し、認識の齟齬を防ぐため", third:true},
+ interview:{who:"◯◯様", what:"本日の面接", rec:"評価の正確性を保ち、複数名で確認するため", third:true},
+ hr:{who:"◯◯さん", what:"本日の面談", rec:"記録を正確に残すため", third:false},
+ counsel:{who:"◯◯様", what:"本日のご相談", rec:"記録を正確に残すため", third:true},
+ press:{who:"◯◯様", what:"本日の取材", rec:"発言を正確に記事化するため", third:true}
+};
+
+function build(){
+ var sc = document.getElementById('scene').value;
+ var pu = document.getElementById('purpose').value;
+ var keep = document.getElementById('keep').value;
+ var org = document.getElementById('org').value.trim();
+ var S = SCENE[sc];
+ var orgp = org ? org + "（以下、当方）" : "当方";
+ var aiLine = (pu === 'ai')
+   ? "録音した音声は、AIによる文字起こしサービスを使って文章にします。"
+   : "録音した音声は、当方の担当者が文章に起こします。外部のAIサービスには渡しません。";
+ var aiShort = (pu === 'ai') ? "AIによる文字起こしを利用します" : "文字起こしは担当者が行います";
+
+ document.getElementById('t1').value =
+  S.who + "、" + S.what + "を始める前に1点お伝えします。\n"
+  + S.rec + "、この場を録音させていただきます。"
+  + aiLine + "\n"
+  + "録音と文字起こしのデータは" + keep + "。\n"
+  + "録音を希望されない場合は、この時点でお知らせください。録音せずに進めます。\n"
+  + "よろしいでしょうか。";
+
+ document.getElementById('t2').value =
+  "【" + S.what.replace("本日の","") + "の録音についてのお知らせ】\n\n"
+  + S.who + "\n\n"
+  + S.rec + "、当日は録音を行います（" + aiShort + "）。\n"
+  + "録音と文字起こしのデータは" + keep + "。\n"
+  + "録音をご希望されない場合は、開始前または当日の冒頭でお知らせください。録音せずに進行します。\n\n"
+  + (org ? org + "\n" : "");
+
+ document.getElementById('t3').value =
+  "※本記録は、" + (pu === 'ai' ? "録音をAI文字起こしサービスで文章化し、担当者が確認・修正したものです。" : "録音をもとに担当者が作成したものです。")
+  + "\n※" + (pu === 'ai' ? "AIによる文字起こしには誤りが含まれる場合があります。発言の正確な内容については録音を正本とします。" : "発言の正確な内容については録音を正本とします。")
+  + "\n※録音データは" + keep + "。";
+
+ var ck = [];
+ ck.push("<strong>使うツールが、入れた音声をAIの学習に使わないか</strong>を公式の規約で確認する（<a href='./ai-training-check.html'>学習させない設定チェッカー</a>で原文を確認できます）");
+ if (pu === 'ai') ck.push("AIツールに<strong>どの範囲のデータが送られるか</strong>（音声そのものか、文字起こし結果だけか）");
+ if (S.third) ck.push("<strong>相手方の社内規程</strong>で録音が禁じられていないか。先方に確認してから案内する");
+ if (sc === 'interview') ck.push("応募者の<strong>個人情報の取得目的</strong>を、採用選考の範囲で明示しているか");
+ if (sc === 'hr') ck.push("<strong>評価や処遇に関わる面談</strong>の場合、録音の有無で発言が変わりうることを踏まえ、拒否できることを明確に伝える");
+ if (sc === 'counsel') ck.push("<strong>職務上の守秘義務</strong>（弁護士・医師・公認会計士など）がある場合、外部サービスへの送信が義務に抵触しないかを先に確認する");
+ if (sc === 'press') ck.push("<strong>情報源の秘匿</strong>が必要な取材では、外部サービスに音声を渡さない選択肢（端末内で処理する方法）も検討する");
+ ck.push("保存先・<strong>アクセスできる人の範囲</strong>・削除の担当者を決めておく");
+ document.getElementById('checks').innerHTML = ck.map(function(x){return "<li>"+x+"</li>"}).join("");
+
+ document.getElementById('alert').innerHTML = (pu === 'ai' && (sc === 'counsel' || sc === 'press'))
+  ? '<div class="note"><strong>この場面は慎重に判断してください。</strong>守秘義務や情報源の秘匿がある場面では、「同意を取れば外部に出してよい」とは限りません。同意の有無とは別に、<strong>そもそも外部サービスに送ってよい情報か</strong>を先に確認してください。</div>'
+  : '<div class="ok">同意は「伝えて、断れる状態にする」ことが要点です。一方的な通知で終わらせず、<strong>録音しない選択肢</strong>を必ず示してください。</div>';
+}
+
+document.querySelectorAll('select,input').forEach(function(el){
+ el.addEventListener('input', build); el.addEventListener('change', build);
+});
+document.querySelectorAll('button.copy').forEach(function(b){
+ b.addEventListener('click', function(){
+  var t = document.getElementById(this.dataset.t);
+  t.select(); t.setSelectionRange(0, 99999);
+  var self = this;
+  try { document.execCommand('copy'); self.textContent = 'コピーしました';
+        setTimeout(function(){ self.textContent = 'この文をコピー'; }, 1600); }
+  catch(e) { self.textContent = '選択してコピーしてください'; }
+ });
+});
+build();
+</script>
+</body>
+</html>

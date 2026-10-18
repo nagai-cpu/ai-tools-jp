@@ -107,12 +107,18 @@ footer.site a{color:var(--muted)}
 
 <div id="out" aria-live="polite"></div>
 
+<h2>この計算機の使い方と計算の前提</h2>
+<p class="note">
+月に文字起こししたい時間の合計と、いちばん長い回の長さを入れると、AI文字起こしの各プランで足りるかどうかと、同じ量を外注した場合の年額が並びます。無料プランは月の合計より先に「1回あたりの上限」で止まることが多いので、1回の長さは平均ではなく最長の回で入れてください。判定は、月の合計と1回の長さの両方が上限に収まるプランのうち、税込に揃えた年額がいちばん安いものを選んでいます。外注費は60分あたりの相場を録音時間で按分した概算で、話者の数・音質・納期による割増は含めていません。<br><br>
+料金の税込・税抜は各社の表示に合わせています。Nottaは税込、LINE WORKS AiNoteは税抜の表示なので、同じ金額でも実際の支払額はAiNoteのほうが消費税の分だけ高くなります。料金は変更されることがあるので、申し込み前に公式サイトでご確認ください。
+</p>
+
 <h2>この計算に使っている数字</h2>
 <p class="note">
-すべて各サービスの公式ページで確認した実数です（2026年10月時点）。料金は変更されることがあるので、申し込み前に公式サイトでご確認ください。<br><br>
-<strong>Notta</strong>：フリーは月120分・1回3分。プレミアムは月1,800分・1回5時間で年額14,220円（月あたり1,185円）、月払いなら1,980円。ビジネスは文字起こし時間が無制限で年額30,096円（月あたり2,508円）。<br>
-<strong>LINE WORKS AiNote</strong>：フリーは月300分・1回60分・データ保管1年。ソロは月600分で年額契約1,440円/月、月額契約1,600円/月。<br>
-<strong>外注</strong>：クラウドワークスの発注相場ページに掲載されている「インタビュー60分 5,000円〜」を基準にしています。
+<strong>Notta</strong>（2026年10月18日に公式ページで確認）：フリーは月120分・1回3分。プレミアムは月1,800分・1回5時間で年額14,220円（税込・月あたり1,185円）。ビジネスは文字起こし時間が無制限・1回5時間で年額30,096円（税込・月あたり2,508円）。<br>
+<strong>LINE WORKS AiNote</strong>（2026年10月18日に公式ページで確認）：フリーは月300分・1回60分・データ保管1年。ソロは月600分・1回180分で、年額契約1,440円/月、月間契約1,600円/月（いずれも税抜）。<br>
+<strong>外注</strong>：クラウドワークスの発注相場ページに掲載されている「インタビュー60分 5,000円〜」を基準にしています。<br><br>
+出典：<a href="https://www.notta.ai/pricing" target="_blank" rel="noopener">Notta 料金ページ</a> ・ <a href="https://line-works.com/ainote/free-solo/" target="_blank" rel="noopener">LINE WORKS AiNote 料金表</a>
 </p>
 
 <h2>もっと詳しく</h2>
@@ -120,14 +126,16 @@ footer.site a{color:var(--muted)}
 判断の根拠や、それぞれの正直な短所は記事にまとめています。<br>
 ・<a href="../ai-transcription-free-comparison/">AI文字起こし無料比較｜無料で残っているのは4つ</a><br>
 ・<a href="../transcription-outsourcing-cost/">文字起こしの外注費用の相場と、自分でやる場合の分岐点</a><br>
-・<a href="../notta-free-limits/">Nottaの無料プランはどこまで使えるか</a>
+・<a href="../notta-free-limits/">Nottaの無料プランはどこまで使えるか</a><br>
+・<a href="minutes-time.html">議事録作成時間の計算機</a>（聞き直しに使っている時間を出す）<br>
+・<a href="ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a>（機密を含む会議の場合）
 </p>
 </div>
 
 <footer class="site"><div class="wrap">
 <p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。</p>
-<p>本サイトはアフィリエイトプログラムを利用しており、一部リンクから登録があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。</p>
-<p><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a></p>
+<p>本サイトはアフィリエイトプログラムを利用しており、一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="minutes-time.html">議事録作成時間の計算機</a> ・ <a href="ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a></p>
 </div></footer>
 
 <script>
@@ -138,8 +146,8 @@ footer.site a{color:var(--muted)}
   // 公式ページで確認した実数のみ。perMonth は年額契約の月あたり。
   var PLANS = [
     {n:"Notta フリー",        mo:120,  each:3,   perMonth:0,    year:0,      aff:true},
-    {n:"AiNote フリー",       mo:300,  each:60,  perMonth:0,    year:0,      aff:false},
-    {n:"AiNote ソロ",         mo:600,  each:60,  perMonth:1440, year:17280,  aff:false},
+    {n:"AiNote フリー",       mo:300,  each:60,  perMonth:0,    year:0,      aff:false, tax:"税抜"},
+    {n:"AiNote ソロ",         mo:600,  each:180, perMonth:1440, year:17280,  aff:false, tax:"税抜"},
     {n:"Notta プレミアム",    mo:1800, each:300, perMonth:1185, year:14220,  aff:true},
     {n:"Notta ビジネス",      mo:Infinity, each:300, perMonth:2508, year:30096, aff:true}
   ];
@@ -156,6 +164,9 @@ footer.site a{color:var(--muted)}
     if (total === 0) { out.innerHTML = ""; return; }
 
     var fits = PLANS.filter(function(p){ return total <= p.mo && each <= p.each; });
+    // 足りるプランのうち、税込に揃えた年額がいちばん安いものを選ぶ（AiNote は税抜表示なので1.1倍で比べる）
+    var incl = function(p){ return p.year * (p.tax === "税抜" ? 1.1 : 1); };
+    fits.sort(function(x, y){ return incl(x) - incl(y); });
     var pick = fits.length ? fits[0] : null;
 
     // 外注費：60分あたりの相場で按分
@@ -177,7 +188,7 @@ footer.site a{color:var(--muted)}
             + '<a href="../ai-transcription-free-comparison/">4つの無料プランの違い</a>で確認してください。</p></div>';
     } else {
       var diff = outsourceYear - pick.year;
-      html += '<div class="verdict"><h3>' + esc(pick.n) + 'が必要です（年' + yen(pick.year) + '）</h3>'
+      html += '<div class="verdict"><h3>' + esc(pick.n) + 'が必要です（年' + yen(pick.year) + '・' + (pick.tax || '税込') + '）</h3>'
             + '<p class="sub">月' + total + '分・1回' + each + '分だと無料枠では足りません。'
             + (diff > 0
                 ? '同じ量を外注すると年' + yen(outsourceYear) + 'なので、<strong>年' + yen(diff) + '安くなります</strong>。'
@@ -196,7 +207,7 @@ footer.site a{color:var(--muted)}
             + '<td>' + esc(p.n) + '</td>'
             + '<td class="n">' + (p.mo === Infinity ? "無制限" : p.mo + "分") + '</td>'
             + '<td class="n">' + p.each + '分</td>'
-            + '<td class="n">' + (p.year ? yen(p.year) : "0円") + '</td>'
+            + '<td class="n">' + (p.year ? yen(p.year) + "（" + (p.tax || "税込") + "）" : "0円") + '</td>'
             + '<td class="n">' + why + '</td></tr>';
     });
     html += '<tr><td>外注する</td><td class="n">—</td><td class="n">—</td><td class="n">'
