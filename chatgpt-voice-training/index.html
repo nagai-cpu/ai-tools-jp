@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲｜AIツール実用ガイド</title>
+<meta name="description" content="ChatGPTの音声入力・音声会話・録音モードで、音声と文字起こしが学習に使われる条件をOpenAI公式ヘルプで確認。オフにする設定、法人プランとの違い、Nottaとの比較まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/chatgpt-voice-training/">
+<meta property="og:title" content="ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲｜AIツール実用ガイド">
+<meta property="og:description" content="ChatGPTの音声入力・音声会話・録音モードで、音声と文字起こしが学習に使われる条件をOpenAI公式ヘルプで確認。オフにする設定、法人プランとの違い、Nottaとの比較まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲", "description": "ChatGPTの音声入力・音声会話・録音モードで、音声と文字起こしが学習に使われる条件をOpenAI公式ヘルプで確認。オフにする設定、法人プランとの違い、Nottaとの比較まで。", "datePublished": "2026-10-18", "dateModified": "2026-10-18", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/chatgpt-voice-training/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲</h1><p class="meta">2026-10-18 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、ChatGPTで<strong>学習の対象になりうるのは「音声そのもの」より「文字起こし」の方</strong>です。OpenAIの公式ヘルプでは、音声会話と録音モードの音声は、本人が共有を選ばない限り学習に使わないと書かれています。一方、文字起こしは「すべての人のためにモデルを改善する」がオンなら学習に使われる場合があります。個人プランならこの設定をオフにすれば止められ、法人向けプランとAPIは初期状態で学習対象外です。</p>
+<h2 id="機能ごとに-音声-と-文字起こし-の扱いが違う">機能ごとに「音声」と「文字起こし」の扱いが違う</h2>
+<p>ChatGPTで声を使う機能は3つあり、公式ヘルプはそれぞれ別のページで説明しています。2026年10月18日に公式ページで確認した内容を、音声と文字起こしに分けて並べます。</p>
+<div class="tw"><table><thead><tr><th>機能</th><th>音声そのもの</th><th>文字起こし・生成物</th><th>音声の保存</th></tr></thead><tbody><tr><td>音声入力（マイクのアイコン）</td><td>個人ユーザーが音声の共有を選んだ場合に学習に使われうる</td><td>送信した文字は通常のメッセージとして会話に入る</td><td>チャットが履歴にある間は保持。チャット削除後30日以内に削除</td></tr><tr><td>音声会話（ChatGPT Voice）</td><td>「音声録音を含める」をオンにしない限り学習に使わない</td><td>「モデルを改善する」がオンなら学習に使われる場合がある</td><td>音声クリップは文字起こしと一緒に保存され、30日保持</td></tr><tr><td>録音モード（record）</td><td>学習に使わない。文字起こし後に削除</td><td>Free・Plus・Proで「モデルを改善する」がオンなら、文字起こしとキャンバスが学習に使われる場合がある</td><td>文字起こし後に自動削除</td></tr><tr><td>法人向け（Business・Enterprise・Edu）とAPI</td><td>初期状態で学習に使わない</td><td>初期状態で学習に使わない</td><td>管理者が保持期間を設定（APIは原則最長30日）</td></tr></tbody></table></div>
+<p>録音モードの説明には、録音の音声は文字起こしのためだけに使い、その後削除すると書かれています。そのすぐ下に、個人プランで設定がオンなら<strong>文字起こしとキャンバス（要約）は学習に使う場合がある</strong>と続きます。「音声は残らないから安心」と読んで止まると、肝心の文字の方を見落とします。</p>
+<p>なお録音モードは、公式ヘルプの記載ではPlus・Pro・Business・Enterprise・Eduで、macOSのデスクトップアプリから使う機能です。</p>
+<h2 id="オフにする設定は2つ">オフにする設定は2つ</h2>
+<p>公式ヘルプ「Data controls in ChatGPT」に書かれている手順です。</p>
+<ol><li><strong>設定 → データコントロール → 「すべての人のためにモデルを改善する」をオフ</strong>。新しい会話が学習に使われなくなります。音声会話と録音モードの文字起こしも、この設定に従います</li><li><strong>同じ画面の「音声録音を含める」をオフ</strong>。音声入力と音声会話の音声クリップの共有が止まります。「モデルを改善する」自体をオフにすれば、音声の共有もまとめて止まると音声入力のFAQに書かれています</li></ol>
+<p>ログイン中なら、この設定はアカウント単位で全デバイスに効きます。プライバシーポータルの「Do not train on my content」を選ぶ方法もあり、公式ヘルプではどちらか一方で足りるとされています。</p>
+<h3 id="オフにしても残る2つの経路">オフにしても残る2つの経路</h3>
+<ul><li><strong>評価ボタン</strong>：個人プランでは、オプトアウト後でも高評価・低評価を送ると、その会話全体が学習に使われる場合があると明記されています</li><li><strong>オフにする前の分</strong>：止まるのは「新しい会話」です。すでにアカウントから切り離された音声クリップは、共有を止めても引き続き使われる場合があり、チャットを削除しても消えないと書かれています</li></ul>
+<p>録音を残したくないだけなら、一時チャット（Temporary chat）も選択肢です。一時チャットは学習に使われず、安全目的で最長30日保持されると説明されています。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-個人で使うなら-設定のオフで足りるか">1. 個人で使うなら、設定のオフで足りるか</h3>
+<p>自分の声のメモや音声入力なら、「モデルを改善する」をオフにすれば公式ヘルプ上は学習の対象から外れます。追加費用はかかりません。</p>
+<h3 id="2-他人の声が入る会議なら-設定を全員が守れるか">2. 他人の声が入る会議なら、「設定を全員が守れるか」</h3>
+<p>社内の会議を録音モードで文字起こしする場合、問題は自分の設定ではなく、<strong>録音したメンバー全員の個人アカウントの設定</strong>です。1人でもオンのままなら、その人の録音の文字起こしは学習対象になりえます。メンバーの設定を管理できないなら、初期状態で学習対象外の法人向けプランで統一する方が説明しやすくなります。法人向けの名称は公式ページでは「ChatGPT Business」「ChatGPT Enterprise」と記載されています。</p>
+<h3 id="3-日本語の会議録として使うなら-専用ツールと比べる">3. 日本語の会議録として使うなら、専用ツールと比べる</h3>
+<p>録音モードは要約やメール文の作成に強い一方、対応しているのはmacOSのデスクトップアプリで、カレンダーからの自動参加はGoogle Meetのリンクのみと書かれています。ZoomやTeamsの会議は手動で録音を始める必要があります。</p>
+<p>日本語の会議を継続的に記録するなら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のような文字起こし専用ツールも候補です。ただしNottaは学習の止め方がChatGPTと逆で、<strong>設定のスイッチではなくプランで決まります</strong>。利用規約とプライバシーポリシーには、音声認識エンジンを提供する第三者のパートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合がある、と書かれています。</p>
+<p>法人向けページの説明では、この「AI学習」は国内パートナー企業が音声データと認識結果からランダムに抽出したデータを音声認識エンジンの学習に使うもので、AI要約の自然言語処理エンジンにはデータを提供していないとされています。「AI学習なし」が機能として明記されているのは、確認したかぎりビジネス Plus（年間払いで月額5,400円・税抜）、エンタープライズ、士業向け特別プランです。フリー・プレミアム・ビジネスの機能一覧には、この文言は見当たりませんでした。</p>
+<p>止め方の違いを並べると、次のようになります。</p>
+<ul><li><strong>ChatGPT（個人プラン）</strong>：設定をオフにすれば止まる。費用はかからない</li><li><strong>ChatGPT（法人向け・API）</strong>：初期状態で学習対象外。明示的に共有した場合のみ対象</li><li><strong>Notta（フリー・プレミアム・ビジネス）</strong>：機能一覧に「AI学習なし」の記載がない。料金は0円〜月額2,508円（税込・年間払い）</li><li><strong>Notta（ビジネス Plus以上）</strong>：「AI学習なし」と明記。月額5,400円（税抜・年間払い）から</li></ul>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>ChatGPT（個人プラン）</strong>：学習を止めるのは本人の設定なので、会議の参加者全員の設定までは揃えられません。評価ボタンを押すと、オフにしていても会話が学習に使われる場合があります</li><li><strong>ChatGPT 録音モード</strong>：公式ヘルプの記載ではmacOSのデスクトップアプリ限定で、1回の録音は最長4時間です。Enterprise・Eduのワークスペースでは初期状態で無効になっており、管理者が有効にする必要があります</li><li><strong>Notta</strong>：「AI学習なし」はビジネス Plus以上と士業向け特別プランに限られ、個人向けのプレミアムでは明記されていません。設定で個別に止める方法は、公式ページで確認できませんでした</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="ChatGPTの無料プランでも-音声の学習はオフにできますか">ChatGPTの無料プランでも、音声の学習はオフにできますか</h3>
+<p>公式ヘルプでは、Free・Plus・Proの個人ユーザーは「すべての人のためにモデルを改善する」と「音声録音を含める」を設定で切り替えられると説明されています。無料プランでも同じ設定画面から変更できます。</p>
+<h3 id="音声会話をしただけで-自分の声が学習に使われますか">音声会話をしただけで、自分の声が学習に使われますか</h3>
+<p>公式ヘルプによると、音声クリップは「音声録音を含める」をオンにしない限り学習に使われません。ただし音声会話の文字起こしは、「モデルを改善する」がオンなら学習に使われる場合があります。声と文字は別のスイッチだと考えてください。</p>
+<h3 id="会社の会議をChatGPTで文字起こししても問題ありませんか">会社の会議をChatGPTで文字起こししても問題ありませんか</h3>
+<p>学習の扱いはプランと設定で変わりますが、録音そのものの可否は別の論点です。公式ヘルプも、他人を録音する前に地域の法令を確認し同意を得るよう求めています。社内で使う場合は、一般論としてではなく所属組織の規程と担当部門に確認してください。社内規程との向き合い方は<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a>で整理しています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>ChatGPTで学習対象になりうるのは主に<strong>文字起こしと会話</strong>。音声会話と録音モードの音声は、共有を選ばない限り学習に使わないと公式ヘルプに書かれている</li><li>個人プランは「すべての人のためにモデルを改善する」をオフにすれば止まる。ただし評価ボタンとオフ前の分は残る。法人向けとAPIは初期状態で対象外</li><li>Nottaは設定ではなくプランで決まり、「AI学習なし」の明記はビジネス Plus以上と士業向け特別プラン（2026年10月18日に公式ページで確認）</li></ul>
+<p>Nottaのプランごとの差は<a href="../notta-business-plus/">Nottaビジネス Plusとビジネスの違い</a>に、相談記録を扱う場合の考え方は<a href="../shigyo-transcription-no-ai-training/">Nottaで文字起こしをAI学習させない方法</a>に、学習以外のリスクは<a href="../ai-minutes-security/">AI議事録に社外秘を入れていいか</a>にまとめています。</p>
+<p>※本記事はOpenAIとNottaの公開ページを2026年10月18日に確認して整理したもので、法的な助言ではありません。設定名や提供範囲は変更されることがあるため、最新の公式ヘルプをご確認ください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた</a></li><li><a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a></li><li><a href="../amivoice-training-policy/">AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較</a></li><li><a href="../claude-voice-training/">Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い</a></li><li><a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？規約で変わる4点を確認した</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い｜AIツール実用ガイド</title>
+<meta name="description" content="Claudeの音声入力や音声モードで話した内容はAIの学習に使われるのか。Anthropic公式のプライバシーセンターと規約で、設定・法人プラン・Nottaとの違いを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/claude-voice-training/">
+<meta property="og:title" content="Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い｜AIツール実用ガイド">
+<meta property="og:description" content="Claudeの音声入力や音声モードで話した内容はAIの学習に使われるのか。Anthropic公式のプライバシーセンターと規約で、設定・法人プラン・Nottaとの違いを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い", "description": "Claudeの音声入力や音声モードで話した内容はAIの学習に使われるのか。Anthropic公式のプライバシーセンターと規約で、設定・法人プラン・Nottaとの違いを整理しました。", "datePublished": "2026-10-18", "dateModified": "2026-10-18", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/claude-voice-training/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い</h1><p class="meta">2026-10-18 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Claudeの<strong>音声入力（ディクテーション）の録音そのものは、文字に変換したあと削除され、学習には使わない</strong>と公式に書かれています。ただし<strong>変換後のテキストは普通のチャットと同じ扱い</strong>で、個人向けプランでは「モデル改善への協力」の設定次第で学習に使われる可能性があります。一方、<strong>音声モードの音声データを名指しした記載は、公式のプライバシーセンターで見つかりませんでした。</strong></p>
+<h2 id="2026年10月18日に公式ページで確認したこと">2026年10月18日に公式ページで確認したこと</h2>
+<p>Anthropicのヘルプでは、Claudeの音声機能は2つに分かれています。</p>
+<ul><li><strong>音声入力（Dictation）</strong>：話した言葉を文字にして、テキストのプロンプトとして送る。Claudeの返事はテキスト</li><li><strong>音声モード（Voice mode）</strong>：Claudeと声で会話する。Claudeも声で返す。ヘルプ上はベータ機能で、Free・Pro・Max・Team・Enterpriseの全プランが対象</li></ul>
+<p>学習の扱いが明記されているのは、このうち<strong>音声入力だけ</strong>です。プライバシーセンターの「Claudeモバイルアプリで音声入力を使うと、どんな個人データが収集されるか」という記事には、個人向け・法人向けの両方に次の趣旨が書かれています。</p>
+<ul><li>音声をテキストに変換したあと、<strong>録音は削除する</strong></li><li>テキストはチャットの保存期間に従って保存される</li><li><strong>声（voice）をモデルの学習には使わない</strong></li></ul>
+<p>個人向け版にはさらに「チャットをClaudeの改善に使うことを許可している場合、<strong>文字起こしされたテキストはプライバシー設定に従って使われる場合がある</strong>」と続きます。つまり守られているのは「声」であって、「話した中身」ではありません。</p>
+<p>音声モードについては、ヘルプのFAQに「音声会話の<strong>テキストの文字起こしは、テキストの会話と同じようにチャット履歴に保存される</strong>」とあります。ただ、プライバシーセンターを voice・audio・voice mode で検索しても、<strong>音声モードの音声そのものの保存や学習を名指しした記事は確認できませんでした。</strong></p>
+<h2 id="比較表-音声と文字起こしの学習の扱い">比較表：音声と文字起こしの学習の扱い</h2>
+<div class="tw"><table><thead><tr><th>対象</th><th>音声（録音そのもの）</th><th>文字起こし後のテキスト</th><th>学習させないための条件</th></tr></thead><tbody><tr><td>Claude 個人向け（Free・Pro・Max）の音声入力</td><td>変換後に削除・学習に使わないと明記</td><td>チャットと同じ扱い。設定がオンなら学習に使われる場合あり</td><td>「モデル改善」の設定をオフにする（安全確認の対象やフィードバック送信分は例外）</td></tr><tr><td>Claude 個人向けの音声モード</td><td>名指しした記載は確認できなかった</td><td>チャット履歴に保存されるとヘルプに記載</td><td>公式に音声モード固有の記載なし。チャット全般の設定が手がかり</td></tr><tr><td>Claude 法人向け（Team・Enterprise）</td><td>音声入力は削除・学習に使わないと明記</td><td>初期設定で学習に使わないと明記</td><td>フィードバックを送らない、明示的に許可しない</td></tr><tr><td>Notta</td><td>プランに応じて音声認識の学習に使う場合があると規約に明記</td><td>要約用の言語処理エンジンには提供していないと公式FAQに記載</td><td>「AI学習なし」が機能として載っているプランを契約する</td></tr></tbody></table></div>
+<p>表の「確認できなかった」は「学習に使われる」という意味ではありません。<strong>その文言が公式ページに見つからなかった、という事実だけ</strong>を示しています。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-個人向けプランなら-まず設定を見る">1. 個人向けプランなら、まず設定を見る</h3>
+<p>個人向け（Free・Pro・Max）のプライバシーポリシーは、入力と出力を「アカウント設定でオプトアウトしない限り」学習と改善に使う場合があると書いています。設定は<strong>設定 → プライバシー → 「Help improve our AI models」のトグル</strong>で切り替えます（パソコンもスマホも同じ場所）。</p>
+<p>設定には注意点が2つあります。</p>
+<ul><li><strong>オフにしても、過去のデータが学習済みのモデルから消えるわけではない</strong>。公式ヘルプは「すでに始まった学習や、学習済みのモデルには含まれたまま」と書いています</li><li><strong>オフでも例外がある</strong>。安全確認の対象としてフラグが立った会話と、親指マークなどでフィードバックとして送った会話は、改善に使われる場合があります</li></ul>
+<p>オンにすると、新しいチャットは匿名化した形で<strong>最大5年</strong>保持される場合があります。シークレット（Incognito）チャットは、設定がオンでも改善に使わないと明記されています。</p>
+<h3 id="2-会社で使うなら-誰が契約しているか-を見る">2. 会社で使うなら「誰が契約しているか」を見る</h3>
+<p>ここが一番取り違えやすい点です。Anthropicの個人向け利用規約には、法人向けの商用規約は「<strong>個人または法人によるClaude.aiやClaude Proの利用は含まない</strong>」と書かれています。会社のお金でProを契約していても、適用されるのは個人向けの規約です。</p>
+<p>法人向けの商用規約が適用されるのは、Team・Enterprise（Claude for Work）やAPIです。商用規約には「Anthropicはサービスの顧客コンテンツでモデルを学習してはならない」という一文があり、プライバシーセンターの法人向け記事も「初期設定で学習に使わない」としています。例外はフィードバックやバグ報告を送った場合と、明示的に許可した場合で、管理者はメンバーのフィードバック送信（Rate chats）を組織設定で止められます。</p>
+<p>社外秘を扱う前提なら、<a href="../ai-minutes-security/">AI議事録に社外秘を入れていいかを整理した記事</a>のとおり、学習の可否より先に共有範囲や社内ルールを確認しておくと話が早く進みます。</p>
+<h3 id="3-会議を録音して文字起こしするなら-録音の保存を前提に選ぶ">3. 会議を録音して文字起こしするなら、録音の保存を前提に選ぶ</h3>
+<p>Claudeの音声入力は「録音を消す」ことで声を守る設計です。録音を残して聞き直す・共有するツールでは、<strong>その録音を学習に使うかどうか</strong>が論点になります。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約（2025年8月1日改訂）第10条には、音声認識エンジンを提供するパートナー企業が「お客様がご利用のプランに応じて、お客様の音声データを音声認識トレーニングに利用する場合があります」と書かれています。公式の法人向けページのFAQでは、この「AI学習」を、国内のパートナー企業がランダムに選んだデータだけを音声認識の精度向上に使うこと、と説明し、<strong>AI要約の自然言語処理エンジンの学習にはデータを提供していない</strong>としています。</p>
+<p>「AI学習なし」が機能として載っているのは、2026年10月18日時点で確認したかぎり<strong>ビジネス Plus（年額64,800円・税抜）、エンタープライズ、士業向け特別プラン</strong>です。料金が公開されているのはビジネス Plusだけで、残り2つは問い合わせになります。プランごとの差は<a href="../notta-business-plus/">Nottaビジネス Plusとビジネスの違い</a>にまとめています。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<ul><li><strong>Claude（個人向け）</strong>：学習しないと明記されているのは「声」だけです。話した中身はテキストとして残り、設定次第で学習に使われる場合があります</li><li><strong>Claude（音声モード）</strong>：音声そのものの扱いを名指しした公式記事が見つからず、社内説明の材料としてはここで止まる可能性があります</li><li><strong>Claude（法人向け）</strong>：Team・Enterpriseの契約が必要です。個人のProを会社で使うだけでは、商用規約の扱いになりません</li><li><strong>Notta</strong>：規約上、プランによっては音声データが音声認識の学習に使われる場合があります。「AI学習なし」が載っているのは上位プランです。料金ページの機能比較表では、下位プランの同じ行の記号を読み取れず、扱いは確認できませんでした</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Claudeの音声入力で話した内容は-Anthropicの社員に聞かれますか">Claudeの音声入力で話した内容は、Anthropicの社員に聞かれますか</h3>
+<p>録音はテキストに変換したあと削除するとプライバシーセンターに書かれています。変換後のテキストはチャットとして保存されますが、<strong>人間が読むかどうかを名指しした記載は、今回確認した記事には見当たりませんでした。</strong></p>
+<h3 id="モデル改善-をオフにすれば-音声モードの会話も学習に使われませんか">「モデル改善」をオフにすれば、音声モードの会話も学習に使われませんか</h3>
+<p>音声モードの会話は、テキストの文字起こしがチャット履歴に保存されるとヘルプに書かれています。チャットと同じ設定の対象になると考えるのが自然ですが、<strong>音声モードを名指しした公式の記載は確認できませんでした</strong>。学習の対象から外したい内容は、改善に使わないと明記されているシークレットチャットで扱う方法もあります。</p>
+<h3 id="会社の会議をClaudeで文字起こししても問題ありませんか">会社の会議をClaudeで文字起こししても問題ありませんか</h3>
+<p>この記事は公式の記載を整理したもので、可否は判断できません。録音や社外への送信は社内規程や取引先との契約で決まるため、担当部署や専門家に確認してください。規程の説明に使える原文の整理は<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止されたときの記事</a>にあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Claudeの<strong>音声入力の録音は削除・学習に使わない</strong>と明記。ただし変換後のテキストは、個人向けでは「モデル改善」の設定次第で学習に使われる場合がある</li><li><strong>音声モードの音声そのものの扱いは、公式に名指しした記載を確認できなかった</strong>。法人向け（Team・Enterprise）は初期設定で学習に使わないと明記</li><li>Nottaは<strong>プランに応じて音声認識の学習に使う場合がある</strong>と規約に明記し、「AI学習なし」はビジネス Plus・エンタープライズ・士業向け特別プランに記載（2026年10月18日に公式ページで確認）</li></ul>
+<p>※本記事は各社の公開文書を整理したものであり、法的な助言ではありません。記載の内容は2026年10月18日時点のもので、規約・料金・設定画面は変更されることがあります。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた</a></li><li><a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a></li><li><a href="../amivoice-training-policy/">AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較</a></li><li><a href="../chatgpt-voice-training/">ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲</a></li><li><a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？規約で変わる4点を確認した</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+</div></footer>
+</body>
+</html>

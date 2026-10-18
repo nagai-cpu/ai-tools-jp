@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI文字起こしの監査ログ｜誰が見たかを追えるのはNottaのどのプランか｜AIツール実用ガイド</title>
+<meta name="description" content="文字起こしを誰が閲覧・共有したか後から追えるか。Nottaの操作ログとZoom・Teams・Google Workspaceの監査ログを公式ヘルプで比べました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/transcription-audit-log/">
+<meta property="og:title" content="AI文字起こしの監査ログ｜誰が見たかを追えるのはNottaのどのプランか｜AIツール実用ガイド">
+<meta property="og:description" content="文字起こしを誰が閲覧・共有したか後から追えるか。Nottaの操作ログとZoom・Teams・Google Workspaceの監査ログを公式ヘルプで比べました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI文字起こしの監査ログ｜誰が見たかを追えるのはNottaのどのプランか", "description": "文字起こしを誰が閲覧・共有したか後から追えるか。Nottaの操作ログとZoom・Teams・Google Workspaceの監査ログを公式ヘルプで比べました。", "datePublished": "2026-10-18", "dateModified": "2026-10-18", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/transcription-audit-log/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI文字起こしの監査ログ｜誰が見たかを追えるのはNottaのどのプランか</h1><p class="meta">2026-10-18 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Nottaで「誰がどのノートを閲覧したか」を管理者が後から追えるのは、公式ヘルプ上<strong>エンタープライズプランの操作ログ</strong>です。ビジネスプランで見られるのはメンバー単位の利用状況レポートで、ノートごとの閲覧履歴とは別物です。Teams・Google Meetは、文字起こしがOneDrive／Googleドライブのファイルとして保存されるため、各社の監査ログで追う形になります。</p>
+<h2 id="誰が見たか-を追うには-3つの記録を分けて考える">「誰が見たか」を追うには、3つの記録を分けて考える</h2>
+<p>監査ログと一口に言っても、残る記録は3種類に分かれます。</p>
+<ol><li><strong>閲覧の記録</strong>：誰がいつ、どの文字起こしを開いたか</li><li><strong>共有・持ち出しの記録</strong>：誰が共有設定を変えたか、ダウンロードしたか</li><li><strong>管理操作の記録</strong>：権限の変更、メンバーの追加・削除、ログイン</li></ol>
+<p>「漏えいが疑われたときに経路をたどれるか」を問われているなら、必要なのは1と2です。3だけでは足りません。以下は2026年10月18日に各社の公式ページで確認した内容です。</p>
+<h2 id="比較表-文字起こしの閲覧・共有を追える範囲">比較表：文字起こしの閲覧・共有を追える範囲</h2>
+<div class="tw"><table><thead><tr><th>ツール</th><th>閲覧の記録</th><th>共有・持ち出しの記録</th><th>保持・取得期間</th><th>公式に書かれた利用条件</th></tr></thead><tbody><tr><td>Notta</td><td>操作ログの「ノート操作」に閲覧・編集・削除・復元など</td><td>ダウンロード履歴あり。共有操作の記録は確認できなかった</td><td>過去180日間</td><td>エンタープライズ（オーナー・アドミンのみ）</td></tr><tr><td>Zoom</td><td>クラウド録画の分析で閲覧・ダウンロードの日時と氏名</td><td>操作ログに録画削除など</td><td>1回の取得は1か月分まで</td><td>操作ログはProプラン以上（APIリファレンス）</td></tr><tr><td>Microsoft Teams</td><td>文字起こしファイルへのアクセスを「Accessed file」で記録</td><td>「Shared file」など共有イベント</td><td>Audit (Standard) で180日</td><td>適切なサブスクリプションでは既定で有効</td></tr><tr><td>Google Workspace</td><td>ドライブのログイベントに「表示」</td><td>ダウンロード・公開設定の変更</td><td>公式ページで確認できなかった</td><td>対象エディションの一覧は確認できなかった</td></tr></tbody></table></div>
+<p>表の「確認できなかった」は「記録されない」という意味ではありません。<strong>公式ページにその文言が見つからなかった</strong>という事実だけを示しています。</p>
+<h2 id="Notta-操作ログはエンタープライズ-利用状況レポートはビジネスから">Notta：操作ログはエンタープライズ、利用状況レポートはビジネスから</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプ「操作ログの取得と保存」には、前提条件として「エンタープライズプランで利用可能」「オーナーとアドミンのみ設定可能」「Notta Web版」と書かれています。料金ページでもエンタープライズの機能に「操作ログ」が挙がっており、法人向けページのFAQにも、ビジネスとの違いとして「操作ログの記録」が挙げられています。</p>
+<p>記録されるのは次の4種類です。</p>
+<ul><li><strong>ログイン</strong>：ログイン日時、端末、IPアドレス</li><li><strong>ノート操作</strong>：閲覧、編集、削除、復元などの履歴</li><li><strong>ファイルダウンロード</strong>：ダウンロード履歴</li><li><strong>メンバー管理</strong>：ユーザーロールの変更履歴</li></ul>
+<p>メールアドレスで特定のメンバーに絞り込み、期間を指定でき、<strong>過去180日間</strong>の操作ログをExcelで出力できます。「誰が見たか」に正面から答えられるのは、この「ノート操作」の閲覧履歴です。</p>
+<p>一方、ビジネスプランから使える「利用状況レポート」は、メンバーごとの使用時間、ノート数、ログインアクティビティを見るものです。ノート単位で誰が開いたかを示す記録ではありません。</p>
+<p>エンタープライズには、監査員が読み取り専用で全ワークスペースを確認できる「監査モード」もあります。ヘルプによれば、監査員の閲覧・検索の操作は改ざん不可の監査ログとして保存されます。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-問われているのが-閲覧-なら-ノート単位の記録があるか">1. 問われているのが「閲覧」なら、ノート単位の記録があるか</h3>
+<p>社内規程やセキュリティチェックシートで「閲覧履歴の記録」を求められているなら、Nottaではエンタープライズの操作ログが該当します。ビジネスプランの利用状況レポートで代わりになるかは、規程の文言次第です。チェックシートの埋め方は<a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシートの記事</a>にまとめています。</p>
+<h3 id="2-文字起こしが-どこに保存されるか-で-見るべきログが変わる">2. 文字起こしが「どこに保存されるか」で、見るべきログが変わる</h3>
+<p>Microsoftの公式ドキュメントには、Teamsの文字起こしは録画と一緒にOneDriveとSharePointに保存されると書かれています。GoogleのヘルプにもMeetの文字起こしは主催者のGoogleドライブの「Google Meet」フォルダに保存されるとあります。つまりこの2社では、<strong>会議ツールではなくファイル保管庫の監査ログ</strong>を見ることになります。Microsoft PurviewのTeams向けイベントでは、文字起こし内容の取得はGraph API経由のアクセスのみ記録され、Teamsクライアントからの操作は対象外と注記されています。Teams内で文字起こしを開いたときに「Accessed file」が記録されるかは、公式ページで確認できませんでした。</p>
+<h3 id="3-外部共有リンクは-誰が-が残りにくい前提で設計する">3. 外部共有リンクは「誰が」が残りにくい前提で設計する</h3>
+<p>Nottaの共有リンクについて、ヘルプのモバイルアプリの手順には「リンクを知っている全員がアクセスでき、ログインは不要」とあります。リンク経由の閲覧者を個人として操作ログで特定できるかは、確認できませんでした。Google側も、ドメイン外部のユーザーは原則として匿名で表示されると書いています。追跡を重視するなら、外部共有そのものを制限する方が確実です。Nottaでは「外部共有を無効にします」の設定はビジネス以上のプランで利用できます。共有の社内ルールは<a href="../ai-minutes-security/">AI議事録に社外秘を入れていいかの記事</a>も参考になります。</p>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<ul><li><strong>Notta</strong>：閲覧まで追える操作ログはエンタープライズ限定で、料金は公開されておらず要相談です。共有リンクの発行・閲覧が操作ログに残るかは、ヘルプの4分類からは読み取れませんでした</li><li><strong>Zoom</strong>：操作ログの説明例は「ユーザー追加・設定変更・録画削除」で、閲覧はクラウド録画の分析を別に見る必要があります。文字起こしだけの閲覧を区別して記録するかは確認できませんでした</li><li><strong>Microsoft Teams</strong>：文字起こしの閲覧を追うにはPurviewでOneDrive／SharePointのイベントを探す必要があり、Teams画面の操作と1対1で対応するかは公式に明記がありません</li><li><strong>Google Workspace</strong>：ドライブの監査イベントの多くは、サポート対象エディションのユーザーがオーナーのファイルについてのみ記録されると書かれています</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Nottaのビジネスプランで-誰がノートを見たかは分かりますか">Nottaのビジネスプランで、誰がノートを見たかは分かりますか</h3>
+<p>公式ヘルプで確認できたかぎり、ノート単位の閲覧履歴を記録する操作ログはエンタープライズプランの機能です。ビジネスプランの利用状況レポートで分かるのは、メンバーごとの使用時間・ノート数・ログインアクティビティです。</p>
+<h3 id="Nottaの操作ログはどれくらい前までさかのぼれますか">Nottaの操作ログはどれくらい前までさかのぼれますか</h3>
+<p>ヘルプには「過去180日間の操作ログを取得可能」と書かれています。それより長く保管したい場合は、Excel出力したファイルを社内で保存する運用になります。</p>
+<h3 id="Nottaの共有リンクを誰が開いたかは分かりますか">Nottaの共有リンクを誰が開いたかは分かりますか</h3>
+<p>公式ヘルプでは確認できませんでした。共有リンクはログイン不要でアクセスできると書かれているため、追跡を前提にするのは避けた方が無難です。Web版ではリンクの有効期間とパスワード保護を設定できます。メンバーが抜けたときのデータの扱いは<a href="../transcription-offboarding/">AI文字起こしの退職者アカウントとデータの記事</a>で整理しています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Nottaで「誰がどのノートを閲覧したか」を追えるのは、公式ヘルプ上<strong>エンタープライズの操作ログ</strong>（過去180日・Excel出力）</li><li>ビジネスプランは利用状況レポートと外部共有の無効化まで。閲覧履歴の代わりになるかは規程の文言で判断する</li><li>TeamsとGoogle Meetは文字起こしがファイルとして保存されるため、OneDrive／Googleドライブ側の監査ログを見る</li></ul>
+<p>プランごとの機能差は<a href="../notta-business-plus/">Nottaのビジネスプラスと他プランの違い</a>にまとめています。</p>
+<p>※記載の内容は2026年10月18日時点で各社の公式ページを確認したもので、機能・プランは変更されることがあります。社内規程や監査要件を満たすかどうかの判断は、所属組織の情報システム部門・法務部門にご確認ください。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた</a></li><li><a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a></li><li><a href="../amivoice-training-policy/">AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較</a></li><li><a href="../chatgpt-voice-training/">ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲</a></li><li><a href="../claude-voice-training/">Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較｜AIツール実用ガイド</title>
+<meta name="description" content="AmiVoice API・ScribeAssist・ProVoXTで音声が学習に使われるかを公式規約とFAQで確認。Nottaの規約と並べ、学習させない条件と費用の差を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/amivoice-training-policy/">
+<meta property="og:title" content="AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較｜AIツール実用ガイド">
+<meta property="og:description" content="AmiVoice API・ScribeAssist・ProVoXTで音声が学習に使われるかを公式規約とFAQで確認。Nottaの規約と並べ、学習させない条件と費用の差を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較", "description": "AmiVoice API・ScribeAssist・ProVoXTで音声が学習に使われるかを公式規約とFAQで確認。Nottaの規約と並べ、学習させない条件と費用の差を整理しました。", "datePublished": "2026-10-18", "dateModified": "2026-10-18", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/amivoice-training-policy/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較</h1><p class="meta">2026-10-18 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、AmiVoice APIは<strong>初期状態のままだと音声と認識結果が研究開発・品質向上に使われうる契約</strong>で、学習に使わせないには「ログ保存なし」の接続先を自分で選ぶ必要があります。ログ保存なしは料金が上がります。PCの中で完結するScribeAssistは、そもそもクラウドに音声を送らない設計です。Nottaも「プランに応じて」学習に使う場合があると規約に書いており、<strong>学習させないことが追加の費用で買う条件になっている</strong>点は両社で共通しています。</p>
+<h2 id="AmiVoice-APIは-ログ保存あり-が初期状態">AmiVoice APIは「ログ保存あり」が初期状態</h2>
+<p>アドバンスト・メディアが提供するAmiVoice APIの利用規約（2026年8月25日改訂版）第7条には、次の一文があります。</p>
+<blockquote>契約者が本サービスを利用するためにアップロードする音声データ、並びに本サービス利用の結果作成されるテキストデータを、当社は、当社製品及びサービスの研究開発、及び品質向上のために利用することができるものとします。</blockquote>
+<p>同じ条文は続けて、「データを記録しない接続先」として指定されたURLに送ったデータは<strong>上記目的であっても利用しない</strong>ことを定めています。</p>
+<p>つまり、学習に使われるかどうかは開発者がどの接続先を選ぶかで決まります。公式マニュアルの「ログ保存」のページでは、同期HTTPとWebSocketはエンドポイントを変えて選び、非同期HTTPは「デフォルトではログ保存あり」で、パラメータ <code>loggingOptOut=True</code> を付けると保存しない、と説明されています。</p>
+<h3 id="ログ保存あり-で何が起きるか">「ログ保存あり」で何が起きるか</h3>
+<p>公式FAQは、ログ保存ありでWebSocketまたは同期HTTPを使った場合について、音声データの一部が「当社の音声認識エンジンの機械学習の素材として使用される場合があります」と書いています。</p>
+<p>一方、ログ保存なしの場合は「音声データも認識結果文字列もサーバー側には全く保存されません」とされ、メモリ上で処理して結果を返したら消える、と説明されています。</p>
+<p>非同期HTTPだけは扱いが少し違い、ログ保存の設定とは別に、処理中の音声ファイルが一時保存（処理完了時に即時自動削除）され、認識結果は利用者が取得できるよう1週間保管されると書かれています。</p>
+<h2 id="AmiVoice系サービスとNottaの比較表">AmiVoice系サービスとNottaの比較表</h2>
+<p>2026年10月18日に各社の公式ページで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>サービス</th><th>処理する場所</th><th>学習・研究開発への利用</th><th>学習させない方法</th><th>確認した公式文書</th></tr></thead><tbody><tr><td>AmiVoice API（ログ保存あり）</td><td>アドバンスト・メディアのサーバー</td><td>研究開発・品質向上に利用できると規約に明記</td><td>—</td><td>利用規約 第7条、FAQ</td></tr><tr><td>AmiVoice API（ログ保存なし）</td><td>同上（保存はしない）</td><td>上記目的でも利用しないと規約に明記</td><td>専用の接続先・パラメータを指定</td><td>利用規約 第7条、マニュアル</td></tr><tr><td>ScribeAssist</td><td>利用者のPC内</td><td>学習の文言はないが、クラウドに保存・送信しないと明記</td><td>構造上、音声が外に出ない</td><td>製品ページ</td></tr><tr><td>ProVoXT</td><td>Microsoft Azure</td><td>「送信されるデータは、学習に一切利用されません」の注記あり（生成AI連携の箇所）</td><td>音声認識部分の扱いは確認できなかった</td><td>製品ページ</td></tr><tr><td>Notta</td><td>第三者の国内パートナー企業のAPI</td><td>プランに応じて音声認識トレーニングに利用する場合があると規約に明記</td><td>「AI学習なし」のあるプランを契約</td><td>利用規約 第10条、法人向けページ</td></tr></tbody></table></div>
+<p>ProVoXTの注記は、製品ページの「生成AI連携」という語に付いた脚注です。<strong>音声認識エンジン側の学習まで含む意味かは、ページの文言からは判断できませんでした。</strong> VoXT One（ScribeAssistとProVoXTをまとめたプラットフォーム）のFAQにも、学習利用を個別に扱った質問は見当たりませんでした。</p>
+<h2 id="Nottaの規約は-パートナー企業が-プランに応じて">Nottaの規約は「パートナー企業が、プランに応じて」</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約第10条は、音声認識に第三者のパートナー企業のAPIを使っていることを明かした上で、こう書いています。</p>
+<blockquote>当該パートナー企業は、お客様がご利用のプランに応じて、お客様の音声データを音声認識トレーニングに利用する場合があります。</blockquote>
+<p>法人向けページのFAQ「AI学習とは？」では、国内パートナー企業が音声データと認識結果から「ランダムにピックアップしたデータのみ」を音声認識エンジンの学習に使うこと、AI要約に使う自然言語処理エンジンの学習にはデータを提供していないことが説明されています。パートナー企業の社名は、確認した規約とFAQには書かれていませんでした。</p>
+<p>「AI学習なし」が機能として書かれているのは、法人向けページのビジネス Plus（年64,800円・税抜）、エンタープライズ（要相談）、士業向け特別プランの3つです。ビジネスと個人向けのプレミアムには、この文言は見当たりませんでした。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-自社で開発するならAmiVoice-API-設定は開発者の責任になる">1. 自社で開発するならAmiVoice API、設定は開発者の責任になる</h3>
+<p>AmiVoice APIは部品として組み込むサービスです。学習させないかどうかは、<strong>コードの中でどの接続先を呼ぶかで決まります</strong>。非同期HTTPは何も指定しないとログ保存ありになるため、社内ルールで学習を禁じているなら、設計書やレビューでこの指定を確認する工程が必要です。料金表（税込）では、汎用エンジンのWebSocket・同期HTTPがログ保存ありで99円/時間、ログ保存なしで148.5円/時間です。どのエンジンも毎月60分は無料で試せると規約に書かれています。</p>
+<h3 id="2-音声を社外に出したくないならScribeAssist">2. 音声を社外に出したくないならScribeAssist</h3>
+<p>製品ページは、インストールしたPC内で動くスタンドアローン型で、インターネット接続なしでも使え、クラウドにデータを保存・送信しないと説明しています。学習されるかどうかを議論する前に、<strong>送らない</strong>という選択肢になります。ただし一部の要約機能にはインターネット接続が必要で、クラウド要約では文字起こし結果を生成AIに送ります（音声データや要約結果はクラウドに保存されないと記載）。価格はオープン価格で、ページに金額は載っていません。</p>
+<h3 id="3-すぐ契約して会議で使うならNotta-ただしプランを選ぶ">3. すぐ契約して会議で使うならNotta、ただしプランを選ぶ</h3>
+<p>Nottaで学習させないことを条件にするなら、選べるのはビジネス Plus以上と士業向け特別プランです。無料プランやプレミアムで始めて、後から「学習に使われていた」と気づく形にならないよう、<strong>契約前にプランの機能欄で「AI学習なし」の有無を見る</strong>のが手順になります。</p>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<ul><li><strong>AmiVoice API</strong>：学習させない設定が初期値ではなく、非同期HTTPはパラメータを付け忘れるとログ保存ありになります。ログ保存なしは汎用エンジン（WebSocket・同期HTTP）で1.5倍の料金です</li><li><strong>ScribeAssist</strong>：動作環境はWindows 10/11と記載されており、スマホで録音してそのまま使えるかは製品ページでは確認できませんでした。価格が公開されておらず、見積もりが必要です</li><li><strong>ProVoXT</strong>：「学習に一切利用されません」の注記が生成AI連携に付いており、音声認識の学習まで含むかは公式ページで確認できませんでした。導入前に問い合わせて確認する必要があります</li><li><strong>Notta</strong>：「AI学習なし」は上位・特別プランのみで、エンタープライズと士業向け特別プランは料金が非公開です。パートナー企業の社名も規約からは分かりません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="AmiVoiceで文字起こしした音声は学習に使われますか">AmiVoiceで文字起こしした音声は学習に使われますか</h3>
+<p>AmiVoice APIの場合、ログ保存ありの接続先を使うと、音声と認識結果が研究開発・品質向上に使われうると規約に書かれています。ログ保存なしの接続先を選べば、その目的でも利用しないとされています。ScribeAssistはPC内で処理する設計で、クラウドに音声を送りません。</p>
+<h3 id="AmiVoice-APIのログ保存なしは無料枠でも使えますか">AmiVoice APIのログ保存なしは無料枠でも使えますか</h3>
+<p>規約には、各エンジンにつき毎月60分まで無料と書かれています。料金表ではログ保存なし・ありのそれぞれに単価が設定されていますが、無料枠がログ保存なしにも適用されるかを明示した文は、確認したページでは見つけられませんでした。利用前に管理画面か問い合わせで確認してください。</p>
+<h3 id="Nottaで学習させないにはどのプランが必要ですか">Nottaで学習させないにはどのプランが必要ですか</h3>
+<p>2026年10月18日時点の公式ページで「AI学習なし」が機能として書かれていたのは、ビジネス Plus、エンタープライズ、士業向け特別プランです。プラン間の違いは<a href="../notta-business-plus/">Nottaのビジネス Plusとビジネスの違い</a>で、規約の読み方は<a href="../shigyo-transcription-no-ai-training/">Nottaで文字起こしをAI学習させない方法</a>で詳しく扱っています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>AmiVoice APIは<strong>ログ保存ありが研究開発に使われうる側</strong>で、学習させないには「ログ保存なし」を開発者が指定する（料金は上がる）</li><li>ScribeAssistはPC内で完結する設計で、音声をクラウドに送らない。ProVoXTの「学習に一切利用されません」は生成AI連携への注記で、音声認識部分は確認できなかった</li><li>Nottaは<strong>プランに応じて</strong>学習利用の場合ありと規約に明記。「AI学習なし」はビジネス Plus・エンタープライズ・士業向け特別プランで確認した</li></ul>
+<p>社内規程で文字起こしが止まっている場合の説明の組み立て方は<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a>に、学習以外に見るべき共有設定は<a href="../ai-minutes-security/">AI議事録に社外秘を入れていいか</a>にまとめています。</p>
+<p>※本記事は各社の公開文書を引用して整理したものであり、法的な助言ではありません。導入可否の判断は所属組織の法務・情報システム部門、または専門家にご確認ください。記載内容は2026年10月18日に公式ページで確認したもので、規約・料金は変更されることがあります。</p></article><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた</a></li><li><a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a></li><li><a href="../chatgpt-voice-training/">ChatGPTの音声と文字起こしは学習される？設定で止まる範囲と残る範囲</a></li><li><a href="../claude-voice-training/">Claudeの音声や文字起こしは学習される？音声モードと音声入力の違い</a></li><li><a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？規約で変わる4点を確認した</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a></p>
+</div></footer>
+</body>
+</html>
