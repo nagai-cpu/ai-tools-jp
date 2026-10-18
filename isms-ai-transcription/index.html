@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ISMS取得企業のAI文字起こし承認基準｜認証の「範囲」と学習の扱いを見る｜AIツール実用ガイド</title>
+<meta name="description" content="ISMS認証を取得している会社がAI文字起こしツールを承認するときの確認項目を、ISMS-ACの制度説明とNottaの公開情報で整理。認証番号の調べ方、クラウド認証とAIMS、学習の扱いまで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/isms-ai-transcription/">
+<meta property="og:title" content="ISMS取得企業のAI文字起こし承認基準｜認証の「範囲」と学習の扱いを見る｜AIツール実用ガイド">
+<meta property="og:description" content="ISMS認証を取得している会社がAI文字起こしツールを承認するときの確認項目を、ISMS-ACの制度説明とNottaの公開情報で整理。認証番号の調べ方、クラウド認証とAIMS、学習の扱いまで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ISMS取得企業のAI文字起こし承認基準｜認証の「範囲」と学習の扱いを見る", "description": "ISMS認証を取得している会社がAI文字起こしツールを承認するときの確認項目を、ISMS-ACの制度説明とNottaの公開情報で整理。認証番号の調べ方、クラウド認証とAIMS、学習の扱いまで。", "datePublished": "2026-10-19", "dateModified": "2026-10-19", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/isms-ai-transcription/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">ISMS取得企業のAI文字起こし承認基準｜認証の「範囲」と学習の扱いを見る</h1><p class="meta">2026-10-19 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、ISMS認証を取得している会社がAI文字起こしツールを承認するときは、<strong>「ベンダーがISO 27001を持っているか」で止めず、認証の範囲・クラウド固有の管理策・AI学習の扱いの3つを書面で確かめる</strong>のが現実的です。たとえばNottaは、ISO/IEC 27001:2022の認証（認証範囲「Webサービスの開発及び運用」、認証番号123133）を公表していますが、音声データをAI学習に使わないことが機能として書かれているのはビジネス Plus以上と士業向け特別プランです。認証の有無と、学習の扱いは別の項目として審査票に載せる必要があります。</p>
+<h2 id="承認時に確認する項目と-Nottaの公開情報">承認時に確認する項目と、Nottaの公開情報</h2>
+<p>2026年10月19日に、情報マネジメントシステム認定センター（ISMS-AC）の制度説明ページと、Nottaのセキュリティページ・ヘルプ・料金ページ・法人向けページで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>確認項目</th><th>何を見るか</th><th>Nottaの公開情報</th></tr></thead><tbody><tr><td>ISMS認証（ISO/IEC 27001）</td><td>規格の版、認証範囲、認証番号、有効性</td><td>ISO/IEC 27001:2022、初回登録2023年9月14日、最終更新2026年2月3日、認証範囲「Webサービスの開発及び運用」、認証番号123133</td></tr><tr><td>第三者による保証報告書</td><td>SOC 2のType1かType2か、取得時期</td><td>2022年9月29日にSOC2 Type1、2023年2月12日にSOC2 Type2の保証報告書</td></tr><tr><td>クラウド固有の管理策（ISO/IEC 27017）</td><td>ISMSクラウドセキュリティ認証の有無</td><td>公開ページでは記載を見つけられなかった</td></tr><tr><td>AIの管理（ISO/IEC 42001）</td><td>AIMS認証の有無</td><td>公開ページでは記載を見つけられなかった</td></tr><tr><td>AI学習の扱い</td><td>音声データを学習に使うか、プランで変わるか</td><td>「AI学習なし」はビジネス Plus、エンタープライズ、士業向け特別プランの機能として記載</td></tr><tr><td>データの保管場所</td><td>国内か、バックアップの場所</td><td>料金ページのFAQで「すべてのデータは日本国内に保管」、バックアップも国内のデータセンター</td></tr><tr><td>回答書類</td><td>チェックシートの様式</td><td>経済産業省のセキュリティチェックシート様式に準拠した自社セキュリティシートをフォーム入力後にダウンロード可能</td></tr></tbody></table></div>
+<h2 id="3つの項目を詳しく見る">3つの項目を詳しく見る</h2>
+<h3 id="1-認証は-範囲-と-番号-まで確かめる">1. 認証は「範囲」と「番号」まで確かめる</h3>
+<p>ISMS認証は組織や事業の範囲を決めて取得するものなので、承認の記録には認証範囲を書いておくと後で説明しやすくなります。Nottaのヘルプ「ISMS認証（ISO 27001）は取得していますか？」（2026年9月28日更新）には、登録組織・適用規格・認証範囲・認証番号が載っていて、IAF CertSearch（iafcertsearch.org）で会社名か認証番号を入れて検索するよう案内されています。報告書の閲覧は営業チームへの問い合わせとされています。</p>
+<h3 id="2-クラウドとAIには-別の認証制度がある">2. クラウドとAIには、別の認証制度がある</h3>
+<p>ISMS-ACの説明によると、ISMSクラウドセキュリティ認証は「通常のISMS(JIS Q 27001)認証に加えて、クラウドサービス固有の管理策(ISO/IEC 27017)が適切に導入、実施されていること」を認証するもので、クラウドサービスを提供する組織だけでなく、<strong>利用する組織</strong>も対象になると書かれています。またISMS-ACは、ISO/IEC 42001に基づくAIマネジメントシステム（AIMS）の適合性評価制度も運営しています。</p>
+<p>社内のISMSで、クラウドサービスの選定に27017相当の確認を求めている場合は、ベンダーの27001だけでは足りないことがあります。Nottaの公開ページで27017と42001の記載は見つけられなかったため、必要なら営業窓口に書面で確認する項目になります。</p>
+<h3 id="3-AI学習の扱いは-認証とは別に契約で決まる">3. AI学習の扱いは、認証とは別に契約で決まる</h3>
+<p>ISO 27001の認証を持っていることと、預けた音声を学習に使わないことは、別の話です。Nottaの利用規約には、音声認識エンジンを提供するパートナー企業が「お客様がご利用のプランに応じて」音声データを学習に使う場合があると書かれています。法人向けページでは「AI学習なしモードでは、音声データがAIに一切学習されることはありません」と説明され、その機能が書かれているのはビジネス Plus（年64,800円・税抜、月額換算5,400円）、エンタープライズ、士業向け特別プランでした。料金ページの比較表では、フリー・プレミアム・ビジネスにこの文言は見当たりません。</p>
+<p>ISMSの運用で「外部に預ける情報の二次利用を禁止する」と決めている会社なら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>を承認するときも、プランの指定まで承認条件に入れておくのが筋です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（無料プランは学習利用の可能性が規約に残る）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta</strong>：ISO 27017（クラウド）とISO 42001（AI）の認証は、公開ページでは確認できませんでした。社内基準がこれらを求める場合は、追加の確認や代替の説明が必要です</li><li><strong>Notta</strong>：「AI学習なし」はビジネス Plus以上と士業向け特別プランに限られます。ビジネスプラン（年30,096円・税込）で承認すると、学習の扱いが要件を満たさない可能性があります</li><li><strong>承認の進め方全般</strong>：ベンダーの認証やチェックシートは、あくまでベンダー側の自己申告と第三者審査の結果です。自社のリスクアセスメントの代わりにはなりません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="ベンダーがISO-27001を持っていれば-承認してよいですか">ベンダーがISO 27001を持っていれば、承認してよいですか</h3>
+<p>ISO 27001は、そのベンダーの組織と認証範囲について情報セキュリティの管理の仕組みが審査されたことを示します。預けたデータを学習に使うかどうか、どの国に保管するかといった個別の条件までは決めないので、それぞれ別の項目として確認するのが一般的です。最終的な判断は、自社のISMSの手順と管理責任者に従ってください。</p>
+<h3 id="認証番号はどこで確認できますか">認証番号はどこで確認できますか</h3>
+<p>Nottaのヘルプでは、IAF CertSearch（iafcertsearch.org）で会社名「Ｎｏｔｔａ株式会社」または認証番号123133を入れて検索するよう案内されています。</p>
+<h3 id="チェックシートはどこで手に入りますか">チェックシートはどこで手に入りますか</h3>
+<p>Nottaのセキュリティページで、フォームに入力すると経済産業省のセキュリティチェックシート様式に準拠した自社セキュリティシートをダウンロードできると書かれています。ITreviewの「SaaSセキュアチェック」からのリクエストも案内されています。項目ごとの書き方は<a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート</a>で整理しています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>ISMS取得企業の承認では、ベンダーの27001の有無だけでなく、<strong>認証範囲・クラウド固有の管理策・AI学習の扱い</strong>を分けて確認する</li><li>Nottaは ISO/IEC 27001:2022（認証番号123133）とSOC2 Type2を公表。27017と42001は公開ページで記載を見つけられなかった</li><li>学習の扱いは認証ではなくプランで決まり、「AI学習なし」の明記はビジネス Plus以上と士業向け特別プラン（2026年10月19日に公式ページで確認）</li></ul>
+<p>契約条項の確認は<a href="../transcription-contract-sla/">AI文字起こしの契約書・SLA確認項目</a>、データの保管国は<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？</a>、稟議の書き方は<a href="../minutes-ai-approval-doc/">AI議事録の導入稟議</a>にまとめています。</p>
+<p>※本記事はISMS-ACとNottaの公開ページを2026年10月19日に確認して整理したもので、認証の取得や審査に関する助言ではありません。認証の状態は変わることがあるため、最新の情報を各公式ページと認証機関の検索でご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../gemini-transcription-training/">Geminiの文字起こしは学習に使われる？声と文字で設定が別だった</a></li><li><a href="../google-meet-transcription-training/">Google Meetの文字起こしはAI学習に使われる？学習より先に見る共有範囲</a></li><li><a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた</a></li><li><a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a></li><li><a href="../amivoice-training-policy/">AmiVoiceの文字起こしは学習に使われない？ログ保存なしの条件とNotta比較</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
