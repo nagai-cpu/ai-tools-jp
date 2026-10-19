@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先｜AIツール実用ガイド</title>
+<meta name="description" content="PLAUD NOTEの録音がAI学習に使われるか、どこに保存されるか、要約に使う外部AIの扱い、暗号化・認証・削除の方法を、公式の信頼性ページと日本向けプライバシー説明の記載だけで整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/plaud-note-security/">
+<meta property="og:title" content="PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先｜AIツール実用ガイド">
+<meta property="og:description" content="PLAUD NOTEの録音がAI学習に使われるか、どこに保存されるか、要約に使う外部AIの扱い、暗号化・認証・削除の方法を、公式の信頼性ページと日本向けプライバシー説明の記載だけで整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先", "description": "PLAUD NOTEの録音がAI学習に使われるか、どこに保存されるか、要約に使う外部AIの扱い、暗号化・認証・削除の方法を、公式の信頼性ページと日本向けプライバシー説明の記載だけで整理しました。", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/plaud-note-security/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先</h1><p class="meta">2026-10-20 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4BEJHJ+6J69I2+5J4W+5YZ76" target="_blank" rel="sponsored nofollow noopener">PLAUD NOTE</a>の録音と文字起こしは、<strong>設定画面で自分から同意しない限りAIの学習には使われない</strong>と公式に書かれています。文字起こしはPLAUD独自のモデルで行い、要約や対話にはOpenAI・Anthropic・Googleの大規模言語モデルを使いますが、各社とはデータを保持せず学習にも使わない契約を結んでいるそうです。日本ユーザーのクラウドデータはAWS東京リージョンに保存されます。ただし、<strong>要約に使う大規模言語モデルは米国でホストされている</strong>こと、そして日本サイトのプライバシーポリシーには「個人データはアメリカ合衆国のサーバーに保存」とあって日本向けの説明と一致しないことは、買う前に知っておくべき点です。</p>
+<h2 id="公式ページの記載を項目ごとに並べた">公式ページの記載を項目ごとに並べた</h2>
+<p>2026年10月20日に、jp.plaud.ai の「信頼性と安全性」ページ、日本向けの「信頼性と安全性について」（プライバシー・セキュリティ説明）ページ、プライバシーポリシーのページ、製品ページで確認しました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式の記載</th><th>書かれているページ</th></tr></thead><tbody><tr><td>AI学習</td><td>学習に使うのは設定画面で明示的に同意（オプトイン）した場合のみ。FAQでは「AIモデルの学習目的で利用することはありません」</td><td>信頼性と安全性／日本向け説明</td></tr><tr><td>文字起こしのモデル</td><td>PLAUD独自のファインチューニング済みモデル</td><td>信頼性と安全性</td></tr><tr><td>要約・対話のモデル</td><td>OpenAI（GPT）、Anthropic（Claude）、Google（Gemini）。データを保持しないエンタープライズ向けAPI契約とDPAで、顧客データの学習を禁止</td><td>信頼性と安全性</td></tr><tr><td>LLMの場所</td><td>日本のユーザーが使うLLMは米国でホスト</td><td>信頼性と安全性</td></tr><tr><td>保存先</td><td>日本ユーザーのクラウドデータはAWS東京リージョン。処理リージョンは米国西部・フランクフルト・日本・シンガポール</td><td>日本向け説明／信頼性と安全性</td></tr><tr><td>暗号化</td><td>通信はHTTPS／TLS 1.2以上、保存はAES-256</td><td>信頼性と安全性</td></tr><tr><td>認証・監査</td><td>ISO/IEC 27001、ISO/IEC 27701、SOC 2 Type 2、HIPAA、GDPR、EN 18031</td><td>信頼性と安全性／製品トップ</td></tr><tr><td>削除</td><td>アプリで削除し、ゴミ箱からも削除すると完全に削除。アカウント削除で関連データは削除または匿名化</td><td>日本向け説明／信頼性と安全性</td></tr><tr><td>本体の通信</td><td>本体単体では外部ネットワークと通信せず、アプリ接続時のみクラウドへ転送</td><td>日本向け説明</td></tr><tr><td>保存先（別記載）</td><td>「ユーザーの個人データはアメリカ合衆国にあるサーバーに保存され」</td><td>プライバシーポリシー</td></tr></tbody></table></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-学習されない-の中身は-オプトインと契約の2段構え">1. 「学習されない」の中身は、オプトインと契約の2段構え</h3>
+<p>学習について、公式は2つの層で説明しています。1つ目は自社の扱いで、学習に使うのは設定画面（「Plaudの改善に協力する」など）で明示的に同意した場合に限るとしています。既定で学習に使われる作りではなく、同意しなければ使われない、という向きです。2つ目は外部の大規模言語モデルの扱いで、OpenAI・Anthropic・Googleとはデータを保持しないエンタープライズ向けAPIの契約とDPAを結び、合意した目的を超えるモデル学習を禁じていると書かれています。</p>
+<p>文字起こし自体は外部に出さず、PLAUD独自のモデルで行うそうです。つまり<strong>音声そのものが外部のLLMに渡るのではなく、文字になった後の要約や対話で外部モデルが使われる</strong>という構造です。会議の音声をそのまま第三者に渡さない点は、同じ日本語の文字起こしサービスと比べるときの見どころになります。他社の学習の扱いは<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止</a>に4ツール分まとめています。</p>
+<h3 id="2-東京保存-は録音の話-要約の処理は米国">2. 「東京保存」は録音の話、要約の処理は米国</h3>
+<p>日本向けの説明ページには、日本ユーザーのクラウドデータはすべてAWS東京リージョンに保存されるとあります。一方で信頼性と安全性のページには、日本のユーザーがLLMを使う場合、そのLLMは米国でホストされているとも書かれています。保存は東京、要約の処理は米国、と分けて読む必要があります。</p>
+<p>さらに、日本サイトのプライバシーポリシーのページには「ユーザーの個人データはアメリカ合衆国にあるサーバーに保存され」という一文があります。ポリシーのページはウェブサイトの訪問者や購入者の情報を主に扱っているように読めますが、録音データにどちらが当てはまるかは、ページを読むだけでは判断できませんでした。「国内保存」を条件にする場合は、公式窓口に書面で確認するのが確実です。保存先の見方は<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？</a>でも整理しています。</p>
+<h3 id="3-消す手順と-消せない範囲">3. 消す手順と、消せない範囲</h3>
+<p>録音データはアプリで削除でき、ゴミ箱からも削除すると完全に削除されると日本向け説明にあります。アカウントを削除した場合は、関連データが所定の手続きで削除または匿名化されます。本体を紛失したときは、サポートを通じて紐づけを遠隔で解除でき、解除後は本体上のデータが削除されるそうです。</p>
+<p>一方で、具体的な保存期間は書かれていません。アカウントが有効な間はデータが保持される、という説明です。また、Teamで共有したデータはメンバーが在籍している間は同じチームの他のメンバーが閲覧できる、と注意書きがあります。消し忘れた録音は、自分が消すまで残ります。この点は専用機に限らず、<a href="../ai-minutes-security/">AI議事録に社外秘を入れていいか</a>で書いた共有範囲の問題と同じです。</p>
+<div class="cta"><div class="cta-h">PLAUD NOTE<span class="pr">PR</span></div><p class="cta-b">会議や通話を録音する専用の小型機器。録音はアプリで文字起こし・要約される（無料のStarterプランで毎月300分まで。2026年10月に公式サイトで確認）</p><p class="cta-f">本体の購入（文字起こしは月300分まで無料）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BEJHJ+6J69I2+5J4W+5YZ76" target="_blank" rel="sponsored nofollow noopener">PLAUD NOTE の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>保存先の記述が2通りある</strong>：日本向けの説明は「AWS東京リージョン」、プライバシーポリシーは「アメリカ合衆国のサーバー」。どちらが録音データに当てはまるかはページからは確定できません</li><li><strong>要約の処理は国外</strong>：学習には使われなくても、文字になったデータが米国でホストされたLLMで処理されます。国外送信そのものを禁じる規程には合いません</li><li><strong>保存期間が明記されていない</strong>：アカウントが有効な間は保持され、消すのは利用者の操作です</li><li><strong>本体の中では文字起こしが完結しない</strong>：公式の説明では、すべてのデータは処理のためクラウドに転送されます。ネットワークに出さない運用は想定されていません</li></ul>
+<p>専用機を使わず録音だけ別の機器で行う選択肢は<a href="../ic-recorder-for-transcription/">会議録音のICレコーダーおすすめ</a>に、会社で使うときの申請の観点は<a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？</a>にまとめています。</p>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="PLAUD-NOTEの録音は-Plaudの社員に聞かれることはありますか">PLAUD NOTEの録音は、Plaudの社員に聞かれることはありますか</h3>
+<p>信頼性と安全性のページでは、担当者が日常的にデータへアクセスすることはなく、技術サポートの依頼、障害対応、法令対応などに限られ、権限者だけが管理された環境で行うとされています。</p>
+<h3 id="話者の識別に声紋のようなデータを使いますか">話者の識別に声紋のようなデータを使いますか</h3>
+<p>同じページに、話者の自動識別は類似性検索で行い、生体情報のプロファイルは使わないと書かれています。</p>
+<h3 id="学習への同意を後から取り消せますか">学習への同意を後から取り消せますか</h3>
+<p>学習に使われるのは設定画面で明示的に同意した場合に限ると書かれているので、設定で切り替える作りだと読めます。ただし、取り消した後に過去のデータがどう扱われるかは、確認したページには書かれていませんでした。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>PLAUD NOTEの録音と文字起こしは、設定で同意しない限りAI学習に使われない。文字起こしは独自モデル、要約の外部LLMとはデータ保持なし・学習禁止の契約</li><li>日本ユーザーの保存先はAWS東京リージョン。ただし要約のLLMは米国でホストされ、プライバシーポリシーには「アメリカ合衆国のサーバー」の記述もある</li><li>暗号化はTLS 1.2以上とAES-256、認証はISO 27001・27701やSOC 2 Type 2など。保存期間は明記されておらず、削除は利用者の操作で行う</li></ul>
+<p>※本記事はPLAUDの公開ページを2026年10月20日に確認して整理したもので、法的な助言ではありません。仕様や提供条件は変更されることがあるため、最新の公式ページをご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../notta-minutes-template/">Nottaの議事録テンプレートの使い方｜自作の型は無料0個・有料5個まで</a></li><li><a href="../notta-zoom-integration/">Zoom会議を自動で文字起こし｜他社が主催する会議では自動参加が効かない</a></li><li><a href="../notta-speaker-separation/">Nottaの話者分離ができない原因｜英語はChrome拡張とマイク録音で効かない</a></li><li><a href="../notta-cancel/">Notta解約は日割りなし｜失うのはお金より過去の文字起こし</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../plaud-note-security/">PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先</a></li><li><a href="../copilot-meeting-no-training/">Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆</a></li><li><a href="../gemini-transcription-training/">Geminiの文字起こしは学習に使われる？声と文字で設定が別だった</a></li><li><a href="../google-meet-transcription-training/">Google Meetの文字起こしはAI学習に使われる？学習より先に見る共有範囲</a></li><li><a href="../isms-ai-transcription/">ISMS取得企業のAI文字起こし承認基準｜認証の「範囲」と学習の扱いを見る</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
