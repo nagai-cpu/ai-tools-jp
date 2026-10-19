@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順｜AIツール実用ガイド</title>
-<meta name="description" content="Nottaの話者識別が働かないのは精度の問題とは限りません。公式ヘルプに書かれた入力経路ごとの条件、日本語限定になる経路、やり直しに何が消費されるかを整理しました。">
+<title>Nottaの話者分離ができない原因｜英語はChrome拡張とマイク録音で効かない｜AIツール実用ガイド</title>
+<meta name="description" content="Nottaの話者分離が効かないときは「未指定話者」表示かを確認。Chrome拡張とマイク録音は日本語の場合のみ識別され、英語ならファイルアップロードかNotta Botを使います。">
 <meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
 <link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notta-speaker-separation/">
-<meta property="og:title" content="Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順｜AIツール実用ガイド">
-<meta property="og:description" content="Nottaの話者識別が働かないのは精度の問題とは限りません。公式ヘルプに書かれた入力経路ごとの条件、日本語限定になる経路、やり直しに何が消費されるかを整理しました。">
+<meta property="og:title" content="Nottaの話者分離ができない原因｜英語はChrome拡張とマイク録音で効かない｜AIツール実用ガイド">
+<meta property="og:description" content="Nottaの話者分離が効かないときは「未指定話者」表示かを確認。Chrome拡張とマイク録音は日本語の場合のみ識別され、英語ならファイルアップロードかNotta Botを使います。">
 <meta property="og:type" content="article">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順", "description": "Nottaの話者識別が働かないのは精度の問題とは限りません。公式ヘルプに書かれた入力経路ごとの条件、日本語限定になる経路、やり直しに何が消費されるかを整理しました。", "datePublished": "2026-09-16", "dateModified": "2026-09-16", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-speaker-separation/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Nottaの話者分離ができない原因｜英語はChrome拡張とマイク録音で効かない", "description": "Nottaの話者分離が効かないときは「未指定話者」表示かを確認。Chrome拡張とマイク録音は日本語の場合のみ識別され、英語ならファイルアップロードかNotta Botを使います。", "datePublished": "2026-09-16", "dateModified": "2026-09-16", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-speaker-separation/"}, "author": {"@type": "Person", "name": "運営者"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -92,7 +92,7 @@ footer.site a{color:var(--muted)}
 <span class="tag">実際に触って比べた記録</span>
 </div></header>
 <div class="wrap">
-<h1 class="title">Nottaで話者分離ができない原因は設定と経路｜精度を上げる手順</h1><p class="meta">2026-09-16 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Nottaで話者が分かれないときは<strong>まず「未指定話者」と表示されていないかを見てください</strong>。そう出ていれば話者識別はオフで、精度ではなく設定の問題です。オンなのに人数が合わない場合だけが精度の話で、その対策は録音経路を変えることになります。</p>
+<h1 class="title">Nottaの話者分離ができない原因｜英語はChrome拡張とマイク録音で効かない</h1><p class="meta">2026-09-16 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Nottaで話者が分かれないときは<strong>まず「未指定話者」と表示されていないかを見てください</strong>。そう出ていれば話者識別はオフで、精度ではなく設定の問題です。オンなのに人数が合わない場合だけが精度の話で、その対策は録音経路を変えることになります。</p>
 <h2 id="最初に見るのは精度ではなく-話者名の表記">最初に見るのは精度ではなく、話者名の表記</h2>
 <p>公式ヘルプ「話者識別機能はついていますか？」には、切り分けの方法がそのまま書かれています。</p>
 <blockquote>話者識別を<strong>オフにしている場合</strong>、すべて話者は<strong>「未指定話者」</strong>と表示されます。話者識別を<strong>オンにしている場合</strong>、話者は「話者1」「話者2」のような<strong>「話者＋番号」</strong>の形式で表示されます。</blockquote>
