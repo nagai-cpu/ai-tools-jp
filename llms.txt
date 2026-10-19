@@ -13,6 +13,8 @@
 
 - [AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた](https://nagai-cpu.github.io/ai-tools-jp/ai-voice-recorder-company-rules/): PLAUD NOTEのようなAIボイスレコーダーを会社で使う前に、社内規程や利用申請で問われる「同意・データの行き先・アカウント管理」の3点を、公式のプライバシー説明と料金表だけで整理しました。
 - [PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先](https://nagai-cpu.github.io/ai-tools-jp/plaud-note-security/): PLAUD NOTEの録音がAI学習に使われるか、どこに保存されるか、要約に使う外部AIの扱い、暗号化・認証・削除の方法を、公式の信頼性ページと日本向けプライバシー説明の記載だけで整理しました。
+- [Windowsの音声認識はデータを送信する？音声入力はAzureへ、字幕は端末内で完結](https://nagai-cpu.github.io/ai-tools-jp/windows-speech-data/): Windows 11の音声入力とライブキャプションで音声がMicrosoftのクラウドに送られるかを公式サポートで確認。会議の記録に使えるかと、社外秘を扱うときの選び方まで。
+- [Zoom AI Companionの文字起こしは学習されない？公式の一文と、管理者が触る設定](https://nagai-cpu.github.io/ai-tools-jp/zoom-ai-companion-no-training/): ZoomのAI機能（AI Companion／ZoomMate）で会議の音声や文字起こしがAI学習に使われるかを公式の説明で確認。外部モデルの扱い、管理者の有効化とロック、参加者への表示、無料Basicの回数制限まで。
 - [Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆](https://nagai-cpu.github.io/ai-tools-jp/copilot-meeting-no-training/): Microsoft Copilotで会議の内容や音声が学習に使われるかを公式ドキュメントで確認。職場・学校アカウントと個人アカウントの違い、オフにする手順、残る用途、Nottaとの比較まで。
 - [Geminiの文字起こしは学習に使われる？声と文字で設定が別だった](https://nagai-cpu.github.io/ai-tools-jp/gemini-transcription-training/): Geminiで音声・Live・音声ファイルの文字起こしが学習に使われる条件を公式で確認。止める設定、オフでも残る保存、仕事用アカウントとの違いまで。
 - [Google Meetの文字起こしはAI学習に使われる？学習より先に見る共有範囲](https://nagai-cpu.github.io/ai-tools-jp/google-meet-transcription-training/): Google Meetの文字起こしと自動メモ生成がAI学習に使われるかを公式ヘルプで確認。学習の扱い、例外になる使い方、保存先と共有範囲、Nottaとの違いまで。

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zoom AI Companionの文字起こしは学習されない？公式の一文と、管理者が触る設定｜AIツール実用ガイド</title>
+<meta name="description" content="ZoomのAI機能（AI Companion／ZoomMate）で会議の音声や文字起こしがAI学習に使われるかを公式の説明で確認。外部モデルの扱い、管理者の有効化とロック、参加者への表示、無料Basicの回数制限まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/zoom-ai-companion-no-training/">
+<meta property="og:title" content="Zoom AI Companionの文字起こしは学習されない？公式の一文と、管理者が触る設定｜AIツール実用ガイド">
+<meta property="og:description" content="ZoomのAI機能（AI Companion／ZoomMate）で会議の音声や文字起こしがAI学習に使われるかを公式の説明で確認。外部モデルの扱い、管理者の有効化とロック、参加者への表示、無料Basicの回数制限まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Zoom AI Companionの文字起こしは学習されない？公式の一文と、管理者が触る設定", "description": "ZoomのAI機能（AI Companion／ZoomMate）で会議の音声や文字起こしがAI学習に使われるかを公式の説明で確認。外部モデルの扱い、管理者の有効化とロック、参加者への表示、無料Basicの回数制限まで。", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/zoom-ai-companion-no-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Zoom AI Companionの文字起こしは学習されない？公式の一文と、管理者が触る設定</h1><p class="meta">2026-10-20 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Zoomは<strong>顧客の音声・ビデオ・チャット・画面共有・添付ファイルなどを、自社や第三者のAIモデルの学習に使わない</strong>と公式に明記しています。利用者側に「学習させない設定」があるわけではなく、学習に使わないことが前提になっている作りです。設定として管理者が触るのは、AI機能そのものを有効にするか、グループやユーザーに変更を許すか、ロックするかの3段階です。一方で、要約などに使う外部のモデル提供元としてOpenAIとAnthropicが挙げられ、こちらはデータを保持しないポリシーだと説明されています。学習の心配より先に確認したいのは、文字起こしを保持するかどうかの設定と、会議参加者に表示される案内の方です。</p>
+<h2 id="公式ページでの記載を並べた">公式ページでの記載を並べた</h2>
+<p>2026年10月20日に、Zoomサポートの「Zoom AI機能によるデータの取り扱い」（英語）、Zoom AIホワイトペーパーの「Data Governance and Privacy」「Administrative Controls」、zoom.comの日本語の製品ページで確認しました。製品ページでは2026年10月時点でAI機能が「ZoomMate」という名称で案内されており、サポート記事や管理画面の手順では「AI Companion」と書かれています。この記事では両方を同じ機能群として扱います。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式の記載</th></tr></thead><tbody><tr><td>顧客コンテンツの学習利用</td><td>音声・ビデオ・チャット・画面共有・添付ファイル・その他のコミュニケーション類のコンテンツ（投票結果・ホワイトボード・リアクションなど）を、Zoomまたは第三者のAIモデルの学習に使わない</td></tr><tr><td>外部モデル</td><td>OpenAI・Anthropicなどの第三者モデルを一部の機能で使用。提供元はゼロデータ保持のポリシーで顧客コンテンツを保持しない（信頼と安全の目的など限定的な例外あり）。提供元がモデルの改善や学習に顧客データを使うことは許可していない</td></tr><tr><td>管理者の設定</td><td>アカウント全体で有効・無効を切替。グループ単位で付与し、ロックしなければユーザーが自分で切替可能。ロックした設定はユーザーが変更できない</td></tr><tr><td>参加者への表示</td><td>会議に参加すると、その会議で有効になっているAI機能の表示（インジケーター）が製品内に出る</td></tr><tr><td>文字起こしの保持</td><td>文字起こしの設定を無効にしてロックするか保持日数を0日にした場合、要約の生成後に一時的な音声→文字データやチャットデータは破棄され、復元や再利用はできない</td></tr><tr><td>無料のBasic</td><td>「ZoomMate Basic」として、会議の要約と会議中の質問はホストする会議が月3回まで、AIクエリは月20回まで</td></tr><tr><td>有料プラン</td><td>1ユーザーあたり月2,200のAIクレジット、AIノートテイクは無制限</td></tr></tbody></table></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-学習させない設定-を探しても出てこない">1. 「学習させない設定」を探しても出てこない</h3>
+<p>Zoomの説明は「学習に使わない」が前提で、利用者がオン・オフする種類の項目ではありません。社内規程が「AI学習に利用されないこと」を条件にしているなら、根拠として引用するのはサポート記事の一文です。原文は英語で、日本語の同じ記事は確認した時点で見当たりませんでした。申請書に書くなら、英語の原文と日本語訳を併記しておくと確認する側が楽です。稟議の書き方は<a href="../minutes-ai-approval-doc/">AI議事録の導入稟議の書き方</a>にまとめています。</p>
+<h3 id="2-管理者が決めるのは-使えるか-と-保持するか">2. 管理者が決めるのは「使えるか」と「保持するか」</h3>
+<p>管理者が触る設定は2系統あります。1つはAI機能の有効・無効で、アカウント・グループ・ユーザーの3階層とロックの有無で決まります。もう1つは文字起こしを保持するかどうかで、ホワイトペーパーには、文字起こし設定を無効にしてロックするか保持日数を0日にすると、要約ができた時点で一時的なデータは破棄され、後から要約を作り直したりカスタムテンプレートに使ったりはできないとあります。</p>
+<p><strong>「学習に使われない」ことと「Zoomの側に残らない」ことは別</strong>です。学習の心配だけで判断すると、文字起こしがクラウドに残っていることを見落とします。退職者の記録や共有範囲の問題は、Zoomに限らず起きます。<a href="../transcription-offboarding/">AI文字起こしの退職者アカウントとデータ</a>で整理した観点がそのまま使えます。</p>
+<h3 id="3-他社主催の会議や-Zoom以外の録音は別のツールになる">3. 他社主催の会議や、Zoom以外の録音は別のツールになる</h3>
+<p>ZoomのAI機能は自分のアカウントで有効化した会議で働きます。他社が主催する会議や対面の打ち合わせ、電話の内容を記録したい場合は、外部の文字起こしサービスを使うことになります。その場合は、Zoomと同じ「学習に使わない」が条件なら、プランで条件が変わるサービスがある点に注意が要ります。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約には、パートナー企業が「お客様がご利用のプランに応じて、お客様の音声データを音声認識トレーニングに利用する場合があります」とあり、法人向けページで「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランでした。Zoomの会議に同席させる使い方は<a href="../notta-zoom-integration/">Zoom会議を自動で文字起こし</a>にあります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>根拠が英語</strong>：学習に使わないという一文は英語のサポート記事とホワイトペーパーにあり、日本語の同じ記事は確認できませんでした</li><li><strong>名称が2つある</strong>：製品ページはZoomMate、管理画面の手順はAI Companionで、同じ機能を探すときに迷います</li><li><strong>無料のBasicは回数制限</strong>：会議の要約と会議中の質問はホストする会議が月3回までで、業務で毎日使う量ではありません</li><li><strong>保存先の国は設定次第</strong>：ホワイトペーパーには、ホストのデータセンターリージョンと設定にもとづいて処理・保存するとあり、どの国かは契約と設定で決まります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Zoomの会議の文字起こしは-OpenAIに送られますか">Zoomの会議の文字起こしは、OpenAIに送られますか</h3>
+<p>要約などの一部の機能でOpenAIやAnthropicなどの第三者モデルが使われ、その機能を使うときに関連データが提供元と共有されると書かれています。提供元はゼロデータ保持で顧客コンテンツを保持せず、学習にも使えない契約だとZoomは説明しています。</p>
+<h3 id="会議の参加者は-AI機能が動いていることに気づけますか">会議の参加者は、AI機能が動いていることに気づけますか</h3>
+<p>ホワイトペーパーには、参加者が会議に参加すると、その会議で有効になっているAI機能に関する製品内の表示が出るとあります。参加者からホストに、特定の機能を有効にするよう依頼することもできます。</p>
+<h3 id="無料プランでも学習に使われないのは同じですか">無料プランでも学習に使われないのは同じですか</h3>
+<p>学習に使わないという記載にプランの条件は付いていません。無料のBasicで変わるのは、要約や質問の回数制限の方です。無料プランで業務利用するときの一般的な注意は<a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？</a>にまとめています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Zoomは顧客の音声・ビデオ・チャット・画面共有・添付ファイルなどを自社や第三者のAIモデルの学習に使わないと明記。利用者側に学習の切替設定はない</li><li>管理者が触るのはAI機能の有効化（アカウント・グループ・ユーザーとロック）と、文字起こしを保持するかどうか。学習されないことと残らないことは別</li><li>他社主催の会議や対面を記録するなら外部サービス。Nottaで「AI学習なし」が明記されているのはビジネス Plus以上と士業向け特別プラン（2026年10月20日に公式ページで確認）</li></ul>
+<p>※本記事はZoomとNottaの公開ページを2026年10月20日に確認して整理したもので、法的な助言ではありません。仕様や料金は変更されることがあるため、最新の公式ページをご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？音声入力はAzureへ、字幕は端末内で完結</a></li><li><a href="../copilot-meeting-no-training/">Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆</a></li><li><a href="../gemini-transcription-training/">Geminiの文字起こしは学習に使われる？声と文字で設定が別だった</a></li><li><a href="../google-meet-transcription-training/">Google Meetの文字起こしはAI学習に使われる？学習より先に見る共有範囲</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../plaud-note-security/">PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先</a></li><li><a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？音声入力はAzureへ、字幕は端末内で完結</a></li><li><a href="../zoom-ai-companion-no-training/">Zoom AI Companionの文字起こしは学習されない？公式の一文と、管理者が触る設定</a></li><li><a href="../copilot-meeting-no-training/">Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆</a></li><li><a href="../gemini-transcription-training/">Geminiの文字起こしは学習に使われる？声と文字で設定が別だった</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
