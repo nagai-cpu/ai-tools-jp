@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>スマート書記のデータはAI学習に使われる？規約の「機械学習は含まない」の範囲｜AIツール実用ガイド</title>
+<meta name="description" content="スマート書記の録音・議事録がAI学習に使われるかを利用規約とFAQで確認。統計加工の範囲、音声認識エンジン側の扱い、東京リージョン保存、契約終了時の削除、料金が非公開である点まで整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/smart-shoki-data-policy/">
+<meta property="og:title" content="スマート書記のデータはAI学習に使われる？規約の「機械学習は含まない」の範囲｜AIツール実用ガイド">
+<meta property="og:description" content="スマート書記の録音・議事録がAI学習に使われるかを利用規約とFAQで確認。統計加工の範囲、音声認識エンジン側の扱い、東京リージョン保存、契約終了時の削除、料金が非公開である点まで整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "スマート書記のデータはAI学習に使われる？規約の「機械学習は含まない」の範囲", "description": "スマート書記の録音・議事録がAI学習に使われるかを利用規約とFAQで確認。統計加工の範囲、音声認識エンジン側の扱い、東京リージョン保存、契約終了時の削除、料金が非公開である点まで整理しました。", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/smart-shoki-data-policy/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">スマート書記のデータはAI学習に使われる？規約の「機械学習は含まない」の範囲</h1><p class="meta">2026-10-20 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、スマート書記の録音と議事録は、<strong>契約者の同意がない限り機械学習には使われない</strong>と利用規約に書かれています。FAQにも「お客様の許可なく機械学習は行っておりません」とあります。ただし規約には、音声やテキストを統計的データに加工して分析や品質向上に使うことがある、という別の条項があり、この利用に「機械学習は含まれない」と整理されています。学習の心配が薄い代わりに、気をつけたいのは料金が非公開でヒアリング前提であること、契約終了時のデータ削除が「削除することができる」という書き方で義務ではないこと、保存期間に定めがないことの3点です。</p>
+<h2 id="公式ページと規約の記載を並べた">公式ページと規約の記載を並べた</h2>
+<p>2026年10月20日に、スマート書記の公式サイト（トップ、料金、セキュリティ、よくある質問、生成AI利用ガイドライン）とOtolio利用規約（2025年12月1日改定）で確認しました。比較対象として、同じ文字起こし分野のNottaの公式記載を並べています。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>スマート書記</th><th>Notta</th></tr></thead><tbody><tr><td>機械学習への利用</td><td>契約者の同意がない限り含まれない（規約第16条第3項）。FAQ「お客様の許可なく機械学習は行っておりません」</td><td>プランに応じて音声認識トレーニングに使われる場合あり（規約第10条）。「AI学習なし」明記はビジネス Plus以上と士業向け特別プラン</td></tr><tr><td>品質向上への利用</td><td>音声・テキストなどを統計的データに加工して分析・品質向上に利用することがある（第16条第2項）</td><td>利用頻度・利用時間のデータを除き内容自体は閲覧・使用しない（第6条）</td></tr><tr><td>音声認識エンジン側</td><td>エンジン提供他社は音声・テキストを自社サーバーに保存せず、閲覧・利用もしない（第7条第4項）</td><td>パートナー企業の扱いは同社のプライバシーポリシーによる</td></tr><tr><td>生成AI</td><td>外部事業者のAPIを利用。提供元の名前はガイドラインに記載なし</td><td>―</td></tr><tr><td>保存先</td><td>東京リージョンを基本に日本国内のデータセンター（FAQ）</td><td>バックアップは国内データセンター（セキュリティページ）</td></tr><tr><td>暗号化・認証</td><td>AES256等、通信はTLS1.2等。ISO/IEC 27001（2020年4月13日取得）</td><td>保存時暗号化、HTTPS。ISO 27001、SOC 2 Type 2</td></tr><tr><td>契約終了時</td><td>データを削除することができる（第18条第3項）。トライアル後に契約しない場合は削除</td><td>規約に保存期間・削除の条文は見当たらず</td></tr><tr><td>料金</td><td>初期費用＋AIクレジット。金額は非公開でヒアリングのうえ提案。14日間の無料トライアル（法人・団体）</td><td>フリー月120分。ビジネス Plus 年64,800円（税抜）</td></tr></tbody></table></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-機械学習しない-と-統計に使う-は両立している">1. 「機械学習しない」と「統計に使う」は両立している</h3>
+<p>規約の第16条は、第2項で音声データ・テキストデータなどを統計的データに加工したうえで分析や品質向上に利用することがあると定め、第3項で「前項に定める情報の利用には、機械学習は含まれません」と続けています。同意を得た場合に限り機械学習に用いることができる、という但書もあります。つまり、学習には使わないが、統計に加工した形での利用はある、という構造です。</p>
+<p>社内規程が「AIの学習に使わないこと」だけを求めているなら満たせます。「サービス改善目的の利用も不可」と書いてある規程なら、第2項の統計加工をどう評価するかを決めてから申請する必要があります。同じ構造はRimo Voiceの規約にもあり、<a href="../rimo-voice-data/">Rimo Voiceのデータは学習に使われる？</a>で扱いました。</p>
+<h3 id="2-エンジンの扱いは明記されているが-生成AIの提供元は非公開">2. エンジンの扱いは明記されているが、生成AIの提供元は非公開</h3>
+<p>第7条第4項には、音声認識エンジンを提供する他社がデータを自社サーバーに保存せず、閲覧や利用もしないとあります。文字起こしの経路については、どこに渡ってどう扱われるかが規約で読めます。一方、生成AIによる議事録作成の支援は「当社以外の外部事業者が提供するAPI」を使うとあるだけで、生成AI利用ガイドラインにも提供元の名前はありません。ガイドラインには、外部サービスがISO 27001やSOC 2／3などの第三者認証を受けていることを確認している、と書かれています。</p>
+<p>提供元の名前まで申請書に書く必要がある会社は、問い合わせで確認することになります。外部AIへの送信を論点にする考え方は<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？</a>で整理しています。</p>
+<h3 id="3-料金が見えないので-比べるのは条件から">3. 料金が見えないので、比べるのは条件から</h3>
+<p>料金ページには金額がなく、会議の量や使い方によって異なるためヒアリングのうえ提案する、とあります。人数課金ではなく、基本機能は料金に含まれ、有料オプションはSAML認証やIPアドレス制限などのセキュリティ機能だけだそうです。見積もりを取る前に決めておくと速いのは、月の会議時間と、SAMLやIP制限が要件かどうかの2つです。</p>
+<p>同じ要件で価格が公開されているサービスと比べたいなら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の法人向けページにはビジネス Plus（年64,800円・税抜）の金額と「AI学習なし」の明記があります。承認の進め方は<a href="../minutes-ai-approval-doc/">AI議事録の導入稟議の書き方</a>と<a href="../isms-ai-transcription/">ISMS取得企業のAI文字起こし承認基準</a>にまとめています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>スマート書記</strong>：料金が非公開で、ヒアリングを経ないと総額が分かりません。生成AIの提供元も公開されていません</li><li><strong>スマート書記</strong>：契約終了時のデータ削除は「削除することができる」という定めで、削除を約束する書き方ではありません。保存期間の定めもなく、データの消失やバックアップは契約者の責任とされています（第7条第3項）</li><li><strong>スマート書記</strong>：統計的データへの加工と品質向上への利用は規約に残っています</li><li><strong>Notta</strong>：「AI学習なし」はビジネス Plus以上と士業向け特別プランに限られ、下位プランでは規約上、音声認識トレーニングに使われる場合があります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="スマート書記は個人でも使えますか">スマート書記は個人でも使えますか</h3>
+<p>無料トライアルの対象は法人または団体で商用契約を検討している利用者と公式サイトにあり、料金もヒアリング前提です。個人向けの案内は確認できませんでした。</p>
+<h3 id="無料トライアルのデータはどうなりますか">無料トライアルのデータはどうなりますか</h3>
+<p>よくある質問に、契約に進まない場合はトライアル中に保存された録音・議事録などのデータは削除されるとあります。自動課金は行われません。</p>
+<h3 id="データは国内に保存されますか">データは国内に保存されますか</h3>
+<p>よくある質問に、東京リージョンを基本として日本国内に位置するデータセンターを利用しているとあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>スマート書記の録音・議事録は、同意がない限り機械学習に使われない（規約第16条第3項・FAQ）。ただし統計的データへの加工と品質向上への利用は規約にある</li><li>音声認識エンジン提供元はデータを保存・閲覧・利用しないと明記。生成AIの提供元は非公開。保存は東京リージョンを基本に国内</li><li>料金は非公開でヒアリング前提、契約終了時の削除は「できる」で義務ではない。価格が公開されている比較先はNottaのビジネス Plus（年64,800円・税抜、2026年10月20日に公式ページで確認）</li></ul>
+<p>※本記事はスマート書記（Otolio）とNottaの公開ページを2026年10月20日に確認して整理したもので、法的な助言ではありません。仕様や料金は変更されることがあるため、最新の公式ページをご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../iphone-dictation-training/">iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認</a></li><li><a href="../toruno-data-policy/">torunoの文字起こしデータは保存・学習される？2024年3月14日が分かれ目</a></li><li><a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？音声入力はAzureへ、字幕は端末内で完結</a></li><li><a href="../zoom-ai-companion-no-training/">Zoom AI Companionは学習されない？公式の一文と管理者が触る設定</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../iphone-dictation-training/">iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認</a></li><li><a href="../plaud-note-security/">PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先</a></li><li><a href="../smart-shoki-data-policy/">スマート書記のデータはAI学習に使われる？規約の「機械学習は含まない」の範囲</a></li><li><a href="../toruno-data-policy/">torunoの文字起こしデータは保存・学習される？2024年3月14日が分かれ目</a></li><li><a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？音声入力はAzureへ、字幕は端末内で完結</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
