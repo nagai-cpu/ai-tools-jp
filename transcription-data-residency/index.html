@@ -101,14 +101,14 @@ footer.site a{color:var(--muted)}
 <div class="tw"><table><thead><tr><th>ツール</th><th>保存先の公式記載</th><th>記載している場所</th><th>リージョンの指定</th><th>外部への送信・国外提供の記載</th></tr></thead><tbody><tr><td>Notta</td><td>「AWS東京リージョンに保存」</td><td>ヘルプ（法人契約FAQ・データ保存のFAQ）</td><td>「現在のところできません」</td><td>要約にAnthropic社のLLMを使用。プライバシーポリシーに日本国外の第三者への提供がありうる場合を列挙</td></tr><tr><td>Rimo Voice</td><td>「日本国内のデータセンターにて保管」</td><td>プライバシーポリシー第10条、公式トップ</td><td>確認したページに記載なし</td><td>プライバシーポリシーに日本国外の第三者への提供がありうる場合を列挙（委託を含む）</td></tr><tr><td>LINE WORKS AiNote</td><td>LINE WORKSのデータは「日本国内のデータセンター」</td><td>LINE WORKS Privacy Center FAQ</td><td>地域は「非公開」</td><td>AiNote専用ページでは保存国の記載を確認できなかった</td></tr></tbody></table></div>
 <p>表の「記載なし」「確認できなかった」は、<strong>国外に置かれているという意味ではありません</strong>。確認したページにその文言が見つからなかった、という事実だけを示しています。</p>
 <h2 id="Nottaの記載を読む">Nottaの記載を読む</h2>
-<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプには、保存先について次の記載があります。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプには、保存先について次の記載があります。</p>
 <ul><li>「Nottaのデータは、AWS東京リージョンに保存されています」（法人契約に関するよくある質問）</li><li>「お客様のデータは東京のデータセンターに保管されます」（データは国内に保存されていますか？）</li><li>リージョンの指定は「現在のところできません」</li></ul>
 <p>公式の料金ページのFAQにも「すべてのデータは日本国内に保管されており」とあり、セキュリティページにはバックアップを国内のデータセンターで保存していると書かれています。法人FAQではバックアップは「毎日1回、35世代分、最大180日間」とされています。</p>
 <p>一方で、<strong>英語版のセキュリティページにはAWSを使っているとだけあり、リージョン名は出てきません</strong>。海外の担当者が英語ページを読んで「保存国が書いていない」と判断することはありえます。社内説明には日本語のヘルプを添えるのが確実です。</p>
 <h3 id="送信先はここを読む">送信先はここを読む</h3>
 <p>保存先とは別に、処理の送信先についての記載は次のとおりです。</p>
 <ul><li><strong>音声認識</strong>：エンジンは「第三者の国内パートナー企業」が提供。AI学習ありの場合は認識処理後に「日本国内のデータセンターに一旦保管」、AI学習なしの場合はメモリ上で処理され保存されない、とヘルプ「AI学習について」に書かれています。AI学習なしの環境はエンタープライズとビジネス Plusで提供と案内されています</li><li><strong>AI要約</strong>：公式の「大規模言語モデルの利用について」のページに、Anthropic社のClaude 3モデルを使用し、プロンプトに関連するデータがサーバーに送信されること、データを最長30日間保存して削除することが書かれています。<strong>このLLM側の処理がどこの国で行われるかは、確認したページには書かれていませんでした</strong></li><li><strong>翻訳</strong>：プライバシーポリシーに「翻訳エンジンを提供する第三者のAPIを用いて翻訳を行います」とあり、提供元の国は記載されていません</li></ul>
-<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
 <h2 id="判断軸は3つ">判断軸は3つ</h2>
 <h3 id="1-規程が求めているのが-保存国-なら-ヘルプの原文で足りる">1. 規程が求めているのが「保存国」なら、ヘルプの原文で足りる</h3>
 <p>社内規程が「データを国外に保存しないこと」を求めているなら、Nottaは「AWS東京リージョン」、Rimoは「日本国内のデータセンター」と、どちらも公式に書いています。原文のURLを添えて提出すれば、説明の材料としては揃います。</p>

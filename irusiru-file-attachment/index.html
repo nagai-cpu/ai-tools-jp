@@ -98,7 +98,7 @@ footer.site a{color:var(--muted)}
 <div class="tw"><table><thead><tr><th>項目</th><th>おまかせ生成</th><th>AIデザイン生成（1ページ）</th><th>かんたんレポート生成</th></tr></thead><tbody><tr><td>使う場所</td><td>ホーム画面</td><td>スライド編集画面</td><td>ホーム画面の左メニュー</td></tr><tr><td>形式</td><td>jpg・png・pdf・csv</td><td>jpg・png・pdf・csv</td><td>jpg・png・pdf</td></tr><tr><td>件数</td><td>10件まで</td><td>5件まで</td><td>10件まで</td></tr><tr><td>容量</td><td>1件15MBまで</td><td>1件20MBまで（合計20MBまで）</td><td>15MBまで</td></tr><tr><td>図表・画像の扱い</td><td>テキスト情報が参照される（視覚情報は解釈されない）</td><td>画像の内容も参照できる</td><td>ヘルプに記載なし</td></tr></tbody></table></div>
 <p>AIデザイン生成のヘルプには「ファイルだけでスライドを作ることはできないため、入力欄にもテキストを入力してください」とあります。添付ファイルだけを渡して待つ使い方は想定されていません。</p>
 <h2 id="原因1-おまかせ生成は-文字-しか読まない">原因1：おまかせ生成は「文字」しか読まない</h2>
-<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>のおまかせ生成は、テーマやメモを入力し、参考資料を添付して資料全体をまとめて作る機能です。ここでの添付ファイルについて、ヘルプには次のように書かれています。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USXWA+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル</a>のおまかせ生成は、テーマやメモを入力し、参考資料を添付して資料全体をまとめて作る機能です。ここでの添付ファイルについて、ヘルプには次のように書かれています。</p>
 <ul><li>「添付ファイル機能は、あくまでもスライド作成の補助としてご利用ください」</li><li>「ファイルの内容が完全にスライドに反映されるわけではありません」</li><li>「ファイル内のテキスト情報は参照されますが、グラフ、表、画像などの視覚情報は解釈されません」</li></ul>
 <p>つまり、<strong>売上推移のグラフや、表でまとめた料金一覧が載ったPDFを添付しても、その数字はおまかせ生成では拾われない前提</strong>で考える必要があります。グラフの数字を使いたいなら、要点を入力欄に文章で書くか、元データをCSVで添付します（おまかせ生成はCSVに対応しています）。</p>
 <p>スキャンした紙の資料のように、文字が画像として入っているPDFも注意が必要です。ヘルプに直接の記載はありませんが、「テキスト情報が参照される」という説明から考えると、おまかせ生成では読み取られにくいと考えられます。</p>
@@ -112,7 +112,7 @@ footer.site a{color:var(--muted)}
 <ul><li>ファイルの内容を簡潔にまとめた<strong>キーワード（タイトル）</strong>を入力する</li><li>メモ欄に、<strong>スライドに含めたい具体的な情報</strong>を入力する</li></ul>
 <p>AIデザイン生成のヘルプには、入力例として「この資料の内容をスライドにまとめて」「添付CSVのデータをグラフにして」「このレイアウトを参考にして」が載っています。<strong>ファイルをどう使ってほしいかを一文で書く</strong>だけでも、意図に近づきます。</p>
 <p>なお、入力の情報量が多いとAIが内容を要約する可能性がある、とも書かれています。PDFの全文を反映させたい用途には向きません。</p>
-<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USX4I+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
+<div class="cta"><div class="cta-h">イルシル<span class="pr">PR</span></div><p class="cta-b">テキストを入れると日本語のデザイン済みスライドを自動生成する</p><p class="cta-f">無料プランあり（DL制限）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7USXWA+5UMS+5YJRM" target="_blank" rel="sponsored nofollow noopener">イルシル の公式サイトを見る</a></div>
 <h2 id="図表の中身を使いたいときの手順">図表の中身を使いたいときの手順</h2>
 <p>ヘルプの記載を組み合わせると、図表の多いPDFは次の分担が現実的です。</p>
 <ol><li><strong>おまかせ生成</strong>で、PDFの要点を入力欄に箇条書きで貼り、資料全体の骨組みを作る</li><li>図表が必要なページだけ、スライド編集画面の<strong>AIデザイン生成</strong>で該当ページの画像やPDFを添付し、「この表の内容をスライドにまとめて」と指示する</li><li>プレビューを確認して「反映」を押す。気に入らなければ「破棄」する</li></ol>

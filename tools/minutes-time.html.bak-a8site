@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>議事録作成時間の計算機｜聞き直しにかかる時間と文字数の目安｜AIツール実用ガイド</title>
+<meta name="description" content="会議の長さと月の回数を入れると、議事録づくりで録音の聞き直しにかかる時間、文字数の目安、AI文字起こしで足りるプランを計算します。入力はブラウザ内で処理し、外部に送りません。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/tools/minutes-time.html">
+<meta property="og:title" content="議事録作成時間の計算機">
+<meta property="og:description" content="議事録の聞き直しに月何時間使っているか、文字数の目安、AI文字起こしで足りるプランを計算します。">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"議事録作成時間の計算機","url":"https://nagai-cpu.github.io/ai-tools-jp/tools/minutes-time.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"dateModified":"2026-10-18"}</script>
+<style>
+:root{
+--bg:#ffffff;--panel:#ffffff;--soft:#f6f8fa;--fg:#1a1d21;--muted:#5c6570;
+--line:#e4e7eb;--accent:#0f6fd6;--accent-fg:#ffffff;
+--ok:#2f6b4f;--ok-soft:#e8f2ec;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--no:#6b7280;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.8;font-size:16.5px;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-variant-numeric:tabular-nums;overflow-x:hidden}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
+.lead{color:var(--muted);font-size:.95rem;margin-bottom:1.6rem}
+h2{font-size:1.2rem;margin:2.4rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+p{margin:0 0 1.05rem}
+a{color:var(--accent)}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+form{background:var(--soft);border:1px solid var(--line);border-radius:11px;
+padding:1.2rem 1.15rem;display:flex;flex-direction:column;gap:1.3rem}
+fieldset{border:0;display:flex;flex-direction:column;gap:.45rem}
+legend{font-weight:700;font-size:.92rem;margin-bottom:.45rem}
+.opt{display:flex;align-items:flex-start;gap:.55rem;background:var(--panel);border:1px solid var(--line);
+border-radius:8px;padding:.6rem .75rem;cursor:pointer;font-size:.93rem;line-height:1.6}
+.opt input{margin-top:.32rem;accent-color:var(--accent);flex:none}
+.opt:has(input:checked){border-color:var(--accent)}
+.hint{font-size:.78rem;color:var(--muted);line-height:1.6}
+#out{margin-top:1.9rem}
+.verdict{border:1px solid var(--line);border-left:4px solid var(--accent);
+background:var(--panel);border-radius:0 9px 9px 0;padding:1.05rem 1.15rem;margin-bottom:1.3rem}
+.verdict h3{font-size:1.05rem;margin-bottom:.4rem}
+.verdict .sub{font-size:.88rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:10px;padding:.95rem 1.05rem;margin-bottom:.8rem;background:var(--panel)}
+.card h4{font-size:1rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.badge{font-size:.72rem;font-weight:700;border-radius:4px;padding:.08rem .45rem;border:1px solid currentColor;white-space:nowrap}
+.b-ok{color:var(--ok);background:var(--ok-soft)}
+.b-cond{color:var(--warn);background:var(--warn-bg)}
+.b-no{color:var(--no)}
+.card.no{opacity:.72}
+.card .why{font-size:.88rem;margin-bottom:.45rem}
+.card blockquote{border-left:3px solid var(--line);padding:.1rem 0 .1rem .8rem;color:var(--muted);font-size:.83rem;margin:0 0 .4rem}
+.card .src{font-size:.75rem;color:var(--muted)}
+.card .src a{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.93rem;padding:.6rem 1.15rem;border-radius:7px;margin-top:.3rem}
+.ctabox{border:1px solid var(--line);border-radius:11px;padding:1rem 1.1rem;margin:1.4rem 0;background:var(--soft)}
+.ctabox .h{font-weight:700;display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:.05rem .3rem;background:var(--bg)}
+.ctabox p{font-size:.88rem;color:var(--muted);margin-bottom:.6rem}
+.note{font-size:.88rem;line-height:1.85}
+.note li{margin:0 0 .5rem 1.2rem}
+.small{font-size:.8rem;color:var(--muted)}
+footer.site{margin-top:3.5rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+@media(max-width:600px){body{font-size:16px}h1{font-size:1.42rem}}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field label{font-weight:700;font-size:.92rem}
+.row{display:flex;align-items:center;gap:.6rem}
+input[type=number],select{flex:1;min-width:0;font:inherit;font-size:1.05rem;padding:.55rem .7rem;
+border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--fg)}
+input[type=number]:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.unit{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.tw{overflow-x:auto;margin:0 0 1.3rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:30rem;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+td.n{white-space:nowrap}
+tr.pick td{background:var(--ok-soft);font-weight:600}
+h3.h3{font-size:1.02rem;margin:1.6rem 0 .7rem}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+
+<div class="wrap">
+<h1>議事録作成時間の計算機</h1>
+<p class="lead">会議の長さと月の回数を入れると、議事録づくりのうち「録音の聞き直し」に使っている時間と、文字数の目安、AI文字起こしならどのプランで足りるかが出ます。</p>
+
+<div class="pr-note">このページにはアフィリエイト広告（PR）を含みます。料金は公式ページで確認した実数で、報酬額で結果を変えることはしていません。入力した数字はブラウザの中で計算し、どこにも送信しません。</div>
+
+<form id="f" autocomplete="off">
+  <div class="field">
+    <label for="len">会議1回の長さ</label>
+    <div class="row"><input id="len" type="number" min="1" max="600" step="5" value="60" inputmode="numeric"><span class="unit">分 / 回</span></div>
+  </div>
+  <div class="field">
+    <label for="cnt">議事録を作る会議の回数</label>
+    <div class="row"><input id="cnt" type="number" min="1" max="200" step="1" value="4" inputmode="numeric"><span class="unit">回 / 月</span></div>
+    <span class="hint">週1回の定例なら4回です。</span>
+  </div>
+  <div class="field">
+    <label for="spd">聞き直すときの再生速度</label>
+    <div class="row"><select id="spd">
+      <option value="1">等速（1.0倍）</option>
+      <option value="1.25">1.25倍</option>
+      <option value="1.5" selected>1.5倍</option>
+      <option value="2">2.0倍</option>
+    </select></div>
+  </div>
+  <div class="field">
+    <label for="back">聞き逃しで巻き戻す分の上乗せ</label>
+    <div class="row"><input id="back" type="number" min="0" max="200" step="5" value="20" inputmode="numeric"><span class="unit">%</span></div>
+    <span class="hint">仮の値です。一度ストップウォッチで測って、自分の数字に変えてください。0にすると再生時間そのものになります。</span>
+  </div>
+  <div class="field">
+    <label for="wr">要点の抜き出しと清書にかかる時間</label>
+    <div class="row"><input id="wr" type="number" min="0" max="600" step="5" value="30" inputmode="numeric"><span class="unit">分 / 回</span></div>
+    <span class="hint">仮の値です。文字起こしをAIに任せても、この工程は残ります。</span>
+  </div>
+  <div class="field">
+    <label for="cpm">1分あたりに話される文字数</label>
+    <div class="row"><input id="cpm" type="number" min="100" max="600" step="10" value="300" inputmode="numeric"><span class="unit">字 / 分</span></div>
+    <span class="hint">仮の値です。公的な基準は確認できませんでした。自分の会議を数分だけ文字起こしして数えるのが正確です。</span>
+  </div>
+</form>
+
+<div id="out" aria-live="polite"></div>
+
+<p class="note">計算した時間のうち、清書の工程をAIに任せる場合の頼み方を、会議の目的別のプロンプトにまとめました。筆者が自作した有料のプロンプト集（¥780）です：<a href="https://note.com/life_lab_jp/n/ne410835d9a8c" target="_blank" rel="noopener">議事録作成の時間がかかるなら、頼み方を変える｜文字起こしを貼るだけの議事録プロンプト12本</a>（note）</p>
+
+<h2>この計算機の使い方と計算の前提</h2>
+<p class="note">
+議事録に時間がかかる理由の多くは、文章を書く工程ではなく<strong>録音を聞き直す工程</strong>にあります。再生にかかる時間は録音の長さで決まるので、慣れても短くなりません。60分の会議は1.5倍速でも40分かかり、聞き逃して巻き戻せばさらに延びます。この計算機は、その「聞き直し」の時間を月・年の単位に直して見えるようにするものです。
+</p>
+<p class="note">
+計算式は「会議の長さ ÷ 再生速度 ×（1＋巻き戻しの上乗せ）」が1回あたりの聞き直し時間で、これに月の回数を掛けています。要点の抜き出しと清書は、AIで文字起こしをしても残る作業として別に足しています。AI文字起こしを使った場合は聞き直しが0になる前提で計算していますが、音が悪い録音では結局聞き直しが発生します。巻き戻しの上乗せ、清書の時間、1分あたりの文字数の初期値は仮の値で、根拠のある統計ではありません。自分の実測に置き換えて使ってください。
+</p>
+<p class="note">
+プランの判定は Notta の公式料金ページの数字だけを使っています。フリーは月120分・1回3分まで、プレミアムは月1,800分・1回5時間まで（年間プランで総額14,220円・税込）、ビジネスは文字起こし時間が無制限・1回5時間まで（年間プランで総額30,096円・税込）です。料金は変わることがあるので、申し込む前に公式サイトで確認してください。
+</p>
+
+<h2>出典（2026年10月18日に公式ページで確認）</h2>
+<ul class="note small">
+<li>Notta 料金ページ（各プランの月の上限・1回の上限・年額）：<a href="https://www.notta.ai/pricing" target="_blank" rel="noopener">notta.ai/pricing</a></li>
+</ul>
+
+<h2>関連する記事とツール</h2>
+<p class="note">
+・<a href="../meeting-minutes-time/">議事録作成に時間がかかる原因と短縮方法｜所要時間の目安を工程別に出した</a><br>
+・<a href="../ai-minutes-one-hour/">議事録AIを無料で使うなら1時間の会議が分かれ目になる理由</a><br>
+・<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？月120分より先に「1回3分」で詰まる</a><br>
+・<a href="../cant-take-meeting-notes/">会議でメモが取れない・聞き逃すのを止めるには</a><br>
+・<a href="transcription-cost.html">文字起こしコスト計算機</a>（外注した場合の費用と比べる）<br>
+・<a href="ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a>（機密を含む会議の場合）
+</p>
+</div>
+
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a></p>
+</div></footer>
+
+<script>
+(function(){
+  var AFF = "https://px.a8.net/svt/ejp?a8mat=4B82L4+7OUL2Q+5988+5ZEMQ";
+  // Notta 公式料金ページ（2026-10-18確認）。year は年間プランの税込総額。
+  var PLANS = [
+    {n:"Notta フリー",     mo:120,      each:3,   year:0},
+    {n:"Notta プレミアム", mo:1800,     each:300, year:14220},
+    {n:"Notta ビジネス",   mo:Infinity, each:300, year:30096}
+  ];
+  var num = function(id, min){ var v = Number(document.getElementById(id).value); return isFinite(v) && v >= min ? v : min; };
+  var yen = function(n){ return n.toLocaleString("ja-JP") + "円"; };
+  var hm = function(min){ min = Math.round(min); var h = Math.floor(min/60), m = min%60;
+    return h ? h + "時間" + (m ? m + "分" : "") : m + "分"; };
+
+  function render(){
+    var len = num("len",1), cnt = num("cnt",1), back = num("back",0), wr = num("wr",0), cpm = num("cpm",100);
+    var spd = Number(document.getElementById("spd").value) || 1;
+
+    var listen1 = len / spd * (1 + back/100);
+    var listenM = listen1 * cnt, listenY = listenM * 12;
+    var manualM = (listen1 + wr) * cnt, aiM = wr * cnt;
+    var chars1 = Math.round(len * cpm);
+    var monthMin = len * cnt;
+
+    var pick = null;
+    PLANS.forEach(function(p){ if (!pick && monthMin <= p.mo && len <= p.each) pick = p; });
+
+    var h = '<div class="verdict"><h3>聞き直しに月' + hm(listenM) + '、年' + hm(listenY) + 'かかっています</h3>'
+          + '<p class="sub">1回あたり聞き直し' + hm(listen1) + '＋清書' + hm(wr) + '＝' + hm(listen1 + wr)
+          + '。月' + cnt + '回で' + hm(manualM) + 'です。録音をAIで文字にすると、聞き直しの' + hm(listenM)
+          + 'が消え、残るのは清書の月' + hm(aiM) + 'になる計算です（音が悪い録音は除く）。</p></div>';
+
+    h += '<div class="tw"><table><thead><tr><th>項目</th><th>1回</th><th>月</th><th>年</th></tr></thead><tbody>'
+       + '<tr><td>聞き直し（手作業）</td><td class="n">' + hm(listen1) + '</td><td class="n">' + hm(listenM) + '</td><td class="n">' + hm(listenY) + '</td></tr>'
+       + '<tr><td>清書（どちらでも残る）</td><td class="n">' + hm(wr) + '</td><td class="n">' + hm(aiM) + '</td><td class="n">' + hm(aiM*12) + '</td></tr>'
+       + '<tr><td>文字数の目安</td><td class="n">' + chars1.toLocaleString("ja-JP") + '字</td><td class="n">' + (chars1*cnt).toLocaleString("ja-JP") + '字</td><td class="n">—</td></tr>'
+       + '</tbody></table></div>';
+
+    h += '<h3 class="h3">AI文字起こしで足りるプラン（月' + monthMin.toLocaleString("ja-JP") + '分・1回' + len + '分）</h3>';
+    h += '<div class="tw"><table><thead><tr><th>プラン</th><th>月の上限</th><th>1回の上限</th><th>年額（税込）</th><th>判定</th></tr></thead><tbody>';
+    PLANS.forEach(function(p){
+      var ok = monthMin <= p.mo && len <= p.each;
+      var why = ok ? "足りる" : (len > p.each ? "1回" + p.each + "分を超過" : "月の上限を超過");
+      h += '<tr' + (pick && p.n === pick.n ? ' class="pick"' : '') + '><td>' + p.n + '</td>'
+         + '<td class="n">' + (p.mo === Infinity ? "無制限" : p.mo.toLocaleString("ja-JP") + "分") + '</td>'
+         + '<td class="n">' + (p.each >= 60 ? (p.each/60) + "時間" : p.each + "分") + '</td>'
+         + '<td class="n">' + (p.year ? yen(p.year) : "0円") + '</td><td class="n">' + why + '</td></tr>';
+    });
+    h += '</tbody></table></div>';
+
+    if (!pick) {
+      h += '<p class="note">1回の会議が5時間を超えるため、比べた範囲のプランでは1回で収まりません。録音を分けるか、公式サイトで上位の条件を確認してください。</p>';
+    } else if (pick.year === 0) {
+      h += '<p class="note">この条件なら無料プランの範囲に収まります。お金をかける前に、まず無料で自分の会議の精度を確かめてください。</p>';
+    } else {
+      var perHour = Math.round(pick.year / (listenY / 60));
+      h += '<p class="note">' + pick.n + 'の年額' + yen(pick.year) + 'を、年' + hm(listenY) + 'の聞き直し時間で割ると、<strong>聞き直し1時間あたり約' + yen(perHour) + '</strong>です。'
+         + 'この金額と自分の時給を比べると判断しやすくなります。なお、無料プランは1回3分までなので、' + len + '分の会議の全文は無料のままでは文字になりません。</p>';
+    }
+
+    h += '<div class="ctabox"><div class="h">Notta<span class="pr">PR</span></div>'
+       + '<p>無料プラン（月120分・1回3分・クレジットカード登録不要）で、自分の会議の音声がどこまで正確に文字になるかを先に確かめられます。上の「1分あたりの文字数」も、ここで数分起こして数えると実測できます。</p>'
+       + '<a class="btn" href="' + AFF + '" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトで料金を確認する</a></div>';
+
+    document.getElementById("out").innerHTML = h;
+  }
+
+  document.getElementById("f").addEventListener("input", render);
+  render();
+})();
+</script>
+</body>
+</html>
