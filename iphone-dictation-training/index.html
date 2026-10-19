@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認｜AIツール実用ガイド</title>
+<meta name="description" content="iPhoneの音声入力がAppleのサーバーに送られるか、学習や改善に使われるかを公式のプライバシー説明で確認。端末内処理の条件、「改善」の同意、会議の記録に使うときの限界まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/iphone-dictation-training/">
+<meta property="og:title" content="iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認｜AIツール実用ガイド">
+<meta property="og:description" content="iPhoneの音声入力がAppleのサーバーに送られるか、学習や改善に使われるかを公式のプライバシー説明で確認。端末内処理の条件、「改善」の同意、会議の記録に使うときの限界まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認", "description": "iPhoneの音声入力がAppleのサーバーに送られるか、学習や改善に使われるかを公式のプライバシー説明で確認。端末内処理の条件、「改善」の同意、会議の記録に使うときの限界まで。", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/iphone-dictation-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認</h1><p class="meta">2026-10-20 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、iPhoneの音声入力は<strong>キーボード設定で「デバイス上で処理」と表示されている状態なら、話した内容はAppleのサーバーに送られません</strong>。Appleの説明では、日本語はデバイス上の音声入力に対応しており、A12 Bionic以降のiPhoneで音声モデルをダウンロードして使います。音声の録音は既定では保存されず、Appleが録音を保存してレビューするのは、利用者が「Siriと音声入力の改善」を選んだ場合に限られます。ただし、デバイス上で処理されない条件では音声がサーバーに送られて処理されること、そして音声入力はあくまで入力手段で、会議の録音を文字起こしして保存する機能ではないことは、使い分けの前提になります。</p>
+<h2 id="公式の記載を並べた">公式の記載を並べた</h2>
+<p>2026年10月20日に、Appleの「Siriと音声入力とプライバシー」（apple.com/legal）、「プライバシー 機能」ページ、「iOS 機能の提供状況」ページで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式の記載</th></tr></thead><tbody><tr><td>処理場所</td><td>話した内容がサーバーに送信されずデバイス上で処理されるかどうかは、Siri設定またはキーボード設定に表示される</td></tr><tr><td>デバイス上の音声入力</td><td>すべての処理を完全にオフラインで実行。A12 Bionic以降のiPhoneで、音声モデルのダウンロードが必要</td></tr><tr><td>対応言語</td><td>音声入力は日本語（日本）に対応。「デバイス上でのモードレスな音声入力」も日本語に対応。「音声による編集」は英語（米国）のみ</td></tr><tr><td>サーバーに送られる場合</td><td>デバイス上処理が指定されていない場合、話した内容はサーバーに送信されて処理される</td></tr><tr><td>録音の保存</td><td>デフォルト設定では、Siriと音声入力でのやり取りの録音を保存しない</td></tr><tr><td>改善への利用</td><td>「Siriと音声入力の改善」を選択した場合に、追加データが収集・保存・レビューされる。選択しない限り音声データは保存されない</td></tr><tr><td>履歴の扱い</td><td>文字起こしなどのリクエスト履歴はランダムな識別子に紐づき、Apple Accountやメールアドレスには結び付けられない。開発・改善のため最長2年間保持される場合がある</td></tr><tr><td>精度向上のための送信</td><td>連絡先の名前、お気に入りの曲や本などの特定の情報が、暗号化されたプロトコルでAppleのサーバーに送られる</td></tr></tbody></table></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-学習される-かどうかは-設定画面の表示で判断できる">1. 「学習される」かどうかは、設定画面の表示で判断できる</h3>
+<p>Appleの説明は、デバイス上で処理されるかどうかが設定に表示される、という作りです。キーボード設定の音声入力の項目を見て、デバイス上で処理される旨の表示があれば、話した内容はサーバーに送られません。表示がない条件、たとえば音声モデルが未ダウンロードの言語では、サーバーで処理されます。録音が保存されるのは「Siriと音声入力の改善」を自分で選んだ場合だけなので、学習や改善への利用が心配なら、この項目をオフにしておけば足ります。既定ではオフの向きで書かれています。</p>
+<h3 id="2-送られない-は音声の話で-文字になった後の行き先は別">2. 「送られない」は音声の話で、文字になった後の行き先は別</h3>
+<p>音声入力はテキストを入力する機能です。デバイス上で処理されても、入力した先がクラウド同期のメモやチャットアプリなら、文字はそのアプリの保存先に行きます。音声の処理場所と、文字の保存先は分けて考える必要があります。これはWindowsの音声機能でも同じ構図で、<a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？</a>に端末内処理と保存の関係をまとめています。</p>
+<h3 id="3-会議の録音を文字にして残す用途は-音声入力の守備範囲の外">3. 会議の録音を文字にして残す用途は、音声入力の守備範囲の外</h3>
+<p>音声入力はマイクに向かって話した内容をその場で入力するもので、録音した会議を後から文字にする機能ではありません。対面の会議をiPhoneで記録に残すなら、別のアプリやサービスを使うことになります。iPhoneの文字起こしアプリの選び方は<a href="../transcription-app-iphone/">iPhoneの文字起こしアプリは無料で足りる？</a>で整理しました。</p>
+<p>外部サービスを使う場合、音声がクラウドに送られること自体は避けられないので、見るのは<strong>学習に使われるかの条件</strong>です。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約には、パートナー企業が「お客様がご利用のプランに応じて、お客様の音声データを音声認識トレーニングに利用する場合があります」とあり、法人向けページで「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランでした。社外秘を扱う会議なら、無料プランではなくこの3つから選ぶことになります。スマホで対面会議に使うときの注意は<a href="../notta-smartphone-in-person/">Nottaをスマホで対面会議に使う方法</a>にあります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>iPhoneの音声入力</strong>：デバイス上処理は対応機種と音声モデルのダウンロードが条件で、条件を外れるとサーバーで処理されます。会議の録音を後から文字にする機能ではありません</li><li><strong>「音声による編集」は英語のみ</strong>：機能の提供状況ページでは、対応言語に英語（米国）だけが載っていて日本語は入っていません</li><li><strong>履歴は最長2年保持されうる</strong>：Apple Accountには紐づかないランダムな識別子ですが、文字起こしなどのリクエスト履歴が保持される場合があると書かれています</li><li><strong>外部サービス</strong>：学習なしの条件を満たすには上位プランが必要で、月額は音声入力の0円とは比べものになりません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="iPhoneの音声入力で話した内容は-Appleに保存されますか">iPhoneの音声入力で話した内容は、Appleに保存されますか</h3>
+<p>デフォルト設定では録音を保存しないと書かれています。保存とレビューが行われるのは「Siriと音声入力の改善」を選択した場合です。</p>
+<h3 id="日本語でもデバイス上で処理されますか">日本語でもデバイス上で処理されますか</h3>
+<p>機能の提供状況ページでは、音声入力と「デバイス上でのモードレスな音声入力」の対応言語に日本語が含まれています。A12 Bionic以降のiPhoneで音声モデルのダウンロードが必要です。実際にデバイス上で処理されているかは、キーボード設定の表示で確認できます。</p>
+<h3 id="会社の規程で-音声データを外部に送らないこと-とある場合-使えますか">会社の規程で「音声データを外部に送らないこと」とある場合、使えますか</h3>
+<p>デバイス上で処理される表示が出ている状態なら、話した内容はサーバーに送られないとAppleは説明しています。ただし、連絡先の名前などの特定の情報は精度向上のために暗号化して送られると書かれているので、「一切の送信なし」とは読めません。規程の文言と照らして判断してください。社内規程の読み方は<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止</a>にあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>iPhoneの音声入力は、キーボード設定で「デバイス上で処理」と表示されていればサーバーに送られない。日本語は対応、A12 Bionic以降で音声モデルのダウンロードが必要</li><li>録音は既定で保存されず、保存・レビューされるのは「Siriと音声入力の改善」を選んだ場合だけ。履歴はApple Accountに紐づかない識別子で最長2年保持されうる</li><li>会議の録音を文字にして残すのは音声入力の守備範囲の外。外部サービスで学習なしを条件にするなら、Nottaはビジネス Plus以上か士業向け特別プラン（2026年10月20日に公式ページで確認）</li></ul>
+<p>※本記事はAppleとNottaの公開ページを2026年10月20日に確認して整理したもので、法的な助言ではありません。仕様や料金は変更されることがあるため、最新の公式ページをご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？音声入力はAzureへ、字幕は端末内で完結</a></li><li><a href="../zoom-ai-companion-no-training/">Zoom AI Companionは学習されない？公式の一文と管理者が触る設定</a></li><li><a href="../copilot-meeting-no-training/">Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆</a></li><li><a href="../gemini-transcription-training/">Geminiの文字起こしは学習に使われる？声と文字で設定が別だった</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた</a></li><li><a href="../iphone-dictation-training/">iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認</a></li><li><a href="../plaud-note-security/">PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先</a></li><li><a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？音声入力はAzureへ、字幕は端末内で完結</a></li><li><a href="../zoom-ai-companion-no-training/">Zoom AI Companionは学習されない？公式の一文と管理者が触る設定</a></li><li><a href="../copilot-meeting-no-training/">Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
