@@ -16,6 +16,7 @@
 - [コンサルがクライアント会議をAI文字起こしするなら｜NDAで引っかかる3つの条項](https://nagai-cpu.github.io/ai-tools-jp/consulting-client-meeting/): コンサルタントがクライアントとの会議をAIで文字起こしするとき、秘密保持契約の第三者開示・目的外利用・返還破棄の3条項と、Nottaの規約・法人向けページの記載がどう対応するかを整理しました。
 - [カウンセリングの録音をAIで文字起こしする前に｜守秘義務と「学習なし」の条件](https://nagai-cpu.github.io/ai-tools-jp/counseling-recording/): カウンセリングや心理相談の録音をAIで文字起こしするとき、守秘義務・要配慮個人情報・同意の3点をどう整理するかと、Nottaで「AI学習なし」になるプラン条件を公式ページの記載で確認しました。
 - [iPhoneの音声入力は学習される？端末内処理の条件と改善への同意を公式で確認](https://nagai-cpu.github.io/ai-tools-jp/iphone-dictation-training/): iPhoneの音声入力がAppleのサーバーに送られるか、学習や改善に使われるかを公式のプライバシー説明で確認。端末内処理の条件、「改善」の同意、会議の記録に使うときの限界まで。
+- [AI学習なしの文字起こしツール比較｜公式が明記するプラン条件と確認法](https://nagai-cpu.github.io/ai-tools-jp/no-ai-training-transcription-comparison/): 機密を扱う人向けに、Notta・PLAUD・Rimo・AiNote・Zoom・Copilot・Meetの「学習に使わない」と公式に書かれた条件と価格を表にし、規約で確かめる手順も整理。
 - [PLAUD NOTEは学習される？セキュリティの公式記載と、ページで食い違う保存先](https://nagai-cpu.github.io/ai-tools-jp/plaud-note-security/): PLAUD NOTEの録音がAI学習に使われるか、どこに保存されるか、要約に使う外部AIの扱い、暗号化・認証・削除の方法を、公式の信頼性ページと日本向けプライバシー説明の記載だけで整理しました。
 - [スマート書記のデータはAI学習に使われる？規約の「機械学習は含まない」の範囲](https://nagai-cpu.github.io/ai-tools-jp/smart-shoki-data-policy/): スマート書記の録音・議事録がAI学習に使われるかを利用規約とFAQで確認。統計加工の範囲、音声認識エンジン側の扱い、東京リージョン保存、契約終了時の削除、料金が非公開である点まで整理しました。
 - [torunoの文字起こしデータは保存・学習される？2024年3月14日が分かれ目](https://nagai-cpu.github.io/ai-tools-jp/toruno-data-policy/): torunoの録音と文字起こしがAI学習に使われるか、どこにどれだけ保存され、解約後にどうなるかを、公式サイトと利用規約（別紙）の記載で確認。パーソナルとビジネスの料金と、Nottaとの違いまで。
