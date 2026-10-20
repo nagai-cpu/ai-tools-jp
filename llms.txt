@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [Nottaエンタープライズとビジネス Plusの違い｜学習なし以外の差は3つ](https://nagai-cpu.github.io/ai-tools-jp/notta-enterprise-vs-business-plus/): 「AI学習なし」だけならビジネス Plusで足りるのか、エンタープライズが要るのか。Nottaの法人向けページと料金ページで確認した、SSO・操作ログ・自動削除の差と、見積もりが要る条件を整理。
 - [AIボイスレコーダーは会社で使っていい？規程が見る3点をPLAUDの公式で埋めた](https://nagai-cpu.github.io/ai-tools-jp/ai-voice-recorder-company-rules/): PLAUD NOTEのようなAIボイスレコーダーを会社で使う前に、社内規程や利用申請で問われる「同意・データの行き先・アカウント管理」の3点を、公式のプライバシー説明と料金表だけで整理しました。
 - [クラウド文字起こしとオンプレの比較｜機密情報で分かれるのは学習より送信の有無](https://nagai-cpu.github.io/ai-tools-jp/cloud-vs-onprem-transcription/): 機密情報を含む会議の文字起こしで、クラウド型・PC内で完結するスタンドアロン型・自前のオープンソースの3方式を公式の記載で比較。先に見る「音声の行き先」と費用の形を整理。
 - [コンサルがクライアント会議をAI文字起こしするなら｜NDAで引っかかる3つの条項](https://nagai-cpu.github.io/ai-tools-jp/consulting-client-meeting/): コンサルタントがクライアントとの会議をAIで文字起こしするとき、秘密保持契約の第三者開示・目的外利用・返還破棄の3条項と、Nottaの規約・法人向けページの記載がどう対応するかを整理しました。
