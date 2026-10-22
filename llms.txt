@@ -140,3 +140,4 @@
 - [AI検索 自己診断キット](https://note.com/life_lab_jp/n/n8edffd004f5a): ChatGPTやGeminiに自分の事業やサイトがどう説明されているかを、自分で確かめるための手順書と記録シートです。（1980円）
 - [AI議事録を社内で通すための文書一式](https://note.com/life_lab_jp/n/n36ce4be7c812): AI議事録の社内規程の文例12条と、導入前のチェックリスト、稟議書の本文をそのまま使える形でまとめた有料noteです。（1480円）
 - [文字起こしを貼るだけの議事録プロンプト12本](https://note.com/life_lab_jp/n/ne410835d9a8c): 文字起こしから議事録の下書きを作る指示文を、定例・商談・1on1・役員会など会議の目的別にまとめた有料noteです。（780円）
+- [文字起こしをAIの学習に使わせない設定と確認の手順](https://note.com/life_lab_jp/n/nee47eb4ec0d7): Notta・Zoom・Google Meet・Teams・Claude・Geminiの学習の扱いと確認する場所、録音前の8項目のチェックリストをまとめた手順書です。（780円）
