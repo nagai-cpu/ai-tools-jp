@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>税理士が顧問先の面談をAI文字起こしする前に｜法38条・54条と通達の確認点｜AIツール実用ガイド</title>
+<meta name="description" content="税理士事務所で顧問先との面談を録音しAI文字起こしするときの確認点を、税理士法と国税庁の基本通達の原文で整理。職員の守秘義務、監督義務、Nottaの士業向けプランとビジネス Plusの違いまで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/zeirishi-client-recording/">
+<meta property="og:title" content="税理士が顧問先の面談をAI文字起こしする前に｜法38条・54条と通達の確認点｜AIツール実用ガイド">
+<meta property="og:description" content="税理士事務所で顧問先との面談を録音しAI文字起こしするときの確認点を、税理士法と国税庁の基本通達の原文で整理。職員の守秘義務、監督義務、Nottaの士業向けプランとビジネス Plusの違いまで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "税理士が顧問先の面談をAI文字起こしする前に｜法38条・54条と通達の確認点", "description": "税理士事務所で顧問先との面談を録音しAI文字起こしするときの確認点を、税理士法と国税庁の基本通達の原文で整理。職員の守秘義務、監督義務、Nottaの士業向けプランとビジネス Plusの違いまで。", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/zeirishi-client-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">税理士が顧問先の面談をAI文字起こしする前に｜法38条・54条と通達の確認点</h1><p class="meta">2026-10-23 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、税理士事務所で顧問先との面談をAI文字起こしにかける前に確かめるのは、ツールの精度より<strong>「誰の同意で、誰が触れる記録になるか」</strong>です。国税庁の税理士法基本通達は、守秘義務を外す「正当な理由」を「本人の許諾又は法令に基づく義務」と定めています。さらに税理士法第54条で、<strong>事務所の職員も退職後まで同じ義務を負います</strong>。この2点を先に決めてから、「AI学習なし」が明記されたプランを選ぶ順番が分かりやすいです。</p>
+<h2 id="税理士法と基本通達に書かれていること">税理士法と基本通達に書かれていること</h2>
+<p>2026年10月23日に、e-Gov法令検索の税理士法と、国税庁の「税理士法基本通達」で確認した原文です。</p>
+<div class="tw"><table><thead><tr><th>条文・通達</th><th>書かれていること（原文の要点）</th><th>面談の録音・文字起こしで考えること</th></tr></thead><tbody><tr><td>税理士法 第38条</td><td>「正当な理由がなくて、税理士業務に関して知り得た秘密を他に洩らし、又は窃用してはならない」。税理士でなくなった後も同様</td><td>録音と文字起こしの結果は、この秘密を含む記録になる</td></tr><tr><td>基本通達 38－1</td><td>「正当な理由」とは「本人の許諾又は法令に基づく義務があることをいう」</td><td>顧問先の了解をどう取るかを事務所の手順として決める</td></tr><tr><td>基本通達 38－2</td><td>秘密とは「依頼人の陳述又は自己の判断によって知り得た事実で、一般に知られていない事項」など</td><td>面談で顧問先が話した内容がそのまま該当しうる</td></tr><tr><td>税理士法 第54条</td><td>使用人その他の従業者も、業務に関して知り得た秘密を漏らし又は盗用してはならない。従業者でなくなった後も同様</td><td>職員のアカウントと、退職時のデータの扱いを決める</td></tr><tr><td>税理士法 第59条</td><td>第38条・第54条の違反は「二年以下の拘禁刑又は百万円以下の罰金」（告訴がなければ公訴を提起できない）</td><td>職員個人も罰則の対象になる</td></tr><tr><td>基本通達 41の2－1</td><td>使用人等の監督は、対面でなくても情報通信技術を利用して適切に行われていれば果たされていると判断する。例として打合せへの参加や、補助を行った履歴の確認</td><td>記録の残し方は、監督の方法とも関わる</td></tr></tbody></table></div>
+<p>外部のクラウドで文字起こしすることが第38条の「洩らし」に当たるかどうかを、条文や通達は直接書いていません。ここは解釈の問題なので、この記事では判断しません。個別の判断は所属の税理士会や専門家に確認してください。</p>
+<p>なお、日本税理士会連合会のサイトは確認時にメンテナンス中で、会員向けの資料の内容は確認できませんでした。所属税理士会の会員ページに最新の指針がないかも、あわせて見ておくと安心です。</p>
+<h2 id="判断軸1-顧問先の了解を-どの場面でどう取るか">判断軸1：顧問先の了解を、どの場面でどう取るか</h2>
+<p>通達38－1が「正当な理由」の一つに「本人の許諾」を挙げている以上、録音とAI処理について顧問先の了解を取る手順を先に決めておくと、説明がぶれません。たとえば顧問契約の更新時に書面で一度説明しておく、面談の冒頭で口頭で確認する、といった形です。</p>
+<p>説明するときに具体的に言えるのは、「録音がどこに保存されるか」と「AIの学習に使われるか」の2つです。前者は<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の場合、公式ヘルプで東京のデータセンターに保管されると説明されています。後者はプランで答えが変わります。士業の相談記録全般の論点は<a href="../shigyo-transcription-no-ai-training/">Nottaで文字起こしをAI学習させない方法</a>にまとめています。</p>
+<h2 id="判断軸2-職員が触れる記録として管理できるか">判断軸2：職員が触れる記録として管理できるか</h2>
+<p>税理士事務所で特に意識したいのが第54条です。面談を担当するのは税理士本人とは限らず、担当職員が顧問先と打ち合わせることも多いはずです。文字起こしツールを入れると、職員ごとのアカウントに面談の記録がたまっていきます。</p>
+<p>そのとき決めておくことは3つです。</p>
+<ul><li>職員が退職したときに、その職員のアカウントと記録をどう引き継ぎ、どう止めるか</li><li>顧問先ごとに、誰が記録を見られるか（共有リンクを使うかどうか）</li><li>記録をいつまで残すか</li></ul>
+<p>退職者のアカウントとデータの扱いは<a href="../transcription-offboarding/">AI文字起こしの退職者アカウント</a>で、誰が見たかを追えるかは<a href="../transcription-audit-log/">AI文字起こしの監査ログ</a>で整理しています。</p>
+<h2 id="判断軸3-AI学習なし-をどのプランで満たすか">判断軸3：「AI学習なし」をどのプランで満たすか</h2>
+<p>2026年10月23日にNottaの料金ページ、法人向けページ、士業向け特別プランのページで確認すると、「AI学習なし」が書かれているのは次の3つでした。</p>
+<div class="tw"><table><thead><tr><th>プラン</th><th>料金（公式の表記）</th><th>「AI学習なし」</th><th>申し込み方</th><th>AI要約・ファイルインポート</th></tr></thead><tbody><tr><td>ビジネス</td><td>年30,096円（税込）</td><td>記載なし</td><td>料金ページから購入</td><td>200回/月・200個/月</td></tr><tr><td>ビジネス Plus</td><td>年64,800円（税抜）</td><td>あり</td><td>法人向けページのフォーム</td><td>200回/月・200個/月</td></tr><tr><td>士業向け特別プラン</td><td>「単体は年額79,800円（税込）」</td><td>あり</td><td>問い合わせ・資料ダウンロード</td><td>回数無制限</td></tr><tr><td>エンタープライズ</td><td>要相談</td><td>あり</td><td>営業担当に問い合わせ</td><td>無制限</td></tr></tbody></table></div>
+<p>士業向け特別プランのページには「士業向け特別プランでは、入力したデータをAI学習に利用しない環境でNottaをご利用いただけます」とあります。ページには「初年度100,000円（税込）」の、プラン1アカウントと録音機器Notta Memo Type-C 1台のセットも載っていて、プランの年額はそのセットの説明に「単体は年額79,800円（税込）」と書かれています。導入事例には約100人規模の税理士法人も載っていました。</p>
+<p>面談記録の要約を毎月たくさん作る事務所なら、回数無制限の士業向け、要約の回数が月200回で足りるならビジネス Plus、という分け方ができます。ビジネス Plusとエンタープライズの差は<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>に書きました。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>士業向け特別プラン</strong>：オンラインで即時購入はできず、問い合わせからになります。ページに最低人数やFAQの記載はなく、保存場所や暗号化もこのページ自体には書かれていません</li><li><strong>ビジネス Plus</strong>：税込にすると年71,280円で、AI要約は月200回までです。面談の多い繁忙期に足りるかは、件数から見積もる必要があります</li><li><strong>ビジネス以下のプラン</strong>：「AI学習なし」の記載がありません。利用規約には、音声認識のパートナー企業が「ご利用のプランに応じて」音声データを学習に使う場合があると書かれています</li><li><strong>共通</strong>：クラウドに保存すること自体をどう扱うかは、ツールではなく事務所と所属税理士会の判断です。送信そのものを避けたい場合は、PCの中で完結する方式も選択肢になります（<a href="../cloud-vs-onprem-transcription/">クラウド文字起こしとオンプレの比較</a>）</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="顧問先の同意があれば録音して大丈夫ですか">顧問先の同意があれば録音して大丈夫ですか</h3>
+<p>国税庁の基本通達は「正当な理由」を「本人の許諾又は法令に基づく義務があることをいう」と定めています。ただ、どの範囲の許諾が要るか、AI処理まで含めて説明すべきかは個別の判断になるため、所属税理士会や専門家に確認してください。</p>
+<h3 id="職員にもツールを使わせてよいですか">職員にもツールを使わせてよいですか</h3>
+<p>税理士法第54条により、職員も業務で知った秘密を漏らしてはならず、退職後も同じです。また第41条の2で税理士には職員を監督する義務があり、通達は情報通信技術を使った監督の方法も例示しています。職員にアカウントを渡すなら、退職時の扱いと閲覧範囲を先に決めておくのが現実的です。</p>
+<h3 id="士業向け特別プランとビジネス-Plusはどちらが安いですか">士業向け特別プランとビジネス Plusはどちらが安いですか</h3>
+<p>公式の表記では、ビジネス Plusが年64,800円（税抜、税込71,280円）、士業向け特別プランが「単体は年額79,800円（税込）」です。差はAI要約・ファイルインポートが回数無制限かどうかで、ビジネス Plusには代わりにNotta Brainの機能とクレジットが付いています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>税理士法第38条の「正当な理由」は、基本通達で「本人の許諾又は法令に基づく義務」とされている。顧問先の了解の取り方を先に決める</li><li>第54条で職員も退職後まで守秘義務を負う。職員のアカウント、閲覧範囲、退職時の扱いを導入前に決める</li><li>Nottaで「AI学習なし」が書かれているのはビジネス Plus（年64,800円・税抜）、士業向け特別プラン（単体は年額79,800円・税込）、エンタープライズ。要約の回数で選び分ける</li></ul>
+<p>※本記事はe-Gov法令検索、国税庁、Nottaの公開ページを2026年10月23日に確認して整理したもので、法的な助言ではありません。個別の判断は所属税理士会や専門家にご確認ください。</p><h2 id="doga">この記事を54秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../bengoshi-consultation-record/">弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点</a></li><li><a href="../free-no-training-transcription/">AI学習なしの文字起こしは無料である？公式の文言で確かめた4つの選択肢</a></li><li><a href="../hr-interview-recording/">人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点</a></li><li><a href="../minutes-external-transfer/">議事録AIの外部送信が社内ルールで禁止のとき｜取りうる4つの選択肢</a></li><li><a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン｜AI学習なしは「別途追加費用」だった</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../bengoshi-consultation-record/">弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点</a></li><li><a href="../free-no-training-transcription/">AI学習なしの文字起こしは無料である？公式の文言で確かめた4つの選択肢</a></li><li><a href="../hr-interview-recording/">人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点</a></li><li><a href="../minutes-external-transfer/">議事録AIの外部送信が社内ルールで禁止のとき｜取りうる4つの選択肢</a></li><li><a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン｜AI学習なしは「別途追加費用」だった</a></li><li><a href="../notta-shigyo-plan/">Notta士業向け特別プランの料金と申し込み条件｜年79,800円はどこに出ているか</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

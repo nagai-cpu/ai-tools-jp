@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点｜AIツール実用ガイド</title>
+<meta name="description" content="評価面談・1on1・退職面談を録音してAIで文字起こしする人事担当者向け。個人情報保護委員会のQ&amp;Aで、利用目的・開示請求・消去の扱いと、Nottaで面談記録の閲覧範囲を絞る設定を確認しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/hr-interview-recording/">
+<meta property="og:title" content="人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点｜AIツール実用ガイド">
+<meta property="og:description" content="評価面談・1on1・退職面談を録音してAIで文字起こしする人事担当者向け。個人情報保護委員会のQ&amp;Aで、利用目的・開示請求・消去の扱いと、Nottaで面談記録の閲覧範囲を絞る設定を確認しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点", "description": "評価面談・1on1・退職面談を録音してAIで文字起こしする人事担当者向け。個人情報保護委員会のQ&Aで、利用目的・開示請求・消去の扱いと、Nottaで面談記録の閲覧範囲を絞る設定を確認しました。", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/hr-interview-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点</h1><p class="meta">2026-10-23 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、人事面談の録音をAIで文字起こしするときに先に決めるべきなのは、録音の同意文よりも<strong>「何に使うか」「誰が読めるか」「開示を求められたらどうするか」</strong>の3つです。個人情報保護委員会のQ&amp;Aは、録音した会話は氏名で検索できる形に整理されていない限り「個人情報データベース等」に該当しないとしています。文字起こしして社員ごとに整理すると、この前提が変わる可能性があります。そのうえで、ツールは「AI学習なし」と「ノート単位の閲覧制限」の両方が書かれたプランから選ぶ、という順番です。</p>
+<h2 id="人事面談ならではの論点を一次資料で並べる">人事面談ならではの論点を一次資料で並べる</h2>
+<p>2026年10月23日に、個人情報保護委員会の「個人情報の保護に関する法律についてのガイドライン」に関するQ&amp;A、同ガイドライン（通則編）、Nottaの法人向けページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>一次資料の記載</th><th>文字起こしで変わること</th><th>Nottaで確認すること</th></tr></thead><tbody><tr><td>利用目的</td><td>従業員の個人情報も利用目的をできる限り特定する必要があり、あらかじめ労働組合等に通知し、必要に応じて協議することも望ましい（Q&amp;A Q2-2）</td><td>「評価の根拠に使う」「要約して上長に渡す」など、録音より用途が広がる</td><td>共有先を誰にするか</td></tr><tr><td>録音の告知</td><td>通話内容で個人を識別できれば個人情報。利用目的の通知・公表の義務はあるが、録音していることを伝える義務までは負わない（Q&amp;A Q1-10）</td><td>告知義務とは別に、面談の信頼関係の問題が残る</td><td>―</td></tr><tr><td>検索できる形かどうか</td><td>録音した会話に氏名が含まれていても、氏名で容易に検索できる状態に整理されていない限り個人情報データベース等に該当しない（Q&amp;A Q1-42）。検索できない状態なら開示請求に応じる法的義務は課されないと解される（Q&amp;A Q9-5）</td><td>テキスト化して社員別フォルダに置くと、検索できる状態になりうる</td><td>フォルダ構成とアクセス権</td></tr><tr><td>人事評価の開示</td><td>人事評価など非開示が想定される雇用管理情報は、労働組合等と必要に応じ協議したうえで非開示とする事項を定め、従業者に周知することが望ましい（Q&amp;A Q9-11）</td><td>面談の発言がそのまま文字で残る</td><td>書き出し（ダウンロード）権限</td></tr><tr><td>消去</td><td>利用する必要がなくなった個人データは遅滞なく消去するよう努めなければならない（通則編3-4-1）</td><td>退職面談の記録などが残り続けやすい</td><td>自動削除の有無</td></tr></tbody></table></div>
+<p>「なりうる」と書いた行は、Q&amp;Aの文言から読み取れる範囲の整理です。自社の面談記録が個人情報データベース等や保有個人データに当たるかどうかは、保存の仕方によって変わります。個別の判断は専門家に確認してください。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-録音を-何に使うか-を-面談の前に文書にする">1. 録音を「何に使うか」を、面談の前に文書にする</h3>
+<p>Q&amp;A Q1-10は、録音していることを伝える義務までは負わないとしつつ、利用目的の通知・公表の義務は負うと書いています。同じ1on1の録音でも、「本人との振り返りに使う」のと「評価会議の資料に引用する」のとでは、使い道がまったく違います。</p>
+<p>Q&amp;A Q2-2は、従業員の個人情報についても利用目的をできる限り特定し、争いにならないよう労働組合等への通知と協議が望ましいとしています。評価面談・1on1・退職面談で使い道が違うなら、面談の種類ごとに書き分けておくと説明しやすくなります。冒頭で読み上げる文や案内文は<a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a>の「人事面談・ヒアリング」で作れます。</p>
+<p>面談では、体調やメンタル不調の話が出ることがあります。ガイドライン（通則編3-3-2）は、要配慮個人情報を本人から書面や口頭で適正に直接取得する場合、本人が提供したことをもって取得への同意があったものと解されるとしています。ただし、それを評価の資料に使ってよいかは別の問題です。健康に関わる発言の扱いは利用目的の文書に別に書いておく方が、あとで迷いません。心身の相談そのものを録音する場合の整理は<a href="../counseling-recording/">カウンセリングの録音をAIで文字起こしする前に</a>にまとめています。</p>
+<h3 id="2-誰が読めるか-を-ノート単位で絞れるか確認する">2. 「誰が読めるか」を、ノート単位で絞れるか確認する</h3>
+<p>人事面談の記録は、直属の上司と人事担当だけ、退職面談なら人事だけ、と読める人を限る必要があります。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプセンターによると、ノートやフォルダごとのアクセス権の設定はビジネスプランとエンタープライズプランで使え、ワークスペースの初期設定では新しいノートは「作成者のみ」がアクセスできる状態で作られます。注意したいのは、フォルダ内のノートはそのフォルダのアクセス権を引き継ぎ、ノートをフォルダへ移すと個別の設定が無効になる仕様です。「面談記録」フォルダを部署全員に開いたまま整理すると、移したノートもすべて部署全員から見える状態になります。社員ごとにフォルダを分けるなら、フォルダ側の権限を先に決めてから移す手順にします。</p>
+<p>あわせて、音声の学習の条件も確認します。Nottaの利用規約第10条は、パートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合があると書いています。法人向けページで「AI学習なし」が機能として挙がっているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランで、ビジネスには記載がありません。アクセス権の設定と学習なしの両方を満たすのは、この中ではビジネス Plusとエンタープライズです。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h3 id="3-開示請求と消去に-先に答えを用意する">3. 開示請求と消去に、先に答えを用意する</h3>
+<p>Q&amp;A Q1-42とQ9-5を並べると、録音を日付順に置いているだけの状態と、文字起こしを社員の氏名で検索できるように整理した状態とでは、開示請求への向き合い方が変わりうると読めます。</p>
+<p>そのうえでQ&amp;A Q9-11は、人事評価のように非開示が想定される情報について、非開示とする事項をあらかじめ定めて従業者に周知することが望ましいとしています。開示請求を受けたら「遅滞なく」開示する必要があり、検索・集約の作業に通常必要な期間を考慮した合理的な期間内なら遅滞なくと考えられる、ともあります（Q&amp;A Q9-12）。</p>
+<p>消去は、通則編3-4-1の努力義務が基準です。退職面談の記録をいつまで持つかを決め、その時期に消す運用にします。Nottaの公開ページで「ノート・フォルダの自動削除」が書かれているのはエンタープライズだけで、ビジネス Plusでは手動で消すことになります。差は<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>に整理しました。誰がいつ記録を開いたかまで残す必要があるなら、<a href="../transcription-audit-log/">AI文字起こしの監査ログで「誰が見たか」を追えるか</a>も参照してください。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（ビジネス Plus）</strong>：年64,800円（税抜）。人事担当1〜2名で面談記録だけに使うには、軽くない固定費です</li><li><strong>Notta（ビジネス Plus）</strong>：自動削除と操作ログは公開ページに記載がなく、消去と閲覧の記録は人の運用で補うことになります</li><li><strong>Notta（アクセス権）</strong>：フォルダへ移すと個別の権限が上書きされる仕様のため、整理の手順を誤ると閲覧範囲が広がります</li><li><strong>文字起こし全般</strong>：発言が検索できるテキストで残ることは、面談で率直に話してもらう妨げになる場合があります。録音しない面談を残す判断もありえます</li><li><strong>この記事の限界</strong>：Q&amp;Aは一般的な考え方を示したもので、人事面談の録音を名指しした記述は確認できませんでした。表の「なりうる」は文言からの整理です</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="人事面談を録音することを-社員に伝えなくてもいいのですか">人事面談を録音することを、社員に伝えなくてもいいのですか</h3>
+<p>Q&amp;A Q1-10は、個人情報保護法上は録音していることを伝える義務までは負わないとしています。ただし利用目的の通知・公表の義務はあり、Q2-2は労働組合等への通知と協議が望ましいとしています。法律上の義務とは別に、面談の信頼関係をどう考えるかは会社の判断です。</p>
+<h3 id="社員から-自分の面談記録を見せてほしい-と言われたらどうなりますか">社員から「自分の面談記録を見せてほしい」と言われたらどうなりますか</h3>
+<p>記録が保有個人データに当たるなら、開示請求の対象になります。人事評価などを非開示とするなら、その事項をあらかじめ定めて周知しておくことが望ましいとされています（Q&amp;A Q9-11）。個別の請求への対応は専門家に確認してください。</p>
+<h3 id="1on1だけなら-ビジネスプランで足りますか">1on1だけなら、ビジネスプランで足りますか</h3>
+<p>ノート単位のアクセス権はビジネスでも使えます。ただし法人向けページの機能一覧で「AI学習なし」が書かれているのはビジネス Plus以上と士業向け特別プランで、ビジネスには記載がありません。面談の内容を学習に使わせたくないなら、ビジネスでは要件を満たせるか公開情報からは確認できませんでした。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>人事面談の録音は、同意文より先に「何に使うか」を面談の種類ごとに文書にする（Q&amp;A Q2-2・Q1-10）</li><li>文字起こしして社員別に整理すると、開示請求への向き合い方が変わりうる。人事評価の非開示事項は事前に定めて周知する（Q&amp;A Q1-42・Q9-5・Q9-11）</li><li>Nottaでは「AI学習なし」はビジネス Plus（年64,800円・税抜）以上、ノート単位のアクセス権はビジネス以上。自動削除の記載はエンタープライズのみ（2026年10月23日に公式ページで確認）</li></ul>
+<p>※本記事は個人情報保護委員会とNottaの公開ページを2026年10月23日に確認して整理したもので、法的な助言ではありません。個別の判断は専門家にご確認ください。</p><h2 id="doga">この記事を52秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../bengoshi-consultation-record/">弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点</a></li><li><a href="../free-no-training-transcription/">AI学習なしの文字起こしは無料である？公式の文言で確かめた4つの選択肢</a></li><li><a href="../minutes-external-transfer/">議事録AIの外部送信が社内ルールで禁止のとき｜取りうる4つの選択肢</a></li><li><a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン｜AI学習なしは「別途追加費用」だった</a></li><li><a href="../notta-shigyo-plan/">Notta士業向け特別プランの料金と申し込み条件｜年79,800円はどこに出ているか</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../bengoshi-consultation-record/">弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点</a></li><li><a href="../free-no-training-transcription/">AI学習なしの文字起こしは無料である？公式の文言で確かめた4つの選択肢</a></li><li><a href="../hr-interview-recording/">人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点</a></li><li><a href="../minutes-external-transfer/">議事録AIの外部送信が社内ルールで禁止のとき｜取りうる4つの選択肢</a></li><li><a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン｜AI学習なしは「別途追加費用」だった</a></li><li><a href="../notta-shigyo-plan/">Notta士業向け特別プランの料金と申し込み条件｜年79,800円はどこに出ているか</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

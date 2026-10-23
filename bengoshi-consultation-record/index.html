@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点｜AIツール実用ガイド</title>
+<meta name="description" content="法律相談の録音をAIで文字起こしする弁護士向けに、職務基本規程と情報セキュリティ規程の条文から学習・廃棄・事務職員管理の3点を確認し、Nottaのプランと照らし合わせました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/bengoshi-consultation-record/">
+<meta property="og:title" content="弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点｜AIツール実用ガイド">
+<meta property="og:description" content="法律相談の録音をAIで文字起こしする弁護士向けに、職務基本規程と情報セキュリティ規程の条文から学習・廃棄・事務職員管理の3点を確認し、Nottaのプランと照らし合わせました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点", "description": "法律相談の録音をAIで文字起こしする弁護士向けに、職務基本規程と情報セキュリティ規程の条文から学習・廃棄・事務職員管理の3点を確認し、Nottaのプランと照らし合わせました。", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/bengoshi-consultation-record/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "日弁連は文字起こしAIの使用を禁止していますか。", "acceptedAnswer": {"@type": "Answer", "text": "確認した職務基本規程と弁護士情報セキュリティ規程の本文に、AIや文字起こしを名指しした規定はありませんでした。日弁連のサイトがメンテナンス中だったため、規程以外の指針や通知の有無は今回確認できていません。所属弁護士会の案内も含めて確認してください。"}}, {"@type": "Question", "name": "無料プランで相談記録を試してもよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "Nottaのフリーは「AI学習なし」の対象プランとして挙がっていません。精度を試すなら、依頼者情報を含まない音声（自分の読み上げなど）にとどめるのが無難です。"}}, {"@type": "Question", "name": "依頼者の同意は必要ですか。", "acceptedAnswer": {"@type": "Answer", "text": "同意の要否は条文の解釈に関わるため、この記事では判断しません。ツール側の事実として言えるのは、学習の有無はプランで決まり、データは消さない限り残る、の2点です。個別の判断は専門家に相談してください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点</h1><p class="meta">2026-10-23 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、弁護士が相談記録をAIで文字起こしするときに条文から確かめておきたいのは「学習に使われるか」だけではありません。<strong>保存と廃棄</strong>（職務基本規程18条）、<strong>事務職員の管理</strong>（同19条）、そして<strong>事務所としての取扱方法を決めておくこと</strong>（弁護士情報セキュリティ規程3条）の3つが並びます。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン）</a>なら、学習はビジネス Plus・士業向け特別プラン・エンタープライズで止まりますが、自動削除の設定はヘルプ上エンタープライズのプランです。</p>
+<h2 id="条文に-AI-の語はない-だから何に当てはめるかを自分で決める">条文に「AI」の語はない。だから何に当てはめるかを自分で決める</h2>
+<p>2026年10月23日時点で、日本弁護士連合会のウェブサイトは「システムメンテナンスに伴い、本サイトはご利用いただけません」という表示になっていました。そこでこの記事は、弁護士法と刑法はe-Govの法令データで、職務基本規程と弁護士情報セキュリティ規程は日弁連が公開していたPDF（Internet Archiveに保存された版）で、条文を確認しています。</p>
+<p>相談記録の文字起こしに関係しそうな条文は次のとおりです。</p>
+<ul><li><strong>弁護士法23条</strong>：「弁護士又は弁護士であつた者は、その職務上知り得た秘密を保持する権利を有し、義務を負う。」</li><li><strong>職務基本規程23条（秘密の保持）</strong>：「弁護士は、正当な理由なく、依頼者について職務上知り得た秘密を他に漏らし、又は利用してはならない。」</li><li><strong>職務基本規程18条（事件記録の保管等）</strong>：「事件記録を保管し、又は廃棄するに際しては、秘密及びプライバシーに関する情報が漏れないように注意しなければならない。」</li><li><strong>職務基本規程19条（事務職員等の指導監督）</strong>：事務職員や司法修習生などが、業務に関して知り得た秘密を漏らしたり利用したりしないよう「指導及び監督をしなければならない」</li><li><strong>弁護士情報セキュリティ規程</strong>（令和4年6月10日会規第117号、令和6年6月1日施行）：3条で、取扱情報の情報セキュリティを確保するための「基本的な取扱方法を定めなければならない」。5条で、取扱情報の「作成、取得、保管、利用、提供、運搬、送信及び廃棄の各段階」で情報セキュリティが確保されるよう取り扱うことを求めています</li></ul>
+<p>刑法134条（秘密漏示）も、処罰の対象となる職業に弁護士を挙げています。</p>
+<p>確認した範囲では、職務基本規程の本文にも情報セキュリティ規程の本文にも「AI」「生成AI」「文字起こし」「クラウド」という語はありませんでした。情報セキュリティ規程は、取扱情報を「紙、電磁的記録等その保管媒体を問わない」と定義しています。録音データも文字起こし結果も、その中に入ると読むのが自然です。ただし、どのツールなら条文に沿うかを決めた公式の文書は、今回確認できませんでした。<strong>個別の判断は所属弁護士会や専門家に相談してください。</strong></p>
+<h2 id="Nottaのプランを条文の観点で並べる">Nottaのプランを条文の観点で並べる</h2>
+<p>2026年10月23日に、Nottaの料金ページ、法人向けページ、士業向け特別プランのページ、公式ヘルプで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>プラン</th><th>料金</th><th>音声認識のAI学習</th><th>メンバーの権限管理</th><th>ノートの自動削除</th><th>申し込み</th></tr></thead><tbody><tr><td>フリー</td><td>0円</td><td>「AI学習なし」の記載なし</td><td>個人用ワークスペース</td><td>ヘルプの対象プランに記載なし</td><td>Webで即日</td></tr><tr><td>ビジネス</td><td>年30,096円（税込・1アカウント）</td><td>ヘルプの比較表で「あり」</td><td>オーナー・アドミン・メンバーのロール</td><td>ヘルプの対象プランに記載なし</td><td>Webで購入</td></tr><tr><td>ビジネス Plus</td><td>年64,800円（税抜）</td><td>「なし（データ未利用）」</td><td>ビジネスの全機能</td><td>ヘルプに記載なし</td><td>法人向けページから</td></tr><tr><td>士業向け特別プラン</td><td>年額79,800円（税込）※</td><td>「AI学習なし」</td><td>ビジネスプランの全機能</td><td>ヘルプに記載なし</td><td>問い合わせ</td></tr><tr><td>エンタープライズ</td><td>要相談</td><td>「AI学習なし」</td><td>操作ログ・SSOなど</td><td>1〜365日で設定できる</td><td>営業に問い合わせ</td></tr></tbody></table></div>
+<p>※士業向け特別プランの年額は、2026年10月23日に士業向けページで「単体は年額79,800円（税込）」と表示されていました。一方で公式ヘルプ「Nottaの料金プランについて」（2026年9月23日更新）は「料金：お問い合わせ」のままです。契約前に見積書で金額を確認してください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="判断軸1-送信-の段階-学習なしの中身を読む">判断軸1｜「送信」の段階：学習なしの中身を読む</h2>
+<p>公式ヘルプ「AI学習について」によると、Nottaの「AI学習」は、音声認識エンジンを提供する国内パートナー企業が、ランダムに選んだ音声と認識結果を音声認識エンジンの学習に使うことを指します。「そのデータが持つ情報（単語が組み合わされて生じる有意な情報）は学習されません」とも書かれています。AI要約など音声認識以外の機能については、「いずれのプランでも」AI学習にデータを提供していないと明記されています。</p>
+<p>「AI学習なし」の場合の説明はさらに具体的です。音声データと認識結果が「当社のサーバー内やストレージに保存されることは一切ありません」とあり、音声は「メモリ上のバッファから認識処理され」、処理と同時にバッファから消えていく、と書かれています。依頼者への説明は、学習なしのプランのほうが短く済みます。学習なしの3プランの違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>にまとめています。</p>
+<h2 id="判断軸2-保管と廃棄-の段階-消さない限り残る">判断軸2｜「保管と廃棄」の段階：消さない限り残る</h2>
+<p>職務基本規程18条は、事件記録の保管と廃棄の両方に触れています。文字起こしツールで見落としやすいのは廃棄の方です。</p>
+<p>公式ヘルプ「文字起こしデータの保管期限や容量制限はありますか？」には、手動で削除する、ワークスペースを削除する、アカウントを削除する、のいずれかをしない限り、文字起こしデータは「自動的に削除されることはありません」と書かれています。つまり、事件が終わっても、誰かが消さない限り相談の録音と文字起こしはサーバーに残り続けます。</p>
+<p>保存期間を仕組みで切りたい場合、ヘルプ「ノートおよびフォルダの自動削除」は対象を「エンタープライズプランで利用可能」としています。作成日から1〜365日の範囲で日数を決め、「ゴミ箱に移動する」か「完全に削除する」かを選べます。エンタープライズを契約しないなら、<strong>事件の終了時に誰が削除するか</strong>を事務所の取扱方法に書いておくのが現実的です。</p>
+<h2 id="判断軸3-関与させる人-の段階-個人アカウントで始めない">判断軸3｜「関与させる人」の段階：個人アカウントで始めない</h2>
+<p>職務基本規程19条と情報セキュリティ規程4条2項は、事務職員などに対策を講じさせることを求めています。避けたいのは、事務職員が自分の無料アカウントで文字起こしし、記録が事務所の管理外に残ることです。</p>
+<p>ヘルプ「ユーザーロールの管理と変更」では、フリー・プレミアム・1アカウント分のビジネスは「個人用ワークスペース」として扱われ、ロールを変更できないと書かれています。複数アカウントのビジネスとエンタープライズでは、オーナー・アドミン・メンバーのロールを分け、メンバーの追加・削除、外部共有の制限、IPアドレスの制限などをオーナー側で管理できます。事務所で使うなら、<strong>事務所名義のワークスペースに全員を入れてから使い始める</strong>のが、19条の「指導及び監督」を形にする近道です。社内規程の書き方は<a href="../ai-transcription-company-policy/">AI文字起こしの社内規程</a>が参考になります。</p>
+<h2 id="正直なデメリット">正直なデメリット</h2>
+<ul><li><strong>ビジネス Plus</strong>：学習なしは書かれていますが、自動削除はヘルプの対象プランに入っていません。廃棄は手作業の運用になります</li><li><strong>士業向け特別プラン</strong>：士業向けページには年額が出ていますが、ヘルプは「お問い合わせ」のままで、表記がそろっていません。オンライン購入には対応していないとヘルプに書かれています</li><li><strong>エンタープライズ</strong>：自動削除と操作ログがそろう一方、料金は要相談です。少人数の事務所には見積もりの手間が重くなります</li><li><strong>共通</strong>：音声認識は第三者のパートナー企業のエンジンで行われます。学習なしでも「送信そのもの」は発生するので、送信自体を避けたい相談はPC内で完結する方法を選ぶことになります。Notta全体の学習条件は<a href="../shigyo-transcription-no-ai-training/">Nottaで文字起こしをAI学習させない方法</a>で詳しく整理しています</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 日弁連は文字起こしAIの使用を禁止していますか。</strong> 確認した職務基本規程と弁護士情報セキュリティ規程の本文に、AIや文字起こしを名指しした規定はありませんでした。日弁連のサイトがメンテナンス中だったため、規程以外の指針や通知の有無は今回確認できていません。所属弁護士会の案内も含めて確認してください。</p>
+<p><strong>Q. 無料プランで相談記録を試してもよいですか。</strong> Nottaのフリーは「AI学習なし」の対象プランとして挙がっていません。精度を試すなら、依頼者情報を含まない音声（自分の読み上げなど）にとどめるのが無難です。</p>
+<p><strong>Q. 依頼者の同意は必要ですか。</strong> 同意の要否は条文の解釈に関わるため、この記事では判断しません。ツール側の事実として言えるのは、学習の有無はプランで決まり、データは消さない限り残る、の2点です。個別の判断は専門家に相談してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>条文から見ると、確認点は学習だけでなく、保存と廃棄（18条）、事務職員の管理（19条）、事務所の取扱方法（情報セキュリティ規程3条）の3つ</li><li>Nottaで学習が止まるのはビジネス Plus・士業向け特別プラン・エンタープライズ。自動削除をヘルプが対象としているのはエンタープライズ</li><li>事務所名義のワークスペースで始め、事件終了時の削除担当を決めてから使う。条文の解釈は所属弁護士会や専門家に確認する</li></ul><h2 id="doga">この記事を51秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../free-no-training-transcription/">AI学習なしの文字起こしは無料である？公式の文言で確かめた4つの選択肢</a></li><li><a href="../hr-interview-recording/">人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点</a></li><li><a href="../minutes-external-transfer/">議事録AIの外部送信が社内ルールで禁止のとき｜取りうる4つの選択肢</a></li><li><a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン｜AI学習なしは「別途追加費用」だった</a></li><li><a href="../notta-shigyo-plan/">Notta士業向け特別プランの料金と申し込み条件｜年79,800円はどこに出ているか</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../bengoshi-consultation-record/">弁護士の相談記録をAI文字起こしする前に｜守秘義務の条文から見る3つの確認点</a></li><li><a href="../free-no-training-transcription/">AI学習なしの文字起こしは無料である？公式の文言で確かめた4つの選択肢</a></li><li><a href="../hr-interview-recording/">人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点</a></li><li><a href="../minutes-external-transfer/">議事録AIの外部送信が社内ルールで禁止のとき｜取りうる4つの選択肢</a></li><li><a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン｜AI学習なしは「別途追加費用」だった</a></li><li><a href="../notta-shigyo-plan/">Notta士業向け特別プランの料金と申し込み条件｜年79,800円はどこに出ているか</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
