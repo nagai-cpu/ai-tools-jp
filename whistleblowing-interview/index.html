@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>内部通報の聞き取り録音をAI文字起こしする前に｜範囲外共有を防ぐ3点｜AIツール実用ガイド</title>
+<meta name="description" content="内部通報窓口で通報者や関係者の聞き取りを録音し、AIで文字起こしする担当者向け。消費者庁の指針と指針の解説から、記録の閲覧範囲・特定につながる情報・保管期間と、Nottaで確認する設定を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/whistleblowing-interview/">
+<meta property="og:title" content="内部通報の聞き取り録音をAI文字起こしする前に｜範囲外共有を防ぐ3点｜AIツール実用ガイド">
+<meta property="og:description" content="内部通報窓口で通報者や関係者の聞き取りを録音し、AIで文字起こしする担当者向け。消費者庁の指針と指針の解説から、記録の閲覧範囲・特定につながる情報・保管期間と、Nottaで確認する設定を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "内部通報の聞き取り録音をAI文字起こしする前に｜範囲外共有を防ぐ3点", "description": "内部通報窓口で通報者や関係者の聞き取りを録音し、AIで文字起こしする担当者向け。消費者庁の指針と指針の解説から、記録の閲覧範囲・特定につながる情報・保管期間と、Nottaで確認する設定を整理しました。", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/whistleblowing-interview/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">内部通報の聞き取り録音をAI文字起こしする前に｜範囲外共有を防ぐ3点</h1><p class="meta">2026-10-24 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、内部通報の聞き取りを録音してAIで文字起こしするときに先に決めるのは、ツールの精度よりも<strong>「誰が記録を読めるか」「通報者が分かる情報をどう伏せるか」「いつまで持つか」</strong>の3つです。消費者庁の指針の解説は、通報に関する情報を電子的に管理する場合、閲覧できる人を必要最小限に絞り、操作・閲覧の履歴を記録することを例に挙げています。文字起こしは検索しやすく共有しやすいぶん、この2つが運用の中心になります。</p>
+<h2 id="指針と解説が求めることを-文字起こしの工程に当てはめる">指針と解説が求めることを、文字起こしの工程に当てはめる</h2>
+<p>2026年10月24日に、消費者庁の「公益通報者保護法の概要」「公益通報者保護法第11条第1項及び第2項の規定に基づき事業者がとるべき措置に関して、その適切かつ有効な実施を図るために必要な指針」（令和8年3月31日一部改正）、「指針の解説」（同日一部改正、令和8年12月1日施行）と、Nottaの法人向けページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>指針・解説の記載</th><th>録音・文字起こしで起きやすいこと</th><th>Nottaで確認すること</th></tr></thead><tbody><tr><td>範囲外共有</td><td>通報者を特定させる事項を必要最小限の範囲を超えて共有する行為を「範囲外共有」と定義し、防止措置を求める（指針 第2・第4の2(2)）</td><td>共有リンクやフォルダ単位の共有で、読める人が広がる</td><td>ノート・フォルダ単位のアクセス権、外部共有の制限</td></tr><tr><td>電子的な管理</td><td>閲覧できる者を必要最小限に限定し、操作・閲覧履歴を記録する（解説 第3.Ⅱ.2.(2)③）</td><td>誰が開いたかを後から追えない</td><td>操作ログが使えるプラン</td></tr><tr><td>特定させる事項</td><td>氏名や社員番号だけでなく、性別等の一般的な属性でも、他の事項と照合して特定の人物と判断できれば該当する（解説 注6）</td><td>聞き取りの発言には部署・時期・立場など、照合の材料が多く残る</td><td>固有名詞の置き換え（仮称表記・マスキング）を誰がいつ行うか</td></tr><tr><td>記録の保管</td><td>記録を作成し適切な期間保管する。閲覧やデータへのアクセスに制限を付し、人事異動に伴う適時の権限解除も含める（指針 第4の3(2)、解説）</td><td>担当を外れた人のアカウントに権限が残る</td><td>メンバーの削除、自動削除が使えるプラン</td></tr><tr><td>通報者探索</td><td>令和7年改正で、正当な理由なく通報者を特定することを目的とする行為が禁止された（法第11条の3、令和8年12月1日施行）</td><td>検索できるテキストが、探す側の手がかりにもなりうる</td><td>検索・閲覧できる人の範囲</td></tr></tbody></table></div>
+<p>表の右2列は、指針と解説の記載を文字起こしの運用に当てはめた整理です。指針や解説に、AI文字起こしを名指しした記述は確認できませんでした。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-誰が読めるか-を-従事者の範囲と一致させる">1. 「誰が読めるか」を、従事者の範囲と一致させる</h3>
+<p>消費者庁の「公益通報者保護法の概要」によると、常時使用する労働者が300人を超える事業者には、通報の受付・調査を担う従事者の指定と体制整備が義務付けられ、300人以下の事業者は努力義務です。従事者には通報者を特定させる情報の守秘義務があり、違反した場合は30万円以下の罰金と書かれています。</p>
+<p>指針の解説は、範囲外共有を防ぐ措置の例として、記録・資料を閲覧・共有できる者を必要最小限に限定してその範囲を明確に確認すること、記録の保管方法やアクセス権限を規程で明確にすることを挙げています。聞き取りの文字起こしも、読める人を従事者の範囲に合わせるのが出発点です。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプセンターによると、ノートやフォルダごとのアクセス権の設定はビジネスプランとエンタープライズプランで使えます。注意したいのは、フォルダ内のノートはフォルダのアクセス権を引き継ぎ、ノートをフォルダへ移すと個別の設定が無効になる仕様です。「通報案件」フォルダを広めの権限で作ってから聞き取りのノートを移すと、移したノートすべてが同じ範囲から見える状態になります。外部ユーザーとの共有を無効にする設定は、ヘルプでは「ビジネス以上のプラン」で使えるとされています。</p>
+<h3 id="2-誰が開いたか-を後から確かめる必要があるかを決める">2. 「誰が開いたか」を後から確かめる必要があるかを決める</h3>
+<p>解説が電子的な管理の例に挙げる「操作・閲覧履歴を記録する」に当たる機能は、Nottaではヘルプ「操作ログの取得と保存」に書かれています。前提条件はエンタープライズプランで、設定できるのはオーナーとアドミン、取得できるのは過去180日分です。ノートの閲覧・編集・削除・復元や、ファイルのダウンロードの履歴が含まれます。</p>
+<p>法人向けページでも、操作ログが機能として挙がっているのはエンタープライズで、ビジネス Plusには記載がありません。範囲外共有を疑う事態になったとき、「誰が開いたか」を記録で示したいなら、エンタープライズが候補になります。他のツールも含めた監査ログの比較は<a href="../transcription-audit-log/">AI文字起こしの監査ログで「誰が見たか」を追えるか</a>にまとめました。</p>
+<p>あわせて学習の条件も確認します。Nottaの利用規約第10条は、パートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合があると書いています。ヘルプ「AI学習について」によると、学習されるのはランダムに選ばれたデータで、単語の組み合わせから生じる情報は学習されないとされています。それでも通報の聞き取りでは、法人向けページで「AI学習なし」が機能として書かれたプラン（ビジネス Plus、エンタープライズ、士業向け特別プラン）から選ぶ方が説明しやすくなります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h3 id="3-通報者が分かる情報を-どの段階で伏せるかを決める">3. 通報者が分かる情報を、どの段階で伏せるかを決める</h3>
+<p>解説の注6は、性別のような一般的な属性でも、他の情報と照合して特定の人物だと判断できれば「公益通報者を特定させる事項」に当たるとしています。聞き取りの文字起こしには、「その日の夜勤」「異動してきたばかり」といった、照合の材料になる言葉がそのまま残ります。音声そのものも、聞く人によっては声で本人が分かります。</p>
+<p>解説は推奨される例として、記録・資料に書かれた関係者（通報者を含む）の固有名詞を仮称表記・マスキングにすることを挙げています。調査の段階では、調査の契機が通報であることを伝えずに依頼する工夫として、抜き打ちの監査を装う、定期的な監査や面談に合わせて調査する、などの例も並んでいます。文字起こしやAI要約をそのまま調査協力者に渡すと、この工夫が崩れます。社内に回すのは、従事者が固有名詞と特定につながる表現を伏せた版だけ、と決めておくと運用がぶれません。</p>
+<p>保管期間は、解説によると事業者ごとに評価点検や個別案件の必要性を検討して定めることが求められます。Nottaの公開情報で「ノート・フォルダの自動削除」が書かれているのはエンタープライズだけで、ヘルプによると作成日から1〜365日の範囲で指定でき、1日1回決まった時刻に実行されます。期間の違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>に整理しています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（エンタープライズ）</strong>：操作ログと自動削除がそろうのはこのプランですが、料金は要相談です。窓口担当が数名の会社には、見積もりを取るまで負担感が分かりません</li><li><strong>Notta（ビジネス Plus）</strong>：年64,800円（税抜）でAI学習なしにできますが、公開ページに操作ログと自動削除の記載はなく、閲覧の記録と消去は人の運用で補うことになります</li><li><strong>Notta（アクセス権）</strong>：フォルダへ移すと個別の権限が上書きされる仕様のため、整理の手順を誤ると閲覧範囲が広がります</li><li><strong>文字起こし全般</strong>：発言がそのまま検索できる文字で残ることは、通報者や協力者が話すのをためらう理由になりえます。録音せず、従事者が要点だけをメモする運用を選ぶ余地もあります</li><li><strong>この記事の限界</strong>：指針と解説は体制の考え方を示したもので、録音やAI文字起こしの可否を定めた記載は確認できませんでした。規程への落とし込みは顧問弁護士など専門家に確認してください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="内部通報の聞き取りを録音してよいかは-法律で決まっていますか">内部通報の聞き取りを録音してよいかは、法律で決まっていますか</h3>
+<p>今回確認した法の概要・指針・指針の解説には、聞き取りの録音の可否を直接定めた記載は見当たりませんでした。解説が求めているのは、記録の保管方法やアクセス権限を規程で明確にすることや、範囲外共有の防止です。録音するかどうかは、通報者の意向も含めて事業者が判断することになります。</p>
+<h3 id="外部の文字起こしサービスに音声を預けると-範囲外共有になりますか">外部の文字起こしサービスに音声を預けると、範囲外共有になりますか</h3>
+<p>今回確認した指針と解説に、文字起こしサービスへの委託を名指しした記述はありませんでした。解説は、範囲外共有を防ぐべき「労働者及び役員等」に窓口の外部委託先も含むとしています。サービスに預ける場合は、学習の条件、閲覧できる人の範囲、ログと削除の機能を確認したうえで、規程に書いておくのが筋です。判断は専門家に確認してください。</p>
+<h3 id="改正法の施行で-何が変わりますか">改正法の施行で、何が変わりますか</h3>
+<p>消費者庁の概要によると、令和8年12月1日の施行で、通報妨害の禁止、正当な理由のない通報者探索の禁止、通報を理由とする解雇・懲戒への刑事罰（個人は6月以下の拘禁刑または30万円以下の罰金、法人は3,000万円以下の罰金）などが加わります。指針にも、通報妨害と通報者探索を防ぐための措置が追加されています（同日施行）。人事面談の記録と同じ考え方が使える部分は<a href="../hr-interview-recording/">人事面談の録音をAIで文字起こしする前に</a>にまとめています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>内部通報の聞き取りを文字起こしするなら、読める人を従事者の範囲に合わせ、操作・閲覧履歴を残せるかを先に決める（指針の解説 第3.Ⅱ.2.(2)）</li><li>通報者を特定させる事項には、照合で本人が分かる属性も含まれる。社内に回す記録は固有名詞を伏せた版にする（解説 注6）</li><li>Nottaではアクセス権はビジネス以上、AI学習なしはビジネス Plus以上と士業向け特別プラン、操作ログと自動削除の記載はエンタープライズのみ（2026年10月24日に公式ページで確認）</li></ul>
+<p>※本記事は消費者庁とNottaの公開ページを2026年10月24日に確認して整理したもので、法的な助言ではありません。個別の判断は専門家にご確認ください。</p><h2 id="doga">この記事を52秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</a></li><li><a href="../kaikeishi-audit-transcription/">公認会計士が監査ヒアリングをAI文字起こしする前に｜法27条と実務指針</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

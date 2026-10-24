@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>医療の問診を音声入力・AI文字起こしでカルテへ｜学習と確定の3論点｜AIツール実用ガイド</title>
+<meta name="description" content="問診や診察の会話をAIで文字起こしし、要約を電子カルテに転記したい医療機関向け。厚労省の安全管理ガイドライン第7.0版Q&amp;Aから、学習・保存・確定の扱いと、Nottaで確認する設定を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/medical-voice-input/">
+<meta property="og:title" content="医療の問診を音声入力・AI文字起こしでカルテへ｜学習と確定の3論点｜AIツール実用ガイド">
+<meta property="og:description" content="問診や診察の会話をAIで文字起こしし、要約を電子カルテに転記したい医療機関向け。厚労省の安全管理ガイドライン第7.0版Q&amp;Aから、学習・保存・確定の扱いと、Nottaで確認する設定を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "医療の問診を音声入力・AI文字起こしでカルテへ｜学習と確定の3論点", "description": "問診や診察の会話をAIで文字起こしし、要約を電子カルテに転記したい医療機関向け。厚労省の安全管理ガイドライン第7.0版Q&Aから、学習・保存・確定の扱いと、Nottaで確認する設定を整理しました。", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/medical-voice-input/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">医療の問診を音声入力・AI文字起こしでカルテへ｜学習と確定の3論点</h1><p class="meta">2026-10-24 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、問診の会話をAIで文字起こししてカルテに使うときに分けて考えるのは、<strong>「音声が学習に使われるか」「文字起こしがどこに保存されるか」「カルテに載せる文を誰が確定するか」</strong>の3つです。厚生労働省の安全管理ガイドラインQ&amp;Aは、生成AIに医療情報を入力する場合について、学習等のために保存されないことが契約等で担保されていれば、サーバが国内法の適用を受けることは必須ではないと答えています。逆に言えば、保存される前提のサービスは保存先の確認が要ります。</p>
+<h2 id="問診からカルテまでの工程に-ガイドラインを当てはめる">問診からカルテまでの工程に、ガイドラインを当てはめる</h2>
+<p>2026年10月24日に、厚生労働省「医療情報システムの安全管理に関するガイドライン 第7.0版」（令和8年6月）の企画管理編と、同ガイドラインQ&amp;A（令和8年9月）、Nottaの法人向けページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。医療関係者向け特別プランの中身そのものは<a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン</a>にまとめたので、この記事では問診の録音からカルテ入力までの流れに絞ります。</p>
+<div class="tw"><table><thead><tr><th>工程</th><th>ガイドライン・Q&amp;Aの記載</th><th>音声入力で起きやすいこと</th><th>Nottaで確認すること</th></tr></thead><tbody><tr><td>録音する端末</td><td>医療機関等が管理しない情報機器（例えば個人所有端末）は、利用の条件・範囲・管理方法を規程に含め、台帳管理する（企画管理編 9章 遵守事項⑦）</td><td>医師個人のスマートフォンで録音を始めてしまう</td><td>モバイルアプリで録音する端末を院内で決めたか</td></tr><tr><td>文字起こし</td><td>生成AIへの入力で、学習等のために保存されないことが契約等で担保されていれば、国内法の適用は必須ではない（企画管理編Q&amp;A Q18）</td><td>音声が音声認識エンジンの学習に回る条件を確認しないまま使う</td><td>「AI学習なし」が付くプランか</td></tr><tr><td>保存</td><td>保存された情報を格納する情報機器等が、国内法の適用及び執行の及ぶ範囲にあることを確実にする（企画管理編 7章 遵守事項⑤）</td><td>文字起こしと要約がクラウドにノートとして残る</td><td>保存先の地域</td></tr><tr><td>サービスの評価</td><td>Webサービスは利用可能だが、医療情報システムとして安全性を評価する。認証・アクセス制御・暗号化・ログ・保存と削除・事故対応・責任分界を確認する（概説編Q&amp;A Q10）</td><td>個人向けアプリの感覚で導入が決まる</td><td>セキュリティの説明資料が何で出てくるか</td></tr><tr><td>カルテへの転記</td><td>所見をカルテに記述する場合の確定者は、実際に診察を行った医師（システム運用編Q&amp;A Q38）</td><td>AIの要約がそのまま記録として扱われる</td><td>要約をどの形で取り出せるか</td></tr></tbody></table></div>
+<p>表の右2列は、ガイドラインとQ&amp;Aの記載を問診の音声入力に当てはめた整理です。ガイドラインやQ&amp;Aに、問診の音声入力やAI文字起こしを名指しした記述は確認できませんでした。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-学習に使われるか-と-保存されるか-を分けて確かめる">1. 「学習に使われるか」と「保存されるか」を分けて確かめる</h3>
+<p>Q&amp;A Q18が線を引いているのは、入力した情報が保存されるかどうかです。保存されないことが契約等で担保されていれば、国内法の適用を受けないサーバも使えるとしています。そうでなければ、企画管理編7章の遵守事項⑤のとおり、保存先が国内法の適用と執行の及ぶ範囲にあることを確かめることになります。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の場合、この2つは別々に書かれています。ヘルプ「AI学習について」によると、「AI学習あり」では音声認識エンジンを提供する国内のパートナー企業が音声データと認識結果を国内のデータセンターに一旦保管し、ランダムに選んだデータを学習に使います。「AI学習なし」では、パートナー企業のサーバやストレージに音声データと認識結果が保存されることはないと説明されています。音声認識以外のAI機能（要約など）については、いずれのプランでも学習にデータを提供していないとあります。</p>
+<p>一方で、作成したノートそのものはNottaのクラウドに保存されます（ヘルプ「データはクラウドに保存されていますか？」）。保存先は、ヘルプ「データは国内に保存されていますか？」によると、Amazon Web Servicesの東京のデータセンターです。AI要約の処理先は別の論点で、<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？</a>で整理しています。</p>
+<p>学習の条件は、Nottaの利用規約第10条が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合があると書いているとおり、プランで変わります。法人向けページで「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）とエンタープライズ、士業向け特別プランです。医療関係者向け特別プランは、ヘルプの比較表で「AI学習なし」が利用可能、ただし「別途追加費用が発生いたします」と注記されています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h3 id="2-AIの文字起こしと要約は-確定前の下書き-として扱う">2. AIの文字起こしと要約は「確定前の下書き」として扱う</h3>
+<p>Q&amp;A Q38は、医師が診察時にカルテへ所見を記述する例で、確定者を「実際に診察を行った医師」としています。Q40は、確定操作には記載の責任者を明らかにし、誤入力や改ざんがないことを保証する意味があると説明し、外部機器等から確定されていない情報を取り込む場合は、入力者が誤入力等がないことを確認したうえで確定操作を行うとしています。</p>
+<p>AIの文字起こしや要約をカルテに貼る流れも、この考え方に当てはめると整理しやすくなります。Nottaのヘルプ「医療関係者向け特別プランについて」には、診察の文字起こしが認識されるとSOAP要約テンプレートが提案され、AI要約をダウンロードして電子カルテへの転記などに使えると書かれています。転記した文は、診察した医師が読み直して確定するまで記録ではない、という扱いを院内の手順に書いておくと迷いません。</p>
+<p>誤認識を減らす手段としては、医療エンジン（日本語の文字起こしのみ対応）と単語登録があります。ヘルプによると、単語登録で登録できる数はフリープラン3個、プレミアム200個、ビジネス1,000個で、医療特別プランには医療用単語帳が入っています。それでも、薬剤名・左右・数値は読み直しの対象から外せません。録音の条件で精度が変わる点は<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ</a>にまとめました。</p>
+<h3 id="3-録音する端末とサービスの評価を-導入前に院内で決める">3. 録音する端末とサービスの評価を、導入前に院内で決める</h3>
+<p>ヘルプによると、Nottaのリアルタイム文字起こしはWeb版とモバイルアプリの両方で使えます。診察室でスマートフォンを置いて録音する運用は手軽ですが、企画管理編9章の遵守事項⑦は、医療機関が管理しない端末を使うなら、利用の条件・範囲・管理方法を規程に含め、台帳で管理することを求めています。誰の端末で録音を始めるのかを、導入より先に決めておく必要があります。</p>
+<p>サービスの評価について、概説編Q&amp;A Q10は、事業者からMDS/SDSやサービス仕様適合開示書などを入手してリスク評価のうえで採否を決めるとしています。Nottaのヘルプで案内されているのは、経済産業省の「クラウドサービスレベルのチェックリスト」に準拠した「Nottaセキュリティチェックシート」と、ビジネスプラン・エンタープライズプラン向けの個別回答（返却まで2〜3週間程度）です。今回確認した公開ページでは、MDS/SDSの提供についての記載は見つかりませんでした。院内の評価で必要なら、問い合わせの段階で書式を指定して確認してください。スマートフォンでの対面録音の操作は<a href="../notta-smartphone-in-person/">Nottaをスマホで対面会議に使う方法</a>に書いています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（医療関係者向け特別プラン）</strong>：料金は問い合わせ制で、AI学習なしは追加費用です。予算の見通しは見積もりを取るまで立ちません</li><li><strong>Notta（ビジネス Plus）</strong>：AI学習なしは標準で付きますが、今回見た公開ページでは医療エンジンについての記載が見つかりませんでした（記載があったのは医療特別プランとビジネスのトライアル枠）</li><li><strong>Notta（電子カルテとの連携）</strong>：今回見たヘルプでは、カルテへはAI要約をダウンロードして転記する流れが書かれています。カルテの画面に直接入力する使い方を想定している場合は、問い合わせで確認が必要です</li><li><strong>文字起こし全般</strong>：問診の会話には、病歴など個人情報保護法第2条第3項の「要配慮個人情報」に当たる内容が多く含まれます。患者への説明と同意の取り方は、ツールの機能では解決しません</li><li><strong>この記事の限界</strong>：ガイドラインとQ&amp;Aは安全管理の考え方を示したもので、問診の音声入力を名指しした記述は確認できませんでした。個別の判断は院内の情報管理責任者や専門家に確認してください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="問診の録音をAIで文字起こしすること自体は-ガイドラインで認められていますか">問診の録音をAIで文字起こしすること自体は、ガイドラインで認められていますか</h3>
+<p>今回確認した範囲では、問診の音声入力やAI文字起こしを名指しして可否を定めた記載は見当たりませんでした。Q&amp;Aは、Webサービスは利用可能としたうえで、医療情報システムとして安全性を評価することを求めています（概説編Q&amp;A Q10）。</p>
+<h3 id="AI学習なし-なら-患者の音声はどこにも残りませんか">「AI学習なし」なら、患者の音声はどこにも残りませんか</h3>
+<p>Nottaのヘルプによると、「AI学習なし」で保存されないのは、音声認識エンジンを提供するパートナー企業側の音声データと認識結果です。作成したノートはNottaのクラウド（東京のデータセンター）に保存されます。消す時期は院内で決め、エンタープライズの自動削除などで運用することになります。</p>
+<h3 id="AIが作ったSOAP要約を-そのままカルテに載せてもいいですか">AIが作ったSOAP要約を、そのままカルテに載せてもいいですか</h3>
+<p>Q&amp;A Q38とQ40に当てはめると、カルテの記載の確定者は診察した医師で、確定操作は誤入力等がないことを確認して責任を持つ意味があります。要約は下書きとして、医師が読み直して確定する手順にしておくのが、ガイドラインの考え方に沿った使い方です。学習なしのプランを他のツールも含めて比べたいときは<a href="../no-ai-training-transcription-comparison/">AI学習なしの文字起こしツール比較</a>を参考にしてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>問診の音声入力は「学習に使われるか」と「保存されるか」を分けて確かめる。保存されるなら保存先が国内法の範囲にあるかを見る（企画管理編Q&amp;A Q18・7章 遵守事項⑤）</li><li>AIの文字起こしとSOAP要約は確定前の下書き。カルテの確定者は診察した医師（システム運用編Q&amp;A Q38・Q40）</li><li>NottaはAI学習なしがビジネス Plus以上と士業向け特別プラン、医療特別プランでは追加費用。ノートは東京のデータセンターに保存（2026年10月24日に公式ページで確認）</li></ul>
+<p>※本記事は厚生労働省とNottaの公開ページを2026年10月24日に確認して整理したもので、医療・法律上の助言ではありません。個別の判断は院内の情報管理責任者や専門家にご確認ください。</p><h2 id="doga">この記事を48秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</a></li><li><a href="../kaikeishi-audit-transcription/">公認会計士が監査ヒアリングをAI文字起こしする前に｜法27条と実務指針</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

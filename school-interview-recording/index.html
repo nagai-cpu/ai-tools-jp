@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>教員の面談録音をAIで文字起こしする前に｜生徒情報と文科省指針の3点｜AIツール実用ガイド</title>
+<meta name="description" content="生徒との面談を録音してAIで文字起こししたい教員・管理職向け。文科省の生成AIガイドラインと教育情報セキュリティポリシーの確認点、Nottaの条件を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/school-interview-recording/">
+<meta property="og:title" content="教員の面談録音をAIで文字起こしする前に｜生徒情報と文科省指針の3点｜AIツール実用ガイド">
+<meta property="og:description" content="生徒との面談を録音してAIで文字起こししたい教員・管理職向け。文科省の生成AIガイドラインと教育情報セキュリティポリシーの確認点、Nottaの条件を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "教員の面談録音をAIで文字起こしする前に｜生徒情報と文科省指針の3点", "description": "生徒との面談を録音してAIで文字起こししたい教員・管理職向け。文科省の生成AIガイドラインと教育情報セキュリティポリシーの確認点、Nottaの条件を整理しました。", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/school-interview-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">教員の面談録音をAIで文字起こしする前に｜生徒情報と文科省指針の3点</h1><p class="meta">2026-10-24 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、教員が生徒との面談を録音してAIで文字起こしするなら、先に確認するのはツールの性能ではなく<strong>教育委員会（私立なら学校法人）のルール</strong>です。文部科学省の生成AIガイドラインは、校務で私用アカウントや許可のない私用端末を使ってはならないとしています。さらに教育情報セキュリティポリシーのガイドラインは、生徒指導や進路に関わる情報を重要性の高い情報に分け、クラウドで扱うなら多要素認証を含むアクセス制御を求めています。教員が個人で契約した学割プランで面談を録るのは、この前提から外れやすい使い方です。</p>
+<h2 id="面談録音に関わる一次資料を並べる">面談録音に関わる一次資料を並べる</h2>
+<p>2026年10月24日に、文部科学省「初等中等教育段階における生成AIの利活用に関するガイドライン（Ver.2.0）」（令和6年12月26日公表）、「教育情報セキュリティポリシーに関するガイドライン（令和7年3月）」、「教育データの利活用に係る留意事項」第4版（令和8年4月、公立学校編・私立学校編）、Nottaの料金ページ・法人向けページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>一次資料の記載</th><th>面談録音で起きること</th><th>Nottaで確認できたこと</th></tr></thead><tbody><tr><td>使ってよい環境</td><td>私用アカウントや、教育情報セキュリティ管理者の許可を得ていない私用端末を用いてはならない（生成AIガイドライン 3-1）</td><td>教員個人の契約は「私用アカウント」に当たりうる</td><td>学割はプレミアム（個人向け）とビジネス（チーム向け）</td></tr><tr><td>情報の重要度</td><td>健康・指導・成績・進路に関わる情報等は重要性分類Ⅱ、要配慮個人情報を含むものはⅠ（セキュリティポリシーガイドライン 第2編3）</td><td>生徒指導や進路の面談は、記録すればⅡ以上になりやすい</td><td>―</td></tr><tr><td>クラウドでの認証</td><td>パブリッククラウドで重要性分類Ⅱ以上を扱う際は、多要素認証を含む強固なアクセス制御による対策を講じなければならない（同 第1編第3章）</td><td>録音と文字起こしはクラウドに保存される</td><td>多要素認証・2段階認証は「現在、対応しておりません」（法人契約FAQ）</td></tr><tr><td>学習・目的外利用</td><td>個人情報を入力するなら、提供者が機械学習に使うか等を十分に確認すべき（生成AIガイドライン 3-1）。約款サービスは目的外利用されないことを約款で確認（セキュリティポリシーガイドライン 9.4）</td><td>音声が学習に回るかがプランで変わる</td><td>「AI学習なし」はビジネス Plus・エンタープライズ・士業向け特別プラン</td></tr><tr><td>適用される法令</td><td>公立学校は「地方公共団体の機関」として個人情報保護法第5章、私立学校は「個人情報取扱事業者」として同法第4章（教育データの利活用に係る留意事項）</td><td>公立は自治体の個人情報保護法施行条例と教育委員会の規程も見る</td><td>―</td></tr></tbody></table></div>
+<p>表の「なりやすい」は例示の文言からの整理です。実際の分類は所属する教育委員会や学校法人の規程で確認してください。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-誰の名義で契約するか-教員個人の学割は前提から外れやすい">1. 誰の名義で契約するか。教員個人の学割は前提から外れやすい</h3>
+<p>生成AIガイドラインが校務での利用例に挙げているのは、教材や通知文のたたき台、そして「研修や講演会の録画を読み込ませ、要約・議事録案を作成する」といった使い方です。保護者面談については「日程調整に活用する」とあり、<strong>面談の中身そのものを記録する例は挙がっていません</strong>。</p>
+<p>そのうえで同ガイドラインは、教育委員会の方針に基づいて使うこと、私用アカウントや許可のない私用端末を使わないことを求めています。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の学生・教職員割引は、個人向けのプレミアム学割（年7,110円・税込）と、チーム向けのビジネス学割（年15,048円〜・税込）の2種類です。教員が自分のメールアドレスでプレミアム学割を買い、そこに生徒との面談を入れると、学校から見れば「私用アカウント」での校務になりえます。学割の申し込み手順や更新の仕組みは<a href="../notta-education-discount/">Nottaの学生・教職員割引の申し込み方</a>にまとめていますが、面談の記録に使うなら、契約の主体は教育委員会か学校にするのが筋です。</p>
+<p>公立学校向けの留意事項は、事業者に個人情報を扱わせるなら「個人情報の取扱いの委託」の形をとり、契約書に秘密保持・目的外利用の禁止・再委託の条件などを明記するよう挙げています。個人が約款に同意するだけでは、この形になりません。</p>
+<h3 id="2-面談の記録が-重要性分類-以上-なら-認証の要件を先に確かめる">2. 面談の記録が「重要性分類Ⅱ以上」なら、認証の要件を先に確かめる</h3>
+<p>教育情報セキュリティポリシーのガイドラインは、情報資産を4段階に分けています。生徒の学習記録やワークシートはⅢ相当ですが、健康・指導・成績・進路に関わる機密性の高い情報はⅡ、要配慮個人情報を含むものはすべてⅠです。いじめの相談や家庭の事情、心身の不調が話題に出る面談は、Ⅰに当たる可能性もあります。</p>
+<p>同ガイドラインは、パブリッククラウドで重要性分類Ⅱ以上を扱う際は多要素認証を含む強固なアクセス制御を求めています。Nottaの法人契約FAQには、「現在、多要素認証・2段階認証には対応しておりません」と書かれています。IPアドレス制限はビジネス以上、SAMLシングルサインオンはエンタープライズのみです。教育委員会側の認証基盤の多要素認証をSSO経由で効かせられるか、それで自治体のポリシーを満たせるかは、公開情報からは確認できませんでした。導入を検討するなら、教育委員会の情報担当とNottaの営業担当の両方にこの点を確認するのが先です。</p>
+<h3 id="3-学習・保存・消去を-契約書で確認できるプランに絞る">3. 学習・保存・消去を、契約書で確認できるプランに絞る</h3>
+<p>Nottaの利用規約第10条は、音声認識エンジンを提供するパートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合がある、と書いています。ヘルプ「AI学習について」によると、学習の対象は音声認識エンジンで、AI要約の自然言語処理エンジンにはいずれのプランでもデータを提供していません。</p>
+<p>「AI学習なし」が機能として書かれているのは、ビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランの3つです。教育向けの割引表に載っているのはプレミアムとビジネスで、ビジネス Plusやエンタープライズに学割が適用されるかは公式の記載からは確認できませんでした。</p>
+<p>法人契約FAQによると、データはAWS東京リージョンに保存され、手動で削除しない限り保管され続けます。「データの定期自動削除」と操作ログの閲覧が挙がっているのはエンタープライズです。卒業後に面談記録を消す運用なら、自動削除の有無が手間を左右します。差は<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>で整理しました。保存先の国やAI要約の送信先は<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？</a>で公式の記載を確認しています。</p>
+<p>認証・学習・消去を書面で確認するなら、候補はエンタープライズ、少なくともビジネス Plusです。教育委員会単位で相談する前提なら、次の窓口から条件を問い合わせられます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQで多要素認証・2段階認証に未対応と明記されています</li><li><strong>Notta（プレミアム学割）</strong>：年7,110円（税込）と安い一方、個人向けで「AI学習なし」の記載がなく、校務の面談記録には向きません</li><li><strong>Notta（ビジネス Plus）</strong>：年64,800円（税抜）。自動削除・操作ログ・SSOはエンタープライズ側の機能です</li><li><strong>文字起こし全般</strong>：生徒の発言が検索できる文章で残ることは、相談の場で話しにくくさせる場合があります。録音しない面談を残す判断もありえます</li><li><strong>この記事の限界</strong>：文部科学省のガイドラインに、面談の録音・文字起こしを名指しした記述は確認できませんでした。表は各資料の文言を面談に当てはめた整理です</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="教員が自分で契約した学割プランで-生徒との面談を文字起こししてもよいですか">教員が自分で契約した学割プランで、生徒との面談を文字起こししてもよいですか</h3>
+<p>生成AIガイドラインは、私用アカウントや教育情報セキュリティ管理者の許可を得ていない私用端末を用いてはならないとしています。教員個人の契約は私用アカウントに当たりうるため、所属する教育委員会や学校の規程と、管理者（ガイドラインでは校長を充てることが想定されています）の判断を先に確認してください。</p>
+<h3 id="保護者との面談も同じ扱いですか">保護者との面談も同じ扱いですか</h3>
+<p>教育データの利活用に係る留意事項は児童生徒本人の個人情報を対象とし、保護者の個人情報は対象外と明記しています。ただし保護者の発言も個人情報で、生徒の家庭や健康の話が出れば生徒の情報も含まれます。扱いは自治体や学校法人の規程で確認してください。</p>
+<h3 id="私立学校なら-教員の判断で導入できますか">私立学校なら、教員の判断で導入できますか</h3>
+<p>私立学校は個人情報保護法上の個人情報取扱事業者で、適用される章が公立と異なります（留意事項 私立学校編）。導入の可否は学校法人の規程と管理職の判断によります。社内規程でAI文字起こしが止められたときの説明の組み立ては<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止</a>が参考になります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>面談録音の可否を決めるのは教育委員会・学校法人のルール。私用アカウントや許可のない私用端末は使わない（生成AIガイドライン Ver.2.0）</li><li>指導・進路・健康に関わる面談記録は重要性分類Ⅱ以上になりやすく、クラウドでは多要素認証を含むアクセス制御が求められる。Nottaは多要素認証に未対応と公式FAQに記載</li><li>「AI学習なし」はビジネス Plus（年64,800円・税抜）以上、自動削除とSSOはエンタープライズ。学割の対象はプレミアムとビジネス（2026年10月24日に公式ページで確認）</li></ul>
+<p>※本記事は文部科学省とNottaの公開資料を2026年10月24日に確認して整理したもので、法的な助言ではありません。個別の判断は所属する教育委員会・学校法人や専門家にご確認ください。</p><h2 id="doga">この記事を49秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</a></li><li><a href="../kaikeishi-audit-transcription/">公認会計士が監査ヒアリングをAI文字起こしする前に｜法27条と実務指針</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

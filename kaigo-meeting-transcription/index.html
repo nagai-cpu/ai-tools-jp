@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点｜AIツール実用ガイド</title>
+<meta name="description" content="サービス担当者会議を録音してAIで文字起こししたいケアマネジャー・介護事業所向け。運営基準と厚労省ガイダンスで同意・保存・委託の扱いを確認し、Nottaで満たせる条件を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/kaigo-meeting-transcription/">
+<meta property="og:title" content="介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点｜AIツール実用ガイド">
+<meta property="og:description" content="サービス担当者会議を録音してAIで文字起こししたいケアマネジャー・介護事業所向け。運営基準と厚労省ガイダンスで同意・保存・委託の扱いを確認し、Nottaで満たせる条件を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点", "description": "サービス担当者会議を録音してAIで文字起こししたいケアマネジャー・介護事業所向け。運営基準と厚労省ガイダンスで同意・保存・委託の扱いを確認し、Nottaで満たせる条件を整理。", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/kaigo-meeting-transcription/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</h1><p class="meta">2026-10-24 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、サービス担当者会議をAIで文字起こしする前に確認したいのは、ツールの精度よりも<strong>「利用開始時の同意書でカバーできているか」「記録をどこに何年置くか」「預け先をどう選んで監督するか」</strong>の3つです。運営基準は、会議で利用者や家族の個人情報を使う場合、あらかじめ文書で同意を得ることを求めています。会議の録音と文字起こしは、その個人情報を外部のサービスに預けることにもなります。ツールは「AI学習なし」と閲覧範囲の制限が書かれたプランから選ぶ、という順番です。</p>
+<h2 id="サービス担当者会議の論点を一次資料で並べる">サービス担当者会議の論点を一次資料で並べる</h2>
+<p>2026年10月24日に、指定居宅介護支援等の事業の人員及び運営に関する基準（e-Gov法令検索）、個人情報保護委員会・厚生労働省「医療・介護関係事業者における個人情報の適切な取扱いのためのガイダンス」（令和8年4月一部改正版）と同ガイダンスのQ&amp;A（事例集）、Nottaの料金ページ・法人向けページ・介護業界向けページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>一次資料の記載</th><th>文字起こしで変わること</th><th>Nottaで確認すること</th></tr></thead><tbody><tr><td>同意</td><td>サービス担当者会議等で利用者の個人情報を用いる場合は利用者の、家族の個人情報を用いる場合は家族の同意を、あらかじめ文書により得ておかなければならない（運営基準 第23条第3項）。事業所内の掲示ではなく、サービス利用開始時に文書で同意を得ることが必要（ガイダンス p.50）</td><td>発言がそのまま文字で残り、要約が他の事業所にも渡りうる</td><td>共有リンクと共有先の範囲</td></tr><tr><td>オンライン開催</td><td>会議はテレビ電話装置等を活用して行うことができ、利用者や家族が参加する場合はその活用について同意を得る（運営基準 第13条第9号）</td><td>Web会議に文字起こしのボットを同席させる形が増える</td><td>会議に参加するボットの表示</td></tr><tr><td>保存</td><td>サービス担当者会議等の記録は居宅介護支援台帳に含め、完結の日から2年間保存（運営基準 第29条第2項）</td><td>音声・全文テキスト・要約の3種類が残る</td><td>自動削除の有無</td></tr><tr><td>預け先</td><td>個人データの取扱いを委託する場合、委託先の選定、契約への取扱いの盛り込み（委託終了後を含む）、定期的な確認に留意する（ガイダンス Ⅳ7.(3)）</td><td>音声と文字起こしが外部のクラウドに置かれる</td><td>学習の扱いと契約条件</td></tr><tr><td>秘密保持</td><td>従業者は正当な理由なく業務上知り得た利用者や家族の秘密を漏らしてはならない（運営基準 第23条第1項）</td><td>録音の扱いを職員ごとに決めないと、個人のスマホに残りやすい</td><td>ワークスペースでの一元管理</td></tr></tbody></table></div>
+<p>上の運営基準は居宅介護支援のものです。基準は市町村が条例を定める際の基準として置かれているため（運営基準 第1条）、保存年数など実際の扱いは指定権者の条例で確認してください。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-利用開始時の同意書が-録音と文字起こしまで読める書き方か">1. 利用開始時の同意書が、録音と文字起こしまで読める書き方か</h3>
+<p>ガイダンスの別表2は、介護関係事業者の通常の利用目的の例として「他の居宅サービス事業者や居宅介護支援事業所等の連携（サービス担当者会議等）、照会への回答」を挙げています。ガイダンスのQ&amp;A（Q3-1）も、介護関係事業者では会議で個人情報を使うことに文書での同意が必要だと念を押しています。今の同意書が「会議で情報を共有する」ことまでしか書いていない場合、会議を録音し、外部のサービスで文字起こしすることまで含まれると読めるかは、事業所で判断が分かれるところです。</p>
+<p>迷う場合は、次回の更新やケアプランの見直しの機会に、録音と文字起こしの有無、使い道（記録作成の補助など）、保存期間を書き足した説明文を用意しておくと説明しやすくなります。会議の冒頭で読み上げる文は<a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a>で作れます。オンライン開催で利用者や家族が参加するなら、テレビ電話装置等の活用そのものへの同意も別に要ります（第13条第9号）。</p>
+<h3 id="2-学習なし-と-閲覧範囲-を-事業所の規程で説明できるか">2. 「学習なし」と「閲覧範囲」を、事業所の規程で説明できるか</h3>
+<p>ガイダンスⅣ7.(3)は、個人データの取扱いを委託する場合、個人情報を適切に取り扱っている事業者を選び、契約に取扱いの内容を盛り込むよう求めています。AI文字起こしでまず確認したいのは、会議の音声が音声認識の学習に使われるかどうかです。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約は、音声認識エンジンを提供するパートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合があると書いています。法人向けページで「AI学習なし」が機能として書かれているのは、ビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。介護業界向けの紹介ページも確認しましたが、ケアプラン作成や申し送りへの活用の説明が中心で、学習の扱いや介護向けの専用プランの記載は見つかりませんでした。</p>
+<p>閲覧範囲も確認します。ヘルプセンター「データ・フォルダのアクセス権を設定する」によると、ノートやフォルダごとのアクセス権はビジネスプランとエンタープライズプランで使え、「閲覧のみ」「アクセス不可」などを人やグループごとに設定できます。担当の利用者の記録をケアマネジャーだけが開ける形にできるのは、この機能です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<p>医療情報を扱う事業所なら、ガイダンスⅣ7.(4)は、医療情報システムを導入したり情報を外部に保存したりする場合に、厚生労働省の「医療情報システムの安全管理に関するガイドライン」によるとしています。訪問看護などを併設していて医療の情報も会議に出るなら、こちらの要件も規程の側で確認しておきます。医療機関向けのプランの条件は<a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン</a>にまとめました。</p>
+<h3 id="3-音声・全文・要約のどれを-何年残すかを決める">3. 音声・全文・要約のどれを、何年残すかを決める</h3>
+<p>運営基準が保存を求めているのは、サービス担当者会議等の「記録」です。AI文字起こしを使うと、音声、全文のテキスト、要約の3つが手元に残ります。台帳に綴じる記録は要約を職員が確認して整えたものにし、音声と全文はいつ消すかを決めておく、という分け方がひとつの考え方です。</p>
+<p>Nottaのヘルプ「ノートおよびフォルダの自動削除」によると、作成日から1〜365日で自動削除する設定はエンタープライズプランで使え、オーナーだけが設定できます。ビジネス Plusでは、公開ページに自動削除の記載がなく、手動で消す運用になります。違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>で比べています。自宅訪問で開く会議をスマホで録る場合の注意は<a href="../notta-smartphone-in-person/">Nottaをスマホで対面会議に使う方法</a>を参照してください。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（ビジネス Plus）</strong>：年64,800円（税抜）。ケアマネジャー1〜2名の事業所で会議記録だけに使うには、軽くない固定費です</li><li><strong>Notta（ビジネス Plus）</strong>：自動削除は公開ページに記載がなく、保存期間を過ぎた音声は人が消すことになります</li><li><strong>Notta（介護向け）</strong>：介護業界向けのページはありますが、介護向けの料金プランや学習の扱いの記載は見つかりませんでした。条件は問い合わせて書面で確認する形になります</li><li><strong>文字起こし全般</strong>：利用者や家族が、話した内容がそのまま文字で残ることを負担に感じる場合があります。録音しない会議を残す判断もありえます</li><li><strong>この記事の限界</strong>：ガイダンスと運営基準に、AI文字起こしを名指しした記述は確認できませんでした。表の「文字起こしで変わること」は文言からの整理です</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="利用開始時に同意書をもらっていれば-録音してもいいですか">利用開始時に同意書をもらっていれば、録音してもいいですか</h3>
+<p>運営基準とガイダンスが求めているのは、会議で個人情報を用いることへの文書での同意です。録音や外部サービスでの文字起こしまで今の同意書で読めるかは、書き方によります。迷う場合は保険者や所属団体、顧問に確認し、必要なら説明文を書き足してください。</p>
+<h3 id="会議の記録は何年保存すればいいですか">会議の記録は何年保存すればいいですか</h3>
+<p>指定居宅介護支援の運営基準は、サービス担当者会議等の記録を完結の日から2年間保存するとしています。ただし基準は条例の基準として置かれているため、実際の年数は指定権者の条例で確認してください。</p>
+<h3 id="無料プランやビジネスプランでは足りませんか">無料プランやビジネスプランでは足りませんか</h3>
+<p>Nottaの法人向けページで「AI学習なし」が書かれているのはビジネス Plus以上と士業向け特別プランで、無料プランやビジネスには記載がありません。会議の音声を学習に使わせない条件が規程にあるなら、無料やビジネスで満たせるかは公開情報からは確認できませんでした。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>サービス担当者会議で個人情報を使うには、利用開始時に文書での同意が要る（運営基準 第23条第3項・ガイダンス p.50）。録音と文字起こしまで読めるかを先に確認する</li><li>記録は完結の日から2年間保存（運営基準 第29条第2項・条例も確認）。音声・全文・要約のどれを残すかを決める</li><li>Nottaでは「AI学習なし」はビジネス Plus（年64,800円・税抜）以上、ノート単位のアクセス権はビジネス以上、自動削除はエンタープライズ（2026年10月24日に公式ページで確認）</li></ul>
+<p>※本記事は厚生労働省・個人情報保護委員会の資料、e-Gov法令検索、Nottaの公開ページを2026年10月24日に確認して整理したもので、法的な助言ではありません。個別の判断は保険者や専門家にご確認ください。</p><h2 id="doga">この記事を48秒の動画で</h2><div class="vwrap"><video controls preload="none" playsinline src="short.mp4"></video><p class="vcap">音声が出ます。要点だけを短くまとめたものです。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaikeishi-audit-transcription/">公認会計士が監査ヒアリングをAI文字起こしする前に｜法27条と実務指針</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&amp;Aで見る分かれ目</a></li><li><a href="../benrishi-invention-recording/">弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点</a></li><li><a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に｜監督指針と機微情報の3論点</a></li><li><a href="../journalism-source-protection/">取材録音をAI文字起こしする前に｜情報源の秘匿で確かめる3つの保存先</a></li><li><a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし｜個人情報の同意と保存の3点</a></li><li><a href="../kaikeishi-audit-transcription/">公認会計士が監査ヒアリングをAI文字起こしする前に｜法27条と実務指針</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
