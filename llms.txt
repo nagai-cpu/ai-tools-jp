@@ -11,6 +11,15 @@
 
 ## 記事
 
+- [Catchyの領収書とインボイス｜発行手順と経費にする前の確認点](https://nagai-cpu.github.io/ai-tools-jp/catchy-receipt/): Catchyの利用料を経費にしたい個人事業主・会社員向けに、領収書PDFの出し方、インボイス対応の公式の記載、請求書払いの条件、解約後の発行方法を公式ヘルプで確認して整理しました。
+- [CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版](https://nagai-cpu.github.io/ai-tools-jp/catchy-vs-chatgpt/): CatchyとChatGPTで迷っている人向けに、両方の公式料金ページを2026年10月26日に確認し、無料枠・有料の価格・入力の仕方・支払い方法の違いと、どちらを選ぶかの判断軸を整理しました。
+- [議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録](https://nagai-cpu.github.io/ai-tools-jp/council-minutes-ai/): 議会事務局で本会議や委員会の会議録をAI文字起こしで作り、公開したい人向け。地方自治法と会議規則・委員会条例の例から、公開版に載せない発言と委員会記録の粒度、Nottaの条件を整理しました。
+- [金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点](https://nagai-cpu.github.io/ai-tools-jp/finance-meeting-transcription/): 金融機関で社内会議をAI文字起こししたいシステム・リスク管理部門向け。金融庁のガイドラインと監督指針、AIディスカッションペーパーの記載に、Nottaの公式条件を当てはめました。
+- [行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務](https://nagai-cpu.github.io/ai-tools-jp/gyoseishoshi-transcription/): 相談や面談の録音をAIで文字起こししたい行政書士向け。行政書士法第12条・第19条の3と日行連の職務基本規則から情報管理の3点を確認し、Nottaの士業向けプランの対象かも公式で確かめました。
+- [イルシルとCanvaを比較｜スライドはどっち？無料で持ち出せるかが分かれ目](https://nagai-cpu.github.io/ai-tools-jp/irusiru-vs-canva/): イルシルとCanvaのどっちでスライドを作るか迷う人向けに、料金・無料での出力・共同編集の違いを2026年10月26日の公式ページで比べ、選び分けの条件をまとめました。
+- [議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較](https://nagai-cpu.github.io/ai-tools-jp/minutes-ai-vs-outsourcing/): 機密を含む会議の議事録をAIにするか外注するか迷う担当者向け。NEDOと熊本県が外注業者に課した情報管理の条件を、Nottaの規約とヘルプで1項目ずつ埋めて比べました。
+- [Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み](https://nagai-cpu.github.io/ai-tools-jp/notta-chrome-extension/): Notta Chrome拡張でタブの音声を録音・文字起こしする手順を公式ヘルプで整理。Google Meetの録音ボタンはBot招待であること、YouTubeと無料プランの注意点もまとめました。
+- [会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う](https://nagai-cpu.github.io/ai-tools-jp/recording-consent-meeting/): 会議の録音を参加者にどう伝えるか決めたい人向け。Zoom・Teams・Meet・Nottaの6つの録り方で、通知の出方と同意を記録に残せるかを公式ヘルプで比べました。
 - [病院カンファレンスの録音をAIで文字起こし｜患者情報と認証の3点](https://nagai-cpu.github.io/ai-tools-jp/hospital-conference-recording/): 症例検討会や多職種カンファレンスをAIで文字起こししたい病院向けに、厚労省の安全管理ガイドラインと個人情報Q&Aから院外参加者・持ち出し・認証の扱いとNottaの条件を整理。
 - [自治体の会議録をAI文字起こしする要件｜ISMAPと総務省ガイドラインの3点](https://nagai-cpu.github.io/ai-tools-jp/local-government-minutes/): 議会や審議会の会議録をAIで文字起こししたい自治体職員向け。総務省ガイドライン（令和8年3月版）のクラウド利用とISMAPの記載、ISMAPリストの確認結果、Nottaの条件を整理しました。
 - [採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点](https://nagai-cpu.github.io/ai-tools-jp/recruit-interview-consent/): 採用面接を録音しAIで文字起こししたい人事担当者向け。職業安定法第5条の5と厚労省の指針、個人情報保護委員会のQ&Aで、同意・残さない情報・削除の扱いを整理しました。

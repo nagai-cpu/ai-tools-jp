@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catchyの領収書とインボイス｜発行手順と経費にする前の確認点｜AIツール実用ガイド</title>
+<meta name="description" content="Catchyの利用料を経費にしたい個人事業主・会社員向けに、領収書PDFの出し方、インボイス対応の公式の記載、請求書払いの条件、解約後の発行方法を公式ヘルプで確認して整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/catchy-receipt/">
+<meta property="og:title" content="Catchyの領収書とインボイス｜発行手順と経費にする前の確認点｜AIツール実用ガイド">
+<meta property="og:description" content="Catchyの利用料を経費にしたい個人事業主・会社員向けに、領収書PDFの出し方、インボイス対応の公式の記載、請求書払いの条件、解約後の発行方法を公式ヘルプで確認して整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Catchyの領収書とインボイス｜発行手順と経費にする前の確認点", "description": "Catchyの利用料を経費にしたい個人事業主・会社員向けに、領収書PDFの出し方、インボイス対応の公式の記載、請求書払いの条件、解約後の発行方法を公式ヘルプで確認して整理しました。", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/catchy-receipt/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Catchyの領収書とインボイス｜発行手順と経費にする前の確認点</h1><p class="meta">2026-10-26 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>Catchyの領収書は設定画面から決済の専用ページに移り、「インボイスの履歴」から自分でPDFをダウンロードします</strong>。公式ヘルプには「インボイス制度の領収書に対応済」と書かれています。注意点は2つで、<strong>月額プランを解約した後は画面から出せず、問い合わせフォームでの依頼になること</strong>と、<strong>会社の請求書払いに対応しているのはProの年額払い（とEnterprise）だけ</strong>であることです。</p>
+<h2 id="支払い方法ごとに-手に入る書類を整理する">支払い方法ごとに、手に入る書類を整理する</h2>
+<p>2026年10月26日に、Catchyの公式ヘルプ（「領収書を発行する」「法人利用をご検討の方へ」「Proプランについて」「Starterプランについて」「よくある質問」）と、公式サイトの特定商取引法に基づく表記で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>契約</th><th>支払い方法（公式の記載）</th><th>受け取れる書類</th><th>入手のしかた</th></tr></thead><tbody><tr><td>Starter（月3,300円〜・税込）</td><td>クレジットカード、デビットカード、プリペイドカード</td><td>領収書PDF</td><td>設定→「プランの変更/領収書発行」→決済の専用ページ</td></tr><tr><td>Pro 月額払い（月10,780円・税込）</td><td>同上</td><td>領収書PDF</td><td>同上</td></tr><tr><td>Pro 年額払い（総額103,488円・税込）</td><td>請求書を発行し、銀行振込で支払うことが可能</td><td>請求書</td><td>問い合わせフォームで依頼。入金確認後に利用開始</td></tr><tr><td>Enterprise</td><td>請求書払いが可能</td><td>個別対応</td><td>問い合わせ</td></tr><tr><td>月額プランを解約した後</td><td>―</td><td>領収書</td><td>問い合わせフォームで依頼</td></tr></tbody></table></div>
+<p>デビットカードやプリペイドカードが使えるのは、よくある質問「クレジットカード以外の決済方法には対応していますか？」の記載です。ただし、AmazonギフトカードやAppleストアカードは使えないとあります。</p>
+<p>一方、特定商取引法に基づく表記のお支払い方法の欄は「クレジットカード決済のみ（即日の決済となります）」となっていて、ヘルプの請求書払いの案内と書き方が揃っていません。銀行振込を前提に予算を組む場合は、問い合わせで条件を確かめてから進めるのが安全です。</p>
+<h2 id="領収書PDFを出す手順">領収書PDFを出す手順</h2>
+<p>ヘルプ「領収書を発行する」の手順は次のとおりです。</p>
+<ol><li>左メニューの「設定」をクリックし、「プランの変更/領収書発行」の「専用ページへ移動する」ボタンを押す</li><li>決済の専用ページに移ったら、「インボイスの履歴」から、領収書が欲しい決済日の横の矢印マークをクリックする</li><li>「領収書をダウンロード」ボタンを押すと、PDFのダウンロードが始まる</li></ol>
+<p>ヘルプの画像を見ると、専用ページには「株式会社デジタルレシピはStripeと提携して、簡素化された請求処理を提供しています」と表示され、決済1件ごとに「請求書をダウンロード」と「領収書をダウンロード」の2つのボタンが並んでいます。経理に出すのは、支払い済みを示す領収書のほうです。</p>
+<p>毎月の決済日は、プランに申し込んだ日付で決まります。よくある質問によると、10日に申し込めば毎月10日、翌月に同じ日が無い場合は末日が決済日です。月末締めで経費をまとめる人は、決済日がどの月に入るかを先に把握しておくと集計がずれません。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-カードで払える個人・小規模事業者か">1. カードで払える個人・小規模事業者か</h3>
+<p>個人事業主や、カード払いで経費精算できる会社なら、StarterかProの月額払いで十分です。領収書は毎月自分でダウンロードでき、問い合わせの手間もかかりません。どのプランを選ぶかは料金と使う量で決まります。量ごとの分かれ目は<a href="../catchy-pricing/">Catchy料金の無料と有料の違い</a>で計算しました。</p>
+<p>文章作成を経費で外注している人が、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+84XB6I+52IU+5YJRM" target="_blank" rel="sponsored nofollow noopener">Catchy</a>に置き換えて費用を抑えたいなら、まず無料プランの10クレジットで、自分の用途に合うかを確かめてから有料に進めます。</p>
+<div class="cta"><div class="cta-h">Catchy<span class="pr">PR</span></div><p class="cta-b">広告文・キャッチコピー・LP文面を用途別テンプレから生成する</p><p class="cta-f">無料プランあり（毎月クレジット付与）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+84XB6I+52IU+5YJRM" target="_blank" rel="sponsored nofollow noopener">Catchy の公式サイトを見る</a></div>
+<h3 id="2-会社が請求書払いを求めているか">2. 会社が請求書払いを求めているか</h3>
+<p>経理の規程でカード払いができず、請求書払いが必要なら、選べるのはProの年額払いかEnterpriseだけです。ヘルプ「Proプランについて」のよくある質問によると、依頼するときは問い合わせフォームに、Proプランのアカウント数、請求書の宛名（担当者名が必要ならそれも）、希望の利用開始日（請求日）を書いて送ります。入金が確認されてから利用開始になるので、使い始めたい日から逆算して依頼します。</p>
+<p>なお、請求書払いで契約した場合に、別途領収書が発行されるかどうかはヘルプに記載が見つかりませんでした。必要なら依頼時に一緒に確認してください。複数人で契約する場合の料金の合計は<a href="../catchy-team-plan/">Catchyにチーム・法人プランはある？</a>にまとめています。</p>
+<h3 id="3-経理が求める記載がそろっているか">3. 経理が求める記載がそろっているか</h3>
+<p>ヘルプには「インボイス制度の領収書に対応済」とあり、該当箇所として領収書の見本画像（2023年8月の決済のもの）に赤枠が付いています。赤枠の中は「JP TRN T」に続く番号の欄で、見本では番号が伏せ字になっています。見本の領収書は英語表記（Receipt、Date paid など）でした。現在の領収書が同じ形式かは、自分のPDFで確かめてください。</p>
+<p>国税庁の「インボイス制度について」のページでは、インボイスの記載事項として、交付先の氏名または名称、売手の氏名または名称と登録番号、取引年月日、取引内容、税率ごとの対価の合計額と適用税率、税率ごとの消費税額等の6つが挙げられています。手元のPDFにこれらがそろっているか、宛名をどう入れるかは、経理担当や税理士に確認してください。登録番号そのものは、国税庁の「インボイス制度適格請求書発行事業者公表サイト」で、Tを除く13桁を入れて照合できます。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>解約後は画面から領収書を出せない</strong>：ヘルプの冒頭に、月額プランの解約後に領収書を発行したい場合は問い合わせフォームから、と注記があります。解約する前に、必要な月の領収書をまとめてダウンロードしておくと手間が減ります。解約の手順と締切は<a href="../catchy-cancel/">Catchyの解約方法</a>にあります</li><li><strong>請求書払いの選択肢が狭い</strong>：月額払いやStarterでは請求書払いを選べません。年額払いは、よくある質問のとおり契約期間中に解約しても返金はありません</li><li><strong>英語表記の領収書の扱いは会社しだい</strong>：ヘルプの見本は英語表記でした。英語の書類を受け付けるかは経理の運用によるので、初回の精算前に確認しておくと安心です</li><li><strong>ヘルプの画面の画像が古い</strong>：手順の画像は2022〜2023年のもので、プラン名も「AIコピーライター月額プラン」と旧名称のままです。画面の文言が変わっている可能性があります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Catchyの領収書の宛名を会社名にできますか">Catchyの領収書の宛名を会社名にできますか</h3>
+<p>ヘルプの決済ページの画像には「請求先情報」の欄と「情報を更新」のリンクがあります。ただし、そこで宛名を会社名に変えられるかは、今回確認したヘルプには書かれていませんでした。請求書払い（Proの年額払い）なら、依頼時に請求書の宛名を伝える形です。</p>
+<h3 id="ダウンロードした領収書のPDFは印刷して保存すればいいですか">ダウンロードした領収書のPDFは印刷して保存すればいいですか</h3>
+<p>国税庁のリーフレット「電子取引データ」は、Web上でのみ表示される領収書に相当する情報も電子データで保存する必要がある（PDFやスクリーンショットでの保存も可）としています。また「令和６年１月からの電子取引データの保存方法」では「電子取引データが原本ですので、これをそのまま保存してください」と案内しています。保存の要件や例外は国税庁の「電子帳簿等保存制度特設サイト」で確認し、個別の判断は税理士などの専門家に相談してください。</p>
+<h3 id="無料プランから有料にすると-いつから領収書が出せますか">無料プランから有料にすると、いつから領収書が出せますか</h3>
+<p>ヘルプ「Starterプランについて」「Proプランについて」によると、申し込んだ当日に初回の決済が行われます。決済が済めば、専用ページの「インボイスの履歴」にその日の決済が並び、領収書をダウンロードできる流れです。ChatGPTとどちらに払うか迷っている場合は、支払い方法の違いも含めて<a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い</a>で比べています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Catchyの領収書は、設定→「プランの変更/領収書発行」→専用ページの「インボイスの履歴」からPDFで出せる。ヘルプには「インボイス制度の領収書に対応済」とある</li><li>月額プランを解約した後は、問い合わせフォームでの依頼になる。解約前にまとめてダウンロードしておく</li><li>請求書払いはProの年額払いとEnterpriseだけ。宛名や記載事項、保存方法は経理担当・税理士に確認する</li></ul>
+<p>※本記事は2026年10月26日にCatchyの公式ヘルプ・特定商取引法に基づく表記と、国税庁のページを確認して整理したもので、税務上の取り扱いを保証するものではありません。個別の判断は税理士などの専門家にご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版</a></li><li><a href="../catchy-team-plan/">Catchyにチーム・法人プランはある？複数人で使う料金と注意点</a></li><li><a href="../solo-business-ai-stack/">個人事業主のAI業務効率化まとめ｜3つ全部有料でも月6,828円</a></li><li><a href="../newsletter-subject-ai/">メルマガ件名をAIで作る前に｜公式例でも地名が1文字変わっていた</a></li><li><a href="../catchy-sns-post-ideas/">CatchyでSNS投稿のネタ出しを毎日する方法｜無料10クレジットは何日もつか</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../catchy-receipt/">Catchyの領収書とインボイス｜発行手順と経費にする前の確認点</a></li><li><a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版</a></li><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../irusiru-vs-canva/">イルシルとCanvaを比較｜スライドはどっち？無料で持ち出せるかが分かれ目</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

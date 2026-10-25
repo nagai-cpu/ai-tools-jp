@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み｜AIツール実用ガイド</title>
+<meta name="description" content="Notta Chrome拡張でタブの音声を録音・文字起こしする手順を公式ヘルプで整理。Google Meetの録音ボタンはBot招待であること、YouTubeと無料プランの注意点もまとめました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notta-chrome-extension/">
+<meta property="og:title" content="Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み｜AIツール実用ガイド">
+<meta property="og:description" content="Notta Chrome拡張でタブの音声を録音・文字起こしする手順を公式ヘルプで整理。Google Meetの録音ボタンはBot招待であること、YouTubeと無料プランの注意点もまとめました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み", "description": "Notta Chrome拡張でタブの音声を録音・文字起こしする手順を公式ヘルプで整理。Google Meetの録音ボタンはBot招待であること、YouTubeと無料プランの注意点もまとめました。", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notta-chrome-extension/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み</h1><p class="meta">2026-10-26 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のChrome拡張機能はChromeウェブストアから無料で追加でき、すべてのプランで使えます。タブの音声を録るときは、拡張機能のアイコンから「Notta」を開き、音声入力元を「このタブの音声」にして「このページの録音を開始」を押します。注意したいのは、Google Meetの会議画面に出る「録音を開始」ボタンです。これはタブの録音ではなく、Notta Botを会議に招待する操作で、Botは参加者として会議に入ります。</p>
+<h2 id="拡張機能でできることを並べる">拡張機能でできることを並べる</h2>
+<p>2026年10月26日に、Nottaヘルプセンターの「Notta Chrome拡張機能の基本と使い方」「拡張機能でタブ音声を録音・文字起こしする」「拡張機能でGoogle Meetの会議画面からNotta Botを招待する」「拡張機能でYouTube動画を要約する」「拡張機能でGoogleカレンダーから自動参加を設定する」「文字起こし時間と利用回数の計算方法」「話者識別機能はついていますか？」「リアルタイム文字起こしを無効化する」と、Chromeウェブストアの掲載ページ、Nottaの料金ページで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>できること</th><th>操作</th><th>消費される枠</th><th>注意点</th></tr></thead><tbody><tr><td>タブ音声の録音・文字起こし</td><td>アイコン→「Notta」→「このタブの音声」→「このページの録音を開始」</td><td>文字起こし時間</td><td>音声のみで動画の録画はしない。最大5ページまで同時に録音できる</td></tr><tr><td>PCのファイルの文字起こし</td><td>ファイルをChromeのタブにドラッグして再生し、上と同じ手順で録音</td><td>文字起こし時間</td><td>Chromeで開けない形式がある</td></tr><tr><td>YouTube動画の要約</td><td>動画の横に出る「動画を要約」</td><td>AI要約の回数</td><td>動画に字幕があることが前提。要約言語を動画の言語に合わせる</td></tr><tr><td>Google MeetからBotを招待</td><td>会議画面の左下の「録音を開始」</td><td>文字起こし時間</td><td>Notta Botが会議に参加する。設定によっては主催者の承認が要る</td></tr><tr><td>Googleカレンダーから自動参加の設定</td><td>予定の作成・編集画面で設定</td><td>―</td><td>Botを会議に入れる設定で、録音はBotが行う</td></tr></tbody></table></div>
+<p>ストアの掲載名は「Notta - AI議事録作成＆音声文字起こし」で、提供元の欄にはnotta.ai、デベロッパーはAirgram Inc.と表示されています。同じnotta.aiから「Notta Sales Agent」など別の拡張機能も出ているので、追加するときは掲載名で見分けます。</p>
+<h2 id="タブ音声を録る手順">タブ音声を録る手順</h2>
+<ol><li>Chromeウェブストアで拡張機能を追加し、同じブラウザでNotta Web版にログインする。拡張機能には、そのときWeb版にログインしているアカウントがそのまま使われる</li><li>文字起こししたいページを開き、ブラウザ右上の拡張機能アイコンから「Notta」を選ぶ</li><li>「ワークスペースの保存先」を選び、「発話言語」を実際に話されている言語に合わせ、音声入力元を「このタブの音声」にする</li><li>「このページの録音を開始」を押す。文字起こしはNottaの画面にリアルタイムで表示される</li><li>録音中のページに出るウィジェットで、停止・一時停止・ブックマークができる</li></ol>
+<p>保存先のワークスペースを切り替えると、その設定はGoogle Meetの拡張機能にもかかります。会社と個人でワークスペースを分けている人は、録る前に保存先を確かめてください。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-録りたい音声は-タブの中-から出ているか">1. 録りたい音声は「タブの中」から出ているか</h3>
+<p>タブ録音が録るのは、ブラウザのタブで再生される音声です。ウェビナー、オンライン授業、ポッドキャストのように、聞く側に回る用途に向いています。</p>
+<p>自分も話す会議では、自分のマイクの声まで一緒に録れるかが問題になります。タブ録音のヘルプにはマイク音声の扱いの記載が無く、今回は確認できませんでした。別のヘルプ「スピーカーからの会議音声が録音されないのはなぜですか？」では、ブラウザのプライバシー制限で同じブラウザ内のタブ間の音声が取れないことがあるとして、Web会議の文字起こし（Notta Bot）や画面収録を代わりに案内しています。画面収録は内部音声とマイク音声を組み合わせて録る機能です。会議の音声を確実に残したいなら、最初からこちらを選ぶ方が手戻りが少なくなります。</p>
+<h3 id="2-会議なら-相手にBotが見えてもよいか">2. 会議なら、相手にBotが見えてもよいか</h3>
+<p>Google Meetの画面の「録音を開始」を押すと、Notta Botが会議に招待されます。Botは参加者として会議に入るので、相手からも見えます。録音していることを相手に伝える手がかりにはなりますが、社外の会議では主催者の承認が必要になる場合があります。参加者への伝わり方を録り方ごとに比べた内容は<a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？</a>にまとめました。Meet自体の文字起こし機能との違いは<a href="../google-meet-transcription/">Google Meetの文字起こしを無料でやる方法</a>で扱っています。</p>
+<h3 id="3-無料プランの-1回3分-で足りるか">3. 無料プランの「1回3分」で足りるか</h3>
+<p>拡張機能の追加は無料ですが、文字起こしにはプランの枠が使われます。料金ページでは、フリープランは月120分で「1回につき3分まで文字起こし可能」、プレミアムは月1,800分で「1回につき5時間まで」です。消費は無音を除かない音声全体の長さで、1分未満は切り上げです。30分のウェビナーを最後まで文字にするなら、有料プランが前提になります。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta Chrome拡張（タブ録音）</strong>：リアルタイム文字起こしを無効にすることはできないとヘルプにあります。また、話者識別は発話言語が日本語の場合だけです</li><li><strong>Notta Chrome拡張（YouTube）</strong>：ストアの掲載ページには「Chromeのポリシーにより、Youtubeからの音声キャプチャは制限されています」とある一方、ヘルプには限定公開・非公開のYouTube動画にも対応とあり、公式の中で書き方が分かれています。公開動画ならURLを貼る取り込み（公開動画とショート動画が対象）を使う方が確実です</li><li><strong>Notta Chrome拡張（評価）</strong>：2026年10月26日時点でストアの評価は5点満点で2.8（44件）でした。ユーザー数は100,000です</li><li><strong>Notta（フリープラン）</strong>：1回3分までなので、拡張機能の操作を試すところまでと考えた方がよいです</li><li><strong>この記事の限界</strong>：拡張機能が求めるブラウザの権限の一覧は、ストアのページからは確認できませんでした。ストアのプライバシー欄では、扱うデータとして「ウェブサイトのコンテンツ」が開示されています</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Notta-Chrome拡張は無料で使えますか">Notta Chrome拡張は無料で使えますか</h3>
+<p>ヘルプには、インストールは無料で、タブ音声の録音はすべてのプランで利用できると書かれています。ただし文字起こしにはプランの枠が使われ、フリープランは1回3分・月120分までです。フリープランで詰まりやすい点は<a href="../notta-free-limits/">Notta無料プランの制限はどこまで？</a>にまとめています。</p>
+<h3 id="英語のウェビナーを録ると-話者は分かれますか">英語のウェビナーを録ると、話者は分かれますか</h3>
+<p>ヘルプ「話者識別機能はついていますか？」では、Chrome拡張機能によるブラウザタブの録音は、発話言語が日本語の場合のみ話者識別ができるとされています。英語の音声で話者を分けたいなら、録音ファイルを取り込む方法などを使います。経路ごとの条件は<a href="../notta-speaker-separation/">Nottaの話者分離ができない原因</a>で整理しました。</p>
+<h3 id="録音した内容はどこに保存されますか">録音した内容はどこに保存されますか</h3>
+<p>拡張機能で作ったデータは、録音前に選んだ「ワークスペースの保存先」に入ります。文字起こしやAI要約の利用分も、同じワークスペースの枠として数えられます。保存先を変えると、その後に録ったノートは変更後のワークスペースに保存されます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>タブの音声は、アイコン→「Notta」→「このタブの音声」→「このページの録音を開始」で録る。追加は無料で、全プランで使える</li><li>Google Meetの画面の「録音を開始」はNotta Botの招待で、Botは参加者として見える。会議で自分の声も残したいなら、Botか画面収録が向いている</li><li>フリープランは1回3分まで。YouTubeはストアとヘルプで書き方が分かれているので、公開動画はURLの取り込みを使う</li></ul>
+<p>※本記事はNottaヘルプセンター・Chromeウェブストアの掲載ページ・Nottaの料金ページを2026年10月26日に確認して整理したものです。最新の仕様は公式ページでご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../minutes-ai-vs-outsourcing/">議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較</a></li><li><a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../catchy-receipt/">Catchyの領収書とインボイス｜発行手順と経費にする前の確認点</a></li><li><a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版</a></li><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../irusiru-vs-canva/">イルシルとCanvaを比較｜スライドはどっち？無料で持ち出せるかが分かれ目</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

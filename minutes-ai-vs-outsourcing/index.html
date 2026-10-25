@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較｜AIツール実用ガイド</title>
+<meta name="description" content="機密を含む会議の議事録をAIにするか外注するか迷う担当者向け。NEDOと熊本県が外注業者に課した情報管理の条件を、Nottaの規約とヘルプで1項目ずつ埋めて比べました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/minutes-ai-vs-outsourcing/">
+<meta property="og:title" content="議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較｜AIツール実用ガイド">
+<meta property="og:description" content="機密を含む会議の議事録をAIにするか外注するか迷う担当者向け。NEDOと熊本県が外注業者に課した情報管理の条件を、Nottaの規約とヘルプで1項目ずつ埋めて比べました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較", "description": "機密を含む会議の議事録をAIにするか外注するか迷う担当者向け。NEDOと熊本県が外注業者に課した情報管理の条件を、Nottaの規約とヘルプで1項目ずつ埋めて比べました。", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/minutes-ai-vs-outsourcing/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較</h1><p class="meta">2026-10-26 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、機密の面で比べたときの違いは<strong>「人が音声を聞くかどうか」</strong>です。外注は人が必ず聞くので、公的機関は作業者の名簿、目的外利用の禁止、消去の報告を契約で縛っています。AIは人が聞かない代わりに、学習に使われるか、いつ消えるかをプランで確かめます。ただしNEDOの外注仕様書には「機械学習による音声認識」の業務も含まれていて、<strong>外注しても業者側でAIが使われることがあります</strong>。</p>
+<h2 id="外注仕様書の条件を-AIで埋められるか並べる">外注仕様書の条件を、AIで埋められるか並べる</h2>
+<p>2026年10月26日に、NEDO（新エネルギー・産業技術総合開発機構）が公開している「議事録等作成に関する業務」の仕様書（履行期間は2027年4月30日まで）、熊本県の「令和7年度 録音音源テープ起こし業務仕様書」と別記「個人情報取扱特記事項」、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約（2025年8月1日改訂）・法人向けページ・セキュリティページ・ヘルプセンターを確認しました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公的機関が外注業者に課した条件</th><th>Notta（AI）の公式の記載</th></tr></thead><tbody><tr><td>第三者認証</td><td>プライバシーマークまたはISMS認証を受けていること（NEDO）</td><td>セキュリティページにSOC2 Type2保証報告書を2023年2月12日に受領と記載。ISO 27001の項目もあるが、認証範囲の記載は確認できなかった</td></tr><tr><td>誰が扱うか</td><td>情報取扱者名簿を契約前に提出（NEDO）、作業従事者を書面で報告（熊本県）</td><td>音声認識はパートナー企業のAPIで処理（利用規約第10条）。社内の閲覧範囲はノートごとのアクセス権5段階（ビジネス以上）</td></tr><tr><td>再委託</td><td>県の承諾なく第三者に処理を委託しない（熊本県 第11）</td><td>音声認識を第三者のパートナー企業が担うことが規約に明記されている</td></tr><tr><td>目的外利用</td><td>業務の目的以外に利用しない（NEDO、熊本県 第8）</td><td>パートナー企業が「ご利用のプランに応じて」音声を学習に利用する場合がある。学習なしはビジネス Plus、エンタープライズ、士業向け特別プラン</td></tr><tr><td>消去</td><td>作業用データの完全消去（NEDO）、消去・廃棄の書面報告（熊本県 第13）</td><td>手動で消すまで保存。ゴミ箱に30日。自動削除はエンタープライズのみ</td></tr><tr><td>秘密保持契約</td><td>守秘義務の条項（両者）</td><td>ビジネス・エンタープライズの購入予定者はNDAを締結できる（法人契約FAQ）</td></tr></tbody></table></div>
+<p>NEDOの「再委託」の扱いは今回読んだ仕様書の本文には見当たらなかったので、表では熊本県の特記事項を引いています。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-社外の-人-に聞かせてよい会議か">1. 社外の「人」に聞かせてよい会議か</h3>
+<p>外注では、録音を人が聞いて文字にします。だから公的機関は、誰が聞くかを名簿で特定し、名簿以外の者に情報が渡らない体制を求めています。熊本県の特記事項は、作業場所を書面で報告させ、承諾なく作業場所から持ち出すことや複製することも禁じています。</p>
+<p>AIの場合、Nottaのヘルプ「AI学習について」は、学習なしの環境では音声データと認識結果がパートナー企業のサーバーやストレージに「保存されることは一切ありません」とし、処理はメモリ上で行われて「人がアクセスができる状態にはなりません」と書いています。一方、学習ありの場合は国内のデータセンターに一旦保管され、ランダムに選ばれたデータが音声認識エンジンの学習に使われます。人事や取引条件など、<strong>社外の誰にも聞かせたくない会議なら、学習なしのプランのAIが候補になります</strong>。法人向けページでは、ビジネス Plusが年64,800円（税抜）で「AI学習なし」を含みます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h3 id="2-外注するなら-AIを使うか-も聞く">2. 外注するなら「AIを使うか」も聞く</h3>
+<p>NEDOの仕様書は、業務の種別に「機械学習による音声認識を用いた認識結果作成」を入れています。会議の翌営業日12時までに音声認識の結果を、録音3時間以内なら6営業日以内に人が仕上げた議事録を納める、という組み立てです。つまり<strong>外注先が自社の工程でAIを使うことは、公的機関の発注でも想定されています</strong>。</p>
+<p>外注を選ぶ理由が「AIに音声を渡したくない」なら、業者がどの音声認識を使い、その事業者が学習に使う条件はどうか、までを確認しないと目的を果たせません。仕様書に条件を書く場合は、<a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か</a>で整理した委託先の監督の考え方が参考になります。NDAを結んだ相手との会議なら、相手との契約が録音と複製をどう扱うかを<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>で確かめてください。</p>
+<h3 id="3-欲しいのは逐語の議事録か-要点の記録か">3. 欲しいのは逐語の議事録か、要点の記録か</h3>
+<p>NEDOの仕様書は、ケバ取りと整文、用字の統一（日本速記協会の「新訂標準用字用例辞典」か共同通信社の「記者ハンドブック」）、発言者の明確化まで求め、日本速記協会の速記技能検定1級か2級の常勤速記者を責任者として3名以上置くことを条件にしています。<strong>発言を整えた逐語の議事録が要るなら、ここは人の仕事として外注に分があります</strong>。</p>
+<p>AIが出すのは話したままの文字と、AI要約です。社内で意思決定と宿題を残す目的なら、それで足りる場面も多いはずです。費用の比べ方は<a href="../transcription-outsourcing-cost/">文字起こし外注の費用相場と自分でやる場合</a>にまとめています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>外注</strong>：必ず人が音声を聞きます。名簿、作業場所、消去報告まで縛るには、契約や仕様書をこちらで用意する必要があります。NEDOの仕様では、議事録の納期は録音3時間以内でも6営業日です</li><li><strong>Notta（全プラン）</strong>：音声認識は第三者のパートナー企業が担うと規約に書かれています。自動削除はエンタープライズのみで、それ以外は手で消す運用です</li><li><strong>Notta（ビジネス Plus）</strong>：学習なしは明記されていますが年64,800円（税抜）で、無料やプレミアムに学習なしの記載はありません。整文は自分の手間として残ります</li><li><strong>この記事の限界</strong>：外注側の条件は公的機関2件の仕様書の例で、民間の外注業者がどこまで約束するかは業者ごとに違います</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="議事録の外注先には何を確認すればよいですか">議事録の外注先には何を確認すればよいですか</h3>
+<p>公的機関の仕様書を手本にすると、第三者認証（プライバシーマークかISMS）、作業者の名簿、作業場所、再委託の可否、目的外利用の禁止、作業後の消去と報告が並びます。これに加えて、業者が工程で音声認識AIを使うかと、その学習の条件を聞いておくと、AIとの比較がしやすくなります。</p>
+<h3 id="AIの議事録なら-音声を人に聞かれることはありませんか">AIの議事録なら、音声を人に聞かれることはありませんか</h3>
+<p>Nottaのヘルプは、学習なしの環境ではパートナー企業側で音声が保存されず、人がアクセスできる状態にならないと書いています。学習ありのプランでは、データが一旦保管されて学習に使われることがあります。社内でノートを誰が開けるかは、ビジネス以上のアクセス権で別に決めます。</p>
+<h3 id="AIで起こしてから-整文だけを外注できますか">AIで起こしてから、整文だけを外注できますか</h3>
+<p>できますが、整文を頼むと外注先の人が文字起こしの全文を読むことになります。機密を理由にAIを選んだ会議なら、整文を外に出すかどうかは改めて判断が要ります。学習しない条件をツール横断で比べたい場合は<a href="../no-ai-training-transcription-comparison/">AI学習なしの文字起こしツール比較</a>にまとめています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>機密で比べると、外注は人が聞くことを名簿・目的外利用の禁止・消去報告で縛り、AIは人が聞かない代わりに学習と保存の条件をプランで確かめる</li><li>NEDOの外注仕様書には音声認識の業務も入っており、外注を選ぶなら業者がAIを使うかとその学習条件まで聞く</li><li>Nottaで学習なしが明記されているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。自動削除はエンタープライズのみ（2026年10月26日に公式ページで確認）</li></ul>
+<p>※本記事はNEDOと熊本県が公開している仕様書、Nottaの公開ページを2026年10月26日に確認して整理したもので、契約や法令への適合を保証するものではありません。最終的な判断は社内の担当部署や専門家にご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../notta-chrome-extension/">Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み</a></li><li><a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../catchy-receipt/">Catchyの領収書とインボイス｜発行手順と経費にする前の確認点</a></li><li><a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版</a></li><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../irusiru-vs-canva/">イルシルとCanvaを比較｜スライドはどっち？無料で持ち出せるかが分かれ目</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

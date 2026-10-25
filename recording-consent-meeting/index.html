@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う｜AIツール実用ガイド</title>
+<meta name="description" content="会議の録音を参加者にどう伝えるか決めたい人向け。Zoom・Teams・Meet・Nottaの6つの録り方で、通知の出方と同意を記録に残せるかを公式ヘルプで比べました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/recording-consent-meeting/">
+<meta property="og:title" content="会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う｜AIツール実用ガイド">
+<meta property="og:description" content="会議の録音を参加者にどう伝えるか決めたい人向け。Zoom・Teams・Meet・Nottaの6つの録り方で、通知の出方と同意を記録に残せるかを公式ヘルプで比べました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う", "description": "会議の録音を参加者にどう伝えるか決めたい人向け。Zoom・Teams・Meet・Nottaの6つの録り方で、通知の出方と同意を記録に残せるかを公式ヘルプで比べました。", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/recording-consent-meeting/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う</h1><p class="meta">2026-10-26 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、参加者に「同意するか、退出するか」を選ばせて、その結果を記録に残す仕組みを公式に確認できたのはZoomの録画同意の表示だけでした。Teamsは管理者のポリシーで明示的な同意を求められます。Google MeetとNotta Botは「録っていること」を知らせる仕組みで、同意を取る機能の記載はありません。残りの2方式は、参加者に通知が出ないか、通知の記載が確認できませんでした。どの方式でも、同意は人が冒頭で取り、記録に残す前提で考えます。</p>
+<h2 id="6つの録り方で-参加者からの見え方を並べる">6つの録り方で、参加者からの見え方を並べる</h2>
+<p>2026年10月26日に、Zoomサポート「Customizing the recording consent disclaimer」「Creating a Zoom custom disclaimer」、Microsoftサポート「Teams会議でライブ文字起こしを表示する」、Microsoft Learn「会議とイベントのTeamsレコーディングポリシーを管理する」、Google Meetヘルプ「Google Meetで文字起こしを使用する」、Nottaヘルプセンターの「Web会議の文字起こし」「カレンダー連携によるWeb会議の文字起こし」「Nottaデスクトップ版とNotta Botの使い分けについて」「BotなしでWeb会議を録音する方法」「拡張機能でタブ音声を録音・文字起こしする」で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>録り方</th><th>参加者からの見え方</th><th>同意の扱い</th><th>設定できる人・条件</th></tr></thead><tbody><tr><td>Zoomのレコーディング（録画同意の表示）</td><td>録画が始まったとき、または録画中の会議に入ったときに通知が出る</td><td>参加者は同意して残るか退出するかを選ぶ。主催者は会議後に同意した参加者のレポートを出せる</td><td>文面の変更は、100ライセンス以上のBusiness・Education・API・Enterpriseアカウントの管理者</td></tr><tr><td>Teamsの文字起こし</td><td>すべての参加者に、文字起こしが行われていることが通知される</td><td>管理者が「ExplicitRecordingConsent」を有効にすると、参加者の明示的な同意が必要になる</td><td>ポリシーを設定するのは管理者</td></tr><tr><td>Google Meetの文字起こし</td><td>全員の画面の右上に文字起こしアイコン。自動で始める設定なら、参加時に警告メッセージ</td><td>同意を求める操作の記載は確認できなかった</td><td>対応するWorkspaceのエディションに限られる</td></tr><tr><td>Notta Bot（会議に参加させる）</td><td>参加者リストにボットが表示される。オンにすれば録音通知バナーを全員に表示、録画開始時にチャットへメッセージを送信</td><td>同意を取る機能の記載は確認できなかった</td><td>バナーを非表示にする機能はフリープランでは使えない</td></tr><tr><td>Notta Chrome拡張（タブの音声を録音）</td><td>ヘルプに、参加者への通知についての記載は無かった</td><td>記載なし</td><td>すべてのプラン</td></tr><tr><td>Nottaデスクトップ版のBotなし録音</td><td>参加者リストにボットは表示されず、文字起こしされていることは通知されない</td><td>「Nottaがユーザーに代わって同意の確認を行うことはありません」</td><td>デスクトップ版</td></tr></tbody></table></div>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-同意を-取った記録-まで残す必要があるか">1. 同意を「取った記録」まで残す必要があるか</h3>
+<p>取引先や応募者との会議で、後から「録音に同意していた」と示す必要があるなら、同意の結果が残る方式を選ぶか、記録を自分で残す運用にします。</p>
+<p>Zoomのヘルプによると、録画同意の表示は会議中の参加者に録画への同意を求め、参加者は同意して残るか退出するかを選びます。会議の後、主催者は管理画面のレポートを開き、参加者ごとの詳細にある「Recording Consent」列で、同意したか断ったかを確認できます。Teamsは、管理者が会議ポリシーで「ExplicitRecordingConsent」を有効にすると、そのポリシーの開催者が作る会議で、参加者が録音・文字起こしに明示的に同意する必要が出てきます。</p>
+<p>それ以外の方式では、同意の記録はツールの外で作ることになります。招待メールに録音と文字起こしの目的を書き、議事録の冒頭にも注記する形です。文面は<a href="../tools/recording-consent.html">録音の同意チェック</a>で、場面と保存期間を選ぶと作れます。</p>
+<h3 id="2-その会議の主催者は誰か">2. その会議の主催者は誰か</h3>
+<p>ZoomやTeamsの同意の設定は、自社の管理者が自社のアカウントにかける設定です。Zoomの独自の免責事項の表示も、対象は「社内ユーザーが主催する会議に参加する外部ユーザー」と書かれています。取引先が主催する会議では、自社の設定は効きません。</p>
+<p>他社の会議で自分が録る側になるなら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のNotta Botのように「会議に入ってくるのが見える」方式が、相手に伝わる手がかりになります。カレンダー連携の詳細設定には、録音が行われている旨を伝えるバナーを参加者全員に表示する設定と、録画を始めるときに決めたメッセージを会議のチャットへ自動で送る「録画開始メッセージ通知」があります。Zoomでは「ホスト承認の必須化」をオフにしない限り、会議ホストの承認を経てからBotが録画する形です（この設定はZoomだけに効きます）。Google MeetでChrome拡張から招待する場合も、会議の設定によっては主催者の許可が必要とヘルプにあります。</p>
+<p>それでも、Botが入ったことに全員が気づくとは限りません。Nottaは同意の確認を代行しないので、冒頭の一言は省けません。Zoomで主催者側・参加者側それぞれの入れ方は<a href="../notta-zoom-integration/">Zoom会議を自動で文字起こし</a>にまとめています。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h3 id="3-参加者が断ったとき-どうするかを先に決めているか">3. 参加者が断ったとき、どうするかを先に決めているか</h3>
+<p>同意を求める以上、断られる場合があります。Zoomの録画同意の表示では、断る人は会議から退出する形になります。Teamsでは、参加者が会議のキャプションとトランスクリプトで自分のIDを表示しない設定を選べるとサポートページにあります。</p>
+<p>Notta BotやChrome拡張で録る場合は、ツール側に「断る」操作は用意されていないので、断られたら録音を止める、あるいはその人の発言部分を議事録に残さない、という運用を先に決めておきます。Nottaデスクトップ版のBotなし録音は、参加者に通知されない仕組みなので、断る機会そのものが相手に生まれません。この方式を選ぶなら、事前の告知を必ず運用で入れる必要があります。録音を相手に伝えないことの扱いについて一次資料が言っている範囲は、<a href="../secret-recording-legality/">無断録音をAIで文字起こしするのは違法？</a>で整理しました。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Zoom</strong>：同意の表示の文面を変えられるのは100ライセンス以上のBusiness・Education・API・Enterpriseアカウントで、管理者の権限が要ります。今回確認したヘルプは録画の同意についてのもので、文字起こしだけを使う場合の扱いは確認していません</li><li><strong>Teams</strong>：明示的な同意はポリシーで管理者が有効にする設定です。会議を開く人が自分だけで入れられる設定かどうかは、今回の確認範囲では分かりませんでした</li><li><strong>Google Meet</strong>：文字起こしは対応エディションに限られ、ヘルプでは利用できる端末がパソコンとAndroidに限られています。同意を求める操作の記載は見つけられませんでした</li><li><strong>Notta（Bot・拡張機能）</strong>：通知のバナーやチャットのメッセージは「知らせる」機能で、同意したかどうかは残りません。また、フリープランは料金ページに「1回につき3分まで文字起こし可能」とあり、会議を最後まで録るには有料プランが前提になります</li><li><strong>この記事の限界</strong>：どの方式で録れば法令上問題ないか、という判断は扱っていません。個別の判断は弁護士などの専門家に確認してください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="参加者のうち1人だけが録音を断ったらどうすればいいですか">参加者のうち1人だけが録音を断ったらどうすればいいですか</h3>
+<p>Zoomの録画同意の表示では、同意しない人は退出を選ぶ仕組みです。会議ツールにその仕組みが無い場合は、録音を止めるか、その人の発言を議事録に残さないかを主催者が決めます。採用面接のように断りにくい場面での取り方は<a href="../recruit-interview-consent/">採用面接の録音をAIで文字起こしする前に</a>を参考にしてください。</p>
+<h3 id="Notta-Botの録音通知バナーは無料プランでも出せますか">Notta Botの録音通知バナーは無料プランでも出せますか</h3>
+<p>Nottaヘルプ「Web会議の文字起こし」には、録音通知バナーを非表示にする機能はフリープランでは利用できない、と書かれています。表示・非表示を選べるのは有料プランで、フリープランでは非表示を選べません。冒頭で口頭でも伝えておきます。</p>
+<h3 id="同意を取ったことを後から示すには何を残せばいいですか">同意を取ったことを後から示すには何を残せばいいですか</h3>
+<p>Zoomなら、主催者がレポートで参加者ごとの「Recording Consent」を確認できます。それ以外の方式では、招待メールの文面、冒頭で読み上げた文、議事録の注記を残しておくのが現実的です。この3つの文面は<a href="../tools/recording-consent.html">録音の同意チェック</a>でまとめて作れます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>同意して残るか退出するかを選ばせ、結果をレポートで残せると公式に確認できたのはZoomの録画同意の表示。Teamsは管理者のポリシーで明示的な同意を求められる</li><li>Google MeetとNotta Botは「録っていることを知らせる」仕組みで、同意の記録は残らない。NottaのBotなし録音は参加者に通知されない</li><li>他社が主催する会議では自社の設定が効かないので、Botが見える方式を選んだうえで、冒頭の告知と議事録の注記で同意を残す</li></ul>
+<p>※本記事はZoom・Microsoft・Google・Nottaの公式ヘルプを2026年10月26日に確認して整理したもので、法的な適否を判断するものではありません。個別の判断は弁護士などの専門家にご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../minutes-ai-vs-outsourcing/">議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較</a></li><li><a href="../notta-chrome-extension/">Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../catchy-receipt/">Catchyの領収書とインボイス｜発行手順と経費にする前の確認点</a></li><li><a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版</a></li><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../irusiru-vs-canva/">イルシルとCanvaを比較｜スライドはどっち？無料で持ち出せるかが分かれ目</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

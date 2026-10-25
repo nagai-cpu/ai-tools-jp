@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録｜AIツール実用ガイド</title>
+<meta name="description" content="議会事務局で本会議や委員会の会議録をAI文字起こしで作り、公開したい人向け。地方自治法と会議規則・委員会条例の例から、公開版に載せない発言と委員会記録の粒度、Nottaの条件を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/council-minutes-ai/">
+<meta property="og:title" content="議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録｜AIツール実用ガイド">
+<meta property="og:description" content="議会事務局で本会議や委員会の会議録をAI文字起こしで作り、公開したい人向け。地方自治法と会議規則・委員会条例の例から、公開版に載せない発言と委員会記録の粒度、Nottaの条件を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録", "description": "議会事務局で本会議や委員会の会議録をAI文字起こしで作り、公開したい人向け。地方自治法と会議規則・委員会条例の例から、公開版に載せない発言と委員会記録の粒度、Nottaの条件を整理しました。", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/council-minutes-ai/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</h1><p class="meta">2026-10-26 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、議会の会議録にAI文字起こしを使うときに先に決めるべきなのは、精度よりも<strong>「録音の全文」と「公開する会議録」を別の物として扱う工程</strong>です。会議規則の例では、取り消した発言や秘密会の議事は配付用の会議録に載せないと定めています。AIの全文テキストにはそれが残るので、公開版を作る手順と、全文の置き場所・共有範囲を先に決めておく必要があります。</p>
+<h2 id="会議録の作成から公開までに関わる一次資料">会議録の作成から公開までに関わる一次資料</h2>
+<p>2026年10月26日に、e-Gov法令検索の地方自治法、川崎市議会の公開資料（会議規則の抜粋を載せた陳情審査資料と、令和5年10月5日の議会運営委員会資料）、守口市議会の委員会条例改正案（令和3年3月）、Nottaの料金ページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。会議規則と委員会条例は議会ごとに定めるもの（地方自治法第109条・第120条）なので、川崎市と守口市の条文は「例」として読んでください。</p>
+<div class="tw"><table><thead><tr><th>工程</th><th>一次資料の記載</th><th>AI文字起こしで起きること</th><th>Nottaで確認できたこと</th></tr></thead><tbody><tr><td>会議の公開</td><td>会議は公開する。ただし出席議員の3分の2以上の議決で秘密会を開ける（地方自治法第115条）</td><td>秘密会の部分も、録音していれば全文に入る</td><td>外部共有の無効化はビジネス以上（オーナーのみ設定）</td></tr><tr><td>会議録の作成</td><td>議長は事務局長等に書面又は電磁的記録で会議録を作成させる（同第123条）</td><td>文字起こしは作成の補助。署名等の手続は議会側に残る</td><td>規約第10条は完全なテキストの作成を保証せず、利用者が確認・編集するとしている</td></tr><tr><td>記録の方法</td><td>川崎市は2023年に議事の記録を「速記法」から「録音その他の方法」に改めた（会議規則第126条第2項の改正）</td><td>録音からの反訳が記録の前提になる議会がある</td><td>録音・ファイル取り込みとも話者識別に対応（条件あり）</td></tr><tr><td>取消し・訂正</td><td>取消しは会期中に議会の許可、訂正は議長の許可で字句に限る（川崎市議会会議規則第62条）</td><td>全文テキストは発言したとおりに残る</td><td>文字起こしの編集は全プランで可能</td></tr><tr><td>公開版に載せない事項</td><td>秘密会の議事、議長が取消しを命じた発言、取り消した発言は配付用の会議録に掲載しない（同第128条）</td><td>全文と公開版の差分を誰が管理するかが要る</td><td>共有リンクはログイン不要で閲覧できる。有効期間とパスワードを設定できる</td></tr><tr><td>委員会の記録</td><td>委員長は職員に会議の概要、出席委員の氏名等を記載した記録を調製させる（守口市議会委員会条例第29条）</td><td>逐語ではなく「概要」でよい委員会もある</td><td>AI要約はあるが、記録の様式に合わせた整形は人の作業</td></tr></tbody></table></div>
+<p>「起きること」の列は条文を会議録の作業に当てはめた整理で、AI文字起こしを名指しした規定は確認した資料にありませんでした。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-全文テキストと-公開する会議録-を分けて管理できるか">1. 全文テキストと「公開する会議録」を分けて管理できるか</h3>
+<p>川崎市議会会議規則第62条は、発言した議員がその会期中に限り、議会の許可を得て発言を取り消し、議長の許可を得て訂正できるとしています。訂正は字句に限り、趣旨は変えられません。第128条は、秘密会の議事と、取消しを命じた発言・取り消した発言を配付用の会議録に載せないと定めています。</p>
+<p>AI文字起こしの全文には、こうした発言も話したとおりに残ります。つまり、公開版の会議録と全文テキストは中身が違うものになります。全文をどこに置くか、誰が見られるかを先に決めておかないと、取り消されたはずの発言が別の経路で出回るおそれがあります。</p>
+<p>Nottaのヘルプによると、共有リンクは全プランで作れて、リンクを知っている人はログインなしで見られます。有効期間とパスワードは設定できます。外部への共有そのものを止める「外部共有を無効にします」の設定はビジネス以上のプランで、操作はオーナーだけです。秘密会や非公開の協議会まで同じツールで扱うなら、情報の分類と選定基準の話になるので、<a href="../local-government-minutes/">自治体の会議録をAI文字起こしする要件</a>で整理した総務省ガイドラインの論点も確認してください。</p>
+<h3 id="2-委員会の記録は-逐語-か-概要-か">2. 委員会の記録は「逐語」か「概要」か</h3>
+<p>本会議の会議録は地方自治法第123条で作成が義務づけられていますが、委員会の記録は条例で決まります。守口市議会委員会条例第29条は、委員長が職員に「会議の概要」、出席委員の氏名等を記載した記録を調製させるとしています。川崎市議会の「議会運営の手引き」の改正案でも、予算・決算審査特別委員会や全員協議会は「録音の反訳その他の方法による摘録」とされています。</p>
+<p>逐語の会議録が要る会議なら、全文の精度と校正の手間が中心になります。概要や摘録で足りる会議なら、AI要約を下書きにして人が様式に整える使い方が考えられます。委員会ごとに記録の様式を確かめてから導入範囲を決めるのが近道です。導入の説明資料は<a href="../minutes-ai-approval-doc/">AI議事録の導入稟議の書き方</a>の型が使えます。</p>
+<h3 id="3-議員名や議案名を-校正しやすい形で出せるか">3. 議員名や議案名を、校正しやすい形で出せるか</h3>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約第10条は、音声認識の技術特性上、完全なテキストデータの作成を保証するものではなく、利用者が内容を確認し編集して使う、と書いています。ヘルプ「文字起こしの精度（音声認識率）はどれぐらいですか？」は、目安として地方議会や役員会議のように整然と発言するフォーマルな会議で「認識率90％以上」とする一方、口元で収音できない場合は精度が大きく下がるとしています。会議録として確定させるには、人の校正が前提です。</p>
+<p>校正の手間を減らすのが単語登録です。ヘルプでは、読みと表記を登録できる数はフリー3個、プレミアム200個、ビジネス1,000個で、テンプレートを使った一括登録はビジネスとエンタープライズだけです。議員名・地名・議案名を毎期まとめて入れ替えるなら、一括登録の有無が効いてきます。見落としやすいのが書き出しで、ヘルプによるとダウンロードはプレミアム以上の機能です。Word・PDF等で書き出して会議録の様式に流し込むなら、フリープランでは足りません。話者の分け方は録音の経路で条件が変わるので、<a href="../notta-speaker-separation/">Nottaの話者分離ができない原因</a>も見ておくと安心です。</p>
+<p>公開前の全文には、取り消された発言や公開前の内容が含まれます。音声を学習に回さない設定まで求めるなら、ヘルプ「AI学習について」で「AI学習なし」の環境として書かれているのはビジネス Plusとエンタープライズです。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（フリー）</strong>：単語登録は3個まで、ダウンロードはプレミアム以上の機能です。会議録の作成に使うには機能が足りません</li><li><strong>Notta（プレミアム・ビジネス）</strong>：「AI学習なし」はヘルプでビジネス Plusとエンタープライズの環境として書かれており、ビジネス（年30,096円・税込）は対象外です</li><li><strong>Notta（ビジネス Plus）</strong>：年64,800円（税抜）。録音データは手動で消さない限り保管され続けると法人契約FAQにあり、自動削除はエンタープライズの機能です</li><li><strong>文字起こし全般</strong>：議場の音響、マイクを通さないやじや不規則発言、方言は誤変換が出やすく、聞き取れない部分の扱いは議会の基準で人が判断する必要があります</li><li><strong>この記事の限界</strong>：会議規則・委員会条例は議会ごとに異なります。確認したのは川崎市議会と守口市議会の公開資料で、全国の標準規則の本文は今回確認していません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="AIの文字起こしをそのまま会議録として公開してもよいですか">AIの文字起こしをそのまま会議録として公開してもよいですか</h3>
+<p>会議録の作成は地方自治法第123条で議長の責任とされ、署名等の手続もあります。会議規則の例では、取り消した発言や秘密会の議事は配付用の会議録に載せないと定めています。AIの全文はこうした整理の前のものなので、そのまま公開するのではなく、校正と公開版の作成を経るのが前提です。</p>
+<h3 id="委員会の記録も-本会議と同じように全文で残す必要がありますか">委員会の記録も、本会議と同じように全文で残す必要がありますか</h3>
+<p>委員会の記録は条例で決まります。守口市議会委員会条例は「会議の概要」等を記載した記録としています。全文の会議録を作っている議会もあるので、所属する議会の委員会条例と運用の手引きを確認してください。</p>
+<h3 id="録音はどこまで保存しておけばよいですか">録音はどこまで保存しておけばよいですか</h3>
+<p>保存期間は各議会の文書管理の規程で決まります。Nottaは手動で削除しない限り録音データを保管し続けると法人契約FAQにあり、ゴミ箱に入れたデータは30日後に完全に削除されます。設定の詳細は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>にまとめています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>会議は公開が原則（地方自治法第115条）だが、会議規則の例では取り消した発言・秘密会の議事は配付用の会議録に載せない。AIの全文と公開版を分けて管理する工程が先に要る</li><li>委員会の記録は条例で決まり、「会議の概要」でよい例もある。逐語か概要かで、使う機能と校正の手間が変わる</li><li>Nottaは単語登録がフリー3個・プレミアム200個・ビジネス1,000個、ダウンロードはプレミアム以上、外部共有の無効化はビジネス以上、「AI学習なし」はビジネス Plus（年64,800円・税抜）以上（2026年10月26日に公式ページで確認）</li></ul>
+<p>※本記事は地方自治法、川崎市議会・守口市議会の公開資料、Nottaの公開ページを2026年10月26日に確認して整理したもので、法的な助言ではありません。個別の判断は所属する議会の事務局や専門家にご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『介護・看護の記録をAIで書く前に読む本』（Kindle・500円）：介護事業所・訪問看護で、利用者の情報をAIに入れてよいか、事業所のルール、利用者と家族への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7G1TCZ" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../minutes-ai-vs-outsourcing/">議事録はAIと外注どちらが機密を守れる？公的機関の外注仕様書で比較</a></li><li><a href="../notta-chrome-extension/">Notta Chrome拡張の使い方｜タブ音声の録音とMeetのボタンは別の仕組み</a></li><li><a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？AI文字起こし6方式で通知が違う</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../catchy-receipt/">Catchyの領収書とインボイス｜発行手順と経費にする前の確認点</a></li><li><a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版</a></li><li><a href="../council-minutes-ai/">議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録</a></li><li><a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制｜金融庁の委託先管理で見る3点</a></li><li><a href="../gyoseishoshi-transcription/">行政書士の相談をAI文字起こしする情報管理｜補助者にも法の守秘義務</a></li><li><a href="../irusiru-vs-canva/">イルシルとCanvaを比較｜スライドはどっち？無料で持ち出せるかが分かれ目</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
