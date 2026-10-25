@@ -12,7 +12,9 @@
 ## 記事
 
 - [病院カンファレンスの録音をAIで文字起こし｜患者情報と認証の3点](https://nagai-cpu.github.io/ai-tools-jp/hospital-conference-recording/): 症例検討会や多職種カンファレンスをAIで文字起こししたい病院向けに、厚労省の安全管理ガイドラインと個人情報Q&Aから院外参加者・持ち出し・認証の扱いとNottaの条件を整理。
+- [自治体の会議録をAI文字起こしする要件｜ISMAPと総務省ガイドラインの3点](https://nagai-cpu.github.io/ai-tools-jp/local-government-minutes/): 議会や審議会の会議録をAIで文字起こししたい自治体職員向け。総務省ガイドライン（令和8年3月版）のクラウド利用とISMAPの記載、ISMAPリストの確認結果、Nottaの条件を整理しました。
 - [採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点](https://nagai-cpu.github.io/ai-tools-jp/recruit-interview-consent/): 採用面接を録音しAIで文字起こししたい人事担当者向け。職業安定法第5条の5と厚労省の指針、個人情報保護委員会のQ&Aで、同意・残さない情報・削除の扱いを整理しました。
+- [研究インタビューの録音をAI文字起こしする前に｜倫理審査で問われる3点](https://nagai-cpu.github.io/ai-tools-jp/research-interview-transcription/): 研究インタビューの録音をAIで文字起こししたい研究者向け。生命・医学系指針とガイダンスにあるクラウド利用と業務委託の記載、令和8年改正の時期、Nottaで確かめた条件を整理しました。
 - [産業医面談の録音をAIで文字起こしする前に｜健康情報の取扱規程3点](https://nagai-cpu.github.io/ai-tools-jp/sangyoi-interview-recording/): 産業医面談を録音してAIで文字起こししたい産業保健スタッフ・人事向けに、厚労省の健康情報の取扱指針と安衛法・安衛則から、同意・閲覧範囲・保存期間の決め方とNottaの設定を整理。
 - [無断録音をAIで文字起こしするのは違法？会議で一次資料が言えること3つ](https://nagai-cpu.github.io/ai-tools-jp/secret-recording-legality/): 会議を相手に言わずに録音しAIで文字起こししたい人向け。個人情報保護委員会のQ&A・個人情報保護法・Nottaの規約で、言えることと言えないことを分けました。
 - [AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算](https://nagai-cpu.github.io/ai-tools-jp/transcription-data-leak/): AI文字起こしの情報漏洩対策を、奈良市・Microsoft・米FTCが公表した事例と個人情報保護委員会の注意喚起から整理。Nottaで閉じられる設定とプランも確認しました。

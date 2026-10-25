@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自治体の会議録をAI文字起こしする要件｜ISMAPと総務省ガイドラインの3点｜AIツール実用ガイド</title>
+<meta name="description" content="議会や審議会の会議録をAIで文字起こししたい自治体職員向け。総務省ガイドライン（令和8年3月版）のクラウド利用とISMAPの記載、ISMAPリストの確認結果、Nottaの条件を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/local-government-minutes/">
+<meta property="og:title" content="自治体の会議録をAI文字起こしする要件｜ISMAPと総務省ガイドラインの3点｜AIツール実用ガイド">
+<meta property="og:description" content="議会や審議会の会議録をAIで文字起こししたい自治体職員向け。総務省ガイドライン（令和8年3月版）のクラウド利用とISMAPの記載、ISMAPリストの確認結果、Nottaの条件を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "自治体の会議録をAI文字起こしする要件｜ISMAPと総務省ガイドラインの3点", "description": "議会や審議会の会議録をAIで文字起こししたい自治体職員向け。総務省ガイドライン（令和8年3月版）のクラウド利用とISMAPの記載、ISMAPリストの確認結果、Nottaの条件を整理しました。", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/local-government-minutes/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">自治体の会議録をAI文字起こしする要件｜ISMAPと総務省ガイドラインの3点</h1><p class="meta">2026-10-25 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、自治体が会議録の作成にAI文字起こしを使うなら、ツールを比べる前に<strong>「その会議の情報が自治体機密性2以上に当たるか」</strong>を決めるのが先です。総務省のガイドライン（令和8年3月版）は、機密性2以上の情報を扱うクラウドサービスに選定基準や許可手続を求め、第三者認証はISMSに加えてISMAPかISO/IEC 27017等の取得を確認する必要があるとしています。さらにWeb会議では、機密性2以上なら議事録作成機能を「可能な限り使用しないこと」とまで書いています。</p>
+<h2 id="会議録の文字起こしに関わる一次資料を並べる">会議録の文字起こしに関わる一次資料を並べる</h2>
+<p>2026年10月25日に、総務省「地方公共団体における情報セキュリティポリシーに関するガイドライン」（令和8年3月27日改定）と改定ポイントの資料、e-Govの地方自治法、ISMAPポータルのISMAPクラウドサービスリストとISMAP-LIUクラウドサービスリスト、Nottaの料金ページ・法人向けページ・セキュリティページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>一次資料の記載</th><th>会議録で起きること</th><th>Nottaで確認できたこと</th></tr></thead><tbody><tr><td>会議録の作成</td><td>議長は事務局長等に書面又は電磁的記録により会議録を作成させる（地方自治法第123条）</td><td>文字起こしは作成の補助で、作成責任は議長側に残る</td><td>―</td></tr><tr><td>情報の分類</td><td>自治体機密性2は「直ちに一般に公表することを前提としていない情報資産」。例は政策検討に関する情報（ガイドライン 第3編）</td><td>非公開の審議会や庁内会議は機密性2以上になりやすい</td><td>―</td></tr><tr><td>クラウドの選定</td><td>機密性2以上なら、利用判断基準・選定基準・許可手続を整備し、目的外利用の禁止や再委託の承認、リージョンの指定などを選定条件に含める（第2編 8.3）</td><td>録音と文字起こしがクラウドに置かれる</td><td>保存先はAWS東京リージョン。「AI学習なし」はビジネス Plus・エンタープライズ・士業向け特別プラン</td></tr><tr><td>第三者認証</td><td>ISMSに加え、ISMAP又はISO/IEC 27017・27018等の取得を確認する必要がある（第1編）</td><td>認証の有無が選定の入口になる</td><td>ISO/IEC 27001とSOC2 Type2を公表。ISMAPの記載は公開ページに見当たらず</td></tr><tr><td>ISMAPへの登録</td><td>α'モデルで使えるのはISMAPクラウドサービスリストに登録されたサービス。ISMAP登録サービスを基盤に構築されただけでは登録サービスとして扱ってはならない（第3編）</td><td>基盤のAWSが登録済みでも、上のSaaSは別に見る</td><td>ISMAPリスト（103件）にもISMAP-LIUリスト（4件）にも掲載なし（10月25日時点）</td></tr></tbody></table></div>
+<p>表の「起きること」はガイドラインの文言を会議録の作成に当てはめた整理です。会議録やAI文字起こしを名指しした記述は、Web会議の議事録作成機能の一文のほかには見当たりませんでした。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-会議の情報が-機密性2以上-かを-会議ごとに決める">1. 会議の情報が「機密性2以上」かを、会議ごとに決める</h3>
+<p>ガイドラインは情報資産を機密性で分け、自治体機密性2を「直ちに一般に公表することを前提としていない情報資産」としています。例に挙がっているのは政策検討に関する情報です。傍聴できる本会議のように公開を前提とする会議と、非公開の審議会や庁内の検討会議とでは、同じ「会議録」でも扱いが変わりえます。</p>
+<p>Web会議の対策の項目では、機密性2以上の情報を扱う場合は、エンドツーエンドの暗号化を使えなくなる議事録作成機能・自動翻訳機能・録画機能などを「可能な限り使用しないこと」とされています。どの会議をどの分類にするかは各団体のポリシーで決まるので、まず情報政策の担当課に分類を確認するのが近道です。地方自治法第244条の6は、議会と長その他の執行機関がそれぞれサイバーセキュリティの方針を定めて公表するとしています。議会の会議録なら、議会側の方針も見ておく必要があります。</p>
+<h3 id="2-ISMAPは-基盤-ではなく-そのサービス-がリストにあるかを見る">2. ISMAPは「基盤」ではなく「そのサービス」がリストにあるかを見る</h3>
+<p>ガイドラインは、クラウドサービスを評価するときの第三者認証として、ISMS（ISO/IEC 27001）に加えてISMAPかISO/IEC 27017・27018等の取得を確認する必要があるとしています。第3編の解説では、ISMAPかISMAP-LIUの管理基準を満たすことの確認やリストからの選定を挙げ、リストのサービスであっても「言明対象範囲」で安全性を確認する必要があると書いています。</p>
+<p>2026年10月25日にISMAPポータルを確認したところ、ISMAPクラウドサービスリストは103件、ISMAP-LIUクラウドサービスリストは4件で、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>はどちらにも載っていませんでした。Nottaの保存先はAWS東京リージョンで、Amazon Web ServicesはISMAPリストに登録されています。ただしガイドラインは、ISMAP登録サービスを基盤に構築されたことをもって、そのサービスをISMAP登録サービスとして扱ってはならないとしています。ISO/IEC 27017についても、Nottaの公開ページで記載を見つけられなかったことを<a href="../isms-ai-transcription/">ISMS取得企業のAI文字起こし承認基準</a>で整理しました。</p>
+<h3 id="3-選定条件に書く項目を-公式の記載で埋められるか">3. 選定条件に書く項目を、公式の記載で埋められるか</h3>
+<p>機密性2以上の情報を扱うなら、ガイドラインは選定条件に「目的外利用の禁止」、再委託の承認、国内法以外の法令が適用されるリスクの評価と準拠法・裁判管轄、施設の場所やリージョンの指定などを含めるよう求めています。Nottaの公開情報で埋められるのは次のとおりです。</p>
+<ul><li><strong>目的外利用（学習）</strong>：利用規約第10条は、音声認識エンジンを提供するパートナー企業が「お客様がご利用のプランに応じて」音声データを学習に使う場合がある、と書いています。「AI学習なし」はビジネス Plus（年64,800円・税抜）以上と士業向け特別プランです</li><li><strong>場所と準拠法</strong>：データはAWS東京リージョンに保存（法人契約FAQ）、規約は日本法に従って解釈（第22条）</li><li><strong>再委託</strong>：規約第18条は、サービス提供に関する業務の全部又は一部を第三者に委託できると定めています。再委託に団体の承認を得る仕組みは、規約からは確認できませんでした</li><li><strong>認証とアクセス制御</strong>：法人契約FAQには、多要素認証・2段階認証は「現在、対応しておりません」とあります。IPアドレス制限はビジネス以上、SAMLシングルサインオンと操作ログ（過去180日分）はエンタープライズです</li></ul>
+<p>公開を前提とする会議で使う場合でも、学習の扱いと外部共有の無効化（ビジネス以上）は先に固めておきたい項目です。導入の説明資料の作り方は<a href="../minutes-ai-approval-doc/">AI議事録の導入稟議の書き方</a>、閲覧履歴の追い方は<a href="../transcription-audit-log/">AI文字起こしの監査ログ</a>にまとめています。条件を書面で確かめるなら、次の窓口から問い合わせられます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：ISMAPとISMAP-LIUのリストに掲載がなく（10月25日時点）、多要素認証にも未対応と法人契約FAQにあります。機密性2以上の会議では、選定基準を満たすかを個別に確認する必要があります</li><li><strong>Notta（ビジネス Plus）</strong>：年64,800円（税抜）。SSO・操作ログ・自動削除はエンタープライズ側の機能です</li><li><strong>文字起こし全般</strong>：固有名詞や議員名、方言は誤変換が出やすく、会議録として確定させるには人の確認が欠かせません</li><li><strong>この記事の限界</strong>：ISMAPリストは申請に応じて変更されます。確認したのは2026年10月25日時点の掲載内容です</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="ISMAPに登録されていないクラウドサービスは-自治体で使えないのですか">ISMAPに登録されていないクラウドサービスは、自治体で使えないのですか</h3>
+<p>ガイドラインがISMAP登録を利用の条件としているのは、LGWAN接続系から直接クラウドを使うα'モデルの場合です。それ以外では、ISMSに加えてISMAPかISO/IEC 27017等の取得を確認する必要があるとされています。機密性2以上の情報を扱わない場合は、約款等からリスクが許容できることを確認して申請し、責任者が可否を判断する手続になっています。実際の基準は各団体のポリシーで確認してください。</p>
+<h3 id="公開される本会議の会議録なら-どのツールでもよいですか">公開される本会議の会議録なら、どのツールでもよいですか</h3>
+<p>公開済みの情報は機密性が低い分類になりえますが、公開前の草稿や、発言者の個人情報の扱いは別に判断が要ります。会議録の作成責任は地方自治法第123条で議長の側にあり、文字起こしは補助です。学習の扱いと共有の範囲は、公開の会議でも決めておくのが安全です。</p>
+<h3 id="教育委員会の会議にも同じ基準が当てはまりますか">教育委員会の会議にも同じ基準が当てはまりますか</h3>
+<p>学校の校務については、文部科学省の教育情報セキュリティポリシーのガイドラインが別にあります。面談記録で整理した内容は<a href="../school-interview-recording/">教員の面談録音をAIで文字起こしする前に</a>を参照してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>先に決めるのは会議の情報の分類。機密性2以上なら選定基準・許可手続が要り、Web会議の議事録作成機能は「可能な限り使用しない」とされる（総務省ガイドライン 令和8年3月版）</li><li>第三者認証はISMSに加えISMAPかISO/IEC 27017等を確認。ISMAP登録の基盤上に作られただけではISMAP登録サービスとして扱わない</li><li>NottaはISMAP・ISMAP-LIUのリストに掲載なし、多要素認証は未対応、「AI学習なし」はビジネス Plus（年64,800円・税抜）以上（2026年10月25日に公式ページとISMAPポータルで確認）</li></ul>
+<p>※本記事は総務省のガイドライン、地方自治法、ISMAPポータル、Nottaの公開ページを2026年10月25日に確認して整理したもので、法的な助言ではありません。個別の判断は所属団体の情報政策担当や専門家にご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../hospital-conference-recording/">病院カンファレンスの録音をAIで文字起こし｜患者情報と認証の3点</a></li><li><a href="../recruit-interview-consent/">採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点</a></li><li><a href="../research-interview-transcription/">研究インタビューの録音をAI文字起こしする前に｜倫理審査で問われる3点</a></li><li><a href="../sangyoi-interview-recording/">産業医面談の録音をAIで文字起こしする前に｜健康情報の取扱規程3点</a></li><li><a href="../secret-recording-legality/">無断録音をAIで文字起こしするのは違法？会議で一次資料が言えること3つ</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../hospital-conference-recording/">病院カンファレンスの録音をAIで文字起こし｜患者情報と認証の3点</a></li><li><a href="../local-government-minutes/">自治体の会議録をAI文字起こしする要件｜ISMAPと総務省ガイドラインの3点</a></li><li><a href="../recruit-interview-consent/">採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点</a></li><li><a href="../research-interview-transcription/">研究インタビューの録音をAI文字起こしする前に｜倫理審査で問われる3点</a></li><li><a href="../sangyoi-interview-recording/">産業医面談の録音をAIで文字起こしする前に｜健康情報の取扱規程3点</a></li><li><a href="../secret-recording-legality/">無断録音をAIで文字起こしするのは違法？会議で一次資料が言えること3つ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
