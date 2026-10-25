@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算｜AIツール実用ガイド</title>
+<meta name="description" content="AI文字起こしの情報漏洩対策を、奈良市・Microsoft・米FTCが公表した事例と個人情報保護委員会の注意喚起から整理。Nottaで閉じられる設定とプランも確認しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/transcription-data-leak/">
+<meta property="og:title" content="AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算｜AIツール実用ガイド">
+<meta property="og:description" content="AI文字起こしの情報漏洩対策を、奈良市・Microsoft・米FTCが公表した事例と個人情報保護委員会の注意喚起から整理。Nottaで閉じられる設定とプランも確認しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算", "description": "AI文字起こしの情報漏洩対策を、奈良市・Microsoft・米FTCが公表した事例と個人情報保護委員会の注意喚起から整理。Nottaで閉じられる設定とプランも確認しました。", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/transcription-data-leak/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算</h1><p class="meta">2026-10-25 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、AI文字起こしの情報漏洩対策は<strong>「共有の範囲」「保存と削除」「学習への利用」の3つを順に閉じる</strong>ことです。AI文字起こしツールそのものから漏れたと公的機関が公表した国内事例は、今回の確認範囲では見つけられませんでした。ただ、公表された事例を見ると、記録が外に出た経路はこの3つに収まります。Nottaなら、共有はビジネス以上、学習はビジネス Plus以上の設定で閉じられます。</p>
+<h2 id="公表された事例と-文字起こしで同じことが起きる経路">公表された事例と、文字起こしで同じことが起きる経路</h2>
+<p>2026年10月25日に、奈良市教育委員会の報道資料（令和7年7月18日）、Microsoft Security Response Center（MSRC）のブログ（2023年9月18日）、米連邦取引委員会（FTC）のプレスリリース（2023年5月31日）、個人情報保護委員会「生成AIサービスの利用に関する注意喚起等」（令和5年6月2日）、IPA「情報セキュリティ10大脅威 2026」、Nottaのヘルプセンターで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>事例（公表元・日付）</th><th>公表された内容</th><th>文字起こしで同じことが起きる経路</th><th>Nottaで閉じる設定</th></tr></thead><tbody><tr><td>奈良市立中学校（奈良市教育委員会・2025年7月18日）</td><td>Googleドライブに保管したPTA総会の議決資料が、共有範囲の設定誤りで県と県内39市町村の教育委員会・教職員・児童生徒から閲覧できる状態になった。アクセス履歴で5名のアクセスを確認</td><td>文字起こしの共有範囲を広く設定したまま放置する</td><td>外部共有の無効化（ビジネス以上・オーナーのみ）、操作ログ（エンタープライズ）</td></tr><tr><td>Microsoft（MSRC・2023年9月18日）</td><td>従業員が公開GitHubリポジトリに、権限の広いトークン付きのURLを載せた。元従業員2名のPC環境のバックアップと、社内のTeamsメッセージが含まれていた。顧客データの流出はなかったと説明</td><td>「リンクを知っていれば開ける」共有リンクが、意図しない場所に貼られる</td><td>共有リンクの有効期間とパスワードの設定、外部共有の無効化</td></tr><tr><td>Amazon Alexa（FTC・2023年5月31日）</td><td>子どもの音声記録を保護者が削除を求めない限り無期限に保持し、文字起こしもすべてのデータベースからは消していなかった、とFTCが主張。民事制裁金2,500万ドルの命令案（裁判所の承認が必要）</td><td>録音と文字起こしが、使い終わっても残り続ける</td><td>自動削除（エンタープライズ）、ゴミ箱の完全削除</td></tr></tbody></table></div>
+<p>FTCの件は提訴時点の主張と命令案で、事実認定ではありません。3件とも文字起こしツールの事例ではなく、<strong>同じ経路が文字起こしにもある</strong>という意味で並べています。</p>
+<p>公的な指針では、個人情報保護委員会が、個人データを含むプロンプトを生成AIサービスに入力する場合は、事業者がそのデータを「機械学習に利用しないこと等を十分に確認すること」と注意喚起しています。IPAの「情報セキュリティ10大脅威 2026」（組織）では、「AIの利用をめぐるサイバーリスク」が初めて選ばれ、3位に入っています。</p>
+<h2 id="対策の判断軸は3つ">対策の判断軸は3つ</h2>
+<h3 id="1-共有の範囲-リンク1本で外に出る経路を閉じる">1. 共有の範囲：リンク1本で外に出る経路を閉じる</h3>
+<p>奈良市の件もMicrosoftの件も、ファイルの中身ではなく<strong>共有の設定</strong>が原因でした。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプ「共有リンクを使った外部へのノート共有」は、共有リンクについて「リンクを知っている全員がアクセスでき、ログインは不要です」と書いています。リンクには有効期間とパスワードを設定する項目があります。</p>
+<p>会社として閉じるなら、ヘルプ「外部ユーザーとの共有を制限する」にある「外部共有を無効にします」の設定です。オーナーだけが変更でき、ビジネス以上のプランで使えます。共有リンクと社内ルールの関係は<a href="../ai-minutes-security/">AI議事録に社外秘を入れていいか</a>でも整理しています。</p>
+<p>奈良市の件では、アクセス履歴から閲覧した人数を確認できました。Nottaで同じ確認をするなら、エンタープライズの操作ログです。ヘルプによると、過去180日間のログイン履歴やノートの閲覧・編集・削除の履歴を取得できます。プランごとの違いは<a href="../transcription-audit-log/">AI文字起こしの監査ログ</a>にまとめました。</p>
+<h3 id="2-保存と削除-残り続けるものを減らす">2. 保存と削除：残り続けるものを減らす</h3>
+<p>FTCがAmazonについて問題にしたのは、音声と文字起こしが残り続けたことでした。Nottaの法人契約FAQは、利用者が手動で削除しない限り、録音データはクラウドに「保管され続けます」と書いています。削除したノートはゴミ箱に入り、30日後に完全に削除されます（ヘルプ「データの削除・復元」）。</p>
+<p>一定期間で自動的に消す設定は、エンタープライズの「ノートおよびフォルダの自動削除」です。作成日から1〜365日で指定でき、ゴミ箱に移すか完全に削除するかを選べます。なお同じFAQには、バックアップは「毎日1回、35世代分、最大180日間保存」とあります。社内の保存期間ルールを決めるときは、この記載も前提に入れてください。</p>
+<h3 id="3-学習への利用-委員会の注意喚起に沿って確かめる">3. 学習への利用：委員会の注意喚起に沿って確かめる</h3>
+<p>Nottaのヘルプ「AI学習について」によると、学習ありの場合は音声認識エンジンを提供する国内パートナー企業が、ランダムに選んだデータをエンジンの学習に使います。単語が組み合わさって生じる「有意な情報」は学習されないとされ、AI要約など音声認識以外の機能はどのプランでも学習に使わないと書かれています。</p>
+<p>それでも、個人データを含む会議を録るなら、委員会の注意喚起どおり「機械学習に利用しない」ことを確かめられるプランを選ぶのが筋です。「AI学習なし」が機能として書かれているのは、ビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。無料プランで社内の会議を録る場合の論点は<a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？</a>を参照してください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQに、多要素認証・2段階認証は「現在、対応しておりません」とあります。パスワードが漏れた場合の歯止めは、IP制限（ビジネス以上）かエンタープライズのSSOで補うことになります</li><li><strong>Notta（ビジネス／ビジネス Plus）</strong>：外部共有は止められますが、操作ログと自動削除はエンタープライズの機能です。「誰が見たか」を後から追う手段は限られます</li><li><strong>Notta（エンタープライズ）</strong>：料金は「要相談」で、オンラインでは購入できません。導入まで見積もりと問い合わせの時間がかかります</li><li><strong>Notta（共有リンク）</strong>：共有リンクの内容は、後からノートを変更するとリンク先にもリアルタイムで反映されるとヘルプにあります。一度渡したリンクから、追記した内容まで見えることになります</li><li><strong>この記事の限界</strong>：AI文字起こしツールから漏れたと公的機関や事業者が公表した国内の事例は、今回の確認範囲では見つけられませんでした。事例はすべて隣接する経路の例です</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="AI文字起こしで情報漏洩した事例はありますか">AI文字起こしで情報漏洩した事例はありますか</h3>
+<p>2026年10月25日に確認した範囲では、AI文字起こしツールそのものからの漏えいを公的機関が公表した国内事例は見つかりませんでした。共有設定の誤り（奈良市・2025年）、権限の広いリンクの公開（Microsoft・2023年）、音声記録の長期保持（米FTCの主張・2023年）など、文字起こしと同じ経路で起きた事例は公表されています。</p>
+<h3 id="Nottaで外部への共有を禁止できますか">Nottaで外部への共有を禁止できますか</h3>
+<p>ヘルプ「外部ユーザーとの共有を制限する」に、「外部共有を無効にします」の設定があります。変更できるのはワークスペースのオーナーだけで、ビジネス以上のプランで使えます。共有リンクを使う場合は、有効期間とパスワードを設定する項目があります。</p>
+<h3 id="録音を消せば-情報漏洩の心配はなくなりますか">録音を消せば、情報漏洩の心配はなくなりますか</h3>
+<p>Nottaでは、削除したノートはゴミ箱に30日間残り、その後完全に削除されます。ゴミ箱から手動で完全に削除することもできます。法人契約FAQにはバックアップを最大180日間保存するとの記載もあるため、社内の保存期間ルールとの関係は営業担当や自社の担当部署に確認してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>公表事例の経路は「共有の範囲」「残り続ける記録」「学習への利用」。AI文字起こしツールそのものからの国内の漏えい公表は確認範囲では見つからなかった</li><li>Nottaでは外部共有の無効化がビジネス以上、「AI学習なし」がビジネス Plus（年64,800円・税抜）以上と士業向け特別プラン、操作ログと自動削除がエンタープライズ</li><li>個人情報保護委員会は「機械学習に利用しないこと等を十分に確認すること」を求めている。個人データを含む会議なら、学習なしのプランと共有の制限を先に決める（2026年10月25日に公式ページで確認）</li></ul>
+<p>※本記事は各機関の公表資料とNottaの公開ページを2026年10月25日に確認して整理したもので、法的な助言ではありません。個別の判断は弁護士等の専門家や社内の担当部署に確認してください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../recruit-interview-consent/">採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点</a></li><li><a href="../sangyoi-interview-recording/">産業医面談の録音をAIで文字起こしする前に｜健康情報の取扱規程3点</a></li><li><a href="../transcription-mfa-access/">文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策</a></li><li><a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定｜Nottaは消すまで無期限</a></li><li><a href="../transcription-sso-saml/">文字起こしのSSO・SAMLは法人に必須か｜Nottaはエンタープライズのみ</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../recruit-interview-consent/">採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点</a></li><li><a href="../sangyoi-interview-recording/">産業医面談の録音をAIで文字起こしする前に｜健康情報の取扱規程3点</a></li><li><a href="../transcription-data-leak/">AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算</a></li><li><a href="../transcription-mfa-access/">文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策</a></li><li><a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定｜Nottaは消すまで無期限</a></li><li><a href="../transcription-sso-saml/">文字起こしのSSO・SAMLは法人に必須か｜Nottaはエンタープライズのみ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

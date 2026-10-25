@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策｜AIツール実用ガイド</title>
+<meta name="description" content="社内規程で多要素認証を求められた法人向け。Nottaの法人FAQにある「多要素認証は非対応」の一文と、代わりに使えるIP制限・SSO・ログイン履歴のプラン条件を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/transcription-mfa-access/">
+<meta property="og:title" content="文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策｜AIツール実用ガイド">
+<meta property="og:description" content="社内規程で多要素認証を求められた法人向け。Nottaの法人FAQにある「多要素認証は非対応」の一文と、代わりに使えるIP制限・SSO・ログイン履歴のプラン条件を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策", "description": "社内規程で多要素認証を求められた法人向け。Nottaの法人FAQにある「多要素認証は非対応」の一文と、代わりに使えるIP制限・SSO・ログイン履歴のプラン条件を整理しました。", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/transcription-mfa-access/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策</h1><p class="meta">2026-10-25 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Nottaは法人契約FAQで<strong>「現在、多要素認証・2段階認証には対応しておりません」</strong>と明記しています。社内規程が多要素認証を必須にしているなら、Notta単体では満たせません。代わりに取れる対策は、<strong>接続元を絞るIPアドレス制限（ビジネス以上）</strong>と、<strong>社内のIDプロバイダーでログインをまとめるSAMLシングルサインオン（エンタープライズ）</strong>の2つです。どちらで足りるかは、規程が何を求めているかで決まります。</p>
+<h2 id="Nottaのログインまわりをプラン別に並べる">Nottaのログインまわりをプラン別に並べる</h2>
+<p>2026年10月25日に、Nottaヘルプセンターの「法人契約に関するよくある質問」（2026年8月18日更新）、「Nottaプラン別機能一覧」、「IPアドレス制限の設定方法」、「シングルサインオン（SSO）の設定」、「パスワードの有効期限を設定する」、「ログイン方法」、「操作ログの取得と保存」、法人向けページ、利用規約（2025年8月1日改訂）で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>対策</th><th>公式の記載</th><th>使えるプラン</th><th>注意点</th></tr></thead><tbody><tr><td>多要素認証・2段階認証</td><td>「現在、多要素認証・2段階認証には対応しておりません」（法人契約FAQ）</td><td>―</td><td>通常のログインに追加の認証をかける設定は無い</td></tr><tr><td>パスワードの条件とロック</td><td>8〜20文字で英大文字・英小文字・記号・数字を各1文字以上。5回連続で失敗すると1時間ロック</td><td>全プラン</td><td>ロックされるのはメールアドレスとパスワードでのログイン</td></tr><tr><td>IPアドレス制限</td><td>登録したIPアドレス以外からはアクセスできなくなる</td><td>ビジネスは20個まで、エンタープライズは1,000個まで</td><td>IPv4のみ。4G回線では使わないよう案内あり。設定はオーナーのみ</td></tr><tr><td>SAMLシングルサインオン（SSO）</td><td>Microsoft Azure・Googleの手順をヘルプに掲載</td><td>エンタープライズ</td><td>設定はオーナーのみ。設定していないドメインのユーザーは招待できない</td></tr><tr><td>パスワードの有効期限</td><td>30〜700日で設定（初期値30日）</td><td>エンタープライズ</td><td>SSOが有効なワークスペースでは無効になる</td></tr><tr><td>ログイン履歴</td><td>操作ログの「ログイン」にログイン日時・端末・IPアドレス。過去180日分</td><td>エンタープライズ（オーナー・アドミンが閲覧）</td><td>Excelで出力できる</td></tr></tbody></table></div>
+<p>ビジネス Plusは「ビジネスプランの全機能」に「AIによるデータ学習の無効化」などが加わるプランなので、IPアドレス制限はビジネスと同じく使えます。</p>
+<h2 id="二段階認証-という言葉が出てくる別の機能に注意">「二段階認証」という言葉が出てくる別の機能に注意</h2>
+<p>ヘルプを「二段階認証」で検索すると、エンタープライズの「監査モード」の記事が出てきます。ここに書かれているのは、監査員が監査モードに入るたびにメール認証を求める仕組みで、10分操作が無ければセッションが切れるというものです。対象は<strong>オーナーが申請し、Nottaの審査を通った監査員の閲覧</strong>だけで、社員が普段ログインするときの多要素認証ではありません。チェックシートに「2段階認証あり」と書いてしまわないよう、ここは分けて読む必要があります。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-規程が-多要素認証-そのものを求めているか">1. 規程が「多要素認証」そのものを求めているか</h3>
+<p>まず社内規程の文言を確認します。「多要素認証を必須とする」と書かれているなら、Nottaのログイン画面だけではこれを満たせません。残る道は、SSOでログインを社内のIDプロバイダー（Microsoft Entra IDやGoogle Workspaceなど）に寄せることです。</p>
+<p>ヘルプのSSO記事によると、SSOを有効にするとワークスペース全員がいったんログアウトされ、SSOで再ログインする形になります。また、SSOで設定していないドメインのアカウントは、SSO有効なワークスペースにアクセスできなくなるとあります。IDプロバイダー側で多要素認証をかけている会社なら、その認証を通ってからNottaに入る運用が考えられます。ただし、<strong>IdP側の多要素認証とNottaのSSOを組み合わせた場合の扱いを説明した記述は、今回確認した公式ページにはありませんでした</strong>。規程を満たすかは、見積もりの段階で営業担当に書面で確認してください。SSOと操作ログが要るかどうかの線引きは<a href="../notta-enterprise-vs-business-plus/">Nottaのエンタープライズとビジネス Plusの違い</a>で整理しています。</p>
+<h3 id="2-社外から入れない-ことで要件を満たせるか">2. 「社外から入れない」ことで要件を満たせるか</h3>
+<p>規程が求めているのが「不正ログインの防止」までで、方式を指定していないなら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のIPアドレス制限が現実的な代替になります。ビジネスプランで20個まで登録でき、登録したIPアドレス以外からはワークスペースにアクセスできなくなります。パスワードが漏れても、社外のネットワークからは入れない状態を作れるということです。</p>
+<p>ただし制約もあります。登録できるのはグローバルIPアドレスのIPv4形式だけで、ヘルプは4G回線ではグローバルIPアドレスを指定できないため使わないよう案内しています。外出先のスマートフォンで録音する運用とは両立しにくい点は先に確認しておきます。社外への共有を止める「外部共有の無効化」も同じくビジネス以上の機能です。</p>
+<p>機密情報を扱う会議で使うなら、IPアドレス制限に加えて、音声を学習に回さない設定も同時に満たしておきたいところです。プラン別機能一覧では「AIによるデータ学習の無効化」がビジネス Plusとエンタープライズに載っています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h3 id="3-誰がいつ入ったか-を後から説明する必要があるか">3. 「誰がいつ入ったか」を後から説明する必要があるか</h3>
+<p>監査や事故対応で「いつ、どの端末から、どのIPアドレスでログインしたか」を出す必要があるなら、ログイン履歴を取れるのはエンタープライズの操作ログです。取得できるのは過去180日分です。どの操作まで追えるかの詳細は<a href="../transcription-audit-log/">AI文字起こしの監査ログ</a>にまとめました。</p>
+<p>エンタープライズでは、パスワードに30〜700日の有効期限をかけることもできます。ただしSSOを有効にしたワークスペースではこの設定は無効になる、とヘルプにあります。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQに多要素認証・2段階認証は「現在、対応しておりません」とあります。規程で多要素認証が必須なら、SSOを含めた確認が要ります</li><li><strong>Notta（ビジネス・ビジネス Plus）</strong>：IPアドレス制限はIPv4のみで、4G回線では使わないよう案内されています。外出先の録音が多いチームには合いにくい対策です</li><li><strong>Notta（エンタープライズ）</strong>：SSO・ログイン履歴・パスワード有効期限はこのプランだけで、料金は「要相談」です。見積もりと契約までの時間を見込む必要があります</li><li><strong>他社アカウントでのログイン</strong>：ヘルプには、Google・Microsoft・Appleでログインしている場合でも、パスワードを設定すればメールアドレスとパスワードでログインできるとあります。他社アカウント側の2段階認証だけで、Nottaへの入口がすべて閉じるとは言えません</li><li><strong>この記事の限界</strong>：Nottaのセキュリティページにも認証方式の具体的な記載は無く、公開チェックシートの中身は今回確認していません。社内審査では最新のチェックシートで裏を取ってください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Nottaに2段階認証を設定する方法はありますか">Nottaに2段階認証を設定する方法はありますか</h3>
+<p>2026年10月25日時点で、Nottaの法人契約FAQには「現在、多要素認証・2段階認証には対応しておりません」と書かれています。設定画面の「セキュリティ」にあるのは、IPアドレス制限（ビジネス以上）、SSOやパスワード有効期限（エンタープライズ）などです。対応予定についての公式の記載は確認できませんでした。</p>
+<h3 id="パスワードを何度も間違えるとどうなりますか">パスワードを何度も間違えるとどうなりますか</h3>
+<p>ヘルプ「ログイン方法」によると、5回連続で失敗するとメールアドレスとパスワードでのログインが1時間制限されます。パスワードを再設定してもこの制限は解除されません。なお、利用規約第7条は認証情報を適切に管理する責任を利用者に置いているので、パスワードの使い回しをしない運用は会社側で決めておく必要があります。</p>
+<h3 id="IPアドレス制限を設定すると-在宅勤務の社員はどうなりますか">IPアドレス制限を設定すると、在宅勤務の社員はどうなりますか</h3>
+<p>登録したIPアドレス以外からはアクセスできなくなるので、自宅の回線からは入れなくなります。社内ネットワークに接続してから使う形にするか、必要なIPアドレスを登録する運用を決めておきます。登録数はビジネスで20個、エンタープライズで1,000個までです。社内でツールの利用申請を通すときの項目の埋め方は<a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート</a>も参考にしてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Nottaは法人契約FAQで多要素認証・2段階認証に「現在、対応しておりません」と明記（2026年10月25日に公式ヘルプで確認）</li><li>代わりの対策は、IPアドレス制限（ビジネスで20個まで、IPv4のみ）と、SAMLシングルサインオン（エンタープライズ）。ログイン履歴180日分とパスワード有効期限もエンタープライズのみ</li><li>規程が多要素認証そのものを求めるなら、SSOとIdP側の認証の組み合わせで足りるかを営業担当に確認してから契約する</li></ul>
+<p>※本記事はNottaの公開ページとヘルプセンターを2026年10月25日に確認して整理したもので、社内規程への適合を保証するものではありません。最終的な判断は社内の情報セキュリティ担当や専門家にご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../recruit-interview-consent/">採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点</a></li><li><a href="../sangyoi-interview-recording/">産業医面談の録音をAIで文字起こしする前に｜健康情報の取扱規程3点</a></li><li><a href="../transcription-data-leak/">AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算</a></li><li><a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定｜Nottaは消すまで無期限</a></li><li><a href="../transcription-sso-saml/">文字起こしのSSO・SAMLは法人に必須か｜Nottaはエンタープライズのみ</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../recruit-interview-consent/">採用面接の録音をAIで文字起こしする前に｜応募者の同意と職安法の3点</a></li><li><a href="../sangyoi-interview-recording/">産業医面談の録音をAIで文字起こしする前に｜健康情報の取扱規程3点</a></li><li><a href="../transcription-data-leak/">AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算</a></li><li><a href="../transcription-mfa-access/">文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策</a></li><li><a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定｜Nottaは消すまで無期限</a></li><li><a href="../transcription-sso-saml/">文字起こしのSSO・SAMLは法人に必須か｜Nottaはエンタープライズのみ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
