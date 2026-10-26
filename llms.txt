@@ -11,6 +11,16 @@
 
 ## 記事
 
+- [コールセンターの通話録音をAI文字起こし｜個人情報で確かめる3つの論点](https://nagai-cpu.github.io/ai-tools-jp/callcenter-recording-ai/): コールセンターの通話録音をAIで文字起こししたい担当者向け。個人情報保護委員会のQ&Aで利用目的・委託先の監督・国外提供を確認し、Nottaの電話の取り込み方も公式で確かめました。
+- [歯科医院の問診録音をAI文字起こし｜患者情報で選ぶプランと3つの確認](https://nagai-cpu.github.io/ai-tools-jp/dental-clinic-recording/): 問診やカウンセリングの録音をAIで文字起こししたい小規模な歯科医院向けに、厚労省ガイドラインの保守委託機関編と守秘義務の根拠から、Nottaのどのプランを選ぶかを整理しました。
+- [FP相談の録音をAI文字起こしする守秘の確認点｜協会規程は「利用」も禁止](https://nagai-cpu.github.io/ai-tools-jp/fp-consultation-recording/): 相談を録音してAIで文字起こししたいFP向け。日本FP協会の倫理規程と2026年7月施行の業務基準規程から守秘の3点を確認し、Nottaのどのプランが合うかを公式で整理。
+- [Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間](https://nagai-cpu.github.io/ai-tools-jp/notion-ai-meeting-notes-training/): Notion AIのミーティングノートの音声や文字起こしがAI学習に使われるかを公式ヘルプで確認。プランで変わる保持期間と自動削除、日本語対応の条件も整理しました。
+- [Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲](https://nagai-cpu.github.io/ai-tools-jp/otter-ai-data-training/): Otter.aiの規約とプライバシーポリシーで、会議の音声や文字起こしがAI学習に使われるかを確認。設定で止まる範囲、エンタープライズの扱い、日本語対応の条件を整理。
+- [社会福祉士のケース記録を録音からAI文字起こし｜同意と要配慮個人情報](https://nagai-cpu.github.io/ai-tools-jp/shakaifukushishi-case-record/): 面接を録音してケース記録をAIで作りたい社会福祉士向け。社会福祉士法第46条と日本社会福祉士会の倫理綱領・行動規範から同意・記録・要配慮個人情報の扱いを整理し、Nottaの条件も確認しました。
+- [中小企業診断士のヒアリング録音とAI文字起こし｜守秘義務は法律でなく省令に](https://nagai-cpu.github.io/ai-tools-jp/shindanshi-hearing-recording/): ヒアリングを録音してAIで文字起こししたい中小企業診断士向け。守秘義務の所在を中小企業支援法・登録規則・協会の倫理規程で確認し、Nottaの条件と照らしました。
+- [文字起こしAIのオプトアウト設定一覧｜学習を止める場所とプラン条件](https://nagai-cpu.github.io/ai-tools-jp/transcription-optout-settings/): 文字起こしAIの学習を止めたい人向け。Notta・Zoom・Microsoft・Google・tl;dv・Otterで止める設定の場所と、プランで可否が変わるかを公式で一覧化。
+- [AI文字起こしの利用規約、学習条項の読み方｜主語・対象・条件の3か所を見る](https://nagai-cpu.github.io/ai-tools-jp/transcription-terms-reading/): AI文字起こしの規約で録音が学習に使われるか確かめたい人向け。Notta・Zoom・Microsoft・Google・Otterの原文で主語・対象・条件の読み方を整理。
+- [薬剤師の服薬指導を録音・AI文字起こし｜患者情報と記録義務の3論点](https://nagai-cpu.github.io/ai-tools-jp/yakuzaishi-medication-recording/): 服薬指導の会話を録音してAIで文字起こしし、薬歴づくりに使いたい薬局向けに、刑法・薬剤師法・薬機法の条文と厚労省ガイドラインから、残す範囲・学習・端末の3点を整理しました。
 - [Catchyの領収書とインボイス｜発行手順と経費にする前の確認点](https://nagai-cpu.github.io/ai-tools-jp/catchy-receipt/): Catchyの利用料を経費にしたい個人事業主・会社員向けに、領収書PDFの出し方、インボイス対応の公式の記載、請求書払いの条件、解約後の発行方法を公式ヘルプで確認して整理しました。
 - [CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版](https://nagai-cpu.github.io/ai-tools-jp/catchy-vs-chatgpt/): CatchyとChatGPTで迷っている人向けに、両方の公式料金ページを2026年10月26日に確認し、無料枠・有料の価格・入力の仕方・支払い方法の違いと、どちらを選ぶかの判断軸を整理しました。
 - [議会の会議録をAI文字起こしして公開する前に｜取消し発言と委員会記録](https://nagai-cpu.github.io/ai-tools-jp/council-minutes-ai/): 議会事務局で本会議や委員会の会議録をAI文字起こしで作り、公開したい人向け。地方自治法と会議規則・委員会条例の例から、公開版に載せない発言と委員会記録の粒度、Nottaの条件を整理しました。

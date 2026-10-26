@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲｜AIツール実用ガイド</title>
+<meta name="description" content="Otter.aiの規約とプライバシーポリシーで、会議の音声や文字起こしがAI学習に使われるかを確認。設定で止まる範囲、エンタープライズの扱い、日本語対応の条件を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/otter-ai-data-training/">
+<meta property="og:title" content="Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲｜AIツール実用ガイド">
+<meta property="og:description" content="Otter.aiの規約とプライバシーポリシーで、会議の音声や文字起こしがAI学習に使われるかを確認。設定で止まる範囲、エンタープライズの扱い、日本語対応の条件を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲", "description": "Otter.aiの規約とプライバシーポリシーで、会議の音声や文字起こしがAI学習に使われるかを確認。設定で止まる範囲、エンタープライズの扱い、日本語対応の条件を整理。", "datePublished": "2026-10-27", "dateModified": "2026-10-27", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/otter-ai-data-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲</h1><p class="meta">2026-10-27 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Otter.aiはプライバシーポリシーで、<strong>匿名化した音声と文字起こしを自社のAIの学習に使う</strong>ことを利用目的に挙げています。人が音声を聞くのは利用者の明示的な同意がある場合だけで、外部のAI事業者は学習に使わない、とも書いています。設定画面の「Help improve Otter」で止められるのは、人のレビューを含む会話へのアクセスです。組織として学習から外すには、エンタープライズで担当者に申し込む形になります。日本語は文字起こしに対応していますが、画面は英語のままです。</p>
+<h2 id="公式ページの記載を並べた">公式ページの記載を並べた</h2>
+<p>2026年10月27日に、Otter.aiのPrivacy Policy（2026年6月16日発効）、Terms of Service（2025年9月19日発効）、Privacy &amp; Securityページ、料金ページ、エンタープライズのページ、ヘルプセンターの「Provide feedback to Otter」「Supported languages」、日本語などの言語設定の記事、「Data security and privacy policies」「Otter AI Chat FAQs」で確認した内容です。原文は英語のため、要旨を日本語で書いています。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>Basic（無料）</th><th>Pro</th><th>Business</th><th>Enterprise</th></tr></thead><tbody><tr><td>料金（1ユーザー月額・米ドル）</td><td>無料</td><td>16.99ドル（月払い）・8.33ドル（年払い）</td><td>30ドル（月払い）・19.99ドル（年払い）</td><td>デモの申し込み</td></tr><tr><td>日本語の文字起こし</td><td>対応</td><td>対応</td><td>対応</td><td>対応</td></tr><tr><td>自社AIの学習</td><td>匿名化した音声と文字起こしを学習に使うとポリシーに記載（プランの条件は書かれていない）</td><td>同左</td><td>同左</td><td>担当者経由で「AI model training opt-out」を案内</td></tr><tr><td>人のレビュー</td><td>明示的な同意が前提。「Help improve Otter」で許可・不許可を選ぶ</td><td>同左</td><td>同左</td><td>同左</td></tr><tr><td>外部AI事業者の学習</td><td>使わない</td><td>使わない</td><td>使わない</td><td>使わない</td></tr><tr><td>SSO・SCIM</td><td>料金表ではEnterpriseの欄に記載</td><td>同左</td><td>同左</td><td>料金表に記載あり</td></tr></tbody></table></div>
+<p>料金ページでは、月払いのBusiness（30ドル）に「3か月20%オフ」の案内が付いていました。キャンペーンは変わるので、契約時に最新の表示を確認してください。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-匿名化して学習-を規程が許すか">1. 「匿名化して学習」を規程が許すか</h3>
+<p>プライバシーポリシーの利用目的には、サービスの改善と監視の例として、匿名化した音声録音と、個人情報を含みうる文字起こしで自社のAIを学習させることが挙がっています。Privacy &amp; Securityページでは、独自の方法で匿名化してから学習させ、この処理は自動なので音声と文字起こしを人が確認することはない、学習用データは暗号化している、と説明しています。</p>
+<p>利用規約の第9.9条にも、サービスの提供の過程で機械学習を使い、モデルやアルゴリズムの改善を妨げない趣旨の条文があります。第18.4条は、集計・匿名化したデータを機械学習や学習を含む事業目的に使えるとしています。</p>
+<p>社内規程が「入力した情報をAIの学習に使わないこと」を条件にしている場合、匿名化されていれば許されるのか、学習そのものを禁じているのかで結論が変わります。この読み方は情報セキュリティ担当に確認してから選ぶのが確実です。比較の観点は<a href="../no-ai-training-transcription-comparison/">AI学習なしの文字起こしツール比較</a>にまとめています。</p>
+<h3 id="2-設定の-Help-improve-Otter-で何が止まるか">2. 設定の「Help improve Otter」で何が止まるか</h3>
+<p>ヘルプ「Provide feedback to Otter」によると、Account Settings → Meetings → Feedback and Training に「Help improve Otter」という項目があります。「Allow sharing」にすると、Otterと外部の事業者が、学習と製品改善のためにアカウント内のすべての会話にアクセスでき、人のレビューも含みます。「Don't allow sharing」なら、フィードバックを送っても会話にはアクセスしない、とあります。</p>
+<p>ここで注意したいのは、この設定とプライバシーポリシーの「匿名化して学習」の関係です。<strong>「Don't allow sharing」にすれば匿名化した学習も止まるのかは、今回確認した公式ページには書かれていませんでした</strong>。組織として学習から外したい場合、エンタープライズのページに「AI model training opt-out」とあり、担当者に連絡して始める形です。Business以下で同じことができるかは確認できませんでした。</p>
+<h3 id="3-日本語の会議をどう録るか">3. 日本語の会議をどう録るか</h3>
+<p>ヘルプでは、文字起こしに対応する言語は英語・スペイン語・フランス語・ドイツ語・日本語・中国語（簡体字）の6つです。日本語は既定の言語として選んでから録音します。ヘルプには次の制約が書かれています。</p>
+<ul><li>1回の会話で文字起こしできる言語は1つ。英語と同時に処理できるのはフランス語だけ</li><li>録音の途中で言語を切り替えても、開始時の言語のまま処理される。録音後に別の言語で処理し直すことはできず、音声を書き出して再インポートする</li><li>言語を変えても、設定やメニューなどの画面は英語のまま</li></ul>
+<p>データの保存先は、ヘルプ「Data security and privacy policies」にAWSの米国西部リージョンと書かれています。保存場所を問われる審査では、<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？</a>の観点もあわせて確認してください。</p>
+<h2 id="Nottaの上位プランが選択肢になる条件">Nottaの上位プランが選択肢になる条件</h2>
+<p>英語の会議が中心で、エンタープライズ契約を結べるなら、Otter.aiには学習から外す道があります。次の条件が重なるなら、日本語の会議を前提にしたツールと比べる価値があります。</p>
+<ul><li>規程が匿名化の有無を問わず、学習に使わないことを求めている</li><li>エンタープライズの規模ではないが、学習なしを契約の段階で確定させたい</li><li>社員が日本語の画面で使えることを導入の条件にしている</li></ul>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約（2025年8月1日改訂）には、音声認識エンジンのパートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合がある、と書かれています。下位プランに学習の余地がある点はOtterと同じ方向で、違いは法人向けページで「AI学習なし」が<strong>価格の公開されたプランの機能として</strong>載っていることで、ビジネス Plus（年64,800円・税抜、月額換算5,400円）が該当します。エンタープライズと士業向け特別プランにも同じ記載があります。ビジネス Plusで増える機能は<a href="../notta-business-plus/">Nottaビジネス Plusとビジネスの違い</a>で整理しています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Otter.ai（全プラン）</strong>：プライバシーポリシーは匿名化した音声と文字起こしの学習を利用目的に挙げています。設定で止まる範囲と、匿名化した学習との関係は公式に明記がありませんでした</li><li><strong>Otter.ai（日本語）</strong>：文字起こしは1会話1言語で、画面は英語のままです。規約やポリシーの正文も英語です</li><li><strong>Otter.ai（Enterprise）</strong>：学習のオプトアウトは担当者経由で、料金はデモの申し込みからです</li><li><strong>Notta（ビジネス以下）</strong>：利用規約の「ご利用のプランに応じて」の範囲に入るため、学習なしを条件にするとビジネス Plus以上になり、費用が上がります</li><li><strong>Notta（全プラン）</strong>：法人契約FAQで多要素認証・2段階認証は「現在、対応しておりません」とされています。認証要件がある会社は<a href="../transcription-mfa-access/">文字起こしの多要素認証とアクセス制限</a>で代替策を確認してください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Otter-aiの無料プランだと-会議の内容が学習に使われますか">Otter.aiの無料プランだと、会議の内容が学習に使われますか</h3>
+<p>プライバシーポリシーの「匿名化した音声と文字起こしで学習する」という記載には、プランの条件が付いていません。無料のBasicでも、有料のProやBusinessでも、同じポリシーが適用されると読めます。人のレビューについては、どのプランでも「Help improve Otter」の設定と明示的な同意が前提です。</p>
+<h3 id="Otter-aiのAIチャットに入れた質問は-外部のAIの学習に使われますか">Otter.aiのAIチャットに入れた質問は、外部のAIの学習に使われますか</h3>
+<p>ヘルプのAI Chat FAQでは、外部のAI事業者はユーザーのデータを学習に使わないと答えています。データが外部に送られるのは、利用者がAI Chatに質問したときだけです。Privacy &amp; Securityページにも、外部AI事業者はAPI経由のデータを保存しないと書かれています。</p>
+<h3 id="Otter-aiで削除した会話はいつ消えますか">Otter.aiで削除した会話はいつ消えますか</h3>
+<p>削除した会話はゴミ箱に移り、30日後に自動で削除されます。ゴミ箱から手動で消した場合は、その時点で削除されます。消し方の考え方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>でも扱っています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Otter.aiはプライバシーポリシーで、匿名化した音声と文字起こしを自社AIの学習に使うと明記。外部AI事業者は学習に使わず、人のレビューは明示的な同意が前提</li><li>設定の「Help improve Otter」で止まるのは人のレビューを含む会話へのアクセス。組織として学習から外すのはエンタープライズの「AI model training opt-out」で、Business以下での可否は確認できなかった</li><li>日本語は文字起こしのみ対応で画面は英語。学習なしを日本語の画面で確定させたいなら、Nottaは「AI学習なし」が明記されたビジネス Plus以上で比べる（2026年10月27日に公式ページで確認）</li></ul>
+<p>※本記事はOtter.aiとNottaの公開ページを2026年10月27日に確認して整理したもので、法的な助言ではありません。社内規程や守秘義務に当たるかどうかは、社内の情報セキュリティ担当や顧問弁護士にご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../callcenter-recording-ai/">コールセンターの通話録音をAI文字起こし｜個人情報で確かめる3つの論点</a></li><li><a href="../dental-clinic-recording/">歯科医院の問診録音をAI文字起こし｜患者情報で選ぶプランと3つの確認</a></li><li><a href="../fp-consultation-recording/">FP相談の録音をAI文字起こしする守秘の確認点｜協会規程は「利用」も禁止</a></li><li><a href="../notion-ai-meeting-notes-training/">Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間</a></li><li><a href="../shakaifukushishi-case-record/">社会福祉士のケース記録を録音からAI文字起こし｜同意と要配慮個人情報</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../callcenter-recording-ai/">コールセンターの通話録音をAI文字起こし｜個人情報で確かめる3つの論点</a></li><li><a href="../dental-clinic-recording/">歯科医院の問診録音をAI文字起こし｜患者情報で選ぶプランと3つの確認</a></li><li><a href="../fp-consultation-recording/">FP相談の録音をAI文字起こしする守秘の確認点｜協会規程は「利用」も禁止</a></li><li><a href="../notion-ai-meeting-notes-training/">Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間</a></li><li><a href="../otter-ai-data-training/">Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲</a></li><li><a href="../shakaifukushishi-case-record/">社会福祉士のケース記録を録音からAI文字起こし｜同意と要配慮個人情報</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間｜AIツール実用ガイド</title>
+<meta name="description" content="Notion AIのミーティングノートの音声や文字起こしがAI学習に使われるかを公式ヘルプで確認。プランで変わる保持期間と自動削除、日本語対応の条件も整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/notion-ai-meeting-notes-training/">
+<meta property="og:title" content="Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間｜AIツール実用ガイド">
+<meta property="og:description" content="Notion AIのミーティングノートの音声や文字起こしがAI学習に使われるかを公式ヘルプで確認。プランで変わる保持期間と自動削除、日本語対応の条件も整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間", "description": "Notion AIのミーティングノートの音声や文字起こしがAI学習に使われるかを公式ヘルプで確認。プランで変わる保持期間と自動削除、日本語対応の条件も整理しました。", "datePublished": "2026-10-27", "dateModified": "2026-10-27", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/notion-ai-meeting-notes-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間</h1><p class="meta">2026-10-27 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Notionは公式ヘルプで「デフォルトでは、顧客データはモデルの学習に使用されません」と書いており、AI事業者にも契約で学習を禁じています。この点はフリーからエンタープライズまで同じです。プランで変わるのは、<strong>AI事業者側にデータが残る期間（ビジネス以下は30日以内、エンタープライズはゼロデータ保持）</strong>と、<strong>文字起こしを自動で消す設定（エンタープライズのみ）</strong>の2つです。機密情報を扱う会議で迷うのは、学習よりもこちらの方です。</p>
+<h2 id="公式ページの記載をプラン別に並べた">公式ページの記載をプラン別に並べた</h2>
+<p>2026年10月27日に、Notionヘルプセンターの「Notion AIのセキュリティとプライバシー対策」「AIミーティングノート」、Notionの料金ページ（日本語）、セキュリティページで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>フリー・プラス</th><th>ビジネス</th><th>エンタープライズ</th></tr></thead><tbody><tr><td>料金（1メンバーあたり月額・税抜）</td><td>0円／プラス1,650円（年払い）・2,000円（月払い）</td><td>3,150円（年払い）・3,800円（月払い）</td><td>営業窓口へ問い合わせ</td></tr><tr><td>AIミーティングノート</td><td>料金表では「制限あり」</td><td>利用可</td><td>利用可</td></tr><tr><td>顧客データのモデル学習</td><td>デフォルトで使用しない</td><td>デフォルトで使用しない</td><td>デフォルトで使用しない</td></tr><tr><td>AI事業者側のデータ保持</td><td>30日間またはそれ以下</td><td>30日間またはそれ以下</td><td>ほとんどのモデルでゼロデータ保持</td></tr><tr><td>文字起こしの自動削除スケジュール</td><td>―</td><td>―</td><td>ワークスペースオーナーが設定</td></tr><tr><td>SAML SSO</td><td>料金表ではビジネス以上の欄に記載</td><td>料金表に記載あり</td><td>料金表に記載あり</td></tr></tbody></table></div>
+<p>ミーティングノートの利用条件は、ヘルプには「ビジネスプランまたはエンタープライズプラン」と書かれ、料金表ではフリーとプラスに「制限あり」とあります。お試しの範囲で使えるという意味に読めますが、回数などの上限は今回確認したページには書かれていませんでした。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-規程が求めているのが-学習に使わない-だけか">1. 規程が求めているのが「学習に使わない」だけか</h3>
+<p>社内規程の条件が「入力した情報がAIの学習に使われないこと」だけなら、Notionはどのプランでも根拠となる一文を示せます。セキュリティのヘルプには、NotionもAI事業者も顧客データをモデルの学習に使わず、この禁止は推論を提供する事業者を含むチェーン内のすべての事業者に書面の契約で適用される、とあります。日本語の公式ヘルプがあるので、申請書に引用しやすい点は助かります。</p>
+<p>一方で、表現は「デフォルトでは」です。料金ページのよくある質問には、お客様がデータの共有に同意しない限り学習に使わないと書かれています。どの操作が「共有への同意」に当たるのかは、今回確認したページでは特定できませんでした。社内の利用ルールで「データ共有に同意するボタンを押さない」と決めておくか、契約前に営業窓口へ書面で確認しておくと安全です。なお、AIの回答に付けるフィードバック（親指アイコン）は、FAQに学習には使わないと明記されています。</p>
+<h3 id="2-AI事業者に何日残るか-まで問われるか">2. 「AI事業者に何日残るか」まで問われるか</h3>
+<p>情報セキュリティの審査では、学習の有無に加えて「外部の事業者にデータが残るか」を聞かれることがあります。ここはプランで答えが変わります。フリー・プラス・ビジネスでは、AI事業者がデータを30日間またはそれ以下の期間保持してから削除します。エンタープライズでは、ほとんどのモデルがゼロデータ保持で、保持するモデルは初期状態でオフになっていて、ワークスペースオーナーがオプトインしたときだけ使われます。</p>
+<p>AIミーティングノートの音声については別の説明があります。デスクトップアプリやブラウザでは音声がリアルタイムでサブプロセッサーに送られ、サブプロセッサーは音声を保存しません。処理に失敗したときは、再試行のためにNotionが最大3日間保持します。モバイルアプリでは音声がいったんNotionのサーバーに上がり、処理が終わると直ちに削除されます。残るのは文字起こしと要約で、これはページを消すまでワークスペースに残ります。エンタープライズなら、要約とメモを残して文字起こしだけを決めた日程で自動削除できます。保存期間の考え方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>で整理しています。</p>
+<h3 id="3-日本語の会議を-どの端末でどう録るか">3. 日本語の会議を、どの端末でどう録るか</h3>
+<p>AIミーティングノートの対応言語には日本語が入っています。ただし、FAQには<strong>話者のラベル付けは現在、英語でのみ利用可能</strong>とあります。日本語の会議では、誰の発言かを後から自分で付ける前提になります。</p>
+<p>録り方にも条件があります。オンライン会議の相手の声まで拾うには、デスクトップアプリでシステム音声を取り込む必要があります。ブラウザではマイクの音声だけが対象で、ヘッドフォンを使うとビデオ通話の相手の声は取り込まれません。モバイルアプリは対面の会議向けです。録音前には参加者の同意を取るよう求められ、同意メッセージを音声で自動再生する設定もあります。同意の取り方は<a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？</a>にまとめています。</p>
+<h2 id="Nottaの上位プランが選択肢になる条件">Nottaの上位プランが選択肢になる条件</h2>
+<p>Notionを全社のワークスペースとして使っているなら、ミーティングノートは会議の記録をそのまま社内のページに残せるのが強みで、学習の点でも根拠の一文があります。そのうえで、次のような条件なら、文字起こし専用のツールを別に検討する意味があります。</p>
+<ul><li>Notionを社内で使っておらず、会議の記録だけのためにビジネスプランを全員分契約することになる</li><li>社外のZoomやTeamsの会議、電話、ICレコーダーの音声ファイルなど、録音の入口が多い</li><li>AI学習なしをプランの機能として明記したものを、価格が公開された形で選びたい</li></ul>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約（2025年8月1日改訂）には、音声認識エンジンのパートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合がある、とあります。Notionと違って、<strong>プランによって学習の扱いが変わる</strong>という書き方です。法人向けページで「AI学習なし」が機能として載っているのは、ビジネス Plus（年64,800円・税抜、月額換算5,400円）、エンタープライズ、士業向け特別プランでした。下位のビジネスプランには載っていないので、機密情報を扱う会議に使うならビジネス Plus以上を前提に比べます。差額で何が増えるかは<a href="../notta-business-plus/">Nottaビジネス Plusとビジネスの違い</a>にあります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notion（全プラン）</strong>：学習しない旨は「デフォルトでは」という書き方で、どの操作がデータ共有への同意に当たるかは今回確認したページでは分かりませんでした</li><li><strong>Notion（フリー・プラス・ビジネス）</strong>：AI事業者側に最大30日間データが残ります。ゼロデータ保持が必要ならエンタープライズの見積もりになります</li><li><strong>Notion（日本語の会議）</strong>：話者のラベル付けは英語のみです。オンライン会議の相手の声を拾うにはデスクトップアプリが要ります</li><li><strong>Notta（ビジネス以下）</strong>：利用規約の「ご利用のプランに応じて」の範囲に入るため、AI学習なしを条件にするならビジネス Plus以上になり、費用が上がります</li><li><strong>Notta（エンタープライズ・士業向け）</strong>：問い合わせ型で、条件は個別に書面で確認する必要があります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Notion-AIの無料プランでも-会議の内容は学習に使われませんか">Notion AIの無料プランでも、会議の内容は学習に使われませんか</h3>
+<p>セキュリティのヘルプにある「デフォルトでは、顧客データはモデルの学習に使用されません」という記載に、プランの条件は付いていません。無料プランで変わるのは、ミーティングノートが「制限あり」であることと、AI事業者側の保持が30日以内である点です。無料版を業務で使うときの一般的な注意は<a href="../free-transcription-risk/">AI文字起こし無料版を会社で使う危険は？</a>でも扱っています。</p>
+<h3 id="Notionの会議メモの録音データは-どこかに保存されますか">Notionの会議メモの録音データは、どこかに保存されますか</h3>
+<p>ライブ録音の音声は、文字起こしのあとサーバー側には残らない設計とヘルプにあります。例外は処理に失敗した場合の最大3日間です。端末側の保存は「音声をローカルに保存」の設定で、全プランで初期状態はオフです。オンにすると、録音した人の端末に直近10件が残ります。一方、自分でアップロードした音声や動画のファイルは、削除するまでNotionのサーバーに保存されます。</p>
+<h3 id="Notionの文字起こしを-決まった期間で自動的に消せますか">Notionの文字起こしを、決まった期間で自動的に消せますか</h3>
+<p>自動削除のスケジュールを設定できるのは、エンタープライズプランのワークスペースオーナーです。ビジネス以下では、ブロックから文字起こしを削除するか、ページごと削除する手作業になります。消したページはワークスペースのデータ保持設定に従い、30日以内なら復元できます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Notionは全プランで「デフォルトでは」顧客データをモデル学習に使わないと明記。AI事業者にも契約で学習を禁止している</li><li>プランで変わるのは、AI事業者側の保持（ビジネス以下は30日以内、エンタープライズはほぼゼロデータ保持）と文字起こしの自動削除（エンタープライズのみ）。日本語は使えるが話者ラベルは英語のみ</li><li>Notionを使っていない会社が機密の会議を文字起こしするなら、Nottaは「AI学習なし」が明記されたビジネス Plus以上で比べる（2026年10月27日に公式ページで確認）</li></ul>
+<p>※本記事はNotionとNottaの公開ページを2026年10月27日に確認して整理したもので、法的な助言ではありません。社内規程や契約上の守秘義務に当たるかどうかは、社内の情報セキュリティ担当や顧問弁護士にご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../callcenter-recording-ai/">コールセンターの通話録音をAI文字起こし｜個人情報で確かめる3つの論点</a></li><li><a href="../dental-clinic-recording/">歯科医院の問診録音をAI文字起こし｜患者情報で選ぶプランと3つの確認</a></li><li><a href="../fp-consultation-recording/">FP相談の録音をAI文字起こしする守秘の確認点｜協会規程は「利用」も禁止</a></li><li><a href="../otter-ai-data-training/">Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲</a></li><li><a href="../shakaifukushishi-case-record/">社会福祉士のケース記録を録音からAI文字起こし｜同意と要配慮個人情報</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../callcenter-recording-ai/">コールセンターの通話録音をAI文字起こし｜個人情報で確かめる3つの論点</a></li><li><a href="../dental-clinic-recording/">歯科医院の問診録音をAI文字起こし｜患者情報で選ぶプランと3つの確認</a></li><li><a href="../fp-consultation-recording/">FP相談の録音をAI文字起こしする守秘の確認点｜協会規程は「利用」も禁止</a></li><li><a href="../notion-ai-meeting-notes-training/">Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間</a></li><li><a href="../otter-ai-data-training/">Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲</a></li><li><a href="../shakaifukushishi-case-record/">社会福祉士のケース記録を録音からAI文字起こし｜同意と要配慮個人情報</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a></p>
+</div></footer>
+</body>
+</html>
