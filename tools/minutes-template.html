@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>議事録テンプレート作成ツール｜会議の種類を選ぶだけでコピーできる無料フォーマット｜AIツール実用ガイド</title>
+<meta name="description" content="議事録テンプレートを会議の種類（定例・1on1・商談・面接など）から無料で作ってコピーできます。Word・メール向けのテキスト、Markdown、AIに渡す指示文の3形式。入力はブラウザ内で処理し、外部に送りません。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/tools/minutes-template.html">
+<meta property="og:title" content="議事録テンプレート作成ツール">
+<meta property="og:description" content="会議の種類を選ぶと見出し付きの議事録テンプレートが出て、そのままコピーできます。">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"議事録テンプレート作成ツール","url":"https://nagai-cpu.github.io/ai-tools-jp/tools/minutes-template.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"dateModified":"2026-10-28"}</script>
+<style>
+:root{
+--bg:#ffffff;--panel:#ffffff;--soft:#f6f8fa;--fg:#1a1d21;--muted:#5c6570;
+--line:#e4e7eb;--accent:#0f6fd6;--accent-fg:#ffffff;
+--ok:#2f6b4f;--ok-soft:#e8f2ec;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--no:#6b7280;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.8;font-size:16.5px;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-variant-numeric:tabular-nums;overflow-x:hidden}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
+.lead{color:var(--muted);font-size:.95rem;margin-bottom:1.6rem}
+h2{font-size:1.2rem;margin:2.4rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+p{margin:0 0 1.05rem}
+a{color:var(--accent)}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+form{background:var(--soft);border:1px solid var(--line);border-radius:11px;
+padding:1.2rem 1.15rem;display:flex;flex-direction:column;gap:1.3rem}
+fieldset{border:0;display:flex;flex-direction:column;gap:.45rem}
+legend{font-weight:700;font-size:.92rem;margin-bottom:.45rem}
+.opt{display:flex;align-items:flex-start;gap:.55rem;background:var(--panel);border:1px solid var(--line);
+border-radius:8px;padding:.6rem .75rem;cursor:pointer;font-size:.93rem;line-height:1.6}
+.opt input{margin-top:.32rem;accent-color:var(--accent);flex:none}
+.opt:has(input:checked){border-color:var(--accent)}
+.hint{font-size:.78rem;color:var(--muted);line-height:1.6}
+#out{margin-top:1.9rem}
+.verdict{border:1px solid var(--line);border-left:4px solid var(--accent);
+background:var(--panel);border-radius:0 9px 9px 0;padding:1.05rem 1.15rem;margin-bottom:1.3rem}
+.verdict h3{font-size:1.05rem;margin-bottom:.4rem}
+.verdict .sub{font-size:.88rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:10px;padding:.95rem 1.05rem;margin-bottom:.8rem;background:var(--panel)}
+.card h4{font-size:1rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.badge{font-size:.72rem;font-weight:700;border-radius:4px;padding:.08rem .45rem;border:1px solid currentColor;white-space:nowrap}
+.b-ok{color:var(--ok);background:var(--ok-soft)}
+.b-cond{color:var(--warn);background:var(--warn-bg)}
+.b-no{color:var(--no)}
+.card.no{opacity:.72}
+.card .why{font-size:.88rem;margin-bottom:.45rem}
+.card blockquote{border-left:3px solid var(--line);padding:.1rem 0 .1rem .8rem;color:var(--muted);font-size:.83rem;margin:0 0 .4rem}
+.card .src{font-size:.75rem;color:var(--muted)}
+.card .src a{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.93rem;padding:.6rem 1.15rem;border-radius:7px;margin-top:.3rem}
+.ctabox{border:1px solid var(--line);border-radius:11px;padding:1rem 1.1rem;margin:1.4rem 0;background:var(--soft)}
+.ctabox .h{font-weight:700;display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:.05rem .3rem;background:var(--bg)}
+.ctabox p{font-size:.88rem;color:var(--muted);margin-bottom:.6rem}
+.note{font-size:.88rem;line-height:1.85}
+.note li{margin:0 0 .5rem 1.2rem}
+.small{font-size:.8rem;color:var(--muted)}
+footer.site{margin-top:3.5rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+@media(max-width:600px){body{font-size:16px}h1{font-size:1.42rem}}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field label{font-weight:700;font-size:.92rem}
+.row{display:flex;align-items:center;gap:.6rem}
+input[type=number],select{flex:1;min-width:0;font:inherit;font-size:1.05rem;padding:.55rem .7rem;
+border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--fg)}
+input[type=number]:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.unit{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.tw{overflow-x:auto;margin:0 0 1.3rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:30rem;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+td.n{white-space:nowrap}
+tr.pick td{background:var(--ok-soft);font-weight:600}
+h3.h3{font-size:1.02rem;margin:1.6rem 0 .7rem}
+textarea#tpl{width:100%;min-height:22rem;font:inherit;font-size:.9rem;line-height:1.7;padding:.8rem .9rem;
+border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--fg);resize:vertical;
+font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Hiragino Kaku Gothic ProN",monospace}
+.chk{display:flex;align-items:center;gap:.5rem;font-size:.93rem}
+.chk input{accent-color:var(--accent)}
+.copyrow{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:.7rem 0 1.2rem}
+button.btn{border:0;cursor:pointer;font:inherit;font-weight:600;font-size:.93rem}
+#copied{font-size:.85rem;color:var(--ok)}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+
+<div class="wrap">
+<h1>議事録テンプレート作成ツール</h1>
+<p class="lead">会議の種類を選ぶと、その会議で残すべき見出しを並べた議事録テンプレートが出ます。Word やメールに貼るテキスト、Markdown、AI に要約させるときの指示文の3つの形でコピーできます。</p>
+
+<div class="pr-note">このページにはアフィリエイト広告（PR）を含みます。テンプレートの中身は広告と関係なく作っており、報酬で内容を変えることはしていません。選んだ内容はブラウザの中で組み立て、どこにも送信しません。</div>
+
+<form id="f" autocomplete="off">
+  <div class="field">
+    <label for="kind">会議の種類</label>
+    <div class="row"><select id="kind">
+      <option value="teirei" selected>定例会議（部署・チームの週次）</option>
+      <option value="asakai">朝会・短いミーティング</option>
+      <option value="oneonone">1on1（上司と部下の面談）</option>
+      <option value="shodan">商談・顧客との打ち合わせ</option>
+      <option value="kickoff">プロジェクトのキックオフ</option>
+      <option value="furikaeri">振り返り（レトロスペクティブ）</option>
+      <option value="brainstorm">企画会議・ブレスト</option>
+      <option value="keiei">経営会議・役員会（社内用の記録）</option>
+      <option value="mensetsu">採用面接</option>
+      <option value="hearing">ヒアリング・相談の聞き取り</option>
+    </select></div>
+  </div>
+  <div class="field">
+    <label for="fmt">出力の形</label>
+    <div class="row"><select id="fmt">
+      <option value="text" selected>テキスト（Word・メール・チャットに貼る）</option>
+      <option value="md">Markdown（Notion・GitHub・Obsidian などに貼る）</option>
+      <option value="ai">AIへの指示文（文字起こしと一緒に貼って要約させる）</option>
+    </select></div>
+  </div>
+  <fieldset>
+    <legend>入れる欄</legend>
+    <label class="chk"><input type="checkbox" id="o-head" checked> 日時・場所・参加者・記録者</label>
+    <label class="chk"><input type="checkbox" id="o-todo" checked> 宿題（担当・期限）の一覧</label>
+    <label class="chk"><input type="checkbox" id="o-next" checked> 次回の予定</label>
+    <label class="chk"><input type="checkbox" id="o-conf"> 取り扱い区分（社外秘など）</label>
+  </fieldset>
+</form>
+
+<div id="out" aria-live="polite">
+  <textarea id="tpl" aria-label="議事録テンプレート" spellcheck="false"></textarea>
+  <div class="copyrow"><button type="button" class="btn" id="copy">テンプレートをコピー</button><span id="copied"></span></div>
+  <div id="advice"></div>
+</div>
+
+<h2>このツールの使い方とテンプレートの考え方</h2>
+<p class="note">
+会議の種類と出力の形を選ぶと、下の欄にテンプレートが出ます。欄の中は直接書き換えられるので、社内の呼び方に合わせて見出しを直してから「テンプレートをコピー」を押してください。「テキスト」は Word やメールにそのまま貼れる形、「Markdown」は見出し記号（#）や表の付いた形で、Notion などに貼ると見出しとして表示されます。
+</p>
+<p class="note">
+見出しは「あとで読み返す人が最初に知りたいこと」の順に並べています。どの会議でも先頭に<strong>決定事項</strong>、続けて<strong>宿題（誰が・いつまでに）</strong>を置いているのは、議事録が読まれる場面の多くが「結局どうなったか」「自分は何をするのか」の確認だからです。発言の経過は、決定の理由が後から問われそうなときだけ残せば足ります。
+</p>
+<p class="note">
+「AIへの指示文」は、文字起こしした全文の前に貼って、ChatGPT などの対話型AIや、Notta のカスタムテンプレートの指示文欄に入れて使う想定です。AIは決まっていないことを決まったように書くことがあるため、指示文の中で「発言に無いことは書かない」「決まっていない場合は未定と書く」と指定しています。それでも誤りは出るので、配る前に決定事項と期限だけは人が録音と照らして確認してください。機密を含む会議の文字起こしを外部のAIに貼る場合は、そのサービスが入力を学習に使うかを先に確かめてください。
+</p>
+
+<h2>出典（2026年10月28日に公式ページで確認）</h2>
+<ul class="note small">
+<li>Notta 料金ページ（プラン別の AI要約の回数：フリー10回／プレミアム100回／ビジネス200回（1アカウントあたり）／エンタープライズ無制限、カスタムテンプレートの数：プレミアム5個／ビジネス・エンタープライズ無制限、フリーは月120分・1回3分まで）：<a href="https://www.notta.ai/pricing" target="_blank" rel="noopener">notta.ai/pricing</a></li>
+<li>Notta 無料議事録テンプレート（既定のテンプレート集）：<a href="https://www.notta.ai/meeting-minutes-templates" target="_blank" rel="noopener">notta.ai/meeting-minutes-templates</a></li>
+</ul>
+<p class="small">料金ページの比較表でカスタムテンプレートのフリー欄は空欄で、文言による記載がありません。この欄からは可否を判断していません。</p>
+
+<h2>関連する記事とツール</h2>
+<p class="note">
+・<a href="../minutes-template-free/">議事録テンプレートの無料フォーマット｜コピペで使う型とAI要約の境界</a><br>
+・<a href="../notta-minutes-template/">Nottaの議事録テンプレートの使い方｜自作の型は無料0個・有料5個まで</a><br>
+・<a href="../meeting-minutes-time/">議事録作成にかかる時間の目安｜遅いのは書く工程ではなく録音の聞き直し</a><br>
+・<a href="../cant-take-meeting-notes/">会議でメモが取れない・聞き逃すのを止めるには｜無料でどこまで残せるか</a><br>
+・<a href="minutes-time.html">議事録作成時間の計算機</a>（聞き直しに月何時間かかっているか）<br>
+・<a href="ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a>（機密を含む会議の場合）<br>
+・<a href="recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a>（録音する前の一言）
+</p>
+</div>
+
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="minutes-time.html">議事録作成時間の計算機</a> ・ <a href="transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+
+<script>
+(function(){
+  var AFF = "https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ";
+  // 見出しの並びは「決定事項→宿題」を先頭に固定し、種類ごとの欄を後ろに足す。
+  var KINDS = {
+    teirei:     {n:"定例会議", s:["決定事項","宿題（担当・期限）","各担当からの進捗報告","課題・相談事項","共有事項"]},
+    asakai:     {n:"朝会", s:["今日やること（各自）","困っていること・手伝ってほしいこと","決定事項","宿題（担当・期限）"]},
+    oneonone:   {n:"1on1", s:["今回の話題（本人が話したいこと）","最近うまくいっていること","困っていること・課題","上司から伝えたこと","次回までにやること（本人・上司）"]},
+    shodan:     {n:"商談", s:["決定事項・合意した内容","宿題（自社・先方、担当・期限）","先方の課題・要望","予算・導入時期・決裁の流れ","懸念点・質問への回答","次のステップ"]},
+    kickoff:    {n:"キックオフ", s:["決定事項","目的とゴール（何をもって完了とするか）","範囲（やること・やらないこと）","体制と役割","スケジュールと節目","リスク・前提条件","宿題（担当・期限）"]},
+    furikaeri:  {n:"振り返り", s:["決定事項（次から変えること）","宿題（担当・期限）","よかったこと（続けること）","問題だったこと","原因として挙がった意見"]},
+    brainstorm: {n:"企画会議", s:["決定事項（採用した案・次に検討する案）","宿題（担当・期限）","出た案の一覧","評価の基準","保留にした案と理由"]},
+    keiei:      {n:"経営会議", s:["決議・決定事項","宿題（担当・期限）","報告事項","審議事項と主な意見","継続審議とした事項"]},
+    mensetsu:   {n:"採用面接", s:["評価（総合・次の選考へ進めるか）","確認したかった点と回答","強み・懸念点","応募者からの質問と回答","次の選考と連絡事項"]},
+    hearing:    {n:"ヒアリング", s:["相談の要点（一言で）","聞き取った事実（時系列）","相手の希望・困っていること","こちらから伝えたこと・約束したこと","宿題（担当・期限）","次回の予定"]}
+  };
+  var $ = function(id){ return document.getElementById(id); };
+
+  function build(){
+    var k = KINDS[$("kind").value], fmt = $("fmt").value;
+    var head = $("o-head").checked, todo = $("o-todo").checked, next = $("o-next").checked, conf = $("o-conf").checked;
+    var secs = k.s.filter(function(s){
+      if (!todo && /^宿題|^次回までにやること/.test(s)) return false;
+      if (!next && /^次回の予定|^次のステップ|^次の選考/.test(s)) return false;
+      return true;
+    });
+    var meta = [];
+    if (conf) meta.push(["取り扱い","社外秘"]);
+    if (head) meta = meta.concat([["日時","　年　月　日（　）　：　〜　："],["場所","（会議室名・オンラインならツール名）"],["参加者",""],["記録者",""]]);
+    var out = [];
+
+    if (fmt === "ai") {
+      out.push("以下は「" + k.n + "」の文字起こしです。次の見出しで議事録を作ってください。");
+      out.push("");
+      out.push("【見出し】");
+      secs.forEach(function(s, i){ out.push((i+1) + ". " + s); });
+      out.push("");
+      out.push("【守ること】");
+      out.push("・発言に無いことは書かない。推測で補わない");
+      out.push("・決まっていない事項は「未定」と書く。期限や担当が発言に無ければ「未定」とする");
+      out.push("・宿題は「担当／内容／期限」の形で1行ずつ書く");
+      out.push("・各見出しは箇条書きで、1項目は1〜2文にする");
+      if (head) out.push("・冒頭に日時・参加者を書く（文字起こしから分からなければ空欄のままにする）");
+      if (conf) out.push("・1行目に「社外秘」と書く");
+      out.push("");
+      out.push("【文字起こし】");
+      out.push("（ここに全文を貼る）");
+    } else if (fmt === "md") {
+      out.push("# " + k.n + " 議事録");
+      out.push("");
+      meta.forEach(function(m){ out.push("- **" + m[0] + "**：" + m[1]); });
+      if (meta.length) out.push("");
+      secs.forEach(function(s){
+        out.push("## " + s);
+        if (/^宿題|^次回までにやること/.test(s)) {
+          out.push(""); out.push("| 担当 | 内容 | 期限 |"); out.push("|---|---|---|"); out.push("|  |  |  |");
+        } else { out.push("- "); }
+        out.push("");
+      });
+    } else {
+      out.push("【" + k.n + " 議事録】");
+      meta.forEach(function(m){ out.push(m[0] + "：" + m[1]); });
+      out.push("");
+      secs.forEach(function(s){
+        out.push("■ " + s);
+        if (/^宿題|^次回までにやること/.test(s)) { out.push("・担当：　　内容：　　期限："); }
+        else { out.push("・"); }
+        out.push("");
+      });
+    }
+    $("tpl").value = out.join("\n").replace(/\n+$/, "\n");
+    $("copied").textContent = "";
+
+    var a = '';
+    if (fmt === "ai") {
+      a += '<div class="verdict"><h3>貼る先のAIが入力を学習に使うかを先に確認してください</h3>'
+         + '<p class="sub">この指示文は、どの対話型AIにも貼って使えます。社外秘の会議を貼るなら、そのサービスの学習の設定を<a href="ai-training-check.html">学習させない設定チェッカー</a>で確かめてからにしてください。</p></div>';
+    } else {
+      a += '<div class="verdict"><h3>テンプレートは無料のままで足ります</h3>'
+         + '<p class="sub">型そのものにお金はかかりません。時間がかかるのは、録音を聞き直して欄を埋める工程です。どれくらいかかっているかは<a href="minutes-time.html">議事録作成時間の計算機</a>で出せます。</p></div>';
+    }
+    a += '<div class="ctabox"><div class="h">録音から欄を埋めるところまで任せたい場合：Notta<span class="pr">PR</span></div>'
+       + '<p>Notta は文字起こしのあと、選んだテンプレートの見出しに沿って AI が要約を書きます。料金ページでは、AI要約はフリーで月10回、自分で見出しを決めるカスタムテンプレートはプレミアムで5個・ビジネスで無制限です。フリーは1回3分までしか文字起こしできないので、会議全体を試すなら有料プランが前提になります（2026年10月28日に公式の料金ページで確認）。</p>'
+       + '<a class="btn" href="' + AFF + '" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトで料金を確認する</a></div>';
+    $("advice").innerHTML = a;
+  }
+
+  $("f").addEventListener("input", build);
+  $("f").addEventListener("change", build);
+  $("copy").addEventListener("click", function(){
+    var t = $("tpl");
+    var done = function(){ $("copied").textContent = "コピーしました"; };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t.value).then(done, function(){ t.select(); document.execCommand("copy"); done(); });
+    } else { t.select(); document.execCommand("copy"); done(); }
+  });
+  build();
+})();
+</script>
+</body>
+</html>

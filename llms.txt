@@ -11,6 +11,15 @@
 
 ## 記事
 
+- [Androidの音声入力は学習される？Gboardが送るデータと止める設定を公式で確認](https://nagai-cpu.github.io/ai-tools-jp/android-voice-input-training/): Androidの音声入力（Gboard）で話した内容が学習に使われるかを、Googleの公式ヘルプで確認。音声提供とフェデレーション ラーニングの違い、端末内処理の条件、止める設定の場所まで。
+- [フリーランスのAI文字起こし、学習なしの条件｜クライアントに見せる公式の根拠](https://nagai-cpu.github.io/ai-tools-jp/freelance-no-training-transcription/): クライアントの会議をAIで文字起こしするフリーランス向け。学習なしにできるNottaのプランと、契約前に見せられる公式の記載、1人で契約するときの費用と注意点を整理。
+- [Googleドキュメントの音声入力はAI学習に使われる？公式の記載を確認](https://nagai-cpu.github.io/ai-tools-jp/google-docs-voice-typing-data/): Googleドキュメントの音声入力が学習に使われるかを、Docsヘルプやプライバシーポリシーで確認。公式に書かれていない点と、機密の会議を記録するときの選び方まで。
+- [iPhoneの通話録音は学習される？文字起こしと要約の処理場所を公式で確認](https://nagai-cpu.github.io/ai-tools-jp/iphone-call-recording-ai/): iPhoneの通話録音・文字起こし・Apple Intelligenceの要約が学習に使われるかを公式で確認。保存先、処理場所の確かめ方、仕事の電話をNottaで残すときのプランの選び方まで。
+- [Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所](https://nagai-cpu.github.io/ai-tools-jp/mac-dictation-training/): Macの音声入力が学習や改善に使われるかをAppleの公式説明で確認。サーバーに送られる条件、改善をオフにしても残るもの、設定の確認場所、会議の記録に使うときの選び方まで。
+- [保育園の保護者面談を録音してAI文字起こし｜守秘義務と個人情報の3点](https://nagai-cpu.github.io/ai-tools-jp/nursery-parent-meeting-recording/): 保護者面談を録音してAIで記録を作りたい保育園の園長・主任・保育士向け。児童福祉法と保育所保育指針の守秘規定、個人情報保護委員会の注意喚起、Nottaの条件を整理しました。
+- [Pixelレコーダーの文字起こしはデータ送信される？端末内とクラウドの境目](https://nagai-cpu.github.io/ai-tools-jp/pixel-recorder-data/): Pixelのレコーダーで録音や文字起こしが外部に送られるかを公式ヘルプで確認。端末内で終わる操作、要約やバックアップで送られる場面、Nottaとの違いを整理しました。
+- [AI文字起こしのシャドーAI対策｜従業員の勝手な利用にIPAが挙げた順番](https://nagai-cpu.github.io/ai-tools-jp/shadow-ai-transcription/): 従業員が個人の文字起こしAIを勝手に使う「シャドーAI」が心配な担当者向け。IPAの10大脅威2026の対策と、Nottaの管理機能がどのプランで使えるかを公式で整理。
+- [文字起こしツールの暗号化を法人向けに比較｜通信・保存の方式と鍵の管理](https://nagai-cpu.github.io/ai-tools-jp/transcription-encryption/): 法人でAI文字起こしを導入する情報システム担当向け。Notta・PLAUD・Otter.ai・Rimoの通信と保存の暗号化、鍵の管理、方式名が公開されているかを公式ページで比較しました。
 - [コールセンターの通話録音をAI文字起こし｜個人情報で確かめる3つの論点](https://nagai-cpu.github.io/ai-tools-jp/callcenter-recording-ai/): コールセンターの通話録音をAIで文字起こししたい担当者向け。個人情報保護委員会のQ&Aで利用目的・委託先の監督・国外提供を確認し、Nottaの電話の取り込み方も公式で確かめました。
 - [歯科医院の問診録音をAI文字起こし｜患者情報で選ぶプランと3つの確認](https://nagai-cpu.github.io/ai-tools-jp/dental-clinic-recording/): 問診やカウンセリングの録音をAIで文字起こししたい小規模な歯科医院向けに、厚労省ガイドラインの保守委託機関編と守秘義務の根拠から、Nottaのどのプランを選ぶかを整理しました。
 - [FP相談の録音をAI文字起こしする守秘の確認点｜協会規程は「利用」も禁止](https://nagai-cpu.github.io/ai-tools-jp/fp-consultation-recording/): 相談を録音してAIで文字起こししたいFP向け。日本FP協会の倫理規程と2026年7月施行の業務基準規程から守秘の3点を確認し、Nottaのどのプランが合うかを公式で整理。
@@ -192,3 +201,4 @@
 - [AI議事録を社内で通すための文書一式](https://note.com/life_lab_jp/n/n36ce4be7c812): AI議事録の社内規程の文例12条と、導入前のチェックリスト、稟議書の本文をそのまま使える形でまとめた有料noteです。（1480円）
 - [文字起こしを貼るだけの議事録プロンプト12本](https://note.com/life_lab_jp/n/ne410835d9a8c): 文字起こしから議事録の下書きを作る指示文を、定例・商談・1on1・役員会など会議の目的別にまとめた有料noteです。（780円）
 - [文字起こしをAIの学習に使わせない設定と確認の手順](https://note.com/life_lab_jp/n/nee47eb4ec0d7): Notta・Zoom・Google Meet・Teams・Claude・Geminiの学習の扱いと確認する場所、録音前の8項目のチェックリストをまとめた手順書です。（780円）
+- [士業事務所のためのAI文字起こし導入一式](https://note.com/life_lab_jp/n/nba3b68847a65): 士業事務所がAI文字起こしを導入するための、依頼者への説明文・事務所内規程・ベンダー確認書・4社の規約原文をまとめた一式です。（9800円）

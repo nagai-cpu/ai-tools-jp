@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所｜AIツール実用ガイド</title>
+<meta name="description" content="Macの音声入力が学習や改善に使われるかをAppleの公式説明で確認。サーバーに送られる条件、改善をオフにしても残るもの、設定の確認場所、会議の記録に使うときの選び方まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/mac-dictation-training/">
+<meta property="og:title" content="Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所｜AIツール実用ガイド">
+<meta property="og:description" content="Macの音声入力が学習や改善に使われるかをAppleの公式説明で確認。サーバーに送られる条件、改善をオフにしても残るもの、設定の確認場所、会議の記録に使うときの選び方まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所", "description": "Macの音声入力が学習や改善に使われるかをAppleの公式説明で確認。サーバーに送られる条件、改善をオフにしても残るもの、設定の確認場所、会議の記録に使うときの選び方まで。", "datePublished": "2026-10-28", "dateModified": "2026-10-28", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/mac-dictation-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所</h1><p class="meta">2026-10-28 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Macの音声入力は<strong>「システム設定」の「キーボード」で、デバイス上で処理される旨の表示が出ていれば、音声も文字起こしもAppleのサーバーに送られません</strong>。日本語はデバイス上の音声入力の対応言語に入っています。見落としやすいのは、サーバーで処理された場合で、「Siriと音声入力の改善」をオフにしていても、文字起こし（テキスト）はランダムな識別子に紐づいて最長2年保持される場合があり、自動音声認識モデルの微調整に使われる場合があるとAppleは書いています。</p>
+<h2 id="公式の記載を条件ごとに並べた">公式の記載を条件ごとに並べた</h2>
+<p>2026年10月28日に、Appleの「Siri、音声入力とプライバシー」「“Siriと音声入力の改善”とプライバシー」（いずれも2026年9月14日付）、Macユーザガイド「Macでメッセージや書類を音声入力する」、「macOSで利用できる機能」ページで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>条件</th><th>音声の送信</th><th>文字起こし（テキスト）の扱い</th><th>改善・学習への利用</th><th>確認・変更する場所</th></tr></thead><tbody><tr><td>デバイス上で処理（表示あり）</td><td>送信されない</td><td>送信されない</td><td>公式の記載は「Appleのサーバには送信されません」まで</td><td>システム設定＞キーボード＞「音声入力」の下の説明文</td></tr><tr><td>サーバーで処理・改善はオフ</td><td>送信して処理。音声データは保存されない</td><td>ランダムな識別子に紐づき最長2年保持される場合がある</td><td>文字起こしが自動音声認識モデルの微調整などに使われる場合がある</td><td>同上</td></tr><tr><td>「Siriと音声入力の改善」オン</td><td>音声が保存され、サンプルがレビューされることがある</td><td>最長2年。レビュー済みの一部は2年超</td><td>音声・文字起こしが開発と改善に使われる</td><td>プライバシーとセキュリティ＞解析と改善</td></tr><tr><td>Apple Intelligenceの「より高度な音声入力」</td><td>スペル・句読点の補正をデバイス上のモデルで行う</td><td>公式ガイドに保存の記載なし</td><td>公式ガイドに記載なし</td><td>英語のみ。M3以降・ユニファイドメモリ12GB以上のMac</td></tr></tbody></table></div>
+<h2 id="判断軸1-デバイス上で処理-の表示があるか">判断軸1｜「デバイス上で処理」の表示があるか</h2>
+<p>Macユーザガイドは、一般的なテキストの音声入力で、音声と文字起こしがSiriサーバーに送られずデバイス上で処理されるかどうかを、「キーボード」設定で確認できると案内しています。アップルメニューから「システム設定」を開き、「キーボード」の「音声入力」の下に出る説明文を見ます。</p>
+<p>「macOSで利用できる機能」ページでは、「デバイス上でのモードレスな音声入力」の対応言語に日本語（日本）が入っており、音声モデルのダウンロードが必要と書かれています。表示が出ていない状態、たとえば音声モデルが入っていない言語に切り替えたときは、サーバーで処理される側に入ります。</p>
+<p>注意したいのは、ユーザガイドの注記が「検索ボックスでの音声入力ではない、メッセージ作成やメモ作成などでの音声入力」と範囲を区切っている点です。検索欄での音声入力が同じ条件で処理されるかは、このガイドには書かれていませんでした。iPhoneで同じことを調べた結果は<a href="../iphone-dictation-training/">iPhoneの音声入力は学習される？</a>にまとめています。</p>
+<h2 id="判断軸2-改善をオフ-で止まるのは音声の保存まで">判断軸2｜「改善をオフ」で止まるのは音声の保存まで</h2>
+<p>「Siriと音声入力の改善」は、音声入力をオンにするときに「オーディオ収録を共有」するかを尋ねられ、あとからは「プライバシーとセキュリティ」の「解析と改善」で切り替えられます。オフなら音声データは保存されません。</p>
+<p>ただ、既定の動作を説明したページには、サーバーで処理されたリクエストの文字起こしと関連データ（デバイスの仕様やパフォーマンス統計など）が、1時間に複数回変わるランダムな識別子に紐づいて最長2年保持される場合があり、文字起こしは「自動音声認識モデルの微調整」などに使われる場合がある、と書かれています。Apple Accountやメールアドレスには結び付けられないとも明記されています。つまり、<strong>改善をオフにして止まるのは「音声の保存とレビュー」で、テキストの扱いまでは止まりません</strong>。テキストも外に出したくないなら、改善の設定より、デバイス上で処理される表示のほうが判断の決め手になります。</p>
+<p>設定のスイッチで止める型と、契約や仕様で決まる型の違いは<a href="../transcription-optout-settings/">文字起こしAIのオプトアウト設定一覧</a>で各社を並べています。</p>
+<h2 id="判断軸3-会議の記録に使うなら-音声入力の守備範囲の外">判断軸3｜会議の記録に使うなら、音声入力の守備範囲の外</h2>
+<p>ユーザガイドによれば、音声入力はテキストを入力できる場所ならどこでも使え、入力できる長さに制限はなく、30秒間音声が検出されないと自動で止まります。話した内容をその場で文字にする機能で、会議の音声ファイルは残りません。Windowsの音声入力との違いは<a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？</a>で比べています。</p>
+<p>Macで会議を記録するなら、別のアプリを使うことになります。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のデスクトップ版（Nottaデスクトップ）は、プレミアム・ビジネス・エンタープライズの利用者が追加料金なしで使え、公式ページの「プライバシーモード」では、対応する録音やファイルをPC内で文字起こしし、音声データや文字起こし結果を外部サーバーへ送らずに管理できると説明されています。意外だったのは、このモードの文字起こしエンジンに「Apple Speech Analyzer」が挙がり、日本語も対応言語に入っていたことです。ただし現在はベータ版で、AI要約や企業向けの管理機能には対応していないと書かれています。</p>
+<p>クラウドでAI要約まで使いたい場合は条件が変わります。Nottaの利用規約は、音声認識エンジンの提供元が「お客様がご利用のプランに応じて」音声データを学習に使う場合があるとしており、法人向けページで「AI学習なし」が書かれているのはビジネス Plus（年64,800円・税抜）とエンタープライズ、料金ページでは士業向け特別プランでした。社外秘の会議をクラウドで要約まで回すなら、この中から選ぶことになります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Macの音声入力</strong>：デバイス上で処理される条件を外れると、文字起こしは改善をオフにしていても保持・利用されうる。会議の録音を残す機能ではない</li><li><strong>Nottaのプライバシーモード</strong>：ベータ版で、AI要約や企業向けの管理機能には対応していないと公式ページに記載。プレミアム以上の契約が前提</li><li><strong>Nottaのクラウド利用で学習なしを条件にする場合</strong>：ビジネス Plus以上が必要で、音声入力の0円とは費用の桁が違う</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Macの音声入力をオフにするにはどうすればいいですか">Macの音声入力をオフにするにはどうすればいいですか</h3>
+<p>Macユーザガイドでは、「システム設定」の「キーボード」で「音声入力」のオン・オフを切り替えると案内しています。音声の保存だけを止めたい場合は、「プライバシーとセキュリティ」の「解析と改善」で「Siriと音声入力の改善」をオフにします。</p>
+<h3 id="オフラインのMacでも日本語の音声入力は使えますか">オフラインのMacでも日本語の音声入力は使えますか</h3>
+<p>「macOSで利用できる機能」ページでは、デバイス上の音声入力の対応言語に日本語があり、音声モデルのダウンロードが必要とされています。オフライン時の動作そのものは、今回確認したMacのガイドには明記がないため確認できませんでした。実際の処理場所はキーボード設定の表示で確かめてください。</p>
+<h3 id="社内規程で-音声を外部に送らない-とある場合-Macの音声入力は使えますか">社内規程で「音声を外部に送らない」とある場合、Macの音声入力は使えますか</h3>
+<p>デバイス上で処理される表示が出ていれば、音声も文字起こしも送信されないとAppleは説明しています。ただし検索欄での音声入力は同じ注記の範囲外として書かれており、入力したテキストの保存先は入力先のアプリ次第です。最終的には規程の文言と照らし、担当部門に確認してください。ローカル処理の選択肢は<a href="../whisper-local-no-training/">Whisperをローカルで動かせば学習されない？</a>でも整理しています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Macの音声入力は、キーボード設定でデバイス上処理の表示が出ていれば音声も文字起こしも送られない。日本語は対応、音声モデルのダウンロードが条件</li><li>「Siriと音声入力の改善」をオフにしても、サーバー処理された文字起こしは最長2年保持される場合があり、音声認識モデルの微調整に使われる場合がある</li><li>会議の記録は音声入力の守備範囲の外。Nottaならデスクトップ版のプライバシーモード（ベータ・要約なし）か、ビジネス Plus以上の「AI学習なし」から選ぶ</li></ul>
+<h3 id="確認した公式情報-2026年10月28日">確認した公式情報（2026年10月28日）</h3>
+<ul><li>Apple「Siri、音声入力とプライバシー」「“Siriと音声入力の改善”とプライバシー」（apple.com/legal/privacy、2026年9月14日付）</li><li>Apple サポート「Macでメッセージや書類を音声入力する」（Macユーザガイド）、「macOSで利用できる機能」</li><li>Notta 利用規約（notta.ai/terms）、料金ページ（notta.ai/pricing）、法人向けページ（notta.ai/business）、Nottaデスクトップ（notta.ai/desktop）</li></ul>
+<p>※本記事はAppleとNottaの公開ページを2026年10月28日に確認して整理したもので、法的な助言ではありません。仕様や料金は変更されることがあるため、最新の公式ページをご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../android-voice-input-training/">Androidの音声入力は学習される？Gboardが送るデータと止める設定を公式で確認</a></li><li><a href="../freelance-no-training-transcription/">フリーランスのAI文字起こし、学習なしの条件｜クライアントに見せる公式の根拠</a></li><li><a href="../google-docs-voice-typing-data/">Googleドキュメントの音声入力はAI学習に使われる？公式の記載を確認</a></li><li><a href="../iphone-call-recording-ai/">iPhoneの通話録音は学習される？文字起こしと要約の処理場所を公式で確認</a></li><li><a href="../nursery-parent-meeting-recording/">保育園の保護者面談を録音してAI文字起こし｜守秘義務と個人情報の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../android-voice-input-training/">Androidの音声入力は学習される？Gboardが送るデータと止める設定を公式で確認</a></li><li><a href="../freelance-no-training-transcription/">フリーランスのAI文字起こし、学習なしの条件｜クライアントに見せる公式の根拠</a></li><li><a href="../google-docs-voice-typing-data/">Googleドキュメントの音声入力はAI学習に使われる？公式の記載を確認</a></li><li><a href="../iphone-call-recording-ai/">iPhoneの通話録音は学習される？文字起こしと要約の処理場所を公式で確認</a></li><li><a href="../mac-dictation-training/">Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所</a></li><li><a href="../nursery-parent-meeting-recording/">保育園の保護者面談を録音してAI文字起こし｜守秘義務と個人情報の3点</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

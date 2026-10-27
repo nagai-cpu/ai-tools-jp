@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI文字起こしのシャドーAI対策｜従業員の勝手な利用にIPAが挙げた順番｜AIツール実用ガイド</title>
+<meta name="description" content="従業員が個人の文字起こしAIを勝手に使う「シャドーAI」が心配な担当者向け。IPAの10大脅威2026の対策と、Nottaの管理機能がどのプランで使えるかを公式で整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/shadow-ai-transcription/">
+<meta property="og:title" content="AI文字起こしのシャドーAI対策｜従業員の勝手な利用にIPAが挙げた順番｜AIツール実用ガイド">
+<meta property="og:description" content="従業員が個人の文字起こしAIを勝手に使う「シャドーAI」が心配な担当者向け。IPAの10大脅威2026の対策と、Nottaの管理機能がどのプランで使えるかを公式で整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI文字起こしのシャドーAI対策｜従業員の勝手な利用にIPAが挙げた順番", "description": "従業員が個人の文字起こしAIを勝手に使う「シャドーAI」が心配な担当者向け。IPAの10大脅威2026の対策と、Nottaの管理機能がどのプランで使えるかを公式で整理。", "datePublished": "2026-10-28", "dateModified": "2026-10-28", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/shadow-ai-transcription/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "社員が個人のNottaアカウントで録音していたデータは、会社で消せますか。", "acceptedAnswer": {"@type": "Answer", "text": "管理者が社員の個人アカウントのデータを削除する方法は、確認したヘルプには書かれていませんでした。ヘルプによると、退会すればすべてのデータが削除されるため、本人に削除か退会を依頼する形になります。退職時の扱いは[AI文字起こしの退職者アカウントとデータ](../transcription-offboarding/)で整理しています。"}}, {"@type": "Question", "name": "無料プランを会社で一括管理できますか。", "acceptedAnswer": {"@type": "Answer", "text": "フリーは「1アカウントのみ」のプランです。外部共有を無効にする設定はビジネス以上、ワークスペース発見はビジネス・エンタープライズの機能とヘルプに書かれています。会社としての管理を前提にするなら、ビジネス以上を検討することになります。"}}, {"@type": "Question", "name": "シャドーAIを禁止する規程だけでは足りませんか。", "acceptedAnswer": {"@type": "Answer", "text": "IPAの解説書は、規程の整備（個人アカウントでの業務利用の制限、違反時の対応の明確化）と並べて、AIサービス利用の検討、利用状況の把握、教育を挙げています。規程の内容や処分の扱いは、自社の就業規則や専門家と確認してください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI文字起こしのシャドーAI対策｜従業員の勝手な利用にIPAが挙げた順番</h1><p class="meta">2026-10-28 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、IPAは「情報セキュリティ10大脅威 2026」で、職場に許可なく個人のAIサービスを業務に使う「シャドーAI」を名指しし、経営者層の対策の最初に<strong>「AIサービス利用の検討」</strong>を置いています。禁止するだけでなく、会社として使えるツールを用意することが対策の一つ目です。文字起こしなら、会社のワークスペースに社員を集め、外部共有と学習の扱いを管理者側で決められるプランを選ぶのが近道です。</p>
+<h2 id="IPAの対策と-Nottaの管理機能の対応">IPAの対策と、Nottaの管理機能の対応</h2>
+<p>IPAの解説書［組織編］（2026年3月）は、組織向けの3位に「AIの利用をめぐるサイバーリスク」を初めて選び、そのリスクの一つ目に「職場に許可なく AI を業務利用し、情報漏えいにつながる可能性」を挙げています。職場でAIサービスが提供されていない場合などに、従業員が個人的に使っているサービスを業務に使うことがあり、職場がそれを認識できないこともリスクだ、という説明です。</p>
+<p>下の表は、その対策の項目と、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプに書かれた管理機能を並べたものです。2026年10月28日に確認しました。</p>
+<div class="tw"><table><thead><tr><th>IPAの対策項目</th><th>対応するNottaの機能</th><th>使えるプラン（ヘルプの記載）</th><th>注意点</th></tr></thead><tbody><tr><td>AIサービス利用の検討</td><td>会社として契約するプラン</td><td>ビジネス（1〜50アカウント）・エンタープライズ</td><td>ビジネスは年30,096円（税込・1アカウントあたり）</td></tr><tr><td>個人アカウントでの業務利用の制限</td><td>ワークスペース発見（同じドメインの社員が会社のワークスペースに参加）</td><td>ビジネス・エンタープライズ</td><td>参加は社員が「参加する」を押す形。管理者承認のオン・オフあり</td></tr><tr><td>同上</td><td>ドメイン認証、SAMLシングルサインオン</td><td>エンタープライズ</td><td>SSOを有効にすると、設定されていないドメインのユーザーは招待できない</td></tr><tr><td>学習対象から除外する設定の徹底</td><td>「AI学習なし」の環境</td><td>ビジネス Plus・エンタープライズ</td><td>利用者が切り替えるスイッチではなく、契約するプランで決まる</td></tr><tr><td>利用状況の把握</td><td>操作ログ（過去180日、Excel出力）</td><td>エンタープライズ</td><td>ワークスペース外の利用を把握する機能の記載はない</td></tr><tr><td>データ転送の管理</td><td>外部ユーザーとの共有を無効化</td><td>ビジネス以上</td><td>設定はオーナーのみ</td></tr><tr><td>同上</td><td>外部サービス連携の無効化</td><td>エンタープライズ</td><td>無効にした連携に依存する自動化は動かなくなる</td></tr></tbody></table></div>
+<h2 id="判断軸1-禁止の前に-使ってよいツール-を出せるか">判断軸1｜禁止の前に「使ってよいツール」を出せるか</h2>
+<p>IPAが例に挙げた状況は、職場でAIサービスの利用がない場合です。会議の記録に困っている社員に禁止だけを伝えても、手元のスマートフォンで無料アプリを使い続ける余地は残ります。IPAの解説書は、米国のAI企業の調査として、業務で生成AIにデータをコピー＆ペーストして入力している利用者が77％、そのうち82％が組織に管理されていないアカウントによるものだったという結果も紹介しています。</p>
+<p>Nottaのビジネスプランは、ヘルプによると最低1アカウントから購入できます。まず部署の数人分を会社のワークスペースで契約し、使ってよいツールとして周知するのが、IPAの順番に沿った始め方です。社内規程の書き方は<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a>、稟議の項目は<a href="../minutes-ai-approval-doc/">AI議事録の導入稟議の書き方</a>にまとめています。</p>
+<h2 id="判断軸2-個人アカウントを会社の管理下に寄せられるか">判断軸2｜個人アカウントを会社の管理下に寄せられるか</h2>
+<p>会社のツールを用意しても、社員が個人で作ったアカウントが残っていれば、そこにある録音は管理者から見えません。Nottaには、同じドメインのメールアドレスで登録・ログインした社員が会社のワークスペースに参加できる「ワークスペース発見」があり、ビジネスとエンタープライズで使えます。オーナーが「管理者承認を要する」をオンにすれば、参加申請を確認してから受け入れられます。</p>
+<p>ただし、ヘルプの説明は社員が「参加する」を押す形で、個人アカウントを自動で取り込む動作は書かれていません。エンタープライズにはドメイン認証とSAMLシングルサインオンがありますが、個人アカウントに保存済みのデータをどう扱うかは、確認したヘルプには記載がありませんでした。既存の個人利用の扱いは、導入前に営業窓口で確かめる項目です。SSOの位置づけは<a href="../transcription-sso-saml/">AI文字起こしのSSO・SAML対応</a>で詳しく扱っています。</p>
+<h2 id="判断軸3-音声に個人情報や機密が入るか">判断軸3｜音声に個人情報や機密が入るか</h2>
+<p>顧客との通話や面談を文字起こしするなら、個人情報保護委員会の「生成AIサービスの利用に関する注意喚起等」（令和5年6月2日）も関わります。個人データを含むプロンプトを入力する場合は、サービス提供事業者がその個人データを機械学習に利用しないこと等を十分に確認するよう求めています。生成AIサービス向けの文書ですが、学習の扱いを確認するという考え方は、文字起こしツールを選ぶときにも使えます。</p>
+<p>Nottaの利用規約第10条は、音声認識エンジンを提供するパートナー企業が「お客様がご利用のプランに応じて」音声を音声認識トレーニングに使う場合があると書いています。公式ヘルプの比較表では、ビジネスプランは「あり」、ビジネス Plus（年64,800円・税抜）は「なし（データ未利用）」です。社員が個人の無料アカウントで録音していた場合、学習の対象になりうる側に入っていることになります。AI要約など音声認識以外のAI機能は、どのプランでも学習にデータを提供していないとヘルプにあります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta全般</strong>：操作ログはワークスペースのメンバーの操作履歴で、ワークスペースの外で作られた個人アカウントの利用を把握する機能は、確認したヘルプには見当たりませんでした。IPAが挙げる通信ログやCASBによる把握は、別の仕組みで行います</li><li><strong>ビジネス</strong>：音声認識の学習は「あり」です。学習なしにするにはビジネス Plus以上が必要です</li><li><strong>ビジネス Plus</strong>：学習なしになりますが、操作ログ、SSO、ドメイン認証、外部サービス連携の無効化、自動削除はヘルプでエンタープライズの機能とされています</li><li><strong>エンタープライズ</strong>：料金は要相談で、オンラインでは購入できません。比較のための金額は公開されていません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 社員が個人のNottaアカウントで録音していたデータは、会社で消せますか。</strong> 管理者が社員の個人アカウントのデータを削除する方法は、確認したヘルプには書かれていませんでした。ヘルプによると、退会すればすべてのデータが削除されるため、本人に削除か退会を依頼する形になります。退職時の扱いは<a href="../transcription-offboarding/">AI文字起こしの退職者アカウントとデータ</a>で整理しています。</p>
+<p><strong>Q. 無料プランを会社で一括管理できますか。</strong> フリーは「1アカウントのみ」のプランです。外部共有を無効にする設定はビジネス以上、ワークスペース発見はビジネス・エンタープライズの機能とヘルプに書かれています。会社としての管理を前提にするなら、ビジネス以上を検討することになります。</p>
+<p><strong>Q. シャドーAIを禁止する規程だけでは足りませんか。</strong> IPAの解説書は、規程の整備（個人アカウントでの業務利用の制限、違反時の対応の明確化）と並べて、AIサービス利用の検討、利用状況の把握、教育を挙げています。規程の内容や処分の扱いは、自社の就業規則や専門家と確認してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>IPAの10大脅威2026は組織3位にAIの利用リスクを初選出し、シャドーAIへの対策の最初に「AIサービス利用の検討」を置いた</li><li>Nottaで社員を会社のワークスペースに集めるならビジネス以上、学習なしはビジネス Plus以上、操作ログ・SSO・ドメイン認証はエンタープライズ</li><li>個人アカウントの利用を把握する機能はNottaのヘルプに見当たらない。規程・教育・通信ログなど、ツール以外の対策と組み合わせる</li></ul>
+<h3 id="確認した公式情報-2026年10月28日">確認した公式情報（2026年10月28日）</h3>
+<ul><li>IPA「情報セキュリティ10大脅威 2026」（公開日2026年1月29日）、同 解説書［組織編］（2026年3月）3位「AIの利用をめぐるサイバーリスク」</li><li>個人情報保護委員会「生成AIサービスの利用に関する注意喚起等」（令和5年6月2日）</li><li>Notta 利用規約（2025年8月1日改訂）第10条、料金ページ（notta.ai/pricing）、法人向けページ（notta.ai/business）</li><li>Notta ヘルプ「ドメイン認証によるワークスペース参加設定」「組織全体のワークスペースを一元管理するためのドメイン認証」「シングルサインオン（SSO）の設定」「操作ログの取得と保存」「外部ユーザーとの共有を制限する」「外部サービス連携を無効化する」「AI学習について」「「ビジネス Plus」と「ビジネスプラン」の違いは何ですか？」「新規購入の場合、最低購入アカウント数はいくつからですか？」「Nottaの料金プランについて」「退会後、データは削除されますか？」</li></ul>
+<p>※本記事は公式ページと公的資料を2026年10月28日に確認して整理したもので、法的な助言ではありません。機能の提供範囲は変更されることがあるため、最新の公式ページをご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『介護・看護の記録をAIで書く前に読む本』（Kindle・500円）：介護事業所・訪問看護で、利用者の情報をAIに入れてよいか、事業所のルール、利用者と家族への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7G1TCZ" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../android-voice-input-training/">Androidの音声入力は学習される？Gboardが送るデータと止める設定を公式で確認</a></li><li><a href="../freelance-no-training-transcription/">フリーランスのAI文字起こし、学習なしの条件｜クライアントに見せる公式の根拠</a></li><li><a href="../google-docs-voice-typing-data/">Googleドキュメントの音声入力はAI学習に使われる？公式の記載を確認</a></li><li><a href="../iphone-call-recording-ai/">iPhoneの通話録音は学習される？文字起こしと要約の処理場所を公式で確認</a></li><li><a href="../mac-dictation-training/">Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../android-voice-input-training/">Androidの音声入力は学習される？Gboardが送るデータと止める設定を公式で確認</a></li><li><a href="../freelance-no-training-transcription/">フリーランスのAI文字起こし、学習なしの条件｜クライアントに見せる公式の根拠</a></li><li><a href="../google-docs-voice-typing-data/">Googleドキュメントの音声入力はAI学習に使われる？公式の記載を確認</a></li><li><a href="../iphone-call-recording-ai/">iPhoneの通話録音は学習される？文字起こしと要約の処理場所を公式で確認</a></li><li><a href="../mac-dictation-training/">Macの音声入力は学習される？ディクテーションの送信条件と設定の確認場所</a></li><li><a href="../nursery-parent-meeting-recording/">保育園の保護者面談を録音してAI文字起こし｜守秘義務と個人情報の3点</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>
