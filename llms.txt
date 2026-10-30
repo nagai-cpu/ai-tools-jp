@@ -11,6 +11,16 @@
 
 ## 記事
 
+- [銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認](https://nagai-cpu.github.io/ai-tools-jp/bank-loan-interview-ai-transcription/): 銀行との融資面談を録音・AI文字起こししたい中小企業の経営者向けに、金融庁の監督指針と最高裁の決定、金融分野の個人情報ガイドラインを確かめ、Nottaのプラン選びを整理しました。
+- [取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと](https://nagai-cpu.github.io/ai-tools-jp/board-meeting-minutes-ai-confidential/): 取締役会の録音をAIで文字起こしして議事録を作りたい会社向けに、会社法と施行規則の記載事項、インサイダー情報の扱い、録音の保存から、Nottaのどのプランが選択肢になるかを整理しました。
+- [ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者](https://nagai-cpu.github.io/ai-tools-jp/chatgpt-team-enterprise-audio-training/): ChatGPT旧Team（現Business）とEnterpriseで録音・音声入力が学習されない範囲を公式で確認。保持期間、管理者の閲覧、日本のデータ保存、Nottaと比べる条件まで。
+- [秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表](https://nagai-cpu.github.io/ai-tools-jp/confidential-class-ai-transcription/): 社内の情報区分ごとにAI文字起こしをどう使い分けるか迷う担当者向け。経産省の秘密情報保護ハンドブックの規程例と個人情報保護委員会の注意喚起をもとに、Nottaの方式とプランを区分別に整理。
+- [家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点](https://nagai-cpu.github.io/ai-tools-jp/family-mediation-recording-ai/): 家事調停を受任する弁護士向けに、期日の録音について裁判所の案内と家事事件手続法を確認し、依頼者との打合せ録音をAI文字起こしする場合のプランと管理を整理しました。
+- [人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方](https://nagai-cpu.github.io/ai-tools-jp/hr-exit-interview-ai-transcription/): 退職面談を録音してAIで文字起こしする人事担当者向け。体調の話が出たときの扱い、聞ける人の範囲、退職後の保存と削除を厚労省・個人情報保護委員会の資料で整理しました。
+- [心理士の面接記録をAI文字起こし｜守秘義務の条文と学習しないプラン](https://nagai-cpu.github.io/ai-tools-jp/psychologist-session-ai-transcription/): 公認心理師・臨床心理士が面接の録音をAIで文字起こしする前に、守秘義務の条文と罰則、要配慮個人情報の扱い、学習しないプランと記録の消し方を公式の記載で整理しました。
+- [録音データの社外持ち出しルール｜私物スマホ・個人クラウド・外部AIの線引き](https://nagai-cpu.github.io/ai-tools-jp/recording-data-external-rule/): 会議の録音ファイルを私物スマホや個人のクラウド、外部のAIに持ち出させないための社内ルール作り。個人情報保護法の安全管理措置とNottaの共有・ダウンロード制限を公式で整理。
+- [証券営業の録音をAI文字起こしする前に｜監督指針で見る記録と委託の3点](https://nagai-cpu.github.io/ai-tools-jp/securities-sales-recording-ai/): 証券会社で営業の電話・対面の録音をAIで文字起こししたいコンプライアンス担当向け。金融庁の監督指針で記録・情報管理・委託先管理を確かめ、Nottaのプランを公式の記載で整理しました。
+- [社労士の労基署調査立ち会いを録音してAI文字起こし｜公式の定めと機密管理](https://nagai-cpu.github.io/ai-tools-jp/sharoushi-labor-inspection-recording/): 労基署の臨検や呼出しに立ち会う社労士向けに、監督官とのやりとりの録音に公式の定めがあるかと、事業主との打合せ録音をAIで文字起こしする際の守秘義務とNottaのプランを整理。
 - [Androidの音声入力は学習される？Gboardが送るデータと止める設定を公式で確認](https://nagai-cpu.github.io/ai-tools-jp/android-voice-input-training/): Androidの音声入力（Gboard）で話した内容が学習に使われるかを、Googleの公式ヘルプで確認。音声提供とフェデレーション ラーニングの違い、端末内処理の条件、止める設定の場所まで。
 - [フリーランスのAI文字起こし、学習なしの条件｜クライアントに見せる公式の根拠](https://nagai-cpu.github.io/ai-tools-jp/freelance-no-training-transcription/): クライアントの会議をAIで文字起こしするフリーランス向け。学習なしにできるNottaのプランと、契約前に見せられる公式の記載、1人で契約するときの費用と注意点を整理。
 - [Googleドキュメントの音声入力はAI学習に使われる？公式の記載を確認](https://nagai-cpu.github.io/ai-tools-jp/google-docs-voice-typing-data/): Googleドキュメントの音声入力が学習に使われるかを、Docsヘルプやプライバシーポリシーで確認。公式に書かれていない点と、機密の会議を記録するときの選び方まで。

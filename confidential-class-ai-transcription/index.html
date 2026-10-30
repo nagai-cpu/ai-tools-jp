@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表｜AIツール実用ガイド</title>
+<meta name="description" content="社内の情報区分ごとにAI文字起こしをどう使い分けるか迷う担当者向け。経産省の秘密情報保護ハンドブックの規程例と個人情報保護委員会の注意喚起をもとに、Nottaの方式とプランを区分別に整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/confidential-class-ai-transcription/">
+<meta property="og:title" content="秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表｜AIツール実用ガイド">
+<meta property="og:description" content="社内の情報区分ごとにAI文字起こしをどう使い分けるか迷う担当者向け。経産省の秘密情報保護ハンドブックの規程例と個人情報保護委員会の注意喚起をもとに、Nottaの方式とプランを区分別に整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表", "description": "社内の情報区分ごとにAI文字起こしをどう使い分けるか迷う担当者向け。経産省の秘密情報保護ハンドブックの規程例と個人情報保護委員会の注意喚起をもとに、Nottaの方式とプランを区分別に整理。", "datePublished": "2026-10-31", "dateModified": "2026-10-31", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/confidential-class-ai-transcription/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</h1><p class="meta">2026-10-31 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、AI文字起こしの使い分けは<strong>ツール名ではなく「音声がどこへ行き、どこに残るか」を区分ごとに決める</strong>のが近道です。公開情報はクラウドのままで足り、社外秘は学習なしのプランに限り、部外秘はアクセス範囲を絞れる設定まで求め、極秘はクラウドに送らない手元処理か、録音しない判断になります。</p>
+<h2 id="根拠にした公式資料">根拠にした公式資料</h2>
+<p>2026年10月31日に、経済産業省「秘密情報の保護ハンドブック」（平成28年2月、最終改訂：令和6年2月）、個人情報保護委員会「生成AIサービスの利用に関する注意喚起等」（令和5年6月2日）、Nottaの利用規約（2025年8月1日改訂）・法人向けページ・料金ページ・ヘルプセンターで確認した内容です。</p>
+<p>ハンドブックの参考資料2にある秘密情報管理規程の例は、分類を次のように定めています。</p>
+<ul><li><strong>極秘</strong>：漏れると会社が極めて重大な損失や不利益を受けるおそれがあり、原則として指定された者以外に開示してはならない情報</li><li><strong>社外秘</strong>：極秘以外の秘密情報で、原則として社内の者以外に開示してはならない情報</li></ul>
+<p>注記では「役員外秘」「部外秘」「社外秘」のように、アクセスできる者の範囲が分かる名称にすることも考えられる、としています。この記事では、多くの会社にある4段階（極秘・部外秘・社外秘・公開）に当てはめて整理します。自社の規程の名称と定義に読み替えてください。</p>
+<h2 id="区分ごとの判断表">区分ごとの判断表</h2>
+<div class="tw"><table><thead><tr><th>区分（例）</th><th>ハンドブックの例での扱い</th><th>文字起こしで決めること</th><th>Nottaで候補になる方式</th><th>残る確認事項</th></tr></thead><tbody><tr><td>公開</td><td>秘密情報の対象外</td><td>個人情報が入らないか</td><td>フリー・プレミアムを含むクラウド処理</td><td>規約上、プランにより音声が学習に使われうる</td></tr><tr><td>社外秘</td><td>社内の者以外に開示しない</td><td>外部サービスで学習・保存されるか</td><td>ビジネス Plus（年64,800円・税抜）、士業向け特別プラン</td><td>多要素認証に未対応</td></tr><tr><td>部外秘・関係者限り</td><td>アクセスできる者の範囲を限る</td><td>開ける人を部門内に絞れるか</td><td>ビジネス Plus＋ワークスペースの権限設計、必要ならエンタープライズ</td><td>SSOはエンタープライズの機能</td></tr><tr><td>極秘</td><td>外部ネットワークに接続しないPC等に保管、複製は管理責任者のみ</td><td>そもそも録音・複製してよいか</td><td>デスクトップ版のプライバシーモード（手元処理）</td><td>対象プランにビジネス Plusの記載なし</td></tr></tbody></table></div>
+<p>ハンドブックの扱いの欄は参考資料2の規程例と管理基準の例の要旨で、「部外秘」の行は注記の名称の考え方をもとにこの記事で置いたものです。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-録音と文字起こしを-複製-と-外部への入力-として扱う">1. 録音と文字起こしを「複製」と「外部への入力」として扱う</h3>
+<p>ハンドブック第3章3-3は、外部の生成AIなどを使う場合について、入力した情報が社外に流出・公開されうるかを踏まえて利用の当否を判断し、予め許可された生成AIを使い、基準に基づいて予め許可された情報だけを入力するルールを定めることを挙げています。第3章3-1も、分類時に生成AIへの入力を認めるかを考える観点を挙げています。</p>
+<p>会議の録音と文字起こしは、話された内容を記録として残すため、自社の規程によっては複製にあたると読める場合があります。参考資料2の「秘密情報管理基準の例」では、極秘情報の複製・印刷は管理責任者以外はできないとし、電子化した極秘情報は暗号化して外部ネットワークに接続しないPC等に保管する例を示しています。極秘は「どのツールなら良いか」より先に、管理責任者が録音そのものを許すかを決める区分です。</p>
+<p>社内規程で文字起こしが止まったときの説明の仕方は<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a>で扱っています。</p>
+<h3 id="2-区分とは別に-個人データが入るか-で線を引く">2. 区分とは別に「個人データが入るか」で線を引く</h3>
+<p>区分が「公開」や「社外秘」でも、会議に顧客や従業員の個人データが出てくることはあります。個人情報保護委員会の注意喚起は、個人情報取扱事業者が本人の同意なく個人データを含むプロンプトを入力し、それが応答結果の出力以外の目的で取り扱われる場合、個人情報保護法の規定に違反する可能性があるとしています。そのうえで、提供事業者が個人データを機械学習に利用しないこと等を十分に確認するよう求めています。</p>
+<p>判断表の「公開」の行で、フリーやプレミアムを使う前提を「個人情報が入らない会議」に置いたのはこのためです。</p>
+<h3 id="3-学習・保存・アクセスをプランごとに分けて見る">3. 学習・保存・アクセスをプランごとに分けて見る</h3>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約第10条4項は、音声認識エンジンのパートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合がある、と定めています。ヘルプ「AI学習について」によると、「AI学習なし」の環境を提供しているのはエンタープライズとビジネス Plusで、料金プランのヘルプでは士業向け特別プランにも「AI学習なし」が挙がっています。</p>
+<p>「AI学習なし」では、パートナー企業のサーバやストレージに音声と認識結果が保存されることは一切ない、と説明されています。一方、作成したノートは法人契約FAQによるとAWS東京リージョンに暗号化して保存され、手動で削除しない限り保管され続けます。音声認識以外のAI機能（要約など）は、いずれのプランでも学習にデータを提供していないとされています。</p>
+<p>社外秘の会議を外部サービスで処理するなら、公開価格で学習なしが付くビジネス Plusが、区分の要件とプランの記載が噛み合う選択肢です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="Nottaの上位プランが選択肢になる条件">Nottaの上位プランが選択肢になる条件</h2>
+<p>次の条件が重なる会社では、ビジネス Plus以上を比べる価値があります。</p>
+<ul><li>社外秘の会議を、許可したツールで文字起こしするルールにしたい</li><li>区分ごとに、使ってよいプランを規程に書き分けたい（学習なしのプランを指定できる）</li><li>部外秘の会議は、ワークスペースの権限とIPアドレス制限で開ける人と場所を絞りたい</li></ul>
+<p>SSOや操作ログ、データの定期自動削除まで要件に入るなら、法人契約FAQでそれらの機能が挙がっているエンタープライズの見積もりが必要です。差は<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>で整理しています。</p>
+<p>極秘の会議にも使いたい場合は、デスクトップ版の「プライバシーモード」が候補になります。ヘルプ（2026年10月16日更新）によると、録音と文字起こしをデバイス上で完結させ、データは指定したローカルフォルダーにのみ保存し、クラウド上の音声認識サービスに送らず学習にも使わない機能です。ただし、クラウド処理を伴うAI要約やチームでの共同作業は制限されます。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQで、多要素認証・2段階認証は「現在、対応しておりません」とされています。社外秘以上で認証の強さを求める会社は、<a href="../transcription-mfa-access/">文字起こしの多要素認証とアクセス制限</a>の代替策を確認してください</li><li><strong>Notta（フリー・プレミアム・ビジネス）</strong>：規約の「ご利用のプランに応じて」の範囲に入り、学習なしの記載がありません。社外秘に使うとビジネス Plus以上になり、費用が上がります</li><li><strong>Notta（プライバシーモード）</strong>：ヘルプが挙げる対象はプレミアム・ビジネス・エンタープライズで、ビジネス Plusと士業向け特別プランが対象かは公式に明記がなく確認できませんでした</li><li><strong>この記事の限界</strong>：ハンドブックと注意喚起に、AI文字起こしを名指しした記述は確認できませんでした。区分の定義は会社ごとに違います</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="社内の区分が-社外秘-しかない場合はどうしますか">社内の区分が「社外秘」しかない場合はどうしますか</h3>
+<p>ハンドブックの規程例も、分類は極秘と社外秘の2つから始まっています。2区分なら、社外秘は学習なしのプラン、極秘は手元処理か録音しない、と2行の判断表で足ります。</p>
+<h3 id="従業員が個人で入れた無料の文字起こしアプリはどう扱いますか">従業員が個人で入れた無料の文字起こしアプリはどう扱いますか</h3>
+<p>ハンドブックは、予め許可された生成AIだけを使うルールを定めることを挙げています。区分ごとに「使ってよいツールとプラン」を一覧にし、それ以外は使わない形にします。個人利用への対策の順番は<a href="../shadow-ai-transcription/">AI文字起こしのシャドーAI対策</a>にまとめています。</p>
+<h3 id="取引先から受け取った秘密情報が話される会議は-どの区分ですか">取引先から受け取った秘密情報が話される会議は、どの区分ですか</h3>
+<p>自社の区分だけでは決まりません。NDAで複製や第三者への開示が制限されていれば、その条文が優先します。NDAと文字起こしの関係は<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>で扱っています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>区分ごとに「音声の行き先と保存先」を決める。公開はクラウド、社外秘は学習なしのプラン、部外秘は権限設計まで、極秘は手元処理か録音しない</li><li>区分とは別に、個人データが入る会議は、個人情報保護委員会の注意喚起に沿って学習に使われないことを確かめる</li><li>Nottaで学習なしが明記されているのはビジネス Plus（年64,800円・税抜）・エンタープライズ・士業向け特別プラン。多要素認証は未対応（2026年10月31日に公式ページで確認）</li></ul>
+<p>※本記事は経済産業省・個人情報保護委員会とNottaの公開ページを2026年10月31日に確認して整理したもので、法的な助言ではありません。自社の規程への当てはめは、社内の情報セキュリティ担当や顧問弁護士にご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li><li><a href="../hr-exit-interview-ai-transcription/">人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</a></li><li><a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li><li><a href="../hr-exit-interview-ai-transcription/">人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

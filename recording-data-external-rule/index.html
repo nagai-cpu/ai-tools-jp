@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>録音データの社外持ち出しルール｜私物スマホ・個人クラウド・外部AIの線引き｜AIツール実用ガイド</title>
+<meta name="description" content="会議の録音ファイルを私物スマホや個人のクラウド、外部のAIに持ち出させないための社内ルール作り。個人情報保護法の安全管理措置とNottaの共有・ダウンロード制限を公式で整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/recording-data-external-rule/">
+<meta property="og:title" content="録音データの社外持ち出しルール｜私物スマホ・個人クラウド・外部AIの線引き｜AIツール実用ガイド">
+<meta property="og:description" content="会議の録音ファイルを私物スマホや個人のクラウド、外部のAIに持ち出させないための社内ルール作り。個人情報保護法の安全管理措置とNottaの共有・ダウンロード制限を公式で整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "録音データの社外持ち出しルール｜私物スマホ・個人クラウド・外部AIの線引き", "description": "会議の録音ファイルを私物スマホや個人のクラウド、外部のAIに持ち出させないための社内ルール作り。個人情報保護法の安全管理措置とNottaの共有・ダウンロード制限を公式で整理。", "datePublished": "2026-10-31", "dateModified": "2026-10-31", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/recording-data-external-rule/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">録音データの社外持ち出しルール｜私物スマホ・個人クラウド・外部AIの線引き</h1><p class="meta">2026-10-31 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、録音データの持ち出しルールは「禁止の一文」より、<strong>持ち出し先ごとに「何を確認できないから止めるのか」を書き分ける</strong>ほうが運用できます。私物スマホは紛失、個人クラウドは契約を会社が確かめられないこと、外部AIは学習に使われるかが論点です。そのうえで、録音を最初から会社のワークスペースに置き、共有リンクとダウンロードを権限で絞れるツールに寄せると、ルールを守る手間が減ります。</p>
+<h2 id="この記事で確認した一次資料">この記事で確認した一次資料</h2>
+<p>2026年10月31日に、e-Govの個人情報の保護に関する法律（第23条〜第25条・第28条）、個人情報保護委員会の「個人情報の保護に関する法律についてのガイドライン（通則編）」の別添「講ずべき安全管理措置の内容」、同委員会のQ&amp;A（Q7-53・Q12-3）、「生成AIサービスの利用に関する注意喚起等」（令和5年6月2日）、Nottaの料金ページ・法人向けページ・利用規約・ヘルプセンターを確認しました。</p>
+<p>従業員が個人のAIを使う問題全体は<a href="../shadow-ai-transcription/">AI文字起こしのシャドーAI対策</a>で扱ったので、この記事は<strong>すでにある録音ファイルを外へ持ち出す行為</strong>のルールに絞ります。</p>
+<h2 id="持ち出し先ごとの論点と-ルールの書き方">持ち出し先ごとの論点と、ルールの書き方</h2>
+<div class="tw"><table><thead><tr><th>持ち出し先</th><th>主な論点</th><th>公式の根拠</th><th>ルールの書き方の例</th><th>Nottaで置き換える手段</th></tr></thead><tbody><tr><td>私物スマホへの保存</td><td>紛失・盗難で容易に中身が判明する</td><td>通則ガイドライン別添 10-5(3)</td><td>保存を認めるなら端末のロックとパスワード保護を条件にする</td><td>ダウンロード権限を一部の人に限る（ビジネス以上）</td></tr><tr><td>個人のクラウド（個人契約のストレージ）</td><td>事業者が個人データを取り扱うかを会社が契約で確かめられない</td><td>Q&amp;A Q7-53</td><td>会社が契約していない保存先には置かない</td><td>会社のワークスペースに集め、ワークスペース単位で共有範囲を決める</td></tr><tr><td>外部の生成AI・文字起こし（個人アカウント）</td><td>応答の出力以外の目的、特に機械学習に使われるか</td><td>生成AIサービスの利用に関する注意喚起等</td><td>学習に使わないことを会社が確認したサービスだけ許可する</td><td>AI学習なしのビジネス Plus・エンタープライズ・士業向け特別プラン</td></tr><tr><td>共有リンクで社外へ</td><td>リンクを知る人がログインなしで開ける</td><td>Nottaヘルプ「共有リンクを使った外部へのノート共有」</td><td>社外共有は期限とパスワードを必須にする</td><td>外部共有の無効化（ビジネス以上・オーナーのみ）</td></tr><tr><td>外国にあるサーバ</td><td>外国にある第三者への提供か、外国の制度の把握が要るか</td><td>法第28条、Q&amp;A Q12-3、別添 10-7</td><td>保存国と、要約など処理の送信先を台帳に書く</td><td>Nottaのデータは東京のデータセンターに保管（ヘルプ）</td></tr></tbody></table></div>
+<p>根拠の列は論点の入口で、個別の事案に当たるかどうかの判断ではありません。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-持ち出し-を-媒体ではなく管理の手が届くかで定義する">1. 「持ち出し」を、媒体ではなく管理の手が届くかで定義する</h3>
+<p>個人情報保護法第23条は、個人データの漏えい等の防止のために必要かつ適切な措置を求め、第24条は従業者への監督を求めています。通則ガイドラインの別添は、物理的安全管理措置の10-5(3)で、個人データが記録された電子媒体等を持ち運ぶ場合、容易に個人データが判明しないよう安全な方策を講じなければならないとしています。中小規模事業者の手法の例としては、パスワードの設定などで紛失・盗難等を防ぐことが挙げられています。</p>
+<p>法令が「私物スマホ禁止」と名指ししているわけではありません。そこで社内ルールでは、「会社が消せない・見えない・止められない場所に置くこと」を持ち出しと定義すると、USBも私物スマホも個人のクラウドも同じ物差しで扱えます。技術的安全管理措置10-6(1)の中小規模事業者の手法の例も、個人データを取り扱うことのできる機器と従業者を明確化するという書き方です。ルールには「録音を扱ってよい端末」と「扱ってよい人」を並べて書きます。</p>
+<p>人的安全管理措置10-4は、秘密保持に関する事項を就業規則等に盛り込むことを手法の例に挙げています。退職者の録音の行き先は<a href="../transcription-offboarding/">AI文字起こしの退職者アカウントとデータ</a>で整理しています。</p>
+<h3 id="2-外部のAIに入れるなら-学習-と-契約-を会社が確かめられるか">2. 外部のAIに入れるなら、「学習」と「契約」を会社が確かめられるか</h3>
+<p>個人情報保護委員会の注意喚起は、個人情報取扱事業者が本人の同意なく個人データを含むプロンプトを生成AIサービスに入力し、それが応答結果の出力以外の目的で取り扱われる場合、法の規定に違反することとなる可能性があるとしています。そのため、提供する事業者が機械学習に利用しないこと等を十分に確認するよう求めています。</p>
+<p>クラウドの扱いについて、委員会のQ&amp;AのQ7-53は、判断の基準を「保存する電子データに個人データが含まれるか」ではなく、クラウドサービス提供事業者が個人データを取り扱うこととなっているかどうかだとしています。取り扱わない場合の例として、契約条項で取り扱わない旨が定められ、適切にアクセス制御を行っている場合が挙げられています。個人が自分で契約したサービスでは、この契約条項を会社が確かめる手段が乏しくなります。ルールで「会社が契約したサービスに限る」とする理由は、ここに置けます。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の場合、利用規約の第10条は、音声認識エンジンを提供するパートナー企業が「ご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合があると書いています。AI学習なしはヘルプでエンタープライズとビジネス Plus、法人向けページで士業向け特別プランに挙げられており、標準のビジネスプランはヘルプの比較表で音声認識のAI学習が「あり」です。会社として許可するなら、この3つのどれかが候補になります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h3 id="3-外国のサーバは-国名-で禁止せず-確認項目にする">3. 外国のサーバは「国名」で禁止せず、確認項目にする</h3>
+<p>法第28条は、外国にある第三者に個人データを提供する場合、原則として、あらかじめ外国にある第三者への提供を認める旨の本人の同意を求めています。一方でQ&amp;AのQ12-3は、外国の事業者のサーバでも、サーバ運営者が個人データを取り扱わないこととなっている場合は提供に当たらないとし、その場合でも外国の制度等を把握したうえで安全管理措置を講じる必要があるとしています。通則ガイドライン別添の10-7（外的環境の把握）も同じ趣旨です。</p>
+<p>ルールには「海外は禁止」と書くより、「保存国」「処理の送信先」「事業者が取り扱うか」を承認時に記録する欄を作るほうが、後から説明できます。Nottaのヘルプは、データの保管先をAmazon Web Servicesの東京のデータセンターとしています。要約など、保存とは別の処理の送信先の見方は<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？保存先と送信先の確認</a>にまとめています。</p>
+<h2 id="Nottaの上位プランが選択肢になる条件">Nottaの上位プランが選択肢になる条件</h2>
+<p>次の3つがそろう会社では、持ち出しを「禁止して見張る」より、Nottaのビジネス Plus（法人向けページで年64,800円・税抜）やエンタープライズに録音を集めるほうが、ルールと運用が一致しやすくなります。</p>
+<ul><li>会議の録音に顧客名や人事の話など、個人データや機密が入る</li><li>外部のAIでの文字起こしや要約を一律に禁止すると、業務が回らない</li><li>社外への共有を、期限とパスワード付きのリンクに限りたい</li></ul>
+<p>ヘルプによると、ビジネス以上では作成したノートが初期設定で作成者のみのアクセスになり、ノートやフォルダに「閲覧のみ／編集可能／編集＆ダウンロード可能／フルアクセス」の権限を付けられます。ダウンロードできるのは「編集&amp;ダウンロード可能」以上の人です。エンタープライズでは、個人用ワークスペースの新規作成の禁止と、ダウンロード履歴を含む操作ログ（過去180日）が使えます。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQに、多要素認証・2段階認証には「現在、対応しておりません」とあります。IPアドレス制限（ビジネスは20個まで）で補えますが、ヘルプは4G回線では使わないよう案内しています</li><li><strong>Notta（共有リンク）</strong>：共有リンクはすべてのプランで、「編集可能」以上の権限を持つ人が作れます。モバイルアプリの説明では、リンクを知っている全員がログイン不要でアクセスできます。期限とパスワードは任意の設定です</li><li><strong>Notta（ビジネス Plus）</strong>：ダウンロード履歴を含む操作ログと、個人用ワークスペースの作成禁止は、ヘルプではエンタープライズで利用可能とされています。ワークスペース全体でダウンロードを一括で止める設定は、今回見たヘルプでは確認できませんでした</li><li><strong>ルール側の限界</strong>：ツールで止められるのは、会社のワークスペースに入った録音だけです。ICレコーダーなどで録った元のファイルは別に扱いを決めます</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="私物スマホでの録音は禁止しないといけませんか">私物スマホでの録音は禁止しないといけませんか</h3>
+<p>通則ガイドラインの別添に、私物スマホを名指しした記述は確認できませんでした。求められているのは、持ち運ぶ電子媒体で個人データが容易に判明しないようにすることなどです。認めるなら、端末のロック、保存場所、退職時の削除を条件に書きます。</p>
+<h3 id="海外のAIサービスに録音を入れると-法第28条の違反になりますか">海外のAIサービスに録音を入れると、法第28条の違反になりますか</h3>
+<p>国名だけでは決まりません。Q&amp;AのQ12-3は、外国の事業者のサーバでも、運営者が個人データを取り扱わないこととなっていれば提供に当たらないとしています。取り扱うこととなっている場合は第28条の検討が要ります。個別の判断は、社内の法務や専門家に確認してください。</p>
+<h3 id="Nottaの共有リンクは-社外の人がログインなしで見られますか">Nottaの共有リンクは、社外の人がログインなしで見られますか</h3>
+<p>ヘルプのモバイルアプリの説明では、リンクを知っている全員がログイン不要でアクセスできます。有効期間とパスワード保護は設定でき、ビジネス以上ならオーナーが外部共有自体を無効にできます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>持ち出しは媒体で列挙せず、「会社が消せない・見えない・止められない場所に置くこと」と定義すると、私物スマホも個人クラウドも同じ物差しで扱える</li><li>外部のAIは、学習に使わないことと契約条項を会社が確かめられるかで許可を分ける（個人情報保護委員会の注意喚起とQ&amp;A Q7-53）</li><li>Nottaで受け皿を作るなら、AI学習なしのビジネス Plus・エンタープライズ・士業向け特別プランが候補。多要素認証は非対応で、ダウンロード履歴の操作ログはエンタープライズのみ</li></ul>
+<p>※本記事はe-Gov、個人情報保護委員会、Nottaの公開ページを2026年10月31日に確認して整理したもので、法的な助言ではありません。個別の判断は社内の法務や専門家にご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</a></li><li><a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</a></li><li><a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li><li><a href="../hr-exit-interview-ai-transcription/">人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

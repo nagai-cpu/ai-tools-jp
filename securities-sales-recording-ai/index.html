@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>証券営業の録音をAI文字起こしする前に｜監督指針で見る記録と委託の3点｜AIツール実用ガイド</title>
+<meta name="description" content="証券会社で営業の電話・対面の録音をAIで文字起こししたいコンプライアンス担当向け。金融庁の監督指針で記録・情報管理・委託先管理を確かめ、Nottaのプランを公式の記載で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/securities-sales-recording-ai/">
+<meta property="og:title" content="証券営業の録音をAI文字起こしする前に｜監督指針で見る記録と委託の3点｜AIツール実用ガイド">
+<meta property="og:description" content="証券会社で営業の電話・対面の録音をAIで文字起こししたいコンプライアンス担当向け。金融庁の監督指針で記録・情報管理・委託先管理を確かめ、Nottaのプランを公式の記載で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "証券営業の録音をAI文字起こしする前に｜監督指針で見る記録と委託の3点", "description": "証券会社で営業の電話・対面の録音をAIで文字起こししたいコンプライアンス担当向け。金融庁の監督指針で記録・情報管理・委託先管理を確かめ、Nottaのプランを公式の記載で整理しました。", "datePublished": "2026-10-31", "dateModified": "2026-10-31", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/securities-sales-recording-ai/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">証券営業の録音をAI文字起こしする前に｜監督指針で見る記録と委託の3点</h1><p class="meta">2026-10-31 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、証券営業の録音をAIで文字起こしする前に決めるべきなのは、ツールの精度よりも<strong>「録音を何の検証に使うか」「顧客情報と法人関係情報を誰が開けるか」「預け先を外部委託先として管理できるか」</strong>の3つです。金融庁の監督指針は、高齢顧客への勧誘について日本証券業協会の規則とガイドラインを踏まえた社内規則の整備を求め、顧客等に関する情報の委託先管理も細かく挙げています。</p>
+<h2 id="プランごとに-記録の管理で効く機能を並べる">プランごとに、記録の管理で効く機能を並べる</h2>
+<p>2026年10月31日に、金融庁「金融商品取引業者等向けの総合的な監督指針」（令和8年10月版・金融庁サイトのHTML版）と、Nottaの料金ページ・法人向けページ・利用規約（2025年8月1日改訂）・ヘルプセンターで確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>プラン</th><th>料金（公式表示）</th><th>音声認識のAI学習</th><th>ノート単位のアクセス権</th><th>操作ログ・自動削除</th></tr></thead><tbody><tr><td>フリー</td><td>0円</td><td>記載なし</td><td>対象外（ビジネス以上）</td><td>記載なし</td></tr><tr><td>ビジネス</td><td>年30,096円（税込・1アカウントあたり）</td><td>あり（ヘルプの比較表）</td><td>あり</td><td>記載なし</td></tr><tr><td>ビジネス Plus</td><td>年64,800円（税抜・1アカウントあたり）</td><td>なし</td><td>あり（ビジネスの全機能を含む）</td><td>記載なし</td></tr><tr><td>エンタープライズ</td><td>要相談</td><td>なし</td><td>あり</td><td>あり</td></tr></tbody></table></div>
+<p>「記載なし」は、料金ページ・法人向けページ・ヘルプでそのプランの機能として書かれているのを確認できなかったという意味です。ビジネスの「あり」は、ヘルプ「『ビジネス Plus』と『ビジネスプラン』の違いは何ですか？」の比較表によります。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-録音を-何の検証に使うかを社内規則で先に決める">1. 録音を、何の検証に使うかを社内規則で先に決める</h3>
+<p>監督指針IV-3-1-2(3)は、高齢顧客は過去の投資経験が十分でも短期的に投資判断能力が変化する場合があるとして、慎重な勧誘・販売態勢と、問題のある勧誘・販売を早期に発見するモニタリング態勢を求めています。具体的には、日本証券業協会の「協会員の投資勧誘、顧客管理等に関する規則」と「同規則第5条の3の考え方」（高齢顧客への勧誘による販売に係るガイドライン）を踏まえた社内規則の整備と、その遵守状況のモニタリングです。</p>
+<p>意外だったのは、監督指針の本文12章を「録音」で検索すると、出てくるのが2か所だけだったことです。どちらも少額電子募集取扱業者（第一種はIV-3-5-4-1、第二種はV-2-4-4-1）が電話で説明する場合で、通話の適切性を「録音その他の方法により事後に検証できる態勢」にあるかを問うものでした。つまり監督指針の言葉では、録音は事後の検証の手段として出てきます。</p>
+<p>文字起こしが役に立つのは、この検証の場面です。録音を聞き直さなくても、説明した内容をテキストで探せます。ただし、どの取引を録音の対象にし、何年保存するかは、日証協のガイドラインと自社の社内規則で決まるものです。日証協の規則とガイドラインの原文は、今回の確認時にサイトへアクセスできず、録音についての記述を確認できませんでした。導入前に原文と社内規則を照らしてください。</p>
+<h3 id="2-顧客情報と法人関係情報を-誰が開けるかを絞る">2. 顧客情報と法人関係情報を、誰が開けるかを絞る</h3>
+<p>監督指針III-2-4は、顧客に関する情報と法人関係情報をあわせて「顧客等に関する情報」とし、アクセスと利用を業務上必要な役職員に限る「Need to Know原則」を掲げています。営業の通話には、顧客の資産や投資目的に加え、法人顧客との会話なら未公表の情報が混ざる可能性があります。全文が検索できるテキストになる以上、録音そのものより開ける人の範囲が問題になります。</p>
+<p>さらにIII-2-4(2)は、保健医療などの「特別の非公開情報」を、金融分野ガイドライン第5条第1項各号の場合を除いて利用しないことを確保する措置を求めています。高齢の顧客との会話では、体調や通院の話が出ることもあります。文字起こしに残った健康の話をどう扱うかは、コンプライアンス部門で決めておきたい点です。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプ「データ・フォルダのアクセス権を設定する」によると、ノートやフォルダごとのアクセス権はビジネスとエンタープライズで使えます。法人向けページではIP制限もビジネスの機能に挙がっています。誰がいつ記録を開いたかを追うなら、操作ログ（過去180日分を取得可能）はエンタープライズの機能です。詳しくは<a href="../transcription-audit-log/">監査ログで「誰が見たか」を追えるか</a>にまとめました。</p>
+<h3 id="3-預け先を-外部委託先として管理できるか">3. 預け先を、外部委託先として管理できるか</h3>
+<p>監督指針III-2-4(1)は、顧客等に関する情報の取扱いを委託する場合に、外部委託先のモニタリング、漏えい時に速やかに報告される体制、委託先でのアクセス権限の制限、そして二段階以上の委託が行われた場合の再委託先の監督を挙げています。注記では、契約の形態や種類を問わないとしています。</p>
+<p>AI文字起こしでは、この「二段階」が実際に起こります。Nottaの利用規約は、音声認識を第三者のパートナー企業のAPIで行い、その企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合があると書いています。ヘルプ「AI学習について」によると、「AI学習あり」ではパートナー企業が音声データと認識結果を国内のデータセンターに一旦保管して学習に使い、「AI学習なし」ではパートナー企業のサーバーやストレージに保存されることは一切ないとされています。「AI学習なし」の環境が書かれているのは、エンタープライズとビジネス Plusです。</p>
+<p>作成したノートは、法人契約FAQによるとAWS東京リージョンに保存され、手動で削除しない限り保管され続けます。ISO27001とSOC2 Type2のレポートはNDAの締結後に提供可能とされています。委託先として説明する材料は、ここから集めることになります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="Nottaの上位プランが選択肢になる条件">Nottaの上位プランが選択肢になる条件</h2>
+<ul><li>録音の対象と保存期間が社内規則で決まっていて、文字起こしを検証の補助に置ける</li><li>音声を外部に預けることについて、委託先管理の手続きを通せる</li><li>学習なしだけでよければビジネス Plus、自動削除や操作ログ、監査員が読み取り専用で確認する「監査モード」まで要るならエンタープライズ</li></ul>
+<p>違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>に整理しています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQは、多要素認証・2段階認証に「現在、対応しておりません」と答えています。IP制限で接続元を絞る補い方は<a href="../transcription-mfa-access/">文字起こしの多要素認証とアクセス制限</a>にあります</li><li><strong>Notta（ビジネス Plus）</strong>：自動削除と操作ログは、ヘルプでエンタープライズの機能とされています。保存期間の管理と閲覧の記録は、人の運用で補うことになります</li><li><strong>Notta（通話録音）</strong>：Nottaは通話録音システムではありません。既存の録音装置の音声ファイルを取り込む使い方になり、ファイルインポートには月あたりの個数の上限があるプランもあります</li><li><strong>この記事の限界</strong>：監督指針にAI文字起こしを名指しした記述は確認できませんでした。日証協のガイドラインの録音に関する記述も、今回は原文を確認できていません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="証券会社の営業電話は-録音しなければいけないのですか">証券会社の営業電話は、録音しなければいけないのですか</h3>
+<p>監督指針の高齢顧客の項目（IV-3-1-2(3)）は、日証協の規則とガイドラインを踏まえた社内規則の整備を求めています。どの勧誘や取引を録音の対象にするかは、ガイドラインの原文と自社の社内規則で確認してください。</p>
+<h3 id="録音をクラウドのAIに送るのは-外部委託にあたりますか">録音をクラウドのAIに送るのは、外部委託にあたりますか</h3>
+<p>監督指針III-2-4(1)の注記は、委託を契約の形態や種類を問わず、顧客等に関する情報の取扱いの全部又は一部を他の者に行わせる契約の一切としています。あてはまるかの判断は、社内のコンプライアンス部門に確認してください。</p>
+<h3 id="保険の面談録音と同じ考え方でいいですか">保険の面談録音と同じ考え方でいいですか</h3>
+<p>記録の検証に使う点は似ていますが、証券では法人関係情報の管理が加わります。保険の場合は<a href="../insurance-interview-recording/">保険の面談録音をAIで文字起こしする前に</a>にまとめました。社内会議の文字起こしは<a href="../finance-meeting-transcription/">金融機関の会議のAI文字起こしと規制</a>で扱っています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>監督指針で録音が出てくるのは、電話説明を「事後に検証できる態勢」の2か所。高齢顧客は日証協ルールを踏まえた社内規則（IV-3-1-2(3)）で決める</li><li>通話の文字起こしは顧客情報と法人関係情報を含みうる。Need to Know原則と委託先管理（III-2-4）に沿って開ける人と預け先を管理する</li><li>Nottaの「AI学習なし」はビジネス Plus（年64,800円・税抜）以上、自動削除と操作ログはエンタープライズ、多要素認証は未対応（2026年10月31日に公式ページで確認）</li></ul>
+<p>※本記事は金融庁の監督指針とNottaの公開ページを2026年10月31日に確認して整理したもので、法的な助言ではありません。個別の判断は社内のコンプライアンス部門や専門家にご確認ください。</p></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</a></li><li><a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</a></li><li><a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li><li><a href="../hr-exit-interview-ai-transcription/">人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者｜AIツール実用ガイド</title>
+<meta name="description" content="ChatGPT旧Team（現Business）とEnterpriseで録音・音声入力が学習されない範囲を公式で確認。保持期間、管理者の閲覧、日本のデータ保存、Nottaと比べる条件まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/chatgpt-team-enterprise-audio-training/">
+<meta property="og:title" content="ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者｜AIツール実用ガイド">
+<meta property="og:description" content="ChatGPT旧Team（現Business）とEnterpriseで録音・音声入力が学習されない範囲を公式で確認。保持期間、管理者の閲覧、日本のデータ保存、Nottaと比べる条件まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者", "description": "ChatGPT旧Team（現Business）とEnterpriseで録音・音声入力が学習されない範囲を公式で確認。保持期間、管理者の閲覧、日本のデータ保存、Nottaと比べる条件まで。", "datePublished": "2026-10-31", "dateModified": "2026-10-31", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/chatgpt-team-enterprise-audio-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</h1><p class="meta">2026-10-31 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、ChatGPT Teamは2025年8月29日に<strong>ChatGPT Business</strong>へ名称が変わっており、BusinessとEnterpriseのワークスペースの内容は、音声会話や録音モードの文字起こしも含めて<strong>初期状態で学習に使われません</strong>。例外は、フィードバックなどで明示的にデータ共有を選んだ場合です。差が出るのは学習よりも、保持期間を誰が決めるか、録音モードを使えるか、データを日本に保存できるかの3点です。</p>
+<h2 id="個人プランと法人向けプランの違い">個人プランと法人向けプランの違い</h2>
+<p>2026年10月31日に、OpenAIの「エンタープライズプライバシー」（2026年1月8日更新）、料金ページ、ヘルプセンターの「ChatGPT Record」「ChatGPT Voice」「音声入力 - FAQ」「ChatGPT Business overview」「Data residency and inference residency for ChatGPT」で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>Free・Plus・Pro（個人）</th><th>Business（旧Team）</th><th>Enterprise</th></tr></thead><tbody><tr><td>会話・文字起こしの学習</td><td>「すべての人のためにモデルを改善する」がオンなら使われる場合がある</td><td>初期状態で使わない</td><td>初期状態で使わない</td></tr><tr><td>音声クリップの学習</td><td>「音声録音を含める」をオンにした場合のみ</td><td>初期状態で使わない</td><td>初期状態で使わない</td></tr><tr><td>録音モードの音声</td><td>文字起こし後に削除、学習に使わない（録音モードの対象にFreeは挙がっていない）</td><td>文字起こし後に削除、学習に使わない</td><td>文字起こし後すぐに削除。録音モードは初期状態で無効</td></tr><tr><td>保持期間</td><td>本人がチャットを削除すると30日以内に削除</td><td>管理者が設定。削除・未保存の会話は30日以内に削除</td><td>管理者が設定。削除した会話は30日以内に削除</td></tr><tr><td>日本でのデータ保存</td><td>公式に記載なし</td><td>ヘルプの対象に挙がっていない</td><td>対象となる新規顧客は日本を選べる</td></tr><tr><td>料金（1ユーザー月額）</td><td>料金ページで確認</td><td>スタンダード3,050円（年額課金）・3,850円（月額課金）</td><td>営業に問い合わせ</td></tr></tbody></table></div>
+<p>Businessの料金は料金ページの日本円表示で、プレミアムシートは15,250円（年額課金）です。消費税の扱いは、確認したページの表示からは読み取れませんでした。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-学習に使わない-に例外があるか">1. 「学習に使わない」に例外があるか</h3>
+<p>エンタープライズプライバシーのページは、Business・Enterprise・Edu・Healthcare・Teachersのビジネスデータを、初期状態ではモデルの学習に使わないとしています。そのうえで、お客様がフィードバック機能などで<strong>データ共有に明示的に同意した場合は、共有されたデータを学習に使うことがある</strong>と書いています。</p>
+<p>録音モードのヘルプにも、Business・Enterprise・Eduのワークスペースの内容は、録音モードの文字起こしとキャンバスを含めて初期状態で学習から除外されると明記されています。音声入力のFAQも、ビジネスユーザー向け製品の入出力は初期状態で学習に使わないとしています。</p>
+<p>つまり法人向けプランでは、個人プランのように各自の設定スイッチを揃える必要はありません。社内ルールとして決めておくのは、<strong>会議の内容を含む回答にフィードバックを送るかどうか</strong>です。個人プランの設定の止め方は<a href="../chatgpt-voice-training/">ChatGPTの音声と文字起こしは学習される？</a>で整理しています。</p>
+<h3 id="2-誰が-どれだけの期間-見られるか">2. 誰が、どれだけの期間、見られるか</h3>
+<p>学習されなくても、データは保持されます。エンタープライズプライバシーのページによると、Businessではワークスペース管理者が保持期間を設定でき、<strong>メンバーの会話履歴を閲覧・エクスポート・削除できます</strong>。Enterpriseでは、管理者がEnterprise Compliance APIで会話の監査ログにアクセスできます。</p>
+<p>音声については、ChatGPT Voiceのヘルプに、音声会話の音声クリップは文字起こしと一緒に保存され、30日保持されると書かれています。録音モードでは、音声ファイルは文字起こし後に自動で削除され、文字起こしと要約はワークスペースの保持設定に従います。Enterprise・Eduでは、録音モードのキャンバスと文字起こしがCompliance APIの記録対象です。</p>
+<p>会議の録音を扱うなら、「学習されるか」と同じくらい「管理者が中身を見られる」ことを参加者に説明できるかが論点になります。保存期間の考え方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>にまとめています。</p>
+<h3 id="3-保存場所と契約の形">3. 保存場所と契約の形</h3>
+<p>データレジデンシーのヘルプでは、保存先を日本などから選べるのは<strong>対象となるAPI顧客と、ChatGPT Enterprise・Eduの新規顧客</strong>とされています。Businessは対象に挙がっていませんでした。対象の保存データには音声を含む会話が挙がる一方、一般提供前（ベータなど）の機能は対象外とされています。録音モードの文字起こしが対象に入るかは、明記がなく確認できませんでした。</p>
+<p>Businessの概要ページには、請求書払い、ゼロデータ保持（ZDR）、BAAなどが必要なら、セルフサービスのBusinessではなく契約型の提供形態を使うよう書かれています。保存場所や契約書の条件まで求められる会社は、Enterpriseの見積もりが前提になります。保存場所の論点は<a href="../transcription-data-residency/">AI文字起こしは海外サーバー？</a>でも扱っています。</p>
+<h2 id="会議の文字起こしで-Nottaの上位プランが選択肢になる条件">会議の文字起こしで、Nottaの上位プランが選択肢になる条件</h2>
+<p>ChatGPTの録音モードは、公式ヘルプの記載ではmacOSのデスクトップアプリで使う機能で、1回の録音は最長4時間です。英語が最も精度が高く、ほかの言語は精度がばらつく場合があると書かれています。カレンダーからの自動参加はGoogle Meetのリンクのみで、ZoomやTeamsは手動で録音を始めます。</p>
+<p>次の条件が重なるなら、日本語の会議を前提にした<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の上位プランと比べる価値があります。</p>
+<ul><li>日本語の会議が中心で、WindowsやスマートフォンからもZoom・Teamsの会議を記録したい</li><li>Enterpriseの規模ではないが、保存場所が国内であることを説明したい</li><li>「学習に使わない」を、設定や運用ではなく契約したプランの機能として示したい</li></ul>
+<p>Nottaの利用規約（2025年8月1日改訂）には、音声認識エンジンを提供するパートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合がある、と書かれています。法人向けページでは「AI学習なし」がビジネス Plus（年64,800円・税抜、月額換算5,400円）、エンタープライズ、士業向け特別プランの機能として載っています。料金ページのよくある質問には、すべてのデータは日本国内に保管と書かれています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<p>プランごとの差は<a href="../notta-business-plus/">Nottaビジネス Plusとビジネスの違い</a>で整理しています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>ChatGPT Business</strong>：日本でのデータ保存はヘルプの対象に挙がっていません。管理者はメンバーの会話を閲覧・エクスポートできるため、録音の参加者への説明が要ります</li><li><strong>ChatGPT Enterprise</strong>：料金は営業への問い合わせで、録音モードは初期状態で無効です。管理者が有効にするまで使えません</li><li><strong>ChatGPT 録音モード（全プラン）</strong>：macOSのデスクトップアプリ限定で、英語以外は精度がばらつく場合があると公式に書かれています</li><li><strong>Notta</strong>：「AI学習なし」はビジネス Plus以上と士業向け特別プランに限られます。法人契約FAQでは、多要素認証・2段階認証に「現在、対応しておりません」とされています</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="ChatGPT-TeamとChatGPT-Businessは別のプランですか">ChatGPT TeamとChatGPT Businessは別のプランですか</h3>
+<p>同じプランです。ヘルプの「ChatGPT Business overview」に、ChatGPT Teamは2025年8月29日にChatGPT Businessへ名称が変わったと書かれています。名称変更でプランの内容は変わっていませんが、その後に料金やシートの種類は見直されています。</p>
+<h3 id="Businessでも-評価ボタンを押すと学習に使われますか">Businessでも、評価ボタンを押すと学習に使われますか</h3>
+<p>エンタープライズプライバシーのページには、フィードバック機能などでデータ共有に明示的に同意した場合、共有されたデータを学習に使うことがあると書かれています。会議の内容を含む回答には評価を送らない、と社内で決めておくと説明しやすくなります。</p>
+<h3 id="個人のPlusで会議を録音するのと何が違いますか">個人のPlusで会議を録音するのと何が違いますか</h3>
+<p>Plusでも録音モードは使えますが、「すべての人のためにモデルを改善する」がオンなら、文字起こしとキャンバスが学習に使われる場合があります。Businessでは初期状態で学習から除外され、保持期間も管理者が決めます。個人の設定に任せるか、組織で揃えるかの違いです。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>ChatGPT Teamは現在のChatGPT Business。BusinessとEnterpriseは、音声会話や録音モードの文字起こしも含めて初期状態で学習に使わない。例外はフィードバックなどでの明示的な共有</li><li>差が出るのは保持と管理。Businessは管理者が会話を閲覧・エクスポートでき、日本でのデータ保存はEnterprise・Eduの新規顧客が対象</li><li>日本語の会議を国内保存・学習なしのプランで記録したいなら、Nottaのビジネス Plus以上と比べる（2026年10月31日に公式ページで確認）</li></ul>
+<p>※本記事はOpenAIとNottaの公開ページを2026年10月31日に確認して整理したもので、法的な助言ではありません。プラン名や提供範囲は変更されることがあるため、契約前に最新の公式ページをご確認ください。</p></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li><li><a href="../hr-exit-interview-ai-transcription/">人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../bank-loan-interview-ai-transcription/">銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認</a></li><li><a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと</a></li><li><a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者</a></li><li><a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a></li><li><a href="../family-mediation-recording-ai/">家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点</a></li><li><a href="../hr-exit-interview-ai-transcription/">人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>
