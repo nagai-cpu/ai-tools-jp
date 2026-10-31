@@ -17,6 +17,7 @@
 - [相続相談の録音をAIで文字起こし｜士業4法の守秘義務と、他士業へ渡すときの設定](https://nagai-cpu.github.io/ai-tools-jp/inheritance-consultation-recording/): 税理士・司法書士・弁護士・行政書士が相続相談の録音をAI文字起こしするときに、4つの士業法の守秘義務条文と、他の士業へ共有するときの文字起こしツールの設定を整理。
 - [AI文字起こしの個人アカウントを法人へ移行｜Nottaでデータを寄せられるプラン](https://nagai-cpu.github.io/ai-tools-jp/personal-to-business-account-migration/): 社員が個人のNottaで録った議事録を会社の管理下に移したい管理者向け。データ統合の公式手順がどのプランにあるか、ビジネスでできる代わりの方法をヘルプで整理。
 - [精神科の診察を録音してAI文字起こし｜刑法より重い守秘の罰則と学習しないプラン](https://nagai-cpu.github.io/ai-tools-jp/psychiatry-consultation-recording/): 精神科の医師・医療機関が診察の録音をAI文字起こししたいときに、刑法134条と精神保健福祉法53条の違い、診療録の保存、文字起こしツールの学習と権限の設定を公式で整理。
+- [株主総会の議事録をAI文字起こしで作る｜本番より準備会議に未公表情報が集まる](https://nagai-cpu.github.io/ai-tools-jp/shareholder-meeting-minutes-ai/): 株主総会の事務局がAI文字起こしで議事録を作りたいときに、会社法318条と施行規則72条が求める内容、未公表の重要事実が話される準備会議の扱い、ツールの学習設定を整理。
 - [Wordの文字起こし機能は学習される？法人で使う前に見る保存先と月300分](https://nagai-cpu.github.io/ai-tools-jp/word-transcribe-training/): Microsoft Wordの「トランスクリプト」を社内の会議や面談に使ってよいか確かめたい人向け。音声の保存先、月の上限、学習に関する公式の記載がどこにあるかを整理。
 - [銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認](https://nagai-cpu.github.io/ai-tools-jp/bank-loan-interview-ai-transcription/): 銀行との融資面談を録音・AI文字起こししたい中小企業の経営者向けに、金融庁の監督指針と最高裁の決定、金融分野の個人情報ガイドラインを確かめ、Nottaのプラン選びを整理しました。
 - [取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと](https://nagai-cpu.github.io/ai-tools-jp/board-meeting-minutes-ai-confidential/): 取締役会の録音をAIで文字起こしして議事録を作りたい会社向けに、会社法と施行規則の記載事項、インサイダー情報の扱い、録音の保存から、Nottaのどのプランが選択肢になるかを整理しました。
