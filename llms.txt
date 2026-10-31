@@ -15,6 +15,7 @@
 - [治験CRCの被験者面談を録音してAI文字起こし｜GCP省令で先に決める3点](https://nagai-cpu.github.io/ai-tools-jp/clinical-trial-crc-recording/): 治験コーディネーター（CRC）が被験者面談の録音をAIで文字起こししたいときに、GCP省令の秘密保全・記録保存の条文と、文字起こしツールの学習・保存設定をどう突き合わせるかを整理。
 - [DeepL Voiceは会議データを学習する？法人が確かめる保存先と議事録の残り方](https://nagai-cpu.github.io/ai-tools-jp/deepl-voice-training/): 社内の会議でDeepL Voiceを使ってよいか確認したい担当者向け。学習しないという公式の記載、文字起こしがどこに何日残るか、議事録用途との違いを公式ヘルプで整理。
 - [相続相談の録音をAIで文字起こし｜士業4法の守秘義務と、他士業へ渡すときの設定](https://nagai-cpu.github.io/ai-tools-jp/inheritance-consultation-recording/): 税理士・司法書士・弁護士・行政書士が相続相談の録音をAI文字起こしするときに、4つの士業法の守秘義務条文と、他の士業へ共有するときの文字起こしツールの設定を整理。
+- [看護師の申し送りを録音してAI文字起こし｜保助看法の守秘義務と看護記録の2年](https://nagai-cpu.github.io/ai-tools-jp/nurse-handover-recording/): 病棟の申し送りを録音・AI文字起こしして負担を減らしたい看護管理者向け。保助看法42条の2の守秘義務、看護記録の保存、文字起こしツールの学習と端末の扱いを公式で整理。
 - [AI文字起こしの個人アカウントを法人へ移行｜Nottaでデータを寄せられるプラン](https://nagai-cpu.github.io/ai-tools-jp/personal-to-business-account-migration/): 社員が個人のNottaで録った議事録を会社の管理下に移したい管理者向け。データ統合の公式手順がどのプランにあるか、ビジネスでできる代わりの方法をヘルプで整理。
 - [精神科の診察を録音してAI文字起こし｜刑法より重い守秘の罰則と学習しないプラン](https://nagai-cpu.github.io/ai-tools-jp/psychiatry-consultation-recording/): 精神科の医師・医療機関が診察の録音をAI文字起こししたいときに、刑法134条と精神保健福祉法53条の違い、診療録の保存、文字起こしツールの学習と権限の設定を公式で整理。
 - [株主総会の議事録をAI文字起こしで作る｜本番より準備会議に未公表情報が集まる](https://nagai-cpu.github.io/ai-tools-jp/shareholder-meeting-minutes-ai/): 株主総会の事務局がAI文字起こしで議事録を作りたいときに、会社法318条と施行規則72条が求める内容、未公表の重要事実が話される準備会議の扱い、ツールの学習設定を整理。
