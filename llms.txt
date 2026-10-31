@@ -15,6 +15,7 @@
 - [取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと](https://nagai-cpu.github.io/ai-tools-jp/board-meeting-minutes-ai-confidential/): 取締役会の録音をAIで文字起こしして議事録を作りたい会社向けに、会社法と施行規則の記載事項、インサイダー情報の扱い、録音の保存から、Nottaのどのプランが選択肢になるかを整理しました。
 - [ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者](https://nagai-cpu.github.io/ai-tools-jp/chatgpt-team-enterprise-audio-training/): ChatGPT旧Team（現Business）とEnterpriseで録音・音声入力が学習されない範囲を公式で確認。保持期間、管理者の閲覧、日本のデータ保存、Nottaと比べる条件まで。
 - [秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表](https://nagai-cpu.github.io/ai-tools-jp/confidential-class-ai-transcription/): 社内の情報区分ごとにAI文字起こしをどう使い分けるか迷う担当者向け。経産省の秘密情報保護ハンドブックの規程例と個人情報保護委員会の注意喚起をもとに、Nottaの方式とプランを区分別に整理。
+- [DMM 生成AI CAMPの給付金の対象と条件｜国の講座検索では0件だった](https://nagai-cpu.github.io/ai-tools-jp/dmm-aicamp-subsidy/): DMM 生成AI CAMPで給付金を使いたい個人向けに、厚労省の教育訓練給付の講座検索と経産省リスキリング事業の補助事業者一覧を2026年10月26日に確認した結果と、給付を受ける条件を整理しました。
 - [家事調停の録音をAI文字起こしする前に｜弁護士が確かめる非公開と守秘の3点](https://nagai-cpu.github.io/ai-tools-jp/family-mediation-recording-ai/): 家事調停を受任する弁護士向けに、期日の録音について裁判所の案内と家事事件手続法を確認し、依頼者との打合せ録音をAI文字起こしする場合のプランと管理を整理しました。
 - [人事の退職面談を録音してAI文字起こし｜健康の話と保存期間の決め方](https://nagai-cpu.github.io/ai-tools-jp/hr-exit-interview-ai-transcription/): 退職面談を録音してAIで文字起こしする人事担当者向け。体調の話が出たときの扱い、聞ける人の範囲、退職後の保存と削除を厚労省・個人情報保護委員会の資料で整理しました。
 - [心理士の面接記録をAI文字起こし｜守秘義務の条文と学習しないプラン](https://nagai-cpu.github.io/ai-tools-jp/psychologist-session-ai-transcription/): 公認心理師・臨床心理士が面接の録音をAIで文字起こしする前に、守秘義務の条文と罰則、要配慮個人情報の扱い、学習しないプランと記録の消し方を公式の記載で整理しました。
