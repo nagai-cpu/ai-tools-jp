@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精神科の診察を録音してAI文字起こし｜刑法より重い守秘の罰則と学習しないプラン｜AIツール実用ガイド</title>
+<meta name="description" content="精神科の医師・医療機関が診察の録音をAI文字起こししたいときに、刑法134条と精神保健福祉法53条の違い、診療録の保存、文字起こしツールの学習と権限の設定を公式で整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/psychiatry-consultation-recording/">
+<meta property="og:title" content="精神科の診察を録音してAI文字起こし｜刑法より重い守秘の罰則と学習しないプラン｜AIツール実用ガイド">
+<meta property="og:description" content="精神科の医師・医療機関が診察の録音をAI文字起こししたいときに、刑法134条と精神保健福祉法53条の違い、診療録の保存、文字起こしツールの学習と権限の設定を公式で整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "精神科の診察を録音してAI文字起こし｜刑法より重い守秘の罰則と学習しないプラン", "description": "精神科の医師・医療機関が診察の録音をAI文字起こししたいときに、刑法134条と精神保健福祉法53条の違い、診療録の保存、文字起こしツールの学習と権限の設定を公式で整理。", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/psychiatry-consultation-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "患者に録音の同意を取る必要はありますか。", "acceptedAnswer": {"@type": "Answer", "text": "確認した条文には、診察の録音そのものの可否は書かれていません。録音の目的と、AIで文字起こしすること、保存期間を伝え、断られても診療に影響しないことを示したうえで同意を取るのが一般的です。同意の取り方の比較は[会議の録音、参加者の同意はどう取る？](../recording-consent-meeting/)が参考になります。"}}, {"@type": "Question", "name": "心理士のカウンセリングでも同じ条文ですか。", "acceptedAnswer": {"@type": "Answer", "text": "公認心理師には公認心理師法の秘密保持義務があり、医師とは根拠の法律が違います。[心理士の面接記録をAI文字起こし](../psychologist-session-ai-transcription/)で整理しています。"}}, {"@type": "Question", "name": "無料のアプリで診察を録音してもよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "Nottaのフリーとプレミアムは、AI学習なしの対象ではありません。病歴は要配慮個人情報で、医療機関として安全管理を説明する必要があるため、学習と保存の扱いを確かめられる契約を前提に選びます。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">精神科の診察を録音してAI文字起こし｜刑法より重い守秘の罰則と学習しないプラン</h1><p class="meta">2026-11-01 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、精神科の診察記録には、医師全般に適用される刑法第134条（6月以下の拘禁刑または10万円以下の罰金）に加えて、<strong>精神保健福祉法第53条</strong>の罰則（1年以下の拘禁刑または100万円以下の罰金）がかかる場面があります。対象は精神科病院の管理者や指定医などが、同法に基づく職務の執行に関して知った秘密です。AI文字起こしを使うなら、<strong>音声が学習に使われないプラン</strong>と、<strong>見られる人を絞る権限設定</strong>を前提に選び、文字起こしを診療録の下書きにとどめるか、記録として残すかを先に決めます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="守秘と記録の条文-文字起こしで確かめる点">守秘と記録の条文、文字起こしで確かめる点</h2>
+<p>2026年11月1日に、e-Gov法令検索で各法の条文を、Nottaの公式ヘルプで学習・保存・権限の設定を確認しました。</p>
+<div class="tw"><table><thead><tr><th>条文</th><th>対象</th><th>内容（要旨）</th><th>文字起こしで確かめること</th></tr></thead><tbody><tr><td>刑法 第134条第1項</td><td>医師、薬剤師、助産師など</td><td>正当な理由がないのに業務上知り得た人の秘密を漏らしたとき、6月以下の拘禁刑または10万円以下の罰金</td><td>学習の扱い、外部共有</td></tr><tr><td>精神保健福祉法 第53条第1項</td><td>精神科病院の管理者、指定医、精神医療審査会の委員など</td><td>同法に基づく職務の執行に関して知り得た人の秘密を正当な理由がなく漏らしたとき、1年以下の拘禁刑または100万円以下の罰金</td><td>入院の診察などの記録の扱い</td></tr><tr><td>精神保健福祉法 第53条第2項</td><td>精神科病院の職員</td><td>管理者の職務の執行を補助するに際して知り得た秘密について同じ</td><td>職員のアクセス権</td></tr><tr><td>医師法 第24条</td><td>医師</td><td>診療録に遅滞なく記載。病院・診療所の勤務医の診療録は管理者が5年間保存</td><td>文字起こしを診療録に含めるか</td></tr><tr><td>個人情報保護法 第2条第3項</td><td>—</td><td>病歴は要配慮個人情報</td><td>委託先としての安全管理</td></tr></tbody></table></div>
+<h2 id="判断軸1-その診察は-精神保健福祉法の職務に当たるか">判断軸1｜その診察は、精神保健福祉法の職務に当たるか</h2>
+<p>精神保健福祉法第53条の罰則は、精神科病院の管理者、指定医、精神医療審査会の委員などが「この法律の規定に基づく職務の執行に関して」知った秘密が対象です。条文には、医療保護入院などの診察を行った特定医師も挙がっています。つまり、入院の要否を判断する診察や、入院中の処遇にかかわる記録は、一般の外来診療より重い罰則の範囲に入りうる、ということです。</p>
+<p>外来の通常の診察でも、医師には刑法第134条の守秘義務があります。どちらにしても、録音とAI文字起こしの経路が「漏らす」ことにつながらないよう、学習・保存・共有の設定を説明できる状態にしておきます。病歴は個人情報保護法第2条第3項で要配慮個人情報に挙げられており、扱いには特に配慮が要ります。</p>
+<h2 id="判断軸2-音声がAIの学習に使われないか">判断軸2｜音声がAIの学習に使われないか</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプでは、音声認識のAI学習は、第三者の国内パートナー企業が音声データと認識結果からランダムに選んだデータを、音声認識エンジンの学習に使うことを指します。「AI学習なし」の環境はエンタープライズとビジネス Plusで提供され、ビジネスプランは「あり」です。学習なしの場合、音声データと認識結果はエンジン提供元のサーバーやストレージに保存されない、と説明されています。</p>
+<p>医療関係者向け特別プランには医療専用エンジン（日本語のみ）と医療用単語帳が付き、医療エンジン・AI要約・ファイルインポートは回数制限なしです。ただし、AI学習なし・操作ログ・SSOは「別途追加費用が発生いたします」と注記されています。精神科の診察の音声を扱うなら、学習なしを付けた契約が前提になります。医療特別プランの中身は<a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン</a>で詳しく扱っています。データの保管先について、ヘルプは東京のデータセンター（Amazon Web Services）と答えています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="判断軸3-文字起こしを-診療録の下書きにするか記録として残すか">判断軸3｜文字起こしを、診療録の下書きにするか記録として残すか</h2>
+<p>医師法第24条は、診療をしたら遅滞なく診療録に記載し、病院・診療所の勤務医の診療録は管理者が5年間保存すると定めています。AIの文字起こしや要約を診療録の下書きに使い、確定した内容だけを電子カルテに書くなら、文字起こしツール側の録音は早めに消す運用が秘密保全の面で有利です。逆に録音や文字起こしを記録として残すなら、5年の保存と、誰が見られるかの管理が必要になります。下書きにする場合の考え方は<a href="../medical-voice-input/">医療の問診を音声入力・AI文字起こしでカルテへ</a>にまとめています。</p>
+<p>職員のアクセスは、精神保健福祉法第53条第2項が精神科病院の職員にも同じ罰則を置いていることを踏まえて、必要な人に絞ります。Nottaでは、ノートやフォルダごとのアクセス権設定はビジネスとエンタープライズの機能です。外部共有を無効にする設定はビジネス以上で、オーナーだけが操作できます。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta ビジネス</strong>：音声認識のAI学習は「あり」です。精神科の診察の音声には向きません</li><li><strong>Notta ビジネス Plus</strong>：学習なしになりますが、医療専用エンジンはビジネスプランではトライアルとして1ワークスペースあたり50回までで、回数制限なしは医療特別プランの扱いです</li><li><strong>Notta 医療特別プラン</strong>：料金は問い合わせで、学習なしは別途追加費用です。比較のための金額は公開されていません</li><li><strong>AI文字起こし全般</strong>：沈黙や言いよどみ、感情のこもった発話は、要約で意味が変わることがあります。診療録にするのは医師が確認した内容だけにします</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 患者に録音の同意を取る必要はありますか。</strong> 確認した条文には、診察の録音そのものの可否は書かれていません。録音の目的と、AIで文字起こしすること、保存期間を伝え、断られても診療に影響しないことを示したうえで同意を取るのが一般的です。同意の取り方の比較は<a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？</a>が参考になります。</p>
+<p><strong>Q. 心理士のカウンセリングでも同じ条文ですか。</strong> 公認心理師には公認心理師法の秘密保持義務があり、医師とは根拠の法律が違います。<a href="../psychologist-session-ai-transcription/">心理士の面接記録をAI文字起こし</a>で整理しています。</p>
+<p><strong>Q. 無料のアプリで診察を録音してもよいですか。</strong> Nottaのフリーとプレミアムは、AI学習なしの対象ではありません。病歴は要配慮個人情報で、医療機関として安全管理を説明する必要があるため、学習と保存の扱いを確かめられる契約を前提に選びます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>精神科では、刑法134条（6月以下・10万円以下）に加え、精神保健福祉法53条（1年以下・100万円以下）の罰則がかかる職務がある。職員も第2項の対象</li><li>音声認識のAI学習はNottaのビジネスでは「あり」。学習なしはビジネス Plus・エンタープライズ、医療特別プランは追加費用で対応</li><li>文字起こしを診療録の下書きにとどめるなら録音は早めに消し、記録として残すなら医師法24条の5年保存とアクセス権を設計する</li></ul>
+<h3 id="確認した公式情報-2026年11月1日">確認した公式情報（2026年11月1日）</h3>
+<ul><li>e-Gov法令検索「刑法」第134条、「精神保健及び精神障害者福祉に関する法律」第53条、「医師法」第24条、「個人情報の保護に関する法律」第2条第3項</li><li>Notta ヘルプ「AI学習について」「医療関係者向け特別プランについて」「医療エンジンの切り替え」「データは国内に保存されていますか？」「データ・フォルダのアクセス権を設定する」「外部ユーザーとの共有を制限する」</li></ul>
+<p>※本記事は法令と公式ヘルプを2026年11月1日に確認して整理したもので、法的・医学的な助言ではありません。運用は所属医療機関の規程と専門家の判断に従ってください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../clinical-trial-crc-recording/">治験CRCの被験者面談を録音してAI文字起こし｜GCP省令で先に決める3点</a></li><li><a href="../deepl-voice-training/">DeepL Voiceは会議データを学習する？法人が確かめる保存先と議事録の残り方</a></li><li><a href="../inheritance-consultation-recording/">相続相談の録音をAIで文字起こし｜士業4法の守秘義務と、他士業へ渡すときの設定</a></li><li><a href="../personal-to-business-account-migration/">AI文字起こしの個人アカウントを法人へ移行｜Nottaでデータを寄せられるプラン</a></li><li><a href="../word-transcribe-training/">Wordの文字起こし機能は学習される？法人で使う前に見る保存先と月300分</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../clinical-trial-crc-recording/">治験CRCの被験者面談を録音してAI文字起こし｜GCP省令で先に決める3点</a></li><li><a href="../deepl-voice-training/">DeepL Voiceは会議データを学習する？法人が確かめる保存先と議事録の残り方</a></li><li><a href="../inheritance-consultation-recording/">相続相談の録音をAIで文字起こし｜士業4法の守秘義務と、他士業へ渡すときの設定</a></li><li><a href="../personal-to-business-account-migration/">AI文字起こしの個人アカウントを法人へ移行｜Nottaでデータを寄せられるプラン</a></li><li><a href="../psychiatry-consultation-recording/">精神科の診察を録音してAI文字起こし｜刑法より重い守秘の罰則と学習しないプラン</a></li><li><a href="../word-transcribe-training/">Wordの文字起こし機能は学習される？法人で使う前に見る保存先と月300分</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>
