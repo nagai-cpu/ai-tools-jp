@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [AI議事録の社内ガイドラインのテンプレート｜JDLAのひな形を議事録用に読み替える](https://nagai-cpu.github.io/ai-tools-jp/ai-minutes-guideline-template/): AI議事録・文字起こしの社内ルールを作る担当者向け。JDLA「生成AIの利用ガイドライン」の構成を、録音と議事録の場面にどう読み替えるかを、項目ごとの書き方つきで整理。
 - [治験CRCの被験者面談を録音してAI文字起こし｜GCP省令で先に決める3点](https://nagai-cpu.github.io/ai-tools-jp/clinical-trial-crc-recording/): 治験コーディネーター（CRC）が被験者面談の録音をAIで文字起こししたいときに、GCP省令の秘密保全・記録保存の条文と、文字起こしツールの学習・保存設定をどう突き合わせるかを整理。
 - [DeepL Voiceは会議データを学習する？法人が確かめる保存先と議事録の残り方](https://nagai-cpu.github.io/ai-tools-jp/deepl-voice-training/): 社内の会議でDeepL Voiceを使ってよいか確認したい担当者向け。学習しないという公式の記載、文字起こしがどこに何日残るか、議事録用途との違いを公式ヘルプで整理。
 - [相続相談の録音をAIで文字起こし｜士業4法の守秘義務と、他士業へ渡すときの設定](https://nagai-cpu.github.io/ai-tools-jp/inheritance-consultation-recording/): 税理士・司法書士・弁護士・行政書士が相続相談の録音をAI文字起こしするときに、4つの士業法の守秘義務条文と、他の士業へ共有するときの文字起こしツールの設定を整理。
