@@ -13,6 +13,7 @@
 
 - [DeepL Voiceは会議データを学習する？法人が確かめる保存先と議事録の残り方](https://nagai-cpu.github.io/ai-tools-jp/deepl-voice-training/): 社内の会議でDeepL Voiceを使ってよいか確認したい担当者向け。学習しないという公式の記載、文字起こしがどこに何日残るか、議事録用途との違いを公式ヘルプで整理。
 - [AI文字起こしの個人アカウントを法人へ移行｜Nottaでデータを寄せられるプラン](https://nagai-cpu.github.io/ai-tools-jp/personal-to-business-account-migration/): 社員が個人のNottaで録った議事録を会社の管理下に移したい管理者向け。データ統合の公式手順がどのプランにあるか、ビジネスでできる代わりの方法をヘルプで整理。
+- [Wordの文字起こし機能は学習される？法人で使う前に見る保存先と月300分](https://nagai-cpu.github.io/ai-tools-jp/word-transcribe-training/): Microsoft Wordの「トランスクリプト」を社内の会議や面談に使ってよいか確かめたい人向け。音声の保存先、月の上限、学習に関する公式の記載がどこにあるかを整理。
 - [銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認](https://nagai-cpu.github.io/ai-tools-jp/bank-loan-interview-ai-transcription/): 銀行との融資面談を録音・AI文字起こししたい中小企業の経営者向けに、金融庁の監督指針と最高裁の決定、金融分野の個人情報ガイドラインを確かめ、Nottaのプラン選びを整理しました。
 - [取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと](https://nagai-cpu.github.io/ai-tools-jp/board-meeting-minutes-ai-confidential/): 取締役会の録音をAIで文字起こしして議事録を作りたい会社向けに、会社法と施行規則の記載事項、インサイダー情報の扱い、録音の保存から、Nottaのどのプランが選択肢になるかを整理しました。
 - [ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者](https://nagai-cpu.github.io/ai-tools-jp/chatgpt-team-enterprise-audio-training/): ChatGPT旧Team（現Business）とEnterpriseで録音・音声入力が学習されない範囲を公式で確認。保持期間、管理者の閲覧、日本のデータ保存、Nottaと比べる条件まで。
