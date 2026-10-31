@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [AI文字起こしの個人アカウントを法人へ移行｜Nottaでデータを寄せられるプラン](https://nagai-cpu.github.io/ai-tools-jp/personal-to-business-account-migration/): 社員が個人のNottaで録った議事録を会社の管理下に移したい管理者向け。データ統合の公式手順がどのプランにあるか、ビジネスでできる代わりの方法をヘルプで整理。
 - [銀行の融資面談を録音してAI文字起こし｜経営者保証の説明を残す3つの確認](https://nagai-cpu.github.io/ai-tools-jp/bank-loan-interview-ai-transcription/): 銀行との融資面談を録音・AI文字起こししたい中小企業の経営者向けに、金融庁の監督指針と最高裁の決定、金融分野の個人情報ガイドラインを確かめ、Nottaのプラン選びを整理しました。
 - [取締役会の議事録をAIで作成する前に｜機密の録音で確かめる3つのこと](https://nagai-cpu.github.io/ai-tools-jp/board-meeting-minutes-ai-confidential/): 取締役会の録音をAIで文字起こしして議事録を作りたい会社向けに、会社法と施行規則の記載事項、インサイダー情報の扱い、録音の保存から、Nottaのどのプランが選択肢になるかを整理しました。
 - [ChatGPT Team・Enterpriseの音声は学習されない？保持と管理者](https://nagai-cpu.github.io/ai-tools-jp/chatgpt-team-enterprise-audio-training/): ChatGPT旧Team（現Business）とEnterpriseで録音・音声入力が学習されない範囲を公式で確認。保持期間、管理者の閲覧、日本のデータ保存、Nottaと比べる条件まで。
