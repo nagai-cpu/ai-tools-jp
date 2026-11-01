@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>動物病院の診察録音をAI文字起こし｜飼い主の個人情報で選ぶ3つの確認｜AIツール実用ガイド</title>
+<meta name="description" content="動物病院で診察やインフォームドコンセントの会話を録音し、AIで文字起こししたい獣医師・院長向け。獣医師法の診療簿、個人情報保護法、AI学習の扱いを一次資料で整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/vet-clinic-consultation-recording/">
+<meta property="og:title" content="動物病院の診察録音をAI文字起こし｜飼い主の個人情報で選ぶ3つの確認｜AIツール実用ガイド">
+<meta property="og:description" content="動物病院で診察やインフォームドコンセントの会話を録音し、AIで文字起こししたい獣医師・院長向け。獣医師法の診療簿、個人情報保護法、AI学習の扱いを一次資料で整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "動物病院の診察録音をAI文字起こし｜飼い主の個人情報で選ぶ3つの確認", "description": "動物病院で診察やインフォームドコンセントの会話を録音し、AIで文字起こししたい獣医師・院長向け。獣医師法の診療簿、個人情報保護法、AI学習の扱いを一次資料で整理。", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/vet-clinic-consultation-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "診察を録音するのに、飼い主の同意は必要ですか。", "acceptedAnswer": {"@type": "Answer", "text": "確認した獣医師法と個人情報保護法には、録音に同意を必須とする条文は見当たりませんでした。ただし個人情報保護法第21条は取得した個人情報の利用目的の通知・公表を求めているため、受付や診察室に録音の目的を掲示し、口頭でも一言伝えておくのが無難です。"}}, {"@type": "Question", "name": "録音や文字起こしデータは、診療簿と同じ期間保存すべきですか。", "acceptedAnswer": {"@type": "Answer", "text": "獣医師法施行規則が保存期間を定めているのは診療簿と検案簿です。録音や文字起こしの下書きを何年残すかは条文に書かれていないため、院内で期間を決め、診療簿に必要な内容を記載したら消すなど運用を決めておきます。"}}, {"@type": "Question", "name": "獣医師には守秘義務がないのですか。", "acceptedAnswer": {"@type": "Answer", "text": "確認した範囲では、獣医師法に秘密を守る条文は見当たらず、刑法第134条の列挙にも獣医師は入っていません。一方で、飼い主の個人情報には個人情報保護法の安全管理と委託先の監督の義務がかかります。個別の判断は専門家に確認してください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">動物病院の診察録音をAI文字起こし｜飼い主の個人情報で選ぶ3つの確認</h1><p class="meta">2026-11-02 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、動物病院の診察録音をAIで文字起こしするときに守る相手は、動物ではなく<strong>飼い主</strong>です。録音に入る飼い主の氏名や声は個人情報保護法の「個人情報」にあたり、病院はその安全管理と、文字起こしツールの事業者（委託先）の監督を求められます。獣医師法の条文に秘密を守る定めは見当たりませんでしたが、だからといって無料アプリに上げてよい理由にはなりません。複数のスタッフで共有するなら、音声が学習に使われないプランを選ぶのが説明しやすい選び方です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="動物病院の録音にかかわる定めと-AI文字起こしで気をつける点">動物病院の録音にかかわる定めと、AI文字起こしで気をつける点</h2>
+<p>2026年11月2日に、e-Gov法令検索で獣医師法・獣医師法施行規則・個人情報の保護に関する法律・刑法を、Nottaの公式ヘルプで料金と学習の扱いを確認しました。</p>
+<div class="tw"><table><thead><tr><th>定め・資料</th><th>内容（要旨）</th><th>AI文字起こしで気をつける点</th></tr></thead><tbody><tr><td>獣医師法 第21条</td><td>診療をしたら診療簿に遅滞なく記載し、農林水産省令で定める期間保存する</td><td>文字起こしは診療簿の下書き。記載の責任は獣医師に残る</td></tr><tr><td>獣医師法施行規則 第11条・第11条の2</td><td>診療簿には所有者・管理者の氏名と住所、病名、りん告、治療方法などを記載。保存は牛・水牛・しか・めん羊・山羊が8年、その他の動物が3年</td><td>録音や文字起こしデータをどれだけ残すかを決めておく</td></tr><tr><td>個人情報保護法 第2条第1項</td><td>個人情報には、音声で表された事項により特定の個人を識別できるものも含む</td><td>飼い主が名乗った録音は個人情報になる</td></tr><tr><td>個人情報保護法 第21条・第23条・第25条</td><td>利用目的の通知・公表、安全管理措置、委託先の監督</td><td>録音の目的を院内掲示などで示し、ツール事業者を選んで監督する</td></tr><tr><td>刑法 第134条</td><td>秘密漏示罪の対象として医師・薬剤師・弁護士などを列挙</td><td>獣医師は列挙に入っていないが、個人情報保護法の義務は別にかかる</td></tr></tbody></table></div>
+<h2 id="判断軸1-録音に飼い主のどんな情報が入るか">判断軸1｜録音に飼い主のどんな情報が入るか</h2>
+<p>獣医師法施行規則第11条は、診療簿に「診療した動物の所有者又は管理者の氏名又は名称及び住所」を記載するよう定めています。診察中の会話にも、飼い主の名前、住所、電話番号、家族構成、支払いの相談などが入ります。個人情報保護法第2条第1項は、個人情報に「音声」で表された事項も含めているため、録音そのものが個人情報になりえます。</p>
+<p>調べる前は、患者が動物なので医療ほど厳しくないと考えていました。刑法第134条の列挙に獣医師は入っておらず、獣医師法の条文を「秘密」で探しても規定は見当たりませんでした。ただし、飼い主の情報を扱う動物病院は、個人情報保護法の個人情報取扱事業者として、第23条の安全管理措置と第25条の委託先の監督を負います。医療の現場との違いは<a href="../dental-clinic-recording/">歯科医院の問診録音をAI文字起こし</a>と比べると分かりやすくなります。</p>
+<h2 id="判断軸2-文字起こしツールを-委託先-として選べるか">判断軸2｜文字起こしツールを「委託先」として選べるか</h2>
+<p>AIの文字起こしサービスに録音を上げることは、個人データの取扱いを外部の事業者に任せることです。委託か第三者提供かの分かれ目は<a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か</a>で整理していますが、委託として扱うなら、病院は事業者を監督する立場になります。</p>
+<p>監督するには、事業者がデータをどう扱うかが書面で確かめられることが前提です。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の法人向けFAQでは、データの保存先はAWS東京リージョン、ISO27001とSOC2 Type2の認証を取得しており、レポートはNDAの締結後に提供、セキュリティチェックシートも用意されている、と案内されています。院内の個人情報の取扱方針に、録音と文字起こしの扱いを1行加えておくと、飼い主から聞かれたときにも答えやすくなります。録音を始める前の伝え方は<a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？</a>も参考になります。</p>
+<h2 id="判断軸3-音声が学習に使われるプランか">判断軸3｜音声が学習に使われるプランか</h2>
+<p>Nottaの公式ヘルプ「AI学習について」では、音声認識のAI学習は、音声認識エンジンを提供する国内の第三者パートナー企業が、音声データと認識結果からランダムに選んだデータを学習に使うことを指します。「AI学習なし」の環境が書かれているのはエンタープライズとビジネス Plusで、フリー・プレミアム・ビジネスは学習なしの対象ではありません。音声認識以外のAI機能（要約など）は、どのプランでも学習にデータを提供していない、とされています。</p>
+<p>Nottaには医療関係者向け特別プラン（医療専用エンジンと医療用単語帳）もありますが、ヘルプの表では「AI学習なし」は別途追加費用で、動物病院が対象になるかは公式ヘルプに記載が見当たりませんでした。動物病院で使うなら、まずビジネス Plusを基準に考え、医療特別プランは問い合わせて確かめるのが確実です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>AI文字起こし全般</strong>：薬剤名、検査値、動物の名前の聞き違いが起こります。診療簿に転記する前に獣医師が確認する工程は省けません</li><li><strong>Notta フリー・プレミアム・ビジネス</strong>：音声認識のAI学習は「あり」です。飼い主の情報が多い録音には向きません</li><li><strong>Notta ビジネス Plus</strong>：学習なしになりますが、ビジネスより高く、医療用語の専用エンジンは付きません</li><li><strong>Notta 医療関係者向け特別プラン</strong>：料金は問い合わせで、AI学習なしは別途追加費用です。動物病院が対象かも問い合わせが必要です</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 診察を録音するのに、飼い主の同意は必要ですか。</strong> 確認した獣医師法と個人情報保護法には、録音に同意を必須とする条文は見当たりませんでした。ただし個人情報保護法第21条は取得した個人情報の利用目的の通知・公表を求めているため、受付や診察室に録音の目的を掲示し、口頭でも一言伝えておくのが無難です。</p>
+<p><strong>Q. 録音や文字起こしデータは、診療簿と同じ期間保存すべきですか。</strong> 獣医師法施行規則が保存期間を定めているのは診療簿と検案簿です。録音や文字起こしの下書きを何年残すかは条文に書かれていないため、院内で期間を決め、診療簿に必要な内容を記載したら消すなど運用を決めておきます。</p>
+<p><strong>Q. 獣医師には守秘義務がないのですか。</strong> 確認した範囲では、獣医師法に秘密を守る条文は見当たらず、刑法第134条の列挙にも獣医師は入っていません。一方で、飼い主の個人情報には個人情報保護法の安全管理と委託先の監督の義務がかかります。個別の判断は専門家に確認してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>録音に入る飼い主の氏名・住所・声は個人情報。動物病院は安全管理措置と委託先の監督を負う（個人情報保護法第2条・第23条・第25条）</li><li>文字起こしは診療簿の下書き。診療簿は獣医師法で保存期間（その他の動物3年、牛など8年）が決まっているが、録音の保存期間は院内で決める</li><li>複数のスタッフで共有する録音は、学習なしの環境で扱う。Nottaならビジネス Plus・エンタープライズ</li></ul>
+<h3 id="確認した公式情報-2026年11月2日">確認した公式情報（2026年11月2日）</h3>
+<ul><li>e-Gov法令検索「獣医師法」第21条、「獣医師法施行規則」第11条・第11条の2</li><li>e-Gov法令検索「個人情報の保護に関する法律」第2条・第21条・第23条・第25条、「刑法」第134条</li><li>Notta ヘルプ「AI学習について」「Nottaの料金プランについて」「医療関係者向け特別プランについて」「法人契約に関するよくある質問」</li></ul>
+<p>※本記事は法令と公式資料を2026年11月2日に確認して整理したもので、法的な助言ではありません。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../interpreter-meeting-recording/">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../interpreter-meeting-recording/">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li><li><a href="../rehab-conference-recording/">リハビリカンファレンスの録音をAI文字起こし｜患者情報と同意の3点</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

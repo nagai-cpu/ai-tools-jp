@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>投資家面談をAI文字起こしする前に｜NDAを結ばない相手に話す内容の線引き｜AIツール実用ガイド</title>
+<meta name="description" content="VC・CVCとのピッチや面談を録音してAIで文字起こししたい起業家向け。公取委・経産省の出資指針が示すNDAの考え方と、Zoomでの録音承認、Nottaの学習・共有・削除の仕様を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/vc-pitch-meeting-recording/">
+<meta property="og:title" content="投資家面談をAI文字起こしする前に｜NDAを結ばない相手に話す内容の線引き｜AIツール実用ガイド">
+<meta property="og:description" content="VC・CVCとのピッチや面談を録音してAIで文字起こししたい起業家向け。公取委・経産省の出資指針が示すNDAの考え方と、Zoomでの録音承認、Nottaの学習・共有・削除の仕様を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "投資家面談をAI文字起こしする前に｜NDAを結ばない相手に話す内容の線引き", "description": "VC・CVCとのピッチや面談を録音してAIで文字起こししたい起業家向け。公取委・経産省の出資指針が示すNDAの考え方と、Zoomでの録音承認、Nottaの学習・共有・削除の仕様を整理。", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/vc-pitch-meeting-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "投資家にNDAを断られたら、面談で何を話せばいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "指針は、情報を「NDAなしで開示できる情報」「NDA締結後に開示できる情報」「いかなる状況でも開示するべきでない情報」程度に区分しておくことを求めています。NDAがない面談では、1つ目の区分の範囲で話すのが基本です。重要な技術情報は、あらかじめ特許出願を済ませることを検討するよう指針は書いています。"}}, {"@type": "Question", "name": "投資家側が面談を録音・文字起こししている場合はどうすればいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "指針には、出資者側の録音についての記載は見当たりませんでした。相手のツールで録音される場合も、話す内容の区分は同じです。気になるなら、面談の冒頭に録音の扱いと保存先を聞いておきます。"}}, {"@type": "Question", "name": "面談の文字起こしを、ほかの投資家への説明に使っても問題ありませんか。", "acceptedAnswer": {"@type": "Answer", "text": "NDAを結んだ面談の記録には、相手側の情報（投資方針や条件の提示など）も入りえます。NDAが相互の秘密保持を定めているなら、相手側の発言も秘密情報になる場合があります。共有する前にNDAの条文を確認してください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">投資家面談をAI文字起こしする前に｜NDAを結ばない相手に話す内容の線引き</h1><p class="meta">2026-11-02 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、投資家との面談をAIで文字起こしすること自体より先に、<strong>その面談で何を話すかの線引き</strong>を決めておく必要があります。公正取引委員会と経済産業省の「スタートアップとの事業連携及びスタートアップへの出資に関する指針」は、出資者がNDAの締結を拒否したうえでビジネスモデルの説明を強く求めた事例を挙げ、情報を「NDAなしで開示できる」「NDA締結後に開示できる」「どんな状況でも開示しない」の3つに分けておくよう求めています。録音と文字起こしは、その線引きを守れたかを後から確かめる記録として使います。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="出資の指針が求めることと-文字起こしで気をつける点">出資の指針が求めることと、文字起こしで気をつける点</h2>
+<p>2026年11月2日に、公正取引委員会のウェブサイトで「スタートアップとの事業連携及びスタートアップへの出資に関する指針」（2022年3月31日公表）を確認しました。出資者との関係は「第3 スタートアップへの出資に関する指針」にまとまっています。</p>
+<div class="tw"><table><thead><tr><th>指針の記載</th><th>内容（要旨）</th><th>面談の録音・文字起こしで気をつける点</th></tr></thead><tbody><tr><td>第3の2(1)（営業秘密の開示）</td><td>優越的地位にある出資者が、NDAを結ばないまま営業秘密の無償開示を要請し、スタートアップが受け入れざるを得ない場合は優越的地位の濫用として問題となるおそれ</td><td>NDAなしの面談では、録音に営業秘密が入らないよう話す範囲を先に決める</td></tr><tr><td>事例41</td><td>出資者からNDAの締結を拒否され、営業上の秘密を含むビジネスモデルの説明を強く求められた</td><td>「何を求められ、何を話したか」を記録に残しておく</td></tr><tr><td>解決の方向性(ｱ)</td><td>情報を①NDAなしで開示できる、②NDA締結後に開示できる、③いかなる状況でも開示するべきでない、程度に区分</td><td>区分表を面談前に作り、文字起こしと照らして確認する</td></tr><tr><td>解決の方向性(ｲ)</td><td>目的外使用の立証は難しいことが多いので、コアコンピタンスが揺らぐ情報は開示しない</td><td>録音があっても、話してしまった情報は取り戻せない</td></tr><tr><td>第3の2(2)（NDA違反）</td><td>NDAに違反して営業秘密を他の出資先に漏らし、競合商品を売らせることは取引妨害として問題となるおそれ。違反の立証は難しいとも記載</td><td>いつ・誰に・何を開示したかの記録が立証の材料になりうる</td></tr></tbody></table></div>
+<h2 id="判断軸1-その面談はNDAを結んだうえでのものか">判断軸1｜その面談はNDAを結んだうえでのものか</h2>
+<p>指針は、出資の交渉の過程で、双方の認識不足やスタートアップ側の交渉力不足から、NDAを結ばないまま企業情報のやり取りがされることも多いと書いています。そのうえで、出資について具体的な検討が始まる段階で、双方が管理可能な方法でNDAを結ぶことが必要だとしています。</p>
+<p>初回のピッチはNDAなしで行われることが多く、ここで録音を残すなら、話す内容は区分表の①（NDAなしで開示できる情報）に限るのが前提です。区分表の作り方そのものは、<a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける</a>で整理しています。NDAを結んだ後の面談では、録音と文字起こしは秘密情報の「複製」として扱われるのが一般的で、複製の記録や終了時の消去が契約上の義務になっている場合があります。条項ごとの確認は<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>にまとめました。</p>
+<p>なお、指針は出資者がNDAを結ばないこと自体を一律に問題としているわけではありません。問題となるおそれがあるのは、優越的地位にある出資者が、正当な理由なく営業秘密の開示を要請し、スタートアップが受け入れざるを得ない場合です。個別の判断は弁護士に確認してください。</p>
+<h2 id="判断軸2-録音することを相手に伝えられるか">判断軸2｜録音することを相手に伝えられるか</h2>
+<p>投資家が主催するZoomに文字起こしのボットを入れると、ホストである投資家の画面に録画のリクエストが表示されます。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプ「Web会議の文字起こし」によると、Notta BotをZoomに入れるには、待機室での参加承認に加えて「Nottaがこのミーティングのレコーディングをリクエストしています」というダイアログでの録画承認という段階があり、ホストはこれを飛ばすことはできないと書かれています。Zoomでは「外部参加者によるローカルレコーディング」が有効になっている必要もあります。少なくともZoomでは、相手が主催する会議に黙ってボットを入れることはできない設計です。</p>
+<p>面談の冒頭で「議事録のためにAIで文字起こしをしてもよいか」を一言聞くのが、いちばん揉めない方法です。断られたら、録音せずに面談後すぐ手でメモを残します。参加者への伝え方は<a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？</a>で、ツールごとの通知の違いと合わせて整理しています。</p>
+<h2 id="判断軸3-録音した事業計画を-どこに-いつまで置くか">判断軸3｜録音した事業計画を、どこに、いつまで置くか</h2>
+<p>NDAを結んだ後の面談には、売上の見通し、主要顧客、技術の中身など、区分表の②にあたる情報が入ります。Nottaの公式ヘルプ「AI学習について」では、音声認識のAI学習は、エンジンを提供する第三者の国内パートナー企業が音声データと認識結果からランダムに選んだデータを学習に使うことを指し、「AI学習なし」の環境はエンタープライズとビジネス Plusで提供されています。ビジネス Plusとビジネスの違いを説明したヘルプでは、ビジネスの音声認識のAI学習は「あり」です。音声認識以外のAI機能（要約など）のデータは、いずれのプランでも学習に提供していないとヘルプにあります。</p>
+<p>保存期間も決めておきます。ヘルプによると、文字起こしデータは手動で削除するか、ワークスペースを削除するか、退会しない限り自動的には削除されません。手動で削除したデータはゴミ箱に入り、30日後に完全に削除されます。作成日から1〜365日で自動削除する設定はエンタープライズのみです。共有リンクは全プランで作成でき、リンクを知っている人はログインなしで閲覧できます。オーナーが外部共有を無効にする設定はビジネス以上のプランの機能です。</p>
+<p>資金調達の資料や面談記録を社内の数人で扱うなら、学習なしで外部共有を止められるビジネス Plusが説明しやすい構成です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>AI文字起こし全般</strong>：数字（評価額、売上、調達額）や固有名詞の聞き違いが起こります。面談記録を後で投資家とのやり取りの根拠にするなら、録音と照らして直す必要があります</li><li><strong>Notta フリー・プレミアム・ビジネス</strong>：音声認識のAI学習の「なし」の対象ではありません。NDAで目的外使用を厳しく定めた相手との面談には説明しにくくなります</li><li><strong>Notta ビジネス Plus</strong>：学習なしにはなりますが、作成日からの自動削除はエンタープライズの機能です。面談記録の消し忘れは人の運用で防ぐ必要があります</li><li><strong>Notta 全般</strong>：相手が主催するZoomでは、ホストの録画承認がないとボットで録音できません。相手が承認しなければ文字起こしは取れません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 投資家にNDAを断られたら、面談で何を話せばいいですか。</strong> 指針は、情報を「NDAなしで開示できる情報」「NDA締結後に開示できる情報」「いかなる状況でも開示するべきでない情報」程度に区分しておくことを求めています。NDAがない面談では、1つ目の区分の範囲で話すのが基本です。重要な技術情報は、あらかじめ特許出願を済ませることを検討するよう指針は書いています。</p>
+<p><strong>Q. 投資家側が面談を録音・文字起こししている場合はどうすればいいですか。</strong> 指針には、出資者側の録音についての記載は見当たりませんでした。相手のツールで録音される場合も、話す内容の区分は同じです。気になるなら、面談の冒頭に録音の扱いと保存先を聞いておきます。</p>
+<p><strong>Q. 面談の文字起こしを、ほかの投資家への説明に使っても問題ありませんか。</strong> NDAを結んだ面談の記録には、相手側の情報（投資方針や条件の提示など）も入りえます。NDAが相互の秘密保持を定めているなら、相手側の発言も秘密情報になる場合があります。共有する前にNDAの条文を確認してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>公取委・経産省の出資指針は、NDAなしで営業秘密の開示を求められた事例を挙げ、情報を3つの区分に分けて面談に臨むよう求めている</li><li>相手が主催するZoomでは、Notta Botの録音にホストの録画承認が要る。冒頭で文字起こしの可否を聞く</li><li>NDA後の面談記録は学習なしの環境に置き、保存期間と外部共有を決めておく。Nottaならビジネス Plus・エンタープライズが学習なし</li></ul>
+<h3 id="確認した公式情報-2026年11月2日">確認した公式情報（2026年11月2日）</h3>
+<ul><li>公正取引委員会・経済産業省「スタートアップとの事業連携及びスタートアップへの出資に関する指針」（2022年3月31日公表）第3の2(1)(2)</li><li>Notta ヘルプ「AI学習について」「『ビジネス Plus』と『ビジネスプラン』の違いは何ですか？」「Web会議の文字起こし」「文字起こしデータの保管期限や容量制限はありますか？」「データの削除・復元」「ノートおよびフォルダの自動削除」「共有リンクを使った外部へのノート共有」「外部ユーザーとの共有を制限する」</li></ul>
+<p>※本記事は公的な指針とNottaの公開ヘルプを2026年11月2日に確認して整理したもので、法的な助言ではありません。契約や交渉の判断は弁護士など専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『人事が面談・評価の記録をAIで書く前に読む本』（Kindle・500円）：1on1・評価面談・相談の記録や録音を生成AIに渡す前に、社員の情報の扱い、社内規程、本人への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HPZGYZ18" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../interpreter-meeting-recording/">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../interpreter-meeting-recording/">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li><li><a href="../rehab-conference-recording/">リハビリカンファレンスの録音をAI文字起こし｜患者情報と同意の3点</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

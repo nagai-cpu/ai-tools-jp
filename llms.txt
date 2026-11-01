@@ -11,6 +11,16 @@
 
 ## 記事
 
+- [建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点](https://nagai-cpu.github.io/ai-tools-jp/architect-client-meeting-recording/): 施主との打ち合わせを録音してAIで文字起こししたい建築士・設計事務所向け。建築士法で守秘がどう扱われているかと、図面・家族情報を預けるときのNottaの条件を一次資料で整理。
+- [キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方](https://nagai-cpu.github.io/ai-tools-jp/career-consultant-session-recording/): キャリアコンサルティングの面談を録音してAIで文字起こししたい人向け。職業能力開発促進法の秘密保持義務と罰則、倫理綱領の説明責任、学習なしのプラン条件を一次資料で整理。
+- [コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定](https://nagai-cpu.github.io/ai-tools-jp/coaching-session-recording/): コーチングのセッションを録音してAIで文字起こししたいコーチ向け。ICF倫理規定（2025年4月施行）の守秘・記録・AIの項目と、契約に書く3点、学習なしのプラン条件を整理。
+- [通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる](https://nagai-cpu.github.io/ai-tools-jp/interpreter-meeting-recording/): 通訳者が入る商談・国際会議を録音してAIで文字起こししたい人、自分の訳出を復習したい通訳者向け。AIICの倫理規程と通訳案内士法の条文、Nottaの2か国語文字起こしと学習・削除の仕様を整理。
+- [iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点](https://nagai-cpu.github.io/ai-tools-jp/iphone-voice-memo-transcription-training/): iPhoneのボイスメモで録音と文字起こしをする人向け。学習に使われるか、iCloud同期で誰が鍵を持つか、仕事の録音をどこまで任せられるかをAppleの公式ページで整理。
+- [リハビリカンファレンスの録音をAI文字起こし｜患者情報と同意の3点](https://nagai-cpu.github.io/ai-tools-jp/rehab-conference-recording/): リハビリテーション会議や病棟のリハカンファレンスをAIで文字起こししたいPT・OT・ST向け。運営基準・各資格法の守秘義務と、Nottaの「AI学習なし」の条件を一次資料で整理。
+- [AI文字起こしの解約後データ削除を証明する方法｜解約だけでは消えない](https://nagai-cpu.github.io/ai-tools-jp/transcription-data-deletion-proof/): AI文字起こしツールをやめるとき、録音データを消したと社内や取引先に説明したい人向け。解約と退会の違い、ゴミ箱30日、残せる記録をNottaのヘルプで整理。
+- [AI文字起こしのSOC2・ISO27001の確認方法｜検索で出ない認証もある](https://nagai-cpu.github.io/ai-tools-jp/transcription-soc2-iso27001-check/): AI文字起こしのSOC2・ISO27001を社内審査で確かめたい人向け。報告書の取り寄せ方、Type1とType2の違い、ISMS-ACで出ない認証の調べ方を整理。
+- [投資家面談をAI文字起こしする前に｜NDAを結ばない相手に話す内容の線引き](https://nagai-cpu.github.io/ai-tools-jp/vc-pitch-meeting-recording/): VC・CVCとのピッチや面談を録音してAIで文字起こししたい起業家向け。公取委・経産省の出資指針が示すNDAの考え方と、Zoomでの録音承認、Nottaの学習・共有・削除の仕様を整理。
+- [動物病院の診察録音をAI文字起こし｜飼い主の個人情報で選ぶ3つの確認](https://nagai-cpu.github.io/ai-tools-jp/vet-clinic-consultation-recording/): 動物病院で診察やインフォームドコンセントの会話を録音し、AIで文字起こししたい獣医師・院長向け。獣医師法の診療簿、個人情報保護法、AI学習の扱いを一次資料で整理。
 - [AI議事録の社内ガイドラインのテンプレート｜JDLAのひな形を議事録用に読み替える](https://nagai-cpu.github.io/ai-tools-jp/ai-minutes-guideline-template/): AI議事録・文字起こしの社内ルールを作る担当者向け。JDLA「生成AIの利用ガイドライン」の構成を、録音と議事録の場面にどう読み替えるかを、項目ごとの書き方つきで整理。
 - [治験CRCの被験者面談を録音してAI文字起こし｜GCP省令で先に決める3点](https://nagai-cpu.github.io/ai-tools-jp/clinical-trial-crc-recording/): 治験コーディネーター（CRC）が被験者面談の録音をAIで文字起こししたいときに、GCP省令の秘密保全・記録保存の条文と、文字起こしツールの学習・保存設定をどう突き合わせるかを整理。
 - [録音を裁判の証拠にするAI文字起こしの注意点｜反訳は相手方に録音と照合される](https://nagai-cpu.github.io/ai-tools-jp/court-evidence-recording-transcript/): 会話の録音を民事裁判の証拠として出すために、AIで反訳（文字起こし）を作りたい人向け。民事訴訟規則の反訳の定めと裁判所の案内、AIの誤りと元の録音の扱いを整理。

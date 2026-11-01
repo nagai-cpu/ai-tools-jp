@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI文字起こしのSOC2・ISO27001の確認方法｜検索で出ない認証もある｜AIツール実用ガイド</title>
+<meta name="description" content="AI文字起こしのSOC2・ISO27001を社内審査で確かめたい人向け。報告書の取り寄せ方、Type1とType2の違い、ISMS-ACで出ない認証の調べ方を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/transcription-soc2-iso27001-check/">
+<meta property="og:title" content="AI文字起こしのSOC2・ISO27001の確認方法｜検索で出ない認証もある｜AIツール実用ガイド">
+<meta property="og:description" content="AI文字起こしのSOC2・ISO27001を社内審査で確かめたい人向け。報告書の取り寄せ方、Type1とType2の違い、ISMS-ACで出ない認証の調べ方を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI文字起こしのSOC2・ISO27001の確認方法｜検索で出ない認証もある", "description": "AI文字起こしのSOC2・ISO27001を社内審査で確かめたい人向け。報告書の取り寄せ方、Type1とType2の違い、ISMS-ACで出ない認証の調べ方を整理。", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/transcription-soc2-iso27001-check/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ISMS-ACの検索で出てこない会社は、ISO27001を持っていないのですか。", "acceptedAnswer": {"@type": "Answer", "text": "そうとは限りません。ISMS-ACのFAQは、非公開を希望している場合や、ISMS-ACの認定下ではない認証機関の認証である場合は検索できないと説明しています。ベンダーが案内する検索先（Nottaの場合はIAF CertSearch）で照合するか、認証登録証の写しを求めてください。"}}, {"@type": "Question", "name": "SOC2のType1とType2は、どちらがあればよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "Nottaのヘルプの説明では、Type1はある時点を基準日とした評価、Type2は一定の期間を対象にした評価です。運用が続いているかを見たいならType2の報告書を取り寄せ、対象期間を確認します。"}}, {"@type": "Question", "name": "SOC2やISO27001を持っていれば、録音を学習に使われませんか。", "acceptedAnswer": {"@type": "Answer", "text": "認証は学習の扱いを決めるものではありません。Nottaでは、音声認識の「AI学習なし」はエンタープライズ、ビジネス Plus、士業向け特別プランの機能として書かれています。学習の扱いはプランと契約で確かめてください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI文字起こしのSOC2・ISO27001の確認方法｜検索で出ない認証もある</h1><p class="meta">2026-11-02 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、AI文字起こしツールのSOC2・ISO27001は、<strong>ベンダーのセキュリティページの「取得済み」の表示で止めず、①ISO27001は認証番号と認証範囲を第三者の検索で、②SOC2は報告書そのものをNDAを結んで取り寄せて確かめる</strong>のが確実です。たとえばNottaのISO27001の認証番号を、日本のISMS認定センター（ISMS-AC）の検索に入れても結果は出ませんでした。ISMS-ACは、自らが認定していない認証機関の認証は検索の対象外だと説明しており、Nottaのヘルプは別の国際的な検索サービスを案内しています。「検索で出ない＝未取得」ではないので、どこで調べるかから押さえておきます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="確認する項目と-Nottaの公開情報">確認する項目と、Nottaの公開情報</h2>
+<p>2026年11月2日に、Nottaのセキュリティページとヘルプ、ISMS-ACの認証取得組織検索とFAQ、AICPA（米国公認会計士協会）のSOCのページを確認しました。</p>
+<div class="tw"><table><thead><tr><th>確認項目</th><th>どこで確かめるか</th><th>Nottaの公開情報</th></tr></thead><tbody><tr><td>ISO27001の認証範囲・番号</td><td>ベンダーの公表内容と、認証の検索サービス</td><td>ISO/IEC 27001:2022、認証範囲「Webサービスの開発及び運用」、認証番号123133。IAF CertSearchで会社名か番号を検索するよう案内</td></tr><tr><td>ISMS-ACの検索</td><td>ISMS-AC「ISMS認証取得組織検索」</td><td>2026年11月2日に組織名「Notta」と認証番号123133で検索し、該当なし</td></tr><tr><td>SOC2の種類</td><td>報告書の表紙・意見の対象</td><td>2022年9月29日にType1、2023年2月12日にType2の保証報告書を受領</td></tr><tr><td>SOC2報告書の入手</td><td>ベンダーの営業窓口</td><td>閲覧には秘密保持契約（NDA）の締結が必要。ISO27001のレポートもNDA締結後に提供可能</td></tr><tr><td>自社様式のチェックシート</td><td>ベンダーの公開資料・個別回答</td><td>経済産業省のチェックリストに準拠したセキュリティチェックシートをフォーム入力後にダウンロード可能。個別回答はビジネス・エンタープライズの利用者・検討者向けで、返却までおおよそ2〜3週間</td></tr></tbody></table></div>
+<h2 id="判断軸1-ISO27001は-番号-と-範囲-を第三者の検索で照合する">判断軸1｜ISO27001は「番号」と「範囲」を第三者の検索で照合する</h2>
+<p>Nottaのヘルプ「ISMS認証（ISO 27001）は取得していますか？」（2026年9月28日更新）には、登録組織、適用規格、初回登録日（2023年9月14日）、最終更新日（2026年2月3日）、認証範囲、認証番号が載っています。取得状況の確認先として案内されているのは、IAF CertSearch（iafcertsearch.org）で、会社名「Ｎｏｔｔａ株式会社」か認証番号123133を入れて検索する方法です。</p>
+<p>一方、日本の審査担当者がまず開きがちなISMS-ACの認証取得組織検索では、組織名「Notta」でも認証番号123133でも「条件に該当する認証取得組織はありません」と表示されました。ISMS-ACのFAQ（Q3004）は、検索できない例として、非公開を希望している組織や、ISMS-ACの認定下の認証ではない場合を挙げています。日本では英国や米国などの認定機関から認定を受けた認証機関もISMSの認証を行っており、その場合はISMS-ACの検索の対象外です。FAQは、検索できない認証を確かめる方法として、企業に認証登録証の写しを求めるか、認証した認証機関に問い合わせることを挙げています。</p>
+<p>審査票には「取得済み」ではなく、<strong>認証番号・認証範囲・確認した検索先と日付</strong>を書いておくと、翌年の更新審査で同じ確認を繰り返さずに済みます。認証範囲が自社の使う機能まで含んでいるかの見方は、<a href="../isms-ai-transcription/">ISMS取得企業のAI文字起こし承認基準</a>で詳しく扱っています。</p>
+<h2 id="判断軸2-SOC2はType1かType2か-報告書の-期間-まで見る">判断軸2｜SOC2はType1かType2か、報告書の「期間」まで見る</h2>
+<p>Nottaのヘルプ「SOC2は取得していますか？」によると、SOC2保証報告書は、AICPAが定めたTrustサービス規準に基づき、監査法人が独立した立場で内部統制について手続を行い、その結果と意見を表明した報告書です。規準はセキュリティ、可用性、処理のインテグリティ、機密保持、プライバシーの5つのカテゴリーからなり、SOC2ではセキュリティを含む1つ以上が評価の対象になります。</p>
+<p>同じヘルプは、Type1は<strong>ある時点を基準日として</strong>評価し、Type2は<strong>一定の期間を対象に</strong>評価すると説明しています。社内審査で効くのは、運用が期間を通じて機能していたかを見るType2のほうです。Nottaは2023年2月12日にType2の保証報告書を受領したと公表していますが、公開ページから読み取れるのは受領の時期までで、最新の報告書がどの期間を対象にしているかは書かれていません。<strong>NDAを結んで報告書を取り寄せたら、対象期間と、評価の対象になったカテゴリーを確認</strong>してから審査票に転記します。</p>
+<p>ベンダーの紹介ページの文言だけで判断しない理由はここにあります。報告書を見ないと、対象のカテゴリーが「セキュリティ」だけなのか、「機密保持」まで含むのかが分かりません。</p>
+<h2 id="判断軸3-認証とは別に-AI学習-と-データの置き場所-を聞く">判断軸3｜認証とは別に「AI学習」と「データの置き場所」を聞く</h2>
+<p>SOC2やISO27001は、ベンダーの管理体制が基準に沿って運用されているかを見るもので、<strong>録音した音声をAIの学習に使うかどうかは、認証とは別の項目</strong>です。Nottaのヘルプ「AI学習について」では、音声認識の「AI学習」は、エンジンを提供する第三者の国内パートナー企業が、音声データと認識結果からランダムに選んだデータを音声認識エンジンの学習に使うことを指します。「AI学習なし」の環境が用意されているのはエンタープライズとビジネス Plusで、料金プランのヘルプでは士業向け特別プランにも「AI学習なし」が書かれています。音声認識以外のAI機能には、どのプランでもデータを提供していないとされています。</p>
+<p>データの置き場所は、法人契約のFAQで「AWS東京リージョン」に保存、バックアップは毎日1回・35世代・最大180日と説明されています。審査票の項目全体の埋め方は<a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート</a>、契約書で確認する条文は<a href="../transcription-contract-sla/">AI文字起こしの契約書・SLA確認項目</a>にまとめています。</p>
+<p>認証の確認まで終えたうえで、学習なしの環境が要件に入るなら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の候補はビジネス Plus、エンタープライズ、士業向け特別プランです。ビジネス Plusはビジネスプランの全機能に「AI学習なし」とNotta Brainの利用枠を加えたプランで、エンタープライズほどの契約は要らないチーム向けと案内されています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>ISMS-ACの検索だけでは確認しきれない</strong>：海外の認定機関の下で認証を受けた組織は検索に出ません。認証登録証の写しや認証機関への問い合わせが追加で必要になります</li><li><strong>SOC2報告書はすぐには読めない</strong>：Nottaの場合、閲覧にはNDAの締結が必要で、営業窓口とのやり取りが発生します</li><li><strong>個別のチェックシート回答は時間がかかる</strong>：Nottaの個別回答は返却までおおよそ2〜3週間で、ビジネス・エンタープライズの利用者・検討者に限られます。公開のチェックシートを先に使う方が早く進みます</li><li><strong>認証は「AI学習なし」を意味しない</strong>：Nottaのフリー、プレミアム、ビジネスは音声認識のAI学習の対象です。学習なしにするには上位のプランが必要で、料金が上がります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. ISMS-ACの検索で出てこない会社は、ISO27001を持っていないのですか。</strong> そうとは限りません。ISMS-ACのFAQは、非公開を希望している場合や、ISMS-ACの認定下ではない認証機関の認証である場合は検索できないと説明しています。ベンダーが案内する検索先（Nottaの場合はIAF CertSearch）で照合するか、認証登録証の写しを求めてください。</p>
+<p><strong>Q. SOC2のType1とType2は、どちらがあればよいですか。</strong> Nottaのヘルプの説明では、Type1はある時点を基準日とした評価、Type2は一定の期間を対象にした評価です。運用が続いているかを見たいならType2の報告書を取り寄せ、対象期間を確認します。</p>
+<p><strong>Q. SOC2やISO27001を持っていれば、録音を学習に使われませんか。</strong> 認証は学習の扱いを決めるものではありません。Nottaでは、音声認識の「AI学習なし」はエンタープライズ、ビジネス Plus、士業向け特別プランの機能として書かれています。学習の扱いはプランと契約で確かめてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>ISO27001は認証番号と認証範囲を第三者の検索で照合する。ISMS-ACで出ない認証もあり、NottaはIAF CertSearchを案内している</li><li>SOC2はNDAを結んで報告書を取り寄せ、Type2か、対象期間と評価カテゴリーは何かを見る</li><li>認証とは別に、AI学習の扱いとデータの置き場所を確認する。Nottaの学習なしはビジネス Plus・エンタープライズ・士業向け特別プラン</li></ul>
+<h3 id="確認した公式情報-2026年11月2日">確認した公式情報（2026年11月2日）</h3>
+<ul><li>Notta ヘルプ「ISMS認証（ISO 27001）は取得していますか？」「SOC2は取得していますか？」「セキュリティに関する書類に回答を記入してもらえませんか？」「AI学習について」「Nottaの料金プランについて」「法人契約に関するよくある質問」「「ビジネス Plus」と「ビジネスプラン」の違いは何ですか？」</li><li>Notta「安心のセキュリティ体制」（notta.ai/security）</li><li>情報マネジメントシステム認定センター（ISMS-AC）「ISMS認証取得組織検索」・FAQ（Q3004）</li><li>AICPA &amp; CIMA「SOC 2」ページ</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../interpreter-meeting-recording/">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../interpreter-meeting-recording/">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li><li><a href="../rehab-conference-recording/">リハビリカンファレンスの録音をAI文字起こし｜患者情報と同意の3点</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

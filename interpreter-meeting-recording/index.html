@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる｜AIツール実用ガイド</title>
+<meta name="description" content="通訳者が入る商談・国際会議を録音してAIで文字起こししたい人、自分の訳出を復習したい通訳者向け。AIICの倫理規程と通訳案内士法の条文、Nottaの2か国語文字起こしと学習・削除の仕様を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/interpreter-meeting-recording/">
+<meta property="og:title" content="通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる｜AIツール実用ガイド">
+<meta property="og:description" content="通訳者が入る商談・国際会議を録音してAIで文字起こししたい人、自分の訳出を復習したい通訳者向け。AIICの倫理規程と通訳案内士法の条文、Nottaの2か国語文字起こしと学習・削除の仕様を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる", "description": "通訳者が入る商談・国際会議を録音してAIで文字起こししたい人、自分の訳出を復習したい通訳者向け。AIICの倫理規程と通訳案内士法の条文、Nottaの2か国語文字起こしと学習・削除の仕様を整理。", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/interpreter-meeting-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "通訳者には法律上の守秘義務がありますか。", "acceptedAnswer": {"@type": "Answer", "text": "確認した通訳案内士法には、全国通訳案内士本人の守秘義務を定めた条文は見当たりませんでした（第14条の秘密保持義務は試験事務の従事者が対象）。ほかの法律や個別の業界の規制が関係する場合もあるため、守秘は通訳会社・通訳者との契約で定めておくのが確実です。"}}, {"@type": "Question", "name": "同時通訳の音声だけを録音して文字起こししてもいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "技術的には可能ですが、訳出は通訳者の仕事の成果でもあります。録音してよいか、どこまで使ってよいかを、事前に通訳会社か通訳者に確認してください。"}}, {"@type": "Question", "name": "2か国語の録音をあとから訳すだけなら、アドオンは要りませんか。", "acceptedAnswer": {"@type": "Answer", "text": "Nottaのヘルプでは、文字起こしが終わった後に訳文を作る「文字起こしの訳文生成」はプレミアム以上で使え、回数の制限はなく文字起こし時間を消費します。その場で訳文を見る必要がなければ、アドオンなしで足りる場合があります。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</h1><p class="meta">2026-11-02 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、通訳が入る会議をAIで文字起こしするときの守秘義務は、<strong>法律よりも通訳者との契約（NDA）と職業団体の倫理規程で決まる</strong>と考えて準備するのが現実的です。通訳に関わる法律として通訳案内士法を確認しましたが、全国通訳案内士本人に守秘義務を課す条文は見当たりませんでした。一方、国際会議通訳者協会（AIIC）の倫理規程は、公開されていない会議で知った情報すべてに「最も厳格な秘密」を守るよう定めています。録音と文字起こしは、その秘密を保存した複製物になるため、誰の端末とどのツールに置くかを先に決めます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="守秘の根拠と-AI文字起こしで気をつける点">守秘の根拠と、AI文字起こしで気をつける点</h2>
+<p>2026年11月2日に、e-Gov法令検索で通訳案内士法を、AIICのウェブサイトで倫理規程（Code of Professional Ethics、2022年1月16日総会改正・同年11月25日最終更新）を確認しました。</p>
+<div class="tw"><table><thead><tr><th>根拠</th><th>内容（要旨）</th><th>AI文字起こしで気をつける点</th></tr></thead><tbody><tr><td>通訳案内士法 第14条</td><td>試験事務に従事する役職員・試験委員に秘密保持義務</td><td>案内士本人の守秘義務の条文ではない</td></tr><tr><td>通訳案内士法 第32条</td><td>全国通訳案内士は信用または品位を害するような行為をしてはならない</td><td>守秘を直接定める条文ではない。守秘は契約で決める</td></tr><tr><td>AIIC倫理規程 第2条</td><td>公開されていない会議で職務上開示されたすべての情報について、すべての人に対し最も厳格な秘密を守る</td><td>録音・文字起こしの保存先も秘密の管理対象になる</td></tr><tr><td>AIIC倫理規程 第3条</td><td>職務で得た秘密情報から個人的な利益を得ない</td><td>訳出の復習用に残した録音の使い道を限定する</td></tr><tr><td>AIIC倫理規程 第15.5条</td><td>十分に準備し、読み上げ原稿などの資料を事前に送るよう求める</td><td>事前資料と録音は、同じ秘密の範囲で扱う</td></tr></tbody></table></div>
+<p>AIICの倫理規程はAIICの会員を拘束するもので、すべての通訳者に適用されるわけではありません。依頼する通訳者が所属する団体の規程と、通訳会社との契約書の秘密保持条項を確認してください。</p>
+<h2 id="判断軸1-通訳者との契約に-録音の扱いが書かれているか">判断軸1｜通訳者との契約に、録音の扱いが書かれているか</h2>
+<p>録音には、発言者の原語に加えて通訳者の訳出も入ります。主催者側が録音をAIで文字起こしするなら、通訳会社や通訳者との契約に、録音の可否、録音の利用目的、文字起こしを外部のサービスで処理することを書いておくと後で揉めにくくなります。通訳者側から見ると、自分の訳出が文字に起こされて残ることになるので、事前に確認しておきたい点です。</p>
+<p>逆に、通訳者が自分の訳出を復習するために録音したい場合も同じです。AIIC倫理規程の第2条は、公開されていない会議の情報すべてを秘密の対象にしています。主催者の許可なく録音し、個人のスマホの無料アプリに上げるのは、規程の趣旨から外れると考えるのが自然です。NDAの条文と文字起こしの関係は<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>で、条項ごとに整理しています。</p>
+<h2 id="判断軸2-2か国語をどう文字に起こすか">判断軸2｜2か国語をどう文字に起こすか</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプによると、2か国語が混在する会議は「2か国語文字起こし・翻訳」で、2つの発話言語を指定して文字起こしでき、対応言語は23言語です。リアルタイム録音、Web会議へのNotta Bot参加、ファイルのインポートのいずれでも使えます。利用回数はノートごとに1回と数え、どのプランでも月4回まで追加料金なしです。2か国語文字起こし・翻訳アドオン（月払い2,200円・税込）を買うと、1アカウントあたり月200回分が追加されます。フリープランのままではアドオンを買えません。</p>
+<p>通訳者がいる会議では、原語と訳出が交互に流れます。原語の発言と通訳の訳出の両方が文字になるので、議事録には原語の発言だけ、または訳出だけを残すのか、先に決めておくと整理が楽になります。月4回を超える会議があるか、後から訳文が手に入れば足りるかでアドオンが要るかが変わります。詳しくは<a href="../notta-translation-addon/">Notta翻訳アドオンは必要か</a>にまとめました。英語の認識精度については<a href="../notta-english-accuracy/">Nottaの英語文字起こし精度</a>で扱っています。</p>
+<h2 id="判断軸3-録音を学習に使わせない環境で処理できるか">判断軸3｜録音を学習に使わせない環境で処理できるか</h2>
+<p>Nottaの公式ヘルプ「AI学習について」では、音声認識のAI学習は、エンジンを提供する第三者の国内パートナー企業が音声データと認識結果からランダムに選んだデータを学習に使うことを指します。「AI学習なし」の環境はエンタープライズとビジネス Plusで提供され、ビジネスの音声認識のAI学習は「あり」です。音声認識以外のAI機能のデータは、いずれのプランでも学習に提供していないとヘルプにあります。</p>
+<p>保存期間も決めておきます。ヘルプでは、文字起こしデータは手動で削除するか、ワークスペースを削除するか、退会しない限り自動的に削除されません。手動で削除するとゴミ箱に入り、30日後に完全に削除されます。作成日から1〜365日で自動削除する設定はエンタープライズのみです。会議ごとに削除日を決めておき、ゴミ箱からの完全削除まで済ませる運用にします。法人向けの質問集では、NottaはISO27001とSOC2 Type2の認証を取得しており、データはAWS東京リージョンに保存されていると説明しています。</p>
+<p>AIICの規程が求める水準の秘密を守るなら、音声認識の学習なしの環境で処理するのが説明しやすい構成です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>AI文字起こし全般</strong>：原語と訳出が重なる場面や、同時通訳のレシーバー音声を録った場合は、認識が崩れやすくなります。議事録として残すなら、録音と照らして人が直します</li><li><strong>Notta フリー</strong>：アドオンを買えず、2か国語文字起こし・翻訳は月4回までです。音声認識のAI学習「なし」の対象でもありません</li><li><strong>Notta ビジネス</strong>：外部共有を無効にする設定は使えますが、音声認識のAI学習は「あり」です</li><li><strong>Notta ビジネス Plus</strong>：学習なしになりますが、作成日からの自動削除はエンタープライズの機能です。3つ以上の言語を同時に翻訳する機能はないとヘルプに書かれています</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 通訳者には法律上の守秘義務がありますか。</strong> 確認した通訳案内士法には、全国通訳案内士本人の守秘義務を定めた条文は見当たりませんでした（第14条の秘密保持義務は試験事務の従事者が対象）。ほかの法律や個別の業界の規制が関係する場合もあるため、守秘は通訳会社・通訳者との契約で定めておくのが確実です。</p>
+<p><strong>Q. 同時通訳の音声だけを録音して文字起こししてもいいですか。</strong> 技術的には可能ですが、訳出は通訳者の仕事の成果でもあります。録音してよいか、どこまで使ってよいかを、事前に通訳会社か通訳者に確認してください。</p>
+<p><strong>Q. 2か国語の録音をあとから訳すだけなら、アドオンは要りませんか。</strong> Nottaのヘルプでは、文字起こしが終わった後に訳文を作る「文字起こしの訳文生成」はプレミアム以上で使え、回数の制限はなく文字起こし時間を消費します。その場で訳文を見る必要がなければ、アドオンなしで足りる場合があります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>通訳案内士法に案内士本人の守秘義務の条文は見当たらず、守秘は契約と職業団体の規程（AIIC倫理規程第2条など）で決まる</li><li>録音には通訳者の訳出も入る。録音の可否・目的・外部サービスでの処理を、通訳者との契約に書いておく</li><li>2か国語の会議はNottaの2か国語文字起こしで月4回まで追加料金なし。秘密の水準が高いならビジネス Plus・エンタープライズの学習なしの環境で処理する</li></ul>
+<h3 id="確認した公式情報-2026年11月2日">確認した公式情報（2026年11月2日）</h3>
+<ul><li>e-Gov法令検索「通訳案内士法」第14条・第32条</li><li>AIIC「Code of Professional Ethics」（2022年1月16日改正、2022年11月25日最終更新）第2条・第3条・第15.5条</li><li>Notta ヘルプ「AI学習について」「『ビジネス Plus』と『ビジネスプラン』の違いは何ですか？」「Nottaの料金プランについて」「各翻訳機能の詳細と利用条件の違いは？」「2か国語文字起こし・翻訳┃Web版」「文字起こしデータの保管期限や容量制限はありますか？」「データの削除・復元」「ノートおよびフォルダの自動削除」「法人契約に関するよくある質問」</li></ul>
+<p>※本記事は法令と公開資料を2026年11月2日に確認して整理したもので、法的な助言ではありません。契約の判断は弁護士など専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li><li><a href="../rehab-conference-recording/">リハビリカンファレンスの録音をAI文字起こし｜患者情報と同意の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点</a></li><li><a href="../career-consultant-session-recording/">キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方</a></li><li><a href="../coaching-session-recording/">コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定</a></li><li><a href="../interpreter-meeting-recording/">通訳が入る会議をAI文字起こしする前に｜守秘義務は法律より契約で決まる</a></li><li><a href="../iphone-voice-memo-transcription-training/">iPhoneボイスメモの文字起こしは学習される？Appleの公式で確かめた3点</a></li><li><a href="../rehab-conference-recording/">リハビリカンファレンスの録音をAI文字起こし｜患者情報と同意の3点</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>
