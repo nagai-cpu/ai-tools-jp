@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zoom Phoneの通話文字起こしはAI学習される？法人が見る保存期間と通知｜AIツール実用ガイド</title>
+<meta name="description" content="Zoom Phoneの通話の文字起こし・AI要約が学習に使われるかを、Zoomの利用規約と技術資料で確認。学習より先に決めたい保存期間、相手への通知、保存先の国を法人の管理者向けに整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/zoom-phone-transcription-training/">
+<meta property="og:title" content="Zoom Phoneの通話文字起こしはAI学習される？法人が見る保存期間と通知｜AIツール実用ガイド">
+<meta property="og:description" content="Zoom Phoneの通話の文字起こし・AI要約が学習に使われるかを、Zoomの利用規約と技術資料で確認。学習より先に決めたい保存期間、相手への通知、保存先の国を法人の管理者向けに整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Zoom Phoneの通話文字起こしはAI学習される？法人が見る保存期間と通知", "description": "Zoom Phoneの通話の文字起こし・AI要約が学習に使われるかを、Zoomの利用規約と技術資料で確認。学習より先に決めたい保存期間、相手への通知、保存先の国を法人の管理者向けに整理。", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/zoom-phone-transcription-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Zoom Phoneの通話要約を使うと、相手にも分かりますか。", "acceptedAnswer": {"@type": "Answer", "text": "サポート記事によると、通話要約が始まると参加者に案内音声が流れ、文字起こし中であることを示す表示が出ます。同じ通話の中で誰が機能を有効にしているかも表示され、ほかの参加者がオフにするよう依頼することもできます。"}}, {"@type": "Question", "name": "ライブ文字起こしのテキストは後から見られますか。", "acceptedAnswer": {"@type": "Answer", "text": "サポート記事は、この機能で作られた文字起こしをZoomは保持しないとしています。記録として残したいなら、録音の文字起こしや通話要約など別の機能になります。"}}, {"@type": "Question", "name": "保存先の国を日本にすれば、通話は国内だけで処理されますか。", "acceptedAnswer": {"@type": "Answer", "text": "Bluepaperによると、通話録音は端末が登録されているSIPゾーンの地域で一時的に保存・処理されてから、長期の保存先へ移ります。保存先を日本にしても、端末の登録先が別の地域なら、録音はいったんその地域のデータセンターで処理されます。通話ログやSMS/MMSのログは、アカウントが作られた地域に保存されます。保存期間の決め方は[文字起こしデータの保存期間と削除設定](../transcription-retention-deletion/)でも整理しています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Zoom Phoneの通話文字起こしはAI学習される？法人が見る保存期間と通知</h1><p class="meta">2026-11-03 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Zoom Phoneの通話の音声や文字起こしについては、Zoomの利用規約が「オーディオ、ビデオ、チャット…などのカスタマー コンテンツ」をZoomや第三者のAIモデルのトレーニングに使わないと定めています。規約は文字起こしや録音もカスタマー コンテンツに含めており、技術資料でもZoom Phoneの通話音声・文字起こし・録音・ボイスメールが同じ扱いの対象とされています。法人の管理者が先に決めたいのは、学習よりも<strong>保存期間</strong>（初期設定では無期限）と<strong>相手への通知</strong>、<strong>保存先の国</strong>の3つです。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="Zoom-Phoneの文字起こし・AI機能と公式の記載">Zoom Phoneの文字起こし・AI機能と公式の記載</h2>
+<p>2026年11月3日に、Zoomの利用規約（日本語版）、Zoomの技術資料（Zoom Phone Bluepaper、Zoom AI Whitepaper。英語）、Zoomサポートの記事（英語）で確認しました。日本語の製品ページでは、通話後の要約、ボイスメールの優先順位付け、タスクの抽出がAI機能として案内されています。</p>
+<div class="tw"><table><thead><tr><th>機能</th><th>相手への通知</th><th>残るもの</th><th>管理者側の設定</th></tr></thead><tbody><tr><td>通話ライブ文字起こし</td><td>文字起こしをオン・オフするたびに、参加者全員に変更が通知される（サポート記事）</td><td>Zoomはこの機能で作られた文字起こしを保持しない（サポート記事）</td><td>サイトのポリシーに「Call Live Transcription」がある（Bluepaper）</td></tr><tr><td>通話要約（AI）</td><td>開始時に参加者に案内音声が流れ、画面上の表示で文字起こし中であることが示される（サポート記事）</td><td>要約は通話履歴から各自が見られ、編集・共有・削除ができる（サポート記事）</td><td>管理者が有効化する機能。サイトごとにオン・オフとロックが可能（Whitepaper）</td></tr><tr><td>通話録音の文字起こし</td><td>録音が有効になると視覚などの手段で通知される（利用規約7）</td><td>通話の文字起こし・録音は保存先の国を選べる対象（Bluepaper）</td><td>録音のポリシーの下に「Allow Call Recording Transcription」がある（Bluepaper）</td></tr><tr><td>ボイスメールの文字起こし</td><td>―</td><td>ボイスメールと文字起こしは保存先の国を選べる対象（Bluepaper）</td><td>ポリシーに「Voicemail / Videomail Transcription」がある（Bluepaper）</td></tr></tbody></table></div>
+<p>「―」は、確認した資料に記載がなかった欄です。AI学習については、どの機能でも利用規約10.2の一文が根拠になります。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-学習の根拠は-利用規約10-2-の一文で足りるか">1. 学習の根拠は「利用規約10.2」の一文で足りるか</h3>
+<p>利用規約10.1は、付随する文字起こしやレコーディングも「カスタマー コンテンツ」に含めています。10.2は、オーディオなどコミュニケーション関連のカスタマー コンテンツを、ZoomやサードパーティのAIモデルのトレーニングに使わないと定めています。Bluepaperは、通話の音声、文字起こし、録音、ボイスメール、SMSをZoom Phoneのカスタマー コンテンツと説明しています。</p>
+<p>通話要約のサポート記事には、この機能が「サードパーティのモデルを含む場合がある」AI技術を使うと書かれています。Zoom AI Whitepaper（2026年9月25日更新）は、Zoomが使う外部の生成AIモデルの提供元とはゼロデータ保持の方針があり、信頼と安全のための限られた例外を除いて顧客コンテンツを保持しないと説明しています。会議側のAI機能の扱いは<a href="../zoom-ai-companion-no-training/">Zoom AI Companionは学習されない？公式の一文と管理者が触る設定</a>で整理しています。</p>
+<h3 id="2-通話の相手に-文字起こしや録音をどう伝えるか">2. 通話の相手に、文字起こしや録音をどう伝えるか</h3>
+<p>ライブ文字起こしも通話要約も、相手側に通知が出る作りです。一方で利用規約7は、電話のホストとして行うレコーディングについて、関連する法令を守る責任は利用者にあるとしています。</p>
+<p>日本の個人情報保護法との関係では、個人情報保護委員会のQ&amp;A（Q1-10）が、通話内容で特定の個人を識別できれば個人情報に当たり、利用目的を通知または公表する義務はあるが、録音していることを伝える義務までは負わないと整理しています。告知の義務と、相手との信頼関係は別の話です。顧客との通話を録音・文字起こしする場面の論点は<a href="../callcenter-recording-ai/">コールセンターの通話録音をAI文字起こし</a>にまとめています。</p>
+<h3 id="3-保存期間と保存先の国を-誰が決めるか">3. 保存期間と保存先の国を、誰が決めるか</h3>
+<p>Bluepaperによると、Zoom Phoneのカスタマー コンテンツは初期設定ではクラウドに無期限で保持されます。管理者は、通話ログ、録音、ボイスメール、SMS/MMSなどについて1〜4,000日の保持期間を、アカウント、グループ、内線ごとに設定できます。30日まで復元できる「ソフト削除」か、すぐ完全に削除するかも選べます。ただし、この項目の一覧に通話の文字起こしは個別に書かれていませんでした。文字起こしの消え方は、設定画面で確かめてから運用ルールに書くのが確実です。</p>
+<p>保存先の国は、有料の顧客が通話録音や文字起こし、ボイスメールなどについて選べ、選択肢に日本が含まれています。</p>
+<h2 id="Zoom-Phoneの外で文字起こしするなら条件が変わる">Zoom Phoneの外で文字起こしするなら条件が変わる</h2>
+<p>Zoom Phoneのポリシーには、自分の録音の「ダウンロード」を許す項目があります。録音を書き出して別のサービスで文字起こしする場合や、携帯電話の通話など、Zoom Phoneを通らない会話を記録する場合は、学習の条件がそのサービスの規約に変わります。</p>
+<p>たとえば<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプ「AI学習について」は、「AI学習なし」の環境をエンタープライズとビジネス Plusで提供するとしています。ビジネスとビジネス Plusの違いを説明したヘルプでは、ビジネスの音声認識のAI学習は「あり」です。音声認識以外のAI機能（要約など）のデータは、いずれのプランでも学習に提供していないとヘルプにあります。</p>
+<p>Zoom Phoneと同じ「学習に使わない」を条件にしたまま外部で文字起こしするなら、ビジネス Plus以上が条件に合います。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Zoom Phoneの根拠が英語に偏る</strong>：保存期間、保存先の国、外部モデルの扱いは英語の資料でしか確認できませんでした</li><li><strong>Zoom Phoneの保存は初期設定で無期限</strong>：保持期間を設定しない限り、録音やボイスメールは残り続けます</li><li><strong>通話要約の対象言語</strong>：サポート記事には30以上の言語に対応とありますが、日本語の通話での精度はこの記事では確認していません。AI機能は業種や地域によって提供されない場合があるとも書かれています</li><li><strong>Notta</strong>：ビジネス以下は音声認識のAI学習が「なし」の対象外です。作成日からの自動削除はエンタープライズのみの機能です</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. Zoom Phoneの通話要約を使うと、相手にも分かりますか。</strong> サポート記事によると、通話要約が始まると参加者に案内音声が流れ、文字起こし中であることを示す表示が出ます。同じ通話の中で誰が機能を有効にしているかも表示され、ほかの参加者がオフにするよう依頼することもできます。</p>
+<p><strong>Q. ライブ文字起こしのテキストは後から見られますか。</strong> サポート記事は、この機能で作られた文字起こしをZoomは保持しないとしています。記録として残したいなら、録音の文字起こしや通話要約など別の機能になります。</p>
+<p><strong>Q. 保存先の国を日本にすれば、通話は国内だけで処理されますか。</strong> Bluepaperによると、通話録音は端末が登録されているSIPゾーンの地域で一時的に保存・処理されてから、長期の保存先へ移ります。保存先を日本にしても、端末の登録先が別の地域なら、録音はいったんその地域のデータセンターで処理されます。通話ログやSMS/MMSのログは、アカウントが作られた地域に保存されます。保存期間の決め方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>でも整理しています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Zoomの利用規約10.2は、音声などのカスタマー コンテンツ（文字起こし・録音を含む）をZoomや第三者のAIモデルの学習に使わないと定めており、Zoom Phoneの通話も同じ扱いと技術資料が説明している</li><li>ライブ文字起こしと通話要約は相手に通知が出る。ライブ文字起こしのテキストはZoomが保持しない</li><li>Zoom Phoneの録音やボイスメールは初期設定で無期限に保持される。保持期間（1〜4,000日）と保存先の国を管理者が決める。Zoom Phoneの外で文字起こしするなら、そのサービスの学習条件を確かめる</li></ul>
+<h3 id="確認した公式情報-2026年11月3日">確認した公式情報（2026年11月3日）</h3>
+<ul><li>Zoom 利用規約（日本語版・発効日2023年8月11日）7 レコーディング、9 法の遵守、10.1〜10.4 カスタマー コンテンツ</li><li>Zoom Phone Bluepaper「Privacy, Security, and Compliance」（保存先の国・保持期間）、「Configuration」（サイトのポリシー一覧）（library.zoom.com、英語）</li><li>Zoom AI Whitepaper（2026年9月25日更新）「Zoom AI Features」の Zoom Phone、「Data Governance and Privacy」、「Administrative Controls」（英語）</li><li>Zoomサポート「Using Zoom Phone call live transcription」（KB0058324）、「Using call summary with AI」（KB0074868）（英語）</li><li>Zoom Phone 日本語製品ページ（zoom.com/ja/products/voip-phone/）</li><li>個人情報保護委員会「個人情報の保護に関する法律についてのガイドライン」に関するQ&amp;A Q1-10</li><li>Notta ヘルプ「AI学習について」「『ビジネス Plus』と『ビジネスプラン』の違いは何ですか？」「ノートおよびフォルダの自動削除」</li></ul>
+<p>※本記事はZoomとNottaの公開ページ、個人情報保護委員会のQ&amp;Aを2026年11月3日に確認して整理したもので、法的な助言ではありません。仕様は変更されることがあるため、最新の公式ページをご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『介護・看護の記録をAIで書く前に読む本』（Kindle・500円）：介護事業所・訪問看護で、利用者の情報をAIに入れてよいか、事業所のルール、利用者と家族への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7G1TCZ" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li><li><a href="../transcription-data-breach-response/">文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

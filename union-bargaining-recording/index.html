@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>労働組合の団体交渉を録音してAI文字起こし｜機密と合意で決める3点｜AIツール実用ガイド</title>
+<meta name="description" content="団体交渉の録音とAI文字起こしを考える労組役員・人事担当者向け。労組法7条と中労委の2つの命令が示す「録音は労使で決める開催条件」と、Nottaの学習・共有・削除を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/union-bargaining-recording/">
+<meta property="og:title" content="労働組合の団体交渉を録音してAI文字起こし｜機密と合意で決める3点｜AIツール実用ガイド">
+<meta property="og:description" content="団体交渉の録音とAI文字起こしを考える労組役員・人事担当者向け。労組法7条と中労委の2つの命令が示す「録音は労使で決める開催条件」と、Nottaの学習・共有・削除を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "労働組合の団体交渉を録音してAI文字起こし｜機密と合意で決める3点", "description": "団体交渉の録音とAI文字起こしを考える労組役員・人事担当者向け。労組法7条と中労委の2つの命令が示す「録音は労使で決める開催条件」と、Nottaの学習・共有・削除を整理。", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/union-bargaining-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "会社が団体交渉の録音を断ってきたら、交渉を拒否されたことになりますか。", "acceptedAnswer": {"@type": "Answer", "text": "録音を断ること自体が直ちに団体交渉の拒否になるとは、確認した資料には書かれていません。令和5年の中労委命令は、録音をめぐる協議で理由の説明や代替案の検討が十分でなかったことを不誠実と評価したもので、協議の中身を見ています。個別の判断は労働委員会や弁護士に相談してください。"}}, {"@type": "Question", "name": "組合側が録音したものを、AIで文字起こしして組合員に配ってもいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "法令に一律の定めは見当たりませんでした。団交ルールで共有範囲を決めていればそれに従います。決めていない場合は、相手方の発言や個別の組合員の情報が含まれることを考え、配る前に範囲を協議しておくと揉めにくくなります。"}}, {"@type": "Question", "name": "録音の扱いで労使が合意できないときはどうすればいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "中労委のQ&Aは、労働委員会の調整で扱う問題の例に「団体交渉のルール」を挙げています。都道府県労働委員会のあっせんなどを使う方法があります。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">労働組合の団体交渉を録音してAI文字起こし｜機密と合意で決める3点</h1><p class="meta">2026-11-03 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、団体交渉の録音とAI文字起こしは、どちらか一方が決めるものではなく、<strong>開催条件として労使で合意するもの</strong>として扱われています。中央労働委員会は令和5年の命令で「団体交渉をどのような形で行うかという条件については、労使双方の合意により決定するのが原則」と述べ、録音の扱いについて誠実に協議するよう使用者に命じました。AIで文字起こしするなら、その合意に「どのツールに通すか・どこに置くか・いつ消すか」まで入れておくと、後で揉めにくくなります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="団体交渉の録音について-公的な資料が言っていること">団体交渉の録音について、公的な資料が言っていること</h2>
+<p>2026年11月3日に、e-Gov法令検索の労働組合法、中央労働委員会（中労委）のウェブサイトの解説・Q&amp;A・命令書を確認しました。録音が許されるかどうかを一律に定めた条文はなく、労働委員会は個別の事情を見て判断しています。</p>
+<div class="tw"><table><thead><tr><th>資料</th><th>内容（要旨）</th><th>録音・文字起こしで気をつける点</th></tr></thead><tbody><tr><td>労働組合法7条2号</td><td>雇用する労働者の代表者との団体交渉を、正当な理由なく拒むことを不当労働行為として禁止</td><td>録音の条件をめぐって交渉が開けない状態が続くと、この条文との関係が問われうる</td></tr><tr><td>中労委「不当労働行為救済制度とは」</td><td>2号の例として、形式的に応じても実質的に誠実な交渉を行わない「不誠実団交」を挙げる</td><td>録音の可否の協議そのものも、誠実さが見られる対象になりうる</td></tr><tr><td>中労委Q&amp;A（Q20）</td><td>労働委員会の調整で扱う問題の例に「団体交渉のルール」を挙げる</td><td>録音のルールで合意できないときは、あっせん等の調整を使う道がある</td></tr><tr><td>中労委 令和4年（不再）第4号（令和5年7月5日決定）</td><td>開催条件は労使の合意が原則。使用者に、録音について理由を説明し代替案も含めて誠実に協議するよう命じた</td><td>命令は代替案として、議事録のすり合わせや、企業秘密・人事評価に触れる場面以外の一部録音を例示</td></tr><tr><td>中労委 令和元年（不再）第35号（令和2年9月公表）</td><td>録音を禁じる明確な団交ルールがなかった等の事情の下、会社が事前承諾なしに録音したことを不当労働行為に当たらないと判断</td><td>事情を限定した判断で、無断録音を一般に認めたものではない。ルールを先に決めておくほうが争点を減らせる</td></tr></tbody></table></div>
+<p>2つの命令は結論が逆に見えますが、どちらも「録音を禁じる・認めるルールが労使の間にあったか」「合意に向けてどう協議したか」を見ています。録音の是非そのものを一般論で決めたものではありません。無断録音の一般的な扱いは<a href="../secret-recording-legality/">無断録音をAIで文字起こしするのは違法？</a>で、一次資料が言えることに絞って整理しています。</p>
+<h2 id="判断軸1-録音とAI文字起こしを-団交ルールに書いてあるか">判断軸1｜録音とAI文字起こしを、団交ルールに書いてあるか</h2>
+<p>令和5年の命令は、団体交渉の内容を正確に記録することは「労使双方にとって有益」としたうえで、録音を求める組合側にも、拒む法人側にも、合意を目指す努力を求めています。法人が十分な説明や代替案の提示をしなかった点が、不誠実と評価されました。</p>
+<p>ここから言えるのは、録音をするかどうかより先に、<strong>録音の扱いを団交ルールとして文書にしておく</strong>ことの大切さです。AI文字起こしを使う場合は、ICレコーダーで録るのとは違い、音声がツールの提供会社のサーバーに送られます。ルールには次の項目を入れておくと、後から「そこまでは合意していない」と言われにくくなります。</p>
+<ul><li>録音するのは誰か（労使双方か、一方か）</li><li>AI文字起こしに通してよいか、通すならどのサービスか</li><li>文字起こしの共有範囲（交渉委員だけか、組合員全体か）</li><li>保存期間と削除の時期</li></ul>
+<h2 id="判断軸2-企業秘密や人事評価に触れる場面をどう扱うか">判断軸2｜企業秘密や人事評価に触れる場面をどう扱うか</h2>
+<p>令和5年の命令は、使用者側が検討できた代替案として「企業秘密や人事評価等のデータ流出による危険性が高いと懸念される情報に言及する場面以外に係る一部録音」を挙げています。団体交渉では、経営資料、個別組合員の評価や処分、健康に関わる話が出ることがあり、使用者側が録音をためらう理由の多くはここにあります。</p>
+<p>AI文字起こしを使うなら、この懸念にツールの設定で答えられるかが論点になります。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプ「AI学習について」によると、音声認識のAI学習は、エンジンを提供する国内パートナー企業が音声と認識結果からランダムに選んだデータを学習に使うことを指し、「AI学習なし」の環境はエンタープライズとビジネス Plusで提供されています。ビジネスプランの音声認識のAI学習は「あり」と、プランの違いを説明したヘルプに書かれています。要約など音声認識以外のAI機能のデータは、いずれのプランでも学習に提供していないとされています。</p>
+<p>「録音が外部の学習に使われないか」と聞かれたとき、ヘルプの該当ページを示して説明できる構成にしておくと協議が進めやすくなります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="判断軸3-文字起こしを-誰が・いつまで持つか">判断軸3｜文字起こしを、誰が・いつまで持つか</h2>
+<p>文字起こしは、録音よりも検索や転送がしやすい分、広がりやすい記録です。Nottaのヘルプでは、共有リンクは全プランで作成でき、リンクを知っている人はログインなしで閲覧できます。オーナーが外部共有を無効にする設定は、ビジネス以上のプランが対象です。</p>
+<p>保存期間も決めておきます。ヘルプによると、文字起こしデータは手動で削除するか、ワークスペースを削除するか、退会しない限り自動では削除されません。手動で削除したデータはゴミ箱に入り、30日後に完全に削除されます。作成日から1〜365日で自動削除する設定はエンタープライズのみです。プランごとの削除の仕様は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>にまとめています。</p>
+<p>団体交渉の記録は、のちに労働委員会への救済申立てなどで経過を示す材料になることがあります。中労委のQ&amp;Aでは、救済申立ては不当労働行為があった日から1年以内です。消す時期を決めるときは、この期間も考えに入れておくと判断しやすくなります。文字起こしを記録として出す場合の注意は、<a href="../court-evidence-recording-transcript/">録音を裁判の証拠にするAI文字起こしの注意点</a>で触れた「反訳は録音と照合される」という点が参考になります。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>AI文字起こし全般</strong>：団体交渉は発言が重なりやすく、数字（賃上げ額、一時金の月数）や固有名詞の聞き違いも起こります。記録として使うなら、録音と照らして直す手間がかかります</li><li><strong>Notta フリー・プレミアム・ビジネス</strong>：音声認識のAI学習「なし」の対象ではありません。企業秘密や人事評価の扱いを気にする相手には説明しにくくなります</li><li><strong>Notta ビジネス Plus</strong>：学習なしにはなりますが、作成日からの自動削除はエンタープライズの機能です。削除の時期は人の運用で守る必要があります</li><li><strong>ツールの設定だけでは足りない点</strong>：録音やAI文字起こしの可否は、ツールでは決まりません。相手との合意がなければ、どの設定にしても争点は残ります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 会社が団体交渉の録音を断ってきたら、交渉を拒否されたことになりますか。</strong> 録音を断ること自体が直ちに団体交渉の拒否になるとは、確認した資料には書かれていません。令和5年の中労委命令は、録音をめぐる協議で理由の説明や代替案の検討が十分でなかったことを不誠実と評価したもので、協議の中身を見ています。個別の判断は労働委員会や弁護士に相談してください。</p>
+<p><strong>Q. 組合側が録音したものを、AIで文字起こしして組合員に配ってもいいですか。</strong> 法令に一律の定めは見当たりませんでした。団交ルールで共有範囲を決めていればそれに従います。決めていない場合は、相手方の発言や個別の組合員の情報が含まれることを考え、配る前に範囲を協議しておくと揉めにくくなります。</p>
+<p><strong>Q. 録音の扱いで労使が合意できないときはどうすればいいですか。</strong> 中労委のQ&amp;Aは、労働委員会の調整で扱う問題の例に「団体交渉のルール」を挙げています。都道府県労働委員会のあっせんなどを使う方法があります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>団体交渉の録音は、中労委の命令で「開催条件として労使の合意で決める」ものとされ、協議の誠実さが見られている</li><li>AI文字起こしを使うなら、団交ルールに「どのツール・共有範囲・削除時期」まで書いておく</li><li>企業秘密や人事評価への懸念には、学習なしの環境（Nottaならビジネス Plus・エンタープライズ）と外部共有の制限で答える</li></ul>
+<h3 id="確認した公式情報-2026年11月3日">確認した公式情報（2026年11月3日）</h3>
+<ul><li>e-Gov法令検索「労働組合法」第6条・第7条</li><li>中央労働委員会「不当労働行為救済制度とは」「よくあるご質問」（Q7〜Q9、Q20）</li><li>中央労働委員会 命令書 令和4年（不再）第4号事件（令和5年7月5日決定、初審東京都労委令和2年（不）第52号）</li><li>中央労働委員会 報道資料「アンジュエトワル不当労働行為再審査事件（令和元年(不再)第35号）命令書交付について」（令和2年9月2日）</li><li>Notta ヘルプ「AI学習について」「『ビジネス Plus』と『ビジネスプラン』の違いは何ですか？」「共有リンクを使った外部へのノート共有」「外部ユーザーとの共有を制限する」「文字起こしデータの保管期限や容量制限はありますか？」「データの削除・復元」「ノートおよびフォルダの自動削除」</li></ul>
+<p>※本記事は法令・公的機関の公開資料とNottaの公開ヘルプを2026年11月3日に確認して整理したもので、法的な助言ではありません。個別の事案は労働委員会や弁護士など専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li><li><a href="../transcription-data-breach-response/">文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

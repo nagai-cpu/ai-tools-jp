@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI文字起こしのIPアドレス制限｜法人プランで塞げる穴と塞げない穴｜AIツール実用ガイド</title>
+<meta name="description" content="AI文字起こしにIP制限をかけたい法人向け。Nottaで使えるプランと登録数、IP制限では閉じない共有リンク・個人ワークスペース・連携の経路を公式ヘルプで整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/transcription-ip-restriction/">
+<meta property="og:title" content="AI文字起こしのIPアドレス制限｜法人プランで塞げる穴と塞げない穴｜AIツール実用ガイド">
+<meta property="og:description" content="AI文字起こしにIP制限をかけたい法人向け。Nottaで使えるプランと登録数、IP制限では閉じない共有リンク・個人ワークスペース・連携の経路を公式ヘルプで整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI文字起こしのIPアドレス制限｜法人プランで塞げる穴と塞げない穴", "description": "AI文字起こしにIP制限をかけたい法人向け。Nottaで使えるプランと登録数、IP制限では閉じない共有リンク・個人ワークスペース・連携の経路を公式ヘルプで整理。", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/transcription-ip-restriction/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "NottaのIPアドレス制限は、ビジネス Plusでも使えますか。", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプのプラン別機能一覧では、IPアドレス制限はビジネスプランの機能として載っており、ビジネス Plusは「ビジネスプランの全機能」に学習なしとNotta Brainの利用枠を加えたプランと説明されています。登録数の上限がビジネスと同じ20個かどうかは、契約前に確認してください。"}}, {"@type": "Question", "name": "IP制限をかけ間違えて、自分も入れなくなることはありますか。", "acceptedAnswer": {"@type": "Answer", "text": "ヘルプは、ワークスペースオーナーのIPアドレスを必ず設定し、解除するときはオーナーのアドレスを最後に削除するよう書いています。この順番を守るのが前提です。締め出された場合の復旧手順は、公式に明記がないため確認できませんでした。"}}, {"@type": "Question", "name": "自宅から使う社員がいる場合はどうすればよいですか。", "acceptedAnswer": {"@type": "Answer", "text": "登録したアドレス以外からは入れないので、自宅回線を個別に登録するか、VPNにつないで会社の出口アドレスから入る形にします。ビジネスの登録数は20個までなので、人数が多いならVPNに寄せる方が数を抑えられます。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI文字起こしのIPアドレス制限｜法人プランで塞げる穴と塞げない穴</h1><p class="meta">2026-11-03 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、NottaのIPアドレス制限はビジネスプラン以上で使え、登録できる数はビジネスで20個まで、エンタープライズで1,000個までです。ただしヘルプの説明は「ワークスペースにアクセスできるIPアドレスを制限」するもので、<strong>ログイン不要の共有リンク、社員が別に作る個人ワークスペース、外部サービス連携でのデータの送り先</strong>まで止まるとは書かれていません。IP制限は「社外のネットワークから管理画面に入らせない」設定と割り切り、残りの経路は別の設定で閉じる前提で選ぶのが現実的です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="IP制限をかけたあとに残る経路-2026年11月3日確認">IP制限をかけたあとに残る経路（2026年11月3日確認）</h2>
+<p>2026年11月3日に、Nottaヘルプセンターの「IPアドレス制限の設定方法」「Nottaプラン別機能一覧」「法人契約に関するよくある質問」「共有リンクを使った外部へのノート共有」「外部ユーザーとの共有を制限する」「個人ワークスペースの作成禁止とデータの統合方法」「外部サービス連携を無効化する」「アクセス権について」、料金ページ（notta.ai/pricing）と法人向けページ（notta.ai/business）で確認した内容です。</p>
+<div class="tw"><table><thead><tr><th>経路</th><th>IP制限について公式の記述</th><th>併せて使う設定</th><th>その設定のプラン</th></tr></thead><tbody><tr><td>社外の回線からワークスペースに入る</td><td>許可したIPアドレス以外からはアクセスできなくなる</td><td>IPアドレス制限（オーナーのみ設定）</td><td>ビジネス20個まで・エンタープライズ1,000個まで</td></tr><tr><td>スマホの4G回線から入る</td><td>4G回線ではグローバルIPを指定できないため「利用しないでください」と案内</td><td>Wi-Fiに切り替えてから使う</td><td>―</td></tr><tr><td>共有リンクを社外の人が開く</td><td>IP制限が及ぶかの記載は確認できなかった。リンクはログイン不要と説明</td><td>外部共有の無効化（オーナーのみ）</td><td>ビジネス以上</td></tr><tr><td>社員が個人ワークスペースに録る</td><td>制限はワークスペースへのアクセスとして説明されている</td><td>個人ワークスペースの作成禁止</td><td>エンタープライズ</td></tr><tr><td>外部サービス連携で他社サービスへ送る</td><td>記載は確認できなかった</td><td>外部サービス連携の無効化（オーナーのみ）</td><td>エンタープライズ</td></tr><tr><td>ダウンロードしたファイルを持ち出す</td><td>端末に保存した後の記載はない</td><td>「編集＆ダウンロード可能」以上の人だけがエクスポートできる権限設計</td><td>チームワークスペースのアクセス権</td></tr></tbody></table></div>
+<p>料金ページのプラン比較にも「IPアドレス制限」の行に「20 IP」「1,000 IP」と書かれ、法人向けページではビジネスプランの機能に「IP制限」が載っています。ビジネス Plusは「ビジネスプランの全機能」に学習なしなどを加えたプランと説明されているので、IP制限もビジネスと同じ扱いと読めます。</p>
+<h2 id="判断軸1-許可する回線を20個に収められるか">判断軸1｜許可する回線を20個に収められるか</h2>
+<p>ヘルプによると、登録するのはグローバルIPアドレスで、形式はIPv4だけです（IPv6には非対応）。1つずつ登録するときは開始と終了に同じアドレスを入れ、範囲で登録するときは開始と終了に別のアドレスを入れます。範囲で入れた1件が「20個」の数え方で1つと扱われるのかは、ヘルプの文言からは確認できませんでした。</p>
+<p>棚卸しの順番は、本社・支社の固定回線、VPNの出口、在宅勤務の自宅回線です。在宅の社員が自宅回線から直接入る運用だと、人数分の登録が要り、20個に収まりにくくなります。VPN経由に寄せて出口のアドレスだけを登録できるかが、ビジネスで足りるかの分かれ目です。拠点や在宅が多く、どうしても数が足りないならエンタープライズの1,000個が選択肢になります。</p>
+<p>設定はオーナーだけができ、<strong>オーナーのIPアドレスは必ず設定する</strong>よう書かれています。解除するときもオーナーのアドレスは最後に削除する決まりです。オーナーが普段使う回線を最初に登録してから、ほかの拠点を足していく順番にしておくと安全です。</p>
+<h2 id="判断軸2-録る人がどの回線にいるか">判断軸2｜録る人がどの回線にいるか</h2>
+<p>ヘルプは、4G回線ではグローバルIPアドレスが指定できないため、IP制限を使いたい場合はWi-Fiに切り替えるよう案内しています。外回りの営業がスマホで商談を録る、出張先で録音する、といった使い方とは相性がよくありません。</p>
+<p>IP制限をかけるワークスペースでは、録音する場所を「社内の会議室と、VPNにつないだPC」に限る運用ルールとセットにするのが前提です。外で録る必要がある部署は、録る端末と回線を先に決めておかないと、現場で「開けない」が起きます。</p>
+<h2 id="判断軸3-IP制限の外にある経路を-どこまで閉じたいか">判断軸3｜IP制限の外にある経路を、どこまで閉じたいか</h2>
+<p>表の3行目以降が、IP制限だけでは閉じない経路です。</p>
+<p>まず共有リンクです。ヘルプ「共有リンクを使った外部へのノート共有」のモバイルアプリの説明には、リンクを知っている全員がアクセスでき、ログインは不要とあります。IP制限が共有リンクの閲覧にも効くかは公式に明記がないため確認できませんでした。社外に出したくないなら、ビジネス以上で使える「外部共有を無効にします」を併用します。共有リンクを社内ルールでどう扱うかは<a href="../ai-minutes-security/">AI議事録に社外秘を入れていいか</a>でも触れています。</p>
+<p>次に個人ワークスペースです。Nottaは1つのアカウントで複数のワークスペースを作成・参加できるとヘルプに書かれています。会社のワークスペースにIP制限をかけても、社員が自分用のワークスペースに録る経路は残ります。作成そのものを止める「個人ワークスペースの作成禁止」はエンタープライズの機能です。</p>
+<p>最後に外部サービス連携です。Google DriveやNotionなどへの連携を一部またはすべて止める設定も、エンタープライズの機能として案内されています。</p>
+<p>ビジネスで閉じられるのは「社外回線からの入室」と「共有リンクでの社外公開」の2つまでです。この2つで社内規程を満たせるなら、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のビジネスか、音声を学習に使わないビジネス Plusで足ります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<p>個人ワークスペースや連携まで会社で管理したいなら、エンタープライズの見積もりを取ることになります。違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>にまとめています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>IPv4のみ・4G不可</strong>：ヘルプはIPv6に非対応、4G回線では使わないよう案内しています。スマホで外から録る運用とは両立しにくい設定です</li><li><strong>ビジネスの登録数は20個まで</strong>：範囲指定の1件がいくつと数えられるかは公式の文言で確認できませんでした。拠点や在宅が多い会社は、契約前に営業担当へ確認が要ります</li><li><strong>ワークスペースの外には別の設定が要る</strong>：個人ワークスペースの作成禁止と外部サービス連携の無効化はエンタープライズの機能で、料金は要相談です</li><li><strong>ログインの多要素認証は別問題</strong>：法人契約FAQには、多要素認証・2段階認証に「現在、対応しておりません」とあります。IP制限は代わりの歯止めの1つで、認証方式そのものの話は<a href="../transcription-mfa-access/">文字起こしの多要素認証とアクセス制限</a>で整理しています</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. NottaのIPアドレス制限は、ビジネス Plusでも使えますか。</strong> ヘルプのプラン別機能一覧では、IPアドレス制限はビジネスプランの機能として載っており、ビジネス Plusは「ビジネスプランの全機能」に学習なしとNotta Brainの利用枠を加えたプランと説明されています。登録数の上限がビジネスと同じ20個かどうかは、契約前に確認してください。</p>
+<p><strong>Q. IP制限をかけ間違えて、自分も入れなくなることはありますか。</strong> ヘルプは、ワークスペースオーナーのIPアドレスを必ず設定し、解除するときはオーナーのアドレスを最後に削除するよう書いています。この順番を守るのが前提です。締め出された場合の復旧手順は、公式に明記がないため確認できませんでした。</p>
+<p><strong>Q. 自宅から使う社員がいる場合はどうすればよいですか。</strong> 登録したアドレス以外からは入れないので、自宅回線を個別に登録するか、VPNにつないで会社の出口アドレスから入る形にします。ビジネスの登録数は20個までなので、人数が多いならVPNに寄せる方が数を抑えられます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>NottaのIP制限はビジネス以上。登録数はビジネス20個・エンタープライズ1,000個、IPv4のみで、4G回線では使わないよう案内されている</li><li>IP制限はワークスペースへの入室を絞る設定。共有リンクは外部共有の無効化（ビジネス以上）で別に閉じる</li><li>個人ワークスペースの作成禁止と外部サービス連携の無効化まで要るなら、エンタープライズが候補になる</li></ul>
+<h3 id="確認した公式情報-2026年11月3日">確認した公式情報（2026年11月3日）</h3>
+<ul><li>Notta ヘルプ「IPアドレス制限の設定方法」（2025年12月2日更新）</li><li>Notta ヘルプ「Nottaプラン別機能一覧」（2026年10月15日更新）</li><li>Notta ヘルプ「法人契約に関するよくある質問」（2026年8月18日更新）</li><li>Notta ヘルプ「共有リンクを使った外部へのノート共有」（2026年9月23日更新）</li><li>Notta ヘルプ「外部ユーザーとの共有を制限する」（2026年5月28日更新）</li><li>Notta ヘルプ「個人ワークスペースの作成禁止とデータの統合方法」（2026年4月17日更新）</li><li>Notta ヘルプ「外部サービス連携を無効化する」（2025年12月2日更新）</li><li>Notta ヘルプ「1 つのNottaアカウントで複数のワークスペースへの参加または作成が可能ですか？」（2026年10月14日更新）</li><li>Notta ヘルプ「アクセス権について」（2026年6月4日更新）</li><li>Notta 料金ページ（notta.ai/pricing）、法人向けページ（notta.ai/business）</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li><li><a href="../transcription-data-breach-response/">文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

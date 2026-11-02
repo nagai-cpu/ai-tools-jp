@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認｜AIツール実用ガイド</title>
+<meta name="description" content="AI文字起こしの録音や議事録が漏えいした、または漏えいしたかもしれない担当者向け。個人情報保護法26条と施行規則7条・8条の報告対象と期限、Nottaで最初に止める設定を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/transcription-data-breach-response/">
+<meta property="og:title" content="文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認｜AIツール実用ガイド">
+<meta property="og:description" content="AI文字起こしの録音や議事録が漏えいした、または漏えいしたかもしれない担当者向け。個人情報保護法26条と施行規則7条・8条の報告対象と期限、Nottaで最初に止める設定を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認", "description": "AI文字起こしの録音や議事録が漏えいした、または漏えいしたかもしれない担当者向け。個人情報保護法26条と施行規則7条・8条の報告対象と期限、Nottaで最初に止める設定を整理。", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/transcription-data-breach-response/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "共有リンクを社外の1人に誤送信しただけでも報告が必要ですか。", "acceptedAnswer": {"@type": "Answer", "text": "人数だけでは決まりません。施行規則7条1号から3号の事態は人数の要件がなく、たとえば要配慮個人情報を含む記録なら1人分でも報告対象になりえます。いずれにも当たらず、本人の数も1,000人以下なら報告義務の対象外ですが、任意で報告することはできます。"}}, {"@type": "Question", "name": "文字起こしツールの提供会社のせいで漏えいした場合、報告するのは誰ですか。", "acceptedAnswer": {"@type": "Answer", "text": "ガイドラインは、報告義務を負うのは原則として漏えい等した個人データを取り扱う事業者だとし、委託している場合は委託元と委託先の双方が報告義務を負うとしています。文字起こしサービスの利用が委託に当たるかの整理は[AI文字起こしは個人情報保護法の委託か第三者提供か](../appi-transcription-outsourcing/)にまとめています。"}}, {"@type": "Question", "name": "本人への通知はいつまでにすればいいですか。", "acceptedAnswer": {"@type": "Answer", "text": "施行規則10条は、事態の状況に応じて速やかに、本人の権利利益を保護するために必要な範囲で通知するとしています。連絡先が分からないなど通知が困難な場合は、事案の公表や問合せ窓口の設置といった代替措置が認められています。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認</h1><p class="meta">2026-11-03 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、文字起こしの録音データが漏えいしたときに最初に確かめるのは、<strong>その記録が個人情報保護委員会への報告対象に当たるか</strong>です。施行規則7条は、要配慮個人情報（病歴など）を含む場合や不正アクセスによる場合などを挙げており、この場合は人数が少なくても報告対象になります。報告は「知った」時点からの期限つきで、委員会のガイドラインは速報の目安を概ね3〜5日以内、確報を30日以内（不正目的のおそれがある事態は60日以内）としています。並行して、共有リンクを止め、経緯を記録します。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="報告の対象になる4つの事態と-文字起こしで起こりうる例">報告の対象になる4つの事態と、文字起こしで起こりうる例</h2>
+<p>2026年11月3日に、e-Gov法令検索の個人情報保護法・同施行規則、個人情報保護委員会の「漏えい等の対応とお役立ち資料」とガイドライン（通則編）を確認しました。報告対象は施行規則7条の4つです。いずれも「発生したおそれがある」事態を含みます。</p>
+<div class="tw"><table><thead><tr><th>規則7条</th><th>対象（要旨）</th><th>文字起こしで起こりうる例（該当しうるもの）</th></tr></thead><tbody><tr><td>1号</td><td>要配慮個人情報を含む個人データの漏えい等（高度な暗号化等の措置を講じたものを除く）</td><td>産業医面談や1on1の健康の話、診察の録音の文字起こしが外部に出た</td></tr><tr><td>2号</td><td>不正に使われると財産的被害が生じるおそれがある個人データの漏えい等</td><td>電話応対の録音でカード番号を読み上げた記録が出た</td></tr><tr><td>3号</td><td>不正の目的をもって行われたおそれがある行為による漏えい等</td><td>不正ログイン、退職予定者が録音データを持ち出した痕跡がある</td></tr><tr><td>4号</td><td>本人の数が1,000人を超える漏えい等</td><td>顧客との通話記録を大量に保存したフォルダが閲覧可能になっていた</td></tr></tbody></table></div>
+<p>ガイドラインは「漏えい」の例として、メールの誤送信や、システムの設定ミス等でインターネット上で個人データを閲覧できる状態になっていた場合を挙げています。共有リンクを誤って外部に送った、公開設定のまま放置していた、という文字起こしでよくある事故は、この考え方で見ていくことになります。一方で、第三者に閲覧されないうちに全て回収した場合は漏えいに当たらないともしています。報告対象に当たらない場合でも、任意で報告することはできます。</p>
+<h2 id="判断軸1-期限の起算点は-いずれかの部署が知った時点">判断軸1｜期限の起算点は「いずれかの部署が知った時点」</h2>
+<p>ガイドラインは、報告期限の起算点となる「知った」時点について、法人の場合は<strong>いずれかの部署が当該事態を知った時点</strong>を基準とするとしています。現場の担当者が気づいてから情報システム部門や法務に届くまでの日数も、期限に含まれる考え方です。</p>
+<p>報告は2段階です。</p>
+<ul><li><strong>速報</strong>：知った後「速やかに」。目安は概ね3〜5日以内。その時点で把握している内容を報告すれば足りる</li><li><strong>確報</strong>：知った日から30日以内（3号の事態は60日以内）。知った日を1日目として数える</li></ul>
+<p>報告する事項は施行規則8条の9つ（概要、漏えい等した個人データの項目、本人の数、原因、二次被害、本人への対応、公表、再発防止策、その他）で、報告は委員会のウェブサイトの報告フォームから行います。業種によっては事業所管大臣に権限が委任されており、その場合は委任先の省庁に報告します。</p>
+<h2 id="判断軸2-誰が見たか-を後から追えるか">判断軸2｜「誰が見たか」を後から追えるか</h2>
+<p>報告対象かどうかは、「おそれ」の判断に左右されます。ガイドラインは、漏えいが疑われるものの確証がない場合を「おそれ」に当たるとし、その時点で判明している事実から蓋然性を考えて判断するとしています。つまり、<strong>閲覧されていないと示せる記録があるか</strong>で、取る対応が変わりえます。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプでは、メンバーのログイン（日時・端末・IPアドレス）、ノートの閲覧・編集・削除・復元、ファイルのダウンロードなどの操作ログを過去180日分取得して出力できる機能は、エンタープライズプランの機能です。一方、共有リンクは全プランで作れて、リンクを知っている人はログインなしで閲覧できます。確認したヘルプには、リンクを開いた外部の人を記録する機能の説明は見当たりませんでした。プランごとのログの範囲は<a href="../transcription-audit-log/">AI文字起こしの監査ログ</a>で比較しています。</p>
+<h2 id="判断軸3-最初の数時間で止めるものと-消さずに残すもの">判断軸3｜最初の数時間で止めるものと、消さずに残すもの</h2>
+<p>ガイドラインは、漏えい等が発覚したときの措置として、責任ある立場の者への報告と被害拡大の防止、事実関係の調査と原因究明、影響範囲の特定、再発防止策、委員会への報告と本人への通知を挙げています。Nottaで最初に止められるのは次のものです。</p>
+<ul><li><strong>共有リンク</strong>：ノートの共有画面で外部共有のトグルを切ると停止できる（ヘルプ「共有リンクを使った外部へのノート共有」）。オーナーがワークスペース全体で外部共有を無効にする設定はビジネス以上</li><li><strong>アカウント</strong>：パスワードは登録メールの認証コードで再設定できる。メンバーを削除すると、そのメンバーが持っていたデータの所有権はオーナーに移る</li><li><strong>アクセス元</strong>：ワークスペースに入れるIPアドレスを制限する設定がビジネスとエンタープライズにある</li></ul>
+<p>急いでノートを削除したくなりますが、削除したデータはゴミ箱に入り30日後に完全に削除され、完全に削除したものは復元できないとヘルプにあります。どのノートが、いつから、誰に共有されていたかを調べ終える前に消すと、影響範囲の特定や報告の材料がなくなるおそれがあります。削除した事実をどう残すかは<a href="../transcription-data-deletion-proof/">AI文字起こしの解約後データ削除を証明する方法</a>で整理しています。</p>
+<p>記録の置き場を見直すなら、外部共有をワークスペース単位で止められ、音声認識のAI学習もない構成が説明しやすくなります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta フリー・プレミアム</strong>：オーナーが外部共有を一括で無効にする設定の対象外です。共有リンクの出しすぎは各自の運用で防ぐことになります</li><li><strong>Notta ビジネス・ビジネス Plus</strong>：外部共有の制限やIP制限はありますが、ログイン・閲覧・ダウンロードの操作ログはエンタープライズの機能です。事故後に「誰が見たか」を自社で追う手段は限られます</li><li><strong>Notta 全般</strong>：利用規約は、利用者の責めに帰すべき事由によるIDやパスワードの漏洩で生じた損害について、当社は賠償責任を負わないとしています。アカウント管理は利用者側の責任です</li><li><strong>法改正の予定</strong>：2026年7月17日公布の改正法（令和8年法律第56号）で、26条2項の本人通知の例外に「通知しなくても本人の権利利益の保護に欠けるおそれが少ない場合」を加える改正がe-Govに掲載されています。施行日は公布から2年以内の政令で定める日で、本記事は現行の規定で書いています</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. 共有リンクを社外の1人に誤送信しただけでも報告が必要ですか。</strong> 人数だけでは決まりません。施行規則7条1号から3号の事態は人数の要件がなく、たとえば要配慮個人情報を含む記録なら1人分でも報告対象になりえます。いずれにも当たらず、本人の数も1,000人以下なら報告義務の対象外ですが、任意で報告することはできます。</p>
+<p><strong>Q. 文字起こしツールの提供会社のせいで漏えいした場合、報告するのは誰ですか。</strong> ガイドラインは、報告義務を負うのは原則として漏えい等した個人データを取り扱う事業者だとし、委託している場合は委託元と委託先の双方が報告義務を負うとしています。文字起こしサービスの利用が委託に当たるかの整理は<a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か</a>にまとめています。</p>
+<p><strong>Q. 本人への通知はいつまでにすればいいですか。</strong> 施行規則10条は、事態の状況に応じて速やかに、本人の権利利益を保護するために必要な範囲で通知するとしています。連絡先が分からないなど通知が困難な場合は、事案の公表や問合せ窓口の設置といった代替措置が認められています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>規則7条の4つの事態（要配慮・財産被害・不正目的・1,000人超）に当たれば、「おそれ」の段階でも報告対象になる</li><li>速報は概ね3〜5日以内、確報は30日以内（不正目的は60日以内）。起算点はいずれかの部署が知った時点</li><li>まず共有リンクとアカウントを止め、調査が終わるまでノートを消さずに経緯を記録する</li></ul>
+<h3 id="確認した公式情報-2026年11月3日">確認した公式情報（2026年11月3日）</h3>
+<ul><li>e-Gov法令検索「個人情報の保護に関する法律」第26条、改正履歴（令和8年法律第56号）</li><li>e-Gov法令検索「個人情報の保護に関する法律施行規則」第7条〜第10条</li><li>個人情報保護委員会「漏えい等の対応とお役立ち資料」「個人情報の保護に関する法律についてのガイドライン（通則編）」3-5</li><li>Notta ヘルプ「操作ログの取得と保存」「共有リンクを使った外部へのノート共有」「外部ユーザーとの共有を制限する」「IPアドレス制限の設定方法」「パスワードを変更または再設定する」「メンバーを招待・削除する」「データの削除・復元」</li><li>Notta「サービス利用規約」</li></ul>
+<p>※本記事は法令・個人情報保護委員会の公開資料とNottaの公開ヘルプを2026年11月3日に確認して整理したもので、法的な助言ではありません。個別の事案は個人情報保護委員会の相談窓口や弁護士など専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『人事が面談・評価の記録をAIで書く前に読む本』（Kindle・500円）：1on1・評価面談・相談の記録や録音を生成AIに渡す前に、社員の情報の扱い、社内規程、本人への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HPZGYZ18" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点</a></li><li><a href="../internal-investigation-hearing-recording/">社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点</a></li><li><a href="../performance-review-interview-recording/">人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点</a></li><li><a href="../pharma-mr-meeting-recording/">製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点</a></li><li><a href="../sensitive-personal-info-transcription/">要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点</a></li><li><a href="../transcription-data-breach-response/">文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a></p>
+</div></footer>
+</body>
+</html>

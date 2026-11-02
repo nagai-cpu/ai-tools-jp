@@ -11,6 +11,16 @@
 
 ## 記事
 
+- [懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点](https://nagai-cpu.github.io/ai-tools-jp/disciplinary-hearing-recording/): 懲戒処分の弁明の機会を録音しAIで文字起こししたい人事担当者向け。労働契約法15条、厚労省のモデル就業規則、労働委員会の事例と、Nottaの学習・閲覧権限・削除の仕様を整理。
+- [社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点](https://nagai-cpu.github.io/ai-tools-jp/internal-investigation-hearing-recording/): 不正・ハラスメントの社内調査でヒアリングをAI文字起こしする担当者向け。公益通報者保護法と消費者庁の指針、日弁連ガイドラインから記録の持ち主・閲覧範囲・保管を整理。
+- [人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点](https://nagai-cpu.github.io/ai-tools-jp/performance-review-interview-recording/): 評価結果を伝えるフィードバック面談を録音してAIで文字起こししたい人事・管理職向け。パワハラ指針、個人情報保護法、個人情報保護委員会の生成AIへの注意喚起から、記録の持ち方と置き場所を整理。
+- [製薬MRの医師面談を録音してAI文字起こし｜コンプライアンスで見る3点](https://nagai-cpu.github.io/ai-tools-jp/pharma-mr-meeting-recording/): 医師との面談をAIで文字起こししたいMRと販売情報提供の監督部門向け。厚労省ガイドラインとQ&A、製薬協コード、個人情報保護法の原文から、業務記録・同意・患者情報の扱いを整理。
+- [要配慮個人情報をAI文字起こしで取り扱う｜委託・同意・漏えい報告の3点](https://nagai-cpu.github.io/ai-tools-jp/sensitive-personal-info-transcription/): 病歴や障害など要配慮個人情報が入る面談をAIで文字起こししたい担当者向け。個人情報保護法と委員会のQ&Aで同意・委託・漏えい報告の分かれ目と、Nottaのプラン条件を整理。
+- [文字起こしの録音データが漏えいした時の対応｜報告の期限と対象の確認](https://nagai-cpu.github.io/ai-tools-jp/transcription-data-breach-response/): AI文字起こしの録音や議事録が漏えいした、または漏えいしたかもしれない担当者向け。個人情報保護法26条と施行規則7条・8条の報告対象と期限、Nottaで最初に止める設定を整理。
+- [AI文字起こしのIPアドレス制限｜法人プランで塞げる穴と塞げない穴](https://nagai-cpu.github.io/ai-tools-jp/transcription-ip-restriction/): AI文字起こしにIP制限をかけたい法人向け。Nottaで使えるプランと登録数、IP制限では閉じない共有リンク・個人ワークスペース・連携の経路を公式ヘルプで整理。
+- [AI文字起こしの共有リンク設定｜外部公開で漏えいさせない確認項目と止め方](https://nagai-cpu.github.io/ai-tools-jp/transcription-share-link-settings/): AI文字起こしの共有リンクを社外に出す前に見る設定を、Nottaのヘルプで1項目ずつ確認。載せる範囲・期限・パスワード・止め方と、会社で縛る設定のプラン条件をまとめました。
+- [労働組合の団体交渉を録音してAI文字起こし｜機密と合意で決める3点](https://nagai-cpu.github.io/ai-tools-jp/union-bargaining-recording/): 団体交渉の録音とAI文字起こしを考える労組役員・人事担当者向け。労組法7条と中労委の2つの命令が示す「録音は労使で決める開催条件」と、Nottaの学習・共有・削除を整理。
+- [Zoom Phoneの通話文字起こしはAI学習される？法人が見る保存期間と通知](https://nagai-cpu.github.io/ai-tools-jp/zoom-phone-transcription-training/): Zoom Phoneの通話の文字起こし・AI要約が学習に使われるかを、Zoomの利用規約と技術資料で確認。学習より先に決めたい保存期間、相手への通知、保存先の国を法人の管理者向けに整理。
 - [建築士の施主打ち合わせをAI文字起こし｜図面と施主情報を守る3点](https://nagai-cpu.github.io/ai-tools-jp/architect-client-meeting-recording/): 施主との打ち合わせを録音してAIで文字起こししたい建築士・設計事務所向け。建築士法で守秘がどう扱われているかと、図面・家族情報を預けるときのNottaの条件を一次資料で整理。
 - [キャリアコンサルタントの面談録音をAI文字起こし｜守秘義務の条文と同意の取り方](https://nagai-cpu.github.io/ai-tools-jp/career-consultant-session-recording/): キャリアコンサルティングの面談を録音してAIで文字起こししたい人向け。職業能力開発促進法の秘密保持義務と罰則、倫理綱領の説明責任、学習なしのプラン条件を一次資料で整理。
 - [コーチングのセッションを録音してAI文字起こし｜守秘の根拠は契約と倫理規定](https://nagai-cpu.github.io/ai-tools-jp/coaching-session-recording/): コーチングのセッションを録音してAIで文字起こししたいコーチ向け。ICF倫理規定（2025年4月施行）の守秘・記録・AIの項目と、契約に書く3点、学習なしのプラン条件を整理。
