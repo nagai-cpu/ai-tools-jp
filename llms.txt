@@ -130,7 +130,7 @@
 - [AI文字起こし無料版を会社で使う危険は？規約で変わる4点を確認した](https://nagai-cpu.github.io/ai-tools-jp/free-transcription-risk/): 会社で無料のAI文字起こしを使うと何が問題になりうるかを、Nottaの規約・料金表とGoogle音声入力・Whisperの公式情報で整理。学習・管理・保存・時間上限の違いが分かります。
 - [AI議事録の導入稟議の書き方｜5項目を公式ページの引用で埋める手順](https://nagai-cpu.github.io/ai-tools-jp/minutes-ai-approval-doc/): AI議事録ツール導入の稟議書に書く目的・費用・セキュリティ・代替案・効果測定の5項目を、Nottaの公式料金・法人ページ・規約のどこから引用して埋めるか整理しました。
 - [Nottaの学生・教職員割引の申し込み方｜プレミアム学割は自動更新しない](https://nagai-cpu.github.io/ai-tools-jp/notta-education-discount/): Nottaの学生・教職員割引（50%OFF）を公式ヘルプで確認。対象者、対応メールドメイン、申し込み手順、プレミアムとビジネスで違う更新の仕組みを学生・教職員向けに整理しました。
-- [Nottaの請求書払いの申し込みの流れ｜対象プランと支払期限・解約連絡](https://nagai-cpu.github.io/ai-tools-jp/notta-invoice-payment/): Nottaを法人で請求書払い（銀行振込）にしたい担当者向けに、対象プラン、申し込みから振込までの流れ、支払期限、解約の連絡期限、領収書の扱いを公式ヘルプで整理しました。
+- [Nottaの請求書払いの流れ｜振込は翌月末、使い始めは入金前から指定できる](https://nagai-cpu.github.io/ai-tools-jp/notta-invoice-payment/): Nottaの請求書払い（銀行振込）は申し込み後に請求書が届き、振込は翌月末。入金前から使い始められます。対象プラン、消費税表記、解約の連絡期限、領収書の扱いを公式ヘルプで整理。
 - [AI文字起こしの監査ログ｜誰が見たかを追えるのはNottaのどのプランか](https://nagai-cpu.github.io/ai-tools-jp/transcription-audit-log/): 文字起こしを誰が閲覧・共有したか後から追えるか。Nottaの操作ログとZoom・Teams・Google Workspaceの監査ログを公式ヘルプで比べました。
 - [AI文字起こしの契約書・SLA確認項目｜Nottaの規約で見る6つの条文](https://nagai-cpu.github.io/ai-tools-jp/transcription-contract-sla/): 法人でAI文字起こしを契約する前に、稼働率保証・責任制限・データ削除・準拠法・解約・再委託の6項目をNottaの規約原文で確認。SLAの数値の有無も書きました。
 - [AI文字起こしは海外サーバー？Nottaは東京保存、要約の送信先は別に確認](https://nagai-cpu.github.io/ai-tools-jp/transcription-data-residency/): AI文字起こしの録音がどこの国に保存されるかを、Notta・Rimo・LINE WORKS AiNoteの公式記載で比較。保存先と、要約や音声認識で送られる先を分けて整理しました。
