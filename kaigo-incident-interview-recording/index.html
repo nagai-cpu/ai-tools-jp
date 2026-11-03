@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>介護事故・ヒヤリハットの聞き取りを録音してAI文字起こし｜先に決める3点｜AIツール実用ガイド</title>
+<meta name="description" content="事故やヒヤリハットの聞き取りをAIで記録したい介護施設の管理者・安全対策担当者向け。運営基準と厚労省の令和7年ガイドラインから、職員への説明・保存・預け先を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/kaigo-incident-interview-recording/">
+<meta property="og:title" content="介護事故・ヒヤリハットの聞き取りを録音してAI文字起こし｜先に決める3点｜AIツール実用ガイド">
+<meta property="og:description" content="事故やヒヤリハットの聞き取りをAIで記録したい介護施設の管理者・安全対策担当者向け。運営基準と厚労省の令和7年ガイドラインから、職員への説明・保存・預け先を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "介護事故・ヒヤリハットの聞き取りを録音してAI文字起こし｜先に決める3点", "description": "事故やヒヤリハットの聞き取りをAIで記録したい介護施設の管理者・安全対策担当者向け。運営基準と厚労省の令和7年ガイドラインから、職員への説明・保存・預け先を整理。", "datePublished": "2026-11-04", "dateModified": "2026-11-04", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/kaigo-incident-interview-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">介護事故・ヒヤリハットの聞き取りを録音してAI文字起こし｜先に決める3点</h1><p class="meta">2026-11-04 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、事故やヒヤリハットの聞き取りの録音・AI文字起こしを禁じる記載は、確認した運営基準と厚労省資料には見当たりませんでした。ただし報告の目的は<strong>職員の責任追及ではない</strong>と書かれています。「録音の目的を職員に説明できるか」「全文のどこまで残すか」「利用者の情報をどこへ預けるか」を先に決めます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="一次資料の記載と-聞き取りの録音で関わる点">一次資料の記載と、聞き取りの録音で関わる点</h2>
+<p>2026年11月4日に、e-Gov法令検索の運営基準と個人情報保護法、厚労省のガイドライン・通知・事務連絡、個人情報保護委員会と厚労省のガイダンスを確認しました（資料名は末尾に記載）。</p>
+<div class="tw"><table><thead><tr><th>資料</th><th>記載（要旨）</th><th>聞き取りの録音で関わる点</th></tr></thead><tbody><tr><td>特養の運営基準 第35条</td><td>事故や、それに至る危険性がある事態の報告・分析・周知の体制を整える。事故の状況と処置を記録する</td><td>法令が求めるのは「状況と処置」の記録で、録音の有無には触れていない</td></tr><tr><td>同 第37条第2項、訪問介護の基準 第39条第2項</td><td>事故の状況と処置の記録は、完結の日から2年間保存</td><td>全文や音声を記録として扱うかは、施設側で決める</td></tr><tr><td>解釈通知（老企第43号）</td><td>介護事故等にヒヤリ・ハット事例を含める。報告の目的は再発防止で、懲罰を目的としたものではない</td><td>聞き取りの録音も、この目的の中で説明することになる</td></tr><tr><td>事故予防ガイドライン（令和7年11月）p.17・23</td><td>報告様式は時系列で書け、事実と推測を明確に分ける形が効果的。検証は記憶が鮮明なうちに</td><td>文字起こしは時系列づくりの材料になるが、推測も一緒に残る</td></tr><tr><td>事故報告の通知（令和6年11月29日）</td><td>死亡事故と、医師の診断で治療が必要な事故は原則すべて報告。第1報は遅くとも5日以内を目安</td><td>聞き取りから第1報までの時間は短い</td></tr><tr><td>事務連絡（令和8年10月21日）</td><td>全国の報告システムを令和9年4月頃に稼働予定。様式の見直し案は調整中</td><td>報告項目は変わる可能性がある</td></tr></tbody></table></div>
+<p>右列は各資料の記載を聞き取りに当てはめた整理で、どの資料にも聞き取りの録音やAI文字起こしを名指しした記載は見当たりませんでした。ガイドラインが介護テクノロジーの例に挙げているのは「記録作成を音声入力等で補助する介護記録ソフト」です（p.19）。また、上の基準は介護保険法で条例の基準として置かれているものなので、保存年数などの実際の扱いは指定権者の条例で確認してください。</p>
+<h2 id="判断軸1-録音の目的を-聞き取りの前に職員へ説明できるか">判断軸1｜録音の目的を、聞き取りの前に職員へ説明できるか</h2>
+<p>解釈通知は、報告や改善の方策を定める目的を再発防止とし、「決して従業者の懲罰を目的としたものではない」としています。ガイドラインも、叱責される恐れがあると報告を避ける意識が働くとして、職員が萎縮しない環境づくりを求めています（p.17）。</p>
+<p>ここが録音の難しいところです。発言がそのまま残ると分かると、職員が身構えて、気づいたことを話しにくくなる場合があります。聞き取りの冒頭で「再発防止のために録ること」「誰が読むか」「いつ消すか」を伝え、断られたら手でメモを取る形にしておくと、ガイドラインの趣旨から外れにくくなります。</p>
+<p>個人情報保護委員会のQ&amp;A（Q1-10）は、電話の通話の録音について、利用目的の通知か公表の義務はあるものの、録音している旨を伝える義務までは負わないとしています。ただしこれは個人情報保護法上の話です。施設内の聞き取りでは、伝えてから録る方が職員に説明しやすいはずです。</p>
+<p>個人の責任を問う手続きへ進みそうな事案は、再発防止の聞き取りとは分けて考えます。処分の手続きの記録は<a href="../disciplinary-hearing-recording/">懲戒の弁明の機会を録音・AI文字起こしする前に</a>にまとめました。</p>
+<h2 id="判断軸2-全文のどこまでを-記録-として残すか">判断軸2｜全文のどこまでを「記録」として残すか</h2>
+<p>発見者の話を文字に起こすと、時系列の下書きが早く作れます。第1報までの時間が短い事故報告では、これが録音の利点です。</p>
+<p>一方、全文には「たぶん」「あの人が」といった推測や、他の利用者の名前も入ります。ガイドラインが求める「事実と推測を明確に分ける」作業は、AIではなく人の仕事です。全文を報告書に貼らず、確認できた事実と推測を分けて書き直す工程を手順に入れておきます。</p>
+<p>録音や全文そのものが保存の対象になる「記録」に入るかは、確認した資料に記載がありませんでした。施設の指針で扱いを決め、迷う場合は指定権者に確認してください。消す時期の決め方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>にあります。</p>
+<p>家族への対応も想定します。ガイドラインは、虚偽の説明をせず、求められた情報は可能な限り開示するよう求め、プライバシーへの配慮も求めています（p.26）。ガイダンスは、検索可能な状態で保存される検査結果を個人データとして開示の対象に挙げています（p.19）。文字起こしを利用者名で検索できる形で残すなら、開示を求められる場面を考えておくのが無難です（この点は文言からの整理です）。</p>
+<h2 id="判断軸3-利用者の心身の情報を-どこに預けるか">判断軸3｜利用者の心身の情報を、どこに預けるか</h2>
+<p>聞き取りには、持病、服薬、認知症の状態など、利用者の心身の情報が入ります。個人情報保護法は、病歴や心身の機能の障害を要配慮個人情報としています。ガイダンスの別表2は介護関係事業者の通常の利用目的に「事故等の報告」を挙げていますが、外部のサービスへ預けるなら委託先の扱いも確認が要ります。ガイダンスは、委託先の選定、契約への取扱いの盛り込み、定期的な確認に留意するよう求めています（p.39〜40）。同意と委託の関係は<a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か</a>で整理しました。亡くなった利用者の情報も、保存しているなら同等の安全管理措置を講じるとされています（p.3）。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプ「AI学習について」によると、音声認識のAI学習はエンジン提供元の国内パートナー企業がランダムに選んだデータを使うもので、「AI学習なし」の環境はエンタープライズとビジネス Plus（年64,800円・税抜）で提供されています。ノート・フォルダごとのアクセス権はビジネスとエンタープライズ、外部共有の無効化はビジネス以上です。文字起こしデータは手動で削除しない限り自動では削除されず、作成日から1〜365日で自動削除する設定と操作ログはエンタープライズの機能です。料金ヘルプの業種別特別プランは医療関係者向けと士業向けの2つで、介護向けのプランの記載は見つかりませんでした。</p>
+<p>事故の聞き取りを委員会の担当者だけが開ける形で置くなら、学習なしと閲覧範囲の設定がそろうビジネス Plus以上が説明しやすい構成です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>AI文字起こし全般</strong>：薬剤名、時刻、人名の聞き違いが起こります。事故の記録では時刻の誤りが原因分析に響くので、録音と照らして直す工程が要ります</li><li><strong>Notta ビジネス Plus</strong>：学習なしと権限設定はそろいますが、操作ログと自動削除はエンタープライズの機能です。誰が開いたかの確認や削除は、人の運用で補うことになります</li><li><strong>Notta エンタープライズ</strong>：操作ログと自動削除がそろいますが料金は要相談で、小規模な事業所には重い検討になります</li><li><strong>録音全般</strong>：録音があると職員が話しにくくなる場合があります。録音を重大な事故の聞き取りに絞る考え方もあります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="ヒヤリハットの聞き取りも-2年保存の対象ですか">ヒヤリハットの聞き取りも、2年保存の対象ですか</h3>
+<p>特養の基準第37条第2項が保存の対象に挙げているのは、第35条第3項の「事故の状況及び事故に際して採った処置」の記録です。ヒヤリハットの記録を名指しした記載は、この条文には見当たりませんでした。解釈通知は介護事故等にヒヤリ・ハット事例を含めて記録・報告・分析を想定しているので、保存の扱いは施設の指針と条例で確認してください。</p>
+<h3 id="職員が録音を断ったら-どうすればいいですか">職員が録音を断ったら、どうすればいいですか</h3>
+<p>確認した資料に、聞き取りの録音を職員が断った場合の定めは見当たりませんでした。報告の目的が再発防止である以上、録音にこだわらず、手でメモを取り、本人に内容を確認してもらう方法があります。</p>
+<h3 id="居宅サービスの事業所でも同じ考え方でいいですか">居宅サービスの事業所でも同じ考え方でいいですか</h3>
+<p>訪問介護の基準第37条も事故の状況と処置の記録を求め、第39条は2年間の保存を定めています。事故報告の通知は、居宅等の介護サービスでも様式を可能な限り活用するよう求めています。ガイドラインは介護保険施設等向けなので、自事業所の指針に合わせて読み替えてください。サービス担当者会議の録音は<a href="../kaigo-meeting-transcription/">介護のサービス担当者会議をAIで文字起こし</a>を参照してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>運営基準が求めるのは事故の状況と処置の記録で、完結の日から2年間保存（条例も確認）。録音やAI文字起こしを名指しした記載は見当たらなかった</li><li>報告の目的は懲罰ではなく再発防止。録音の目的を先に説明し、全文は事実と推測に分けて書き直す</li><li>利用者の心身の情報が入るので、学習なし・閲覧範囲・削除を決めて置く。Nottaなら学習なしはビジネス Plus以上、操作ログと自動削除はエンタープライズ</li></ul>
+<h3 id="確認した公式情報-2026年11月4日">確認した公式情報（2026年11月4日）</h3>
+<ul><li>e-Gov法令検索「指定介護老人福祉施設の人員、設備及び運営に関する基準」第1条・第30条・第35条・第37条、「指定居宅サービス等の事業の人員、設備及び運営に関する基準」第37条・第39条、「個人情報の保護に関する法律」第2条・第20条・第21条、同施行令第2条</li><li>厚生労働省「指定介護老人福祉施設の人員、設備及び運営に関する基準について」（平成12年3月17日 老企第43号）</li><li>厚生労働省老健局「介護保険施設等における事故予防及び事故発生時の対応に関するガイドライン」（令和7年11月）</li><li>厚生労働省「介護保険施設等における事故の報告様式等について」（令和6年11月29日 老高発1129第1号ほか）、事務連絡「介護現場において事故が発生した際の報告について」（令和8年10月21日）</li><li>個人情報保護委員会・厚生労働省「医療・介護関係事業者における個人情報の適切な取扱いのためのガイダンス」（令和8年4月一部改正）、個人情報保護委員会「ガイドライン（通則編）」「Q&amp;A」Q1-10</li><li>Notta 法人向けページ・利用規約（2025年8月1日改訂）、ヘルプ「AI学習について」「Nottaの料金プランについて」「データ・フォルダのアクセス権を設定する」「外部ユーザーとの共有を制限する」「操作ログの取得と保存」「ノートおよびフォルダの自動削除」「文字起こしデータの保管期限や容量制限はありますか？」</li></ul>
+<p>※本記事は上記の法令・公的資料とNottaの公開情報を2026年11月4日に確認して整理したもので、法的な助言ではありません。個別の判断は指定権者や専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『介護・看護の記録をAIで書く前に読む本』（Kindle・500円）：介護事業所・訪問看護で、利用者の情報をAIに入れてよいか、事業所のルール、利用者と家族への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7G1TCZ" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../box-ai-transcription-training/">Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認</a></li><li><a href="../caremanager-monitoring-recording/">ケアマネのモニタリング訪問を録音してAI文字起こし｜個人情報と記録の3点</a></li><li><a href="../community-care-center-consultation/">地域包括支援センターの相談記録をAI文字起こし｜学習と委託元の確認3点</a></li><li><a href="../disability-service-meeting-minutes/">障害福祉のサービス担当者会議を録音してAI議事録に｜個人情報で確認する3点</a></li><li><a href="../home-nursing-voice-record/">訪問看護の記録を音声入力とAIで｜学習なしの条件と車内口述の3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../box-ai-transcription-training/">Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認</a></li><li><a href="../caremanager-monitoring-recording/">ケアマネのモニタリング訪問を録音してAI文字起こし｜個人情報と記録の3点</a></li><li><a href="../community-care-center-consultation/">地域包括支援センターの相談記録をAI文字起こし｜学習と委託元の確認3点</a></li><li><a href="../disability-service-meeting-minutes/">障害福祉のサービス担当者会議を録音してAI議事録に｜個人情報で確認する3点</a></li><li><a href="../home-nursing-voice-record/">訪問看護の記録を音声入力とAIで｜学習なしの条件と車内口述の3点</a></li><li><a href="../jfba-ai-guideline-transcription/">弁護士の生成AI利用の指針と文字起こし｜日弁連は会員限定、東弁5要件で確認</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

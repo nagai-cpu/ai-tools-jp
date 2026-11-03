@@ -11,6 +11,15 @@
 
 ## 記事
 
+- [Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認](https://nagai-cpu.github.io/ai-tools-jp/box-ai-transcription-training/): Box AIで録音や動画を文字起こししたい法人の担当者向け。公式の対応ファイルに音声がない点、学習に関するFAQの文言、文字起こしをBoxへ戻す手順を整理。
+- [ケアマネのモニタリング訪問を録音してAI文字起こし｜個人情報と記録の3点](https://nagai-cpu.github.io/ai-tools-jp/caremanager-monitoring-recording/): 月1回の訪問面接を録音して記録を楽にしたいケアマネジャー向け。運営基準、老企第22号、介護保険法、個人情報のガイダンスから同意・家族の発言・音声の持ち帰りを整理しました。
+- [地域包括支援センターの相談記録をAI文字起こし｜学習と委託元の確認3点](https://nagai-cpu.github.io/ai-tools-jp/community-care-center-consultation/): 総合相談の記録をAI文字起こしで楽にしたいセンター職員向け。介護保険法、個人情報保護法、個情委のQ&A、高齢者虐待防止法から学習・委託・録らない相談の決め方を整理しました。
+- [障害福祉のサービス担当者会議を録音してAI議事録に｜個人情報で確認する3点](https://nagai-cpu.github.io/ai-tools-jp/disability-service-meeting-minutes/): サービス担当者会議を録音してAIで議事録にしたい相談支援専門員・サービス管理責任者向け。計画相談の基準と解釈通知、個人情報保護委員会のQ&Aから、同意・本人への説明・5年保存を整理。
+- [訪問看護の記録を音声入力とAIで｜学習なしの条件と車内口述の3点](https://nagai-cpu.github.io/ai-tools-jp/home-nursing-voice-record/): 訪問看護の記録を声で入れたいステーション向け。指定訪問看護の基準と厚労省資料、Apple・Google・Nottaの公式から、学習・電波・端末・保存の条件を整理しました。
+- [弁護士の生成AI利用の指針と文字起こし｜日弁連は会員限定、東弁5要件で確認](https://nagai-cpu.github.io/ai-tools-jp/jfba-ai-guideline-transcription/): 生成AIの指針を探している弁護士・法律事務所向け。日弁連の注意事項は会員限定でした。公開資料で読める東京弁護士会の選定基準5要件に、Nottaの公式記載を当てはめました。
+- [介護事故・ヒヤリハットの聞き取りを録音してAI文字起こし｜先に決める3点](https://nagai-cpu.github.io/ai-tools-jp/kaigo-incident-interview-recording/): 事故やヒヤリハットの聞き取りをAIで記録したい介護施設の管理者・安全対策担当者向け。運営基準と厚労省の令和7年ガイドラインから、職員への説明・保存・預け先を整理。
+- [個人情報保護委員会の生成AI注意喚起と文字起こし｜音声認識と要約で分けて読む](https://nagai-cpu.github.io/ai-tools-jp/ppc-generative-ai-transcription/): AI文字起こしを社内で使う担当者向け。個人情報保護委員会の生成AI注意喚起の原文を、事業者・行政機関等・一般利用者ごとに読み、音声認識と要約に分けてNottaの条件と照らしました。
+- [Microsoft Streamの文字起こしは学習される？既定オンと閲覧権限](https://nagai-cpu.github.io/ai-tools-jp/stream-transcript-training/): SharePointに置いた動画の文字起こしを法人で使う管理者向け。既定で自動生成される条件、閲覧できる人、消え方、学習に関するMicrosoftの文言の範囲を整理。
 - [懲戒の弁明の機会を録音・AI文字起こしする前に｜社外秘の記録で決める3点](https://nagai-cpu.github.io/ai-tools-jp/disciplinary-hearing-recording/): 懲戒処分の弁明の機会を録音しAIで文字起こししたい人事担当者向け。労働契約法15条、厚労省のモデル就業規則、労働委員会の事例と、Nottaの学習・閲覧権限・削除の仕様を整理。
 - [社内調査のヒアリング録音をAI文字起こし｜秘密保持で先に決める3点](https://nagai-cpu.github.io/ai-tools-jp/internal-investigation-hearing-recording/): 不正・ハラスメントの社内調査でヒアリングをAI文字起こしする担当者向け。公益通報者保護法と消費者庁の指針、日弁連ガイドラインから記録の持ち主・閲覧範囲・保管を整理。
 - [人事評価面談の録音をAI文字起こし｜社外秘の評価情報を置く前の3点](https://nagai-cpu.github.io/ai-tools-jp/performance-review-interview-recording/): 評価結果を伝えるフィードバック面談を録音してAIで文字起こししたい人事・管理職向け。パワハラ指針、個人情報保護法、個人情報保護委員会の生成AIへの注意喚起から、記録の持ち方と置き場所を整理。

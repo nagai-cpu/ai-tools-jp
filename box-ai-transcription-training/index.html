@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認｜AIツール実用ガイド</title>
+<meta name="description" content="Box AIで録音や動画を文字起こししたい法人の担当者向け。公式の対応ファイルに音声がない点、学習に関するFAQの文言、文字起こしをBoxへ戻す手順を整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/box-ai-transcription-training/">
+<meta property="og:title" content="Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認｜AIツール実用ガイド">
+<meta property="og:description" content="Box AIで録音や動画を文字起こししたい法人の担当者向け。公式の対応ファイルに音声がない点、学習に関するFAQの文言、文字起こしをBoxへ戻す手順を整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認", "description": "Box AIで録音や動画を文字起こししたい法人の担当者向け。公式の対応ファイルに音声がない点、学習に関するFAQの文言、文字起こしをBoxへ戻す手順を整理。", "datePublished": "2026-11-04", "dateModified": "2026-11-04", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/box-ai-transcription-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Box AIで議事録は作れますか。", "acceptedAnswer": {"@type": "Answer", "text": "文字になっている会議メモや文字起こしなら、要約や要点の整理に使えます。ヘルプにも会議メモの分析が例として書かれています。録音から直接作る手順は確認できませんでした。"}}, {"@type": "Question", "name": "Box AIを管理者が止めることはできますか。", "acceptedAnswer": {"@type": "Answer", "text": "できます。管理コンソールのBox AIの設定で、組織全体、特定のユーザー、特定のグループごとに有効・無効を選べます。初めて有効にするときは、契約によってBox AI Product Addendumの確認などが求められます。"}}, {"@type": "Question", "name": "開発者なら文字起こしをBoxに組み込めますか。", "acceptedAnswer": {"@type": "Answer", "text": "Boxサポートには、AIサービスをBoxに統合する開発者向けのBox Skills Kitの案内があります。ただし、今回たどった開発者ドキュメントのURLでは現在の手順を確認できなかったため、Boxの窓口に確かめてください。"}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認</h1><p class="meta">2026-11-04 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Box AIの公式ヘルプが挙げる対応ファイルは<strong>テキスト文書・画像・スプレッドシート・スライド</strong>で、音声と動画は入っていません。「既知の制限」にはビデオとオーディオが並び、文字起こしの機能説明も見つけられませんでした。学習については、Boxもモデルの提供元も顧客データでトレーニングしないとFAQに明記があります。録音は別のツールで文字にしてからBoxに置くのが現実的です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="Box-AIと文字起こしツールの比較">Box AIと文字起こしツールの比較</h2>
+<p>2026年11月4日に、Boxサポート（日本語版・英語版）、Boxの開発者ドキュメント、Nottaの公式ヘルプで確認した内容です。Boxは機能の更新が続いているので、導入前に同じページをもう一度確かめてください。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>Box AI</th><th>Notta ビジネス</th><th>Notta ビジネス Plus</th></tr></thead><tbody><tr><td>音声の文字起こし</td><td>対応ファイルの一覧に音声・動画の記載なし</td><td>録音・Web会議・ファイルインポートに対応</td><td>同左</td></tr><tr><td>主な対象</td><td>テキスト文書、画像、スプレッドシート（テキスト中心）、スライド</td><td>録音と会議の音声</td><td>同左</td></tr><tr><td>学習に関する公式の記載</td><td>Boxもモデルの提供元もトレーニングしない</td><td>音声認識のAI学習「あり」</td><td>「なし（データ未利用）」</td></tr><tr><td>Boxとの関係</td><td>Boxの標準機能</td><td>文字起こしデータをBoxへ転送できる</td><td>ビジネスの全機能を含む</td></tr><tr><td>費用</td><td>Business以上のプランで利用可（金額は公式の料金ページで確認）</td><td>年30,096円（税込・1アカウント）</td><td>公式の料金ページで確認</td></tr></tbody></table></div>
+<h2 id="判断軸1-録音をどこで文字にするか">判断軸1｜録音をどこで文字にするか</h2>
+<p>「Box AI for Documents」のヘルプは、対応ファイルをテキスト文書、画像ファイル、スプレッドシート、プレゼンテーションスライドの4種類としています。同じページの既知の制限には、質問すると「混在した、ときに不正確な情報」が返るテーマとして、ビデオとオーディオが書かれています。Box AI for Driveのヘルプも、対応形式はWeb版と同じだと案内しています。サポート記事を「transcription」で検索しても、Box AIの文字起こし機能の説明は出てきませんでした。</p>
+<p>一方で、Boxは音声の置き場所としては使えます。プレビューはmp3、m4a、wavなどの音声を再生でき、2026年10月の告知では波形の表示と時刻つきコメントが案内されています。ただし、これは聴くための機能で、文字になるわけではありません。</p>
+<p>Zoomを使っている会社には別の道があります。Box app for Zoomは、録画を「My Zoom Recordings」フォルダーへ保存し、音声・動画・文字起こしをBoxから共有できます。この文字起こしがBox AIで読めるかは形式によるので、実際のファイルで試してください。Zoom側の学習の扱いは<a href="../zoom-ai-companion-no-training/">Zoom AI Companionは学習されない？公式の一文と管理者が触る設定</a>にまとめています。</p>
+<h2 id="判断軸2-学習しない-の範囲がどこまでか">判断軸2｜「学習しない」の範囲がどこまでか</h2>
+<p>Box AIのFAQには、Boxは顧客データに基づいてAIモデルをトレーニングせず、モデルの提供元もBoxから受け取ったデータでトレーニングしない、と書かれています。提供元は応答を返すのに必要な時間だけメモリ上で情報を保持し、記録や保存はしないという説明です。将来、顧客専用に学習したモデルを出す場合は、顧客が明示的に承認する形になるとも書かれています。</p>
+<p>注意したいのは、この文言の対象が<strong>Box AIに渡したデータ</strong>だという点です。録音を別のサービスで文字起こしすれば、音声はそのサービスの規約で扱われます。つまり、Box AIの学習の扱いだけ確かめても、録音全体の説明にはなりません。</p>
+<p>たとえば<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプでは、ビジネスの音声認識のAI学習は「あり」、ビジネス Plusは「なし（データ未利用）」です。「AI学習について」のヘルプは、音声認識以外のAI機能のデータはいずれのプランでも学習に提供していないと説明しています。Box AIと同じ「学習に使わない」を録音にも求めるなら、ビジネス Plus以上が条件に合います。他社との比較は<a href="../no-ai-training-transcription-comparison/">AI学習なしの文字起こしツール比較</a>で見られます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="判断軸3-文字起こしをBoxに戻した後-どこまでAIで読めるか">判断軸3｜文字起こしをBoxに戻した後、どこまでAIで読めるか</h2>
+<p>Nottaのヘルプ「データをクラウドストレージに保存する」によると、ノートの「外部サービスに同期」からBoxへ文字起こしデータを転送できます。対象はプレミアム、ビジネス、エンタープライズの各プランです。Boxに置いたテキストならBox AIの対象になるので、要約や次のアクションの洗い出しはBox側で進められます。</p>
+<p>このときの制約は3つあります。</p>
+<ul><li><strong>文字量</strong>：ヘルプによると、テキストの上限は4MBで、それより大きいファイルは先頭の2MBだけが処理されます</li><li><strong>日本語</strong>：英語以外では結果の質が下がる場合があるとヘルプにあります</li><li><strong>プラン</strong>：複数ファイルへの質問（10件まで）やBox AI for Hubsは、Enterprise Plus以上です</li></ul>
+<p>AIの月の利用枠（AIユニット）は、Enterpriseが1,000、Enterprise Plusが2,000、Enterprise Advancedが20,000で、BusinessとBusiness Plusは購入制です。もっとも、標準モードのBox Agentは日次の上限だけが適用されるとヘルプにあるので、どの操作がユニットを使うかは管理者が確認します。</p>
+<p>もう1点、FAQはBoxがBox AIの質問と回答を保存しないと説明していますが、AI Homeのヘルプにはセッション履歴の機能が書かれています。履歴が残る範囲は、社内の審査の前に管理者とBoxの窓口で確かめるのが安全です。文字起こしを何日残すかは<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>の観点で決めます。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Box AI</strong>：音声を直接渡す使い方は、公式の対応ファイルに含まれていません。動画や音声についての質問は不正確な情報が返る場合があります</li><li><strong>Box AI</strong>：Business、Business Plus、Enterpriseで有効にして使えるのはBox AI for DocumentsとNotesです（設定のヘルプより）</li><li><strong>Notta ビジネス</strong>：音声認識のAI学習は「あり」です。学習なしにするにはビジネス Plus以上です</li><li><strong>Notta 全般</strong>：Notta BrainのBox連携は、音声・動画に「現在サポートされていません」とヘルプにあります。Boxの録音を読ませる経路としては使えません</li><li><strong>Notta 全般</strong>：Boxの外に音声を送るため、社内の審査で委託先として説明が要ります。ビジネス Plusとエンタープライズの違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>で確認できます</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<p><strong>Q. Box AIで議事録は作れますか。</strong> 文字になっている会議メモや文字起こしなら、要約や要点の整理に使えます。ヘルプにも会議メモの分析が例として書かれています。録音から直接作る手順は確認できませんでした。</p>
+<p><strong>Q. Box AIを管理者が止めることはできますか。</strong> できます。管理コンソールのBox AIの設定で、組織全体、特定のユーザー、特定のグループごとに有効・無効を選べます。初めて有効にするときは、契約によってBox AI Product Addendumの確認などが求められます。</p>
+<p><strong>Q. 開発者なら文字起こしをBoxに組み込めますか。</strong> Boxサポートには、AIサービスをBoxに統合する開発者向けのBox Skills Kitの案内があります。ただし、今回たどった開発者ドキュメントのURLでは現在の手順を確認できなかったため、Boxの窓口に確かめてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Box AIの対応ファイルに音声と動画はなく、文字起こしの機能説明も確認できなかった</li><li>学習についてはBoxのFAQに明記があるが、録音を別サービスに渡せばそのサービスの条件になる</li><li>機密の録音はビジネス Plus以上で文字にしてBoxへ転送し、Box AIで要約する流れが条件に合う</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『AIで資料作成が10倍速くなる本』（Kindle・500円）：企画書・プレゼン・議事録・メールの下書きをAIで作る手順をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0H9JBSHGX" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../caremanager-monitoring-recording/">ケアマネのモニタリング訪問を録音してAI文字起こし｜個人情報と記録の3点</a></li><li><a href="../community-care-center-consultation/">地域包括支援センターの相談記録をAI文字起こし｜学習と委託元の確認3点</a></li><li><a href="../disability-service-meeting-minutes/">障害福祉のサービス担当者会議を録音してAI議事録に｜個人情報で確認する3点</a></li><li><a href="../home-nursing-voice-record/">訪問看護の記録を音声入力とAIで｜学習なしの条件と車内口述の3点</a></li><li><a href="../jfba-ai-guideline-transcription/">弁護士の生成AI利用の指針と文字起こし｜日弁連は会員限定、東弁5要件で確認</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../box-ai-transcription-training/">Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認</a></li><li><a href="../caremanager-monitoring-recording/">ケアマネのモニタリング訪問を録音してAI文字起こし｜個人情報と記録の3点</a></li><li><a href="../community-care-center-consultation/">地域包括支援センターの相談記録をAI文字起こし｜学習と委託元の確認3点</a></li><li><a href="../disability-service-meeting-minutes/">障害福祉のサービス担当者会議を録音してAI議事録に｜個人情報で確認する3点</a></li><li><a href="../home-nursing-voice-record/">訪問看護の記録を音声入力とAIで｜学習なしの条件と車内口述の3点</a></li><li><a href="../jfba-ai-guideline-transcription/">弁護士の生成AI利用の指針と文字起こし｜日弁連は会員限定、東弁5要件で確認</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>
