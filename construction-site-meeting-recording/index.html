@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き｜AIツール実用ガイド</title>
+<meta name="description" content="現場の打ち合わせを録音してAIで議事録にしたい施工管理・現場代理人向け。建設業法の保存図書、指示の書面、図面の秘密保持、騒音で分からないことを一次資料で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/construction-site-meeting-recording/">
+<meta property="og:title" content="建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き｜AIツール実用ガイド">
+<meta property="og:description" content="現場の打ち合わせを録音してAIで議事録にしたい施工管理・現場代理人向け。建設業法の保存図書、指示の書面、図面の秘密保持、騒音で分からないことを一次資料で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き", "description": "現場の打ち合わせを録音してAIで議事録にしたい施工管理・現場代理人向け。建設業法の保存図書、指示の書面、図面の秘密保持、騒音で分からないことを一次資料で整理しました。", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/construction-site-meeting-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き</h1><p class="meta">2026-11-05 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、現場の録音やAIの議事録は、それだけでは10年保存の「打合せ記録」に当たらないと読めます。施行規則が挙げるのは<strong>請負契約の当事者が相互に交付した記録</strong>だからです。録音は下書きにして、人が直した記録を交わします。図面の機密は契約で確かめ、騒音下の精度は実測がないので試して決めます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="打ち合わせの記録に関わる定めを並べる">打ち合わせの記録に関わる定めを並べる</h2>
+<p>2026年11月5日に、e-Gov法令検索の建設業法と施行規則、国土交通省の建設業法令遵守ガイドライン（第12版・令和8年1月）、発注者・受注者間における建設業法令遵守ガイドライン（第8版・令和8年1月）、公共工事標準請負契約約款、民間建設工事標準請負契約約款（甲）（乙）、建設工事標準下請契約約款、近畿地方整備局の土木工事共通仕様書（令和7年のファイル）、Nottaの公式情報を確認しました。</p>
+<div class="tw"><table><thead><tr><th>定め・資料</th><th>内容（要旨）</th><th>AI文字起こしでの読み方（当サイトの整理）</th></tr></thead><tbody><tr><td>建設業法 第40条の3</td><td>営業所ごとに帳簿を備え、帳簿と営業に関する図書を保存する</td><td>何が図書かは施行規則で決まる</td></tr><tr><td>施行規則 第26条第5項第2号</td><td>工事内容に関する発注者との打合せ記録。請負契約の当事者が相互に交付したものに限る</td><td>片方が持つ録音や下書きは列挙の外。交わした記録が対象</td></tr><tr><td>施行規則 第26条第5項第5号</td><td>見積書の内容に関する注文者との打合せ記録（同じく相互交付に限る）</td><td>契約前の見積りの打ち合わせも同じ整理</td></tr><tr><td>施行規則 第28条第2項・第26条第8項</td><td>図書は引渡しから10年間保存。電子ファイルで記録し、表示できれば図書に代えられる</td><td>交わした記録は電子で残せる。録音の保存期間の定めは見当たらない</td></tr><tr><td>公共工事標準請負契約約款 第9条第4項・第61条</td><td>監督員の指示又は承諾は原則書面。書面に準ずる電磁的方法も可</td><td>録音は指示の書面に挙がっていない</td></tr><tr><td>土木工事共通仕様書 1-1-1-8</td><td>緊急時は口頭の指示等ができ、後日書面で両者が内容を確認する</td><td>録音があっても、後日の書面の確認は残る</td></tr><tr><td>公共工事標準請負契約約款 第1条第4項</td><td>受注者は契約の履行で知り得た秘密を漏らしてはならない</td><td>民間の約款は下の判断軸2を参照</td></tr></tbody></table></div>
+<p>建設業法と施行規則、2つのガイドラインの全文を検索しても、「録音」の語はありませんでした。AI文字起こしを打合せ記録に使うことを名指しした資料も見つからず、上の読み方は当サイトの整理です。</p>
+<h2 id="判断軸1-録音ではなく-交わした記録を残す">判断軸1｜録音ではなく、交わした記録を残す</h2>
+<p>遵守ガイドライン第12版の「13．帳簿の備付け・保存及び営業に関する図書の保存」は、保存する図書の一つに、相互に交付した発注者との打ち合わせ記録を挙げています。対象は業者の立場で変わります。発注者から直接請け負った建設業者は第1・2・4・5号、施工体系図を作る建設業者はこれに第3号が加わり、それ以外は第4・5号です。</p>
+<p>AIの議事録は、作っただけでは片方の手元のメモです。流れは、録音、AIの下書き、人の確認、相手への交付の順になります。公共工事なら、共通仕様書が書面の例に挙げる工事打合せ簿などに移します。録音の保存期間は法令に見当たらないので、社内で決めます。保存と削除の考え方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>にまとめました。</p>
+<p>追加工事でも同じです。遵守ガイドラインは、見積りの依頼で工事内容を口頭ではなく書面又はメール等で示すべきとしています。追加工事等は、着工前に書面又はメール等で見積依頼を行うよう書かれています。録音は「言った・言わない」を振り返る助けになりますが、契約内容の変更には書面の交付の定めがあり（建設業法第19条第2項）、録音はその代わりとして挙がっていません。</p>
+<h2 id="判断軸2-図面の機密を-契約と入力の範囲で確かめる">判断軸2｜図面の機密を、契約と入力の範囲で確かめる</h2>
+<p>公共工事標準請負契約約款には第1条第4項の秘密保持があります。一方、民間建設工事標準請負契約約款（甲）（乙）と建設工事標準下請契約約款のPDFを「秘密」「機密」で検索しても、該当はありませんでした。<strong>民間工事の守秘は、実際の契約書、特記事項、NDAの確認が必要です。</strong> 標準約款を使っていても、別の取り決めがある場合があります。外部サービスに預けてよいかの読み方は<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>で整理しました。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>で音声を文字起こしするとき、図面のファイルが一緒に入るわけではありません。ヘルプによると、文書ファイルをアップロードしてノートを作ることはできません。それでも、次の3つは図面の情報に触れます。</p>
+<ul><li><strong>話した内容</strong>：室名、寸法、設備の位置、工程が文字になります</li><li><strong>画面収録とWeb会議の録画</strong>：共有した図面が映像に残りえます。画面収録は全プランの機能で、操作画面も記録します</li><li><strong>ノートへの画像の挿入</strong>：図面の写真を貼れば、そのままノートに入ります</li></ul>
+<p>機密の要求がある現場は、音声だけを扱う運用を決め、音声認識の学習も確認します。ヘルプ「AI学習について」によると、学習の対象は国内のパートナー企業がランダムに選ぶ音声データと認識結果です。ビジネス Plus（年64,800円・税抜）とエンタープライズは「AI学習なし」で、法人向けページでは士業向け特別プランも同じです。ビジネスは学習「あり」です。法人契約のFAQでは、ビジネスとエンタープライズの購入予定者は契約書・NDAを結べると案内しています。発注者から図面の秘密保持を求められている元請や設計施工の会社には、ビジネス Plusが検討の入口になります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<p>施主との設計打ち合わせで話す家族情報の扱いは、<a href="../architect-client-meeting-recording/">建築士の施主打ち合わせをAI文字起こし</a>に分けて書いています。</p>
+<h2 id="判断軸3-現場の音で使えるかは-自分の現場で試す">判断軸3｜現場の音で使えるかは、自分の現場で試す</h2>
+<p>騒音下の認識率は、公式に明記がないため確認できませんでした。当サイトの実測もなく、分かるのは公式ヘルプの目安までです。軽いミーティングや打合せは認識率50〜80%程度で、口元で収音できないと精度が大きく下がると書かれています。精度を上げる項目には、周りの雑音を減らす、同時に話さない、指向性のマイクを近づけるといった内容が並びます。重機のそばの立ち話は、この条件から外れやすい場面です。</p>
+<p>試す順番は、現場事務所の打ち合わせから始めるのが無難です。録音のコツは<a href="../recording-tips-for-accuracy/">文字起こしの精度を上げる録音のコツ</a>にまとめました。現場に合わせて確かめたいのは次の3点です。</p>
+<ul><li><strong>電波</strong>：録音開始の機能はインターネット接続が必要です。ヘルプは、不安定な場所ではスマートフォンの標準録音アプリで録り、後でアップロードする方法を勧めています</li><li><strong>用語</strong>：工法名や材料名は単語登録を使います。料金ページの表記はフリー3語、プレミアム200語、ビジネス1,000語です</li><li><strong>指差しの言葉</strong>：「ここ」「この辺」は文字だけでは位置が分かりません。通り芯や部屋名を声に出すと、議事録に直しやすくなります</li></ul>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>この記事の限界</strong>：騒音環境の精度は実測していません。AIの議事録が打合せ記録に当たるかの当てはめも、当サイトの読みです</li><li><strong>AI文字起こし全般</strong>：寸法や品番の聞き違いは起こりえます。交付する前に人が確認します</li><li><strong>Notta フリー</strong>：AI学習なしの対象ではなく、単語登録も3語です</li><li><strong>Notta ビジネス</strong>：外部共有の無効化とIPアドレス制限は使えますが、音声認識の学習は「あり」です</li><li><strong>Notta ビジネス Plus</strong>：学習は止まりますが、自動削除と操作ログはエンタープライズの機能です。10年の保存や削除の管理は人の運用になります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="打ち合わせの録音は10年保存が必要ですか">打ち合わせの録音は10年保存が必要ですか</h3>
+<p>施行規則第26条第5項の列挙に、録音は見当たりませんでした。10年保存の対象は、相互に交付した打合せ記録などです。ただし発注者との契約や社内規程で別の定めがある場合があるので、そちらも確認してください。</p>
+<h3 id="AIの議事録をそのまま打合せ記録にしてよいですか">AIの議事録をそのまま打合せ記録にしてよいですか</h3>
+<p>条文は作り方を定めていませんが、当事者が相互に交付したものに限っています。誤りが残ったまま交わすと困るので、人が確認してから相手に渡すのが無難です。公共工事では発注者が定める様式や情報共有システムに従います。</p>
+<h3 id="騒音の大きい現場でもNottaで文字起こしできますか">騒音の大きい現場でもNottaで文字起こしできますか</h3>
+<p>騒音下の認識率は公式の明記がなく、確認できませんでした。ヘルプは雑音を減らし、口元で収音することを勧めています。無料で試す場合は、機密を含まない音声で現場の音を録り、結果を見て判断してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>10年保存の打合せ記録は、当事者が相互に交付したものに限られる。録音とAIの下書きは、交わす記録を作る材料にする</li><li>公共の標準約款には秘密保持があるが、民間と下請の標準約款のPDFに「秘密」の語はなかった。実際の契約を確認する</li><li>騒音下の精度は未確認。音声認識の学習なしはビジネス Plus・士業向け・エンタープライズ</li></ul>
+<h3 id="確認した公式情報-2026年11月5日">確認した公式情報（2026年11月5日）</h3>
+<ul><li>e-Gov法令検索「建設業法」第19条・第40条の3、「建設業法施行規則」第26条・第28条</li><li>国土交通省「建設業法令遵守ガイドライン（第12版）」「発注者・受注者間における建設業法令遵守ガイドライン（第8版）」、公共工事標準請負契約約款、民間建設工事標準請負契約約款（甲）（乙）、建設工事標準下請契約約款（いずれも令和7年12月2日改正まで掲載のもの）</li><li>近畿地方整備局 土木工事共通仕様書 第1編共通編（令和7年のファイル）。発注者や年度で内容が異なる場合があります</li><li>Notta 料金ページ、法人向けページ、ヘルプ「AI学習について」「Nottaプラン別機能一覧」「法人契約に関するよくある質問」「文字起こしの精度（音声認識率）はどれぐらいですか？」「文字起こし（音声認識）の精度を上げるためには？」「オフライン時にNottaモバイルアプリで録音・文字起こしはできますか？」「ローカルファイルのインポート」「パソコンで画面収録を行う方法」</li></ul>
+<p>※本記事は上記の公開資料を2026年11月5日に確認して整理したもので、法的な助言ではありません。文字起こしへの当てはめは当サイトの整理で、国土交通省の見解ではありません。個別の判断は契約書と、発注者・法務部門・専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../customer-harassment-call-recording/">カスハラのクレーム電話を録音しAI文字起こし｜証拠に使う前の3つの確認</a></li><li><a href="../fireflies-training-data-business/">Firefliesの学習データの扱いを法人向けに確認｜文書ごとに違う学習の範囲</a></li><li><a href="../kintone-ai-minutes-training/">kintone AIの議事録利用と学習｜データの扱いと音声の文字起こしは別</a></li><li><a href="../municipal-counter-consultation-recording/">自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点</a></li><li><a href="../readai-training-data/">Read.aiの学習データと会議の自動参加設定｜止めても他の人のReadは入る</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../construction-site-meeting-recording/">建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き</a></li><li><a href="../customer-harassment-call-recording/">カスハラのクレーム電話を録音しAI文字起こし｜証拠に使う前の3つの確認</a></li><li><a href="../fireflies-training-data-business/">Firefliesの学習データの扱いを法人向けに確認｜文書ごとに違う学習の範囲</a></li><li><a href="../kintone-ai-minutes-training/">kintone AIの議事録利用と学習｜データの扱いと音声の文字起こしは別</a></li><li><a href="../municipal-counter-consultation-recording/">自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点</a></li><li><a href="../readai-training-data/">Read.aiの学習データと会議の自動参加設定｜止めても他の人のReadは入る</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

@@ -11,6 +11,16 @@
 
 ## 記事
 
+- [建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き](https://nagai-cpu.github.io/ai-tools-jp/construction-site-meeting-recording/): 現場の打ち合わせを録音してAIで議事録にしたい施工管理・現場代理人向け。建設業法の保存図書、指示の書面、図面の秘密保持、騒音で分からないことを一次資料で整理しました。
+- [カスハラのクレーム電話を録音しAI文字起こし｜証拠に使う前の3つの確認](https://nagai-cpu.github.io/ai-tools-jp/customer-harassment-call-recording/): カスハラ対策でクレーム電話を録音し、文字起こしを証拠に残したい担当者向け。2026年10月施行の義務、厚労省の解釈、録音の利用目的とNottaの条件を一次資料で整理しました。
+- [Firefliesの学習データの扱いを法人向けに確認｜文書ごとに違う学習の範囲](https://nagai-cpu.github.io/ai-tools-jp/fireflies-training-data-business/): Fireflies.aiを法人で使う担当者向け。規約・プライバシーポリシー・DPA・料金表で会議データのAI学習の扱いをプラン別に確認し、Nottaの学習なしプランと比べました。
+- [kintone AIの議事録利用と学習｜データの扱いと音声の文字起こしは別](https://nagai-cpu.github.io/ai-tools-jp/kintone-ai-minutes-training/): kintoneで議事録を扱う情シス・総務向け。kintone AIの学習の扱い、データ処理地、対象コース、議事録の要約に使える機能と制限を、サイボウズの規約とヘルプで確認しました。
+- [自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点](https://nagai-cpu.github.io/ai-tools-jp/municipal-counter-consultation-recording/): 住民の窓口相談を録音しAIで文字にしたい自治体職員向け。個人情報保護委員会の行政機関等編Q&Aと総務省ガイドラインで、告知・保管・開示の確認点とNottaの条件を整理しました。
+- [Read.aiの学習データと会議の自動参加設定｜止めても他の人のReadは入る](https://nagai-cpu.github.io/ai-tools-jp/readai-training-data/): Read.aiを法人で検討する担当者向け。学習の既定値、自動参加の既定と止め方、Workspaceの管理範囲を公式資料で確認し、Nottaの学習なしプランと比べました。
+- [Tactiqの学習データ利用と法人の設定｜音声を残さない拡張機能の確認点](https://nagai-cpu.github.io/ai-tools-jp/tactiq-training-data/): Tactiqを法人で検討する担当者向け。音声の保存、学習、AIの処理先、参加者への通知を公式資料で確認し、Bot型との違いとNottaの学習なしプランを比べました。
+- [tl;dvの学習データの扱いを法人向けに確認｜EU保存とAIの処理先は別](https://nagai-cpu.github.io/ai-tools-jp/tldv-training-data-business/): tl;dvを法人で使う担当者向け。プライバシーポリシーとTrust Centerで、会議データのAI学習とEU保存の範囲をプラン別に確認し、Nottaの学習なしプランと比べました。
+- [税理士の税務調査立ち会いを録音しAI文字起こし｜裁決と国税庁FAQの確認点](https://nagai-cpu.github.io/ai-tools-jp/zeirishi-tax-audit-recording/): 税務調査に立ち会う税理士向け。調査官とのやりとりの録音について国税庁FAQと公表裁決で確認できた範囲と、事務所内の打合せをAI文字起こしする条件を整理しました。
+- [Zoomクラウド録画と文字起こしの保存期間｜削除後の30日と残る場所](https://nagai-cpu.github.io/ai-tools-jp/zoom-cloud-recording-retention/): Zoomの録画を社内規程で管理する担当者向け。クラウド録画と文字起こしの保存期間、自動削除、ゴミ箱の30日、プラン別容量、解約時の扱いを公式サポートで整理しました。
 - [Box AIは音声を文字起こしできる？対応形式と学習の扱いを公式で確認](https://nagai-cpu.github.io/ai-tools-jp/box-ai-transcription-training/): Box AIで録音や動画を文字起こししたい法人の担当者向け。公式の対応ファイルに音声がない点、学習に関するFAQの文言、文字起こしをBoxへ戻す手順を整理。
 - [ケアマネのモニタリング訪問を録音してAI文字起こし｜個人情報と記録の3点](https://nagai-cpu.github.io/ai-tools-jp/caremanager-monitoring-recording/): 月1回の訪問面接を録音して記録を楽にしたいケアマネジャー向け。運営基準、老企第22号、介護保険法、個人情報のガイダンスから同意・家族の発言・音声の持ち帰りを整理しました。
 - [地域包括支援センターの相談記録をAI文字起こし｜学習と委託元の確認3点](https://nagai-cpu.github.io/ai-tools-jp/community-care-center-consultation/): 総合相談の記録をAI文字起こしで楽にしたいセンター職員向け。介護保険法、個人情報保護法、個情委のQ&A、高齢者虐待防止法から学習・委託・録らない相談の決め方を整理しました。

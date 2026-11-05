@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点｜AIツール実用ガイド</title>
+<meta name="description" content="住民の窓口相談を録音しAIで文字にしたい自治体職員向け。個人情報保護委員会の行政機関等編Q&amp;Aと総務省ガイドラインで、告知・保管・開示の確認点とNottaの条件を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/municipal-counter-consultation-recording/">
+<meta property="og:title" content="自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点｜AIツール実用ガイド">
+<meta property="og:description" content="住民の窓口相談を録音しAIで文字にしたい自治体職員向け。個人情報保護委員会の行政機関等編Q&amp;Aと総務省ガイドラインで、告知・保管・開示の確認点とNottaの条件を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点", "description": "住民の窓口相談を録音しAIで文字にしたい自治体職員向け。個人情報保護委員会の行政機関等編Q&Aと総務省ガイドラインで、告知・保管・開示の確認点とNottaの条件を整理しました。", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/municipal-counter-consultation-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点</h1><p class="meta">2026-11-05 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、窓口相談の録音で先に決めるのは、ツールより<strong>録音の目的と記録の扱い</strong>です。委員会のQ&amp;Aは通話の録音に法第62条の明示義務はないと考える一方、住民の録音データは相談記録の訂正請求の根拠資料になるとしています。対面の窓口を名指しした記述は見当たらず、個別判断は主管課へ確認してください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="窓口相談に関わる一次資料を並べる">窓口相談に関わる一次資料を並べる</h2>
+<p>2026年11月5日に、e-Gov法令検索の個人情報保護法、個人情報保護委員会の行政機関等編ガイドライン・Q&amp;A（令和8年11月更新）・事務対応ガイド、生成AIの注意喚起、総務省の情報セキュリティポリシーガイドライン（令和8年3月版）、AI活用・導入ガイドブック（令和7年12月 第4版）、カスタマーハラスメント対策のポイント集（令和8年7月31日通知）を確認しました。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>一次資料の記載</th><th>窓口相談で起きること</th><th>確認すること</th></tr></thead><tbody><tr><td>保有の範囲</td><td>法第61条：所掌事務の遂行に必要な場合に限り、利用目的をできる限り特定</td><td>録音全件が必要かが問われる</td><td>録る相談の範囲</td></tr><tr><td>告知</td><td>Q3-2-6：通話音声の録音は法第62条の義務を負わないと考えられる（個別判断）。法第64条：不正な取得の禁止</td><td>対面の録音への言及はない</td><td>掲示や口頭の告知の方法</td></tr><tr><td>情報の性質</td><td>個人を識別できる音声は個人情報。病歴などは要配慮個人情報（GL 4-2-1、4-2-5）</td><td>福祉や健康の相談に入りやすい</td><td>相談種別ごとの扱い</td></tr><tr><td>クラウド</td><td>Q2-3-2：事業者のサーバ上でも「保有」に当たる。法第66条の安全管理は委託先にも準用</td><td>外に置いても責任は団体に残る</td><td>委託契約と監督の方法</td></tr><tr><td>情報分類</td><td>自治体機密性は各団体が分類。画一的な約款のみのサービスは原則として機密性2以上を扱えない</td><td>録音がどの分類かは団体の判断</td><td>情報政策の担当課の判断</td></tr><tr><td>開示・訂正</td><td>法第76条の開示請求。Q5-10-5：相談内容の録音データは訂正請求の根拠資料になる</td><td>住民も録音している前提になる</td><td>相談記録の書き方</td></tr></tbody></table></div>
+<p>表の「起きること」は当サイトの整理です。窓口のAI文字起こしを名指しした規定は見当たりませんでした。Q3-2-6は通話が対象で、対面への当てはめも当サイトの読みです。</p>
+<h2 id="判断軸1-記録のためか-カスハラ対策のためかを分ける">判断軸1｜記録のためか、カスハラ対策のためかを分ける</h2>
+<p>窓口の録音の目的は、相談記録の正確さとカスタマーハラスメントへの備えに分かれます。総務省のポイント集は、録音・録画の方法、相手方への通知方法、データの取扱いのルールを団体内で取り決めるよう求め、可能であれば事前告知が望ましいとしています。</p>
+<p>ここで注意したいのが利用目的です。法第61条は目的の特定を、法第69条は目的外の利用の制限を定めています。カスハラ対策で録った音声を相談記録の下書きに回す、あるいは逆に回す場合は、目的の書き方が問われます。ポイント集が引く厚生労働省のQ&amp;A（事業者向けの説明）も、事実確認に使うなら利用目的に特定する必要があるとしています。AI処理も含めて最初に目的を書くのが分かりやすい順番です。</p>
+<p>告知についてQ3-2-6は、書面で取得する場面と通話の録音は異なるとしています。ただし個別の事案ごとの判断です。令和8年11月に追加されたQ3-2-4は、防犯カメラについて、本人が認識できない場合には掲示等の措置が要るとしています。録音に当てはまるとは書かれていませんが、掲示で伝える方法は選択肢になります。</p>
+<h2 id="判断軸2-音声をどこに置き-誰に渡すかを決める">判断軸2｜音声をどこに置き、誰に渡すかを決める</h2>
+<p>AI文字起こしは音声を外部に送る処理です。委員会の生成AI注意喚起は、行政機関等に対し、必要最小限の利用又は提供かの確認と、機械学習に利用しないこと等の確認を求めています。音声認識が注意喚起の定義に入るかは別の論点で、<a href="../ppc-generative-ai-transcription/">個人情報保護委員会の生成AI注意喚起と文字起こし</a>で読み解きました。民間事業者向けの委託の整理は<a href="../appi-transcription-outsourcing/">AI文字起こしは委託か第三者提供か</a>にあります。</p>
+<p>窓口特有の確認点は次の3つです。</p>
+<ul><li><strong>端末</strong>：総務省GLは機密性3の情報資産について支給端末以外での作業を原則禁止としています。職員の私物スマホでの録音は別に検討が要ります</li><li><strong>ネットワーク</strong>：マイナンバー利用事務系は他の領域と通信できないようにするとされています。窓口端末の属する領域を確認します</li><li><strong>契約</strong>：画一的な約款への同意だけのサービスでは、機密性2以上は原則として扱えません。個別の条件を書面で取れるかが入口です</li></ul>
+<p>総務省のガイドブックには、防府市が障害福祉課の窓口で職員の発言を文字表示する事例があり、会話履歴のログは事業者のサーバーに保存されると記載されています。ログの置き場所は確認項目の一つです。ISMAPなどクラウド選定の基準は<a href="../local-government-minutes/">自治体の会議録をAI文字起こしする要件</a>で整理しました。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式情報では、音声認識の学習が「なし」なのはビジネス Plus（年64,800円・税抜）とエンタープライズ、士業向け特別プランです。AI要約など音声認識以外の機能は全プランで学習に使わないと説明されています。保存先はAWS東京リージョンです。</p>
+<p>情報政策の担当課の選定基準を通ったうえで、学習なしを要件に窓口の試行をしたい団体なら、法人向けの条件を確認する価値があります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="判断軸3-全文を記録にするか-要旨だけ残すか">判断軸3｜全文を記録にするか、要旨だけ残すか</h2>
+<p>法第60条の保有個人情報は、職員が職務上作成・取得し、組織的に利用するものとして保有し、行政文書等に記録されたものです。録音や全文テキストを組織で共有して使うなら、開示請求の対象になりうると考えて設計するのが安全です。保存年限は各団体の定めを確認してください。</p>
+<p>Q5-10-5は、相談記録の訂正請求に住民が録音データを出したとき、団体はそれを審査の根拠資料とすることになると答えています。団体が録らなくても、住民の手元に音声がある場面があります。法第65条は、保有個人情報が事実と合致するよう努めることを求めています。AIの誤認識を確認せず相談記録に転記すると、この点が問題になりえます。</p>
+<p>そこで考えられるのは、全文テキストを記録にせず、職員が確認した要旨を相談記録とし、音声と全文の削除の時期を決める形です。削除の手順は<a href="../transcription-data-deletion-proof/">AI文字起こしの解約後データ削除を証明する方法</a>が参考になります。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：ISMAPとISMAP-LIUのリストには10月25日時点で掲載がありません（本日はページが読み込めず未再確認）。法人契約FAQに多要素認証は未対応とあります。機密性の高い相談では、選定基準を満たすかの個別確認が要ります</li><li><strong>Notta ビジネス Plus</strong>：学習は止まりますが、自動削除と操作ログはエンタープライズの機能です。保存期間の管理は手動になります</li><li><strong>AI文字起こし全般</strong>：窓口の雑音や固有名詞は誤認識につながることがあります。人の確認が前提です</li><li><strong>この記事の限界</strong>：各団体の条例・規程は読んでいません。録音の適否を判断するものではありません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="窓口で録音する前に住民の同意は必要ですか">窓口で録音する前に住民の同意は必要ですか</h3>
+<p>Q&amp;Aは通話音声の録音に法第62条の義務はないと考えられるとしていますが、対面の窓口には触れていません。同意の要否を定めた記述も確認できませんでした。総務省のポイント集は可能であれば事前告知が望ましいとしています。主管課で決めるのが現実的です。</p>
+<h3 id="録音データは開示請求の対象になりますか">録音データは開示請求の対象になりますか</h3>
+<p>保有個人情報に当たれば、法第76条の開示請求の対象です。当たるかは組織的に利用しているかなどの事実によるので、この記事では判断しません。主管課に確認してください。</p>
+<h3 id="生活保護や虐待の相談も同じ運用でよいですか">生活保護や虐待の相談も同じ運用でよいですか</h3>
+<p>同じ扱いでよいとは言えません。要配慮個人情報が入りやすく、この記事では対象外です。相談種別ごとに録音しない区分を作る考え方もあります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>通話の録音に法第62条の義務はないとQ&amp;Aは考えるが、対面の記述はなく、目的の特定と不正取得の禁止は残る</li><li>クラウド上の音声も団体の保有に当たるので、分類、端末、契約、学習の扱いを先に確認する</li><li>録音データは訂正請求の根拠資料になる。職員が確認した要旨を記録にし、全文と音声の削除時期を決める</li></ul>
+<h3 id="確認した公式情報-2026年11月5日">確認した公式情報（2026年11月5日）</h3>
+<ul><li>e-Gov法令検索「個人情報の保護に関する法律」第60条〜第69条・第76条ほか</li><li>個人情報保護委員会「ガイドライン（行政機関等編）」「Q&amp;A（行政機関等編）」Q2-3-2・Q3-2-4・Q3-2-6・Q5-10-5、「事務対応ガイド（行政機関等向け）」、「生成AIサービスの利用に関する注意喚起等」</li><li>総務省「地方公共団体における情報セキュリティポリシーに関するガイドライン」（令和8年3月版）、「自治体におけるAI活用・導入ガイドブック」（導入手順編 第4版）、カスタマーハラスメント対策のポイント集（令和8年7月31日通知）</li><li>Notta 料金ページ、法人向けページ、利用規約、ヘルプ「AI学習について」「法人契約に関するよくある質問」ほか</li></ul>
+<p>※本記事は上記の公開資料を2026年11月5日に確認して整理したもので、法律の助言ではありません。窓口相談への当てはめは当サイトの整理で、個人情報保護委員会や総務省の見解ではありません。個別の判断は各団体の主管課や専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../construction-site-meeting-recording/">建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き</a></li><li><a href="../customer-harassment-call-recording/">カスハラのクレーム電話を録音しAI文字起こし｜証拠に使う前の3つの確認</a></li><li><a href="../fireflies-training-data-business/">Firefliesの学習データの扱いを法人向けに確認｜文書ごとに違う学習の範囲</a></li><li><a href="../kintone-ai-minutes-training/">kintone AIの議事録利用と学習｜データの扱いと音声の文字起こしは別</a></li><li><a href="../readai-training-data/">Read.aiの学習データと会議の自動参加設定｜止めても他の人のReadは入る</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../construction-site-meeting-recording/">建設現場の打ち合わせを録音しAI文字起こし｜図面の機密と10年保存の線引き</a></li><li><a href="../customer-harassment-call-recording/">カスハラのクレーム電話を録音しAI文字起こし｜証拠に使う前の3つの確認</a></li><li><a href="../fireflies-training-data-business/">Firefliesの学習データの扱いを法人向けに確認｜文書ごとに違う学習の範囲</a></li><li><a href="../kintone-ai-minutes-training/">kintone AIの議事録利用と学習｜データの扱いと音声の文字起こしは別</a></li><li><a href="../municipal-counter-consultation-recording/">自治体の窓口相談を録音しAI文字起こしする前に｜個人情報保護法の確認点</a></li><li><a href="../readai-training-data/">Read.aiの学習データと会議の自動参加設定｜止めても他の人のReadは入る</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>
