@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で｜AIツール実用ガイド</title>
+<meta name="description" content="私物スマホでの会議録音を認めるか決めたい総務・情シス向け。総務省とIPAの資料から、許可制、端末の条件、費用、退職時の条項と、Nottaの設定でできる範囲を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/byod-meeting-recording-policy/">
+<meta property="og:title" content="私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で｜AIツール実用ガイド">
+<meta property="og:description" content="私物スマホでの会議録音を認めるか決めたい総務・情シス向け。総務省とIPAの資料から、許可制、端末の条件、費用、退職時の条項と、Nottaの設定でできる範囲を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で", "description": "私物スマホでの会議録音を認めるか決めたい総務・情シス向け。総務省とIPAの資料から、許可制、端末の条件、費用、退職時の条項と、Nottaの設定でできる範囲を整理しました。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/byod-meeting-recording-policy/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</h1><p class="meta">2026-11-06 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、私物スマホの会議録音は、一律の禁止か自由かより、<strong>許可制にして音声の置き場所を端末の外に決める</strong>形が規程にしやすいです。総務省はBYODのリスクを評価して可否を決めるよう求め、IPAの規程サンプルは許可か禁止かを選ぶ形です。録音を名指しした記述は限られます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="私物スマホの録音に関わる一次資料を並べる">私物スマホの録音に関わる一次資料を並べる</h2>
+<p>2026年11月6日に、総務省「テレワークセキュリティガイドライン第5版」、IPA「中小企業の情報セキュリティ対策ガイドライン第4.0版」と付録3・付録5（情報セキュリティ関連規程サンプル）、「組織における内部不正防止ガイドライン」、厚生労働省のQ&amp;A、労働基準法、AppleとGoogleの端末管理の説明、Nottaの公式情報を確認しました。</p>
+<p>録音ファイルの持ち出しは<a href="../recording-data-external-rule/">録音データの社外持ち出しルール</a>、個人のAI利用全体は<a href="../shadow-ai-transcription/">AI文字起こしのシャドーAI対策</a>で扱いました。この記事は、<strong>私物スマホを録音する端末として認めるか</strong>に絞ります。</p>
+<div class="tw"><table><thead><tr><th>規程の項目</th><th>公的資料の記載</th><th>会議録音で起きること</th><th>Nottaで確認できたこと</th></tr></thead><tbody><tr><td>可否</td><td>総務省GL：データ保存が可能でマルウェア対策ソフト等を強制できず、リスクが受容可能か評価して決定</td><td>音声が私物の中に生まれる</td><td>―</td></tr><tr><td>許可</td><td>IPA付録5：システム管理者の許可を得る／禁止するの選択式</td><td>録ってよい会議の線引きが要る</td><td>―</td></tr><tr><td>録音</td><td>IPA付録5：セキュリティ領域の室内での撮影、録音は禁止し、業務上必要なら責任者の許可</td><td>会議室が領域内かを確認</td><td>―</td></tr><tr><td>端末の条件</td><td>IPA本編：端末認証、他者との共有や業務データ保存の制限・禁止。難しければ暗号化、遠隔消去等</td><td>家族と共用の端末は外れやすい</td><td>MDMへの言及はヘルプに見当たらず</td></tr><tr><td>保存先</td><td>IPA本編：個人所有端末にダウンロード可能なファイルの機密区分・種類を規定</td><td>標準の録音アプリは個人のクラウドに同期しうる</td><td>「録音開始」はサーバーへアップロード</td></tr><tr><td>端末の監視</td><td>IPA内部不正GL：BYODは可能なら使わず、監視を条件にするなら本人の承諾書が望まれる</td><td>プライバシーとの調整が要る</td><td>―</td></tr><tr><td>費用</td><td>労基法第89条第5号：作業用品その他の負担をさせる定めは就業規則に記載</td><td>アプリ代や通信費の扱い</td><td>ビジネスは1アカウント年30,096円（税込）</td></tr><tr><td>退職</td><td>IPA本編：退職時に情報や機器を回収し、復元できない方法で消去</td><td>私物の中は会社が確認しにくい</td><td>メンバー削除で所有データはオーナーへ移転</td></tr></tbody></table></div>
+<p>表の「起きること」は当サイトの整理です。総務省GLはテレワーク向けで、録音やAI文字起こしの語はありません。付録5は社有機器のスマホにMDMの導入を定めています。</p>
+<h2 id="判断軸1-録音してよい会議を-端末の前に決める">判断軸1｜録音してよい会議を、端末の前に決める</h2>
+<p>意外だったのは、総務省GLの前提です。クラウドサービス方式は、メリットが大きい「企業等からの支給端末」を想定していて、BYODは別に評価する扱いです。クラウドの文字起こしを私物で使うのは、この前提から外れる形です。IPAの内部不正GLも、監視の文脈でBYODは可能なら使わず会社支給が望ましいとしています。</p>
+<p>そこで、端末より先に会議を区分します。例えば次の分け方です。</p>
+<ul><li><strong>録音しない</strong>：人事、懲戒、未公表の経営情報など</li><li><strong>会社の機器だけ</strong>：顧客名や個人情報が出る会議</li><li><strong>許可した私物も可</strong>：社内の定例など、機密区分の低い会議</li></ul>
+<p>区分は当サイトの例です。貸与の共用スマホや<a href="../ic-recorder-for-transcription/">ICレコーダー</a>を会議室に置くと、私物を認める範囲を狭くできます。</p>
+<h2 id="判断軸2-音声を端末に残さない手順を書く">判断軸2｜音声を端末に残さない手順を書く</h2>
+<p>規程で差が出るのは保存先です。Nottaのヘルプは、モバイルアプリの「録音開始」を、録音ファイルをサーバーにアップロードして処理する仕組みと説明しています。一方で通信が不安定なときは、スマートフォンの標準録音アプリで録り、後でアップロードするよう案内しています。</p>
+<p>私物でこの手順を取ると、音声が標準アプリに残ります。iCloud同期が有効なら、個人のApple Accountに業務の音声が入ります。Appleの説明では、ボイスメモは標準のデータ保護だとキーをAppleが保管します。規程には、アップロード後に端末の録音を削除するか、通信のない場所では私物で録らないと書きます。</p>
+<p>ヘルプによると、音声通話中はマイクが通話アプリに優先され、録音が行えない場合があります。使い方は<a href="../notta-smartphone-in-person/">Nottaをスマホで対面会議に使う方法</a>にまとめました。</p>
+<h2 id="判断軸3-端末にどこまで会社の手を入れるか">判断軸3｜端末にどこまで会社の手を入れるか</h2>
+<p>総務省GLはスマートフォンについて、MDM等によるデータの暗号化や遠隔でのデータ消去等の対策を重要としています。ただし私物に入れるなら、社員のプライバシーとの調整が要ります。</p>
+<p>OS側には分離の仕組みがあります。Googleのヘルプは、仕事用プロファイルでは組織が仕事用のアプリやデータを管理し、個人用のアプリ、データ、使用状況は公開されないとしています。Appleのユーザ登録も、ITチームが管理できるのは組織のアカウントや設定などで、個人アカウントは管理できないとしています。</p>
+<p>確認が要るのは、録音アプリがこの中で動くかです。Nottaのヘルプと法人ページにMDMへの言及は見つからず、動作は確認できませんでした。導入前に実機と営業窓口で確かめます。費用も決めます。厚生労働省のQ&amp;Aは、負担の方法を労使で話し合い就業規則等に規定しておくことが望ましいとしています。</p>
+<h2 id="会社のワークスペースに音声を集めるなら">会社のワークスペースに音声を集めるなら</h2>
+<p>私物を認めるなら、音声の行き先を会社の契約に寄せると、規程と運用が一致しやすくなります。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のビジネス以上では、作成したノートは初期設定で作成者のみのアクセスで、メンバーを削除すると所有データの所有権はオーナーに移ります。音声認識の学習が「なし」なのはビジネス Plus（年64,800円・税抜）とエンタープライズ、士業向け特別プランです。ビジネスは比較表で「あり」です。</p>
+<p>エンタープライズでは個人ワークスペースの新規作成を禁止でき、本人の同意を得て既存の個人ワークスペースのデータを統合できます。</p>
+<p>私物での録音を一部認めつつ、顧客名の出る会議の音声も会社の管理下に置きたい会社なら、法人向けの条件を比べる価値があります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQは多要素認証・2段階認証に「現在、対応しておりません」としています。私物の紛失時は端末側のロックに頼る部分が増えます</li><li><strong>Notta（IP制限）</strong>：ヘルプは4G回線では利用しないよう案内しています。詳しくは<a href="../transcription-ip-restriction/">AI文字起こしのIPアドレス制限</a>にあります</li><li><strong>Notta（ビジネス Plus）</strong>：個人ワークスペースの作成禁止は、ヘルプではエンタープライズの機能です</li><li><strong>BYOD全般</strong>：規程で定めても、分離の仕組みがなければ私物の中身は会社から見えません</li><li><strong>この記事の限界</strong>：経済産業省の「秘密情報の保護ハンドブック」は取得できず未読です。厚生労働省のモデル就業規則の手引きも本文を読めませんでした</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="私物スマホの通信費やアプリ代は会社が負担しますか">私物スマホの通信費やアプリ代は会社が負担しますか</h3>
+<p>負担の割合を定めた記述は確認できませんでした。厚生労働省のQ&amp;Aは、情報通信機器などの負担をさせる定めをする場合は就業規則に規定しなければならないとしています。自社の社労士等に確認してください。</p>
+<h3 id="退職時に私物スマホの録音はどう消しますか">退職時に私物スマホの録音はどう消しますか</h3>
+<p>会社が中身を確かめるのは難しいので、退職時の削除の申告を手順に入れる方法があります。Androidの仕事用プロファイルは削除すると中のローカルデータが消えます。クラウド側は<a href="../transcription-offboarding/">AI文字起こしの退職者アカウントとデータ</a>で整理しました。</p>
+<h3 id="社員が無断で私物スマホで会議を録っていたらどうしますか">社員が無断で私物スマホで会議を録っていたらどうしますか</h3>
+<p>対応は就業規則と個別の事情によるので、この記事では判断しません。規程の説明の組み立ては<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止</a>が参考になります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>総務省GLはBYODのリスク評価を求め、IPAの規程サンプルは許可か禁止かの選択式。録音の可否は会議の区分から決める</li><li>標準の録音アプリを経由すると音声が私物と個人のクラウドに残りうるので、保存先と削除の手順を書く</li><li>端末管理は仕事と個人の分離を検討する。Nottaのヘルプに端末管理の言及はなく、多要素認証は未対応なので実機と窓口で確認する</li></ul>
+<h3 id="確認した公式情報-2026年11月6日">確認した公式情報（2026年11月6日）</h3>
+<ul><li>総務省「テレワークセキュリティガイドライン第5版」（令和3年5月）</li><li>IPA「中小企業の情報セキュリティ対策ガイドライン第4.0版」（2026年3月27日公開）本編・付録3・付録5、「組織における内部不正防止ガイドライン」</li><li>e-Gov法令検索「労働基準法」第89条、厚生労働省「確かめよう労働条件」Q&amp;A（テレワーク経費）</li><li>Apple「ユーザ登録とデバイス管理」「iCloudのデータセキュリティの概要」、Google「Android の仕事用プロファイルとは」</li><li>Notta 料金ページ、法人向けページ、ヘルプ「オフライン時にNottaモバイルアプリで録音・文字起こしはできますか？」「AI学習について」「法人契約に関するよくある質問」「個人ワークスペースの作成禁止とデータの統合方法」「メンバーを招待・削除する」ほか</li></ul>
+<p>※本記事は上記の公開資料を2026年11月6日に確認して整理したもので、法律の助言ではありません。会議録音への当てはめは当サイトの整理で、総務省やIPAの見解ではありません。規程や就業規則の個別の判断は専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

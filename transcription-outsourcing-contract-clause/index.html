@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字起こしツールの業務委託契約、条項の確認点｜再委託・学習・削除｜AIツール実用ガイド</title>
+<meta name="description" content="議事録や文字起こしの業務委託で、受託者がAIツールを使う場合に契約書へ何を書くか。民法と個人情報保護委員会の資料、Nottaの公開条件を6つの条項で突き合わせました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/transcription-outsourcing-contract-clause/">
+<meta property="og:title" content="文字起こしツールの業務委託契約、条項の確認点｜再委託・学習・削除｜AIツール実用ガイド">
+<meta property="og:description" content="議事録や文字起こしの業務委託で、受託者がAIツールを使う場合に契約書へ何を書くか。民法と個人情報保護委員会の資料、Nottaの公開条件を6つの条項で突き合わせました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "文字起こしツールの業務委託契約、条項の確認点｜再委託・学習・削除", "description": "議事録や文字起こしの業務委託で、受託者がAIツールを使う場合に契約書へ何を書くか。民法と個人情報保護委員会の資料、Nottaの公開条件を6つの条項で突き合わせました。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/transcription-outsourcing-contract-clause/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">文字起こしツールの業務委託契約、条項の確認点｜再委託・学習・削除</h1><p class="meta">2026-11-06 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、文字起こしを含む業務委託契約で先に確認するのは、<strong>再委託、学習、削除の3条項</strong>です。民法は準委任の再委託に許諾を求め、委員会のガイドラインは再委託の事前報告や承認を望ましいとしています。ただしAIツールが再委託に当たるかを名指しした記述は見当たらず、契約書に書いて決めるのが分かりやすい順番です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="業務委託契約の6条項と-ツールの公開条件を並べる">業務委託契約の6条項と、ツールの公開条件を並べる</h2>
+<p>この記事が扱うのは、議事録作成を頼む発注者と、AIツールを使って請ける受託者の間の契約です。ツール事業者との条文は<a href="../transcription-contract-sla/">AI文字起こしの契約書・SLA確認項目</a>に、NDAの読み方は<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>に分けました。</p>
+<p>2026年11月6日に、e-Gov法令検索の民法・個人情報保護法、個人情報保護委員会の通則編ガイドラインとQ&amp;A、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約（2025年8月1日改訂）、料金ページ、法人向けページ、ヘルプを確認しました。</p>
+<div class="tw"><table><thead><tr><th>条項</th><th>一次資料の記載</th><th>契約書に書く項目</th><th>Nottaの公開条件</th></tr></thead><tbody><tr><td>再委託・ツール利用</td><td>民法第644条の2、第656条：準委任は委任者の許諾などがなければ復受任者を選任できない。GL 3-4-4：再委託は事前報告や承認が望ましい</td><td>使うツール名、プラン、変更時の連絡</td><td>規約第18条：業務を第三者に委託できる。第10条：音声認識は第三者のパートナーのAPI。社名の一覧は確認できなかった</td></tr><tr><td>目的外利用・学習</td><td>Q7-38：委託先は委託された業務の範囲内でのみ取り扱う。Q7-39：利用目的の達成に必要な範囲なら分析技術の改善に使える（個別判断）</td><td>学習に使わない範囲（音声認識、要約など）</td><td>音声認識の学習なしはビジネス Plus、エンタープライズ、士業向け特別プラン。音声認識以外のAI機能の学習には全プランで提供しないと説明</td></tr><tr><td>個人情報の取扱い</td><td>法第25条。GL 3-4-4：安全管理措置と、取扱状況を委託元が把握することを委託契約に盛り込むのが望ましい</td><td>安全管理措置、アクセスできる人、報告の頻度</td><td>保存先はAWS東京リージョン。操作ログはエンタープライズ</td></tr><tr><td>保存・削除</td><td>民法第645条：委任の終了後は遅滞なく結果を報告。削除の期限を定めた規定は確認できなかった</td><td>保存期間、消す範囲、消したことの報告</td><td>手動で消すまで保管。ゴミ箱は30日。バックアップは最大180日。自動削除はエンタープライズ</td></tr><tr><td>品質・検収</td><td>請負は民法第559条で第562条の追完を準用、第636条。委任は第644条の善管注意義務</td><td>人が確認する範囲、検収の基準</td><td>規約第10条：完全なテキストを保証しない。第16条：正確性を保証しない</td></tr><tr><td>事故と責任</td><td>民法第415条。Q6-22：取り扱わないクラウドでも、契約等に基づく通知などの対応が求められる</td><td>連絡の期限、賠償の範囲</td><td>規約第16条：賠償の上限は過去6か月に受領した利用料金の総額</td></tr></tbody></table></div>
+<p>「契約書に書く項目」は当サイトの整理で、条文例ではありません。経済産業省のAI利用・開発の契約チェックリストは、本日サイトの応答が403で本文を読めず、内容は確認できませんでした。</p>
+<h2 id="判断軸1-ツールの利用を-再委託-として扱うかを先に決める">判断軸1｜ツールの利用を「再委託」として扱うかを先に決める</h2>
+<p>民法第644条の2の許諾の定めは、第656条で法律行為でない事務の委託にも準用されます。一方、請負の節（第632条〜第642条）に同じ趣旨の定めは見当たりませんでした。業務委託が請負か準委任かは、名前ではなく契約の中身で変わります。</p>
+<p>ここで迷うのがSaaSの扱いです。ツールの利用が復受任者の選任や再委託に当たるかを、民法もガイドラインも名指ししていません。個人データの場面では、Q7-53が判断の基準を「クラウド事業者が個人データを取り扱うこととなっているか」に置いています。委託か、取り扱わないクラウドかの整理は<a href="../appi-transcription-outsourcing/">AI文字起こしは委託か第三者提供か</a>に書きました。</p>
+<p>解釈を争うより、書いてしまうほうが手間は小さいはずです。「再委託は事前の書面承諾が必要」とだけある契約でも、受託者はツール名とプランを示して承諾を取っておくと説明しやすくなります。ガイドラインの※4は、委託元が必要かつ適切な監督をしていない場合、再委託先の不適切な取扱いが委託元の法違反と判断され得るとしています。発注者もツール名を知らないままでは困ります。</p>
+<h2 id="判断軸2-学習に使わない-と書くなら-受託者のプランまで決める">判断軸2｜「学習に使わない」と書くなら、受託者のプランまで決める</h2>
+<p>Q7-39のとおり、分析技術の改善に使えるかは個別判断です。学習の可否は、契約書に書いて答えを固定しておきたい項目です。</p>
+<p>ただし「学習に使わない」と書くなら、受託者が実際に守れる必要があります。Nottaの規約第10条には、パートナー企業が「お客様がご利用のプランに応じて」音声データを音声認識トレーニングに利用する場合があると書かれています。ヘルプの比較表では、ビジネス Plusは「なし（データ未利用）」、ビジネスは「あり」です。同じサービス名でもプランで答えが変わるので、発注者はツール名だけでなくプラン名まで確認します。</p>
+<p>「AIの学習に使わない」とだけ書くと、音声認識と要約のどちらを指すのかも曖昧です。</p>
+<p>受託者がNottaと直接書面を交わしたい場合、法人契約FAQは、ビジネスとエンタープライズの購入予定者は契約書・NDAを締結できるとしています。ビジネス Plusの扱いはFAQに明記がなく、確認できませんでした。</p>
+<p>発注者へ「音声認識の学習に使わない」と契約書で約束したい受託者や、受託者のプランを指定したい発注者には、法人向けの条件が比較の入口になります。ビジネス Plusは年64,800円（税抜）です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="判断軸3-消せる範囲と-賠償の差を条文に合わせる">判断軸3｜消せる範囲と、賠償の差を条文に合わせる</h2>
+<p>衝突しやすいのは「業務の終了後、データを直ちに全て消去する」という書き方です。法人契約FAQによると、Nottaのデータは手動で削除しない限り保管され続け、バックアップは毎日1回、35世代分、最大180日間保存されます。削除したデータはゴミ箱に入り、30日後に完全に削除されます（手動でも空にできます）。</p>
+<p>削除したデータがバックアップからいつ消えるかは、確認した公開ページには書かれていませんでした。消去の報告を約束するなら、受託者が操作できる範囲を「ゴミ箱からの完全削除まで」と書くのか、バックアップまで含めるのかを事業者に確認してから決めます。</p>
+<p>賠償も同じです。規約第16条の上限は、損害の事由が生じた時点から遡って過去6か月に受領した利用料金の総額です。受託者が発注者に負う責任は業務委託契約の定めによるので、ツールの上限とは別です。差が大きいなら、契約の上限額を検討する論点になります。品質も同じで、規約第10条は確認と編集を利用者に求めています。人が校正して納品するかは、検収の条項に書いておきます。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：音声認識のパートナーの社名は公開ページで確認できませんでした。再委託先の報告を求める条項には、問い合わせが要ります。規約第3条は、利用者の承諾なく通知で規約を変更できるとしています</li><li><strong>Notta ビジネス</strong>：音声認識の学習はヘルプの比較表で「あり」です。学習禁止の条項とは合いません</li><li><strong>Notta ビジネス Plus</strong>：学習は止まりますが、操作ログと自動削除はエンタープライズの機能です。取扱状況の報告と削除は手作業の管理になります</li><li><strong>この記事の限界</strong>：契約類型の判断や条文の作成はしていません。ツール側はNottaだけで、他社の条件は読んでいません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="契約書にAIの言葉がなければ-受託者はツールを使ってよいですか">契約書にAIの言葉がなければ、受託者はツールを使ってよいですか</h3>
+<p>書かれていないことは、使ってよいという意味にはなりません。再委託、秘密保持、個人情報の条項が関わるので、発注者へ先に確認します。</p>
+<h3 id="発注者がクラウドの利用を禁じている場合はどうしますか">発注者がクラウドの利用を禁じている場合はどうしますか</h3>
+<p>クラウドのプランでは条件を満たしません。端末内で処理する方法は<a href="../on-device-offline-transcription/">文字起こしの端末内処理とオフラインAI</a>で整理しました。</p>
+<h3 id="無料プランを受託業務に使えますか">無料プランを受託業務に使えますか</h3>
+<p>個人情報や秘密情報を含む業務には薦めません。公式ページで「AI学習なし」と書かれたプランに無料プランは入っておらず、学習禁止の条項を守る説明ができないためです。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>ツールの利用が再委託に当たるかを名指しした記述はない。ツール名、プラン、変更時の連絡を契約書に書いて決める</li><li>「学習に使わない」はプランで答えが変わる。Nottaで音声認識の学習なしはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン</li><li>削除はゴミ箱30日とバックアップ最大180日、賠償は過去6か月の利用料金が上限。消せる範囲と責任の差を条文に合わせる</li></ul>
+<h3 id="確認した公式情報-2026年11月6日">確認した公式情報（2026年11月6日）</h3>
+<ul><li>e-Gov法令検索「民法」第415条、第559条、第562条、第632条〜第642条、第644条、第644条の2、第645条、第656条、「個人情報の保護に関する法律」第23条、第25条、第27条</li><li>個人情報保護委員会「個人情報の保護に関する法律についてのガイドライン（通則編）」3-4-4、「ガイドラインに関するQ&amp;A」Q6-22、Q7-34、Q7-37〜Q7-39、Q7-53</li><li>Notta 利用規約（2025年8月1日改訂）、料金ページ、法人向けページ、ヘルプ「法人契約に関するよくある質問」「AI学習について」「「ビジネス Plus」と「ビジネスプラン」の違いは何ですか？」「データの削除・復元」「ノートおよびフォルダの自動削除」「操作ログの取得と保存」</li><li>確認できなかったもの：経済産業省のAI利用・開発の契約チェックリスト（本日403で未読）</li></ul>
+<p>※本記事は上記の公開資料を2026年11月6日に確認して整理したもので、法律の助言ではありません。業務委託契約への当てはめは当サイトの整理で、個人情報保護委員会の見解ではありません。契約書の作成や解釈は弁護士など専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

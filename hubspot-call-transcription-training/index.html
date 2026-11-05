@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ｜AIツール実用ガイド</title>
+<meta name="description" content="HubSpotで商談の通話を録音・文字起こしする営業責任者向け。顧客規約と公式ヘルプを読み、学習に関わる3つの設定と、止めても残るものをNottaの条件と並べて整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/hubspot-call-transcription-training/">
+<meta property="og:title" content="HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ｜AIツール実用ガイド">
+<meta property="og:description" content="HubSpotで商談の通話を録音・文字起こしする営業責任者向け。顧客規約と公式ヘルプを読み、学習に関わる3つの設定と、止めても残るものをNottaの条件と並べて整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ", "description": "HubSpotで商談の通話を録音・文字起こしする営業責任者向け。顧客規約と公式ヘルプを読み、学習に関わる3つの設定と、止めても残るものをNottaの条件と並べて整理しました。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/hubspot-call-transcription-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</h1><p class="meta">2026-11-06 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、HubSpotの規約は顧客データをAIモデルの学習に使えると定め、AI Model Trainingの設定は初期状態でオンです。通話の文字起こしを名指しした記述は確認できませんでしたが、定義からは対象に含まれると読めます。機密の商談なら、Super Adminが先に確認してください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="録り方ごとに-確認する設定が違う">録り方ごとに、確認する設定が違う</h2>
+<p>2026年11月6日に、HubSpotの規約（英語版）とナレッジベースを読みました。同じ通話の文字起こしでも、経路で置き場所と設定が変わります。</p>
+<div class="tw"><table><thead><tr><th>録り方</th><th>文字起こしの条件</th><th>音声の置き場所（公式の記載）</th><th>学習に関わる設定</th><th>見落としやすい点</th></tr></thead><tbody><tr><td>HubSpotの通話機能</td><td>Sales Hub・Service Hub のPro以上で、シートの割当が要る</td><td>Twilioのサーバー</td><td>AI Model Training、Help improve your transcriptions</td><td>録音リンクは認証なし</td></tr><tr><td>Notetaker（会議に入るボット）</td><td>Sales Hub・Service Hub のStarter以上</td><td>HubSpotのファイルマネージャーに2年。Recall.ai側は会議終了の7日後に削除</td><td>AI Model Training（Notetakerの名指しは確認できず）</td><td>Sensitive Dataの対象外</td></tr><tr><td>Web会議アプリの同期</td><td>Sales Hub・Service Hub のPro以上</td><td>連携元とHubSpotの両方</td><td>同上（名指しは確認できず）</td><td>切っても同期が続く連携がある</td></tr><tr><td>外部ツールからCRMへ同期</td><td>外部ツールの契約による</td><td>音声は外部ツール側、要約はHubSpotへ</td><td>外部ツールの学習設定とAI Model Trainingの両方</td><td>設定を見る先が2か所になる</td></tr></tbody></table></div>
+<p>「学習に関わる設定」の欄は当サイトの整理です。</p>
+<h2 id="判断軸1-学習-に関わるスイッチを3つに分ける">判断軸1｜「学習」に関わるスイッチを3つに分ける</h2>
+<p>顧客規約の5.3.1は、顧客データをAI機能の開発・改善に使えること、AIモデルの学習に使えること、設定でオプトアウトできることを定めています。顧客データの定義は、サブスクリプションサービスを通じて提出または収集したすべての情報です。文字起こしもこの定義に入ると読めますが、これは当サイトの読みです。学習の説明記事に挙がる例は商談履歴やCRMの活動で、文字起こしは出てきません。</p>
+<ul><li><strong>AI Model Training</strong>：HubSpot自身のモデルの学習に顧客データを使うかの設定です。初期状態はオンで、変更はSuper Adminだけができます。自社のデータだけで学習するモデルと、複数アカウントのデータで学習するモデルの両方があると説明されています</li><li><strong>Help improve your transcriptions</strong>：通話設定のチェックボックスです。選ぶと、HubSpotに通話音声の保存、手作業の書き起こし、ラベル付けを許可することになります。録音は人のレビューを受ける場合があり、外部の委託先も書き起こしの間は録音にアクセスします。初期状態の記載は確認できませんでした</li><li><strong>Customer conversation data</strong>：AIが通話の文字起こしやメールを要約・応答に使うかの設定です。初期状態はオンです。学習ではなく、AIに読ませるかの話です</li></ul>
+<p>外部のAI事業者について、HubSpotは学習への利用を認めていないと説明しています。ゼロデータ保持は「可能な範囲で」との書き方です。つまり「外部のAIには学習されない」という説明は、HubSpot自身のモデルの話を含みません。</p>
+<h2 id="判断軸2-止めたあとに何が残るかを確認する">判断軸2｜止めたあとに何が残るかを確認する</h2>
+<p>AI Model Trainingをオフにしても、AI機能へのアクセスは制限されないと公式は説明しています。一方で、次の点が残ります。</p>
+<ul><li><strong>過去分</strong>：学習済みのモデルからデータは消せず、オプトアウトは今後にだけ効きます</li><li><strong>データエンリッチメント</strong>：AI Model Trainingとは別の管理です。片方を切っても、もう片方は切れません</li><li><strong>複数アカウント</strong>：設定はアカウント単位です</li><li><strong>既存の録音</strong>：文字起こしのスイッチを切っても、既存の録音と文字起こしは削除されません。連携アプリが文字起こしを同期し続ける場合もあると書かれています</li></ul>
+<p>公式の記事には、録音リンクは認証がなく、URLは推測しにくいものの、知る人は誰でも再生できると書かれています。通話録音の保存期間は確認できませんでした。</p>
+<p>Enterpriseで使えるSensitive Dataをオンにすると、学習から自動的に外れ、オプトインもできません。ただしNotetakerはこの対象外です。Sensitive Dataが通話の録音や文字起こしに与える影響も、確認できませんでした。</p>
+<p>録音の同意は製品別規約の8.8が利用者の責任と定めています。伝え方は<a href="../recording-consent-meeting/">会議の録音、参加者の同意はどう取る？</a>で整理しています。</p>
+<h2 id="判断軸3-HubSpotの外で文字にするなら-2か所を見る">判断軸3｜HubSpotの外で文字にするなら、2か所を見る</h2>
+<p>別のツールで文字にしてCRMへ入れる構成もあります（<a href="../sales-call-transcription/">営業の商談を録音して文字起こしする方法</a>）。</p>
+<p>たとえば<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプは、ビジネスとエンタープライズでAI要約をHubSpotへ同期できると説明しています。対象はカレンダー経由で録音した会議です。法人向けページのビジネス Plusには「すべての ビジネス機能」を含むとあります。</p>
+<p>音声認識の学習が「なし」なのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。音声認識以外のAI機能は、全プランで学習に提供していないと説明されています。保管先は東京のデータセンターです。プランの差は<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>にあります。</p>
+<p>同期した要約はHubSpotに入るので、規約の定義上は顧客データになると読めます。Notta側で学習を止めても、HubSpot側のAI Model Trainingは別に確認します。HubSpotの通話機能だけで足りるなら、設定を切ればよく、Nottaを足す理由はありません。</p>
+<p>音声認識の学習を機能として止めたうえで、通話機能を使わずに商談を文字にしたい営業チームなら、法人向けの条件を確認する価値があります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>HubSpot</strong>：学習の初期状態はオンで、変更できるのはSuper Adminだけです。過去分は戻せません</li><li><strong>Notetaker</strong>：録音はファイルマネージャーに2年保持され、Sensitive Dataの対象外です</li><li><strong>Notta ビジネス Plus</strong>：操作ログはエンタープライズの機能です。CRM同期はカレンダー経由の録音に限られます</li><li><strong>この記事の限界</strong>：データ処理契約書とSensitive Data Termsは読んでいません。管理画面の実機確認もしていません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="学習をオプトアウトすると文字起こしやAI要約は使えなくなりますか">学習をオプトアウトすると文字起こしやAI要約は使えなくなりますか</h3>
+<p>公式は、オプトアウトしてもAI機能へのアクセスは制限されないと説明しています。AIの要約を止めたい場合はCustomer conversation dataの設定を見ます。切ったときの影響の詳細は確認できませんでした。</p>
+<h3 id="過去の通話データを学習から外せますか">過去の通話データを学習から外せますか</h3>
+<p>公式は、使われたデータを学習済みモデルから消すことはできないと説明しています。心配な場合はHubSpotの窓口に確認してください。</p>
+<h3 id="日本語の通話も文字起こしされますか">日本語の通話も文字起こしされますか</h3>
+<p>公式の言語一覧に、通話と会議の自動文字起こしの対応言語として日本語が載っています。精度はこの記事では評価していません。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>HubSpotの規約は顧客データの学習利用を定め、AI Model Trainingは初期状態でオン。文字起こしの名指しは確認できないが定義上は含まれると読める</li><li>学習に関わる設定は3つに分かれ、外部AIの学習禁止はHubSpot自身のモデルの話を含まない</li><li>オプトアウトは今後にだけ効き、Nottaなどから同期した要約もHubSpot側の設定を別に確認する</li></ul>
+<h3 id="確認した公式情報-2026年11月6日">確認した公式情報（2026年11月6日）</h3>
+<ul><li>HubSpot「Customer Terms of Service」5.3.1、「Product Specific Terms」8.8（いずれも2026年9月16日更新、英語版）</li><li>HubSpot ナレッジベース「Understand HubSpot's AI model training」「Manage your AI settings」「HubSpot AI Cloud Infrastructure」FAQ、「Set up a HubSpot account to adopt AI features」</li><li>HubSpot ナレッジベース「Review call recordings and transcripts」「Improve your transcripts」「Manage call settings and preferences」「Call recording best practices」「Sync conversation transcripts into HubSpot」</li><li>HubSpot ナレッジベース「Record and take notes in meetings with Notetaker」「Notetaker best practices」「Understand how Sensitive Data is used」「HubSpot language offerings」</li><li>Notta 料金ページ、法人向けページ、利用規約、ヘルプ「AI学習について」「議事録をCRM（Salesforce・HubSpot）に自動同期する」「データは国内に保存されていますか？」</li></ul>
+<p>※本記事は上記の公開資料を2026年11月6日に確認して整理したもので、法律の助言ではありません。文字起こしが顧客データに当たるという読みは当サイトの整理で、HubSpotの見解ではありません。契約の個別条件はHubSpotの窓口や専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

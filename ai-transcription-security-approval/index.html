@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料｜AIツール実用ガイド</title>
+<meta name="description" content="AI文字起こしを情報セキュリティ委員会に諮る担当者向け。IPAの規程サンプルと個人情報保護委員会の通則編から、問われる6点と添付資料、条件付き承認の書き方を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/ai-transcription-security-approval/">
+<meta property="og:title" content="AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料｜AIツール実用ガイド">
+<meta property="og:description" content="AI文字起こしを情報セキュリティ委員会に諮る担当者向け。IPAの規程サンプルと個人情報保護委員会の通則編から、問われる6点と添付資料、条件付き承認の書き方を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料", "description": "AI文字起こしを情報セキュリティ委員会に諮る担当者向け。IPAの規程サンプルと個人情報保護委員会の通則編から、問われる6点と添付資料、条件付き承認の書き方を整理しました。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/ai-transcription-security-approval/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</h1><p class="meta">2026-11-06 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、情報セキュリティ委員会で決めるのはツールの優劣より、<strong>どの情報を載せ、残るリスクを誰が受け入れ、いつ見直すか</strong>です。製品の説明を厚くするより、情報区分ごとの条件付き承認案に、規程との対照表とデータの流れ図を添えるほうが審議に乗りやすいと考えます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="委員会で問われる6点と-出す資料">委員会で問われる6点と、出す資料</h2>
+<p>2026年11月6日に、IPA「中小企業の情報セキュリティ対策ガイドライン」第4.0版の本編と付録5（規程サンプル）・付録7（クラウドサービス安全利用の手引き）、個人情報保護委員会の通則編ガイドライン、AI事業者ガイドライン第1.2版、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ページとヘルプを確認しました。</p>
+<div class="tw"><table><thead><tr><th>問われること</th><th>根拠にした資料</th><th>出す資料</th><th>Nottaの公開情報</th></tr></thead><tbody><tr><td>どの業務の、どの情報を載せるか</td><td>手引きNo.1・3</td><td>対象業務と情報区分の表</td><td>自社で作る欄</td></tr><tr><td>社内規程と矛盾しないか</td><td>手引きNo.4、規程サンプル</td><td>規程の対照表</td><td>多要素認証は非対応とFAQに記載</td></tr><tr><td>事業者の対策は足りるか</td><td>手引きNo.5・6、規程サンプル3.5.2</td><td>認証の写しと回答シート</td><td>ISO/IEC 27001、SOC2。チェックシートはフォーム入力後に取得</td></tr><tr><td>音声はどこへ行くか</td><td>個人情報保護法第25条、通則編3-4-4・10-7、手引きNo.15</td><td>データの流れ図</td><td>保管は東京のAWS。音声認識は第三者の国内パートナー</td></tr><tr><td>誰が使い、何が記録に残るか</td><td>手引きNo.8・9、通則編10-3</td><td>権限とログの運用案</td><td>IP制限はビジネス、SSOと操作ログはエンタープライズ</td></tr><tr><td>やめるとき、事故のときどうするか</td><td>手引きNo.13、本編（9）取引先/外部情報サービスの管理</td><td>削除手順と連絡体制</td><td>消すまで無期限に保管。自動削除はエンタープライズ</td></tr></tbody></table></div>
+<p>AI文字起こしを名指しした審議基準は、読んだ資料には見当たりませんでした。6点はクラウド全般の確認事項を当てはめた当サイトの整理です。JIS Q 27001の本文は読んでおらず、経済産業省のサイバーセキュリティ経営ガイドラインは取得できず未確認です。</p>
+<p>費用や効果の欄は<a href="../minutes-ai-approval-doc/">AI議事録の導入稟議の書き方</a>、回答欄の埋め方は<a href="../ai-tool-security-checklist/">AIツール利用申請のセキュリティチェックシート</a>に分けました。ここでは委員会の議案に組み直す段階を扱います。</p>
+<h2 id="委員会は何を決める場なのか">委員会は何を決める場なのか</h2>
+<p>IPAの本編は、経営層が参加する情報セキュリティ委員会等で基本方針や資源配分を審議し、決定内容の記録、全社への周知とフォローを求めています。規程サンプルは委員会の役目を、対策状況の把握、指針の策定と見直し、情報の共有としています。</p>
+<p>議案に要るのは「安全です」という説明ではなく、決めてもらう事項です。次の4つを1枚に書きます。</p>
+<ul><li>対象にする業務と、載せてよい情報区分</li><li>載せない情報の例</li><li>承認の条件（プラン、認証方式、保存期間）</li><li>責任者と、次に見直す時期</li></ul>
+<h2 id="判断軸1-情報区分ごとの条件付き承認にするか">判断軸1｜情報区分ごとの条件付き承認にするか</h2>
+<p>手引きはNo.1で業務と扱う情報の切り分けを、No.3で漏えいや停止の影響の確認を挙げています。全社一律の可否を問うと、最も機密の高い会議に議論が引っ張られます。</p>
+<p>そこで、社内の定例は可、社外秘を含む会議は学習なしのプランに限る、人事や未公表の経営情報は対象外、のように区分ごとに案を分けます。線の位置は各社が決めるものです。</p>
+<p>AI事業者ガイドラインも、AI利用者に機密情報等を不適切に入力しないよう注意を払うこと、提供者の文書を保管・活用することを挙げています（U-5、U-7）。</p>
+<h2 id="判断軸2-規程の文言に製品の仕様を当てはめられるか">判断軸2｜規程の文言に製品の仕様を当てはめられるか</h2>
+<p>委員会で止まりやすいのは、規程の文言と仕様がずれる箇所です。IPAの規程サンプルを土台にしている会社なら、次の2つは先に確かめる価値があります。</p>
+<p><strong>多要素認証</strong>：サンプルは、社外秘または極秘の情報資産を扱うクラウドサービスへのアクセスに常に多要素認証を使うとしています。Nottaの法人契約FAQには、多要素認証・2段階認証に対応していないとあります。SSOはエンタープライズの機能なので、社内の認証基盤側で多要素にできるかが確認点です。サンプルは要素の例に「その他の情報（例:IPアドレス）」も挙げています。パスワードとIP制限の組み合わせで足りるかは、自社の規程に照らして委員会が判断する事項です。</p>
+<p><strong>適合性評価</strong>：サンプル3.5.2は認証・認定の取得を要件とし、ISMSクラウドセキュリティ認証、クラウド情報セキュリティ監査、プライバシーマーク、PCI DSS、情報開示認定、ISMAPを列挙しています。Nottaの公開ページで今回確認できたのはISO/IEC 27001とSOC2で、この列挙の制度の記載は見つけられませんでした。ISMAPのリストはページが読み込めず未確認です。列挙にない認証で足りるとするなら、その理由を議案に書きます。認証範囲の見方は<a href="../isms-ai-transcription/">ISMS取得企業のAI文字起こし承認基準</a>で扱っています。</p>
+<h2 id="判断軸3-残るリスクを誰が受け入れるか">判断軸3｜残るリスクを誰が受け入れるか</h2>
+<p>通則編の3-4-4は、委託先の安全管理措置を事前に確認すること、取扱状況を把握し適切に評価することが望ましいことを示します。外国で個人データを扱う場合は10-7の外的環境の把握も関係します。委託に当たるかの整理は<a href="../appi-transcription-outsourcing/">AI文字起こしは個人情報保護法の委託か第三者提供か</a>を見てください。</p>
+<p>公開情報で埋まらない欄は残ります。たとえばNottaの規約第10条は翻訳に第三者のAPIを使うと書いていますが、提供元の名前はありません。こうした欄は「未確認」のまま議案に載せ、受け入れる責任者と見直しの時期を議事録に残します。</p>
+<p>Nottaの「AI学習なし」はビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランの機能です。学習なしでは音声と認識結果がパートナー側に保存されないとヘルプは説明しています。</p>
+<p>社外秘を含む会議も対象に入れ、学習なしを承認条件に置く法人なら、法人向けの条件を確認しておくと議案が具体的になります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="準備は開催日から逆算する">準備は開催日から逆算する</h2>
+<ul><li><strong>回答シート</strong>：公開版はフォーム入力後に取得できます。自社書式への個別回答はビジネスとエンタープライズの利用者・検討者が対象で、返却まで2〜3週間ほどとヘルプにあります。回答できない項目もあると書かれています</li><li><strong>報告書</strong>：SOC2報告書の閲覧には秘密保持契約が必要とヘルプにあります。ISO/IEC 27001は検索サイトで認証番号を確認できると案内されています</li><li><strong>実測</strong>：法人向けページに7日間の無料トライアルの案内があります。試用の音声も対象区分の案に合わせます</li></ul>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：多要素認証は非対応です。保存先のリージョンは選べません。SOC2のヘルプは2023年受領の記載で、最新の対象期間は確認できませんでした</li><li><strong>Notta ビジネス Plus</strong>：学習は止まりますが、SSO、操作ログ、自動削除はエンタープライズの機能です。保存期間は手動の運用になります</li><li><strong>Notta エンタープライズ</strong>：料金は要相談で、見積もりの時間を見込みます</li><li><strong>条件付き承認</strong>：線引きが利用者に委ねられ、誤って載せる余地が残ります</li><li><strong>この記事の限界</strong>：IPAの資料は中小企業向けのサンプルです。自社の規程が優先します</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="情報セキュリティ委員会がない会社はどうしますか">情報セキュリティ委員会がない会社はどうしますか</h3>
+<p>読んだ資料に、設置を一律に義務づける記述は見当たりませんでした。IPAの本編も「委員会等」と書いています。責任者が決裁する場でも、同じ6点と決定の記録は使えます。</p>
+<h3 id="無料プランで試してから諮ってもいいですか">無料プランで試してから諮ってもいいですか</h3>
+<p>機密を含む音声では勧めません。「AI学習なし」が機能に挙がるのは上位プランと士業向け特別プランです。試すなら社外秘を含まない音声に限ります。</p>
+<h3 id="ISO-27001があれば委員会は通りますか">ISO 27001があれば委員会は通りますか</h3>
+<p>自動的に通るとは言えません。学習の扱いや社内の認証方式は別に確認が要り、求める認証の種類は自社の規程の文言で決まります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>委員会には製品説明ではなく、対象情報、承認条件、責任者、見直し時期という決める事項を1枚で出す</li><li>規程との差は多要素認証と適合性評価の列挙で出やすい。Nottaは多要素認証に非対応で、SSOはエンタープライズ</li><li>公開情報で埋まらない欄は未確認のまま載せ、受け入れた人と時期を記録する。個別回答は2〜3週間を見込む</li></ul>
+<h3 id="確認した公式情報-2026年11月6日">確認した公式情報（2026年11月6日）</h3>
+<ul><li>IPA「中小企業の情報セキュリティ対策ガイドライン」第4.0版 本編、付録5「情報セキュリティ関連規程（サンプル）」、付録7「中小企業のためのクラウドサービス安全利用の手引き」</li><li>個人情報保護委員会「個人情報の保護に関する法律についてのガイドライン（通則編）」3-4-4、10-3、10-7</li><li>総務省・経済産業省「AI事業者ガイドライン（第1.2版）」第5部 AI利用者（U-5、U-7）</li><li>Notta 料金ページ、法人向けページ、セキュリティページ、利用規約、ヘルプ「AI学習について」「法人契約に関するよくある質問」「セキュリティに関する書類に回答を記入してもらえませんか？」ほか</li></ul>
+<p>※本記事は上記の公開資料を2026年11月6日に確認して整理したもので、法律の助言ではありません。6つの論点と規程への当てはめは当サイトの整理で、IPAや個人情報保護委員会の見解ではありません。個別の判断は所属組織の担当部門や専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『介護・看護の記録をAIで書く前に読む本』（Kindle・500円）：介護事業所・訪問看護で、利用者の情報をAIに入れてよいか、事業所のルール、利用者と家族への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7G1TCZ" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

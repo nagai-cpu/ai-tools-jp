@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>取引先のAI議事録ボットを断る社内ルール｜Zoom・Teams・Meetの制御｜AIツール実用ガイド</title>
+<meta name="description" content="取引先のAI議事録ボットを断りたい企業向け。Zoom・Teams・Meetの公式ヘルプで主催者の制御を比べ、相手主催の場合の断り方と社内ルールの書き方を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/other-party-ai-notetaker-refuse/">
+<meta property="og:title" content="取引先のAI議事録ボットを断る社内ルール｜Zoom・Teams・Meetの制御｜AIツール実用ガイド">
+<meta property="og:description" content="取引先のAI議事録ボットを断りたい企業向け。Zoom・Teams・Meetの公式ヘルプで主催者の制御を比べ、相手主催の場合の断り方と社内ルールの書き方を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "取引先のAI議事録ボットを断る社内ルール｜Zoom・Teams・Meetの制御", "description": "取引先のAI議事録ボットを断りたい企業向け。Zoom・Teams・Meetの公式ヘルプで主催者の制御を比べ、相手主催の場合の断り方と社内ルールの書き方を整理しました。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/other-party-ai-notetaker-refuse/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">取引先のAI議事録ボットを断る社内ルール｜Zoom・Teams・Meetの制御</h1><p class="meta">2026-11-06 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、ボットを設定で止められるのは自社が主催する会議だけです。Teamsは検知したボットをロビーで止め、遮断もできます。Meetは制限付きの設定で自動拒否、Zoomは認証や待機室を組み合わせます。相手主催の会議は言葉で断るしかなく、社内ルールには主催別の対応を書きます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="3つのWeb会議で-主催者にできることを並べる">3つのWeb会議で、主催者にできることを並べる</h2>
+<p>2026年11月6日に3社の公式ヘルプと管理者向け文書を読みました。仕組みはかなり違います。</p>
+<div class="tw"><table><thead><tr><th>Web会議</th><th>初期状態の動き</th><th>主催者が会議ごとにできること</th><th>管理者がまとめてできること</th><th>公式が書いている限界</th></tr></thead><tbody><tr><td>Microsoft Teams</td><td>検知したボットはロビーの設定に関係なくロビーで待ち、明示の許可が要る</td><td>ロビーから入れない。許可できる人を絞る</td><td>検知したボットの遮断（2026年9月23日のリリースノート）</td><td>検知漏れと、人の誤判定がありうる</td></tr><tr><td>Google Meet</td><td>主催者のアクセス設定による</td><td>制限付きで「参加リクエスト」を切ると、匿名の利用者や第三者ボットの申請は自動で拒否</td><td>組織が作った会議に参加できる範囲を指定</td><td>ボット専用の管理者スイッチは確認できず。制限付きは個人向け不可</td></tr><tr><td>Zoom</td><td>Web Appのボット保護が全アカウントで有効（無効化不可）</td><td>待機室、会議のロック、参加者の削除</td><td>SDKアプリの許可・遮断リスト、サインイン必須、ドメイン指定</td><td>サインイン必須だと、Zoomアカウントのない人も入れない</td></tr></tbody></table></div>
+<h2 id="判断軸1-誰の会議かで-できることが変わる">判断軸1｜誰の会議かで、できることが変わる</h2>
+<p>上の表は自社が主催する会議の話です。Teamsの文書も、対象を自組織が主催する会議としています。相手主催の会議で自社の設定が相手のボットを止める記述は、確認できませんでした。</p>
+<p><strong>自社主催の会議</strong>は設定で防ぎます。</p>
+<ul><li><strong>Teams</strong>：Microsoftは、ロビーから許可できる人を主催者と共同主催者に絞ることを勧めています。ロビーを通さない人の設定は主催者が変えられるので、固定するにはTeams Premiumの会議テンプレートか秘密度ラベルが要ります</li><li><strong>Meet</strong>：アクセスの種類を「信頼済み」か「制限付き」にします。設定は会議単位で、定例は最初の会議の設定を引き継ぎます。制限付きで「Anyone can ask to join」のチェックを外すのが表の操作です</li><li><strong>Zoom</strong>：管理者はMarketplaceのSDKアプリを遮断できます。サインイン必須はPro以上の説明で、相手がZoomアカウントを持たないと入れないので事前に確認します</li></ul>
+<p>Zoomには録画の許可という関門もあります。HubSpotのヘルプはNotetakerの録画にホストの承認が要ると書き、Nottaのヘルプも外部参加者によるローカルレコーディングの有効化が必要としています。他のツールは個別に確認してください。</p>
+<p><strong>相手主催の会議</strong>は、お願いするしかありません。</p>
+<h2 id="判断軸2-全面禁止にせず-会議の区分で決める">判断軸2｜全面禁止にせず、会議の区分で決める</h2>
+<p>「社外のAIボットはすべて断る」と書くと、取引先のルールとぶつかる場合があります。次のように区分で書く形が考えられます。</p>
+<ul><li><strong>断る</strong>：NDAの対象を話す会議、未公表の情報を扱う会議、人事や個人情報に触れる会議</li><li><strong>条件を聞いて判断する</strong>：通常の商談や定例。ツール名、学習の扱い、共有範囲、保存期間を確認する</li><li><strong>断らない</strong>：公開情報だけの説明会</li></ul>
+<p>NDAとの関係は<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>に、社内の規程の文面は<a href="../ai-minutes-guideline-template/">AI議事録の社内ガイドラインのテンプレート</a>にまとめました。区分は当サイトの例です。</p>
+<p>断る文面も先に用意します。</p>
+<ul><li><strong>招待の段階</strong>：「本日は機密情報を扱うため、AI議事録ツールの参加はご遠慮いただけますと幸いです。議事の要点は当社から共有いたします」</li><li><strong>会議の冒頭</strong>：「社内ルールで、外部の録音ツールが入る場合は確認が必要です。こちらのツールはどちらのサービスでしょうか」</li><li><strong>断りにくい相手</strong>：「参加いただく場合は、学習の扱いと保存期間を教えていただけますか」</li></ul>
+<p>HubSpotのNotetakerのように、設定で会議へ自動参加する製品もあります。相手の担当者が把握していない場合もあるので、責めずに確認する言い方が無難です。</p>
+<p>ルールに入れたいのが、ボットが見えない録音です。Nottaのヘルプによると、Botなし録音は端末で音声を取るので参加者リストに出ず、他の参加者に通知もされません。拡張機能型も同じ問題があります（<a href="../tactiq-training-data/">Tactiqの学習データ利用と法人の設定</a>）。入室の制御はこの種の録音には効かないと考えられるので、「録音する場合は事前に伝え合う」と書き、<a href="../recording-consent-meeting/">会議の録音の同意の取り方</a>も合わせて決めます。</p>
+<h2 id="判断軸3-断るなら-代わりの記録を自社で持つ">判断軸3｜断るなら、代わりの記録を自社で持つ</h2>
+<p>相手が議事録を求めているなら、「要点は当社から共有する」と言える体制があると断りやすくなります。</p>
+<p>自社で録るツールも、同じ基準で選びます。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式情報では、音声認識の学習が「なし」なのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。音声認識以外のAI機能は全プランで学習に提供していないと説明されています。保管先は東京のデータセンターです。</p>
+<p>ボットを断る側に回る以上、学習を止めた条件で自社の議事録を一本化したい企業なら、法人向けの条件を確認する価値があります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta Bot</strong>：相手から見れば、これも外部のボットです。今回の設定で止められる側になる場合があると考えられます。Teamsのサインイン必須の会議には未対応とヘルプにあります</li><li><strong>Nottaの Botなし録音</strong>：相手に通知は出ません。録音を伝える役は人が担います</li><li><strong>Teams</strong>：遮断の値は11月6日時点で管理者向けの解説記事に載っておらず、PowerShellの文書と値の名前にも差があります。実画面で確認してください</li><li><strong>Meet</strong>：招待者として入るアカウントの扱いは確認できませんでした</li><li><strong>この記事の限界</strong>：3社の設定は実機で試していません。各社のプラン別の差は読んだ範囲に限られます</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="相手主催の会議にボットがいたら-どうすればよいですか">相手主催の会議にボットがいたら、どうすればよいですか</h3>
+<p>主催者に確認します。機密の話題に入る前に「この先は記録を止めていただけますか」と伝え、難しければ話題を別の機会に回す判断もあります。</p>
+<h3 id="設定でボットを全部止められますか">設定でボットを全部止められますか</h3>
+<p>全部とは言えません。Microsoftは検知の漏れがあると明記しています。Zoomは複数の対策を組み合わせる説明です。設定と文面の両方で備えるのが現実的です。</p>
+<h3 id="社外の参加者が人間なのにボットと判定されたら">社外の参加者が人間なのにボットと判定されたら</h3>
+<p>Teamsでは、ロビーから許可して「This is not a bot」を選ぶと、その会議では通常の参加者になります。Zoomのボット保護は、判定された人もサインインで参加できると説明しています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>設定で止められるのは自社主催の会議だけ。相手主催は文面で断るので、主催別にルールを書く</li><li>Teamsは検知、Meetは制限付き、Zoomは認証と待機室が中心で、どれも止め切れるとは言えない</li><li>ボットが見えない録音もあるので事前申告を決め、断る代わりの記録は自社で学習なしの条件で持つ</li></ul>
+<h3 id="確認した公式情報-2026年11月6日">確認した公式情報（2026年11月6日）</h3>
+<ul><li>Microsoft Learn「Manage external bots and their access to meetings」「Teams Bot Identification Program」「Manage lobby options」「Set-CsTeamsMeetingPolicy」、Teamsリリースノート（2026年9月23日）</li><li>Google「Tips to control meeting access and participation」「Manage Meet settings (for admins)」</li><li>Zoom サポート「Blocking bots from joining meetings and webinars」「Managing SDK app access」「Allowing only authenticated users in meetings」「Changing security settings in a Zoom meeting」「Enabling or disabling computer recording」</li><li>HubSpot ナレッジベース「Record and take notes in meetings with Notetaker」</li><li>Notta 料金ページ、法人向けページ、ヘルプ「AI学習について」「Web会議の文字起こし」「BotなしでWeb会議を録音する方法」「データは国内に保存されていますか？」</li></ul>
+<p>※本記事は上記の公開資料を2026年11月6日に確認して整理したもので、法律の助言ではありません。断り方の文面と区分は当サイトの例です。個別の契約や規程の判断は専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『介護・看護の記録をAIで書く前に読む本』（Kindle・500円）：介護事業所・訪問看護で、利用者の情報をAIに入れてよいか、事業所のルール、利用者と家族への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7G1TCZ" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

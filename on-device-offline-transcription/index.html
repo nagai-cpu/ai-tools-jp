@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字起こしの端末内処理とオフラインAI｜機密で確かめるNottaの条件｜AIツール実用ガイド</title>
+<meta name="description" content="機密の録音を端末内やオフラインで文字起こししたい人向け。Nottaのプライバシーモードの通信・要約・保存の条件を公式で読み、ScribeAssistやWhisperと比べました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/on-device-offline-transcription/">
+<meta property="og:title" content="文字起こしの端末内処理とオフラインAI｜機密で確かめるNottaの条件｜AIツール実用ガイド">
+<meta property="og:description" content="機密の録音を端末内やオフラインで文字起こししたい人向け。Nottaのプライバシーモードの通信・要約・保存の条件を公式で読み、ScribeAssistやWhisperと比べました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "文字起こしの端末内処理とオフラインAI｜機密で確かめるNottaの条件", "description": "機密の録音を端末内やオフラインで文字起こししたい人向け。Nottaのプライバシーモードの通信・要約・保存の条件を公式で読み、ScribeAssistやWhisperと比べました。", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/on-device-offline-transcription/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">文字起こしの端末内処理とオフラインAI｜機密で確かめるNottaの条件</h1><p class="meta">2026-11-06 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、<strong>端末内処理とオフラインは同じ意味ではありません</strong>。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のプライバシーモードは音声を送らずPC内で処理しますが、月1回ほどのライセンス検証には接続が要り、公式ページはベータ版でAI要約に非対応としています。機密の要件が「送らない」か「繋がない」かを先に分けます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="端末内処理の3つの方法を-通信の条件で並べる">端末内処理の3つの方法を、通信の条件で並べる</h2>
+<p>音声を社外に出すかどうかの方式の比較は<a href="../cloud-vs-onprem-transcription/">クラウド文字起こしとオンプレの比較</a>にあります。この記事は「出さない」と決めた人が次に確かめる、通信、保存、要約の条件を扱います。2026年11月6日に、Nottaの公式ヘルプ、Nottaデスクトップのページとリリース、料金ページ、法人向けページ、ScribeAssistの製品ページ、WhisperのREADMEを確認しました。</p>
+<div class="tw"><table><thead><tr><th>方法</th><th>音声と文字の行き先</th><th>残る通信</th><th>要約</th><th>費用と環境</th><th>向いている人</th></tr></thead><tbody><tr><td>Notta 通常（クラウド）</td><td>サーバーへ送る。AWS東京リージョンに保管</td><td>常時必要</td><td>使える</td><td>料金ページの公開価格</td><td>送信は許容でき、学習を止めたい組織</td></tr><tr><td>Notta プライバシーモード</td><td>PC内の指定フォルダーのみ</td><td>初期設定、サインイン、利用資格の確認、アップデート、モデルの取得、月1回ほどのライセンス検証</td><td>クラウド処理の要約は停止または制限</td><td>プレミアム年14,220円（税込）から。Windows／macOS</td><td>既にNottaを使い、一部の録音だけ外に出したくない人</td></tr><tr><td>ScribeAssist</td><td>PC内。クラウドに保存・送信しないと記載</td><td>インターネット接続なしでも利用可。一部の要約は接続が必要</td><td>PC内で完結する方式とクラウド送信の方式がある</td><td>個別見積もり。Windows 10／11、14日間トライアル</td><td>音声を社外に出せない組織</td></tr><tr><td>Whisper（自前）</td><td>自分の環境</td><td>自分の構成による</td><td>別に用意する</td><td>ソフトは無料（MITライセンス）。Pythonとffmpegが必要</td><td>運用できる技術担当がいる組織</td></tr></tbody></table></div>
+<p>Nottaの無料プランはプライバシーモードの対象に挙がっていません。モバイルアプリの「録音開始」も、ヘルプによるとインターネット接続が必要です。</p>
+<h2 id="判断軸1-要件は-送らない-か-ネットに繋がない-か">判断軸1｜要件は「送らない」か「ネットに繋がない」か</h2>
+<p>ヘルプによると、プライバシーモードは録音と文字起こしをデバイス上で完結させ、データは指定したローカルフォルダーにのみ保存されます。録音や文字起こしの内容がクラウドの音声認識サービスに送られることはなく、学習にも利用されないと書かれています。</p>
+<p>一方、同じヘルプには、サインイン、利用資格の確認、アップデート、オフラインモデルのダウンロードなどにはインターネット接続が必要な場合があるとあります。オフラインで使う間の接続の要件は、およそ月1回の定期的なライセンス検証です。検証が済めば少なくとも1か月は完全にオフラインで使え、録音や文字起こし中に外部への通信は発生しないとされています。期間を過ぎて検証できないと、再接続を求められることがあります。</p>
+<p>「音声を外に送らない」要件なら、条件に合う可能性があります。「端末を一切ネットに繋がない」要件なら、月1回の検証が衝突します。後者の候補はScribeAssistです。製品ページには、インターネット接続なしでも利用可能で、LGWAN環境でも利用できるとあります。ただしライセンス認証の方式は複数あると書かれていて、完全に遮断した環境でどの方式を使うかは問い合わせが要ります。Whisperの導入の壁は<a href="../whisper-local-no-training/">Whisperをローカルで動かせば学習されない？</a>にまとめました。</p>
+<h2 id="判断軸2-公式の説明が割れている部分を試す">判断軸2｜公式の説明が割れている部分を試す</h2>
+<p>注意が要るのは、公式の文書どうしで書き方が違う点です。</p>
+<ul><li><strong>Botなし録音</strong>：ヘルプは、プライバシーモードは「Botなし録音」に対応していると書いています。一方、Nottaデスクトップのページは、ボットなし録音とプライバシーモードは別の機能で、現在ボットなし録音のデータは標準オンライン処理で文字起こし・要約されるとしています。Web会議の機密の録音で使うなら、処理先を担当窓口に確認してください</li><li><strong>提供の段階</strong>：7月8日のリリースは正式リリースの製品として「すべてのAI処理」をPC内で完結させると説明しています。デスクトップのページは、プライバシーモードは現在ベータ版で、文字起こしなどの基本機能に対応し、AI要約や企業向けの管理機能には対応していないとしています</li><li><strong>対応プラン</strong>：ヘルプはプレミアム・ビジネス・エンタープライズを挙げ、お支払い方法で異なる場合があると注記しています。請求書払いの有料プランは担当営業への問い合わせです。ビジネス Plusは名指しされていませんが、「Nottaプラン別機能一覧」ではプレミアムの機能に挙がり、ビジネス Plusは全てのプレミアム機能を含むとされています</li></ul>
+<p>モードはデスクトップ版全体に適用され、特定の録音だけを選んで適用することはできません。オンにしてから作業を始める必要があるので、切り替え忘れを防ぐ手順が要ります。ローカルのモデルの精度を示す数値は公式ページで確認できなかったので、実際の音声で試してから決めるのが無難です。</p>
+<h2 id="判断軸3-外に出さない分-端末と要約の運用を誰が持つか">判断軸3｜外に出さない分、端末と要約の運用を誰が持つか</h2>
+<p>端末内で処理すると、事業者の代わりに利用者が管理を引き受けます。記録は作成したデバイス内にのみ保存され、他の端末やクラウドには同期されません。ヘルプは、指定フォルダー内のファイルがセキュリティ設定、バックアップソフト、ファイル共有ツール、組織のITポリシーの影響を受ける場合があるとも書いています。保存先を同期フォルダーにすると、ツールが送らなくても別の経路で外に出ることになります。端末の暗号化と紛失時の手順も社内で決めます。</p>
+<p>要約も見落としやすい点です。プライバシーモードで作った文字を別のクラウド生成AIに貼れば、その時点で外部に送ることになります。ScribeAssistはこの点で、PC内で完結する要約と、クラウドの生成AIに文字起こし結果を送る要約を分けて案内しています。送る方式では、音声データや要約結果はクラウドに保存されないと書かれていますが、文字起こし結果は送信されます。</p>
+<p>現実的には、録音を機密度で分ける形が考えられます。社外に出せない会議はプライバシーモード、要約や共有まで要る会議はクラウドの学習なしプランです。社内の分け方は<a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける</a>が参考になります。</p>
+<p>要約や共有まで要る会議も学習なしで扱いたいチームには、クラウド側の法人プランが候補です。ビジネス Plusは年64,800円（税抜）で、音声認識の学習はヘルプの比較表で「なし」です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta プライバシーモード</strong>：公式ページの記載はベータ版で、AI要約と企業向けの管理機能に対応していません。接続なしで使い続けられる期間には限りがあります</li><li><strong>Notta 通常のクラウド</strong>：学習なしのプランでも音声はサーバーへ送られます。送信禁止の要件は満たしません</li><li><strong>ScribeAssist</strong>：価格は個別見積もりで、対応OSはWindows 10／11です。接続が要る要約の方式があります</li><li><strong>Whisper</strong>：導入と保守が全部自社に乗ります</li><li><strong>この記事の限界</strong>：実機で動かしていません。通信の有無は公式の説明によるもので、パケットを測ってはいません。他の端末内処理の製品は確認していません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="プライバシーモードの録音は-後でクラウドに自動で上がりますか">プライバシーモードの録音は、後でクラウドに自動で上がりますか</h3>
+<p>ヘルプによると、自動でアップロードされません。モードを終了しても同じです。クラウドで使いたい場合は手動でエクスポートし、通常のモードで読み込み直します。</p>
+<h3 id="機内モードのPCで文字起こしできますか">機内モードのPCで文字起こしできますか</h3>
+<p>ヘルプの説明では、準備とライセンス検証が済んでいれば、少なくとも1か月はオフラインで使えます。初回のモデル取得やサインインには接続が要ります。</p>
+<h3 id="日本語に対応していますか">日本語に対応していますか</h3>
+<p>ヘルプの2つのエンジンはどちらも日本語が対応言語です。Apple Speech AnalyzerはmacOS 26以降のみです。オフライン音声認識モデルの必要スペックは、ストレージ1.0GB、メモリ4GB、CPU2コア以上と書かれています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>端末内処理は「送らない」、オフラインは「繋がない」。Nottaのプライバシーモードは前者で、月1回ほどのライセンス検証に接続が要る</li><li>公式ページの記載はベータ版でAI要約に非対応。Botなし録音の処理先は公式の説明が割れているので、機密のWeb会議では確認する</li><li>保存先の同期、端末の管理、要約の経路は利用者の責任になる。要約まで要る会議はビジネス Plus（年64,800円・税抜）などクラウドの学習なしプランと分ける</li></ul>
+<h3 id="確認した公式情報-2026年11月6日">確認した公式情報（2026年11月6日）</h3>
+<ul><li>Notta ヘルプ「Nottaデスクトップ版のプライバシーモードとは？」（2026年10月16日更新）、「Nottaプラン別機能一覧」（2026年10月15日更新）、「Nottaデスクトップ版の始め方」（2026年10月7日更新）、「オフライン時にNottaモバイルアプリで録音・文字起こしはできますか？」（2026年8月27日更新）、「「ビジネス Plus」と「ビジネスプラン」の違いは何ですか？」、「法人契約に関するよくある質問」</li><li>Notta デスクトップのページ（notta.ai/desktop）、リリース「Notta、PCローカル環境で動作する「Nottaデスクトップ」をリリース」（2026年7月8日）、料金ページ、法人向けページ、利用規約</li><li>アドバンスト・メディア ScribeAssist製品ページ</li><li>OpenAI Whisper README（GitHub）</li></ul>
+<p>※本記事は上記の公開資料を2026年11月6日に確認して整理したもので、法律の助言ではありません。機密の扱いは所属組織の規程と担当部門の判断に従ってください。仕様や料金は変更されることがあります。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-transcription-security-approval/">AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料</a></li><li><a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認</a></li><li><a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で</a></li><li><a href="../chatwork-ai-training/">Chatwork AIの要約は学習される？法人が見る送信先と保持30日</a></li><li><a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしはAI学習に使われる？規約と設定の確認点3つ</a></li><li><a href="../notta-notion-integration/">NottaとNotionの連携で議事録を自動同期｜無料は手動、自動はビジネス以上</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>
