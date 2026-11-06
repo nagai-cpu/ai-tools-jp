@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Speech-to-Textのデータログ学習設定｜割引はV1だけ｜AIツール実用ガイド</title>
+<meta name="description" content="Speech-to-Textの音声が学習に使われるか確認したい開発・情シス向け。既定の扱い、データログの規約、無効化しても残るデータ、V1とV2の料金差を公式で整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/google-speech-to-text-data-logging/">
+<meta property="og:title" content="Google Speech-to-Textのデータログ学習設定｜割引はV1だけ｜AIツール実用ガイド">
+<meta property="og:description" content="Speech-to-Textの音声が学習に使われるか確認したい開発・情シス向け。既定の扱い、データログの規約、無効化しても残るデータ、V1とV2の料金差を公式で整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Google Speech-to-Textのデータログ学習設定｜割引はV1だけ", "description": "Speech-to-Textの音声が学習に使われるか確認したい開発・情シス向け。既定の扱い、データログの規約、無効化しても残るデータ、V1とV2の料金差を公式で整理しました。", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/google-speech-to-text-data-logging/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Google Speech-to-Textのデータログ学習設定｜割引はV1だけ</h1><p class="meta">2026-11-07 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Google Cloud Speech-to-Textのデータログは<strong>既定でオフ</strong>で、学習に使われるのは有効にしたプロジェクトだけです。ただし有効にすると、規約上は取り消せない許諾になり、無効化しても過去の分は残ります。割引の区分があるのはV1の料金表だけで、V2の通常単価は割引後のV1と同じです。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="データログの有無で変わること">データログの有無で変わること</h2>
+<p>2026年11月7日に、Google CloudのSpeech-to-Text公式ドキュメント（データログの説明、有効化の手順、オプトイン規約、Data usage FAQ、移行ガイド。いずれも10月26日更新）、料金ページ、Service Specific Termsを読んで確認しました。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>データログなし（既定）</th><th>データログあり（オプトイン）</th><th>残る確認</th></tr></thead><tbody><tr><td>学習への利用</td><td>FAQ：サービスの提供以外に使わない。規約第18条：事前の許可や指示なしに学習しない</td><td>機械学習技術の開発・改善に利用。作られたモデルはGoogleの所有</td><td>有効なプロジェクトの棚卸し</td></tr><tr><td>音声の保存</td><td>FAQ：ストリーミングと同期はメモリ上で処理し保存しない。非同期は結果を約5日保存し、入力音声は保存しない</td><td>規約：Googleは無期限に保持できる</td><td>一部のメタデータは一時的に記録される</td></tr><tr><td>共有の範囲</td><td>FAQ：提供に必要な場合を除き他者に渡さない</td><td>規約：関連会社と、守秘義務を負うベンダー・委託先への共有に同意</td><td>社内規程と合うか</td></tr><tr><td>やめたとき</td><td>該当なし</td><td>無効化後の記録は止まる。それまでの分はGoogleが保持を続ける</td><td>削除依頼の要否</td></tr><tr><td>プロジェクト削除</td><td>該当なし</td><td>公式の注意書き：削除しても記録済みのデータは消えない</td><td>専用フォームで依頼</td></tr><tr><td>単価（60分超・1分）</td><td>V1：0.024ドル</td><td>V1：0.016ドル</td><td>V2は区分なしで0.016ドル</td></tr></tbody></table></div>
+<p>FAQと手順のページは、公式サイトのV1の案内の下にあります。V2でどう扱うかは判断軸1で書きます。</p>
+<p>移行ガイドの「Logging」はコンソールで見られるログで、監査ログとともにこの制度とは別物です。ここでの「データログ」は、音声と文字起こしをGoogleの学習用に渡すプログラムを指します。</p>
+<h2 id="判断軸1-割引のためにV1に残る理由があるか">判断軸1｜割引のためにV1に残る理由があるか</h2>
+<p>料金ページでデータログの有無が分かれているのは、V1の表だけです。V2のStandardは月50万分まで1分0.016ドルで、ログの区分がありません。月1,000分で試算すると次のとおりです。</p>
+<ul><li><strong>V1・ログなし</strong>：先頭60分は無料で、残り940分が22.56ドル</li><li><strong>V1・ログあり</strong>：同じく940分で15.04ドル</li><li><strong>V2 Standard</strong>：1,000分で16.00ドル（表に無料の行は見当たりません）</li><li><strong>V2 動的バッチ</strong>：1分0.003ドルで3.00ドル</li></ul>
+<p>月60分以上使うなら、V1のログありがV2より安い差は毎月0.96ドルです。これは60分の無料分の金額で、月50万分までは利用量が増えても変わりません。取り消せない許諾と引き換えにするには小さい差だと当サイトは考えます。</p>
+<p>公式は新規ユーザーにV2を勧めていますが、移行は自動ではなく実装の変更が要ります。動的バッチは低コストと引き換えに遅延が大きく、バッチ認識でだけ使えます。</p>
+<p>V2にデータログの制度が無いと明記した文言は確認できませんでした。読めたのは、料金表に区分がないこと、手順がV1の案内にあること、V2のRecognizerのAPIリファレンスに該当項目が見当たらないことです。V2の根拠は規約第18条の学習制限になります。</p>
+<h2 id="判断軸2-同意する権限と-音声の持ち主の同意があるか">判断軸2｜同意する権限と、音声の持ち主の同意があるか</h2>
+<p>有効化の手順ページは、データの提供元から適切な許可を得ていることを確認するよう求めています。規約の中身は重めです。</p>
+<ul><li><strong>許諾の性質</strong>：Googleに対し、データを使用・匿名化・複製する永続的で取り消せない権利を与える</li><li><strong>権限</strong>：オプトインする人は、顧客を拘束する法的権限があると表明する</li><li><strong>顧客の保証</strong>：データ提供元から必要な権利・同意を得ている。13歳未満の子どもから得たデータや、子ども向けのサイト・サービスから得たデータを含まない。GoogleとHIPAAのBAAを結んでいない</li><li><strong>存続</strong>：許諾はGoogle Cloudの契約が終わっても続く</li></ul>
+<p>開発者が単価を見て押してよいボタンではありません。顧客との通話を流しているなら、録音される人の同意まで保証の範囲に入ります。</p>
+<p>日本の個人情報保護法との関係は規約に書かれていません。事業者自身の改善に使う話なので、委託の範囲に収まるかが論点になると当サイトは読みます。整理は<a href="../appi-transcription-outsourcing/">AI文字起こしは委託か第三者提供か</a>にあります。個別の判断は専門家に確認してください。</p>
+<p>範囲はプロジェクト単位で、有効にしていない別のプロジェクトの扱いは変わらないと公式は説明しています。</p>
+<h2 id="判断軸3-すでに有効かもしれないとき-どう確かめて戻すか">判断軸3｜すでに有効かもしれないとき、どう確かめて戻すか</h2>
+<p>過去の担当者が割引目的で有効にしていた可能性があるなら、次の順に確認します。手順は公式の英語表記です。</p>
+<ol><li>Google Cloudのコンソールで対象プロジェクトを開く</li><li>「APIs &amp; Services」の「Dashboard」から「Cloud Speech API」を選ぶ</li><li>左メニューの「Data logging」タブを開く</li><li>「Disable data logging」が出ていれば有効なので、押して無効化する</li></ol>
+<p>規約は、有効にした後の画面に無効化の選択肢が出ると説明しています。料金ページのV1の表はログの有無でSKUが別なので、請求レポートでも過去の利用を確認できると読めます。これは当サイトの読みで、実機では試していません。</p>
+<p>無効化で止まるのは、それ以降の記録だけです。過去の分を消したいなら、公式ページの削除依頼フォームから申請します。規約の対象は「集約されていない」データで、すでに学習に使われたモデルからの扱いは読んだページに説明がありませんでした。</p>
+<p>確認はプロジェクトごとなので、Speech-to-Textを使う全プロジェクトを見ます。組織のポリシーで止める<a href="../amazon-transcribe-ai-optout/">Amazon Transcribeの学習オプトアウト</a>とは構造が違います。他のツールは<a href="../transcription-optout-settings/">文字起こしAIのオプトアウト設定一覧</a>にまとめました。</p>
+<h2 id="APIを組まずに済ませたいなら">APIを組まずに済ませたいなら</h2>
+<p>自社のアプリに音声認識を組み込む用途なら、Speech-to-Textの設定を確認すれば足ります。用途が社内の会議や面談の記録なら話が変わります。APIなので、録音や共有の画面は別に用意することになります。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプでは、音声認識の「AI学習なし」はビジネス Plus（年64,800円・税抜）とエンタープライズの環境です。料金ページでは士業向け特別プランにも記載があります。学習なしの場合、音声と認識結果は認識エンジン提供元のサーバーに保存されないと説明されています。ビジネス以下のプランは学習の対象になりうるので、機密用途には向きません。</p>
+<p>開発の手を割かずに、機密の会議を学習なしの契約で記録したい法人に向きます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<p>音声を外部へ送ること自体が問題なら、どちらも合いません。<a href="../whisper-local-no-training/">Whisperをローカルで動かす方法</a>が比較に入ります。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>データログ（V1）</strong>：許諾は取り消せず、無効化やプロジェクト削除でも過去の分は残ります。Googleは無期限に保持できます</li><li><strong>Speech-to-Text V2</strong>：表に無料の行が見当たらず、データの扱いを説明するFAQはV1の案内の下にあります。V2の非同期処理の保存日数は確認できませんでした</li><li><strong>Notta（全プラン）</strong>：法人契約FAQは多要素認証・2段階認証に「対応しておりません」としています。手動で消さない限り録音は保管され続けます</li><li><strong>Notta ビジネス Plus</strong>：SSO、操作ログ、データの定期自動削除は、FAQではエンタープライズの機能として挙げられています</li><li><strong>この記事の限界</strong>：コンソールの実機では試していません。公式文書の読み取りです</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="何も設定していなければ学習に使われませんか">何も設定していなければ学習に使われませんか</h3>
+<p>公式のFAQは、オプトインしていなければサービスの提供以外に使わないと説明しています。規約第18条も、事前の許可や指示なしに学習しないとしています。ただし過去に誰かが有効にしていないかは、プロジェクトごとの確認が要ります。</p>
+<h3 id="データログを無効化すれば過去の音声も消えますか">データログを無効化すれば過去の音声も消えますか</h3>
+<p>消えません。規約は、無効化より前に記録された分はGoogleが保持を続けるとしています。プロジェクトを削除しても同じです。公式ページの削除依頼フォームから申請します。</p>
+<h3 id="V2でもデータログの割引はありますか">V2でもデータログの割引はありますか</h3>
+<p>2026年11月7日の料金ページでは、V2の表にログの有無の区分はありませんでした。Standardは月50万分まで1分0.016ドルで、V1のログありの単価と同じです。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>データログは既定でオフ。有効にしたプロジェクトの音声と文字起こしだけが学習に回る</li><li>許諾は永続で取り消せず、無効化やプロジェクト削除では過去の分は消えない。削除はフォームで依頼する</li><li>割引の区分はV1の料金表だけで、V2の通常単価は同額。割引目的でV1に残る差は月0.96ドル</li></ul>
+<h3 id="確認した公式情報-2026年11月7日">確認した公式情報（2026年11月7日）</h3>
+<ul><li>Speech-to-Text公式ドキュメント：Data logging、Enable data logging、Terms for opt-in for data logging、Data usage FAQ、移行ガイド、バッチ認識、Recognizer APIリファレンス、料金ページ</li><li>Google Cloud Service Specific Terms 第18条（Training Restriction）、Services Summary（AI/ML Services）</li><li>Notta 料金ページ、法人向けページ、利用規約、ヘルプ「AI学習について」「法人契約に関するよくある質問」「Nottaの料金プランについて」</li></ul>
+<p>※本記事は上記の公開資料を2026年11月7日に確認して整理したもので、法律の助言ではありません。規約の読み取りは当サイトの整理で、Googleの見解ではありません。単価は料金ページの定価欄で、割引プランや為替は含みません。契約への当てはめは、Googleの窓口や所属組織の担当部門、専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li><li><a href="../ginou-jisshu-interview-recording/">技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

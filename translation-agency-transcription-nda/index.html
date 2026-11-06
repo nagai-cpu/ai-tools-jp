@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>翻訳会社のAI文字起こしと秘密保持｜外注規約に足す項目と翻訳者の扱い｜AIツール実用ガイド</title>
+<meta name="description" content="音声・動画の翻訳案件でAI文字起こしを使いたい翻訳会社向け。JTFの契約ひな型2種とフリーランス法、Nottaの条件から、外注規約に書く項目と翻訳者へ渡す範囲を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/translation-agency-transcription-nda/">
+<meta property="og:title" content="翻訳会社のAI文字起こしと秘密保持｜外注規約に足す項目と翻訳者の扱い｜AIツール実用ガイド">
+<meta property="og:description" content="音声・動画の翻訳案件でAI文字起こしを使いたい翻訳会社向け。JTFの契約ひな型2種とフリーランス法、Nottaの条件から、外注規約に書く項目と翻訳者へ渡す範囲を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "翻訳会社のAI文字起こしと秘密保持｜外注規約に足す項目と翻訳者の扱い", "description": "音声・動画の翻訳案件でAI文字起こしを使いたい翻訳会社向け。JTFの契約ひな型2種とフリーランス法、Nottaの条件から、外注規約に書く項目と翻訳者へ渡す範囲を整理しました。", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/translation-agency-transcription-nda/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">翻訳会社のAI文字起こしと秘密保持｜外注規約に足す項目と翻訳者の扱い</h1><p class="meta">2026-11-07 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、翻訳会社が先に決めるのは<strong>誰のアカウントで音声を処理するか</strong>です。日本翻訳連盟（JTF）の契約ひな型2種にAIやクラウドの語はなく、再委託の条件も顧客向けと翻訳者向けで違います。社内の学習なし環境で起こし、翻訳者にはテキストを渡す形が説明しやすいと考えます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="JTFのひな型2種と-文字起こしで起きること">JTFのひな型2種と、文字起こしで起きること</h2>
+<p>2026年11月7日に、JTFの「翻訳基本契約のひな型」（2023年3月1日掲載のWord 2種）、アジア太平洋機械翻訳協会（AAMT）の「機械翻訳ポストエディットガイドライン」、e-Govのフリーランス法、公正取引委員会と厚生労働省の「法律の考え方」（令和8年10月1日改正）、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>の料金ページ、法人向けページ、利用規約、ヘルプを読んで確認しました。</p>
+<div class="tw"><table><thead><tr><th>論点</th><th>顧客と翻訳会社のひな型</th><th>翻訳会社と翻訳者のひな型</th><th>文字起こしで起きること</th><th>Nottaの公開条件</th></tr></thead><tbody><tr><td>再委託（第8条）</td><td>外部の翻訳者などへの再委託を、あらかじめ承諾</td><td>事前の書面承諾が要る</td><td>ツールの扱いはどちらにも書かれていない</td><td>規約第10条：音声認識は第三者のパートナーのAPI</td></tr><tr><td>秘密情報の範囲（第10条1項）</td><td>開示時に書面で明示した情報</td><td>上に加え、性質上秘密として管理すべき情報</td><td>翻訳者側の方が範囲は広い</td><td>音声認識の学習なしはビジネス Plus、エンタープライズ、士業向け特別プラン</td></tr><tr><td>開示できる相手（第10条1項）</td><td>役員、従業員、再委託先、法令上守秘義務のある専門家</td><td>役員、従業員、同様の専門家。再委託先の語はない</td><td>翻訳者の個人ツールは列挙にない</td><td>規約第18条：業務を第三者に委託できる</td></tr><tr><td>複製（第10条4項）</td><td>合理的に必要な範囲。複製も秘密情報</td><td>同じ</td><td>音声、全文、要約、ダウンロードが複製になる</td><td>ダウンロードはプレミアム以上。権限で制御</td></tr><tr><td>返還・破棄（第10条5項・6項）</td><td>要請で返還・破棄・消去。求めがあれば書面</td><td>同じ</td><td>クラウドの消去まで含めて報告する</td><td>ゴミ箱は30日。バックアップは最大180日</td></tr></tbody></table></div>
+<p>ひな型の第2条は、翻訳の対象に「テープ等の媒体に固定された内容」も含めています。文字起こしを別の工程として書いた条文はなく、JTFは個別の事情に応じて修正するよう案内しています。一般の業務委託は<a href="../transcription-outsourcing-contract-clause/">文字起こしツールの業務委託契約</a>、条文の読み方は<a href="../transcription-nda/">NDAを結んだ会議でAI文字起こしは使える？</a>に分け、ここは顧客と翻訳者の間に立つ翻訳会社に絞ります。</p>
+<h2 id="判断軸1-ツールの利用を顧客にどう承諾してもらうか">判断軸1｜ツールの利用を顧客にどう承諾してもらうか</h2>
+<p>顧客向けのひな型は再委託先を開示の相手に含めますが、文字起こしサービスがそこに入るかは書かれていません。解釈に頼るより、基本契約か仕様に書く方が手間は小さいはずです。</p>
+<p>手本になるのがAAMTのガイドラインです。翻訳会社が機械翻訳を使うときに委託者と合意を推奨する情報セキュリティの点を、3つ挙げています。文字起こしには触れていないので、流用は当サイトの提案です。</p>
+<ul><li><strong>事業者が入力データを再利用するか</strong>：Nottaはプランで答えが変わります。ビジネスは音声認識の学習が「あり」で、ビジネス Plusは「AI学習なし」です。音声認識以外のAI機能は、どのプランでも学習に提供しないとヘルプにあります</li><li><strong>処理される国や地域</strong>：データの保管は東京のデータセンターです。音声認識のパートナーは国内企業とヘルプにありますが、社名は確認できませんでした</li><li><strong>事業者がデータを保持するか</strong>：手動で消すまで保管されます。バックアップは毎日1回、最大180日です</li></ul>
+<p>音声に個人データが入るなら、個人情報保護法第25条の委託先の監督も関わります。分かれ目は<a href="../appi-transcription-outsourcing/">AI文字起こしは委託か第三者提供か</a>を見てください。</p>
+<h2 id="判断軸2-翻訳者の個人ツールを規約でどう扱うか">判断軸2｜翻訳者の個人ツールを規約でどう扱うか</h2>
+<p>抜けやすいのはここです。翻訳者向けのひな型は、再委託に事前の書面承諾を求め、開示の相手に再委託先を挙げていません。翻訳者が音声を個人契約のツールに入れたとき、第三者への開示に当たるかは条文から読み切れません。顧客への「学習なしで処理する」という約束が、翻訳者の手元で崩れるおそれがあります。</p>
+<p>規約か発注書に足す項目は次のとおりです。当サイトの整理で、条文例ではありません。</p>
+<ul><li>音声を入れてよいツールとプラン。個人アカウントで処理してよいか</li><li>預けた音声と文字起こしの保管場所、納品後に消す期限</li><li>消去の報告の方法（ひな型の第10条6項は求めがあるときの書面提出）</li></ul>
+<p>ここで関わるのがフリーランス法です。対象は従業員を使わない個人などへの委託で（第2条第1項）、翻訳は文字による情報成果物の作成委託に当たると読めます。ただし「考え方」に翻訳の語はありませんでした。</p>
+<ul><li><strong>第3条</strong>：委託したら直ちに、給付の内容、報酬の額、支払期日などを書面か電磁的方法で明示します。ツールの条件も同じ発注書に並べると漏れにくいでしょう</li><li><strong>第5条第1項第5号</strong>：1か月以上の業務委託では、正当な理由なく指定の物や役務を強制して利用させ、対価を負担させることが禁止されています。基本契約が1か月以上なら、その下の個別の委託も対象です</li></ul>
+<p>翻訳者に自費で有料プランを求める場合が悩みどころです。「考え方」の定義は発注事業者や関連会社等が提供する役務で、他社サービスの指定への当てはめは確認できませんでした。会社のアカウントを使ってもらう形なら、翻訳者が対価を負担する場面が生じません。従業員を使う外注先は対象外なので、取適法を確認します。</p>
+<h2 id="判断軸3-翻訳者に音声まで渡すか-テキストだけか">判断軸3｜翻訳者に音声まで渡すか、テキストだけか</h2>
+<p>音声は声で話者が分かる複製です。渡す形は3つ考えられます。</p>
+<ul><li><strong>テキストだけ渡す</strong>：社内で起こし、ファイルを自社の転送手段で渡します。翻訳者の席は要りません。聞き返したい箇所は社内で音声に当たります</li><li><strong>案件フォルダに招待する</strong>：ロールに関係なく契約アカウントに数えるとヘルプにあります。「閲覧のみ」と「編集可能」はエクスポートできません。利用者の入れ替えは可能です</li><li><strong>共有リンクを送る</strong>：全プランで使えて、パスワードも付けられます。ただしリンクを知る全員がアクセスできる仕組みです。外部共有の無効化はビジネス以上でオーナーが設定します</li></ul>
+<p>音声を見せる人を社内に絞れるほど、消去の報告は書きやすくなります。音声が欠かせない字幕案件は、席の費用も見積に入れます。</p>
+<p>顧客の音声を社内で起こし、翻訳者にはテキストで渡す体制を組みたい翻訳会社には、学習なしのプランが比較の入口です。ビジネス Plusは1アカウント年64,800円（税抜）です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<p>顧客が外部クラウドへの音声の持ち出しを禁じる案件には合いません。その場合は<a href="../on-device-offline-transcription/">文字起こしの端末内処理とオフラインAI</a>か、人の手で起こす形を検討します。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta（全プラン）</strong>：法人契約FAQは多要素認証・2段階認証に「現在、対応しておりません」としています。顧客のセキュリティ要件にある場合は合いません</li><li><strong>Notta（全プラン）</strong>：規約第10条は完全なテキストを保証していません。賠償の上限は第16条で過去6か月の利用料金です。翻訳会社が顧客に負う責任とは別です</li><li><strong>Notta ビジネス</strong>：音声認識の学習は比較表で「あり」で、学習なしの約束には合いません</li><li><strong>Notta ビジネス Plus</strong>：操作ログと定期自動削除は法人契約FAQでエンタープライズの機能です。NDAの締結もFAQはビジネスとエンタープライズの購入予定者を挙げ、Plusは明記がありません</li><li><strong>テキスト渡し</strong>：翻訳者が音声を聞けず、固有名詞の誤認識に気づきにくくなります</li><li><strong>この記事の限界</strong>：JTFのひな型は参考例で、実際の契約は各社で違います。JIS Y 17100の本文は読んでいません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="規約に書いていなければ-翻訳者は無料ツールを使ってよいですか">規約に書いていなければ、翻訳者は無料ツールを使ってよいですか</h3>
+<p>書かれていないことは、使ってよいという意味にはなりません。先に翻訳会社へ確認してもらう運用にします。Nottaの無料プランも「AI学習なし」の対象でないので、機密の音声には薦めません。</p>
+<h3 id="顧客にAI文字起こしの利用を伝える必要はありますか">顧客にAI文字起こしの利用を伝える必要はありますか</h3>
+<p>契約の文言しだいです。JTFの顧客向けひな型では、秘密情報を第三者へ開示するには書面の承諾が要り、サービスがその第三者に当たるかは書かれていません。サービス名、プラン、削除まで示して承諾を取ると説明しやすくなります。個別の判断は専門家に確認してください。</p>
+<h3 id="顧客名を翻訳者に伏せたまま発注できますか">顧客名を翻訳者に伏せたまま発注できますか</h3>
+<p>再委託の支払期日の特例（第4条第3項）を使うときは元委託者の明示が要りますが、「考え方」と規則の文言では、名称のほか番号や記号などの符号で識別できるものでもよいとされています。給付の受領から60日以内に払うなら、この特例は使わずに済みます。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>JTFのひな型にAIやクラウドの語はない。ツール名、プラン、再利用、処理地域、保持を顧客と書面で決める</li><li>翻訳者の個人ツールは規約と発注書に書く。自費の有料プランより、会社のアカウントを使う形が負担の論点を避けやすい</li><li>音声は社内で起こしテキストで渡す形が説明しやすい。Nottaの学習なしはビジネス Plus以上で、多要素認証は未対応</li></ul>
+<h3 id="確認した公式情報-2026年11月7日">確認した公式情報（2026年11月7日）</h3>
+<ul><li>日本翻訳連盟「翻訳基本契約のひな型」（業務委託基本契約書2種）</li><li>アジア太平洋機械翻訳協会「機械翻訳ポストエディットガイドライン」（2025年 Ver.1.0）第1章</li><li>e-Gov法令検索「特定受託事業者に係る取引の適正化等に関する法律」第2条〜第5条、「個人情報の保護に関する法律」第25条</li><li>公正取引委員会・厚生労働省「特定受託事業者に係る取引の適正化等に関する法律の考え方」（令和8年10月1日改正）</li><li>Notta 料金ページ、法人向けページ、利用規約（2025年8月1日改訂）、ヘルプ「AI学習について」「法人契約に関するよくある質問」「「ビジネス Plus」と「ビジネスプラン」の違いは何ですか？」「Nottaプラン別機能一覧」「Nottaの料金プランについて」「アクセス権について」「メンバーを招待・削除する」「共有リンクを使った外部へのノート共有」「外部ユーザーとの共有を制限する」「文字起こしデータをダウンロードする」「データの削除・復元」「データは国内に保存されていますか？」「話者識別機能はついていますか？」「Nottaの音声認識・翻訳に対応している言語は？」</li><li>確認できなかったもの：個人情報保護委員会のサイトは本日メンテナンス中で、ガイドラインとQ&amp;Aは読めませんでした</li></ul>
+<p>※本記事は上記の公開資料を2026年11月7日に確認して整理したもので、法律の助言ではありません。ひな型とフリーランス法の当てはめは当サイトの整理で、JTFや公正取引委員会の見解ではありません。個別の判断は弁護士など専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li><li><a href="../ginou-jisshu-interview-recording/">技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

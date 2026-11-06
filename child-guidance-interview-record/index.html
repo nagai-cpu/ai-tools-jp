@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点｜AIツール実用ガイド</title>
+<meta name="description" content="児相の面接記録にAI文字起こしを使いたい自治体職員向け。こども家庭庁の運営指針と総務省ガイドラインから、機密性分類、面接の種類、記録の作り方と方式の違いを整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/child-guidance-interview-record/">
+<meta property="og:title" content="児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点｜AIツール実用ガイド">
+<meta property="og:description" content="児相の面接記録にAI文字起こしを使いたい自治体職員向け。こども家庭庁の運営指針と総務省ガイドラインから、機密性分類、面接の種類、記録の作り方と方式の違いを整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点", "description": "児相の面接記録にAI文字起こしを使いたい自治体職員向け。こども家庭庁の運営指針と総務省ガイドラインから、機密性分類、面接の種類、記録の作り方と方式の違いを整理しました。", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/child-guidance-interview-record/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</h1><p class="meta">2026-11-07 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、児童相談所の面接に民間の文字起こしSaaSを職員の判断で使うのは避け、先に<strong>自団体の情報セキュリティポリシーでの分類</strong>を確認してください。運営指針と手引きにAI文字起こしの記述は見当たりません。総務省の例示では、機密性3B・3Cのパブリッククラウドの範囲はISMAP登録サービスです。</p>
+<h2 id="公式資料に書かれていること-書かれていないこと">公式資料に書かれていること、書かれていないこと</h2>
+<p>2026年11月7日に、こども家庭庁「児童相談所運営指針」（令和8年3月31日こ支虐第202号までの改正版）、「子ども虐待対応の手引き」（令和7年12月全部改正）、こ支虐第213号通知、総務省の情報セキュリティポリシーガイドライン（令和8年3月版）、e-Govの児童福祉法と個人情報保護法を読んで確認しました。</p>
+<p>運営指針の全文を検索すると、「録音」「AI」「文字起こし」は見当たりません。手引きの「録音」は、刑事訴訟法第321条の3の説明に出てくるだけでした。面接の録音やAI処理について、読んだ国の資料は認めても禁じてもいません。</p>
+<p>一方で、音声認識を使う児相はあります。埼玉県の令和8年度予算見積調書には音声認識システムの運用等が載り、指標に面談記録作成の時間削減があります。名古屋市の事業と東京23区の児相の例（ベンダーの発表）は電話が対象です。処理環境の詳細は読んだ資料にありません。他団体の例は、自団体で同じ使い方ができる根拠にはなりません。</p>
+<p>製品の優劣ではなく、音声の行き先で方式を並べます。</p>
+<div class="tw"><table><thead><tr><th>方式</th><th>音声の行き先</th><th>公式で確認できたこと</th><th>児相面接での論点</th><th>検討しやすい条件</th></tr></thead><tbody><tr><td>録音せず職員が作成</td><td>外に出ない</td><td>記録の要件は運営指針のとおり</td><td>記録の負担は減らない</td><td>録音がなじまない面接</td></tr><tr><td>端末内で処理（ScribeAssist、Whisperなど）</td><td>インストールしたPCの中</td><td>ScribeAssistは公式がネット接続なしで利用可と説明。一部の要約機能は接続が必要。OSはWindows</td><td>PCと音声ファイルの管理は団体に残る</td><td>外部送信を認めないポリシーのとき</td></tr><tr><td>LGWAN対応サービス（ProVoXT for LGWANなど）</td><td>LGWAN経由で事業者のサービスへ</td><td>公式はLGWAN環境に対応と説明。リアルタイム認識は使えない</td><td>録音後のファイル処理になる。委託の整理は必要</td><td>LGWAN接続系の端末で処理したいとき</td></tr><tr><td>業務システムに組み込み</td><td>調達の仕様で決まる</td><td>埼玉県・名古屋市の予算事業</td><td>予算と仕様書が要る</td><td>所として継続運用するとき</td></tr><tr><td>民間SaaS（Nottaなど）</td><td>事業者のクラウド</td><td>NottaはAWS東京リージョンに保存</td><td>分類、ISMAP、認証で止まりやすい</td><td>情報政策の担当課が可と判断したときだけ</td></tr></tbody></table></div>
+<h2 id="判断軸1-面接の音声は-自団体のポリシーでどの分類か">判断軸1｜面接の音声は、自団体のポリシーでどの分類か</h2>
+<p>総務省のガイドラインは参考資料で、各団体が自主的にポリシーを策定すると書いています。<strong>優先するのは自団体のポリシーです。</strong> ガイドラインの本文検索では「児童」「福祉」の語が見当たらず、児相の記録を名指しした分類はありません。</p>
+<p>そのうえで図表22を見ます。3Bは漏えい時に個人の権利利益の侵害の度合いが大きい情報資産で、例に生活保護システムの住民情報が挙がっています。パブリッククラウドの範囲は、3Bと3Cが「ISMAP登録サービスは利用可」、機密性2は「可」です。</p>
+<p>面接の音声は、虐待の内容、病歴、通告の経緯を一度に含みえます。個人情報保護法第2条第3項の要配慮個人情報には、病歴や犯罪により害を被った事実が入ります。音声が3Bや3Cと判断されれば、図表22の例示ではISMAP登録が条件になると読めます（当サイトの読みです）。</p>
+<p>さらに、画一的な約款への同意だけで使えるサービスは、原則として機密性2以上を扱えないとされています。職員が個人でWebから申し込む形は、ここで止まります。最初の相談先は情報政策の担当課です。分類の考え方は<a href="../local-government-minutes/">自治体の会議録をAI文字起こしする要件</a>でも扱いました。</p>
+<h2 id="判断軸2-どの面接か-電話と同じに考えない">判断軸2｜どの面接か。電話と同じに考えない</h2>
+<p>確認できた事例の多くは電話で、対面の面接に同じ判断は使えません。運営指針は、調査を事情聴取的な形ではなく、気持ちに配慮して行うとしています。録音が話しにくさにつながらないかは、ケースごとの検討が要ります。</p>
+<ul><li><strong>受付面接・調査面接</strong>：運営指針は法律に基づく調査であることや必要性を説明し、理解を得るよう努めるとしています。録音やAI処理の説明の扱いは書かれていません</li><li><strong>意見聴取等措置</strong>：記録には日時場所、説明方法、説明内容、聴取内容、こどもの反応・様子、所見を記載します。音声認識だけでは反応や様子は残りません</li><li><strong>性的虐待など刑事立件が想定される事例</strong>：こ支虐第213号は、情報開示の状況等の適切な記録と、記憶の汚染の防止を求めています。協同面接の前に録音や機械処理を挟むかは、所内の判断だけで決めず、検察・警察と協議する領域と考えられます</li></ul>
+<p>通告者の情報にも注意が要ります。運営指針は児童虐待防止法第7条に触れ、通告者を特定させるものを漏らしてはならないとしています。全文テキストには発言がそのまま残ります。<a href="../municipal-counter-consultation-recording/">自治体の窓口相談の録音</a>の整理は、そのまま当てはめないでください。</p>
+<h2 id="判断軸3-音声-全文-要約のどれを記録にするか">判断軸3｜音声、全文、要約のどれを記録にするか</h2>
+<p>運営指針は、調査内容を「正確、簡潔、客観的に」児童記録票に記載し、資料の出所や日時を明らかにするとしています。調査所見は調査担当者が必ず記載します。考えられるのは、全文を下書きとして扱い、職員が音声と照らして確認した内容を児童記録票に書く形です。</p>
+<p>保存期間は児童記録票に定めがあります（満25歳まで、措置解除等から5年など）が、音声の定めは見当たりません。文書管理規則での位置づけを先に決めます。組織的に用いる電磁的記録は、個人情報保護法第60条の保有個人情報に当たりえます。法第76条第2項は法定代理人の開示請求を認め、法第78条は第三者の情報などの不開示を定めています。全文を残すほど、開示の判断対象は増えると考えられます。</p>
+<p>運営指針は第28条の申立ての説明で、「常に開示が原則という認識で記録を作成」すると書いています。AIの誤認識が提出資料に混ざらない手順が必要です。社会福祉士の立場の整理は<a href="../shakaifukushishi-case-record/">ケース記録の記事</a>にあります。</p>
+<p>事業者を使う場合、法第66条第2項で委託先にも安全管理措置が準用されます。児童福祉法第61条は、相談、調査及び判定に従事した者の秘密の漏示に罰則を定めています。外部サービスへの提供を同条の「正当な理由」と整理できるかは、法務の担当や弁護士に確認してください。</p>
+<h2 id="Nottaは児相の面接本体には薦めません">Nottaは児相の面接本体には薦めません</h2>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン）</a>の公式情報を確認しましたが、児相の面接音声の用途で候補に挙げるのは難しいと判断しました。</p>
+<ul><li>ISMAPとISMAP-LIUのリストに10月25日時点で掲載がありません（本日はページが読み込めず再確認できませんでした）</li><li>法人契約FAQは、多要素認証・2段階認証に「現在」対応していないとしています</li><li>法人向けページの読んだ範囲に、自治体やLGWANの記載はありませんでした</li><li>音声認識の学習がないのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランで、ビジネスは「あり」です</li><li>定期自動削除はエンタープライズの機能で、手動で消さない限り録音は保管され続けます</li></ul>
+<p>検討の余地があるのは、担当課が機密性2以下と判断した研修や一般の会議です。その場合もビジネス Plus以上を前提に、条件を書面で確認してください。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>端末内処理</strong>：Whisperは<a href="../whisper-local-no-training/">ローカルで動かす手間</a>があります。PCの紛失や音声の持ち出しの対策は団体に残ります</li><li><strong>LGWAN対応サービス</strong>：録音ファイルを扱う工程が増えます。ISMAPの掲載は確認できませんでした</li><li><strong>Notta</strong>：分類とISMAPの条件で止まりやすいサービスです。規約は完全なテキストの作成を保証しないとしています</li><li><strong>この記事の限界</strong>：各団体のポリシーや条例は読んでいません。個人情報保護委員会のサイトは本日メンテナンス中で、資料を読み直せていません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="面接の録音は保護者やこどもの同意が必要ですか">面接の録音は保護者やこどもの同意が必要ですか</h3>
+<p>運営指針に録音の定めが見当たらず、同意の要否は確認できませんでした。個別の判断は法務の担当や弁護士に確認してください。</p>
+<h3 id="職員の私物スマホで録音してもよいですか">職員の私物スマホで録音してもよいですか</h3>
+<p>総務省の例文では、支給以外の端末は原則として業務に利用できず、CISOの可否判断と許可が要ります。自団体のポリシーを確認してください。</p>
+<h3 id="生成AIで面接記録を要約してもよいですか">生成AIで面接記録を要約してもよいですか</h3>
+<p>団体の生成AI利用ルールが先です。総務省の資料には、福祉相談の音声を自動マスキング後に文字起こしし、職員が入力可否を確認してから要約に使う例があります。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>運営指針と手引きにAI文字起こしの記述はない。先に見るのは自団体のポリシーの分類で、図表22の3B・3CはISMAP登録サービスの範囲</li><li>電話の事例を対面の面接に広げず、刑事立件が想定される事例は検察・警察との協議を前提にする</li><li>全文は下書きとし、職員が確認した児童記録票を記録にする。音声の扱いは文書管理規則で決める。Nottaは面接本体には薦めない</li></ul>
+<h3 id="確認した公式情報-2026年11月7日">確認した公式情報（2026年11月7日）</h3>
+<ul><li>こども家庭庁「児童相談所運営指針」「子ども虐待対応の手引き」こ支虐第213号、総務省 情報セキュリティポリシーガイドライン（令和8年3月版）・AI活用ガイドブック改訂の概要、e-Gov「児童福祉法」「個人情報の保護に関する法律」</li><li>埼玉県 令和8年度予算見積調書、名古屋市の事業資料、アドバンスト・メディアの発表（2026年5月12日）と製品ページ、Notta 料金ページ、法人向けページ、利用規約、ヘルプ</li></ul>
+<p>※本記事は公開資料を整理したもので、法律の助言ではありません。児相の面接への当てはめは当サイトの整理で、こども家庭庁や総務省の見解ではありません。個別の判断は各団体の担当課や専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『介護・看護の記録をAIで書く前に読む本』（Kindle・500円）：介護事業所・訪問看護で、利用者の情報をAIに入れてよいか、事業所のルール、利用者と家族への説明をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7G1TCZ" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li><li><a href="../ginou-jisshu-interview-recording/">技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li><li><a href="../ginou-jisshu-interview-recording/">技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

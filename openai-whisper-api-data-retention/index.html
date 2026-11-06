@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Whisper APIの音声データ保持期間と学習｜OpenAI公式の表と終了日｜AIツール実用ガイド</title>
+<meta name="description" content="Whisper APIの音声が学習や保持の対象かを調べる開発・情シス向け。OpenAI公式の表で経路別の保持、2027年2月の終了、移行で変わる点を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/openai-whisper-api-data-retention/">
+<meta property="og:title" content="Whisper APIの音声データ保持期間と学習｜OpenAI公式の表と終了日｜AIツール実用ガイド">
+<meta property="og:description" content="Whisper APIの音声が学習や保持の対象かを調べる開発・情シス向け。OpenAI公式の表で経路別の保持、2027年2月の終了、移行で変わる点を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Whisper APIの音声データ保持期間と学習｜OpenAI公式の表と終了日", "description": "Whisper APIの音声が学習や保持の対象かを調べる開発・情シス向け。OpenAI公式の表で経路別の保持、2027年2月の終了、移行で変わる点を整理しました。", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/openai-whisper-api-data-retention/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Whisper APIの音声データ保持期間と学習｜OpenAI公式の表と終了日</h1><p class="meta">2026-11-07 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、OpenAI公式の表でファイルの文字起こしは学習に使わず、不正利用監視の保持も「None」です。ただし<code>whisper-1</code>は<strong>2027年2月26日にAPIから削除予定</strong>で、移行先の<code>gpt-live-transcribe</code>は30日の行に入ると読めます。保持を決めるのはモデル名より経路です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="経路ごとの保持と学習">経路ごとの保持と学習</h2>
+<p>2026年11月7日に、OpenAI APIドキュメントの「Data controls in the OpenAI platform」「Deprecations」「Transcription」「File transcription」「Realtime transcription」「Pricing」、各モデルのページ、「エンタープライズプライバシー」（2026年1月8日更新）、「サービス契約」（2026年1月1日発効）、ヘルプのデータ共有のページを読んで確認しました。</p>
+<div class="tw"><table><thead><tr><th>使い方</th><th>経路</th><th>学習</th><th>不正利用監視の保持</th><th>アプリ状態の保持</th><th>ZDR対象</th><th>料金（1分）</th></tr></thead><tbody><tr><td><code>whisper-1</code>でファイル（2027年2月26日に削除予定）</td><td><code>/v1/audio/transcriptions</code></td><td>No</td><td>None</td><td>None</td><td>Yes</td><td>0.006ドル</td></tr><tr><td><code>gpt-transcribe</code>でファイル</td><td><code>/v1/audio/transcriptions</code></td><td>No</td><td>None</td><td>None</td><td>Yes</td><td>0.0045ドル</td></tr><tr><td><code>gpt-live-transcribe</code>でライブ音声</td><td><code>/v1/realtime</code>の行と読める</td><td>No</td><td>30 days</td><td>None</td><td>Yes</td><td>0.017ドル</td></tr><tr><td><code>whisper-1</code>で英語へ翻訳（経路ごと同日に削除予定）</td><td><code>/v1/audio/translations</code></td><td>No</td><td>None</td><td>None</td><td>Yes</td><td>料金表に翻訳の区分なし</td></tr></tbody></table></div>
+<p>ZDRはZero Data Retention（ゼロデータ保持）の略です。ライブの行は当サイトの読みです。表に文字起こしセッションの個別の行はなく、ガイドの接続先が<code>/v1/realtime?intent=transcription</code>なので<code>/v1/realtime</code>の行を当てました。</p>
+<h2 id="最大30日-と-None-はどちらが正しいか">「最大30日」と「None」はどちらが正しいか</h2>
+<p>同じページの本文は、不正利用監視のログは既定で全機能に生成され、最大30日保持すると書いています。一方で表の音声文字起こしの行は「None」です。</p>
+<p>手がかりはエンタープライズプライバシーです。最大30日の説明は「一部のエンドポイントおよび機能を除き」と始まり、例外はドキュメントに記載とされています。そこで個別の表を優先して読みました。</p>
+<p>ただし「None」の定義は書かれておらず、音声を消す時点も確認できませんでした。「送った瞬間に消える」と社内に説明するのは言い過ぎです。</p>
+<h2 id="判断軸1-録音ファイルか-ライブ音声か">判断軸1｜録音ファイルか、ライブ音声か</h2>
+<p>公式のガイドは、完了した録音はファイルの文字起こし、マイクや通話の音声はRealtimeと分けています。保持の行もここで分かれます。</p>
+<p><code>gpt-transcribe</code>はファイルとRealtimeの両方に対応するので、Realtimeで使えば経路が変わります。社内の説明にはモデル名だけでなく経路を書きます。</p>
+<p>30日の行を避けつつ即時性も要るなら、ZDRかModified Abuse Monitoringの申請が候補です。どちらも現時点ではOpenAIの事前承認と追加要件の受諾が条件で、窓口は営業です。承認後でも、顧客によってモデルを対象外にする権利をOpenAIは留保しており、その場合は事前に書面で通知するとされています。</p>
+<h2 id="判断軸2-2027年2月26日の移行で何が変わるか">判断軸2｜2027年2月26日の移行で何が変わるか</h2>
+<p>Deprecationsによると、通知は2026年8月26日です。<code>whisper-1</code>と<code>gpt-4o</code>系の文字起こし3種が対象で、推奨の移行先は<code>gpt-live-transcribe</code>か<code>gpt-transcribe</code>です。<code>/v1/audio/translations</code>も同日に終わり、移行先は<code>v1/realtime/translations</code>です。</p>
+<ul><li><strong>ファイルのまま移るなら</strong>：<code>gpt-transcribe</code>は同じ経路なので、表の行は変わりません</li><li><strong>ライブに切り替えるなら</strong>：<code>gpt-live-transcribe</code>の対応先はRealtimeの文字起こしだけです。30日の行に入ると読めるので、保持の説明を書き直します</li><li><strong>翻訳を使っているなら</strong>：移行先は表に個別の行がなく、保持は確認できませんでした。ファイルのアップロードとも別の形です</li><li><strong>話者ラベルや字幕を使っているなら</strong>：公式の案内は<code>gpt-4o-transcribe-diarize</code>と<code>whisper-1</code>の例で、どちらも削除の対象です</li></ul>
+<p>公式は、モデルIDを替えるだけでは全機能は維持されないと書き、代表的な音声で試すよう勧めています。ファイルの上限は25MBで、超える録音は圧縮か分割です。</p>
+<h2 id="判断軸3-保持の外に何が残るか">判断軸3｜保持の外に何が残るか</h2>
+<p><strong>データ共有の設定</strong>：入出力の共有は既定オフで、組織のオーナーがオンにできます。一部の組織には無料トークンの特典があるので、特典目当てでオンにしたプロジェクトがないか確認します。音声の文字起こしが共有の対象に入るかは確認できませんでした。</p>
+<p><strong>日本リージョン</strong>：表の日本は保存がYes、処理がNoで、音声の処理リージョンは米国と欧州です。処理に対応しないリージョンでは、リージョン外で処理と一時保存が行われる場合があると書かれています。利用には監視制御の承認とModified Retention amendmentの締結も要ります。国内処理を求める目的には合わないと読めます。保存先の考え方は<a href="../transcription-data-residency/">AI文字起こしの保存先の比較</a>にあります。</p>
+<p><strong>契約と録音相手</strong>：サービス契約の第4.2条は、明示の同意なしに顧客コンテンツを開発や改善に使わないと定めます。第4.3条は、入力に必要な権利や許可を持つことを利用者の責任としています。</p>
+<p><strong>自社側の保存</strong>：自社のログやストレージに残る音声と結果は別です。APIを組み込んだ他社のアプリなら、その規約も読みます。期間の決め方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>に書きました。</p>
+<p>音声を社外に送らない要件なら<a href="../whisper-local-no-training/">Whisperをローカルで動かす方法</a>が比較に入ります。ChatGPTの画面で録音する場合は<a href="../chatgpt-team-enterprise-audio-training/">ChatGPT Team・Enterpriseの音声の扱い</a>を見てください。</p>
+<h2 id="開発しないならNottaは候補か">開発しないならNottaは候補か</h2>
+<p>APIは音声を文字にする部品です。録音、権限、保存先は自社で組みます。開発の手を割けない場合の候補が<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>です。</p>
+<p>ヘルプによると、ビジネス Plus（年64,800円・税抜）とエンタープライズは音声認識の「AI学習なし」で、音声と認識結果はパートナー側に保存されず、メモリ上で処理されます。ビジネスプランは比較表で音声認識のAI学習が「あり」です。</p>
+<p>ただし、Notta本体の録音データはAWS東京リージョンに保存され、手動で消すまで残ります。<strong>保持の短さを最優先するなら、Nottaは合いません。</strong> 向くのは、開発なしで会議の記録を共有し、学習なしを契約プランの条件として持ちたい法人です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>ファイルの文字起こし</strong>：25MBの上限があります。話者ラベルや字幕の案内は削除対象のモデルの例で、移行は実音声での検証が要ります</li><li><strong><code>gpt-live-transcribe</code></strong>：料金は表で最も高い1分0.017ドルで、30日の行に入ると読めます</li><li><strong>ZDR</strong>：事前承認が要り、審査の基準は公開情報では分かりません</li><li><strong>日本リージョン</strong>：表の上で処理の対応はNoです</li><li><strong>Notta ビジネス Plus</strong>：データは消すまで残ります。FAQでは多要素認証は非対応、SSO・操作ログ・定期自動削除はエンタープライズの機能です</li><li><strong>この記事の限界</strong>：実機では試していません。公式文書の読み取りです</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Whisper-APIに送った音声は学習に使われますか">Whisper APIに送った音声は学習に使われますか</h3>
+<p>公式の表で<code>/v1/audio/transcriptions</code>の学習は「No」です。2023年3月1日以降、APIのデータは明示のオプトインがない限り学習に使わないと書かれています。組織のデータ共有の設定は確認してください。</p>
+<h3 id="APIは最大30日保持-という説明と違いませんか">「APIは最大30日保持」という説明と違いませんか</h3>
+<p>その説明は一般論で、エンタープライズプライバシーは一部のエンドポイントを除くと書いています。ファイルの文字起こしの行は「None」、Realtimeは「30 days」です。</p>
+<h3 id="ローカルのWhisperも2027年に終わりますか">ローカルのWhisperも2027年に終わりますか</h3>
+<p>読んだ通知はAPIからの削除についてのものです。自分のPCで動かすオープンソース版への言及は、Deprecationsには見当たりませんでした。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>ファイルの<code>/v1/audio/transcriptions</code>は学習「No」、保持は「None」。Realtimeは「30 days」で、保持は経路で分かれる</li><li><code>whisper-1</code>は2027年2月26日に削除予定。<code>gpt-transcribe</code>なら同じ経路だが、話者ラベルや字幕は別途検証が要る</li><li>データ共有の設定、日本リージョンの処理、自社の保存は別に確認する。開発しないならNottaのビジネス Plus以上も候補だが、データは消すまで残る</li></ul>
+<h3 id="確認した公式情報-2026年11月7日">確認した公式情報（2026年11月7日）</h3>
+<ul><li>OpenAI APIドキュメント：上記の各ガイド、Whisper・GPT-Transcribe・GPT-Live-Transcribeのモデルページ</li><li>OpenAI：エンタープライズプライバシー、サービス契約、ヘルプ「Sharing feedback, evaluation and fine-tuning data, and API inputs and outputs with OpenAI」</li><li>Notta：法人向けページ、ヘルプ「AI学習について」「『ビジネス Plus』と『ビジネスプラン』の違いは何ですか？」「法人契約に関するよくある質問」</li></ul>
+<p>※本記事は上記の公開資料を2026年11月7日に確認して整理したもので、法律の助言ではありません。表の読み取りは当サイトの整理で、OpenAIの見解ではありません。契約への当てはめは、OpenAIの窓口や所属組織の担当部門、専門家にご確認ください。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li><li><a href="../ginou-jisshu-interview-recording/">技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

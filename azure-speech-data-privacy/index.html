@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ｜AIツール実用ガイド</title>
+<meta name="description" content="Azure Speechの音声が保存・学習されるかを確かめたい開発・情シス向け。公式文書から、残らない経路と残る3つの例外、消し方、文書の不一致を整理しました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/azure-speech-data-privacy/">
+<meta property="og:title" content="Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ｜AIツール実用ガイド">
+<meta property="og:description" content="Azure Speechの音声が保存・学習されるかを確かめたい開発・情シス向け。公式文書から、残らない経路と残る3つの例外、消し方、文書の不一致を整理しました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ", "description": "Azure Speechの音声が保存・学習されるかを確かめたい開発・情シス向け。公式文書から、残らない経路と残る3つの例外、消し方、文書の不一致を整理しました。", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/azure-speech-data-privacy/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</h1><p class="meta">2026-11-07 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Azure Speechは公式文書で「顧客データをSpeechモデルの改善に使わない」と明記され、リアルタイムと高速文字起こしの音声は保存されません。残るのは<strong>音声ログ、バッチの結果、カスタム音声</strong>の3つです。社内説明では「学習されない」より、自社の構成でこの3つが動くかを確認します。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="どの使い方で何が残るか">どの使い方で何が残るか</h2>
+<p>2026年11月7日に、Microsoft Learnの「Data, privacy, and security for Speech to text」「Speech service encryption of data at rest」、ログとバッチの手順ページ、Data Protection Addendum（DPA、2026年11月版）を読んで確認した内容です。製品名は現在、Azure Speech in Foundry Toolsです。</p>
+<div class="tw"><table><thead><tr><th>使い方</th><th>音声</th><th>文字起こし結果</th><th>保存先と期間</th><th>消し方・確認点</th></tr></thead><tbody><tr><td>リアルタイム（ログ無効）</td><td>サーバーのメモリ上で処理し保存しない</td><td>保存しない</td><td>なし</td><td>ログが無効のままか</td></tr><tr><td>高速文字起こし</td><td>保持・保存しない</td><td>保持・保存しない</td><td>なし</td><td>結果の受け取りは自社側</td></tr><tr><td>音声ログを有効化</td><td>保存</td><td>保存</td><td>Speechの内部ストレージに30日</td><td>手動削除はREST APIのみ</td></tr><tr><td>バッチ</td><td>自社が指定した場所</td><td>自社の保存先、指定なしならMicrosoft管理のコンテナ</td><td><code>timeToLiveHours</code>で6時間〜31日</td><td>削除APIか期限切れで消える</td></tr><tr><td>カスタム音声</td><td>アップロードした学習・テスト用データを保存</td><td>同左</td><td>既定はMicrosoftのストレージ</td><td>自社で削除、または自社ストレージ</td></tr><tr><td>コンテナ</td><td>自社環境で処理し、クラウドのSpeechへ送らない</td><td>同左</td><td>自社環境</td><td>課金の計量情報は送る</td></tr></tbody></table></div>
+<p>ログは既定で無効です。暗号化のページには、ログが無効でカスタマイズも使わなければ顧客データは保存されない、とあります。</p>
+<h2 id="判断軸1-学習されない-の根拠をどこに置くか">判断軸1｜「学習されない」の根拠をどこに置くか</h2>
+<p>根拠の文言は暗号化のページにあります。</p>
+<blockquote>Microsoft does not use customer data to improve its Speech models.</blockquote>
+<p>一方、Speech to textのプライバシーのページには学習に触れた節が見当たりませんでした。DPAは顧客データをプロファイリング、広告、新機能のための市場調査に使わないと定めますが、Speechの学習を名指しした条文は見つかりませんでした。契約上の根拠まで要るなら、Microsoftの窓口に確認します。</p>
+<p>同じ「Azureの音声」でも、次は別の文書です。</p>
+<ul><li><strong>Azure OpenAI経由のWhisperなど</strong>：Foundry Modelsの文書の範囲です。学習には使わないとする一方、不正利用の監視で人が確認する場合の説明があります。音声入力への適用は明記を確認できませんでした</li><li><strong>Voice Live</strong>：本体は保存しないとされますが、処理がリソースの地域外で行われる場合があります</li><li><strong>Windowsの音声入力</strong>：Azure Speechを使いますが、設定の話は別です。<a href="../windows-speech-data/">Windowsの音声認識はデータを送信する？</a>で整理しました</li></ul>
+<h2 id="判断軸2-保存が起きる設定を実装で止められるか">判断軸2｜保存が起きる設定を実装で止められるか</h2>
+<p>誤解しやすい点は次の4つです。</p>
+<ul><li><strong>ログの優先順位</strong>：カスタムモデルのエンドポイントでログが有効だと、セッション側の設定は無視されます。コードで<code>false</code>にしても止まりません。既存エンドポイントのログを切るのはREST APIで、Speech Studioではできません</li><li><strong>ログの削除</strong>：音声と文字は別のIDで、ID指定なら両方に要求を出します。削除は非同期で、1日以上かかる場合があります</li><li><strong>バッチの保存先</strong>：<code>destinationContainerUrl</code>は<code>properties</code>の中に書きます。ルートに書くと無視され、結果はエラーなしでMicrosoft管理のコンテナへ書かれると公式が警告しています</li><li><strong>一時URL</strong>：BYOS（自社のストレージをSpeechに紐づける仕組み）で<code>sasValidityInSeconds</code>を省くと、URLに5日有効の署名が付きます。最も安全な形として公式が示す値は<code>0</code>です</li></ul>
+<p><code>destinationContainerUrl</code>の保存先は全外部通信の許可が条件です。閉じたストレージに置くなら、公式の案内はBYOSです。</p>
+<p>文書の不一致も1つあります。ログの手順ページとFAQは保持を30日、BYOSのページは「Logging data is kept for 5 days」と書いています。どちらが正しいかは確認できませんでした。ログを使うなら自社環境で残り方を確かめます。保存期間の決め方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除設定</a>が参考になります。</p>
+<h2 id="判断軸3-場所と閉じ方の要件はどこまでか">判断軸3｜場所と閉じ方の要件はどこまでか</h2>
+<p>地域ページには、リソースを作った地域で音声データを保存・処理するとあり、例外はVoice Liveです。東日本と西日本はリアルタイム、高速、バッチの対象ですが、LLM speechの地域一覧に日本はありません。</p>
+<ul><li><strong>BYOS</strong>：処理後に顧客の成果物をSpeech側に残さないとされます。内容に由来しないメタデータは残ります。Customer Lockboxは非対応で、公式はBYOSを近い管理の手段としています</li><li><strong>コンテナ</strong>：接続型は計量情報の通信が要り、既定ではAPIに認証がありません。切断型は審査があり、対象は戦略的な顧客やパートナーとされ、年単位の契約で購入時に全額がかかります</li><li><strong>プレビュー機能</strong>：DPAは、個人データや規制対象のデータを原則としてプレビューで扱わないよう書いています</li></ul>
+<p>通信の有無が論点なら<a href="../cloud-vs-onprem-transcription/">クラウド文字起こしとオンプレの比較</a>も材料になります。</p>
+<p>費用はAzure Retail Prices APIの東日本で、1時間あたりリアルタイム1ドル、高速0.36ドル、バッチ0.18ドルでした。無料枠は月5時間です。ただしAzure Speechは部品なので、録音画面、権限、共有は自社で作ることになります。ここが分かれ目です。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta</a>は画面まで揃ったサービスで、「AI学習なし」が機能に書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。ヘルプには、学習なしでは音声と認識結果が音声認識のパートナー側に保存されないとあります。</p>
+<p>開発の手を割けず、録音から共有までをすぐ使いたい法人で、学習なしをプランの条件にしたいなら上位プランが候補です。自社の鍵、閉域の保存先、地域の指定が要件ならAzure Speechのほうが合います。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Azure Speech</strong>：画面のないAPIで、開発と運用の担当者が要ります</li><li><strong>Azure Speech（ログ）</strong>：高負荷時に音声の一部が記録されない場合があり、正確な記録として頼らないよう公式が警告しています</li><li><strong>Azure Speech（同意）</strong>：話者分離は声の特徴を一時的に使います。必要な同意や許諾は利用者の責任と公式が書いています。個別の判断は専門家へ</li><li><strong>Notta（下位プラン）</strong>：利用規約は、プランに応じてパートナー企業が音声を学習に使う場合があるとしています。無料プランは機密用途に向きません</li><li><strong>Notta ビジネス Plus</strong>：料金ページでSAML SSOと操作ログはエンタープライズの項目です。ノート自体はNottaに保存されます</li><li><strong>この記事の限界</strong>：実機では試していません。公式文書の読み取りです</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="無料枠-F0-でも学習に使われませんか">無料枠（F0）でも学習に使われませんか</h3>
+<p>公式の文言は無料と有料を分けていませんが、無料枠だけを取り上げた説明は確認できませんでした。料金ページによると、無料枠でバッチは使えません。</p>
+<h3 id="解約するとデータはいつ消えますか">解約するとデータはいつ消えますか</h3>
+<p>DPAによると、無料試用などを除き、契約終了後90日は取り出し用に保持され、その後90日以内に削除されます。</p>
+<h3 id="BYOSにすれば音声はMicrosoftを通りませんか">BYOSにすれば音声はMicrosoftを通りませんか</h3>
+<p>通ります。BYOSは保存先を変える仕組みで、処理はSpeechが行います。送信そのものを避けるなら、コンテナか<a href="../whisper-local-no-training/">Whisperのローカル実行</a>が比較対象です。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>公式はSpeechモデルの改善に顧客データを使わないと明記。リアルタイムと高速は保存されず、ログも既定で無効</li><li>残るのは音声ログ、バッチの結果、カスタム音声。ログの優先順位と保存先の書き方で、意図せず残る場合がある</li><li>ログの保持は30日と5日で文書が不一致。開発の手がなく学習なしを条件にしたい法人はNottaの上位プランも比較する</li></ul>
+<h3 id="確認した公式情報-2026年11月7日">確認した公式情報（2026年11月7日）</h3>
+<ul><li>Microsoft Learn：Speech to textのData, privacy, and security、暗号化、ログ、FAQ、バッチ、BYOS、地域、Voice live、Foundry Models、コンテナの各ページ</li><li>Microsoft DPA（2026年11月版）、Azure Speechの料金ページ、Azure Retail Prices API</li><li>Notta 料金ページ、法人向けページ、利用規約、ヘルプ「AI学習について」</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li><li><a href="../ginou-jisshu-interview-recording/">技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li><li><a href="../child-guidance-interview-record/">児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点</a></li><li><a href="../eap-counseling-transcription/">EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認</a></li><li><a href="../ginou-jisshu-interview-recording/">技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>

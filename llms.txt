@@ -11,6 +11,16 @@
 
 ## 記事
 
+- [交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認](https://nagai-cpu.github.io/ai-tools-jp/accident-settlement-recording/): 保険会社との電話を録音し、文字にして弁護士に相談したい被害者向け。録音が禁止の手続、相談時間、保険会社側の録音、音声の置き場を公式資料で整理しました。
+- [Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ](https://nagai-cpu.github.io/ai-tools-jp/azure-speech-data-privacy/): Azure Speechの音声が保存・学習されるかを確かめたい開発・情シス向け。公式文書から、残らない経路と残る3つの例外、消し方、文書の不一致を整理しました。
+- [美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点](https://nagai-cpu.github.io/ai-tools-jp/beauty-clinic-counseling-recording/): 美容クリニックでカウンセリングを録音しAIで文字にしたい院長・事務長向け。厚労省通知と令和8年の省令改正から、線引き、診療録、預け先とNottaの条件を整理しました。
+- [児童相談所の面接記録をAI文字起こしする前に｜個人情報と機密性分類の確認点](https://nagai-cpu.github.io/ai-tools-jp/child-guidance-interview-record/): 児相の面接記録にAI文字起こしを使いたい自治体職員向け。こども家庭庁の運営指針と総務省ガイドラインから、機密性分類、面接の種類、記録の作り方と方式の違いを整理しました。
+- [EAP面談の記録をAI文字起こし｜産業カウンセラーの守秘義務と委託の確認](https://nagai-cpu.github.io/ai-tools-jp/eap-counseling-transcription/): EAP事業者や社内相談室の産業カウンセラー向け。2026年改定の倫理綱領と厚労省指針から、AI文字起こしの前に見る契約、説明、保存年数とNottaの条件を整理しました。
+- [技能実習の監理団体が面談録音をAI文字起こしするとき｜個人情報と育成就労](https://nagai-cpu.github.io/ai-tools-jp/ginou-jisshu-interview-recording/): 技能実習の監査面談を録音してAIで文字にしたい監理団体向け。運用要領と指針、育成就労への移行で変わる点、同意の取り方、Nottaの学習なし条件を公式で整理しました。
+- [Google Speech-to-Textのデータログ学習設定｜割引はV1だけ](https://nagai-cpu.github.io/ai-tools-jp/google-speech-to-text-data-logging/): Speech-to-Textの音声が学習に使われるか確認したい開発・情シス向け。既定の扱い、データログの規約、無効化しても残るデータ、V1とV2の料金差を公式で整理しました。
+- [Whisper APIの音声データ保持期間と学習｜OpenAI公式の表と終了日](https://nagai-cpu.github.io/ai-tools-jp/openai-whisper-api-data-retention/): Whisper APIの音声が学習や保持の対象かを調べる開発・情シス向け。OpenAI公式の表で経路別の保持、2027年2月の終了、移行で変わる点を整理しました。
+- [スクールカウンセラーの面談録音をAI文字起こし｜守秘義務と記録の区分](https://nagai-cpu.github.io/ai-tools-jp/school-counselor-session-recording/): 面談の録音をAIで文字にしたいスクールカウンセラーと学校管理職向け。任用で変わる守秘の根拠、文科省の記録区分、同意の説明、Nottaの条件を公式資料で整理しました。
+- [翻訳会社のAI文字起こしと秘密保持｜外注規約に足す項目と翻訳者の扱い](https://nagai-cpu.github.io/ai-tools-jp/translation-agency-transcription-nda/): 音声・動画の翻訳案件でAI文字起こしを使いたい翻訳会社向け。JTFの契約ひな型2種とフリーランス法、Nottaの条件から、外注規約に書く項目と翻訳者へ渡す範囲を整理しました。
 - [AI文字起こしを情報セキュリティ委員会で承認へ｜問われる6点と提出資料](https://nagai-cpu.github.io/ai-tools-jp/ai-transcription-security-approval/): AI文字起こしを情報セキュリティ委員会に諮る担当者向け。IPAの規程サンプルと個人情報保護委員会の通則編から、問われる6点と添付資料、条件付き承認の書き方を整理しました。
 - [Amazon Transcribeの学習オプトアウト｜AWSの設定と残る確認](https://nagai-cpu.github.io/ai-tools-jp/amazon-transcribe-ai-optout/): Transcribeの音声を学習に使わせたくない開発・情シス向け。AWSのAIサービスのオプトアウトポリシーと規約第50条から、止め方と残る確認点を整理しました。
 - [私物スマホの会議録音とAI文字起こし｜BYOD社内規程に書く項目を公的資料で](https://nagai-cpu.github.io/ai-tools-jp/byod-meeting-recording-policy/): 私物スマホでの会議録音を認めるか決めたい総務・情シス向け。総務省とIPAの資料から、許可制、端末の条件、費用、退職時の条項と、Nottaの設定でできる範囲を整理しました。
