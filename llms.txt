@@ -11,6 +11,9 @@
 
 ## 記事
 
+- [債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認](https://nagai-cpu.github.io/ai-tools-jp/debt-consultation-recording/): 債務整理の面談を録音し、AIで記録にしたい弁護士・司法書士事務所と相談者向け。職務基本規程、債務整理の規律、行為規範、法テラスの相談時間を公式資料で整理しました。
+- [Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間](https://nagai-cpu.github.io/ai-tools-jp/dialpad-ai-training/): Dialpadの通話音声や文字起こしがAI学習に使われるかを公式のポリシーで確認。学習設定の変更、保持期間、日本の料金とプランごとの差まで。
+- [監査役のヒアリングを録音しAI文字起こし｜監査調書と機密の3つの確認](https://nagai-cpu.github.io/ai-tools-jp/kansayaku-hearing-recording/): 監査役が取締役や従業員へのヒアリングを録音し、AIで文字にして監査調書に使いたい人向け。会社法、監査役監査基準、実施要領の記録の定めと、音声の置き場の選び方を整理。
 - [交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認](https://nagai-cpu.github.io/ai-tools-jp/accident-settlement-recording/): 保険会社との電話を録音し、文字にして弁護士に相談したい被害者向け。録音が禁止の手続、相談時間、保険会社側の録音、音声の置き場を公式資料で整理しました。
 - [Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ](https://nagai-cpu.github.io/ai-tools-jp/azure-speech-data-privacy/): Azure Speechの音声が保存・学習されるかを確かめたい開発・情シス向け。公式文書から、残らない経路と残る3つの例外、消し方、文書の不一致を整理しました。
 - [美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点](https://nagai-cpu.github.io/ai-tools-jp/beauty-clinic-counseling-recording/): 美容クリニックでカウンセリングを録音しAIで文字にしたい院長・事務長向け。厚労省通知と令和8年の省令改正から、線引き、診療録、預け先とNottaの条件を整理しました。

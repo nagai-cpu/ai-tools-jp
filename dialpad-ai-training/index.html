@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間｜AIツール実用ガイド</title>
+<meta name="description" content="Dialpadの通話音声や文字起こしがAI学習に使われるかを公式のポリシーで確認。学習設定の変更、保持期間、日本の料金とプランごとの差まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/dialpad-ai-training/">
+<meta property="og:title" content="Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間｜AIツール実用ガイド">
+<meta property="og:description" content="Dialpadの通話音声や文字起こしがAI学習に使われるかを公式のポリシーで確認。学習設定の変更、保持期間、日本の料金とプランごとの差まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間", "description": "Dialpadの通話音声や文字起こしがAI学習に使われるかを公式のポリシーで確認。学習設定の変更、保持期間、日本の料金とプランごとの差まで。", "datePublished": "2026-11-08", "dateModified": "2026-11-08", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/dialpad-ai-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間</h1><p class="meta">2026-11-08 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Dialpadのプライバシーポリシーには、通話の音声・文字起こしなどをDialpad AIの改善に使う「AIトレーニング」の節があり、その設定は<strong>いつでも変更できる</strong>と書かれています。ただし初期値と、管理者と個人のどちらが決めるかは、ヘルプが読めず確認できませんでした。導入前に販売代理店へ書面で確かめるのが確実です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=dialpadaitraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="公式ページの記載を並べる">公式ページの記載を並べる</h2>
+<p>2026年11月8日に、Dialpadのプライバシーポリシー（英語版 2025年8月18日発効、日本語版 2025年5月20日発効）、Trustページ（英語・日本語）、料金ページ（日本・米国）、AI文字起こしの製品ページを読んで確認しました。設定手順を説明するヘルプ（help.dialpad.com）とtrust.dialpad.comは、アクセスが拒否され読めていません。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式ページの記載</th><th>確認できなかったこと</th></tr></thead><tbody><tr><td>AI学習</td><td>通話音声・映像・文字起こし・メッセージからDialpad AIが学ぶことを許可する設定がある。許可しなくてもAI機能は使える</td><td>初期値、設定できる人、過去分への適用</td></tr><tr><td>第三者への提供</td><td>匿名化した音声や文字のサンプルを、文字起こし改善のため第三者に送ることがある</td><td>対象を止める設定</td></tr><tr><td>保持期間</td><td>初期設定はアカウントが有効な間は保持。解約後180日以内に自動削除</td><td>管理者が選べる期間の選択肢</td></tr><tr><td>保持ポリシーの設定</td><td>日本の料金ページでEnterpriseの特典に「データ保持ポリシーの設定」</td><td>日本語Trustは「すべてのお客様」と書き、記載が一致しない</td></tr><tr><td>保存場所</td><td>録音・文字起こしは米国のGoogle Cloud（管理者が別リージョンを選んだ場合を除く）</td><td>日本リージョンの可否</td></tr><tr><td>日本語</td><td>リアルタイム文字起こしとボイスメール文字起こしがConnectに含まれる。日本語のAI要約はベータ版</td><td>対応言語の一覧</td></tr></tbody></table></div>
+<h2 id="判断軸1-学習の設定を-誰がいつ決めるか">判断軸1｜学習の設定を、誰がいつ決めるか</h2>
+<p>英語版のポリシーは、AI機能を使うためにデータの利用を許可する必要はなく、AIトレーニングの設定はいつでも変えられると書いています。日本語版も「AIトレーニングに関する設定は、いつでも変更できます」としています。</p>
+<p>設定の手順はヘルプ記事へのリンクで案内されていて、そのリンクのアンカー名には「個人ユーザー向け」とみられる語が入っていました。ただ本文を読めていないので、管理者がまとめて止められるのか、利用者が1人ずつ切り替えるのかは確認できませんでした。止める前に録音された分に設定が及ぶのかも同じです。</p>
+<p>もう1つ見落としやすいのが、ポリシーの「サービスの改善」の項目です。目的に音声認識と言語処理の改善が挙がり、根拠は正当な利益、対象データに通話の音声が含まれています。AIトレーニングの設定とこの項目がどう関係するかは、ポリシーの文面からは読み切れませんでした。</p>
+<p>社内規程で「学習に使わせない」が条件なら、次の3点を販売代理店に書面で聞くのが確実です。</p>
+<ol><li>AIトレーニングの初期値は許可か不許可か</li><li>管理者が組織全体で不許可に固定できるか</li><li>不許可にする前の通話に、設定が及ぶか</li></ol>
+<p>日本語版のポリシーは、日本のアカウント削除をSoftBankの担当営業に連絡するよう案内しています。問い合わせ先もそこになると考えられます。</p>
+<h2 id="判断軸2-残す期間をどのプランで決められるか">判断軸2｜残す期間をどのプランで決められるか</h2>
+<p>学習の問題とは別に、通話の録音と文字起こしがどれだけ残るかも確認が要ります。ポリシーでは、初期設定のままだとアカウントが有効な間は保持され、解約後180日以内に削除されます。</p>
+<p>一定期間で消す保持ポリシーについては、英語版Trustが「Enterpriseのお客様」と書き、日本の料金ページもEnterpriseの特典に挙げています。一方で日本語版Trustは「すべてのお客様」が保持期間をカスタマイズできるとしています。どちらが現在の仕様かは公式ページの中で一致していないため、契約するプランで設定できるかを見積もりの段階で確かめてください。</p>
+<p>日本の料金ページ（ユーザー1人あたり月額）は次のとおりです。税込か税抜か、年払いか月払いかの記載は見当たりませんでした。</p>
+<ul><li>Connect AI：Standard 2,500円、Pro 3,000円、Enterprise 3,500円</li><li>AIを含まないConnect：Standard 1,000円、Pro 1,500円、Enterprise 2,000円</li></ul>
+<p>保存期間の考え方は、Zoomの例ですが<a href="../zoom-cloud-recording-retention/">Zoomクラウド録画の保存期間と自動削除</a>でも整理しました。</p>
+<h2 id="判断軸3-通話以外の会議や面談まで-同じ条件で扱えるか">判断軸3｜通話以外の会議や面談まで、同じ条件で扱えるか</h2>
+<p>Dialpadはクラウド電話が中心のサービスです。同じ部署で、Web会議や対面の打ち合わせも記録しているなら、そちらの学習条件も揃えないと規程の意味が薄れます。</p>
+<p>例えば<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=dialpadaitraining" target="_blank" rel="sponsored nofollow noopener">Notta</a>では、利用規約に「ご利用のプランに応じて」音声を音声認識トレーニングに使う場合があるとあり、法人向けページで「AI学習なし」が書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。電話はDialpad、会議と面談は別のツールという分け方をするなら、両方で「学習しない」設定を確かめる必要があります。電話システムの比較は<a href="../zoom-phone-transcription-training/">Zoom Phoneの通話文字起こしは学習される？</a>、CRM側の例は<a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしとAI学習</a>にまとめました。</p>
+<p>向くのは、電話以外の会議や面談の録音も扱い、その音声も学習に使わせないと決めている法人です。電話の記録だけで足りるなら、まずDialpad側の設定で要件を満たせるかを確かめてください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=dialpadaitraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Dialpad</strong>：設定手順を説明するヘルプが読めず、初期値も確認できませんでした。保持ポリシーの対象プランは公式ページ間で記載が違います。日本語のAI要約はベータ版です</li><li><strong>Dialpad</strong>：英語版サイトに、Adaとの統合の告知が出ていました。今後ポリシーが変わる可能性があります</li><li><strong>Notta</strong>：電話システムではないため、通話を記録するには録音ファイルを取り込む形になります。「AI学習なし」はビジネス以下のプランに書かれていません</li><li><strong>この記事の限界</strong>：DPAの本文は管理画面内で署名する形式で、読めていません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Dialpadの文字起こしはAIの学習に使われますか">Dialpadの文字起こしはAIの学習に使われますか</h3>
+<p>プライバシーポリシーには、通話の音声や文字起こしからDialpad AIが学ぶことを許可する設定があり、許可しなくてもAI機能は使えると書かれています。初期値が許可か不許可かは確認できなかったので、管理画面か販売代理店で確認してください。</p>
+<h3 id="解約したら通話の録音は消えますか">解約したら通話の録音は消えますか</h3>
+<p>ポリシーでは、アカウントの終了から180日以内に自動で削除するとしています。それより前に消したい場合は、保持ポリシーの設定や手動削除の可否を確認してください。</p>
+<h3 id="セキュリティの認証はありますか">セキュリティの認証はありますか</h3>
+<p>Trustページには、SOC2 Type II、ISO 27001・27017・27018の毎年の認証、保存時のAES 256-bit暗号化が書かれています。認証は学習の有無を決めるものではないので、学習の設定は別に確認が要ります。録音の外部保存のルール作りは<a href="../recording-data-external-rule/">録音データの外部保存の社内ルール</a>で扱いました。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>DialpadにはAIトレーニングの設定があり、いつでも変えられる。初期値と設定者は公式ヘルプが読めず未確認</li><li>保持期間を自分で決める設定は、料金ページではEnterpriseの特典。Trustの記載とは一致しない</li><li>会議や面談の録音も扱うなら、ほかのツールの学習条件も揃える</li></ul>
+<h3 id="確認した公式情報-2026年11月8日">確認した公式情報（2026年11月8日）</h3>
+<ul><li>Dialpad Privacy Policy（2025年8月18日発効）、プライバシーポリシー日本語版（2025年5月20日発効）</li><li>Dialpad Trust（英語・日本語）、料金ページ（日本・米国）、AI文字起こしの製品ページ、日本語の会社案内・問い合わせページ</li><li>Notta 料金ページ、法人向けページ、利用規約</li></ul>
+<p>※本記事は上記の公開資料を2026年11月8日に確認して整理したもので、法律の助言ではありません。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li><li><a href="../kansayaku-hearing-recording/">監査役のヒアリングを録音しAI文字起こし｜監査調書と機密の3つの確認</a></li><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li><li><a href="../dialpad-ai-training/">Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間</a></li><li><a href="../kansayaku-hearing-recording/">監査役のヒアリングを録音しAI文字起こし｜監査調書と機密の3つの確認</a></li><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li><li><a href="../beauty-clinic-counseling-recording/">美容クリニックのカウンセリング録音とAI文字起こし｜個人情報とカルテの3点</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>
