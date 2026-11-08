@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定｜AIツール実用ガイド</title>
+<meta name="description" content="Galaxy AIの通話の文字起こし・文字起こしアシストで、音声がどこで処理されるかを公式で確認。端末外に送られる条件、学習の扱い、仕事の通話で決めておくことまで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/galaxy-call-transcription-data/">
+<meta property="og:title" content="Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定｜AIツール実用ガイド">
+<meta property="og:description" content="Galaxy AIの通話の文字起こし・文字起こしアシストで、音声がどこで処理されるかを公式で確認。端末外に送られる条件、学習の扱い、仕事の通話で決めておくことまで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定", "description": "Galaxy AIの通話の文字起こし・文字起こしアシストで、音声がどこで処理されるかを公式で確認。端末外に送られる条件、学習の扱い、仕事の通話で決めておくことまで。", "datePublished": "2026-11-09", "dateModified": "2026-11-09", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/galaxy-call-transcription-data/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定</h1><p class="meta">2026-11-09 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Galaxyの「通話の文字起こし」と「文字起こしアシスト」は、ネットワーク接続とSamsungアカウントへのログインが必要な機能で、Samsungのプライバシー通知は文字起こしアシストの「通話と音声録音の文字起こし」を<strong>端末の外で処理される入力データ</strong>として挙げています。端末内だけで処理する設定もありますが、送られたデータが学習に使われるかは公式の文面で確認できませんでした。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=galaxycalltranscriptiondata" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="公式ページの記載を並べる">公式ページの記載を並べる</h2>
+<p>2026年11月9日に、Samsungの日本向けGalaxy AIページ、法人向けGalaxy AIページ、サポートページ「通話中の録音」「通話スクリーニング」、Samsungアカウントのプライバシー保護に関するお知らせ（日本・2026年10月28日発効）、Samsung NewsroomのKnox Vaultの記事を読んで確認しました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式ページの記載</th><th>確認できなかったこと</th></tr></thead><tbody><tr><td>通話の録音</td><td>電話アプリの「録音」ボタン、または「通話の自動録音」で保存。リアルタイム通訳の使用中は録音できない</td><td>通話相手への通知の有無</td></tr><tr><td>通話の文字起こし</td><td>ネットワーク接続とSamsungアカウントへのログインが必要。録音した通話をテキストにして要約できる</td><td>端末内だけで完結するかどうか</td></tr><tr><td>文字起こしアシスト</td><td>標準のボイスレコーダー・電話・Samsung Notes・通訳アプリで録音したファイルだけが対象。3時間未満</td><td>ほかのアプリの録音を扱えるか</td></tr><tr><td>端末外での処理</td><td>文字起こしアシストの「通話と音声録音の文字起こし」をデバイス外で処理する入力データとして列挙。初回利用前に知らせて同意を取る</td><td>保存期間</td></tr><tr><td>処理場所の選択</td><td>端末のプライバシー設定で、ローカルで処理するかクラウドで処理するかを選べる</td><td>端末内処理で使えなくなる機能の一覧</td></tr><tr><td>学習</td><td>プライバシー通知の利用目的に「製品やサービスの強化と改善」がある</td><td>文字起こしデータをAIの学習に使うかどうかの明記</td></tr><tr><td>料金</td><td>Galaxy AIの基本機能は無料。今後の拡張機能は有料のものが含まれる可能性がある</td><td>―</td></tr></tbody></table></div>
+<p>通話相手が誰でも、録音した時点で音声は端末に残ります。問題になるのは、その音声や文字起こしを<strong>端末の外に出すかどうか</strong>です。</p>
+<h2 id="判断軸1-文字起こしを端末の外に出してよいか">判断軸1｜文字起こしを端末の外に出してよいか</h2>
+<p>Samsungアカウントのプライバシー通知には、Galaxy AIの中に「デバイス内でのみ処理」するものと、データの収集を必要とするものがあると書かれています。収集を必要とする機能は、初めて使う前にデバイス外での処理について知らせ、同意を取るという流れです。</p>
+<p>文字起こしアシストについては、デバイス外で処理される入力データとして「通話と音声録音の文字起こし」が挙がっています。通話の文字起こしの注記でも、ネットワーク接続とSamsungアカウントへのログインが必要とされています。</p>
+<p>一方で、日本向けのGalaxy AIページは、Galaxy AIのデータをローカルで処理するかクラウドで処理するかを端末のプライバシー設定で選べると説明しています。プライバシー通知も、各アプリの設定で端末内処理の選択肢があるかを確認できると書いています。仕事の通話を扱うなら、最初の同意画面で何に同意するかを読み、端末内処理に切り替えたときに文字起こしが使えるかを自分の端末で確かめてください。端末内処理だけにすると使えない機能があるかどうかは、機種とOSで異なる可能性があり、公式ページの一覧では確認できませんでした。</p>
+<p>同じ考え方はGoogleの端末でも必要です。比較は<a href="../pixel-recorder-data/">Pixelレコーダーの文字起こしはデータ送信される？</a>、iPhoneは<a href="../iphone-call-recording-ai/">iPhoneの通話録音は学習される？</a>にまとめました。</p>
+<h2 id="判断軸2-学習に使わないことを-書面で示せるか">判断軸2｜学習に使わないことを、書面で示せるか</h2>
+<p>取引先や顧客との通話を記録する仕事では、「学習に使われない」と説明できるかが問われます。Galaxyの場合、プライバシー通知の利用目的には「製品やサービスの強化と改善」が含まれていますが、文字起こしのデータをAIモデルの学習に使うか使わないかを直接書いた文言は、今回読んだページには見当たりませんでした。</p>
+<p>社内規程で学習の可否を条件にしているなら、Galaxyの文字起こしは「端末内処理に固定できるか」で判断するのが現実的です。法人向けのGalaxy AIページには、IT管理者がKnox Service Pluginを使ってGalaxy AIのクラウド処理をオフにできると書かれています。会社支給の端末で管理者がこの設定を入れられるなら、端末の外に出さない運用を組みやすくなります。私物端末の場合の考え方は<a href="../byod-meeting-recording-policy/">私物スマホの会議録音とAI文字起こし</a>で整理しました。</p>
+<h2 id="判断軸3-通話以外の会議や面談まで-同じ条件で扱えるか">判断軸3｜通話以外の会議や面談まで、同じ条件で扱えるか</h2>
+<p>Galaxyの文字起こしアシストが扱えるのは、標準の電話・ボイスレコーダー・Samsung Notes・通訳アプリで録音したファイルです。Web会議の録音や、ほかの人のスマホで録った面談の音声は対象外になります。電話はGalaxy、会議は別のツールという分け方になるなら、両方の学習条件を揃えないと規程の意味が薄れます。</p>
+<p>例えば<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=galaxycalltranscriptiondata" target="_blank" rel="sponsored nofollow noopener">Notta</a>では、利用規約に「ご利用のプランに応じて」音声を音声認識トレーニングに使う場合があると書かれています。法人向けページで「AI学習なし」が書かれているのは、ビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。法人向けページは「AI学習なしモードでは、音声データがAIに一切学習されることはありません」と説明しています。</p>
+<p>向くのは、通話だけでなくWeb会議や対面の面談も記録し、そのすべてを学習に使わせないと決めている法人です。Galaxyの通話だけで足りるなら、まず端末内処理の設定で要件を満たせるかを確かめてください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=galaxycalltranscriptiondata" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<p>電話システム側で記録する場合の考え方は、<a href="../dialpad-ai-training/">Dialpadの通話はAI学習に使われる？</a>でも整理しています。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Galaxy</strong>：文字起こしのデータを学習に使うかどうかの明記が、今回読んだ公式ページにありませんでした。通話の文字起こしにはネットワーク接続とSamsungアカウントが必要です</li><li><strong>Galaxy</strong>：文字起こしアシストは標準アプリで録音したファイルだけが対象で、3時間未満という制限があります。結果の正確性は保証しないと注記されています</li><li><strong>Notta</strong>：電話の通話をそのまま記録する機能ではないため、通話は録音ファイルを取り込む形になります。「AI学習なし」はビジネス以下のプランに書かれていません</li><li><strong>この記事の限界</strong>：機種やOSのバージョンで設定画面の名称が違う可能性があり、実機の画面は確認していません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Galaxyの通話録音は相手に通知されますか">Galaxyの通話録音は相手に通知されますか</h3>
+<p>今回読んだ公式のサポートページには、通話相手への通知についての記載が見当たりませんでした。相手の同意を取るかどうかは、社内規程や業界のルールに沿って決めてください。</p>
+<h3 id="文字起こしを端末内だけで処理できますか">文字起こしを端末内だけで処理できますか</h3>
+<p>日本向けのGalaxy AIページは、ローカルで処理するかクラウドで処理するかを端末のプライバシー設定で選べると説明しています。ただし通話の文字起こしにはネットワーク接続が必要と注記されているため、端末内処理に切り替えたときに使えるかは実機で確かめてください。</p>
+<h3 id="Galaxy-AIの文字起こしは有料ですか">Galaxy AIの文字起こしは有料ですか</h3>
+<p>日本向けのGalaxy AIページには、Samsungが提供するGalaxy AIの基本機能は無料と書かれています。今後の拡張機能や新しいサービスには有料のものが含まれる可能性があるとも注記されています。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>通話の文字起こしと文字起こしアシストは、ネットワーク接続とSamsungアカウントが必要。文字起こしアシストの入力はデバイス外で処理されるデータとして明記されている</li><li>学習に使うかどうかの明記は見当たらないため、端末内処理に固定できるかで判断する。法人端末はKnox Service Pluginでクラウド処理をオフにできる</li><li>会議や面談も同じ条件で扱うなら、「AI学習なし」が書かれたプランのツールで揃える</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li><li><a href="../dialpad-ai-training/">Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間</a></li><li><a href="../kansayaku-hearing-recording/">監査役のヒアリングを録音しAI文字起こし｜監査調書と機密の3つの確認</a></li><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../galaxy-call-transcription-data/">Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定</a></li><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li><li><a href="../dialpad-ai-training/">Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間</a></li><li><a href="../kansayaku-hearing-recording/">監査役のヒアリングを録音しAI文字起こし｜監査調書と機密の3つの確認</a></li><li><a href="../accident-settlement-recording/">交通事故の示談交渉を録音しAI文字起こし｜弁護士に渡す前の3つの確認</a></li><li><a href="../azure-speech-data-privacy/">Azure Speechの音声データは保存・学習される？標準は残らず例外は3つ</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>
