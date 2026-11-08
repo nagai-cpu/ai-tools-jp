@@ -12,6 +12,7 @@
 ## 記事
 
 - [Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定](https://nagai-cpu.github.io/ai-tools-jp/galaxy-call-transcription-data/): Galaxy AIの通話の文字起こし・文字起こしアシストで、音声がどこで処理されるかを公式で確認。端末外に送られる条件、学習の扱い、仕事の通話で決めておくことまで。
+- [公認心理師の面接録音をAI文字起こし｜守秘義務と同意・記録で確かめること](https://nagai-cpu.github.io/ai-tools-jp/koninshinrishi-session-record/): 公認心理師が面接を録音してAIで文字起こしする前に、公認心理師法の秘密保持義務、職能団体の倫理綱領にある録音の同意と記録の保存、ツールのAI学習条件を公式資料で確認。
 - [債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認](https://nagai-cpu.github.io/ai-tools-jp/debt-consultation-recording/): 債務整理の面談を録音し、AIで記録にしたい弁護士・司法書士事務所と相談者向け。職務基本規程、債務整理の規律、行為規範、法テラスの相談時間を公式資料で整理しました。
 - [Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間](https://nagai-cpu.github.io/ai-tools-jp/dialpad-ai-training/): Dialpadの通話音声や文字起こしがAI学習に使われるかを公式のポリシーで確認。学習設定の変更、保持期間、日本の料金とプランごとの差まで。
 - [監査役のヒアリングを録音しAI文字起こし｜監査調書と機密の3つの確認](https://nagai-cpu.github.io/ai-tools-jp/kansayaku-hearing-recording/): 監査役が取締役や従業員へのヒアリングを録音し、AIで文字にして監査調書に使いたい人向け。会社法、監査役監査基準、実施要領の記録の定めと、音声の置き場の選び方を整理。
