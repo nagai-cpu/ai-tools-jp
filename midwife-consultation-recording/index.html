@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>助産師の妊婦面談は録音してよい？AI文字起こしと守秘義務の確認点｜AIツール実用ガイド</title>
+<meta name="description" content="助産師が妊婦面談や保健指導を録音してAI文字起こしに使うときの確認点を、刑法の秘密漏示罪、個人情報保護法、厚労省ガイドライン、Nottaの医療向けプランの条件から整理します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/midwife-consultation-recording/">
+<meta property="og:title" content="助産師の妊婦面談は録音してよい？AI文字起こしと守秘義務の確認点｜AIツール実用ガイド">
+<meta property="og:description" content="助産師が妊婦面談や保健指導を録音してAI文字起こしに使うときの確認点を、刑法の秘密漏示罪、個人情報保護法、厚労省ガイドライン、Nottaの医療向けプランの条件から整理します。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "助産師の妊婦面談は録音してよい？AI文字起こしと守秘義務の確認点", "description": "助産師が妊婦面談や保健指導を録音してAI文字起こしに使うときの確認点を、刑法の秘密漏示罪、個人情報保護法、厚労省ガイドライン、Nottaの医療向けプランの条件から整理します。", "datePublished": "2026-11-10", "dateModified": "2026-11-10", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/midwife-consultation-recording/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">助産師の妊婦面談は録音してよい？AI文字起こしと守秘義務の確認点</h1><p class="meta">2026-11-10 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、助産師は刑法134条で守秘義務を負う職種として名前が挙がっており、妊婦面談の録音を外部のAI文字起こしに預けるなら「同意」「学習に使われない条件」「施設の規程」の3つを先に決める必要があります。Nottaの医療関係者向け特別プランは医療用の認識エンジンが付きますが、AI学習なしは別途の追加費用と公式ヘルプに書かれています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=midwifeconsultationrecording" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="法律と公式資料に書かれていること">法律と公式資料に書かれていること</h2>
+<p>2026年11月10日に、e-Gov法令検索（刑法、保健師助産師看護師法、個人情報保護法と同法施行令）、厚生労働省の「医療情報システムの安全管理に関するガイドライン」のページ、Nottaの法人向けページと公式ヘルプを確認しました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式資料の記載</th><th>この記事での扱い</th></tr></thead><tbody><tr><td>守秘義務</td><td>刑法134条：助産師が正当な理由なく業務上知り得た人の秘密を漏らしたら、6月以下の拘禁刑または10万円以下の罰金。135条で親告罪</td><td>録音を外部に預けること自体が漏示に当たるかは書かれていない。施設と専門家の判断</td></tr><tr><td>助産録</td><td>保助看法42条：分べんの介助をしたら助産録に記載し、5年間保存</td><td>面談の録音は助産録そのものではない。記録の扱いは施設の規程で決める</td></tr><tr><td>要配慮個人情報</td><td>個人情報保護法2条3項は病歴を含む。施行令2条は、心身の変化を理由に医師等が行った指導も挙げる</td><td>妊婦面談の内容が当たるかは個別に確認する</td></tr><tr><td>医療情報の安全管理</td><td>厚労省ガイドラインは第7.0版（令和8年6月）に改定</td><td>外部サービスを使う前に、施設がこの版に沿った規程を持っているか確かめる</td></tr><tr><td>Nottaの医療特別プラン</td><td>医療音声認識エンジンとAI要約が回数制限なし。AI学習なし・操作ログ・SSOは「別途追加費用」</td><td>料金は問い合わせ</td></tr><tr><td>Nottaの学習なしプラン</td><td>法人向けページで「AI学習なし」と書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン</td><td>ビジネス（年27,360円・税抜）には書かれていない</td></tr></tbody></table></div>
+<p>日本助産師会の倫理綱領は、今回はページを取得できず確認できませんでした。</p>
+<h2 id="判断軸1-妊婦さんに何を伝えて同意をもらうか">判断軸1｜妊婦さんに何を伝えて同意をもらうか</h2>
+<p>刑法134条は、正当な理由なく秘密を漏らすことを処罰しています。録音してAIで文字起こしすることが、そのまま「漏らした」に当たるとは条文に書かれていません。ただ、面談の録音には体調、家族関係、経済的な事情、過去の妊娠の経過など、本人が他人に知られたくない話が入りやすいものです。</p>
+<p>最低限、次の3つを面談の前に伝えておくと、後から説明に困りません。</p>
+<ol><li>録音する目的（記録の正確さ、引き継ぎなど）</li><li>録音と文字起こしをどこに保存し、いつ消すか</li><li>録音を断っても面談や支援は変わらないこと</li></ol>
+<p>同意の取り方の例は<a href="../recording-consent-meeting/">会議を録音するときの同意の取り方</a>、医療現場での引き継ぎの例は<a href="../nurse-handover-recording/">看護師の申し送りを録音してAIで記録する前に</a>にまとめました。</p>
+<h2 id="判断軸2-音声がAIの学習に使われない条件か">判断軸2｜音声がAIの学習に使われない条件か</h2>
+<p>外部の文字起こしサービスを使うなら、音声が学習に使われるかを確かめます。<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=midwifeconsultationrecording" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約は「ご利用のプランに応じて」音声を学習に使う場合があると書いています。</p>
+<p>法人向けページの説明では、ここでいう学習は、国内の提携先の音声認識エンジンが音声と認識結果からランダムに選んだデータを使うもので、要約に使う自然言語処理エンジンには提供していないとされています。それでも、妊婦面談の音声を扱うなら、学習なしが書かれたプランを選ぶのが筋です。</p>
+<p>注意したいのは、医療関係者向け特別プランです。公式ヘルプ「医療関係者向け特別プランについて」（2026年7月27日更新）の比較表では、AI学習なし・操作ログ・SSOが「利用可能」とされ、その下に「別途追加費用が発生いたします」と注記があります。医療用の認識エンジンと学習なしを両方求めるなら、見積もりの段階で学習なしを含めて依頼する必要があります。プランの詳しい中身は<a href="../notta-medical-plan/">Nottaの医療関係者向け特別プラン</a>で確認しました。</p>
+<h2 id="判断軸3-施設の規程と記録の残し方">判断軸3｜施設の規程と記録の残し方</h2>
+<p>病院や助産所に勤務しているなら、録音を外部に預けてよいかは個人ではなく施設が決めることです。厚労省の「医療情報システムの安全管理に関するガイドライン」は第7.0版（令和8年6月）に改定されています。施設の規程がこの版に沿っているか、外部のクラウドサービスの利用が規程に書かれているかを、情報管理の担当者に確認してください。</p>
+<p>記録の残し方も決めておきます。保助看法42条の助産録は分べんの介助の記録で、5年間の保存が定められています。面談の録音や文字起こしは助産録とは別のものなので、保存期間と削除の手順を施設で決める必要があります。録音そのものは文字起こしを確認したら消す、という運用にすると、預ける音声の量を減らせます。</p>
+<h2 id="Nottaを使うならどのプランか">Nottaを使うならどのプランか</h2>
+<p>向くのは、面談の記録を正確に残したいが、音声を学習に使わせない条件を規程で求められている施設です。医療用語の認識を重視するなら医療関係者向け特別プラン（学習なしは追加費用）、医療用語より学習なしの条件を優先して料金を公開価格で比べたいならビジネス Plus が候補になります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=midwifeconsultationrecording" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta 医療関係者向け特別プラン</strong>：料金は問い合わせで、学習なしは追加費用です。標準の契約だけでは学習なしになりません</li><li><strong>Notta ビジネス Plus</strong>：医療用の認識エンジンは含まれていると書かれていません。年64,800円（税抜）と、ビジネスより高くなります</li><li><strong>録音全般</strong>：録音があると、妊婦さんが話しにくくなることがあります。同意を取っても、話題によっては録音を止める判断が要ります</li><li><strong>この記事の限界</strong>：日本助産師会の倫理綱領は読めていません。法律の解釈は弁護士など専門家に確認してください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="助産師の守秘義務はどの法律に書かれていますか">助産師の守秘義務はどの法律に書かれていますか</h3>
+<p>刑法134条で、医師や薬剤師と並んで助産師が挙げられています。正当な理由なく業務上知り得た人の秘密を漏らした場合、6月以下の拘禁刑または10万円以下の罰金で、告訴がなければ起訴されない親告罪です。看護師・保健師の守秘義務は保健師助産師看護師法42条の2にあります。</p>
+<h3 id="妊婦面談の内容は要配慮個人情報ですか">妊婦面談の内容は要配慮個人情報ですか</h3>
+<p>個人情報保護法は要配慮個人情報に病歴を含め、施行令は心身の変化を理由に医師等が行った指導も挙げています。妊婦面談の内容がこれに当たるかは内容によるため、施設の個人情報保護の担当者に確認してください。</p>
+<h3 id="録音を文字起こししたら-元の音声は消してよいですか">録音を文字起こししたら、元の音声は消してよいですか</h3>
+<p>法律で面談の録音の保存期間は定められていません。施設の規程で保存期間を決め、文字起こしの確認後に消す運用にすると、外部に預ける期間を短くできます。消した証拠の残し方は<a href="../transcription-data-deletion-proof/">文字起こしデータを削除した証明</a>で扱いました。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>助産師は刑法134条の守秘義務の対象。録音を外部に預ける前に、目的・保存先・削除の時期を伝えて同意を取る</li><li>Nottaの医療特別プランは医療エンジン付きだが、AI学習なしは追加費用。学習なしを見積もりに含める</li><li>録音の保存期間は法律で決まっていないので、施設の規程で決めて文字起こし後に消す</li></ul>
+<h3 id="確認した公式情報-2026年11月10日">確認した公式情報（2026年11月10日）</h3>
+<ul><li>e-Gov法令検索：刑法134条・135条、保健師助産師看護師法3条・42条・42条の2、個人情報保護法2条、同法施行令2条</li><li>厚生労働省「医療情報システムの安全管理に関するガイドライン 第7.0版（令和8年6月）」の掲載ページ</li><li>Notta 法人向けページ、利用規約、公式ヘルプ「医療関係者向け特別プランについて」（2026年7月27日更新）</li></ul>
+<p>※本記事は上記の公開資料を2026年11月10日に確認して整理したもので、法律・医療の助言ではありません。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../salesforce-call-transcription-training/">Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ</a></li><li><a href="../galaxy-call-transcription-data/">Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定</a></li><li><a href="../koninshinrishi-session-record/">公認心理師の面接録音をAI文字起こし｜守秘義務と同意・記録で確かめること</a></li><li><a href="../perplexity-data-training-setting/">Perplexityの入力データは学習される？法人が見る設定とEnterpriseの条件</a></li><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../midwife-consultation-recording/">助産師の妊婦面談は録音してよい？AI文字起こしと守秘義務の確認点</a></li><li><a href="../salesforce-call-transcription-training/">Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ</a></li><li><a href="../galaxy-call-transcription-data/">Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定</a></li><li><a href="../koninshinrishi-session-record/">公認心理師の面接録音をAI文字起こし｜守秘義務と同意・記録で確かめること</a></li><li><a href="../perplexity-data-training-setting/">Perplexityの入力データは学習される？法人が見る設定とEnterpriseの条件</a></li><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>
