@@ -291,3 +291,4 @@
 - [文字起こしをAIの学習に使わせない設定と確認の手順](https://note.com/life_lab_jp/n/nee47eb4ec0d7): Notta・Zoom・Google Meet・Teams・Claude・Geminiの学習の扱いと確認する場所、録音前の8項目のチェックリストをまとめた手順書です。（780円）
 - [士業事務所のためのAI文字起こし導入一式](https://note.com/life_lab_jp/n/nba3b68847a65): 士業事務所がAI文字起こしを導入するための、依頼者への説明文・事務所内規程・ベンダー確認書・4社の規約原文をまとめた一式です。（9800円）
 - [ChatGPTが業務で使えない原因を切り分けるシート](https://note.com/life_lab_jp/n/n34cf21ddfe5f): 自分の「使えない」が聞き方・使いどころ・社内ルールのどれかを10問で切り分け、タイプ別の指示テンプレート14本と検収基準をまとめたシートです。（780円）
+- [自社サイトをAIの学習に使わせない robots.txt の書き方](https://note.com/life_lab_jp/n/nb1cd7dfcbc25): 自社サイトをAIの学習に使わせず、AI検索からの引用は残すための robots.txt の書き方を、主要4社のボット名と対応時期つきでまとめた手順書です。（780円）
