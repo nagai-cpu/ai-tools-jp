@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆｜AIツール実用ガイド</title>
-<meta name="description" content="Microsoft Copilotで会議の内容や音声が学習に使われるかを公式ドキュメントで確認。職場・学校アカウントと個人アカウントの違い、オフにする手順、残る用途、Nottaとの比較まで。">
+<title>Copilotの会話アクティビティのトレーニングを止める方法｜職場用と個人用で扱いが逆｜AIツール実用ガイド</title>
+<meta name="description" content="Copilotの「会話アクティビティに関するトレーニング」を止める場所と、会議の内容が学習に使われるかを公式ドキュメントで確認。職場・学校と個人アカウントの違い、音声側の設定、Nottaとの比較まで。">
 <meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
 <link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/copilot-meeting-no-training/">
-<meta property="og:title" content="Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆｜AIツール実用ガイド">
-<meta property="og:description" content="Microsoft Copilotで会議の内容や音声が学習に使われるかを公式ドキュメントで確認。職場・学校アカウントと個人アカウントの違い、オフにする手順、残る用途、Nottaとの比較まで。">
+<meta property="og:title" content="Copilotの会話アクティビティのトレーニングを止める方法｜職場用と個人用で扱いが逆｜AIツール実用ガイド">
+<meta property="og:description" content="Copilotの「会話アクティビティに関するトレーニング」を止める場所と、会議の内容が学習に使われるかを公式ドキュメントで確認。職場・学校と個人アカウントの違い、音声側の設定、Nottaとの比較まで。">
 <meta property="og:type" content="article">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆", "description": "Microsoft Copilotで会議の内容や音声が学習に使われるかを公式ドキュメントで確認。職場・学校アカウントと個人アカウントの違い、オフにする手順、残る用途、Nottaとの比較まで。", "datePublished": "2026-10-19", "dateModified": "2026-10-19", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/copilot-meeting-no-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Copilotの会話アクティビティのトレーニングを止める方法｜職場用と個人用で扱いが逆", "description": "Copilotの「会話アクティビティに関するトレーニング」を止める場所と、会議の内容が学習に使われるかを公式ドキュメントで確認。職場・学校と個人アカウントの違い、音声側の設定、Nottaとの比較まで。", "datePublished": "2026-10-19", "dateModified": "2026-10-19", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/copilot-meeting-no-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -92,7 +92,7 @@ footer.site a{color:var(--muted)}
 <span class="tag">実際に触って比べた記録</span>
 </div></header>
 <div class="wrap">
-<h1 class="title">Copilotの会議の文字起こしは学習されない？職場用と個人用で答えが逆</h1><p class="meta">2026-10-19 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Copilotで会議の中身が学習に使われるかは、<strong>サインインしているアカウントの種類で答えが逆になります</strong>。会社や学校のEntra IDアカウントで使うMicrosoft 365のCopilot（Teams会議を含む）は、Microsoft Learnの公式ドキュメントで、Microsoft Graph経由のプロンプト・応答・データは「基礎 LLM のトレーニングには使用されません」と書かれています。一方、個人のMicrosoftアカウントで使うCopilotアプリは、オプトアウトしない限り、アップロードしたファイルを含む音声と会話のアクティビティがAIトレーニングに使われます。会議の録音を個人アカウントのCopilotに読み込ませると、後者の扱いになります。</p>
+<h1 class="title">Copilotの会話アクティビティのトレーニングを止める方法｜職場用と個人用で扱いが逆</h1><p class="meta">2026-10-19 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Copilotで会議の中身が学習に使われるかは、<strong>サインインしているアカウントの種類で答えが逆になります</strong>。会社や学校のEntra IDアカウントで使うMicrosoft 365のCopilot（Teams会議を含む）は、Microsoft Learnの公式ドキュメントで、Microsoft Graph経由のプロンプト・応答・データは「基礎 LLM のトレーニングには使用されません」と書かれています。一方、個人のMicrosoftアカウントで使うCopilotアプリは、オプトアウトしない限り、アップロードしたファイルを含む音声と会話のアクティビティがAIトレーニングに使われます。会議の録音を個人アカウントのCopilotに読み込ませると、後者の扱いになります。</p>
 <div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=copilotmeetingnotraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
 <h2 id="アカウントごとの学習の扱い">アカウントごとの学習の扱い</h2>
 <p>2026年10月19日に、Microsoft Learn「Microsoft Copilot のデータ、プライバシー、セキュリティ」（最終更新2026年8月20日）と、Microsoftサポート「Microsoft Copilot のプライバシーに関する FAQ」「Microsoft Copilot のプライバシー コントロール」で確認した内容です。</p>
