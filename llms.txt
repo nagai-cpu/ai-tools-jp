@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ](https://nagai-cpu.github.io/ai-tools-jp/salesforce-call-transcription-training/): Salesforceの会話インサイト（ECI）で通話の録音や文字起こしが学習や製品改善に使われるかを公式ヘルプで確認。Trust Layerとの違い、保存場所、導入前に聞く項目まで。
 - [Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定](https://nagai-cpu.github.io/ai-tools-jp/galaxy-call-transcription-data/): Galaxy AIの通話の文字起こし・文字起こしアシストで、音声がどこで処理されるかを公式で確認。端末外に送られる条件、学習の扱い、仕事の通話で決めておくことまで。
 - [公認心理師の面接録音をAI文字起こし｜守秘義務と同意・記録で確かめること](https://nagai-cpu.github.io/ai-tools-jp/koninshinrishi-session-record/): 公認心理師が面接を録音してAIで文字起こしする前に、公認心理師法の秘密保持義務、職能団体の倫理綱領にある録音の同意と記録の保存、ツールのAI学習条件を公式資料で確認。
 - [Perplexityの入力データは学習される？法人が見る設定とEnterpriseの条件](https://nagai-cpu.github.io/ai-tools-jp/perplexity-data-training-setting/): Perplexityに入力した質問やファイルがAI学習に使われるかを公式ヘルプとプライバシー通知で確認。個人プランの設定手順、Enterpriseの保持期間、法人で決めておくことまで。

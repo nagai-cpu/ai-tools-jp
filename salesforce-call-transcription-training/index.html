@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ｜AIツール実用ガイド</title>
+<meta name="description" content="Salesforceの会話インサイト（ECI）で通話の録音や文字起こしが学習や製品改善に使われるかを公式ヘルプで確認。Trust Layerとの違い、保存場所、導入前に聞く項目まで。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/salesforce-call-transcription-training/">
+<meta property="og:title" content="Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ｜AIツール実用ガイド">
+<meta property="og:description" content="Salesforceの会話インサイト（ECI）で通話の録音や文字起こしが学習や製品改善に使われるかを公式ヘルプで確認。Trust Layerとの違い、保存場所、導入前に聞く項目まで。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ", "description": "Salesforceの会話インサイト（ECI）で通話の録音や文字起こしが学習や製品改善に使われるかを公式ヘルプで確認。Trust Layerとの違い、保存場所、導入前に聞く項目まで。", "datePublished": "2026-11-10", "dateModified": "2026-11-10", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/salesforce-call-transcription-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ</h1><p class="meta">2026-11-10 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Salesforceの生成AI機能はTrust Layerにより、外部のLLM事業者が学習に使わない仕組みです。ただし通話を分析するEinstein会話インサイト（ECI）のヘルプには、Salesforceの従業員が製品の改善とトレーニングのために、録音された通話を含むデータを確認できると書かれています。この2つは別の話なので、分けて確かめる必要があります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=salesforcecalltranscriptiontraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="公式ヘルプの記載を並べる">公式ヘルプの記載を並べる</h2>
+<p>2026年11月10日に、Salesforceヘルプの「Einstein Trust Layer」「Einstein 会話インサイトの設定に関する考慮事項」（日本語の機械翻訳と英語の原文）、ナレッジ記事「Einstein 会話インサイト（ECI）のデータ処理と保存」（2026年5月13日公開）、日本語の「信頼できるAI」ページと会話インテリジェンスの製品ページを読みました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式ヘルプの記載</th><th>確認できなかったこと</th></tr></thead><tbody><tr><td>外部LLMの学習</td><td>Trust Layerのゼロデータ保持で、外部のLLM事業者は学習や製品改善にデータを使わず、保持もしない</td><td>なし</td></tr><tr><td>Salesforce側の確認</td><td>従業員は、製品の改善とトレーニングの目的で、録音された通話やビデオ会議を含むデータにアクセスして確認できる</td><td>この確認を止める設定、対象の範囲</td></tr><tr><td>録音そのもの</td><td>会話インサイトは通話を録音せず、録音システムに接続する。同意の管理はお客様の責任</td><td>なし</td></tr><tr><td>録音ファイルの保存</td><td>音声通話と手動アップロードの録画は、Salesforceプラットフォーム外のAWS S3に保存</td><td>保存リージョンの選択肢</td></tr><tr><td>一部データの保存場所</td><td>米国のパブリッククラウドを使ってデータの一部を保存する</td><td>日本の組織のデータがどこまで国内に残るか</td></tr><tr><td>日本語</td><td>対応言語に日本語がある</td><td>日本語で使える自動インサイトの一覧（設定画面で確認と案内）</td></tr></tbody></table></div>
+<h2 id="判断軸1-学習されない-の主語は誰か">判断軸1｜「学習されない」の主語は誰か</h2>
+<p>Trust Layerのヘルプが約束しているのは、OpenAIなどの<strong>外部のLLM事業者</strong>がデータを学習に使わないことです。プロンプトと応答を外部に保持させない、送る前に機密データをマスクする、といった仕組みが並んでいます。</p>
+<p>一方、会話インサイトの考慮事項には、英語の原文で次の趣旨の一文があります。Salesforceの従業員は、製品の改善とトレーニングのために、録音された電話やビデオ会議を含むこのデータにアクセスし、確認できる。</p>
+<p>つまり「生成AIの外部モデルに学習されない」ことと、「Salesforce自身が製品の改善に使わない」ことは別の約束です。ヘルプのこのページには、この確認を止める設定は書かれていませんでした。社内規程が「録音を第三者に聞かせない」まで求めているなら、契約書やデータ処理補遺（DPA）でどう扱われるかを、営業担当に書面で確かめるのが確実です。</p>
+<p>聞く項目は3つに絞れます。</p>
+<ol><li>従業員による確認は、どの条件で、誰が、どの範囲で行うのか</li><li>契約やDPAで、この確認を除外できるのか</li><li>通話の録音と文字起こしのどちらが対象か</li></ol>
+<h2 id="判断軸2-録音ファイルがどこに置かれるか">判断軸2｜録音ファイルがどこに置かれるか</h2>
+<p>ナレッジ記事によると、2026年5月から会話インサイトのデータは順次Salesforceプラットフォームへ移されています。文字起こしやインサイトはプラットフォームのオブジェクトに保存され、Hyperforceは日本でも提供されています（生成AI機能など一部の例外あり）。</p>
+<p>ただし、音声通話と手動でアップロードした録画の<strong>元のファイル</strong>は、プラットフォーム外のAWS S3に保存されると書かれています。考慮事項のページにも、米国のパブリッククラウドを使ってデータの一部を保存するとあります。「データは国内に置く」が条件の会社では、文字起こしと録音ファイルで扱いが違う点を前提に検討する必要があります。</p>
+<p>録音の保管と削除の決め方は<a href="../recording-data-external-rule/">録音データの外部保存の社内ルール</a>で整理しました。</p>
+<h2 id="判断軸3-処理できる時間とプラン">判断軸3｜処理できる時間とプラン</h2>
+<p>考慮事項のページには、プランごとの処理時間が書かれています。</p>
+<ul><li>会話インサイトの登録：ライセンスごとに年間675時間まで（組織の合計で計算）</li><li>Sales Enterprise Edition：追加費用なしで2,000ライセンスまで使え、標準ライセンスは年間60時間まで</li><li>Unlimited / Performance Edition：付属ライセンスで年間120時間まで</li></ul>
+<p>Starter と Pro Suite の会話インサイトには、通話の概要や生成AIのインサイトは含まれません。また、新たに有効にした組織ではベンダーの文字起こし処理が初期値で有効になり、一度有効にすると無効にできないと書かれています。有効化の前に、どの文字起こしを使うかを決めておく必要があります。</p>
+<p>CRMで通話を分析する例は<a href="../hubspot-call-transcription-training/">HubSpotの通話文字起こしとAI学習</a>、電話システム側の例は<a href="../dialpad-ai-training/">Dialpadの通話はAI学習に使われる？</a>にまとめました。</p>
+<h2 id="電話以外の会議や面談も同じ条件にそろえる">電話以外の会議や面談も同じ条件にそろえる</h2>
+<p>会話インサイトは営業の通話とWeb会議を分析するための機能です。同じ部署で対面の打ち合わせや社内会議も録音しているなら、そちらの学習条件もそろえないと規程の意味が薄れます。</p>
+<p>例えば<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=salesforcecalltranscriptiontraining" target="_blank" rel="sponsored nofollow noopener">Notta</a>は、利用規約に「ご利用のプランに応じて」音声を学習に使う場合があると書いています。法人向けページで「AI学習なし」が書かれているのは、ビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プランです。法人向けページの説明では、ここでいう学習は国内パートナーの音声認識エンジンの学習で、要約に使う自然言語処理エンジンには提供していないとされています。</p>
+<p>向くのは、営業の通話はSalesforceで分析しつつ、社内会議や対面の面談は学習なしの条件で別に記録したい法人です。通話の分析だけで足りるなら、まずSalesforceとの契約条件を確かめてください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=salesforcecalltranscriptiontraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Salesforce会話インサイト</strong>：従業員が製品改善のために録音を確認できると書かれていて、止める設定はヘルプのこのページに見当たりません。録音の元ファイルはプラットフォーム外のS3に置かれます</li><li><strong>Salesforce会話インサイト</strong>：ベンダーの文字起こし処理は一度有効にすると無効にできません。Starter と Pro Suite では生成AIの機能が使えません</li><li><strong>Notta</strong>：Salesforceの通話分析の代わりにはなりません。通話は録音ファイルを取り込む形になり、「AI学習なし」はビジネス以下のプランに書かれていません</li><li><strong>この記事の限界</strong>：契約書（MSA）とDPAの本文は読んでいません。日本語ヘルプは機械翻訳のため、判断には英語の原文を使いました</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Salesforceの文字起こしはOpenAIの学習に使われますか">Salesforceの文字起こしはOpenAIの学習に使われますか</h3>
+<p>Trust Layerのヘルプは、外部のLLM事業者とゼロデータ保持の契約を結び、学習や製品の改善にデータを使わず、保持もしないと書いています。生成AI機能に送るデータについての約束です。</p>
+<h3 id="Salesforce自身は通話の録音を確認しますか">Salesforce自身は通話の録音を確認しますか</h3>
+<p>会話インサイトの考慮事項に、従業員が製品の改善とトレーニングのために、録音された通話を含むデータにアクセスし確認できると書かれています。条件や除外の可否は営業担当に確認してください。</p>
+<h3 id="通話の録音は会話インサイトが行いますか">通話の録音は会話インサイトが行いますか</h3>
+<p>いいえ。ヘルプは、会話インサイトは通話を録音せず録音システムに接続すると書き、録音の同意の管理と地域のプライバシー要件への対応はお客様の責任としています。相手への伝え方は<a href="../recording-consent-meeting/">会議を録音するときの同意の取り方</a>で扱いました。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Trust Layerの「学習されない」は外部LLM事業者の話。Salesforce従業員による製品改善のための確認は別に書かれている</li><li>録音の元ファイルはプラットフォーム外のAWS S3。文字起こしと保存場所が違う</li><li>ベンダー文字起こし処理は有効にすると戻せない。有効化の前に契約条件を書面で確かめる</li></ul>
+<h3 id="確認した公式情報-2026年11月10日">確認した公式情報（2026年11月10日）</h3>
+<ul><li>Salesforceヘルプ「Einstein Trust Layer」「Einstein 会話インサイトの設定に関する考慮事項」（日本語・英語）</li><li>Salesforceヘルプ ナレッジ記事 005336074「Einstein 会話インサイト（ECI）のデータ処理と保存」（2026年5月13日公開）</li><li>Salesforce「信頼できるAI」ページ、会話インテリジェンスの製品ページ</li><li>Notta 法人向けページ、料金ページ、利用規約</li></ul>
+<p>※本記事は上記の公開資料を2026年11月10日に確認して整理したもので、法律の助言ではありません。</p><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../galaxy-call-transcription-data/">Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定</a></li><li><a href="../koninshinrishi-session-record/">公認心理師の面接録音をAI文字起こし｜守秘義務と同意・記録で確かめること</a></li><li><a href="../perplexity-data-training-setting/">Perplexityの入力データは学習される？法人が見る設定とEnterpriseの条件</a></li><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li><li><a href="../dialpad-ai-training/">Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../salesforce-call-transcription-training/">Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ</a></li><li><a href="../galaxy-call-transcription-data/">Galaxyの通話文字起こしはデータ送信される？学習と端末内処理の設定</a></li><li><a href="../koninshinrishi-session-record/">公認心理師の面接録音をAI文字起こし｜守秘義務と同意・記録で確かめること</a></li><li><a href="../perplexity-data-training-setting/">Perplexityの入力データは学習される？法人が見る設定とEnterpriseの条件</a></li><li><a href="../debt-consultation-recording/">債務整理の相談を録音しAI文字起こし｜守秘義務と面談義務の3つの確認</a></li><li><a href="../dialpad-ai-training/">Dialpadの通話はAI学習に使われる？文字起こしの設定と保持期間</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a></p>
+</div></footer>
+</body>
+</html>
