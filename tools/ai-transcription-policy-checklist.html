@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI文字起こし 社内導入チェックリスト｜AIツール実用ガイド</title>
+<meta name="description" content="社内規程の要件（学習なし・保存場所・共有制限・操作ログ・自動削除など）を選ぶと、ベンダーに確認する質問の一覧と、Nottaの公式ページに書かれている対応プランを表示します。入力は外部に送りません。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/tools/ai-transcription-policy-checklist.html">
+<meta property="og:title" content="AI文字起こし 社内導入チェックリスト">
+<meta property="og:description" content="社内規程の要件から、ベンダーへの確認項目とNottaの対応プランを一覧にします。">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI文字起こし 社内導入チェックリスト","url":"https://nagai-cpu.github.io/ai-tools-jp/tools/ai-transcription-policy-checklist.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"dateModified":"2026-11-11"}</script>
+<style>
+:root{
+--bg:#ffffff;--panel:#ffffff;--soft:#f6f8fa;--fg:#1a1d21;--muted:#5c6570;
+--line:#e4e7eb;--accent:#0f6fd6;--accent-fg:#ffffff;
+--ok:#2f6b4f;--ok-soft:#e8f2ec;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--no:#6b7280;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.8;font-size:16.5px;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-variant-numeric:tabular-nums;overflow-x:hidden}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
+.lead{color:var(--muted);font-size:.95rem;margin-bottom:1.6rem}
+h2{font-size:1.2rem;margin:2.4rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+p{margin:0 0 1.05rem}
+a{color:var(--accent)}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+form{background:var(--soft);border:1px solid var(--line);border-radius:11px;
+padding:1.2rem 1.15rem;display:flex;flex-direction:column;gap:1.3rem}
+fieldset{border:0;display:flex;flex-direction:column;gap:.45rem}
+legend{font-weight:700;font-size:.92rem;margin-bottom:.45rem}
+.opt{display:flex;align-items:flex-start;gap:.55rem;background:var(--panel);border:1px solid var(--line);
+border-radius:8px;padding:.6rem .75rem;cursor:pointer;font-size:.93rem;line-height:1.6}
+.opt input{margin-top:.32rem;accent-color:var(--accent);flex:none}
+.opt:has(input:checked){border-color:var(--accent)}
+.hint{font-size:.78rem;color:var(--muted);line-height:1.6}
+#out{margin-top:1.9rem}
+.verdict{border:1px solid var(--line);border-left:4px solid var(--accent);
+background:var(--panel);border-radius:0 9px 9px 0;padding:1.05rem 1.15rem;margin-bottom:1.3rem}
+.verdict h3{font-size:1.05rem;margin-bottom:.4rem}
+.verdict .sub{font-size:.88rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:10px;padding:.95rem 1.05rem;margin-bottom:.8rem;background:var(--panel)}
+.card h4{font-size:1rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.badge{font-size:.72rem;font-weight:700;border-radius:4px;padding:.08rem .45rem;border:1px solid currentColor;white-space:nowrap}
+.b-ok{color:var(--ok);background:var(--ok-soft)}
+.b-cond{color:var(--warn);background:var(--warn-bg)}
+.b-no{color:var(--no)}
+.card.no{opacity:.72}
+.card .why{font-size:.88rem;margin-bottom:.45rem}
+.card blockquote{border-left:3px solid var(--line);padding:.1rem 0 .1rem .8rem;color:var(--muted);font-size:.83rem;margin:0 0 .4rem}
+.card .src{font-size:.75rem;color:var(--muted)}
+.card .src a{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.93rem;padding:.6rem 1.15rem;border-radius:7px;margin-top:.3rem}
+.ctabox{border:1px solid var(--line);border-radius:11px;padding:1rem 1.1rem;margin:1.4rem 0;background:var(--soft)}
+.ctabox .h{font-weight:700;display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:.05rem .3rem;background:var(--bg)}
+.ctabox p{font-size:.88rem;color:var(--muted);margin-bottom:.6rem}
+.note{font-size:.88rem;line-height:1.85}
+.note li{margin:0 0 .5rem 1.2rem}
+.small{font-size:.8rem;color:var(--muted)}
+footer.site{margin-top:3.5rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+@media(max-width:600px){body{font-size:16px}h1{font-size:1.42rem}}
+</style>
+<style>
+table.m{width:100%;border-collapse:collapse;font-size:.82rem;margin:.4rem 0 1rem}
+table.m th,table.m td{border:1px solid var(--line);padding:.4rem .45rem;text-align:left;vertical-align:top}
+table.m th{background:var(--soft)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+ol.q{margin:0 0 1rem 1.2rem;font-size:.92rem}
+ol.q li{margin-bottom:.45rem}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+
+<div class="wrap">
+<h1>AI文字起こし 社内導入チェックリスト</h1>
+<p class="lead">社内規程が求める要件にチェックを入れると、どのツールにも使える「ベンダーに確認する質問」の一覧と、Nottaの公式ページで各要件に対応すると書かれているプランを表示します。</p>
+
+<div class="pr-note">このページにはアフィリエイト広告（PR）を含みます。表示するプランは「公式ページに書かれている機能」と「公開されている料金の安さ」だけで決めており、報酬の有無では変えていません。選んだ内容はブラウザの中で処理し、どこにも送信しません。</div>
+
+<form id="f" autocomplete="off">
+  <fieldset>
+    <legend>社内規程・情報システム部門が求める要件（当てはまるものすべて）</legend>
+    <label class="opt"><input type="checkbox" name="req" value="train" checked>音声を第三者の学習に使わない</label>
+    <label class="opt"><input type="checkbox" name="req" value="region">データを国内に保存する</label>
+    <label class="opt"><input type="checkbox" name="req" value="share">社外への共有を制限できる・役割で権限を分けられる</label>
+    <label class="opt"><input type="checkbox" name="req" value="ip">社外のネットワークからの利用を制限できる（IP制限）</label>
+    <label class="opt"><input type="checkbox" name="req" value="sso">会社のIDで一括ログインさせたい（SAML SSO）</label>
+    <label class="opt"><input type="checkbox" name="req" value="log">誰が何をしたかの操作ログを残す</label>
+    <label class="opt"><input type="checkbox" name="req" value="delete">保管期間を過ぎたデータを自動で消す</label>
+    <label class="opt"><input type="checkbox" name="req" value="cert">第三者認証（ISO27001・SOC2）の資料を確認する</label>
+    <label class="opt"><input type="checkbox" name="req" value="local">一部の会議は音声をクラウドに送らずPC内で処理したい</label>
+    <span class="hint">何も選ばないと、確認の質問だけを表示します。</span>
+  </fieldset>
+</form>
+
+<div id="out" aria-live="polite"></div>
+
+<h2>このチェックリストの使い方と判定の前提</h2>
+<p class="note">
+AI文字起こしの導入で社内規程が問うことは、だいたい「学習に使われるか」「どこに置かれるか」「誰が見られるか」「いつ消えるか」の4つに分かれます。このページでは、自社の規程や情報システム部門が求める要件にチェックを入れるだけで、ベンダーの営業担当やセキュリティチェックシートで確かめる質問を、そのまま社内の稟議に貼れる形で出します。質問はツールを問わず使えるように書いています。
+</p>
+<p class="note">
+あわせて、Nottaの料金ページ・法人向けページ・セキュリティページに書かれている内容から、選んだ要件をすべて満たすと公式に書かれている最も安いプランを表示します。判定の決まりは、公式ページに<strong>文言で</strong>書かれているものだけを「対応」とすることです。プラン名が書かれていない機能は「対象プランは要確認」にとどめ、推測で対応とは書きません。料金は公式の表示のまま（法人向けページは税抜、料金ページは税込）で載せています。
+</p>
+<p class="note">
+「学習」について一点だけ補足します。Nottaの利用規約が書いている学習は、音声認識エンジンを提供する第三者のパートナー企業による音声認識の学習です。法人向けページは、AI要約に使う自然言語処理エンジンの学習にはデータを提供していないと説明しています。社内規程が禁じているのがどちらなのかで、必要なプランが変わります。最終判断の前には、契約書と最新の公式ページ、自社の規程を必ず確認してください。
+</p>
+
+<h2>出典（2026年11月11日に公式ページで確認）</h2>
+<ul class="note small">
+<li>Notta セキュリティページ（プランごとの管理機能、AWS東京リージョン、TLS・AWS KMSによる暗号化、ISO27001・SOC2 Type2の報告書はNDA締結後に提供、自動削除、バックアップ、デスクトップのプライバシーモード）：<a href="https://www.notta.ai/security" rel="noopener" target="_blank">notta.ai/security</a></li>
+<li>Notta 法人向けページ（ビジネス年27,360円・ビジネス Plus年64,800円〈税抜〉、IP制限、AI学習なし、エンタープライズの操作ログ・SSO、「AI学習とは？」）：<a href="https://www.notta.ai/business" rel="noopener" target="_blank">notta.ai/business</a></li>
+<li>Notta 料金ページ（フリー0円、プレミアム年14,220円〈税込〉）：<a href="https://www.notta.ai/pricing" rel="noopener" target="_blank">notta.ai/pricing</a></li>
+<li>Notta 利用規約（音声認識トレーニングの条項）：<a href="https://www.notta.ai/terms" rel="noopener" target="_blank">notta.ai/terms</a></li>
+</ul>
+
+<h2>関連する記事とツール</h2>
+<p class="note">
+・<a href="../ai-transcription-company-policy/">AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する</a><br>
+・<a href="../rd-meeting-ai-transcription/">研究開発の会議を録音しAI文字起こし｜未公開情報で確かめる3つの条件</a><br>
+・<a href="../notta-enterprise-vs-business-plus/">Nottaビジネス Plusとエンタープライズの違い｜料金と学習なし以外の3つの差</a><br>
+・<a href="../confidential-class-ai-transcription/">秘密情報の区分でAI文字起こしを使い分ける｜極秘・社外秘・公開の判断表</a><br>
+・<a href="ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a>（Notta以外の選択肢も原文つきで比べる）
+</p>
+</div>
+
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a></p>
+</div></footer>
+
+<script>
+(function(){
+  var AFF = "https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ";
+  var CHECKED = "2026年11月11日";
+  // ベンダーに確認する質問（ツールを問わない）
+  var Q = {
+    train:["音声と文字起こし結果は、貴社または第三者（音声認識・生成AIの提供元）の学習や製品改善に使われますか。使われない場合、契約書のどこに書かれますか。","学習に使わない対象は音声だけですか、文字起こし結果や要約も含みますか。"],
+    region:["音声・文字起こし・バックアップはどの国のどのリージョンに保存されますか。","処理の途中で国外のサービス（翻訳・要約など）に送られることはありますか。"],
+    share:["社外への共有リンクを管理者が禁止できますか。","メンバーの役割ごとに閲覧・編集・削除の権限を分けられますか。"],
+    ip:["指定したIPアドレス以外からのアクセスを制限できますか。対象はWeb版だけですか、アプリも含みますか。"],
+    sso:["SAML SSOに対応していますか。対応しているのはどのプランですか。","退職者のアカウントを止めたとき、その人の録音は誰に引き継がれますか。"],
+    log:["操作ログには何が記録され（閲覧・ダウンロード・共有・削除）、何日間保存されますか。","ログは管理者が出力できますか。"],
+    delete:["保存期間を決めて自動で削除できますか。削除後、バックアップからはいつ消えますか。","解約したとき、データはいつまでに削除され、削除を証明する書面は出ますか。"],
+    cert:["ISO27001やSOC2の認証範囲に、このサービスは含まれますか。","報告書を受け取るための条件（NDAなど）は何ですか。"],
+    local:["音声をクラウドに送らずにPC内で処理する方式はありますか。その場合、使えなくなる機能は何ですか。","PC内で処理する方式でも、ライセンス確認などで通信する場面はありますか。"]
+  };
+  // Nottaの公式ページの記載。plan は対応と書かれている最も下のプラン（0=フリー,1=プレミアム,2=ビジネス,3=ビジネス Plus,4=エンタープライズ）。null は全プラン共通、"?" は対象プランの記載なし。
+  var N = {
+    train:{plan:3, txt:"法人向けページとセキュリティページで、ビジネス Plusとエンタープライズに「AI学習なし」（音声認識データを学習に使わない設定）と書かれています。士業向け特別プランにも「AI学習なし」の記載があります。"},
+    region:{plan:null, txt:"セキュリティページのよくある質問に「Nottaのデータは、AWS東京リージョンに保存されています」とあります。プランによる区別は書かれていません。"},
+    share:{plan:2, txt:"セキュリティページで、ビジネスに「メンバーの役割管理、外部共有の制限」があると書かれています。"},
+    ip:{plan:2, txt:"法人向けページとセキュリティページで、ビジネスに「IP制限」があると書かれています。"},
+    sso:{plan:4, txt:"SAML SSOは、料金ページとセキュリティページでエンタープライズの機能として書かれています。"},
+    log:{plan:4, txt:"操作ログは、エンタープライズの機能として書かれています。ビジネス Plusの説明には見当たりません。"},
+    delete:{plan:4, txt:"自動削除は、セキュリティページでエンタープライズの機能として書かれています。自分で削除しない限りクラウドに保管され続け、バックアップは毎日1回・35世代・最大180日間保存とあります。"},
+    cert:{plan:null, txt:"ISO27001とSOC2 Type2の認証を取得し、報告書はNDAの締結後に提供すると書かれています。プランによる区別は書かれていません。"},
+    local:{plan:"?", txt:"セキュリティページに、デスクトップ版のプライバシーモードでは録音と文字起こしを端末内で処理・保存し、要約や同期、共同作業に制限があると書かれています。このページには対象プランの記載がないため、ヘルプで確かめてください。"}
+  };
+  var PLANS = [
+    {n:"フリー", p:"0円"},
+    {n:"プレミアム", p:"年14,220円（税込）"},
+    {n:"ビジネス", p:"年27,360円（税抜）"},
+    {n:"ビジネス Plus", p:"年64,800円（税抜）"},
+    {n:"エンタープライズ", p:"要相談（料金は非公開）"}
+  ];
+  var LABEL = {train:"学習に使わない", region:"国内に保存", share:"共有制限・権限", ip:"IP制限", sso:"SAML SSO", log:"操作ログ", delete:"自動削除", cert:"第三者認証の資料", local:"PC内で処理"};
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); };
+
+  function render(){
+    var req = Array.prototype.map.call(document.querySelectorAll('input[name="req"]:checked'), function(e){ return e.value; });
+    var html = "";
+    var min = 0, unknown = [];
+    req.forEach(function(k){ var p = N[k].plan; if (p === "?") unknown.push(k); else if (p !== null && p > min) min = p; });
+
+    if (req.length) {
+      var head = PLANS[min];
+      html += '<div class="verdict"><h3>Nottaなら「' + esc(head.n) + '」' + (min < 4 ? '以上' : '') + 'が公式の記載に合います</h3>'
+            + '<p class="sub">選んだ ' + req.length + ' 項目のうち、プラン名が書かれているものをすべて満たす最も下のプランです（' + esc(head.p) + '）。'
+            + (unknown.length ? '「' + unknown.map(function(k){ return esc(LABEL[k]); }).join("、") + '」は対象プランの記載がないため、別に確認が要ります。' : '')
+            + '</p></div>';
+      html += '<div class="tw"><table class="m"><thead><tr><th>要件</th><th>Nottaの公式ページの記載</th></tr></thead><tbody>';
+      req.forEach(function(k){
+        html += '<tr><td>' + esc(LABEL[k]) + '</td><td>' + esc(N[k].txt) + '</td></tr>';
+      });
+      html += '</tbody></table></div>';
+      html += '<p class="small">出典：Notta セキュリティページ・法人向けページ・料金ページ（' + CHECKED + '確認）</p>';
+    } else {
+      html += '<div class="verdict"><h3>要件を選ぶと、Nottaの対応プランも表示します</h3><p class="sub">下はどのツールにも使える基本の質問です。</p></div>';
+    }
+
+    var keys = req.length ? req : ["train","region","delete"];
+    html += '<h3 style="font-size:1.02rem;margin:1.3rem 0 .5rem">ベンダーに確認する質問（コピーして稟議や問い合わせに使えます）</h3><ol class="q">';
+    keys.forEach(function(k){ Q[k].forEach(function(q){ html += '<li>' + esc(q) + '</li>'; }); });
+    html += '</ol>';
+
+    if (req.length && min >= 3) {
+      html += '<div class="ctabox"><div class="h">Notta ' + esc(PLANS[min].n) + '<span class="pr">PR</span></div>'
+            + '<p>選んだ要件のうち、プラン名が書かれているものを満たす最も下のプランです。契約前に、上の質問のうち公式ページで答えが見つからない項目を、営業担当に書面で確かめてください。</p>'
+            + '<a class="btn" href="' + AFF + '" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトで法人プランを確認する</a></div>';
+    } else if (req.length) {
+      html += '<div class="ctabox"><div class="h">Notta ' + esc(PLANS[min].n) + '<span class="pr">PR</span></div>'
+            + '<p>選んだ要件なら、学習なしの上位プランまでは要りません。精度は無料プラン（月120分・1回3分）で、機密を含まない音声を使って試せます。</p>'
+            + '<a class="btn" href="' + AFF + '" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトでプランを確認する</a></div>';
+    }
+    document.getElementById("out").innerHTML = html;
+  }
+  document.getElementById("f").addEventListener("change", render);
+  render();
+})();
+</script>
+</body>
+</html>
