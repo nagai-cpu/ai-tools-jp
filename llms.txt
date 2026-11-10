@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [研究開発の会議を録音しAI文字起こし｜未公開情報で確かめる3つの条件](https://nagai-cpu.github.io/ai-tools-jp/rd-meeting-ai-transcription/): 研究開発の会議を録音してAIで文字起こししたい人向け。営業秘密管理指針と特許法の条文、Nottaの規約と法人向けページを読み、未公開の技術情報で確かめる3つの条件を整理しました。
 - [就業規則で録音を禁止するとAI文字起こしは使えない？社内規程の書き方](https://nagai-cpu.github.io/ai-tools-jp/employment-rules-recording-ai/): 就業規則に「無断録音の禁止」を入れたい総務・人事向けに、労働基準法・労働契約法と厚労省のモデル就業規則（令和7年12月）を確認し、AI文字起こしを例外にする書き方と手続きを整理しました。
 - [助産師の妊婦面談は録音してよい？AI文字起こしと守秘義務の確認点](https://nagai-cpu.github.io/ai-tools-jp/midwife-consultation-recording/): 助産師が妊婦面談や保健指導を録音してAI文字起こしに使うときの確認点を、刑法の秘密漏示罪、個人情報保護法、厚労省ガイドライン、Nottaの医療向けプランの条件から整理します。
 - [Salesforceの通話文字起こしはAI学習に使われる？会話インサイトの設定とデータ](https://nagai-cpu.github.io/ai-tools-jp/salesforce-call-transcription-training/): Salesforceの会話インサイト（ECI）で通話の録音や文字起こしが学習や製品改善に使われるかを公式ヘルプで確認。Trust Layerとの違い、保存場所、導入前に聞く項目まで。
