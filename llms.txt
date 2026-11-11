@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [保護司の面接記録をAI文字起こしにしてよい？守秘義務と確認先](https://nagai-cpu.github.io/ai-tools-jp/probation-volunteer-interview-record/): 保護司が保護観察対象者との面接を録音してAI文字起こしに使う前に確認したい点を、保護司法9条、個人情報保護法と施行令、Nottaの規約と学習なしプランの条件から整理します。
 - [NottaでYouTubeの限定公開動画が文字起こしできない理由と3つの方法](https://nagai-cpu.github.io/ai-tools-jp/notta-youtube-transcription/): NottaでYouTubeの限定公開動画が文字起こしできない人向け。公式ヘルプの対応範囲、Chrome拡張の食い違う記載、自分の動画をファイルで取り込む手順を整理。
 - [研究開発の会議を録音しAI文字起こし｜未公開情報で確かめる3つの条件](https://nagai-cpu.github.io/ai-tools-jp/rd-meeting-ai-transcription/): 研究開発の会議を録音してAIで文字起こししたい人向け。営業秘密管理指針と特許法の条文、Nottaの規約と法人向けページを読み、未公開の技術情報で確かめる3つの条件を整理しました。
 - [就業規則で録音を禁止するとAI文字起こしは使えない？社内規程の書き方](https://nagai-cpu.github.io/ai-tools-jp/employment-rules-recording-ai/): 就業規則に「無断録音の禁止」を入れたい総務・人事向けに、労働基準法・労働契約法と厚労省のモデル就業規則（令和7年12月）を確認し、AI文字起こしを例外にする書き方と手続きを整理しました。
