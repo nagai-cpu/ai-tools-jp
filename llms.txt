@@ -198,10 +198,10 @@
 - [AI文字起こしの契約書・SLA確認項目｜Nottaの規約で見る6つの条文](https://nagai-cpu.github.io/ai-tools-jp/transcription-contract-sla/): 法人でAI文字起こしを契約する前に、稼働率保証・責任制限・データ削除・準拠法・解約・再委託の6項目をNottaの規約原文で確認。SLAの数値の有無も書きました。
 - [AI文字起こしは海外サーバー？Nottaは東京保存、要約の送信先は別に確認](https://nagai-cpu.github.io/ai-tools-jp/transcription-data-residency/): AI文字起こしの録音がどこの国に保存されるかを、Notta・Rimo・LINE WORKS AiNoteの公式記載で比較。保存先と、要約や音声認識で送られる先を分けて整理しました。
 - [AI文字起こしの退職者アカウントとデータ｜Nottaは削除でオーナーへ移る](https://nagai-cpu.github.io/ai-tools-jp/transcription-offboarding/): 社員が退職したら、その人の文字起こしデータはどうなるか。Nottaのヘルプと規約を読み、法人契約のメンバー削除と個人契約の退会でデータの行き先が逆になる点を整理しました。
-- [DMM 生成AI CAMPのコースの違いと選び方｜料金は同じ、差は学習時間](https://nagai-cpu.github.io/ai-tools-jp/dmm-aicamp-courses/): DMM 生成AI CAMPのコースをどう選ぶか迷う人向けに、公式ページで確認した各コースの学習時間と対象者を比較。料金は全コース共通なので、時間から逆算して月額か6ヶ月かを決める方法をまとめました。
+- [DMM 生成AI CAMPのコース比較と料金｜学び放題は同額、差は学習時間](https://nagai-cpu.github.io/ai-tools-jp/dmm-aicamp-courses/): DMM 生成AI CAMPのコースをどう選ぶか迷う人向けに、公式ページで確認した各コースの学習時間と対象者を比較。料金は全コース共通なので、時間から逆算して月額か6ヶ月かを決める方法をまとめました。
 - [Notta Brainのクレジットが足りない時｜有料は月8,000で繰り越しあり](https://nagai-cpu.github.io/ai-tools-jp/notta-brain-credits/): Notta Brainのクレジットが足りない人向けに、無料1,000と有料8,000の差、機能別の消費量、Nottaの有料プランでは増えない仕様と繰り越しを公式情報で整理。
 - [Catchyにチーム・法人プランはある？複数人で使う料金と注意点](https://nagai-cpu.github.io/ai-tools-jp/catchy-team-plan/): Catchyを社内の複数人で使いたい人向けに、チームプランの有無、1アカウント1人のルール、人数分の料金、請求書払いの条件を公式ヘルプで確認して整理しました。
-- [Nottaビジネス Plusとビジネスの違い｜差額で増えるのはAI学習なしとBrain枠](https://nagai-cpu.github.io/ai-tools-jp/notta-business-plus/): Nottaのビジネス Plusとビジネスの違いを法人向けページと公式ヘルプで整理。料金差、増える機能、AI学習なしの範囲、選び方の判断軸をまとめました。
+- [Notta ビジネス Plusとは？ビジネスとの違いはAI学習なしとBrain枠](https://nagai-cpu.github.io/ai-tools-jp/notta-business-plus/): Nottaのビジネス Plusとビジネスの違いを法人向けページと公式ヘルプで整理。料金差、増える機能、AI学習なしの範囲、選び方の判断軸をまとめました。
 - [AI議事録に社外秘を入れていいか｜学習より先に見る共有と社内ルール](https://nagai-cpu.github.io/ai-tools-jp/ai-minutes-security/): 社外秘の会議をAI議事録に録ってよいかの確認項目を、Nottaの規約とヘルプで整理。AI学習の範囲、保存場所、共有リンクの扱い、プラン別の管理機能をまとめました。
 - [Nottaの翻訳機能は有料アドオンが必要？月4回で足りる人と単体で外せない注意点](https://nagai-cpu.github.io/ai-tools-jp/notta-translation-addon/): Nottaの翻訳アドオン（1か国語・2か国語）を買うべきかを、公式の料金ページとヘルプの条件で判断できるよう整理。無料の回数で足りる使い方、後から訳す方法、アドオンだけ解約できない仕様まで扱います。
 - [イルシルのカスタム指示が使えない原因｜場所・権限・件数の3つを確認](https://nagai-cpu.github.io/ai-tools-jp/irusiru-custom-instructions/): イルシルのカスタム指示が登録できない・反映されない人向けに、使えるプランと件数、メンバー権限の制限、保存できない条件、プロンプトライブラリとの違いを公式ヘルプの記載で整理しました。
