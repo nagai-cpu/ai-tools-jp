@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方](https://nagai-cpu.github.io/ai-tools-jp/condo-board-minutes-ai/): マンション管理組合の理事会・総会の議事録をAI文字起こしで作るときに確認したい点を、区分所有法42条、マンション標準管理規約（令和7年改正）とコメント、Nottaの料金と学習の条件から整理します。
 - [民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先](https://nagai-cpu.github.io/ai-tools-jp/minsei-iin-consultation-record/): 民生委員が住民の相談を録音してAI文字起こしで記録する前に確認したい点を、民生委員法15条・17条、個人情報保護法、Nottaの規約と学習なしプランの条件から整理します。
 - [Nottaデスクトップ版とWeb版の違い｜どっちを使うかはボットと端末内処理](https://nagai-cpu.github.io/ai-tools-jp/notta-desktop-vs-web/): Nottaのデスクトップ版（Windows/macOS）とWeb版の違いを公式ページで確認。ボットなし録音、プライバシーモード、使えるプラン、OSの条件から、どっちを入れるべきかを整理します。
 - [結婚相談所の面談録音をAI文字起こし｜個人情報保護法で先に決める3点](https://nagai-cpu.github.io/ai-tools-jp/marriage-agency-interview-recording/): 結婚相談所が面談を録音してAI文字起こしに使う前に、個人情報保護法の同意、個人情報保護委員会の注意喚起、Nottaの学習なしプランの条件から確認点を整理します。

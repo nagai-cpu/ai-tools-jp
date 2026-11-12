@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方｜AIツール実用ガイド</title>
+<meta name="description" content="マンション管理組合の理事会・総会の議事録をAI文字起こしで作るときに確認したい点を、区分所有法42条、マンション標準管理規約（令和7年改正）とコメント、Nottaの料金と学習の条件から整理します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/condo-board-minutes-ai/">
+<meta property="og:title" content="マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方｜AIツール実用ガイド">
+<meta property="og:description" content="マンション管理組合の理事会・総会の議事録をAI文字起こしで作るときに確認したい点を、区分所有法42条、マンション標準管理規約（令和7年改正）とコメント、Nottaの料金と学習の条件から整理します。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方", "description": "マンション管理組合の理事会・総会の議事録をAI文字起こしで作るときに確認したい点を、区分所有法42条、マンション標準管理規約（令和7年改正）とコメント、Nottaの料金と学習の条件から整理します。", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/condo-board-minutes-ai/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方</h1><p class="meta">2026-11-13 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、理事会の議事録づくりにAI文字起こしを使うこと自体を止める規定は、区分所有法にもマンション標準管理規約にも見当たりません。ただし議事録に残すのは「議事の経過の要領とその結果」で、録音の全文ではありません。滞納や苦情の話で個人名が出る会議なので、録音の保存先と消す時期を理事会で先に決め、学習の条件を確かめたツールで下書きを作る、という順番が安全です。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=condoboardminutesai" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="法律と標準管理規約に書かれていること">法律と標準管理規約に書かれていること</h2>
+<p>2026年11月13日に、e-Gov法令検索の区分所有法、国土交通省の「マンション標準管理規約（単棟型）」令和7年改正版とそのコメント、<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=condoboardminutesai" target="_blank" rel="sponsored nofollow noopener">Notta</a>の料金ページ・利用規約・セキュリティページを確認しました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式資料の記載</th><th>議事録づくりでの意味</th></tr></thead><tbody><tr><td>総会の議事録</td><td>区分所有法42条：議長が書面または電磁的記録で作成。議事の経過の要領と結果を記載し、議長と出席した区分所有者2人が署名（電磁的記録なら署名に代わる措置）</td><td>文字起こしの全文ではなく要約が議事録になる。署名する人の確認は省けない</td></tr><tr><td>理事会の議事録</td><td>標準管理規約53条4項：総会の議事録の規定（49条）を準用。署名は理事会に出席した理事</td><td>理事会も同じ形で残す</td></tr><tr><td>WEB会議の理事会</td><td>標準管理規約53条1項：WEB会議システム等を用いる会議を含む。コメントは、その場合も議事録の作成が必要と注意している</td><td>オンライン開催でも記録の手間は同じ</td></tr><tr><td>個人情報の配慮</td><td>標準管理規約コメント（49条関係②）：議事録には個人情報やプライバシー情報が含まれる場合も多く、閲覧では特定の個人が識別できないよう加工するなど適切に対応</td><td>下書きの段階から個人名の扱いを決めておく</td></tr><tr><td>個人情報保護法</td><td>標準管理規約コメント：管理組合が個人情報取扱事業者に該当する場合は、個人情報保護法第4章に基づき取り扱う必要がある</td><td>外部サービスへの保存も個人情報の取り扱いとして考える</td></tr><tr><td>録音</td><td>標準管理規約（単棟型・コメント含む）に「録音」の語は見当たらない</td><td>録音の扱いは管理組合で決めるしかない</td></tr></tbody></table></div>
+<h2 id="判断軸1-録音の扱いを理事会で決めてあるか">判断軸1｜録音の扱いを理事会で決めてあるか</h2>
+<p>標準管理規約には録音の規定がないので、管理組合ごとに決める必要があります。最低限、次の3点を理事会で決めて議事録に残しておくと、後で揉めません。</p>
+<ol><li>録音するのは議事録の下書きを作るためだけで、議事録の確定後に消す</li><li>録音と文字起こしを置く場所（どのサービスか、誰のアカウントか）</li><li>組合員から録音の閲覧を求められたときの扱い</li></ol>
+<p>標準管理規約のコメントは、WEB会議での議決権の扱いなどを「第70条に基づく細則」で定めることにも触れています。録音の扱いも、慣れてきたら細則にまとめておくと、役員が交代しても引き継げます。</p>
+<p>出席者への伝え方は<a href="../recording-consent-meeting/">会議を録音するときの同意の取り方</a>にまとめました。管理会社の担当者が同席する理事会では、管理会社側の社内ルールも確認してください。</p>
+<h2 id="判断軸2-個人名が出る議題をどう扱うか">判断軸2｜個人名が出る議題をどう扱うか</h2>
+<p>理事会では、管理費の滞納、騒音やペットの苦情、駐車場の割り当てなど、特定の部屋や人が分かる話が出ます。標準管理規約のコメントが、議事録の閲覧で個人が識別できないよう加工することを求めているのはこのためです。</p>
+<p>AI文字起こしを使うと、発言がそのまま全文で残ります。次のどちらかの運用にすると、議事録へ個人名が流れ込む事故を防げます。</p>
+<ul><li><strong>個人名が出る議題では録音を止める</strong>：その議題だけ書記が手書きでメモを取る</li><li><strong>録音は続け、議事録の段階で伏せる</strong>：下書きから「〇号室」などに置き換えてから理事に回す</li></ul>
+<p>録音した全文を理事全員のチャットに貼る、という使い方は避けてください。消したいときに消せなくなります。</p>
+<h2 id="判断軸3-ツールの料金と学習の条件が合うか">判断軸3｜ツールの料金と学習の条件が合うか</h2>
+<p>理事会は1〜2時間かかることが多いので、無料プランの上限がまず問題になります。Nottaの料金ページ（税込）では、フリーが月120分・1回3分まで、プレミアムが年14,220円で月1,800分・1回5時間までです。1回3分では理事会を通して録れないので、使うならプレミアム以上になります。無料でどこまでできるかは<a href="../notta-free-limits/">Nottaの無料プランの制限</a>で確認しました。</p>
+<p>もう一つは学習の条件です。Nottaの利用規約は、音声認識の提携先が「ご利用のプランに応じて」音声を学習に使う場合があると書いています。セキュリティページで、音声認識データを学習に使わない設定に対応すると書かれているのはビジネスPlusとエンタープライズです。滞納者の氏名や金額を毎回扱う理事会で、学習に使われない条件を求めるなら、こちらを検討することになります。</p>
+<p>Zoomなどでオンライン開催するなら、録り方も選べます。Notta Botを会議に入れる方法のほかに、デスクトップ版ならボットを入れずにPCの音声を録れます。違いは<a href="../notta-desktop-vs-web/">Nottaデスクトップ版とWeb版の違い</a>にまとめました。</p>
+<h2 id="Nottaを使うならどのプランか">Nottaを使うならどのプランか</h2>
+<p>向くのは、書記の負担を減らしたい理事会、毎月の議事録づくりに数時間かかっている管理組合です。個人名が出る議題で録音を止める運用ができるなら、プレミアム（年14,220円・税込）で1回5時間まで録れます。理事長か書記のアカウントで契約し、役員交代のときに引き継ぐ前提で使ってください。議事録の形式は<a href="../minutes-template-free/">無料で使える議事録テンプレート</a>、プランの比較は<a href="../notta-pricing/">Nottaの料金プラン</a>で確認できます。</p>
+<div class="cta"><div class="cta-h">Notta<span class="pr">PR</span></div><p class="cta-b">日本語の精度が高いAI文字起こし。Zoom/Teams/Meetに同席して自動で議事録にする</p><p class="cta-f">月120分まで無料</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=condoboardminutesai" target="_blank" rel="sponsored nofollow noopener">Notta の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta フリー</strong>：1回3分までで、理事会の記録には使えません</li><li><strong>Notta プレミアム</strong>：1アカウントのみで、役員交代のたびにログイン情報の引き継ぎが要ります。音声認識データを学習に使わない設定の対象ではありません</li><li><strong>Notta ビジネスPlus</strong>：学習に使わない設定に対応しますが、法人向けの料金で、小規模な管理組合には負担が重くなりがちです</li><li><strong>AI文字起こし全般</strong>：議事録として必要な「要領と結果」への整理と、署名する人の確認は人の作業として残ります</li><li><strong>この記事の限界</strong>：各マンションの管理規約や細則は読めていません。標準管理規約と違う規定を置いている管理組合もあるので、自分のマンションの規約を確認してください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="理事会を録音してよいかは規約で決まっていますか">理事会を録音してよいかは規約で決まっていますか</h3>
+<p>標準管理規約には録音の規定がありません。自分のマンションの管理規約や細則に規定がなければ、理事会で決めて議事録に残すのが確実です。</p>
+<h3 id="AIの文字起こしをそのまま議事録にしてよいですか">AIの文字起こしをそのまま議事録にしてよいですか</h3>
+<p>区分所有法42条は、議事録に「議事の経過の要領及びその結果」を記載するとしています。全文の文字起こしは下書きとして使い、要領と結果にまとめたものを議事録にしてください。署名する人の確認も必要です。</p>
+<h3 id="録音はいつ消せばいいですか">録音はいつ消せばいいですか</h3>
+<p>標準管理規約に定めはありません。議事録が確定したら消す、と理事会で決めておくと、音声を預ける期間を短くできます。消し方の考え方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除</a>、会社の会議での例は<a href="../board-meeting-minutes-ai-confidential/">取締役会の議事録をAIで作成する前に</a>で扱いました。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>区分所有法と標準管理規約は録音やAIの利用を禁じていないが、議事録は「要領と結果」で、署名する人の確認も要る</li><li>録音の目的・保存先・消す時期を理事会で決め、個人名が出る議題は録音を止めるか下書きで伏せる</li><li>Nottaなら理事会の長さに耐えるのはプレミアム以上。学習に使わない設定が要るならビジネスPlus以上</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../minsei-iin-consultation-record/">民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../notta-desktop-vs-web/">Nottaデスクトップ版とWeb版の違い｜どっちを使うかはボットと端末内処理</a></li><li><a href="../marriage-agency-interview-recording/">結婚相談所の面談録音をAI文字起こし｜個人情報保護法で先に決める3点</a></li><li><a href="../probation-volunteer-interview-record/">保護司の面接記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../psw-interview-record/">精神保健福祉士の面接記録をAI文字起こし｜守秘義務と倫理綱領で見ること</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../condo-board-minutes-ai/">マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方</a></li><li><a href="../minsei-iin-consultation-record/">民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../notta-desktop-vs-web/">Nottaデスクトップ版とWeb版の違い｜どっちを使うかはボットと端末内処理</a></li><li><a href="../marriage-agency-interview-recording/">結婚相談所の面談録音をAI文字起こし｜個人情報保護法で先に決める3点</a></li><li><a href="../probation-volunteer-interview-record/">保護司の面接記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../psw-interview-record/">精神保健福祉士の面接記録をAI文字起こし｜守秘義務と倫理綱領で見ること</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a> ・ <a href="../tools/ai-transcription-policy-checklist.html">AI文字起こし 社内導入チェックリスト</a></p>
+</div></footer>
+</body>
+</html>
