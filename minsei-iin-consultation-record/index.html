@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先｜AIツール実用ガイド</title>
+<meta name="description" content="民生委員が住民の相談を録音してAI文字起こしで記録する前に確認したい点を、民生委員法15条・17条、個人情報保護法、Nottaの規約と学習なしプランの条件から整理します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/minsei-iin-consultation-record/">
+<meta property="og:title" content="民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先｜AIツール実用ガイド">
+<meta property="og:description" content="民生委員が住民の相談を録音してAI文字起こしで記録する前に確認したい点を、民生委員法15条・17条、個人情報保護法、Nottaの規約と学習なしプランの条件から整理します。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先", "description": "民生委員が住民の相談を録音してAI文字起こしで記録する前に確認したい点を、民生委員法15条・17条、個人情報保護法、Nottaの規約と学習なしプランの条件から整理します。", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/minsei-iin-consultation-record/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先</h1><p class="meta">2026-11-13 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、民生委員は民生委員法15条で「その身上に関する秘密を守り」と定められ、相談では病気や家計、家族の事情といった踏み込んだ話を聞きます。相談の録音を外部のAI文字起こしに預けるかは委員個人で決めず、市区町村の民生委員担当課と民生委員協議会に先に確認してください。使うとしても、音声が学習に使われない設定のプランか、PCの中で処理する方法に限るのが無難です。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=minseiiinconsultationrecord" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="法律と公式資料に書かれていること">法律と公式資料に書かれていること</h2>
+<p>2026年11月13日に、e-Gov法令検索の民生委員法、厚生労働省「民生委員・児童委員について」、Nottaの利用規約・セキュリティページ・法人向けページを確認しました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>公式資料の記載</th><th>この記事での扱い</th></tr></thead><tbody><tr><td>秘密を守る義務</td><td>民生委員法15条：個人の人格を尊重し、その身上に関する秘密を守り、処理は実情に即して合理的に行う</td><td>録音を外部サービスに預けることへの言及はない。担当課の判断を仰ぐ</td></tr><tr><td>指揮監督</td><td>同法17条：職務に関して都道府県知事の指揮監督を受ける。市町村長は必要な指導ができる</td><td>記録の扱いは行政の指示に従う</td></tr><tr><td>委嘱と報酬</td><td>同法5条：厚生労働大臣が委嘱。10条：給与は支給しない、任期は3年</td><td>有料サービスを自費で契約する前提では考えない</td></tr><tr><td>児童委員の兼務</td><td>厚生労働省：民生委員は「児童委員」を兼ねる</td><td>子育てや妊娠の相談も同じ扱いにする</td></tr><tr><td>要配慮個人情報</td><td>個人情報保護法2条3項は病歴などを含む</td><td>相談記録の多くが当たると考えて扱う</td></tr><tr><td>Nottaの学習</td><td>利用規約：音声認識の提携先が「ご利用のプランに応じて」音声を学習に使う場合がある</td><td>無料・個人向けプランで相談を扱わない</td></tr><tr><td>Nottaの学習なし</td><td>セキュリティページ：ビジネスPlusとエンタープライズは音声認識データを学習に使わない設定に対応</td><td>ビジネスPlusは月9,000円（税抜・月間プラン）</td></tr></tbody></table></div>
+<p>民生委員が自分で契約したクラウドサービスに相談の記録を入れてよいかを定めた条文や通知は、今回確認した範囲では見つかりませんでした。</p>
+<h2 id="判断軸1-担当課と民生委員協議会が認めているか">判断軸1｜担当課と民生委員協議会が認めているか</h2>
+<p>民生委員は厚生労働大臣から委嘱され、職務では都道府県知事の指揮監督を受け、市町村長の指導も受けます（民生委員法5条・17条）。相談で聞いた話は委員個人のメモではなく、委嘱された職務の中で預かっている情報と考えるほうが自然です。</p>
+<p>録音やAI文字起こしを使いたいときは、まず市区町村の民生委員担当課に次の3点を聞いてください。</p>
+<ol><li>相談の録音そのものをしてよいか</li><li>録音や文字起こしを外部のクラウドサービスに保存してよいか</li><li>記録票を書いた後、音声とテキストをいつまでに消すか</li></ol>
+<p>民生委員協議会は、委員の職務に関する連絡・調整や必要な資料の収集を任務としています（同法24条）。地区の協議会で記録の取り扱いを決めていることもあるので、会長にも確認しておくと安心です。</p>
+<h2 id="判断軸2-相談者に伝えて-断れる形にしているか">判断軸2｜相談者に伝えて、断れる形にしているか</h2>
+<p>民生委員への相談は、役所の窓口に行きにくい人が近所の委員を頼って話すことが多い場です。録音されていると分かれば、家計や家族の話を控える人もいます。</p>
+<p>録音を使うなら、目的（記録を正確に残すため）、保存先、消す時期を伝え、断っても支援に影響しないことをはっきり言ってください。訪問先で話が込み入ってきたら録音を止める、という運用も現実的です。同意の取り方の考え方は<a href="../recording-consent-meeting/">会議を録音するときの同意の取り方</a>、行政とつながる相談窓口の例は<a href="../community-care-center-consultation/">地域包括支援センターの相談記録とAI文字起こし</a>にまとめました。</p>
+<h2 id="判断軸3-音声が外部に出ない-または学習に使われない方法か">判断軸3｜音声が外部に出ない、または学習に使われない方法か</h2>
+<p>担当課の了解が取れた場合でも、方法は選びます。</p>
+<ul><li><strong>PCの中で処理する方法</strong>：Nottaのデスクトップ版にはプライバシーモード（ベータ版）があり、対応する録音・ファイルをPC内で文字起こしできます。ただしAI要約は使えず、使えるのはプレミアム以上です。条件は<a href="../notta-desktop-vs-web/">Nottaデスクトップ版とWeb版の違い</a>で確認しました</li><li><strong>学習に使わない設定のクラウドサービス</strong>：<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=minseiiinconsultationrecord" target="_blank" rel="sponsored nofollow noopener">Notta</a>の利用規約は、提携先が「ご利用のプランに応じて」音声を学習に使う場合があると書いています。セキュリティページで、音声認識データを学習に使わない設定に対応すると書かれているのはビジネスPlusとエンタープライズです</li></ul>
+<p>フリーや個人向けのプレミアムには、音声認識データを学習に使わないとは書かれていません。相談の音声を扱う用途には選ばないほうが安全です。なお、AI要約に使う自然言語処理エンジンの学習にはどのプランでもデータを提供していない、とセキュリティページのよくある質問に書かれています。</p>
+<h2 id="Nottaを使うならどのプランか">Nottaを使うならどのプランか</h2>
+<p>向くのは、担当課の了解を得たうえで、相談記録や定例会の記録を正確に残したい人です。公開価格で選べる学習なしの設定はビジネスPlus（月9,000円・税抜・月間プラン）です。民生委員は無給で（同法10条）、個人で負担する金額としては軽くありません。民生委員協議会や社会福祉協議会でまとめて導入する話なら、エンタープライズの見積もりで条件を書面にしてもらう形になります。両プランの違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>で整理しました。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=minseiiinconsultationrecord" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta ビジネスPlus</strong>：月9,000円（税抜・月間プラン）で、無給の民生委員が個人で払うには高額です。個人負担にならない形があるかは担当課に確認が要ります</li><li><strong>Notta デスクトップ版のプライバシーモード</strong>：ベータ版で、AI要約と企業向けの管理機能が使えません。プレミアム以上の契約が必要です</li><li><strong>録音全般</strong>：相談者が話しにくくなることがあります。録音しないほうが相談の目的にかなう場面もあります</li><li><strong>この記事の限界</strong>：市区町村や民生委員協議会の内部の取り決めは公開されておらず、読めていません。法律の解釈は担当課や専門家に確認してください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="民生委員の守秘義務はどの法律に書かれていますか">民生委員の守秘義務はどの法律に書かれていますか</h3>
+<p>民生委員法15条に、職務を行うに当たって個人の人格を尊重し、その身上に関する秘密を守ると書かれています。相談の内容を外に出さない前提で記録を扱う、という点は録音でも同じです。</p>
+<h3 id="相談の内容は要配慮個人情報ですか">相談の内容は要配慮個人情報ですか</h3>
+<p>個人情報保護法2条3項は、病歴などを要配慮個人情報として挙げています。民生委員の相談には健康や障害の話が入ることが多いため、記録の多くが当たると考えて扱うのが安全です。</p>
+<h3 id="文字起こしが終わったら録音は消してよいですか">文字起こしが終わったら録音は消してよいですか</h3>
+<p>消す時期は担当課の指示に従ってください。指示が無い場合も、記録票を書き終えたら音声と文字起こしを消す運用にすると、預ける期間を短くできます。似た立場の扱いは<a href="../probation-volunteer-interview-record/">保護司の面接記録とAI文字起こし</a>、消したことの残し方は<a href="../transcription-data-deletion-proof/">文字起こしデータを削除した証明</a>で扱いました。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>民生委員法15条で身上の秘密を守る義務があり、職務は都道府県知事の指揮監督と市町村長の指導の下にある。録音とAIの利用は担当課と民生委員協議会に先に確認する</li><li>相談者には目的・保存先・消す時期を伝え、断っても支援に影響しないと言う</li><li>使うならPC内で処理する方法か、学習に使わない設定のプラン（Notta ビジネスPlus以上）に限る。フリーとプレミアムで相談を扱わない</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../notta-desktop-vs-web/">Nottaデスクトップ版とWeb版の違い｜どっちを使うかはボットと端末内処理</a></li><li><a href="../marriage-agency-interview-recording/">結婚相談所の面談録音をAI文字起こし｜個人情報保護法で先に決める3点</a></li><li><a href="../probation-volunteer-interview-record/">保護司の面接記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../psw-interview-record/">精神保健福祉士の面接記録をAI文字起こし｜守秘義務と倫理綱領で見ること</a></li><li><a href="../notta-youtube-transcription/">NottaでYouTubeの限定公開動画が文字起こしできない理由と3つの方法</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../minsei-iin-consultation-record/">民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../notta-desktop-vs-web/">Nottaデスクトップ版とWeb版の違い｜どっちを使うかはボットと端末内処理</a></li><li><a href="../marriage-agency-interview-recording/">結婚相談所の面談録音をAI文字起こし｜個人情報保護法で先に決める3点</a></li><li><a href="../probation-volunteer-interview-record/">保護司の面接記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../psw-interview-record/">精神保健福祉士の面接記録をAI文字起こし｜守秘義務と倫理綱領で見ること</a></li><li><a href="../notta-youtube-transcription/">NottaでYouTubeの限定公開動画が文字起こしできない理由と3つの方法</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a> ・ <a href="../tools/ai-transcription-policy-checklist.html">AI文字起こし 社内導入チェックリスト</a></p>
+</div></footer>
+</body>
+</html>
