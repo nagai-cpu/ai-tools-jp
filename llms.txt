@@ -13,6 +13,7 @@
 
 - [成年後見の面談を録音してAI文字起こしにしてよい？本人情報の守り方](https://nagai-cpu.github.io/ai-tools-jp/guardianship-interview-recording/): 成年後見人が本人や関係者との面談を録音し、AI文字起こしで記録する前に確認したい点を、民法858条・863条、士業の秘密保持義務、Nottaの規約と学習なしプランの条件から整理します。
 - [Krispの文字起こしは学習に使われる？法人向けに公式の記載を確認](https://nagai-cpu.github.io/ai-tools-jp/krisp-training-data/): Krispを法人で使う担当者向け。料金ページ・セキュリティページ・プライバシーポリシーで、会議データのAI学習、端末内処理とクラウド処理の境目、保存先を確認し、Nottaの学習なしプランと比べました。
+- [Value AI Writerでアイキャッチ画像は作れる？保存1ヶ月と投稿連携の注意](https://nagai-cpu.github.io/ai-tools-jp/valueai-eyecatch/): Value AI Writerでアイキャッチを作れるかを公式ガイドで確認。作り方、枚数の確かめ方、保存期間1ヶ月、WordPress連携で画像が入らない点を整理します。
 - [マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方](https://nagai-cpu.github.io/ai-tools-jp/condo-board-minutes-ai/): マンション管理組合の理事会・総会の議事録をAI文字起こしで作るときに確認したい点を、区分所有法42条、マンション標準管理規約（令和7年改正）とコメント、Nottaの料金と学習の条件から整理します。
 - [民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先](https://nagai-cpu.github.io/ai-tools-jp/minsei-iin-consultation-record/): 民生委員が住民の相談を録音してAI文字起こしで記録する前に確認したい点を、民生委員法15条・17条、個人情報保護法、Nottaの規約と学習なしプランの条件から整理します。
 - [Nottaデスクトップ版とWeb版の違い｜どっちを使うかはボットと端末内処理](https://nagai-cpu.github.io/ai-tools-jp/notta-desktop-vs-web/): Nottaのデスクトップ版（Windows/macOS）とWeb版の違いを公式ページで確認。ボットなし録音、プライバシーモード、使えるプラン、OSの条件から、どっちを入れるべきかを整理します。
