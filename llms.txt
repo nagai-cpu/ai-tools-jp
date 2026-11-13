@@ -147,7 +147,7 @@
 - [無断録音をAIで文字起こしするのは違法？会議で一次資料が言えること3つ](https://nagai-cpu.github.io/ai-tools-jp/secret-recording-legality/): 会議を相手に言わずに録音しAIで文字起こししたい人向け。個人情報保護委員会のQ&A・個人情報保護法・Nottaの規約で、言えることと言えないことを分けました。
 - [AI文字起こしの情報漏洩対策｜公表された3つの事例から設定を逆算](https://nagai-cpu.github.io/ai-tools-jp/transcription-data-leak/): AI文字起こしの情報漏洩対策を、奈良市・Microsoft・米FTCが公表した事例と個人情報保護委員会の注意喚起から整理。Nottaで閉じられる設定とプランも確認しました。
 - [文字起こしの多要素認証とアクセス制限｜Nottaは非対応、法人の代替策](https://nagai-cpu.github.io/ai-tools-jp/transcription-mfa-access/): 社内規程で多要素認証を求められた法人向け。Nottaの法人FAQにある「多要素認証は非対応」の一文と、代わりに使えるIP制限・SSO・ログイン履歴のプラン条件を整理しました。
-- [文字起こしデータの保存期間と削除設定｜Nottaは消すまで無期限](https://nagai-cpu.github.io/ai-tools-jp/transcription-retention-deletion/): 議事録の保存期間を規程で決めたい法人向け。Nottaのデータは消すまで無期限に残ること、ゴミ箱30日、自動削除の条件、退会・解約時の扱いを公式ヘルプで整理しました。
+- [Nottaの文字起こしデータの保存期間は？自動削除・ゴミ箱30日・解約後の扱い](https://nagai-cpu.github.io/ai-tools-jp/transcription-retention-deletion/): 議事録の保存期間を規程で決めたい法人向け。Nottaのデータは消すまで無期限に残ること、ゴミ箱30日、自動削除の条件、退会・解約時の扱いを公式ヘルプで整理しました。
 - [文字起こしのSSO・SAMLは法人に必須か｜Nottaはエンタープライズのみ](https://nagai-cpu.github.io/ai-tools-jp/transcription-sso-saml/): 社内でSaaSはSSO必須と言われた導入担当向け。NottaでSAML SSOが使えるプラン、IP制限と多要素認証の扱い、SSO有効化の注意点を公式ヘルプで確認しました。
 - [AI文字起こしは個人情報保護法の委託か第三者提供か｜Q&Aで見る分かれ目](https://nagai-cpu.github.io/ai-tools-jp/appi-transcription-outsourcing/): 会議の録音をAI文字起こしに送るのは委託か第三者提供か迷う担当者向け。個人情報保護委員会のQ&Aと2023年の注意喚起、2026年改正法の委託先規律、Nottaの規約の書き方を並べて整理しました。
 - [弁理士の発明相談をAIで文字起こしする前に｜守秘義務と新規性の3点](https://nagai-cpu.github.io/ai-tools-jp/benrishi-invention-recording/): 発明相談を録音してAIで文字起こししたい弁理士・特許事務所向け。弁理士法の秘密保持義務、特許庁の審査基準にある「公然知られた発明」の定義、Nottaで確かめた条件を整理しました。
