@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Granolaの議事録はAI学習に使われる？法人向けに公式の記載を確認｜AIツール実用ガイド</title>
+<meta name="description" content="Granolaを法人で使う担当者向け。公式の料金・セキュリティ・ポリシーで学習の初期設定と止め方、文字起こしの保存、日本語対応を確認し、Nottaと比べました。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/granola-training-data/">
+<meta property="og:title" content="Granolaの議事録はAI学習に使われる？法人向けに公式の記載を確認｜AIツール実用ガイド">
+<meta property="og:description" content="Granolaを法人で使う担当者向け。公式の料金・セキュリティ・ポリシーで学習の初期設定と止め方、文字起こしの保存、日本語対応を確認し、Nottaと比べました。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Granolaの議事録はAI学習に使われる？法人向けに公式の記載を確認", "description": "Granolaを法人で使う担当者向け。公式の料金・セキュリティ・ポリシーで学習の初期設定と止め方、文字起こしの保存、日本語対応を確認し、Nottaと比べました。", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/granola-training-data/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">Granolaの議事録はAI学習に使われる？法人向けに公式の記載を確認</h1><p class="meta">2026-11-15 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、Granolaは<strong>初期設定のままだと、匿名化したデータを自社モデルの改善に使います</strong>。OpenAIやAnthropicなどの外部事業者には学習させないと公式に書いていますが、Granola自身の学習は利用者が設定で止める形です。止める操作はBasicとBusinessでは<strong>利用者ごと</strong>、Enterpriseだけが最初から学習オフで、管理者が全員分を固定できます。社員に設定を任せられない法人は、プランの選び方がそのまま学習の扱いを決めます。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=granolatrainingdata" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="公式ページの記載を整理した">公式ページの記載を整理した</h2>
+<p>2026年11月15日に、Granolaの料金ページ、セキュリティページ、プライバシーポリシー（2026年9月8日発効）、ヘルプの「Models &amp; training」「Transcript auto-deletion」「Multi-language support」を確認しました。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>Basic</th><th>Business</th><th>Enterprise</th></tr></thead><tbody><tr><td>料金（1ユーザー・月）</td><td>$0</td><td>$14</td><td>$35</td></tr><tr><td>Granolaのモデル学習</td><td>初期はオン・利用者が停止</td><td>初期はオン・利用者が停止</td><td>初期はオフ・管理者が全員分を設定</td></tr><tr><td>会議の履歴</td><td>30日</td><td>無制限</td><td>無制限</td></tr><tr><td>文字起こしの自動削除</td><td>利用者ごと</td><td>利用者ごと</td><td>管理者が全体に設定</td></tr><tr><td>SSO・SCIM・監査API</td><td>記載なし</td><td>記載なし</td><td>あり</td></tr><tr><td>HIPAA対応のワークスペース</td><td>記載なし</td><td>記載なし</td><td>あり</td></tr></tbody></table></div>
+<p>「あり」と「利用者ごと」は料金ページの比較表に文言があるものです。「記載なし」は表で「Not included」と書かれた欄で、別の方法で代わりになるかは確認していません。SSOはよくある質問に「50ユーザー以上のEnterpriseワークスペース」で使えると書かれています。</p>
+<h2 id="判断軸は3つ">判断軸は3つ</h2>
+<h3 id="1-学習を止めるのは誰か">1. 学習を止めるのは誰か</h3>
+<p>学習について、公式の文書は次のように書いています。</p>
+<ul><li><strong>料金ページとセキュリティページ</strong>：OpenAIやAnthropicなどの第三者に、利用者のデータで学習させない。Granolaは匿名化したデータで学習し、利用者は設定で止められる。Enterpriseは初期設定で学習オフ</li><li><strong>ヘルプ「Models &amp; training」</strong>：設定の「Use my data to improve models for everyone」をオフにすると止まる。設定はアカウント全体に効く。Androidアプリにはまだこの切り替えがなく、デスクトップかiOSで変える</li><li><strong>プライバシーポリシー</strong>：学習に使うのは匿名化・集計したデータで、個人データは使わない。ただし、一度モデルに取り込まれたデータは、作り直さない限り取り除けないため、無期限に残りうると書かれている</li></ul>
+<p>最後の一文が法人には大きい点です。あとから設定を止めても、それ以前に学習に回った分は戻せない書き方です。導入するなら、<strong>最初の会議の前に</strong>全員の設定を止めるか、Enterpriseで初期オフにしておくのが確実です。条文の読み方は<a href="../transcription-terms-reading/">AI文字起こしの利用規約、学習条項の読み方</a>にまとめています。</p>
+<h3 id="2-録音と文字起こしがどこに残るか">2. 録音と文字起こしがどこに残るか</h3>
+<p>セキュリティページとプライバシーポリシーによると、Granolaは会議の音声を保存しません。デスクトップ（macOS・Windows）ではリアルタイムで文字起こしし、モバイルでは会議後に一時的にキャッシュした音声で文字起こしします。残るのは文字起こしとメモです。</p>
+<p>ただし、文字起こしとメモは、<strong>利用者が消すまで無期限に残る</strong>のが初期設定です。保存先は米国のAWSで、保存時も通信時も暗号化され、毎日バックアップされます。文字起こしの処理にはDeepgramやAssemblyなどの事業者、要約にはOpenAIやAnthropicなどのAIを使うとセキュリティページにあります。会議ボットは入れず、端末の音声を取り込む方式です。</p>
+<p>自動削除は、ヘルプによると1日・1週間・1か月・3か月・6か月・1年から選べます。消えるのは文字起こしだけで、メモは残ります。設定を変えてから<strong>1週間の猶予期間</strong>があり、その間は新しい削除が始まりません。削除した文字起こしは元に戻せません。社内の保管期間の決め方は<a href="../transcription-retention-deletion/">文字起こしデータの保存期間と削除ルール</a>で扱いました。</p>
+<h3 id="3-日本語の会議で使えるか">3. 日本語の会議で使えるか</h3>
+<p>ヘルプの対応言語の表では、日本語はデスクトップとモバイルの両方に入っています。デスクトップで「Multi-language」を選ぶと、1つの会議で複数の言語が混ざっても文字起こしされます。要約の言語は「English」か「Auto（会議で多く話された言語）」から選びます。</p>
+<p>一方で、アプリの画面（メニューやボタン、設定）は英語だけです。日本語の精度については、今回確認したページに数値の記載がなく、確認できませんでした。導入前に、実際の会議で試すのが確実です。</p>
+<h2 id="日本語の会議が中心なら-国内向けの学習なしプランも比べる">日本語の会議が中心なら、国内向けの学習なしプランも比べる</h2>
+<p>Granolaの強みは、ボットを入れずに端末の音声で議事録を作れる点と、メモと会議を横断して聞けるチャットです。英語の会議が多く、Enterpriseで全員の学習をオフにできるなら、筋のよい選択肢です。一方で、日本語の会議が中心で、50人未満のチームだと、EnterpriseのSSOの条件に届かないこともあります。</p>
+<p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=granolatrainingdata" target="_blank" rel="sponsored nofollow noopener">Notta</a>は、セキュリティページで、生成AI機能で処理するデータは第三者の基盤モデルの学習に使わず、ビジネスPlusとエンタープライズでは音声認識データを学習に使わない環境を利用できると書いています。法人向けページではビジネスPlusが月9,000円（税抜・月間プラン）で、公開価格で選べます。データはAWS東京リージョンに保存されているとセキュリティページのよくある質問にあります。プランの違いは<a href="../notta-enterprise-vs-business-plus/">Nottaエンタープライズとビジネス Plusの違い</a>で比べました。管理者が全員分の学習を最初から止めておきたい、日本の拠点にデータを置きたい、という会社に向いています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として書かれているのはビジネス Plus（年64,800円・税抜）、エンタープライズ、士業向け特別プラン。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容は学習せず、AI要約は全プラン学習なしと公式が明記）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=granolatrainingdata" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Granola</strong>：BasicとBusinessでは学習が初期オンで、止めるのは利用者ごとです。管理者が全員分を固定できるのはEnterpriseだけです</li><li><strong>Granola</strong>：一度学習に回ったデータはモデルから取り除けない、とプライバシーポリシーに書かれています。アプリの画面も英語だけです</li><li><strong>Notta</strong>：利用規約は、音声認識の提携先が「ご利用のプランに応じて」音声を学習に使う場合があると書いています。フリーやプレミアムには学習なしの記載がありません</li><li><strong>Notta ビジネスPlus</strong>：月9,000円（税抜・月間プラン）で、GranolaのBusiness（$14）より高くなります</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="Granolaの無料プランでも学習は止められますか">Granolaの無料プランでも学習は止められますか</h3>
+<p>止められます。料金ページの比較表で、学習のオプトアウトはBasicも「Per user（利用者ごと）」と書かれています。設定は利用者が自分で切り替えます。</p>
+<h3 id="Granolaは会議の録音を残しますか">Granolaは会議の録音を残しますか</h3>
+<p>セキュリティページとプライバシーポリシーによると、音声は文字起こしのためだけに使い、文字起こしができたあとは保存しません。残るのは文字起こしとメモで、こちらは利用者が消すまで残ります。アカウントを削除すると、30日以内にすべてのデータが消えるとセキュリティページにあります。</p>
+<h3 id="他の海外の会議AIと比べて学習の扱いはどう違いますか">他の海外の会議AIと比べて学習の扱いはどう違いますか</h3>
+<p>書き方はツールごとに違います。比べたものは<a href="../krisp-training-data/">Krispの文字起こしは学習に使われる？</a>、<a href="../otter-ai-data-training/">Otter.aiの日本語会議は学習に使われる？</a>、<a href="../tldv-training-data-business/">tl;dvの学習データの扱い</a>にまとめました。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>Granolaは外部AIには学習させないが、自社モデルの改善には匿名化データを初期設定で使う。BasicとBusinessは利用者ごとに止め、Enterpriseは初期オフ</li><li>音声は残さないが、文字起こしとメモは消すまで米国のAWSに残る。自動削除は1日〜1年から選べ、変更後1週間の猶予がある</li><li>日本語の会議が中心で、管理者が学習を最初から止めておきたいなら、Notta ビジネスPlus以上も比べる</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../guardianship-interview-recording/">成年後見の面談を録音してAI文字起こしにしてよい？本人情報の守り方</a></li><li><a href="../krisp-training-data/">Krispの文字起こしは学習に使われる？法人向けに公式の記載を確認</a></li><li><a href="../condo-board-minutes-ai/">マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方</a></li><li><a href="../minsei-iin-consultation-record/">民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先</a></li><li><a href="../notta-desktop-vs-web/">Nottaデスクトップ版とWeb版の違い｜どっちを使うかはボットと端末内処理</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../granola-training-data/">Granolaの議事録はAI学習に使われる？法人向けに公式の記載を確認</a></li><li><a href="../guardianship-interview-recording/">成年後見の面談を録音してAI文字起こしにしてよい？本人情報の守り方</a></li><li><a href="../krisp-training-data/">Krispの文字起こしは学習に使われる？法人向けに公式の記載を確認</a></li><li><a href="../valueai-eyecatch/">Value AI Writerでアイキャッチ画像は作れる？保存1ヶ月と投稿連携の注意</a></li><li><a href="../condo-board-minutes-ai/">マンション理事会の議事録をAI文字起こしで作る前に｜個人情報と録音の決め方</a></li><li><a href="../minsei-iin-consultation-record/">民生委員の相談記録をAI文字起こしにしてよい？守秘義務と確認先</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a> ・ <a href="../tools/ai-transcription-policy-checklist.html">AI文字起こし 社内導入チェックリスト</a></p>
+</div></footer>
+</body>
+</html>
