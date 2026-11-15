@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [医療安全のインシデント振り返り会議を録音してAI文字起こし｜学習と識別の3点](https://nagai-cpu.github.io/ai-tools-jp/medical-safety-incident-meeting-recording/): インシデントや医療事故の振り返り会議・事情聴取を録音し、AIで文字起こしして記録を作りたい医療安全管理者向けに、医療法施行規則、厚労省ガイドラインQ&A、Nottaの学習なしの条件を整理しました。
 - [Dropboxの文字起こしはAI学習に使われる？公式の記載と上限を確認](https://nagai-cpu.github.io/ai-tools-jp/dropbox-ai-transcription-training/): Dropboxの動画・音声の文字起こしを仕事で使いたい人向け。AI原則とプライバシーのFAQで学習の扱い、上限の長さ、残り方を確認し、Nottaと比べました。
 - [Granolaの議事録はAI学習に使われる？法人向けに公式の記載を確認](https://nagai-cpu.github.io/ai-tools-jp/granola-training-data/): Granolaを法人で使う担当者向け。公式の料金・セキュリティ・ポリシーで学習の初期設定と止め方、文字起こしの保存、日本語対応を確認し、Nottaと比べました。
 - [Zoho Meetingの文字起こしは日本語で使える？AI学習とデータの扱いを確認](https://nagai-cpu.github.io/ai-tools-jp/zoho-meeting-transcription-training/): Zoho Meetingの文字起こしを法人で使いたい人向け。対応言語、日本データセンターでの提供、OpenAIへ送るデータ、Zohoの学習の扱いを公式で確認し、Nottaと比べました。
