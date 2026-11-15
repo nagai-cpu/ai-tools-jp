@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [Lark議事録（Minutes・AIノート）はAI学習に使われる？規約と設定の確認点](https://nagai-cpu.github.io/ai-tools-jp/lark-minutes-training/): LarkのMinutesやAIノートの会議データはAI学習に使われるのかを、規約・プライバシーポリシー・ヘルプで確認。共有の初期設定と、学習なしが明記されたNottaとの違いも整理。
 - [医療安全のインシデント振り返り会議を録音してAI文字起こし｜学習と識別の3点](https://nagai-cpu.github.io/ai-tools-jp/medical-safety-incident-meeting-recording/): インシデントや医療事故の振り返り会議・事情聴取を録音し、AIで文字起こしして記録を作りたい医療安全管理者向けに、医療法施行規則、厚労省ガイドラインQ&A、Nottaの学習なしの条件を整理しました。
 - [生活保護ケースワーカーの面接記録にAI文字起こしを使う前に｜個人情報の3点](https://nagai-cpu.github.io/ai-tools-jp/welfare-caseworker-interview-recording/): 生活保護の面接や家庭訪問の記録をAI文字起こしで効率化したいケースワーカー・査察指導員向けに、地方公務員法・社会福祉法・個人情報保護法と委員会の注意喚起、Nottaの学習なしの条件を整理しました。
 - [Dropboxの文字起こしはAI学習に使われる？公式の記載と上限を確認](https://nagai-cpu.github.io/ai-tools-jp/dropbox-ai-transcription-training/): Dropboxの動画・音声の文字起こしを仕事で使いたい人向け。AI原則とプライバシーのFAQで学習の扱い、上限の長さ、残り方を確認し、Nottaと比べました。
