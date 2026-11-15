@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [Dropboxの文字起こしはAI学習に使われる？公式の記載と上限を確認](https://nagai-cpu.github.io/ai-tools-jp/dropbox-ai-transcription-training/): Dropboxの動画・音声の文字起こしを仕事で使いたい人向け。AI原則とプライバシーのFAQで学習の扱い、上限の長さ、残り方を確認し、Nottaと比べました。
 - [Granolaの議事録はAI学習に使われる？法人向けに公式の記載を確認](https://nagai-cpu.github.io/ai-tools-jp/granola-training-data/): Granolaを法人で使う担当者向け。公式の料金・セキュリティ・ポリシーで学習の初期設定と止め方、文字起こしの保存、日本語対応を確認し、Nottaと比べました。
 - [成年後見の面談を録音してAI文字起こしにしてよい？本人情報の守り方](https://nagai-cpu.github.io/ai-tools-jp/guardianship-interview-recording/): 成年後見人が本人や関係者との面談を録音し、AI文字起こしで記録する前に確認したい点を、民法858条・863条、士業の秘密保持義務、Nottaの規約と学習なしプランの条件から整理します。
 - [Krispの文字起こしは学習に使われる？法人向けに公式の記載を確認](https://nagai-cpu.github.io/ai-tools-jp/krisp-training-data/): Krispを法人で使う担当者向け。料金ページ・セキュリティページ・プライバシーポリシーで、会議データのAI学習、端末内処理とクラウド処理の境目、保存先を確認し、Nottaの学習なしプランと比べました。
