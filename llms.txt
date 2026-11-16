@@ -129,7 +129,7 @@
 - [コールセンターの通話録音をAI文字起こし｜個人情報で確かめる3つの論点](https://nagai-cpu.github.io/ai-tools-jp/callcenter-recording-ai/): コールセンターの通話録音をAIで文字起こししたい担当者向け。個人情報保護委員会のQ&Aで利用目的・委託先の監督・国外提供を確認し、Nottaの電話の取り込み方も公式で確かめました。
 - [歯科医院の問診録音をAI文字起こし｜患者情報で選ぶプランと3つの確認](https://nagai-cpu.github.io/ai-tools-jp/dental-clinic-recording/): 問診やカウンセリングの録音をAIで文字起こししたい小規模な歯科医院向けに、厚労省ガイドラインの保守委託機関編と守秘義務の根拠から、Nottaのどのプランを選ぶかを整理しました。
 - [FP相談の録音をAI文字起こしする守秘の確認点｜協会規程は「利用」も禁止](https://nagai-cpu.github.io/ai-tools-jp/fp-consultation-recording/): 相談を録音してAIで文字起こししたいFP向け。日本FP協会の倫理規程と2026年7月施行の業務基準規程から守秘の3点を確認し、Nottaのどのプランが合うかを公式で整理。
-- [Notion AIの会議メモは学習される？公式の答えとプランで変わる保持期間](https://nagai-cpu.github.io/ai-tools-jp/notion-ai-meeting-notes-training/): Notion AIのミーティングノートの音声や文字起こしがAI学習に使われるかを公式ヘルプで確認。プランで変わる保持期間と自動削除、日本語対応の条件も整理しました。
+- [Notion AIに学習させない設定は必要？会議メモの扱いとプラン別の保持期間](https://nagai-cpu.github.io/ai-tools-jp/notion-ai-meeting-notes-training/): Notion AIに学習させない設定が要るのかを公式ヘルプで確認。AIミーティングノートの音声や文字起こしの扱い、プランで変わる保持期間と自動削除、日本語対応の条件も整理しました。
 - [Otter.aiの日本語会議は学習に使われる？規約の一文と止められる範囲](https://nagai-cpu.github.io/ai-tools-jp/otter-ai-data-training/): Otter.aiの規約とプライバシーポリシーで、会議の音声や文字起こしがAI学習に使われるかを確認。設定で止まる範囲、エンタープライズの扱い、日本語対応の条件を整理。
 - [社会福祉士のケース記録を録音からAI文字起こし｜同意と要配慮個人情報](https://nagai-cpu.github.io/ai-tools-jp/shakaifukushishi-case-record/): 面接を録音してケース記録をAIで作りたい社会福祉士向け。社会福祉士法第46条と日本社会福祉士会の倫理綱領・行動規範から同意・記録・要配慮個人情報の扱いを整理し、Nottaの条件も確認しました。
 - [中小企業診断士のヒアリング録音とAI文字起こし｜守秘義務は法律でなく省令に](https://nagai-cpu.github.io/ai-tools-jp/shindanshi-hearing-recording/): ヒアリングを録音してAIで文字起こししたい中小企業診断士向け。守秘義務の所在を中小企業支援法・登録規則・協会の倫理規程で確認し、Nottaの条件と照らしました。
@@ -169,7 +169,7 @@
 - [AI学習なしの文字起こしは無料である？公式の文言で確かめた4つの選択肢](https://nagai-cpu.github.io/ai-tools-jp/free-no-training-transcription/): 無料で「学習に使わない」と公式に書かれた文字起こしを探す人向けに、PLAUD・Zoom・Whisper・iPhone音声入力の原文と条件を並べ、無料は学習ありと書かれたものとの違いも整理。
 - [人事面談の録音をAIで文字起こしする前に｜開示請求と閲覧範囲の3論点](https://nagai-cpu.github.io/ai-tools-jp/hr-interview-recording/): 評価面談・1on1・退職面談を録音してAIで文字起こしする人事担当者向け。個人情報保護委員会のQ&Aで、利用目的・開示請求・消去の扱いと、Nottaで面談記録の閲覧範囲を絞る設定を確認しました。
 - [議事録AIの外部送信が社内ルールで禁止のとき｜取りうる4つの選択肢](https://nagai-cpu.github.io/ai-tools-jp/minutes-external-transfer/): 社内ルールで「外部送信禁止」とされ議事録AIが使えない人向け。既存のTeams・Google Meet、PC内で完結する方式、人手、例外申請の4つを、公式の記載で比べました。
-- [Nottaの医療関係者向け特別プラン｜AI学習なしは「別途追加費用」だった](https://nagai-cpu.github.io/ai-tools-jp/notta-medical-plan/): 診察やカンファレンスの記録にNottaを検討している医療機関向けに、医療関係者向け特別プランの中身、AI学習なしの条件、医療エンジンの試し方、申し込み方を公式ページとヘルプで確認しました。
+- [Nottaの医療エンジンを試すには？医療向け特別プランとAI学習なしの追加費用](https://nagai-cpu.github.io/ai-tools-jp/notta-medical-plan/): Nottaの医療エンジンを試したい医療機関向けに、医療関係者向け特別プランの中身、AI学習なしの条件と追加費用、申し込み方を公式ページとヘルプで確認しました。
 - [Notta士業向け特別プランの料金と申し込み条件｜年79,800円はどこに出ているか](https://nagai-cpu.github.io/ai-tools-jp/notta-shigyo-plan/): Nottaの士業向け特別プランを検討している弁護士・税理士・司法書士向けに、料金が載っている場所、申し込みの手順、ビジネス Plusとの差額と中身の違いを公式ページとヘルプで確認して整理しました。
 - [重要事項説明の録音をAIで文字起こしする前に｜国交省マニュアルの要点](https://nagai-cpu.github.io/ai-tools-jp/realestate-explanation-recording/): IT重説や重要事項説明の録画・録音をAIで文字起こししたい不動産会社向けに、国交省の実施マニュアルとFAQに書かれた同意・中断・保存期間の扱いと、AI学習なしのプラン条件を整理しました。
 - [社労士のハラスメント聞き取り録音をAIで文字起こし｜学習させない構成](https://nagai-cpu.github.io/ai-tools-jp/sharoushi-harassment-recording/): 社労士が顧問先のハラスメント聞き取りを録音してAIで文字起こしするとき、厚労省のパワハラ指針が求めるプライバシー保護と、Nottaのプラン・権限設定をどう対応させるかを整理。
@@ -195,7 +195,7 @@
 - [Pマーク企業のAI文字起こし｜委託先管理の前に「学習に使うか」を確認](https://nagai-cpu.github.io/ai-tools-jp/pmark-ai-transcription/): Pマークを持つ会社がAI文字起こしを使うときの確認点を、個人情報保護委員会の注意喚起とQ&Aで整理。委託か否かの判断基準、学習に使われる場合の注意、Nottaのプラン差まで。
 - [Rimo Voiceのデータは学習に使われる？全プラン学習なし、残る論点は保管期間](https://nagai-cpu.github.io/ai-tools-jp/rimo-voice-data/): Rimo Voiceで録音や文字起こしがAI学習に使われるかを利用規約と料金表で確認。学習なしの範囲、プランごとの保管期間、認証、法人で確かめる点、Nottaとの違いまで。
 - [Slackハドルの文字起こしはAI学習に使われる？生成AIは不使用、別の学習は既定オン](https://nagai-cpu.github.io/ai-tools-jp/slack-huddle-transcription/): SlackハドルのAI議事録と文字起こしが学習に使われるかを公式で確認。生成AIと予測モデルの違い、オプトアウトの方法、閲覧できる人の範囲まで。
-- [Webexの文字起こしはAI学習に使われる？例外は多言語の翻訳・文字起こし](https://nagai-cpu.github.io/ai-tools-jp/webex-transcription-training/): Webex Meetingsの録画・文字起こし・字幕がAI学習に使われるかをCiscoの公式開示文書で確認。原則と例外、オプトアウト、保存期間、無料版の注意、Nottaとの比較まで。
+- [Webexで文字起こしする前に｜AI学習の扱いと例外の多言語翻訳を公式で確認](https://nagai-cpu.github.io/ai-tools-jp/webex-transcription-training/): Webexの文字起こしを使う前に、録画・文字起こし・字幕がAI学習に使われるかをCiscoの公式開示文書で確認。例外の多言語翻訳、オプトアウト、保存期間、無料版の注意まで。
 - [Whisperをローカルで動かせば学習されない？API版との違いと導入の壁](https://nagai-cpu.github.io/ai-tools-jp/whisper-local-no-training/): OpenAIのWhisperをローカルで使う場合とAPIで使う場合の、学習・保持の扱いを公式のREADMEとOpenAIのプライバシーページで確認。必要なメモリ、導入の手間、Nottaとの比較まで。
 - [AIツール利用申請のセキュリティチェックシート｜Nottaを7項目で埋めた](https://nagai-cpu.github.io/ai-tools-jp/ai-tool-security-checklist/): 社内でAIツールの利用申請を出す人向け。セキュリティ担当が見る7項目を、Nottaの公式セキュリティページ・規約・ヘルプの文言で埋めたチェックシートとプラン条件をまとめました。
 - [AI文字起こしが社内規程で禁止｜4ツールの規約原文で説明する](https://nagai-cpu.github.io/ai-tools-jp/ai-transcription-company-policy/): 社内規程でAI文字起こしが止まったとき何をどう説明するか。Zoom・Microsoft・Google・Nottaの規約原文を並べ、明言されている範囲と確認できなかった点を分けました。
