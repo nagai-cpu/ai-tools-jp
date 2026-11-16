@@ -12,6 +12,7 @@
 ## 記事
 
 - [AI検索で自社が表示されるかチェックするツール｜無料と月1,000円の境目](https://nagai-cpu.github.io/ai-tools-jp/ai-search-brand-check-tool/): ChatGPTやGoogleのAIによる概要で自社が紹介されるかを確かめる方法を、手作業・無料チェッカー・AIOCROSSで比較。ポイント計算とWindows限定の注意点も。
+- [Nottaビジネスの無料トライアルは7日間｜解約の手順と自動更新されない申し込み方](https://nagai-cpu.github.io/ai-tools-jp/notta-business-trial/): Nottaビジネスプランの7日間無料トライアルを、セルフ登録と営業経由で比較。期間の数え方、300分などの利用枠、課金されずに終える解約手順を公式ヘルプで確認しました。
 - [士業の一人事務所でAI議事録を学習なしで使う｜年1.4万円と7.1万円の分かれ目](https://nagai-cpu.github.io/ai-tools-jp/solo-shigyo-office-transcription/): 一人で事務所を営む弁護士・税理士・行政書士・社労士向けに、相談記録をAI学習に使わせずに文字起こしする方法を、Nottaの4つの選び方と費用で比べました。
 - [Lark議事録（Minutes・AIノート）はAI学習に使われる？規約と設定の確認点](https://nagai-cpu.github.io/ai-tools-jp/lark-minutes-training/): LarkのMinutesやAIノートの会議データはAI学習に使われるのかを、規約・プライバシーポリシー・ヘルプで確認。共有の初期設定と、学習なしが明記されたNottaとの違いも整理。
 - [医療安全のインシデント振り返り会議を録音してAI文字起こし｜学習と識別の3点](https://nagai-cpu.github.io/ai-tools-jp/medical-safety-incident-meeting-recording/): インシデントや医療事故の振り返り会議・事情聴取を録音し、AIで文字起こしして記録を作りたい医療安全管理者向けに、医療法施行規則、厚労省ガイドラインQ&A、Nottaの学習なしの条件を整理しました。
