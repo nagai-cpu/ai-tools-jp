@@ -12,6 +12,7 @@
 ## 記事
 
 - [LINE公式アカウントのAI自動応答ツール比較｜AIが答えるのか、AIが設定するのか](https://nagai-cpu.github.io/ai-tools-jp/line-official-ai-tool-compare/): LINE公式アカウントにAIの自動応答を入れたいお店・小さな会社向けに、標準の応答メッセージ、純正のAIチャットボット(β)、Laiを公式情報で比較。費用と「AIが何をするか」の違いを整理しました。
+- [整体院のカウンセリングを録音しAI文字起こし｜既往歴は要配慮個人情報](https://nagai-cpu.github.io/ai-tools-jp/seitai-counseling-recording/): 整体院・接骨院・鍼灸院でカウンセリングを録音しAIで文字にしたい院長向け。要配慮個人情報の同意、資格者の守秘義務、Nottaの学習なしプランを条文と公式で整理。
 - [AI検索で自社が表示されるかチェックするツール｜無料と月1,000円の境目](https://nagai-cpu.github.io/ai-tools-jp/ai-search-brand-check-tool/): ChatGPTやGoogleのAIによる概要で自社が紹介されるかを確かめる方法を、手作業・無料チェッカー・AIOCROSSで比較。ポイント計算とWindows限定の注意点も。
 - [Nottaビジネスの無料トライアルは7日間｜解約の手順と自動更新されない申し込み方](https://nagai-cpu.github.io/ai-tools-jp/notta-business-trial/): Nottaビジネスプランの7日間無料トライアルを、セルフ登録と営業経由で比較。期間の数え方、300分などの利用枠、課金されずに終える解約手順を公式ヘルプで確認しました。
 - [士業の一人事務所でAI議事録を学習なしで使う｜年1.4万円と7.1万円の分かれ目](https://nagai-cpu.github.io/ai-tools-jp/solo-shigyo-office-transcription/): 一人で事務所を営む弁護士・税理士・行政書士・社労士向けに、相談記録をAI学習に使わせずに文字起こしする方法を、Nottaの4つの選び方と費用で比べました。
