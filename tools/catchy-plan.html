@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catchyのプラン選び計算機｜月の生成回数からFree・Starter・Proを判定｜AIツール実用ガイド</title>
+<meta name="description" content="Catchyの料金プランを、月に生成する回数と文章の長さから判定します。Freeの10クレジットで足りるか、Starterの100・200・300のどれか、Proの月額・年額のどちらが安いかを公式の税込価格で計算します。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/tools/catchy-plan.html">
+<meta property="og:title" content="Catchyのプラン選び計算機">
+<meta property="og:description" content="月に生成する回数と文章の長さを入れると、CatchyのFree・Starter・Proのどれで足りるか、1か月の支払いがいくらかが出ます。">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Catchyのプラン選び計算機","url":"https://nagai-cpu.github.io/ai-tools-jp/tools/catchy-plan.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"dateModified":"2026-11-18"}</script>
+<style>
+:root{
+--bg:#ffffff;--panel:#ffffff;--soft:#f6f8fa;--fg:#1a1d21;--muted:#5c6570;
+--line:#e4e7eb;--accent:#0f6fd6;--accent-fg:#ffffff;
+--ok:#2f6b4f;--ok-soft:#e8f2ec;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--no:#6b7280;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--panel:#15181d;--soft:#1b1f24;--fg:#e8eaed;--muted:#9aa4b0;
+--line:#2a2f35;--accent:#63a9ee;--accent-fg:#0b1116;
+--ok:#69ae87;--ok-soft:#13211a;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+--no:#8b95a1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.8;font-size:16.5px;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-variant-numeric:tabular-nums;overflow-x:hidden}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem;text-wrap:balance}
+.lead{color:var(--muted);font-size:.95rem;margin-bottom:1.6rem}
+h2{font-size:1.2rem;margin:2.4rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+p{margin:0 0 1.05rem}
+a{color:var(--accent)}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+form{background:var(--soft);border:1px solid var(--line);border-radius:11px;
+padding:1.2rem 1.15rem;display:flex;flex-direction:column;gap:1.3rem}
+fieldset{border:0;display:flex;flex-direction:column;gap:.45rem}
+legend{font-weight:700;font-size:.92rem;margin-bottom:.45rem}
+.opt{display:flex;align-items:flex-start;gap:.55rem;background:var(--panel);border:1px solid var(--line);
+border-radius:8px;padding:.6rem .75rem;cursor:pointer;font-size:.93rem;line-height:1.6}
+.opt input{margin-top:.32rem;accent-color:var(--accent);flex:none}
+.opt:has(input:checked){border-color:var(--accent)}
+.hint{font-size:.78rem;color:var(--muted);line-height:1.6}
+#out{margin-top:1.9rem}
+.verdict{border:1px solid var(--line);border-left:4px solid var(--accent);
+background:var(--panel);border-radius:0 9px 9px 0;padding:1.05rem 1.15rem;margin-bottom:1.3rem}
+.verdict h3{font-size:1.05rem;margin-bottom:.4rem}
+.verdict .sub{font-size:.88rem;color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:10px;padding:.95rem 1.05rem;margin-bottom:.8rem;background:var(--panel)}
+.card h4{font-size:1rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.badge{font-size:.72rem;font-weight:700;border-radius:4px;padding:.08rem .45rem;border:1px solid currentColor;white-space:nowrap}
+.b-ok{color:var(--ok);background:var(--ok-soft)}
+.b-cond{color:var(--warn);background:var(--warn-bg)}
+.b-no{color:var(--no)}
+.card.no{opacity:.72}
+.card .why{font-size:.88rem;margin-bottom:.45rem}
+.card blockquote{border-left:3px solid var(--line);padding:.1rem 0 .1rem .8rem;color:var(--muted);font-size:.83rem;margin:0 0 .4rem}
+.card .src{font-size:.75rem;color:var(--muted)}
+.card .src a{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.93rem;padding:.6rem 1.15rem;border-radius:7px;margin-top:.3rem}
+.ctabox{border:1px solid var(--line);border-radius:11px;padding:1rem 1.1rem;margin:1.4rem 0;background:var(--soft)}
+.ctabox .h{font-weight:700;display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:.05rem .3rem;background:var(--bg)}
+.ctabox p{font-size:.88rem;color:var(--muted);margin-bottom:.6rem}
+.note{font-size:.88rem;line-height:1.85}
+.note li{margin:0 0 .5rem 1.2rem}
+.small{font-size:.8rem;color:var(--muted)}
+footer.site{margin-top:3.5rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+@media(max-width:600px){body{font-size:16px}h1{font-size:1.42rem}}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field label{font-weight:700;font-size:.92rem}
+.row{display:flex;align-items:center;gap:.6rem}
+input[type=number],select{flex:1;min-width:0;font:inherit;font-size:1.05rem;padding:.55rem .7rem;
+border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--fg)}
+input[type=number]:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.unit{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.tw{overflow-x:auto;margin:0 0 1.3rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:30rem;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+td.n{white-space:nowrap}
+tr.pick td{background:var(--ok-soft);font-weight:600}
+h3.h3{font-size:1.02rem;margin:1.6rem 0 .7rem}
+.verdict.free{border-left-color:var(--ok)}
+.verdict.free h3{color:var(--ok)}
+.chk{display:flex;align-items:flex-start;gap:.55rem;font-size:.93rem;line-height:1.6;cursor:pointer}
+td.why{min-width:11rem}
+.chk input{margin-top:.32rem;accent-color:var(--accent);flex:none}
+</style>
+
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+
+<div class="wrap">
+<h1>Catchyのプラン選び計算機</h1>
+<p class="lead">月に何回、どの長さの文章を生成するかを入れると、CatchyのFree・Starter（100／200／300クレジット）・Proのどれで足りるかと、1か月あたりの支払い（税込）が出ます。</p>
+
+<div class="pr-note">このページにはアフィリエイト広告（PR）を含みます。判定は公式ヘルプのクレジット数と税込価格だけで決めていて、報酬額で結果を変えることはしていません。入力した数字はブラウザの中で計算し、どこにも送信しません。</div>
+
+<form id="f" autocomplete="off">
+  <div class="field">
+    <label for="c1">1回1クレジットの生成（キャッチコピー・記事タイトル・目次・リライトなど）</label>
+    <div class="row"><input id="c1" type="number" min="0" max="2000" step="1" value="20" inputmode="numeric"><span class="unit">回 / 月</span></div>
+  </div>
+  <div class="field">
+    <label for="c2">1回2クレジットの生成（記事の導入文など）</label>
+    <div class="row"><input id="c2" type="number" min="0" max="1000" step="1" value="4" inputmode="numeric"><span class="unit">回 / 月</span></div>
+  </div>
+  <div class="field">
+    <label for="c4">1回4クレジットの生成（記事の本文など長い文章）</label>
+    <div class="row"><input id="c4" type="number" min="0" max="1000" step="1" value="8" inputmode="numeric"><span class="unit">回 / 月</span></div>
+    <span class="hint">ツールごとの消費クレジットは、Catchyの生成ツール一覧のダイヤモンド形の部分と、「作成する」ボタンの下に表示されます。上の3つの区分は公式ヘルプに載っている例です。使うツールの数字に合わせて振り分けてください。</span>
+  </div>
+  <div class="field">
+    <label for="retry">作り直しの倍率</label>
+    <div class="row"><select id="retry">
+      <option value="1">作り直さない（1.0倍）</option>
+      <option value="1.5" selected>半分くらいは作り直す（1.5倍）</option>
+      <option value="2">全部1回は作り直す（2.0倍）</option>
+      <option value="3">何度も試す（3.0倍）</option>
+    </select></div>
+    <span class="hint">仮の値です。公式ヘルプにも、AIへの指示に慣れないうちは何回か生成を繰り返すことがあると書かれています。</span>
+  </div>
+  <fieldset>
+    <legend>使い方の条件</legend>
+    <label class="chk"><input type="checkbox" id="year"><span>12か月以上続けて使う予定で、年額をまとめて払える</span></label>
+    <label class="chk"><input type="checkbox" id="hist"><span>生成した文章の履歴を6回以上さかのぼって見たい</span></label>
+    <label class="chk"><input type="checkbox" id="proj"><span>保存用のプロジェクト（フォルダ）を2つ以上分けたい</span></label>
+  </fieldset>
+</form>
+
+<div id="out" aria-live="polite"></div>
+
+<h2>この計算機の使い方と計算の前提</h2>
+<p class="note">
+Catchyは、文章を1回生成するたびに「クレジット」を使う仕組みです。公式ヘルプ「クレジットとは？」によると、基本は1回1クレジットで、長い文章を作るツールは2〜4クレジットを使います。Starterプランのヘルプには、記事タイトルと目次とリライトが1回1クレジット、導入文が2クレジット、本文が4クレジットという例が載っています。この計算機では、区分ごとの回数にクレジット数と作り直しの倍率を掛けて、1か月に必要なクレジットを出しています。
+</p>
+<p class="note">
+プランは、Freeが毎月10クレジット、Starterが毎月100・200・300クレジットから選択、Proがクレジット無制限です。Starterで月に使い切れなかったクレジットは翌月以降に繰り越されますが、購入したクレジットの使用期限は半年です。Proは月額払いと年額払い（20％引き）があり、12か月以上使う予定にチェックを入れたときだけ年額払いを比べます。Freeは履歴の閲覧が最新5回まで、プロジェクトが1つまでなので、その条件にチェックを入れると有料プランから判定します。
+</p>
+<p class="note">
+Starterでもクレジットの追加購入はできますが、追加分の価格はヘルプに記載が見つからなかったため、この計算機では使っていません。300クレジットを超える分は、Proとの比較だけで判定しています。実際の消費は、登録後にツールの画面に出るクレジット数で確かめてください。
+</p>
+
+<h2>出典（2026年11月18日に公式ページで確認）</h2>
+<ul class="note small">
+<li>Catchy ヘルプ「クレジットとは？」（1回1クレジット、長い文章は2〜4クレジット、Freeは毎月1日に10へ回復、Starterの繰り越しと半年の使用期限、Proは無制限）：<a href="https://ai-copywriter.notion.site/c27373caf7a34b71ac521bc527e28478" target="_blank" rel="noopener">ai-copywriter.notion.site</a></li>
+<li>Catchy ヘルプ「Starterプランについて」（100クレジット 月3,300円・200クレジット 月6,270円・300クレジット 月8,910円、価格は税込、ツールごとの消費クレジットの例）：<a href="https://ai-copywriter.notion.site/51bbbeb1f2e44624aafc3e2394a0b51e" target="_blank" rel="noopener">ai-copywriter.notion.site</a></li>
+<li>Catchy ヘルプ「Proプランについて」（月額払い 10,780円、年額払い 総額103,488円・1か月あたり8,624円、価格は税込）：<a href="https://ai-copywriter.notion.site/1899f8d65f704afba421c2b44e0742f8" target="_blank" rel="noopener">ai-copywriter.notion.site</a></li>
+<li>Catchy ヘルプ「履歴機能について」（Freeは最新5回まで、有料プランは無制限）と「有料プランを解約する」（ProからStarterへの変更はできず、一度解約して登録し直す）：<a href="https://ai-copywriter.notion.site/1347bd10420d413797a91f1971d6f23a" target="_blank" rel="noopener">ai-copywriter.notion.site</a></li>
+<li>Catchy 公式サイトの料金表（Free 10クレジット・プロジェクト1つまで、Starter・Proはプロジェクト無制限）：<a href="https://lp.ai-copywriter.jp/" target="_blank" rel="noopener">lp.ai-copywriter.jp</a></li>
+</ul>
+
+<h2>関連する記事とツール</h2>
+<p class="note">
+・<a href="../catchy-pricing/">Catchy料金の無料と有料の違い｜月300クレジットならPro年額が安い</a><br>
+・<a href="../catchy-free-credits/">Catchy無料クレジット10で何ができる？記事1本でほぼ使い切る</a><br>
+・<a href="../catchy-credit-saving/">Catchyのクレジットが足りない時の節約術｜公式の長文手順は割高</a><br>
+・<a href="../catchy-cancel/">Catchyの解約方法と、解約後もクレジットが残る条件｜返金は無い</a><br>
+・<a href="../catchy-vs-chatgpt/">CatchyとChatGPTの違い｜無料ならどっち？公式の比較表は2023年版</a><br>
+・<a href="irusiru-plan.html">イルシルの料金プラン計算機</a>（資料作成AIのプラン選び）
+</p>
+</div>
+
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="transcription-cost.html">文字起こしコスト計算機</a></p>
+</div></footer>
+
+<script>
+(function(){
+  var AFF = "https://px.a8.net/svt/ejp?a8mat=4B82L4+84XB6I+52IU+5YJRM";
+  // Catchy ヘルプ「Starterプランについて」「Proプランについて」（2026-11-18確認）。金額は税込。
+  var ST = [{cr:100, yen:3300}, {cr:200, yen:6270}, {cr:300, yen:8910}];
+  var PRO_MO = 10780, PRO_YEAR = 103488, PRO_YEAR_MO = 8624;
+  var num = function(id){ var v = Number(document.getElementById(id).value); return isFinite(v) && v >= 0 ? Math.floor(v) : 0; };
+  var on = function(id){ return document.getElementById(id).checked; };
+  var yen = function(n){ return Math.round(n).toLocaleString("ja-JP") + "円"; };
+
+  function render(){
+    var c1 = num("c1"), c2 = num("c2"), c4 = num("c4");
+    var retry = Number(document.getElementById("retry").value) || 1;
+    var year = on("year"), hist = on("hist"), proj = on("proj");
+    var base = c1 + c2 * 2 + c4 * 4;
+    var need = Math.ceil(base * retry);
+    var proBest = year ? PRO_YEAR_MO : PRO_MO;
+    var proLabel = year ? "Pro（年額払い・1か月あたり）" : "Pro（月額払い）";
+
+    var rows = [];
+    var freeWhy = [];
+    if (need > 10) freeWhy.push("毎月10クレジットを超える");
+    if (hist) freeWhy.push("履歴は最新5回まで");
+    if (proj) freeWhy.push("プロジェクトは1つまで");
+    rows.push({n:"Free", cr:"10", cost:0, ok:freeWhy.length === 0, why:freeWhy});
+    ST.forEach(function(s){
+      rows.push({n:"Starter " + s.cr, cr:String(s.cr), cost:s.yen, ok:need <= s.cr, why:need <= s.cr ? [] : ["毎月" + s.cr + "クレジットを超える"]});
+    });
+    rows.push({n:"Pro（月額払い）", cr:"無制限", cost:PRO_MO, ok:true, why:[]});
+    if (year) rows.push({n:"Pro（年額払い）", cr:"無制限", cost:PRO_YEAR_MO, ok:true, why:[], note:"総額" + yen(PRO_YEAR) + "を一括"});
+
+    // 足りるプランのうち1か月あたりが一番安いもの（同額なら表の上を優先）
+    var pick = null;
+    rows.forEach(function(r){ if (r.ok && (!pick || r.cost < pick.cost)) pick = r; });
+
+    var h = "";
+    if (pick.cost === 0) {
+      h += '<div class="verdict free"><h3>Freeで足ります。費用は0円です</h3><p class="sub">1か月に必要なのは約' + need + 'クレジットで、Freeの毎月10クレジットに収まります。'
+         + '公式ヘルプによると、Freeは毎月1日に残高が10に回復します（前月にクレジットを使わなかった場合は付与されません）。履歴は最新5回まで、プロジェクトは1つまでです。</p></div>';
+    } else if (pick.n.indexOf("Starter") === 0) {
+      var nextPro = proBest - pick.cost;
+      h += '<div class="verdict"><h3>' + pick.n + 'クレジットで足ります。1か月' + yen(pick.cost) + '（税込）です</h3>'
+         + '<p class="sub">1か月に必要なのは約' + need + 'クレジットです。使い切れなかったクレジットは翌月以降に繰り越されますが、購入から半年で使用期限が来ます。'
+         + (nextPro > 0 ? proLabel + 'との差は1か月' + yen(nextPro) + 'です。' : '')
+         + (hist || proj ? '履歴の閲覧とプロジェクトは、Starterでどちらも無制限です。' : '') + '</p></div>';
+    } else {
+      var why = need > 300 ? '1か月に必要なのは約' + need + 'クレジットで、Starterの最大300クレジットを超えます。' : '1か月に必要なのは約' + need + 'クレジットで、Starter 300（月8,910円）でも収まりますが、年額払いのProのほうが1か月あたり' + yen(8910 - PRO_YEAR_MO) + '安くなります。';
+      h += '<div class="verdict"><h3>' + pick.n + 'が一番安く、1か月' + yen(pick.cost) + '（税込）です</h3>'
+         + '<p class="sub">' + why
+         + (pick.n.indexOf("年額") >= 0 ? '年額払いは総額' + yen(PRO_YEAR) + 'を先に払います。' : (need > 300 && !year ? '12か月以上使う予定なら、上のチェックを入れると年額払い（1か月あたり8,624円）とも比べられます。' : ''))
+         + '公式ヘルプによると、ProからStarterへの変更はできず、一度解約してから登録し直す必要があります。</p></div>';
+    }
+
+    h += '<h3 class="h3">プランごとの判定（1か月に必要：約' + need + 'クレジット＝(' + c1 + '×1＋' + c2 + '×2＋' + c4 + '×4)×' + retry + '）</h3>';
+    h += '<div class="tw"><table><thead><tr><th>プラン</th><th>毎月のクレジット</th><th>1か月の支払い（税込）</th><th>判定</th></tr></thead><tbody>';
+    rows.forEach(function(r){
+      h += '<tr' + (r === pick ? ' class="pick"' : '') + '><td>' + r.n + '</td><td class="n">' + r.cr + '</td>'
+         + '<td class="n">' + yen(r.cost) + (r.note ? '<br><span class="small">' + r.note + '</span>' : '') + '</td>'
+         + '<td class="why">' + (r.ok ? "足りる" : r.why.join("<br>")) + '</td></tr>';
+    });
+    h += '</tbody></table></div>';
+
+    if (pick.cost === 0) {
+      h += '<div class="ctabox"><div class="h">Catchy<span class="pr">PR</span></div>'
+         + '<p>この条件なら有料プランは要りません。Freeで登録して、自分が使うツールの消費クレジットを画面で確かめてから、足りなくなった時点でStarterを考えれば十分です。</p>'
+         + '<a class="btn" href="' + AFF + '" target="_blank" rel="sponsored nofollow noopener">Catchyの公式サイトでFreeを確認する</a></div>';
+    } else {
+      h += '<div class="ctabox"><div class="h">Catchy<span class="pr">PR</span></div>'
+         + '<p>Freeの10クレジットで、自分が使うツールの消費クレジットと作り直しの回数を一度測ってから有料プランを選ぶと、見込み違いを減らせます。有料プランはどれも自動継続で、解約はいつでもできると公式ヘルプに書かれています。</p>'
+         + '<a class="btn" href="' + AFF + '" target="_blank" rel="sponsored nofollow noopener">Catchyの公式サイトで料金を確認する</a></div>';
+    }
+
+    document.getElementById("out").innerHTML = h;
+  }
+
+  document.getElementById("f").addEventListener("input", render);
+  document.getElementById("f").addEventListener("change", render);
+  render();
+})();
+</script>
+</body>
+</html>
