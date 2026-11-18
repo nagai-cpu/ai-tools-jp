@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [Laiの料金プランの選び方｜LINE側の料金を足した月額で比べる](https://nagai-cpu.github.io/ai-tools-jp/lai-line-ai-pricing/): LINE運用ツールLaiのStarter・Standard・Proの違いを、LINE公式アカウント側の料金を足した月額で比較。無料トライアルと解約の注意点も公式情報で確認。
 - [LLMO順位計測ツール比較｜月1,000円と月1.9万円以上の違い](https://nagai-cpu.github.io/ai-tools-jp/llmo-rank-tracking-tool-compare/): ChatGPTやAIによる概要で自社が紹介されるかを測るLLMO計測ツールを、AIOCROSS・Semrush・Ahrefsで比較。料金、測れるAI、小さな会社が選ぶ基準を公式情報で整理。
 - [ひとり社長の商談録音をAI学習させない方法｜Notta年3万円と7.1万円の差](https://nagai-cpu.github.io/ai-tools-jp/solo-ceo-sales-meeting-transcription/): 一人で会社を回す社長が、取引先との商談を録音してAI議事録にするときに学習へ使わせない選び方を、Nottaの公式料金ページとセキュリティページで整理しました。
 - [LINE公式アカウントのAI自動応答ツール比較｜AIが答えるのか、AIが設定するのか](https://nagai-cpu.github.io/ai-tools-jp/line-official-ai-tool-compare/): LINE公式アカウントにAIの自動応答を入れたいお店・小さな会社向けに、標準の応答メッセージ、純正のAIチャットボット(β)、Laiを公式情報で比較。費用と「AIが何をするか」の違いを整理しました。
