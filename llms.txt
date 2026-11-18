@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [LLMO順位計測ツール比較｜月1,000円と月1.9万円以上の違い](https://nagai-cpu.github.io/ai-tools-jp/llmo-rank-tracking-tool-compare/): ChatGPTやAIによる概要で自社が紹介されるかを測るLLMO計測ツールを、AIOCROSS・Semrush・Ahrefsで比較。料金、測れるAI、小さな会社が選ぶ基準を公式情報で整理。
 - [LINE公式アカウントのAI自動応答ツール比較｜AIが答えるのか、AIが設定するのか](https://nagai-cpu.github.io/ai-tools-jp/line-official-ai-tool-compare/): LINE公式アカウントにAIの自動応答を入れたいお店・小さな会社向けに、標準の応答メッセージ、純正のAIチャットボット(β)、Laiを公式情報で比較。費用と「AIが何をするか」の違いを整理しました。
 - [整体院のカウンセリングを録音しAI文字起こし｜既往歴は要配慮個人情報](https://nagai-cpu.github.io/ai-tools-jp/seitai-counseling-recording/): 整体院・接骨院・鍼灸院でカウンセリングを録音しAIで文字にしたい院長向け。要配慮個人情報の同意、資格者の守秘義務、Nottaの学習なしプランを条文と公式で整理。
 - [AI検索で自社が表示されるかチェックするツール｜無料と月1,000円の境目](https://nagai-cpu.github.io/ai-tools-jp/ai-search-brand-check-tool/): ChatGPTやGoogleのAIによる概要で自社が紹介されるかを確かめる方法を、手作業・無料チェッカー・AIOCROSSで比較。ポイント計算とWindows限定の注意点も。
@@ -314,7 +315,7 @@
 - [AI議事録を社内で通すための文書一式](https://note.com/life_lab_jp/n/n36ce4be7c812): AI議事録の社内規程の文例12条と、導入前のチェックリスト、稟議書の本文をそのまま使える形でまとめた有料noteです。（1480円）
 - [文字起こしを貼るだけの議事録プロンプト12本](https://note.com/life_lab_jp/n/ne410835d9a8c): 文字起こしから議事録の下書きを作る指示文を、定例・商談・1on1・役員会など会議の目的別にまとめた有料noteです。（780円）
 - [文字起こしをAIの学習に使わせない設定と確認の手順](https://note.com/life_lab_jp/n/nee47eb4ec0d7): Notta・Zoom・Google Meet・Teams・Claude・Geminiの学習の扱いと確認する場所、録音前の8項目のチェックリストをまとめた手順書です。（780円）
-- [士業事務所のためのAI文字起こし導入一式](https://note.com/life_lab_jp/n/nba3b68847a65): 士業事務所がAI文字起こしを導入するための、依頼者への説明文・事務所内規程・ベンダー確認書・4社の規約原文をまとめた一式です。（9800円）
+- [士業事務所のためのAI文字起こし導入一式](https://note.com/life_lab_jp/n/nba3b68847a65): 士業事務所がAI文字起こしを導入するための、依頼者への説明文・事務所内規程・ベンダー確認書・4社の規約原文をまとめた一式です。（1980円）
 - [ChatGPTが業務で使えない原因を切り分けるシート](https://note.com/life_lab_jp/n/n34cf21ddfe5f): 自分の「使えない」が聞き方・使いどころ・社内ルールのどれかを10問で切り分け、タイプ別の指示テンプレート14本と検収基準をまとめたシートです。（780円）
 - [自社サイトをAIの学習に使わせない robots.txt の書き方](https://note.com/life_lab_jp/n/nb1cd7dfcbc25): 自社サイトをAIの学習に使わせず、AI検索からの引用は残すための robots.txt の書き方を、主要4社のボット名と対応時期つきでまとめた手順書です。（780円）
 - [商談や面接で録音の同意をどう取るか](https://note.com/life_lab_jp/n/n7e07b3ad9052): 商談・採用面接・ヒアリング・電話で録音の同意を取る言い方12本と、事前メール文面、断られたときの切り替え、Teams・Google Meetの同意設定をまとめた文面集です。（780円）
