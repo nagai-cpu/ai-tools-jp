@@ -12,6 +12,7 @@
 ## 記事
 
 - [入管・ビザ相談の録音をAI文字起こし｜行政書士の守秘義務と在留カード番号](https://nagai-cpu.github.io/ai-tools-jp/gyoseishoshi-visa-consultation-recording/): 外国人の在留資格やビザの相談を録音してAIで文字起こししたい行政書士向けに、行政書士法・個人情報保護法の条文とNottaの公式料金ページから、プランと通訳・翻訳の選び方を整理しました。
+- [イルシルの請求書払いと領収書｜個人プランはカードのみ、宛名は変えられない](https://nagai-cpu.github.io/ai-tools-jp/irusiru-invoice/): イルシルを会社の経費で払いたい人向けに、請求書払いができるプラン、領収書の受け取り方と宛名、インボイスの登録番号について、公式ヘルプで確認できたことと確認できなかったことを整理しました。
 - [在留管理ソフトを行政書士が比較｜顧問先に配れるかで選ぶ3つの方法](https://nagai-cpu.github.io/ai-tools-jp/visa-management-software-compare/): 外国人の在留期限を管理するソフトを、行政書士事務所の目線で比べました。ビザ顧問・行政書士HUB・kintoneの料金を公式ページで確認し、顧問先の数と更新案件の受け方で選び分けます。
 - [Laiの料金プランの選び方｜LINE側の料金を足した月額で比べる](https://nagai-cpu.github.io/ai-tools-jp/lai-line-ai-pricing/): LINE運用ツールLaiのStarter・Standard・Proの違いを、LINE公式アカウント側の料金を足した月額で比較。無料トライアルと解約の注意点も公式情報で確認。
 - [LLMO順位計測ツール比較｜月1,000円と月1.9万円以上の違い](https://nagai-cpu.github.io/ai-tools-jp/llmo-rank-tracking-tool-compare/): ChatGPTやAIによる概要で自社が紹介されるかを測るLLMO計測ツールを、AIOCROSS・Semrush・Ahrefsで比較。料金、測れるAI、小さな会社が選ぶ基準を公式情報で整理。
