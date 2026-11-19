@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [在留管理ソフトを行政書士が比較｜顧問先に配れるかで選ぶ3つの方法](https://nagai-cpu.github.io/ai-tools-jp/visa-management-software-compare/): 外国人の在留期限を管理するソフトを、行政書士事務所の目線で比べました。ビザ顧問・行政書士HUB・kintoneの料金を公式ページで確認し、顧問先の数と更新案件の受け方で選び分けます。
 - [Laiの料金プランの選び方｜LINE側の料金を足した月額で比べる](https://nagai-cpu.github.io/ai-tools-jp/lai-line-ai-pricing/): LINE運用ツールLaiのStarter・Standard・Proの違いを、LINE公式アカウント側の料金を足した月額で比較。無料トライアルと解約の注意点も公式情報で確認。
 - [LLMO順位計測ツール比較｜月1,000円と月1.9万円以上の違い](https://nagai-cpu.github.io/ai-tools-jp/llmo-rank-tracking-tool-compare/): ChatGPTやAIによる概要で自社が紹介されるかを測るLLMO計測ツールを、AIOCROSS・Semrush・Ahrefsで比較。料金、測れるAI、小さな会社が選ぶ基準を公式情報で整理。
 - [ひとり社長の商談録音をAI学習させない方法｜Notta年3万円と7.1万円の差](https://nagai-cpu.github.io/ai-tools-jp/solo-ceo-sales-meeting-transcription/): 一人で会社を回す社長が、取引先との商談を録音してAI議事録にするときに学習へ使わせない選び方を、Nottaの公式料金ページとセキュリティページで整理しました。
