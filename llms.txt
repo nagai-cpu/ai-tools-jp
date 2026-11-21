@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [AI相談アプリおすすめ比較｜無料で話せる回数と送り先のAIを公式で確認](https://nagai-cpu.github.io/ai-tools-jp/ai-consult-app-compare/): 悩みや考えごとをAIに相談できるアプリを、自分と話すノート・Awarefy・emol・muuteで比較。無料で使える範囲、有料プランの料金、話した内容の送り先と学習の扱いを公式情報で整理しました。
 - [パーソナルトレーナーのカウンセリングを録音してAI記録に｜既往歴の扱い方](https://nagai-cpu.github.io/ai-tools-jp/personal-trainer-counseling-recording/): 個人で活動するパーソナルトレーナーが、初回カウンセリングやセッションを録音してAIで記録にするとき、既往歴・服薬など要配慮個人情報の同意と、Nottaのプランの選び方を公式情報で整理しました。
 - [ひとり社労士が顧問先面談を録音してAI学習させない方法｜Notta3つの選び方](https://nagai-cpu.github.io/ai-tools-jp/solo-sharoushi-client-meeting-transcription/): 一人で開業している社労士が、顧問先の社長や担当者との定例面談を録音してAIで記録にするとき、音声を学習に使わせない選び方を、Nottaの公式料金ページとセキュリティページで整理しました。
 - [Webデザイナーのヒアリングを録音してAI議事録に｜無料3分の壁とプレミアムの線](https://nagai-cpu.github.io/ai-tools-jp/web-designer-client-hearing-minutes/): 個人で受けるWebデザイナー向けに、制作前のヒアリングを録音・文字起こしして要件メモにする方法を、Nottaの無料プランとプレミアムの違い、画面共有の残し方とあわせて公式ページで確認しました。
