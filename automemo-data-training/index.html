@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AutoMemoの録音データはAI学習に使われる？クラウドの保存先と法人の管理を確認｜AIツール実用ガイド</title>
+<meta name="description" content="AutoMemoの録音と文字起こしは学習や二次利用に使われるか、保存先と管理者機能の有無を公式資料で確認。法人で使う前の判断軸とNotta ビジネス Plusとの違いを整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G40EQQELDY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40EQQELDY');document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[rel~=sponsored]');if(!a)return;var h='';try{h=new URL(a.href).hostname}catch(_){}gtag('event','aff_click',{link_domain:h,link_text:(a.textContent||'').trim().slice(0,80),transport_type:'beacon'})},true);</script>
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/automemo-data-training/">
+<meta property="og:title" content="AutoMemoの録音データはAI学習に使われる？クラウドの保存先と法人の管理を確認｜AIツール実用ガイド">
+<meta property="og:description" content="AutoMemoの録音と文字起こしは学習や二次利用に使われるか、保存先と管理者機能の有無を公式資料で確認。法人で使う前の判断軸とNotta ビジネス Plusとの違いを整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AutoMemoの録音データはAI学習に使われる？クラウドの保存先と法人の管理を確認", "description": "AutoMemoの録音と文字起こしは学習や二次利用に使われるか、保存先と管理者機能の有無を公式資料で確認。法人で使う前の判断軸とNotta ビジネス Plusとの違いを整理。", "datePublished": "2026-11-22", "dateModified": "2026-11-22", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/automemo-data-training/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">AutoMemoの録音データはAI学習に使われる？クラウドの保存先と法人の管理を確認</h1><p class="meta">2026-11-22 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、AutoMemo（オートメモ）は公式のセキュリティチェックステートメントで、<strong>送信された音声とそのテキストを「弊社および音声認識エンジンを提供する第三者のパートナー企業は閲覧又は利用することはありません」</strong>と答えています。保存先はGoogle Cloudの原則日本国内リージョンです。ただし、AutoMemoは「シングルユーザのサービス」と書かれ、<strong>管理者による一元管理やIPアドレス制限はありません</strong>。社員の録音を会社として管理したい事務所なら、AI学習なしと管理機能が同じプランに入っている<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=automemodatatraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン）</a>のビジネス Plusが比較の候補になります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として明記されているのはビジネス Plus（64,800円/年・税抜＝月5,400円税抜）、エンタープライズ（要相談）、士業向け特別プランの3つ。法人プランは個人向けの /pricing ではなく https://www.notta.ai/business/pricing に掲載され、同ページの比較表で「AI学習なし」はビジネス（27,360円/年・税抜）が×、ビジネス Plus とエンタープライズが○。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる（医療関係者向け特別プランには「AI学習なし」の記載なし）。2026年11月15日に公式ページで確認</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容＝単語の組み合わせで生じる有意な情報は学習せず、音声認識以外のAI機能＝AI要約などは全プラン学習なしと公式が明記：https://support.notta.ai/hc/ja/articles/25948519611291 ／2026年11月15日確認）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=automemodatatraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="AutoMemoとNottaのデータの扱いを比較">AutoMemoとNottaのデータの扱いを比較</h2>
+<p>2026年11月22日に、AutoMemoの公式サイト（料金プラン・法人向けページ・RecText AIのページ）、ソースネクストが公開している「AutoMemoセキュリティチェックステートメント 1.5.3」と法人向け紹介資料、Nottaの法人料金ページとセキュリティページを確認しました。AutoMemoの使用許諾条件書のページは、確認画面が出て本文を取得できませんでした。</p>
+<div class="tw"><table><thead><tr><th>項目</th><th>AutoMemo プレミアム</th><th>AutoMemo シェア100</th><th>Notta ビジネス</th><th>Notta ビジネス Plus</th></tr></thead><tbody><tr><td>料金</td><td>月1,480円／年14,800円（税込）</td><td>年19,800円（税込・100時間）</td><td>年27,360円（税抜）</td><td>年64,800円（税抜）</td></tr><tr><td>文字起こしの量</td><td>月30時間</td><td>年100時間を人数無制限で共有</td><td>無制限（1回5時間まで）</td><td>無制限（1回5時間まで）</td></tr><tr><td>音声の学習・利用</td><td>会社と音声認識エンジンの提供企業は閲覧・利用しない</td><td>同左</td><td>音声認識の学習に使われる場合あり</td><td>AI学習なし</td></tr><tr><td>管理者の一元管理</td><td>なし（シングルユーザ）</td><td>なし（データはアカウントごと）</td><td>セキュリティ管理あり</td><td>セキュリティ管理あり</td></tr><tr><td>IPアドレス制限</td><td>対応していない</td><td>対応していない</td><td>あり</td><td>あり</td></tr><tr><td>保存先</td><td>Google Cloud・原則日本国内リージョン</td><td>同左</td><td>AWS東京リージョン</td><td>AWS東京リージョン</td></tr></tbody></table></div>
+<p>AutoMemoのシェアプランは、法人向けページのよくある質問で「録音データはアカウントごとに保存され、ほかのアカウントには自動で共有されません」と書かれています。時間を共有するプランで、データを会社がまとめて管理するプランではありません。</p>
+<h2 id="判断軸1-学習-と-閲覧・利用-の書き方の違い">判断軸1｜「学習」と「閲覧・利用」の書き方の違い</h2>
+<p>AutoMemoのセキュリティチェックステートメントは、「音声、テキストデータの二次活用」という項目で、会社と音声認識エンジンのパートナー企業は閲覧・利用しないと答え、根拠として利用規約の第3条・第18条を挙げています。保守運用でも「弊社が利用者のデータを閲覧・アクセスすることはございません」と書かれています。利用しないのであれば学習にも使われないと読めますが、「学習」という言葉そのものでは書かれていません。</p>
+<p>もう1つ確かめておきたいのが要約です。AutoMemoにはAI要約がありますが、今回確認したページと資料には、要約にどの会社の生成AIを使うのか、その送り先での扱いの記載が見つかりませんでした。上の回答は「音声認識エンジンを提供する」パートナーについての記載です。顧客の名前や金額が出る会議を要約にかけるなら、要約の処理先をソースネクストに問い合わせてから使うのが確実です。</p>
+<p>Nottaのセキュリティページは、生成AI機能のデータは第三者の基盤モデルの学習には使わないとしたうえで、音声認識の学習条件はプランで異なり、ビジネス Plusとエンタープライズでは音声認識データを学習に使わない環境を使えると書いています。どの範囲が学習に使われるかを、要約と音声認識に分けて書いている点が違います。</p>
+<h2 id="判断軸2-会社として録音を管理するか">判断軸2｜会社として録音を管理するか</h2>
+<p>セキュリティチェックステートメントの「アカウント・アクセス制御」には、ログインはGoogle・Apple・Microsoftのアカウントで行い、「シングルユーザのサービスのため管理者による一元管理機能はありません」「専用端末・専用アプリを用いるサービスのため（IPアドレス制御は）対応していません」とあります。解約時のデータは「利用者ご自身で削除して頂きます」です。</p>
+<p>ひとりで使う、または所長だけが録音する事務所なら、この作りで困る場面は少ないはずです。困るのは、スタッフが個人のGoogleアカウントでAutoMemoを使い、顧客との面談の録音がそのアカウントに残ったまま退職する場合です。会社の側から消したり止めたりする手段が、AutoMemoの仕組みの中にはありません。</p>
+<p>社内ルールの作り方は<a href="../ai-voice-recorder-company-rules/">AIボイスレコーダーの社内ルール</a>で、同じくクラウドに上げるPLAUD NOTEの扱いは<a href="../plaud-note-security/">PLAUD NOTEのセキュリティの記事</a>で整理しています。</p>
+<h2 id="判断軸3-クラウドに上げたくない録音があるか">判断軸3｜クラウドに上げたくない録音があるか</h2>
+<p>ソースネクストは同じエンジンのオフライン版として、RecText AI（9,980円・買い切り・Windows）を出しています。公式ページには、データはPC内に保存され、インターネットに送信しないと書かれています。ただし、話者分離とAI要約はなく、対応言語は日本語と英語だけです。利用開始時の認証・製品登録・アップデートにはネット接続が要ります。</p>
+<p>録音の一部だけが特に機密なら、その分だけRecText AIで処理し、ほかはクラウドで要約まで使う分け方もできます。</p>
+<h2 id="管理まで含めるならNotta-ビジネス-Plus">管理まで含めるならNotta ビジネス Plus</h2>
+<p>Nottaの法人料金ページでは、ビジネス Plusは年64,800円（税抜・月額換算5,400円）で、ビジネスの機能（Web会議の録画、セキュリティ管理、利用状況レポート、IP制限）に加えて「AI学習なし」が付きます。下のビジネス（年27,360円）は「AI学習なし」の対象ではありません。スタッフの録音を事務所で管理したい、かつ音声を学習に使われたくない、という2つの条件を1つのプランで満たせるのはこの価格帯からです。</p>
+<p>自分ひとりの録音で、管理機能が要らず、要約の処理先を問い合わせて納得できたならAutoMemoで足ります。スタッフが顧客の話を録る事務所で、会社として止めたり消したりする手段が必要ならNotta ビジネス Plusが合います。ほかのAI学習なしの選択肢は<a href="../no-ai-training-transcription-comparison/">AI学習なしの文字起こしツール比較</a>にまとめています。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として明記されているのはビジネス Plus（64,800円/年・税抜＝月5,400円税抜）、エンタープライズ（要相談）、士業向け特別プランの3つ。法人プランは個人向けの /pricing ではなく https://www.notta.ai/business/pricing に掲載され、同ページの比較表で「AI学習なし」はビジネス（27,360円/年・税抜）が×、ビジネス Plus とエンタープライズが○。エンタープライズと士業向けは問い合わせて条件を書面で確認する形になる（医療関係者向け特別プランには「AI学習なし」の記載なし）。2026年11月15日に公式ページで確認</p><p class="cta-f">―（下位プランは音声認識エンジンの学習に使われる場合あり。ただし意味内容＝単語の組み合わせで生じる有意な情報は学習せず、音声認識以外のAI機能＝AI要約などは全プラン学習なしと公式が明記：https://support.notta.ai/hc/ja/articles/25948519611291 ／2026年11月15日確認）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=automemodatatraining" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン） の公式サイトを見る</a></div>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>AutoMemo：使用許諾条件書を今回は読めなかった</strong>：根拠として挙がっている第3条・第18条の本文は、確認画面が出て取得できませんでした。契約前に条文で確認してください</li><li><strong>AutoMemo：外部の脆弱性診断は受けていない</strong>：セキュリティチェックステートメントには、社外の第三者機関による脆弱性診断は行っていないと書かれています（Webアプリケーション診断は必要に応じて不定期に実施）</li><li><strong>AutoMemo：無料のお試しはデータが7日で見えなくなる</strong>：料金プランのページでは、お試しプランは毎月1時間までで、データの閲覧期間は7日間です</li><li><strong>Notta ビジネス Plus：AutoMemoより高い</strong>：年64,800円（税抜）は、AutoMemo プレミアムの年14,800円（税込）の4倍以上です。管理機能が要らないなら、この差を払う理由は薄くなります</li><li><strong>Notta ビジネス：AI学習なしではない</strong>：法人向けでも、ビジネスは音声認識の学習に使われる場合がある側です。プラン名で判断しないでください</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="AutoMemoの録音は日本のサーバーに保存される">AutoMemoの録音は日本のサーバーに保存される？</h3>
+<p>セキュリティチェックステートメントでは、Google Cloudのサービスを使い、原則的に日本国内リージョンで運用していると答えています。通信はTLS1.3、保存データはGoogle Cloudの暗号化（AES-256）です。</p>
+<h3 id="AutoMemoのシェアプランなら管理者が録音を見られる">AutoMemoのシェアプランなら管理者が録音を見られる？</h3>
+<p>見られません。法人向けページのよくある質問で、録音データはアカウントごとに保存され、自動で共有されないと書かれています。共有したいときは共有用URLを使います。</p>
+<h3 id="AutoMemoを解約したらデータはどうなる">AutoMemoを解約したらデータはどうなる？</h3>
+<p>セキュリティチェックステートメントでは、解約時のデータは利用者自身で削除する形です。法人向けのシェアプランは自動更新ではなく、次の年も使うなら再購入が必要です。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>AutoMemoは、会社と音声認識のパートナーが音声とテキストを閲覧・利用しないと公式資料で回答。要約の処理先は記載が見つからなかった</li><li>管理者の一元管理とIP制限はないので、スタッフの録音を事務所で管理したいなら向かない</li><li>学習なしと管理を1つのプランで満たすなら、Notta ビジネス Plus（年64,800円・税抜）</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../personal-trainer-counseling-recording/">パーソナルトレーナーのカウンセリングを録音してAI記録に｜既往歴の扱い方</a></li><li><a href="../solo-sharoushi-client-meeting-transcription/">ひとり社労士が顧問先面談を録音してAI学習させない方法｜Notta3つの選び方</a></li><li><a href="../web-designer-client-hearing-minutes/">Webデザイナーのヒアリングを録音してAI議事録に｜無料3分の壁とプレミアムの線</a></li><li><a href="../gyoseishoshi-visa-consultation-recording/">入管・ビザ相談の録音をAI文字起こし｜行政書士の守秘義務と在留カード番号</a></li><li><a href="../solo-ceo-sales-meeting-transcription/">ひとり社長の商談録音をAI学習させない方法｜Notta年3万円と7.1万円の差</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-consult-app-compare/">AI相談アプリおすすめ比較｜無料で話せる回数と送り先のAIを公式で確認</a></li><li><a href="../automemo-data-training/">AutoMemoの録音データはAI学習に使われる？クラウドの保存先と法人の管理を確認</a></li><li><a href="../personal-trainer-counseling-recording/">パーソナルトレーナーのカウンセリングを録音してAI記録に｜既往歴の扱い方</a></li><li><a href="../solo-sharoushi-client-meeting-transcription/">ひとり社労士が顧問先面談を録音してAI学習させない方法｜Notta3つの選び方</a></li><li><a href="../web-designer-client-hearing-minutes/">Webデザイナーのヒアリングを録音してAI議事録に｜無料3分の壁とプレミアムの線</a></li><li><a href="../gyoseishoshi-visa-consultation-recording/">入管・ビザ相談の録音をAI文字起こし｜行政書士の守秘義務と在留カード番号</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a> ・ <a href="../tools/ai-transcription-policy-checklist.html">AI文字起こし 社内導入チェックリスト</a> ・ <a href="../tools/catchy-plan.html">Catchyのプラン選び計算機</a></p>
+</div></footer>
+</body>
+</html>
