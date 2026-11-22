@@ -11,6 +11,7 @@
 
 ## 記事
 
+- [自分と話すノートの使い方と料金｜無料5回とNote＋、電話相談の時間を確認](https://nagai-cpu.github.io/ai-tools-jp/jibun-to-hanasu-note-review/): AI相談アプリ「自分と話すノート」の始め方、無料で使える範囲、Note＋と電話相談プランの料金、お試しの条件と解約を、利用規約とApp Storeで確認して整理しました。
 - [AI相談アプリおすすめ比較｜無料で話せる回数と送り先のAIを公式で確認](https://nagai-cpu.github.io/ai-tools-jp/ai-consult-app-compare/): 悩みや考えごとをAIに相談できるアプリを、自分と話すノート・Awarefy・emol・muuteで比較。無料で使える範囲、有料プランの料金、話した内容の送り先と学習の扱いを公式情報で整理しました。
 - [AutoMemoの録音データはAI学習に使われる？クラウドの保存先と法人の管理を確認](https://nagai-cpu.github.io/ai-tools-jp/automemo-data-training/): AutoMemoの録音と文字起こしは学習や二次利用に使われるか、保存先と管理者機能の有無を公式資料で確認。法人で使う前の判断軸とNotta ビジネス Plusとの違いを整理。
 - [土地家屋調査士の境界立会いを録音してAI文字起こし｜守秘義務と学習なしの確認点](https://nagai-cpu.github.io/ai-tools-jp/tochikaoku-boundary-meeting-recording/): 境界立会いや隣接地所有者との説明を録音し、AIで文字起こしする土地家屋調査士向けに、法24条の2の守秘義務、録る前の断り方、学習に使われないプランの条件を公式情報で整理しました。
