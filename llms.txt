@@ -12,6 +12,7 @@
 ## 記事
 
 - [LINE WORKS AiNote無料プランの音声削除｜1年超は2027年1月から](https://nagai-cpu.github.io/ai-tools-jp/lineworks-ainote-audio-deletion/): LINE WORKS AiNoteフリープランの音声ファイルは作成から1年で削除。消えるもの・残るもの、保存の手順、プラン別の保管期間を公式で確認。
+- [SNS予約投稿ツールの無料プラン比較｜予約できる件数とXの扱い](https://nagai-cpu.github.io/ai-tools-jp/sns-scheduling-tool-free-compare/): SNSの予約投稿を無料で始めたい個人・小さな店向けに、SocialDog・Buffer・Meta Business Suiteの無料で予約できる件数、対応SNS、有料に上げる目安を公式で比較。
 - [葬儀社の事前相談を録音してAI文字起こし｜病状や宗派の話の扱い方](https://nagai-cpu.github.io/ai-tools-jp/funeral-preconsultation-recording/): 小さな葬儀社が事前相談を録音してAIで記録にするとき、病状・宗派の話の扱い、利用目的の伝え方、Nottaのプランの選び方を条文と公式ページで整理しました。
 - [自分と話すノートの使い方と料金｜無料5回とNote＋、電話相談の時間を確認](https://nagai-cpu.github.io/ai-tools-jp/jibun-to-hanasu-note-review/): AI相談アプリ「自分と話すノート」の始め方、無料で使える範囲、Note＋と電話相談プランの料金、お試しの条件と解約を、利用規約とApp Storeで確認して整理しました。
 - [個人塾の保護者面談を録音してAI文字起こし｜家庭の事情と成績の扱い方](https://nagai-cpu.github.io/ai-tools-jp/kojin-juku-parent-meeting-recording/): 個人塾の塾長が保護者面談を録音してAIで記録にするとき、利用目的の伝え方、家庭の事情や成績の話の扱い、Nottaのプランの選び方を、法律の条文とNottaの公式ページで確認して整理しました。
