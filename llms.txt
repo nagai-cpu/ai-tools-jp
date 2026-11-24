@@ -11,6 +11,8 @@
 
 ## 記事
 
+- [AI悩み相談アプリの会話は学習される？プライバシーを公式の文書で比べた](https://nagai-cpu.github.io/ai-tools-jp/ai-consult-app-privacy/): AIに悩みを相談した会話が学習に使われるか、何日残るか、人に読まれるかを、自分と話すノート・ChatGPT・Gemini・Claudeの公式文書で比較しました。
+- [接見メモのAI文字起こしと守秘義務｜刑事弁護で録音前に見る3つの線引き](https://nagai-cpu.github.io/ai-tools-jp/defense-lawyer-jail-interview-memo/): 刑事弁護の接見メモをAIで文字起こしする弁護士向けに、刑訴法39条・281条の4、接見録音の裁判例、Nottaの学習と削除の扱いを確認して整理。
 - [LINE WORKS AiNote無料プランの音声削除｜1年超は2027年1月から](https://nagai-cpu.github.io/ai-tools-jp/lineworks-ainote-audio-deletion/): LINE WORKS AiNoteフリープランの音声ファイルは作成から1年で削除。消えるもの・残るもの、保存の手順、プラン別の保管期間を公式で確認。
 - [司法書士事務所のAI文字起こしツールの選び方｜補助者が録るなら学習なし](https://nagai-cpu.github.io/ai-tools-jp/shihoshoshi-office-tool-choice/): 補助者のいる司法書士事務所の所長向けに、AI文字起こしツールを学習の扱い・事務所での管理・録音の削除の3点で、NottaとLINE WORKS AiNoteを公式で比較。
 - [SNS予約投稿ツールの無料プラン比較｜予約できる件数とXの扱い](https://nagai-cpu.github.io/ai-tools-jp/sns-scheduling-tool-free-compare/): SNSの予約投稿を無料で始めたい個人・小さな店向けに、SocialDog・Buffer・Meta Business Suiteの無料で予約できる件数、対応SNS、有料に上げる目安を公式で比較。

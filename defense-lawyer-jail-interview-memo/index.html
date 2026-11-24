@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>接見メモのAI文字起こしと守秘義務｜刑事弁護で録音前に見る3つの線引き｜AIツール実用ガイド</title>
+<meta name="description" content="刑事弁護の接見メモをAIで文字起こしする弁護士向けに、刑訴法39条・281条の4、接見録音の裁判例、Nottaの学習と削除の扱いを確認して整理。">
+<meta name="google-site-verification" content="hrTlczHzXnwYngNpwp67TjFV6S7zgr3ubihHszqzjJY">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G40EQQELDY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G40EQQELDY');document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[rel~=sponsored]');if(!a)return;var h='';try{h=new URL(a.href).hostname}catch(_){}gtag('event','aff_click',{link_domain:h,link_text:(a.textContent||'').trim().slice(0,80),transport_type:'beacon'})},true);</script>
+<link rel="canonical" href="https://nagai-cpu.github.io/ai-tools-jp/defense-lawyer-jail-interview-memo/">
+<meta property="og:title" content="接見メモのAI文字起こしと守秘義務｜刑事弁護で録音前に見る3つの線引き｜AIツール実用ガイド">
+<meta property="og:description" content="刑事弁護の接見メモをAIで文字起こしする弁護士向けに、刑訴法39条・281条の4、接見録音の裁判例、Nottaの学習と削除の扱いを確認して整理。">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "接見メモのAI文字起こしと守秘義務｜刑事弁護で録音前に見る3つの線引き", "description": "刑事弁護の接見メモをAIで文字起こしする弁護士向けに、刑訴法39条・281条の4、接見録音の裁判例、Nottaの学習と削除の扱いを確認して整理。", "datePublished": "2026-11-25", "dateModified": "2026-11-25", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nagai-cpu.github.io/ai-tools-jp/defense-lawyer-jail-interview-memo/"}, "author": {"@type": "Person", "@id": "https://nagai-cpu.github.io/ai-tools-jp/about/#person", "name": "Maji", "url": "https://nagai-cpu.github.io/ai-tools-jp/about/"}, "publisher": {"@type": "Organization", "name": "AIツール実用ガイド"}}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#ffffff;--fg:#1a1d21;--muted:#5c6570;--line:#e4e7eb;--soft:#f6f8fa;
+--accent:#0f6fd6;--accent-fg:#ffffff;--warn:#8a5a00;--warn-bg:#fff8e6;--warn-line:#f0dca8;
+--max:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}}
+:root[data-theme="dark"]{
+--bg:#14171a;--fg:#e8eaed;--muted:#9aa4b0;--line:#2a2f35;--soft:#1b1f24;
+--accent:#63a9ee;--accent-fg:#0b1116;--warn:#e0bf74;--warn-bg:#241f14;--warn-line:#4a3f22;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);line-height:1.85;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16.5px;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+header.site{border-bottom:1px solid var(--line);padding:1.1rem 0;margin-bottom:2.2rem}
+header.site .wrap{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap}
+header.site a.logo{font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;letter-spacing:.01em}
+header.site .tag{color:var(--muted);font-size:.8rem}
+h1.title{font-size:1.72rem;line-height:1.45;letter-spacing:-.01em;margin:.2rem 0 .7rem}
+.meta{color:var(--muted);font-size:.82rem;margin-bottom:1.6rem}
+article h2{font-size:1.28rem;line-height:1.5;margin:2.6rem 0 .9rem;padding-top:.9rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.9rem 0 .6rem}
+article h4{font-size:1rem;margin:1.4rem 0 .5rem;color:var(--muted)}
+article p{margin:0 0 1.05rem}
+article ul,article ol{margin:0 0 1.15rem 1.35rem}
+article li{margin-bottom:.4rem}
+article a{color:var(--accent)}
+blockquote{border-left:3px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);margin:0 0 1.15rem}
+code{background:var(--soft);padding:.12em .38em;border-radius:4px;font-size:.9em}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.tw{overflow-x:auto;margin:0 0 1.4rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600;white-space:nowrap}
+.vwrap{margin:0 auto 1.9rem;max-width:17rem;border:1px solid var(--line);
+border-radius:10px;overflow:hidden;background:var(--soft)}
+.vwrap video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.vcap{font-size:.76rem;color:var(--muted);padding:.5rem .75rem;line-height:1.6;text-align:center}
+.pr-note{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);
+font-size:.79rem;padding:.55rem .8rem;border-radius:7px;margin:0 0 1.7rem;line-height:1.6}
+.cta{border:1px solid var(--line);border-radius:11px;padding:1.05rem 1.15rem;margin:1.9rem 0;background:var(--soft)}
+.cta-h{font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem}
+.pr{font-size:.65rem;font-weight:600;color:var(--muted);border:1px solid var(--line);
+border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)}
+.cta-b{font-size:.93rem;margin:0 0 .35rem !important;color:var(--fg)}
+.cta-f{font-size:.82rem;color:var(--muted);margin:0 0 .85rem !important}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
+a.aff{color:var(--accent);font-weight:600}
+.note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+.note-follow p{margin:.3rem 0}
+.note-follow a{color:var(--accent);font-weight:700}
+.related{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{font-size:1.02rem;border:0;padding:0;margin:0 0 .8rem}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:.55rem}
+.related a{color:var(--accent);text-decoration:none}
+.plist{list-style:none;margin:0}
+.plist li{border-bottom:1px solid var(--line);padding:1rem 0}
+.plist a{color:var(--fg);text-decoration:none;font-weight:600;font-size:1.04rem;line-height:1.55}
+.plist .d{color:var(--muted);font-size:.87rem;margin-top:.3rem;line-height:1.7}
+.plist .dt{color:var(--muted);font-size:.75rem}
+footer.site{margin-top:4rem;border-top:1px solid var(--line);padding:1.6rem 0 3rem;
+color:var(--muted);font-size:.8rem;line-height:1.9}
+footer.site a{color:var(--muted)}
+.fnav{margin-top:.5rem}
+@media(max-width:600px){body{font-size:16px}h1.title{font-size:1.45rem}article h2{font-size:1.17rem}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="../">AIツール実用ガイド</a>
+<span class="tag">実際に触って比べた記録</span>
+</div></header>
+<div class="wrap">
+<h1 class="title">接見メモのAI文字起こしと守秘義務｜刑事弁護で録音前に見る3つの線引き</h1><p class="meta">2026-11-25 公開</p><div class="pr-note">この記事にはアフィリエイト広告（PR）を含みます。無料プランで実際に試した範囲の内容で、報酬額で順位を変えることはしていません。</div><article><p>結論から言うと、接見のメモをAIで文字にするなら、接見室の会話を録ってそのままクラウドに上げるより、<strong>接見のあとに自分の声で要点を口述し、学習に使われない環境で文字にする</strong>ほうが、確かめることが少なく済みます。クラウドのツールを使うなら、音声認識の学習に使わない設定がある<a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=defenselawyerjailinterviewmemo" target="_blank" rel="sponsored nofollow noopener">Notta（法人・上位プラン）</a>のビジネス Plus以上が候補です。そして、<strong>検察官から開示された証拠は、接見メモとは別の条文で扱いが決まっている</strong>ので、同じツールに入れる前に線を引いておく必要があります。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として明記された法人向けプラン。ビジネス Plus（年64,800円・税抜）はWebから申し込め、エンタープライズと士業向け特別プランは問い合わせで条件を確認する（2026年11月時点・公式サイトで確認）</p><p class="cta-f">下位プランは音声認識の学習に使われる場合あり（AI要約などは全プラン学習なしと公式ヘルプに記載）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=defenselawyerjailinterviewmemo" target="_blank" rel="sponsored nofollow noopener">Nottaの公式サイトで法人向けの料金プランを確かめる</a></div>
+<h2 id="接見メモの残し方と-確かめること">接見メモの残し方と、確かめること</h2>
+<p>2026年11月25日に、e-Gov法令検索の刑事訴訟法、弁護士ドットコムニュースと弁護士JPニュースの記事、Nottaの法人料金ページ・料金ページ・セキュリティページを確認しました。</p>
+<div class="tw"><table><thead><tr><th>残し方</th><th>外部への送信</th><th>施設側とのやりとり</th><th>確かめること</th><th>向いている場面</th></tr></thead><tbody><tr><td>手書きのメモ</td><td>なし</td><td>なし</td><td>保管と廃棄</td><td>短い接見、初回の接見</td></tr><tr><td>接見後に口述して端末内で文字にする</td><td>端末内で処理される条件なら無し</td><td>なし</td><td>端末の設定、紛失時の備え</td><td>1人で動く弁護士</td></tr><tr><td>接見後に口述してクラウドで文字にする</td><td>あり</td><td>なし</td><td>学習の有無、保管と削除、アカウント管理</td><td>要約まで任せたい、事務所で共有したい</td></tr><tr><td>接見室で録音する</td><td>上げればあり</td><td>録音の申告や検査を求められることがある</td><td>施設の運用、秘密交通権との関係</td><td>発言をそのまま残す必要があるとき</td></tr></tbody></table></div>
+<h2 id="線引き1-接見室での録音は-まだ扱いが割れている">線引き1｜接見室での録音は、まだ扱いが割れている</h2>
+<p>刑事訴訟法第39条第1項は、身体の拘束を受けている被告人・被疑者が弁護人と「立会人なくして接見し、又は書類若しくは物の授受をすることができる」と定めています。録音がここに入るかが争われてきました。</p>
+<p>弁護士ドットコムニュースの2026年4月27日の記事によると、岡山地裁は同年4月15日の判決で、ICレコーダーによる録音を「筆記によるメモの究極的な形態」と位置づけ、接見のあとに職員が録音を確認した<strong>事後検査を刑事訴訟法39条1項違反と認定</strong>しました。一方で、録音の事前申告は違法とせず、通達に従った職員の行為について国家賠償法上の違法性は否定し、請求は棄却しています。記事の時点で原告側は控訴を検討中とされ、その後の経過は今回確認できませんでした。</p>
+<p>録音以前に、機器の使用そのものを止められた例もあります。弁護士JPニュースの2024年11月27日の記事は、山梨県警の警察署で、初回の接見に訪れた弁護士がスマートフォンの使用禁止を通告されたと報じています。</p>
+<p>つまり、スマホの文字起こしアプリを接見室で開く前提の運用は、施設によって止まります。接見室では従来どおりメモを取り、<strong>出てから口述する形を基本にしておく</strong>と、施設の運用に左右されません。</p>
+<h2 id="線引き2-接見メモと開示証拠は-別の条文で考える">線引き2｜接見メモと開示証拠は、別の条文で考える</h2>
+<p>見落としやすいのがここです。刑事訴訟法第281条の3は、検察官が審理の準備のために閲覧・謄写の機会を与えた証拠の複製等について、弁護人は「適正に管理し、その保管をみだりに他人にゆだねてはならない」と定めています。第281条の4第1項は、その複製等を、当該事件の審理やその準備など決められた手続以外の目的で、人に交付・提示し、「電気通信回線を通じて提供してはならない」としています。</p>
+<p>接見で聞いた話を自分の言葉でまとめたメモと、検察官から開示された証拠の複製は、条文の上で扱いが違います。たとえば開示された録音を文字起こしツールに上げる場合、それが281条の3の「保管」や281条の4の「提供」に当たるかは、<strong>条文の文言だけでは決められません</strong>。審理の準備という目的の内側だとしても、外部の事業者のサーバーに置くことをどう評価するかは、弁護人が事件ごとに判断する事柄です。</p>
+<p>実務の作り方としては、次の2つを分けておくのが安全側です。</p>
+<ul><li><strong>接見メモ用のフォルダ</strong>：自分の口述だけを入れる。依頼者名は事件番号や略称に置き換える</li><li><strong>開示証拠</strong>：クラウドの文字起こしに入れない。文字にする必要があるときは、端末の中だけで動く方法を検討する</li></ul>
+<p>端末の中だけで文字にする方法は<a href="../whisper-local-no-training/">Whisperをローカルで動かす方法</a>と<a href="../mac-dictation-training/">Macの音声入力の送信条件</a>で整理しています。</p>
+<h2 id="線引き3-クラウドに上げるなら-学習・削除・アカウント">線引き3｜クラウドに上げるなら、学習・削除・アカウント</h2>
+<p>Nottaのセキュリティページには、生成AI機能で処理されるデータは第三者の基盤モデルの学習に使われない一方、<strong>音声認識モデルの学習条件はプランで異なり、ビジネス Plusとエンタープライズでは音声認識データを学習に使わない環境を利用できる</strong>と書かれています。</p>
+<div class="tw"><table><thead><tr><th>プラン</th><th>料金（税抜）</th><th>AI学習なし</th><th>削除</th></tr></thead><tbody><tr><td>フリー</td><td>0円</td><td>記載なし</td><td>自分で消すまで保管</td></tr><tr><td>ビジネス</td><td>年27,360円</td><td>対象外（比較表で「—」）</td><td>自分で消すまで保管</td></tr><tr><td>ビジネス Plus</td><td>年64,800円</td><td>対象</td><td>自分で消すまで保管</td></tr><tr><td>士業向け特別プラン</td><td>お問い合わせ</td><td>対象</td><td>料金ページに記載なし</td></tr><tr><td>エンタープライズ</td><td>お問い合わせ</td><td>対象</td><td>自動削除を設定できる</td></tr></tbody></table></div>
+<p>セキュリティページのよくある質問には、お客様自身で削除しない限り「録音データは弊社のクラウド環境に継続して保管されます」とあります。自動削除はエンタープライズの管理機能として書かれているので、ビジネス Plusで使うなら、<strong>事件が終わったら誰がいつ消すか</strong>を自分で決めます。1回の接見で口述する長さが数分なら、書面に写したその日に音声を消す、という短い運用も取れます。</p>
+<p>弁護士法23条や職務基本規程18条・19条、弁護士情報セキュリティ規程との対応は、<a href="../bengoshi-consultation-record/">弁護士の相談記録をAI文字起こしする前に</a>で条文ごとに確認しています。日弁連の生成AIに関する資料の手がかりは<a href="../jfba-ai-guideline-transcription/">弁護士の生成AI利用の指針と文字起こし</a>にまとめました。</p>
+<h2 id="口述した接見メモを事務所で使うなら-ビジネス-Plus">口述した接見メモを事務所で使うなら、ビジネス Plus</h2>
+<p>国選や当番で接見が多く、移動中に口述して事務所で書面にする弁護士、事務職員と同じメモを見る小さな法律事務所には、ビジネス Plusが入口になります。法人料金ページでは、ビジネスの機能（セキュリティ管理・IP制限など）にAI学習なしが加わると書かれ、7日間の無料トライアルは支払い情報の登録が不要です。トライアルでは依頼者の情報を入れず、自分で読み上げた架空のメモで、人名や罪名がどこまで正しく出るかを見てください。</p>
+<div class="cta"><div class="cta-h">Notta（法人・上位プラン）<span class="pr">PR</span></div><p class="cta-b">「AI学習なし」が機能として明記された法人向けプラン。ビジネス Plus（年64,800円・税抜）はWebから申し込め、エンタープライズと士業向け特別プランは問い合わせで条件を確認する（2026年11月時点・公式サイトで確認）</p><p class="cta-f">下位プランは音声認識の学習に使われる場合あり（AI要約などは全プラン学習なしと公式ヘルプに記載）</p><a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=defenselawyerjailinterviewmemo" target="_blank" rel="sponsored nofollow noopener">Nottaの公式サイトで法人向けの料金プランを確かめる</a></div>
+<p>士業向け特別プラン（ビジネスプランの機能に、AI要約とファイルインポートの回数無制限、AI学習なし）は料金が公開されていません。比べたい場合は見積もりを並べることになります。</p>
+<h2 id="正直な短所">正直な短所</h2>
+<ul><li><strong>Notta ビジネス Plus：送信そのものは止まらない</strong>：学習に使われなくても、音声はクラウドに送られて保管されます。送信自体を避けたい事件では使わない判断が要ります</li><li><strong>Notta ビジネス Plus：自動削除がない</strong>：消し忘れると、事件の終結後も音声が残ります</li><li><strong>Notta フリー：接見の口述でも足りないことがある</strong>：料金ページでは1回3分まで、月120分までです。AI学習なしの記載もありません</li><li><strong>端末内の文字起こし：要約や共有は自分で行う</strong>：送信が無い代わりに、話者の整理や要約、事務職員との共有は手作業になります</li><li><strong>口述メモ：発言そのものではない</strong>：依頼者の言葉をそのまま残す必要がある場面では、口述では足りません</li></ul>
+<h2 id="よくある質問">よくある質問</h2>
+<h3 id="接見室でスマホの文字起こしアプリを使えますか">接見室でスマホの文字起こしアプリを使えますか</h3>
+<p>スマートフォンの使用を禁じられた例が報じられており、施設によって扱いが違います。録音についても、事前の申告や検査を求められた例があります。使う前に施設の運用を確かめ、所属弁護士会の案内も確認してください。</p>
+<h3 id="接見の録音を消されたり確認されたりすることはありますか">接見の録音を消されたり確認されたりすることはありますか</h3>
+<p>報道された岡山の事案では、施設側が接見後の再生確認と、目的に反する部分の消去を条件に録音を認めていました。岡山地裁は事後検査を刑訴法違反と認定しましたが、請求は棄却しており、確定した扱いとして受け取るのは早い段階です。</p>
+<h3 id="開示された取調べの録音・録画を文字起こしツールに入れてもよいですか">開示された取調べの録音・録画を文字起こしツールに入れてもよいですか</h3>
+<p>開示証拠の複製等には刑事訴訟法281条の3〜281条の5の規定があり、この記事では可否を判断しません。クラウドに上げる前に、条文と所属弁護士会の案内を確認してください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul><li>接見室での録音は施設の運用と裁判例がまだ割れている。メモは接見後に口述して文字にするのが扱いやすい</li><li>接見メモと、検察官から開示された証拠は分ける。開示証拠は刑訴法281条の3〜5を先に読む</li><li>クラウドで文字にするなら学習なしのNotta ビジネス Plus以上。削除は自動ではないので、消す日を決めてから使う</li></ul><div class="cta"><div class="cta-h">録音の道具を探す<span class="pr">PR</span></div><p class="cta-b">文字起こしの元になるのは録音した音声です。対面の会議や面談を録るならICレコーダー、Web会議ならマイクを、価格と口コミを見比べて選べます。</p><ul><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC" target="_blank" rel="sponsored nofollow noopener">AmazonでICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FIC%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2580%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でICレコーダーを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF" target="_blank" rel="sponsored nofollow noopener">AmazonでWeb会議用マイクを探す</a></li><li><a class="aff" href="https://af.moshimo.com/af/c/click?a_id=5810052&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FWeb%25E4%25BC%259A%25E8%25AD%25B0%2520%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%2F" target="_blank" rel="sponsored nofollow noopener">楽天市場でWeb会議用マイクを探す</a></li></ul><p class="cta-f">※リンク先はAmazon・楽天市場の検索結果です（もしもアフィリエイト経由）。</p></div></article><div class="note-follow"><p><strong>この記事の内容を、もう少し体系立てて読みたい方へ（筆者がKindleで書いた本です）</strong></p><p>『士業が顧客の録音・書類をAIに渡す前に読む本』（Kindle・500円）：税理士・社労士などの事務所が、文字起こしや生成AIに顧客の情報を渡す前に確かめる設定と、事務所の利用ルールの作り方をまとめた本です。 Kindle Unlimited の会員は追加料金なしで読めます（2026年10月時点）。</p><p><a href="https://af.moshimo.com/af/c/click?a_id=5810057&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0HP7KFHC9" rel="sponsored noopener" target="_blank">Amazonで内容を見る →</a></p><p style="font-size:.8rem">※Amazonへのリンクはアフィリエイトリンク（もしもアフィリエイト経由・PR）です。</p></div><div class="note-follow"><p><strong>契約してから気づく落とし穴を、noteで毎日1つずつ書いています。</strong>料金表やヘルプを読んでいて引っかかった点を、3分で読める長さにまとめています。</p><p><a href="https://note.com/life_lab_jp" rel="noopener" target="_blank">noteの「AIツールの落とし穴ノート」を見る →</a></p></div><div class="related"><h2>あわせて読む</h2><ul><li><a href="../lineworks-ainote-audio-deletion/">LINE WORKS AiNote無料プランの音声削除｜1年超は2027年1月から</a></li><li><a href="../shihoshoshi-office-tool-choice/">司法書士事務所のAI文字起こしツールの選び方｜補助者が録るなら学習なし</a></li><li><a href="../funeral-preconsultation-recording/">葬儀社の事前相談を録音してAI文字起こし｜病状や宗派の話の扱い方</a></li><li><a href="../kojin-juku-parent-meeting-recording/">個人塾の保護者面談を録音してAI文字起こし｜家庭の事情と成績の扱い方</a></li><li><a href="../automemo-data-training/">AutoMemoの録音データはAI学習に使われる？クラウドの保存先と法人の管理を確認</a></li></ul></div><div class="related"><h2>新しい記事</h2><ul><li><a href="../ai-consult-app-privacy/">AI悩み相談アプリの会話は学習される？プライバシーを公式の文書で比べた</a></li><li><a href="../defense-lawyer-jail-interview-memo/">接見メモのAI文字起こしと守秘義務｜刑事弁護で録音前に見る3つの線引き</a></li><li><a href="../lineworks-ainote-audio-deletion/">LINE WORKS AiNote無料プランの音声削除｜1年超は2027年1月から</a></li><li><a href="../shihoshoshi-office-tool-choice/">司法書士事務所のAI文字起こしツールの選び方｜補助者が録るなら学習なし</a></li><li><a href="../sns-scheduling-tool-free-compare/">SNS予約投稿ツールの無料プラン比較｜予約できる件数とXの扱い</a></li><li><a href="../funeral-preconsultation-recording/">葬儀社の事前相談を録音してAI文字起こし｜病状や宗派の話の扱い方</a></li></ul></div>
+</div>
+<footer class="site"><div class="wrap">
+<p>AIツール実用ガイド｜小さな会社と個人事業主のための、AIツールの選び方と使い方。料金は公式サイトで確認した実数だけを載せます。</p>
+<p>本サイトはアフィリエイトプログラムを利用しており、記事内の一部リンクから登録・購入があった場合に運営者が報酬を受け取ります。報酬の有無は評価順位や記載内容に影響させていません。料金・機能は各公式サイトの情報を優先してください。<br>Amazonのアソシエイトとして、AIツール実用ガイドは適格販売により収入を得ています。</p>
+<p class="fnav"><a href="../">トップ</a> ・ <a href="../about/">運営者情報</a> ・ <a href="../privacy/">プライバシーポリシー</a> ・ <a href="../tools/transcription-cost.html">文字起こしコスト計算機</a> ・ <a href="../tools/minutes-time.html">議事録作成時間の計算機</a> ・ <a href="../tools/ai-training-check.html">AI文字起こし 学習させない設定チェッカー</a> ・ <a href="../tools/recording-consent.html">録音・AI文字起こしの同意文ジェネレータ</a> ・ <a href="../tools/irusiru-plan.html">イルシルの料金プラン計算機</a> ・ <a href="../tools/ai-training-subsidy.html">AI研修の実質負担計算機</a> ・ <a href="../tools/minutes-template.html">議事録テンプレート作成ツール</a> ・ <a href="../tools/ic-recorder-capacity.html">ICレコーダーの録音時間・容量の計算機</a> ・ <a href="../tools/ai-transcription-policy-checklist.html">AI文字起こし 社内導入チェックリスト</a> ・ <a href="../tools/catchy-plan.html">Catchyのプラン選び計算機</a></p>
+</div></footer>
+</body>
+</html>
