@@ -12,6 +12,7 @@
 ## 記事
 
 - [BenefitNowの料金と使い方｜月990円で何が使えるか・対象者と解約](https://nagai-cpu.github.io/ai-tools-jp/benefitnow-pricing-guide/): フリーランス・個人事業主向け福利厚生BenefitNow（ベネフィット・ナウ）の料金プラン、3か月無料の条件、申し込みから解約までの流れを公式LPと利用規約で確認。向く人・向かない人も整理。
+- [SocialDogの無料プランでできること｜予約10件・分析2週間の使い方](https://nagai-cpu.github.io/ai-tools-jp/socialdog-free-plan-review/): SocialDogのFreeプランでできることを公式料金ページで確認。予約10件・分析2週間・Xは1アカウントの制限と、有料に上げる目安を整理。
 - [AI悩み相談アプリの会話は学習される？プライバシーを公式の文書で比べた](https://nagai-cpu.github.io/ai-tools-jp/ai-consult-app-privacy/): AIに悩みを相談した会話が学習に使われるか、何日残るか、人に読まれるかを、自分と話すノート・ChatGPT・Gemini・Claudeの公式文書で比較しました。
 - [接見メモのAI文字起こしと守秘義務｜刑事弁護で録音前に見る3つの線引き](https://nagai-cpu.github.io/ai-tools-jp/defense-lawyer-jail-interview-memo/): 刑事弁護の接見メモをAIで文字起こしする弁護士向けに、刑訴法39条・281条の4、接見録音の裁判例、Nottaの学習と削除の扱いを確認して整理。
 - [LINE WORKS AiNote無料プランの音声削除｜1年超は2027年1月から](https://nagai-cpu.github.io/ai-tools-jp/lineworks-ainote-audio-deletion/): LINE WORKS AiNoteフリープランの音声ファイルは作成から1年で削除。消えるもの・残るもの、保存の手順、プラン別の保管期間を公式で確認。
