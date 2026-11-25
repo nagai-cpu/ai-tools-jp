@@ -68,6 +68,7 @@ border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)
 .btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
 font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
 a.aff{color:var(--accent);font-weight:600}
+a.aff.tl{display:inline-block;font-size:.82rem;padding:.35rem 0;white-space:nowrap}
 .note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
 .note-follow p{margin:.3rem 0}
 .note-follow a{color:var(--accent);font-weight:700}
@@ -101,7 +102,7 @@ footer.site a{color:var(--muted)}
 <ol><li><strong>保存先</strong>：録音や文字起こしテキストが、普段どこのデータセンターに置かれているか</li><li><strong>処理の送信先</strong>：音声認識・要約・翻訳のときに、外部のエンジンへデータが送られるか。送られるならどこか</li></ol>
 <p>1だけを見て「国内だから大丈夫」と判断すると、2が抜けます。逆に2を気にしすぎて、1で国内と明記されているツールまで候補から外すのももったいない。以下、2026年10月18日に公式ページで確認した記載を、この2つに分けて並べます。</p>
 <h2 id="比較表-公式が書いている保存先">比較表：公式が書いている保存先</h2>
-<div class="tw"><table><thead><tr><th>ツール</th><th>保存先の公式記載</th><th>記載している場所</th><th>リージョンの指定</th><th>外部への送信・国外提供の記載</th></tr></thead><tbody><tr><td>Notta</td><td>「AWS東京リージョンに保存」</td><td>ヘルプ（法人契約FAQ・データ保存のFAQ）</td><td>「現在のところできません」</td><td>要約にAnthropic社のLLMを使用。プライバシーポリシーに日本国外の第三者への提供がありうる場合を列挙</td></tr><tr><td>Rimo Voice</td><td>「日本国内のデータセンターにて保管」</td><td>プライバシーポリシー第10条、公式トップ</td><td>確認したページに記載なし</td><td>プライバシーポリシーに日本国外の第三者への提供がありうる場合を列挙（委託を含む）</td></tr><tr><td>LINE WORKS AiNote</td><td>LINE WORKSのデータは「日本国内のデータセンター」</td><td>LINE WORKS Privacy Center FAQ</td><td>地域は「非公開」</td><td>AiNote専用ページでは保存国の記載を確認できなかった</td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>ツール</th><th>保存先の公式記載</th><th>記載している場所</th><th>リージョンの指定</th><th>外部への送信・国外提供の記載</th></tr></thead><tbody><tr><td>Notta<br><a class="aff tl" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=transcriptiondataresidency" target="_blank" rel="sponsored nofollow noopener">公式サイトを見る</a><span class="pr">PR</span></td><td>「AWS東京リージョンに保存」</td><td>ヘルプ（法人契約FAQ・データ保存のFAQ）</td><td>「現在のところできません」</td><td>要約にAnthropic社のLLMを使用。プライバシーポリシーに日本国外の第三者への提供がありうる場合を列挙</td></tr><tr><td>Rimo Voice</td><td>「日本国内のデータセンターにて保管」</td><td>プライバシーポリシー第10条、公式トップ</td><td>確認したページに記載なし</td><td>プライバシーポリシーに日本国外の第三者への提供がありうる場合を列挙（委託を含む）</td></tr><tr><td>LINE WORKS AiNote</td><td>LINE WORKSのデータは「日本国内のデータセンター」</td><td>LINE WORKS Privacy Center FAQ</td><td>地域は「非公開」</td><td>AiNote専用ページでは保存国の記載を確認できなかった</td></tr></tbody></table></div>
 <p>表の「記載なし」「確認できなかった」は、<strong>国外に置かれているという意味ではありません</strong>。確認したページにその文言が見つからなかった、という事実だけを示しています。</p>
 <h2 id="Nottaの記載を読む">Nottaの記載を読む</h2>
 <p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=transcriptiondataresidency" target="_blank" rel="sponsored nofollow noopener">Notta</a>の公式ヘルプには、保存先について次の記載があります。</p>

@@ -68,6 +68,7 @@ border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)
 .btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
 font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
 a.aff{color:var(--accent);font-weight:600}
+a.aff.tl{display:inline-block;font-size:.82rem;padding:.35rem 0;white-space:nowrap}
 .note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
 .note-follow p{margin:.3rem 0}
 .note-follow a{color:var(--accent);font-weight:700}
@@ -104,7 +105,7 @@ footer.site a{color:var(--muted)}
 <p>個人向け版にはさらに「チャットをClaudeの改善に使うことを許可している場合、<strong>文字起こしされたテキストはプライバシー設定に従って使われる場合がある</strong>」と続きます。つまり守られているのは「声」であって、「話した中身」ではありません。</p>
 <p>音声モードについては、ヘルプのFAQに「音声会話の<strong>テキストの文字起こしは、テキストの会話と同じようにチャット履歴に保存される</strong>」とあります。ただ、プライバシーセンターを voice・audio・voice mode で検索しても、<strong>音声モードの音声そのものの保存や学習を名指しした記事は確認できませんでした。</strong></p>
 <h2 id="比較表-音声と文字起こしの学習の扱い">比較表：音声と文字起こしの学習の扱い</h2>
-<div class="tw"><table><thead><tr><th>対象</th><th>音声（録音そのもの）</th><th>文字起こし後のテキスト</th><th>学習させないための条件</th></tr></thead><tbody><tr><td>Claude 個人向け（Free・Pro・Max）の音声入力</td><td>変換後に削除・学習に使わないと明記</td><td>チャットと同じ扱い。設定がオンなら学習に使われる場合あり</td><td>「モデル改善」の設定をオフにする（安全確認の対象やフィードバック送信分は例外）</td></tr><tr><td>Claude 個人向けの音声モード</td><td>名指しした記載は確認できなかった</td><td>チャット履歴に保存されるとヘルプに記載</td><td>公式に音声モード固有の記載なし。チャット全般の設定が手がかり</td></tr><tr><td>Claude 法人向け（Team・Enterprise）</td><td>音声入力は削除・学習に使わないと明記</td><td>初期設定で学習に使わないと明記</td><td>フィードバックを送らない、明示的に許可しない</td></tr><tr><td>Notta</td><td>プランに応じて音声認識の学習に使う場合があると規約に明記</td><td>要約用の言語処理エンジンには提供していないと公式FAQに記載</td><td>「AI学習なし」が機能として載っているプランを契約する</td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>対象</th><th>音声（録音そのもの）</th><th>文字起こし後のテキスト</th><th>学習させないための条件</th></tr></thead><tbody><tr><td>Claude 個人向け（Free・Pro・Max）の音声入力</td><td>変換後に削除・学習に使わないと明記</td><td>チャットと同じ扱い。設定がオンなら学習に使われる場合あり</td><td>「モデル改善」の設定をオフにする（安全確認の対象やフィードバック送信分は例外）</td></tr><tr><td>Claude 個人向けの音声モード</td><td>名指しした記載は確認できなかった</td><td>チャット履歴に保存されるとヘルプに記載</td><td>公式に音声モード固有の記載なし。チャット全般の設定が手がかり</td></tr><tr><td>Claude 法人向け（Team・Enterprise）</td><td>音声入力は削除・学習に使わないと明記</td><td>初期設定で学習に使わないと明記</td><td>フィードバックを送らない、明示的に許可しない</td></tr><tr><td>Notta<br><a class="aff tl" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=claudevoicetraining" target="_blank" rel="sponsored nofollow noopener">公式サイトを見る</a><span class="pr">PR</span></td><td>プランに応じて音声認識の学習に使う場合があると規約に明記</td><td>要約用の言語処理エンジンには提供していないと公式FAQに記載</td><td>「AI学習なし」が機能として載っているプランを契約する</td></tr></tbody></table></div>
 <p>表の「確認できなかった」は「学習に使われる」という意味ではありません。<strong>その文言が公式ページに見つからなかった、という事実だけ</strong>を示しています。</p>
 <h2 id="判断軸は3つ">判断軸は3つ</h2>
 <h3 id="1-個人向けプランなら-まず設定を見る">1. 個人向けプランなら、まず設定を見る</h3>

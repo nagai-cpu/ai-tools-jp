@@ -68,6 +68,7 @@ border-radius:3px;padding:.05rem .3rem;letter-spacing:.05em;background:var(--bg)
 .btn{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
 font-weight:600;font-size:.92rem;padding:.6rem 1.15rem;border-radius:7px}
 a.aff{color:var(--accent);font-weight:600}
+a.aff.tl{display:inline-block;font-size:.82rem;padding:.35rem 0;white-space:nowrap}
 .note-follow{margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
 .note-follow p{margin:.3rem 0}
 .note-follow a{color:var(--accent);font-weight:700}
@@ -101,7 +102,7 @@ footer.site a{color:var(--muted)}
 <ol><li><strong>閲覧の記録</strong>：誰がいつ、どの文字起こしを開いたか</li><li><strong>共有・持ち出しの記録</strong>：誰が共有設定を変えたか、ダウンロードしたか</li><li><strong>管理操作の記録</strong>：権限の変更、メンバーの追加・削除、ログイン</li></ol>
 <p>「漏えいが疑われたときに経路をたどれるか」を問われているなら、必要なのは1と2です。3だけでは足りません。以下は2026年10月18日に各社の公式ページで確認した内容です。</p>
 <h2 id="比較表-文字起こしの閲覧・共有を追える範囲">比較表：文字起こしの閲覧・共有を追える範囲</h2>
-<div class="tw"><table><thead><tr><th>ツール</th><th>閲覧の記録</th><th>共有・持ち出しの記録</th><th>保持・取得期間</th><th>公式に書かれた利用条件</th></tr></thead><tbody><tr><td>Notta</td><td>操作ログの「ノート操作」に閲覧・編集・削除・復元など</td><td>ダウンロード履歴あり。共有操作の記録は確認できなかった</td><td>過去180日間</td><td>エンタープライズ（オーナー・アドミンのみ）</td></tr><tr><td>Zoom</td><td>クラウド録画の分析で閲覧・ダウンロードの日時と氏名</td><td>操作ログに録画削除など</td><td>1回の取得は1か月分まで</td><td>操作ログはProプラン以上（APIリファレンス）</td></tr><tr><td>Microsoft Teams</td><td>文字起こしファイルへのアクセスを「Accessed file」で記録</td><td>「Shared file」など共有イベント</td><td>Audit (Standard) で180日</td><td>適切なサブスクリプションでは既定で有効</td></tr><tr><td>Google Workspace</td><td>ドライブのログイベントに「表示」</td><td>ダウンロード・公開設定の変更</td><td>公式ページで確認できなかった</td><td>対象エディションの一覧は確認できなかった</td></tr></tbody></table></div>
+<div class="tw"><table><thead><tr><th>ツール</th><th>閲覧の記録</th><th>共有・持ち出しの記録</th><th>保持・取得期間</th><th>公式に書かれた利用条件</th></tr></thead><tbody><tr><td>Notta<br><a class="aff tl" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=transcriptionauditlog" target="_blank" rel="sponsored nofollow noopener">公式サイトを見る</a><span class="pr">PR</span></td><td>操作ログの「ノート操作」に閲覧・編集・削除・復元など</td><td>ダウンロード履歴あり。共有操作の記録は確認できなかった</td><td>過去180日間</td><td>エンタープライズ（オーナー・アドミンのみ）</td></tr><tr><td>Zoom</td><td>クラウド録画の分析で閲覧・ダウンロードの日時と氏名</td><td>操作ログに録画削除など</td><td>1回の取得は1か月分まで</td><td>操作ログはProプラン以上（APIリファレンス）</td></tr><tr><td>Microsoft Teams</td><td>文字起こしファイルへのアクセスを「Accessed file」で記録</td><td>「Shared file」など共有イベント</td><td>Audit (Standard) で180日</td><td>適切なサブスクリプションでは既定で有効</td></tr><tr><td>Google Workspace</td><td>ドライブのログイベントに「表示」</td><td>ダウンロード・公開設定の変更</td><td>公式ページで確認できなかった</td><td>対象エディションの一覧は確認できなかった</td></tr></tbody></table></div>
 <p>表の「確認できなかった」は「記録されない」という意味ではありません。<strong>公式ページにその文言が見つからなかった</strong>という事実だけを示しています。</p>
 <h2 id="Notta-操作ログはエンタープライズ-利用状況レポートはビジネスから">Notta：操作ログはエンタープライズ、利用状況レポートはビジネスから</h2>
 <p><a class="aff" href="https://px.a8.net/svt/ejp?a8mat=4B82L4+7OULUI+5988+5ZEMQ&amp;id1=transcriptionauditlog" target="_blank" rel="sponsored nofollow noopener">Notta</a>のヘルプ「操作ログの取得と保存」には、前提条件として「エンタープライズプランで利用可能」「オーナーとアドミンのみ設定可能」「Notta Web版」と書かれています。料金ページでもエンタープライズの機能に「操作ログ」が挙がっており、法人向けページのFAQにも、ビジネスとの違いとして「操作ログの記録」が挙げられています。</p>
