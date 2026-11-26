@@ -12,6 +12,7 @@
 ## 記事
 
 - [エキテンの無料掲載でできること｜料金0円の範囲と正会員5,000円の違い](https://nagai-cpu.github.io/ai-tools-jp/ekiten-free-listing-review/): エキテン byGMOの無料掲載で載せられる情報・使える機能と、月額5,000円（税抜）の正会員との違いを公式ページと店舗会員規約で確認。解約の注意点も整理。
+- [フリーランスの福利厚生サービス比較｜優待・賠償保険・年額で3つを選ぶ](https://nagai-cpu.github.io/ai-tools-jp/freelance-benefits-compare/): フリーランス・個人事業主が自分で申し込める福利厚生サービス3つ（BenefitNow・フリーランス協会・FREENANCE）を、優待・賠償責任保険・料金で比較。公式ページと規約で確かめた条件と短所をまとめました。
 - [事業承継の後継者面談を録音してAI文字起こし｜機密を学習に回さない選び方](https://nagai-cpu.github.io/ai-tools-jp/jigyoshokei-successor-interview-recording/): 事業承継で後継者との面談を録音・文字起こししたい社長と、支援する個人の士業・コンサル向け。音声の学習の扱い、共有の管理、録音の削除をNottaの公式で確認しました。
 - [不動産鑑定士の現地調査メモをAIで文字起こし｜個人事務所の選び方](https://nagai-cpu.github.io/ai-tools-jp/appraiser-site-voice-memo/): 個人の不動産鑑定事務所で、現地調査の音声メモをAIで文字起こししたい鑑定士向け。守秘義務と学習の扱い、1回の録音時間、スマホ録音の取り込みをNottaの公式で確認しました。
 - [BenefitNowの料金と使い方｜月990円で何が使えるか・対象者と解約](https://nagai-cpu.github.io/ai-tools-jp/benefitnow-pricing-guide/): フリーランス・個人事業主向け福利厚生BenefitNow（ベネフィット・ナウ）の料金プラン、3か月無料の条件、申し込みから解約までの流れを公式LPと利用規約で確認。向く人・向かない人も整理。
