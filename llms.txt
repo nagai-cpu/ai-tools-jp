@@ -11,6 +11,9 @@
 
 ## 記事
 
+- [工務店の施主打ち合わせを録音してAI文字起こし｜言った言わないに備える使い方](https://nagai-cpu.github.io/ai-tools-jp/koumuten-client-meeting-recording/): 施主との打ち合わせを録音してAIで文字にしたい個人事業主・小さな工務店の社長向け。言った言わないへの効き方、建設業法の書面の定め、Nottaのプランと学習の扱いを公式で確認。
+- [接骨院の問診を録音してAI文字起こし｜患者情報を学習に回さない3つの確認](https://nagai-cpu.github.io/ai-tools-jp/seikotsuin-intake-recording/): 個人で開業している接骨院・整骨院の院長向け。問診の録音をAIで文字起こしする前に、柔道整復師法の守秘義務、要配慮個人情報の同意、Nottaの学習なしプランを条文と公式で確認しました。
+- [店舗の無料掲載サイト比較｜個人サロン・整体院はどこから載せるか](https://nagai-cpu.github.io/ai-tools-jp/store-free-listing-compare/): 個人サロン・整体院が無料で店を載せられるGoogle ビジネスプロフィール、エキテン、Yahoo!プレイスを公式ページで比較。Yahoo!プレイスの新規受付終了と、併用の順番も整理。
 - [エキテンの無料掲載でできること｜料金0円の範囲と正会員5,000円の違い](https://nagai-cpu.github.io/ai-tools-jp/ekiten-free-listing-review/): エキテン byGMOの無料掲載で載せられる情報・使える機能と、月額5,000円（税抜）の正会員との違いを公式ページと店舗会員規約で確認。解約の注意点も整理。
 - [フリーランスの福利厚生サービス比較｜優待・賠償保険・年額で3つを選ぶ](https://nagai-cpu.github.io/ai-tools-jp/freelance-benefits-compare/): 個人事業主が自分で申し込める福利厚生サービス3つ（BenefitNow・フリーランス協会・FREENANCE）を、優待・賠償責任保険・料金で比較。公式で確かめた条件と短所も整理。
 - [事業承継の後継者面談を録音してAI文字起こし｜機密を学習に回さない選び方](https://nagai-cpu.github.io/ai-tools-jp/jigyoshokei-successor-interview-recording/): 事業承継で後継者との面談を録音・文字起こししたい社長と、支援する個人の士業・コンサル向け。音声の学習の扱い、共有の管理、録音の削除をNottaの公式で確認しました。
